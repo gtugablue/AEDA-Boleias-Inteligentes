@@ -14,4 +14,39 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Combustivel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Coordenadas.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Empresa.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Evento.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Horas.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Membro.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Motorizado.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Particular.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Veiculo.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Viagem.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

@@ -78,6 +78,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Motorizado.h" />
+    <ClInclude Include="Combustivel.h" />
+    <ClInclude Include="Coordenadas.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="Empresa.h" />
+    <ClInclude Include="Evento.h" />
+    <ClInclude Include="Horas.h" />
+    <ClInclude Include="Membro.h" />
+    <ClInclude Include="Particular.h" />
+    <ClInclude Include="Veiculo.h" />
+    <ClInclude Include="Viagem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
