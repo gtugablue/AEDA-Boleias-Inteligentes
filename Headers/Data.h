@@ -1,3 +1,5 @@
+using namespace std;
+
 class Data
 {
 protected:

@@ -1,6 +1,6 @@
 using namespace std;
 
-class Horas
+class Hora
 {
 private:
 	unsigned hora;
@@ -12,5 +12,5 @@ public:
 	unsigned getMinuto() const;
 	void setHora(unsigned hora);
 	void setMinuto(unsigned minuto);
-	bool operator<(const Horas &horas);
+	bool operator<(const Hora &horas);
 };
