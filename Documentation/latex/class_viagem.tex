@@ -1,0 +1,216 @@
+\hypertarget{class_viagem}{\section{Viagem Class Reference}
+\label{class_viagem}\index{Viagem@{Viagem}}
+}
+
+
+{\ttfamily \#include $<$Viagem.\+h$>$}
+
+
+
+Inheritance diagram for Viagem\+:
+
+
+Collaboration diagram for Viagem\+:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_viagem_a5b74d4780b008414c2045f5788b6afa5}{Viagem} ()
+\item 
+\hyperlink{class_viagem_a5ba9d09f2be9e317a906865c7c7cff7c}{Viagem} (\hyperlink{class_veiculo}{Veiculo} $\ast$\hyperlink{class_viagem_aee9386a44de6b6afb11faff59331f7b5}{veiculo}, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_viagem_a0a871b6782ab9b478a530f2c15dc1e32}{inicio}, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_viagem_ab54e61d41be0157f9e75b14c8e06137f}{fim})
+\item 
+\hyperlink{class_viagem_a78e5ed89a44c413db824eeed29632477}{Viagem} (\hyperlink{class_membro}{Membro} $\ast$\hyperlink{class_viagem_a015bb952a7afce6a348d0a9f88bdaf5c}{condutor}, \hyperlink{class_veiculo}{Veiculo} $\ast$\hyperlink{class_viagem_aee9386a44de6b6afb11faff59331f7b5}{veiculo}, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_viagem_a0a871b6782ab9b478a530f2c15dc1e32}{inicio}, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_viagem_ab54e61d41be0157f9e75b14c8e06137f}{fim})
+\item 
+\hyperlink{class_membro}{Membro} $\ast$ \hyperlink{class_viagem_a620b4026617bd2bb14587dc405a71a1d}{get\+Condutor} () const 
+\item 
+\hyperlink{class_veiculo}{Veiculo} $\ast$ \hyperlink{class_viagem_a382eb7613b4d67d0038f70aee311e514}{get\+Veiculo} () const 
+\item 
+\hyperlink{class_coordenadas}{Coordenadas} \hyperlink{class_viagem_a9fc0473efd849f4d221cb94789f90c53}{get\+Inicio} () const 
+\item 
+\hyperlink{class_coordenadas}{Coordenadas} \hyperlink{class_viagem_a8880fb61234fcbf1324201cb634932a5}{get\+Fim} () const 
+\item 
+vector$<$ \hyperlink{class_particular}{Particular} $\ast$ $>$ \hyperlink{class_viagem_aaa8ee2324353d9f00c453c24c6a2d92d}{get\+Passageiros} () const 
+\item 
+void \hyperlink{class_viagem_a2f4fa33d3da68b08681ef35c45bb8e9a}{set\+Condutor} (\hyperlink{class_membro}{Membro} $\ast$\hyperlink{class_viagem_a015bb952a7afce6a348d0a9f88bdaf5c}{condutor})
+\item 
+void \hyperlink{class_viagem_aa3f5672a7a99fbc78dbf5987fcc05688}{set\+Veiculo} (\hyperlink{class_veiculo}{Veiculo} $\ast$\hyperlink{class_viagem_aee9386a44de6b6afb11faff59331f7b5}{veiculo})
+\item 
+void \hyperlink{class_viagem_a1123f1c35e2ce003bed4ccfa990ed241}{set\+Inicio} (const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_viagem_a0a871b6782ab9b478a530f2c15dc1e32}{inicio})
+\item 
+void \hyperlink{class_viagem_a6adcbdb92a4470979538f9566f718ff4}{set\+Fim} (const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_viagem_ab54e61d41be0157f9e75b14c8e06137f}{fim})
+\item 
+void \hyperlink{class_viagem_abaf8627f31b45be041716e8bf653968a}{adicionar\+Passageiro} (\hyperlink{class_particular}{Particular} $\ast$passageiro)
+\item 
+void \hyperlink{class_viagem_a43c491291e4639dc64ac1016ab7f3157}{remover\+Passageiro} (\hyperlink{class_particular}{Particular} $\ast$passageiro)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_membro}{Membro} $\ast$ \hyperlink{class_viagem_a015bb952a7afce6a348d0a9f88bdaf5c}{condutor}
+\item 
+\hyperlink{class_veiculo}{Veiculo} $\ast$ \hyperlink{class_viagem_aee9386a44de6b6afb11faff59331f7b5}{veiculo}
+\item 
+\hyperlink{class_coordenadas}{Coordenadas} \hyperlink{class_viagem_a0a871b6782ab9b478a530f2c15dc1e32}{inicio}
+\item 
+\hyperlink{class_coordenadas}{Coordenadas} \hyperlink{class_viagem_ab54e61d41be0157f9e75b14c8e06137f}{fim}
+\item 
+vector$<$ \hyperlink{class_particular}{Particular} $\ast$ $>$ \hyperlink{class_viagem_a8417361a46610f9fbbd6a7c43b02c149}{passageiros}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 10 of file Viagem.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_viagem_a5b74d4780b008414c2045f5788b6afa5}{\index{Viagem@{Viagem}!Viagem@{Viagem}}
+\index{Viagem@{Viagem}!Viagem@{Viagem}}
+\subsubsection[{Viagem}]{\setlength{\rightskip}{0pt plus 5cm}Viagem\+::\+Viagem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_viagem_a5b74d4780b008414c2045f5788b6afa5}
+\hypertarget{class_viagem_a5ba9d09f2be9e317a906865c7c7cff7c}{\index{Viagem@{Viagem}!Viagem@{Viagem}}
+\index{Viagem@{Viagem}!Viagem@{Viagem}}
+\subsubsection[{Viagem}]{\setlength{\rightskip}{0pt plus 5cm}Viagem\+::\+Viagem (
+\begin{DoxyParamCaption}
+\item[{{\bf Veiculo} $\ast$}]{veiculo, }
+\item[{const {\bf Coordenadas} \&}]{inicio, }
+\item[{const {\bf Coordenadas} \&}]{fim}
+\end{DoxyParamCaption}
+)}}\label{class_viagem_a5ba9d09f2be9e317a906865c7c7cff7c}
+\hypertarget{class_viagem_a78e5ed89a44c413db824eeed29632477}{\index{Viagem@{Viagem}!Viagem@{Viagem}}
+\index{Viagem@{Viagem}!Viagem@{Viagem}}
+\subsubsection[{Viagem}]{\setlength{\rightskip}{0pt plus 5cm}Viagem\+::\+Viagem (
+\begin{DoxyParamCaption}
+\item[{{\bf Membro} $\ast$}]{condutor, }
+\item[{{\bf Veiculo} $\ast$}]{veiculo, }
+\item[{const {\bf Coordenadas} \&}]{inicio, }
+\item[{const {\bf Coordenadas} \&}]{fim}
+\end{DoxyParamCaption}
+)}}\label{class_viagem_a78e5ed89a44c413db824eeed29632477}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_viagem_abaf8627f31b45be041716e8bf653968a}{\index{Viagem@{Viagem}!adicionar\+Passageiro@{adicionar\+Passageiro}}
+\index{adicionar\+Passageiro@{adicionar\+Passageiro}!Viagem@{Viagem}}
+\subsubsection[{adicionar\+Passageiro}]{\setlength{\rightskip}{0pt plus 5cm}void Viagem\+::adicionar\+Passageiro (
+\begin{DoxyParamCaption}
+\item[{{\bf Particular} $\ast$}]{passageiro}
+\end{DoxyParamCaption}
+)}}\label{class_viagem_abaf8627f31b45be041716e8bf653968a}
+\hypertarget{class_viagem_a620b4026617bd2bb14587dc405a71a1d}{\index{Viagem@{Viagem}!get\+Condutor@{get\+Condutor}}
+\index{get\+Condutor@{get\+Condutor}!Viagem@{Viagem}}
+\subsubsection[{get\+Condutor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Membro}$\ast$ Viagem\+::get\+Condutor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_viagem_a620b4026617bd2bb14587dc405a71a1d}
+\hypertarget{class_viagem_a8880fb61234fcbf1324201cb634932a5}{\index{Viagem@{Viagem}!get\+Fim@{get\+Fim}}
+\index{get\+Fim@{get\+Fim}!Viagem@{Viagem}}
+\subsubsection[{get\+Fim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordenadas} Viagem\+::get\+Fim (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_viagem_a8880fb61234fcbf1324201cb634932a5}
+\hypertarget{class_viagem_a9fc0473efd849f4d221cb94789f90c53}{\index{Viagem@{Viagem}!get\+Inicio@{get\+Inicio}}
+\index{get\+Inicio@{get\+Inicio}!Viagem@{Viagem}}
+\subsubsection[{get\+Inicio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordenadas} Viagem\+::get\+Inicio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_viagem_a9fc0473efd849f4d221cb94789f90c53}
+\hypertarget{class_viagem_aaa8ee2324353d9f00c453c24c6a2d92d}{\index{Viagem@{Viagem}!get\+Passageiros@{get\+Passageiros}}
+\index{get\+Passageiros@{get\+Passageiros}!Viagem@{Viagem}}
+\subsubsection[{get\+Passageiros}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Particular}$\ast$$>$ Viagem\+::get\+Passageiros (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_viagem_aaa8ee2324353d9f00c453c24c6a2d92d}
+\hypertarget{class_viagem_a382eb7613b4d67d0038f70aee311e514}{\index{Viagem@{Viagem}!get\+Veiculo@{get\+Veiculo}}
+\index{get\+Veiculo@{get\+Veiculo}!Viagem@{Viagem}}
+\subsubsection[{get\+Veiculo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Veiculo}$\ast$ Viagem\+::get\+Veiculo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_viagem_a382eb7613b4d67d0038f70aee311e514}
+\hypertarget{class_viagem_a43c491291e4639dc64ac1016ab7f3157}{\index{Viagem@{Viagem}!remover\+Passageiro@{remover\+Passageiro}}
+\index{remover\+Passageiro@{remover\+Passageiro}!Viagem@{Viagem}}
+\subsubsection[{remover\+Passageiro}]{\setlength{\rightskip}{0pt plus 5cm}void Viagem\+::remover\+Passageiro (
+\begin{DoxyParamCaption}
+\item[{{\bf Particular} $\ast$}]{passageiro}
+\end{DoxyParamCaption}
+)}}\label{class_viagem_a43c491291e4639dc64ac1016ab7f3157}
+\hypertarget{class_viagem_a2f4fa33d3da68b08681ef35c45bb8e9a}{\index{Viagem@{Viagem}!set\+Condutor@{set\+Condutor}}
+\index{set\+Condutor@{set\+Condutor}!Viagem@{Viagem}}
+\subsubsection[{set\+Condutor}]{\setlength{\rightskip}{0pt plus 5cm}void Viagem\+::set\+Condutor (
+\begin{DoxyParamCaption}
+\item[{{\bf Membro} $\ast$}]{condutor}
+\end{DoxyParamCaption}
+)}}\label{class_viagem_a2f4fa33d3da68b08681ef35c45bb8e9a}
+\hypertarget{class_viagem_a6adcbdb92a4470979538f9566f718ff4}{\index{Viagem@{Viagem}!set\+Fim@{set\+Fim}}
+\index{set\+Fim@{set\+Fim}!Viagem@{Viagem}}
+\subsubsection[{set\+Fim}]{\setlength{\rightskip}{0pt plus 5cm}void Viagem\+::set\+Fim (
+\begin{DoxyParamCaption}
+\item[{const {\bf Coordenadas} \&}]{fim}
+\end{DoxyParamCaption}
+)}}\label{class_viagem_a6adcbdb92a4470979538f9566f718ff4}
+\hypertarget{class_viagem_a1123f1c35e2ce003bed4ccfa990ed241}{\index{Viagem@{Viagem}!set\+Inicio@{set\+Inicio}}
+\index{set\+Inicio@{set\+Inicio}!Viagem@{Viagem}}
+\subsubsection[{set\+Inicio}]{\setlength{\rightskip}{0pt plus 5cm}void Viagem\+::set\+Inicio (
+\begin{DoxyParamCaption}
+\item[{const {\bf Coordenadas} \&}]{inicio}
+\end{DoxyParamCaption}
+)}}\label{class_viagem_a1123f1c35e2ce003bed4ccfa990ed241}
+\hypertarget{class_viagem_aa3f5672a7a99fbc78dbf5987fcc05688}{\index{Viagem@{Viagem}!set\+Veiculo@{set\+Veiculo}}
+\index{set\+Veiculo@{set\+Veiculo}!Viagem@{Viagem}}
+\subsubsection[{set\+Veiculo}]{\setlength{\rightskip}{0pt plus 5cm}void Viagem\+::set\+Veiculo (
+\begin{DoxyParamCaption}
+\item[{{\bf Veiculo} $\ast$}]{veiculo}
+\end{DoxyParamCaption}
+)}}\label{class_viagem_aa3f5672a7a99fbc78dbf5987fcc05688}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_viagem_a015bb952a7afce6a348d0a9f88bdaf5c}{\index{Viagem@{Viagem}!condutor@{condutor}}
+\index{condutor@{condutor}!Viagem@{Viagem}}
+\subsubsection[{condutor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Membro}$\ast$ Viagem\+::condutor\hspace{0.3cm}{\ttfamily [private]}}}\label{class_viagem_a015bb952a7afce6a348d0a9f88bdaf5c}
+
+
+Definition at line 13 of file Viagem.\+h.
+
+\hypertarget{class_viagem_ab54e61d41be0157f9e75b14c8e06137f}{\index{Viagem@{Viagem}!fim@{fim}}
+\index{fim@{fim}!Viagem@{Viagem}}
+\subsubsection[{fim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordenadas} Viagem\+::fim\hspace{0.3cm}{\ttfamily [private]}}}\label{class_viagem_ab54e61d41be0157f9e75b14c8e06137f}
+
+
+Definition at line 16 of file Viagem.\+h.
+
+\hypertarget{class_viagem_a0a871b6782ab9b478a530f2c15dc1e32}{\index{Viagem@{Viagem}!inicio@{inicio}}
+\index{inicio@{inicio}!Viagem@{Viagem}}
+\subsubsection[{inicio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordenadas} Viagem\+::inicio\hspace{0.3cm}{\ttfamily [private]}}}\label{class_viagem_a0a871b6782ab9b478a530f2c15dc1e32}
+
+
+Definition at line 15 of file Viagem.\+h.
+
+\hypertarget{class_viagem_a8417361a46610f9fbbd6a7c43b02c149}{\index{Viagem@{Viagem}!passageiros@{passageiros}}
+\index{passageiros@{passageiros}!Viagem@{Viagem}}
+\subsubsection[{passageiros}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Particular}$\ast$$>$ Viagem\+::passageiros\hspace{0.3cm}{\ttfamily [private]}}}\label{class_viagem_a8417361a46610f9fbbd6a7c43b02c149}
+
+
+Definition at line 17 of file Viagem.\+h.
+
+\hypertarget{class_viagem_aee9386a44de6b6afb11faff59331f7b5}{\index{Viagem@{Viagem}!veiculo@{veiculo}}
+\index{veiculo@{veiculo}!Viagem@{Viagem}}
+\subsubsection[{veiculo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Veiculo}$\ast$ Viagem\+::veiculo\hspace{0.3cm}{\ttfamily [private]}}}\label{class_viagem_aee9386a44de6b6afb11faff59331f7b5}
+
+
+Definition at line 14 of file Viagem.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/\+Headers/\hyperlink{_viagem_8h}{Viagem.\+h}\end{DoxyCompactItemize}

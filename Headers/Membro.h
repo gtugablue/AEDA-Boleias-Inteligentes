@@ -1,3 +1,6 @@
+#ifndef _MEMBRO_H
+#define _MEMBRO_H
+
 #include <string>
 
 using namespace std;
@@ -17,3 +20,5 @@ public:
 	void setUtilizador(string &utilizador);
 	void setPassword(string &password);
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef _DATA_H
+#define _DATA_H
+
 using namespace std;
 
 class Data
@@ -16,3 +19,5 @@ public:
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);
 };
+
+#endif

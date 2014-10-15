@@ -1,4 +1,5 @@
-#include <string>
+#ifndef _COMBUSTIVEL_H
+#define _COMBUSTIVEL_H
 
 using namespace std;
 
@@ -8,10 +9,11 @@ private:
 	string nome;
 	float preco;
 public:
-	Combustivel();
-	Combustivel(string nome, float preco);
+	Combustivel(const string &nome, float preco);
+	void setNome(const string &nome);
+	void setPreco(const string &preco);
 	string getNome() const;
 	float getPreco() const;
-	void setNome(string &nome);
-	void setPreco(float preco);
 };
+
+#endif

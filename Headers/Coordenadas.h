@@ -1,3 +1,6 @@
+#ifndef _COORDENADAS_H
+#define _COORDENADAS_H
+
 using namespace std;
 
 class Coordenadas
@@ -13,3 +16,5 @@ public:
 	void setLatitude(double latitude);
 	void setLongitude(double longitude);
 };
+
+#endif

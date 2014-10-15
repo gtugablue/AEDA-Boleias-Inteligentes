@@ -1,3 +1,6 @@
+#ifndef _PARTICULAR_H
+#define _PARTICULAR_H
+
 #include "Membro.h"
 #include "Data.h"
 #include "Veiculo.h"
@@ -18,3 +21,5 @@ public:
 	void setVeiculos(const vector<Veiculo> &veiculo);
 	Data setDataNascimento(const Data &data);
 };
+
+#endif

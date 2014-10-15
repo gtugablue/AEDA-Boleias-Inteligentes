@@ -1,15 +1,10 @@
-#include "Evento.h"
-#include "Data.h"
+#include "Viagem.h"
 #include <string>
 
-using namespace std;
-
-class EventoPeriodico: public Evento
+class ViagemPeriodica: public Viagem
 {
 private:
 	static const string diasDaSemana[];
-	unsigned diaDaSemana; // 0 a 6
-	Data inicio;
 };
 
 static const string diasDaSemana[] =

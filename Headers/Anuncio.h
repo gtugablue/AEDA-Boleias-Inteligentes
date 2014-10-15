@@ -1,20 +1,37 @@
-#include "Coordenadas.h"
+#ifndef _ANUNCIO_H
+#define _ANUNCIO_H
+
 #include "Membro.h"
+#include "Particular.h"
+#include "Viagem.h"
 
 using namespace std;
 
 class Anuncio
 {
 private:
-	Coordenadas origem;
-	Coordenadas destino;
-	Membro* anunciante;
+	string titulo;
+	string descricao;
+	vector<Particular *> candidatos;
+	float precoTotal;
+	Viagem* viagem;
 public:
-	Anuncio(const Coordenadas &origem, const Coordenadas &destino);
+	Anuncio(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, Viagem* viagem);
+	string getTitulo() const;
+	string getDescricao() const;
 	Coordenadas getOrigem() const;
 	Coordenadas getDestino() const;
-	Membro getAnunciante() const;
+	virtual Membro* getAnunciante() const = 0;
+	void setTitulo(const string &titulo);
+	void setDescricao(const string &descricao);
 	void setOrigem() const;
 	void setDestino() const;
-	void setAnunciante() const;
+	virtual void setAnunciante() const = 0;
+	void adicionarCandidato(Particular* candidato);
+	void aceitarCandidato(Particular* candidato);
+	void removerCandidato(Particular* candidato);
+	void calcularPrecoTotal();
+	virtual ~Anuncio();
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef _VEICULO_H
+#define _VEICULO_H
+
 #include <string>
 #include "Combustivel.h"
 
@@ -5,12 +8,12 @@ using namespace std;
 
 class Veiculo
 {
-protected:
+private:
 	string marca;
 	unsigned mes;
 	unsigned ano;
 	unsigned cilindrada;
-	Combustivel combustivel;
+	Combustivel* combustivel;
 public:
 	Veiculo();
 	Veiculo(string marca, unsigned mes, unsigned ano);
@@ -21,5 +24,7 @@ public:
 	void setMarca(string &marca);
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);
-	void setCilindrada(const Combustivel &combustivel);
+	void setCilindrada(const Combustivel* combustivel);
 };
+
+#endif

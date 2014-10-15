@@ -1,3 +1,6 @@
+#ifndef _HORA_H
+#define _HORA_H
+
 using namespace std;
 
 class Hora
@@ -14,3 +17,5 @@ public:
 	void setMinuto(unsigned minuto);
 	bool operator<(const Hora &horas);
 };
+
+#endif
