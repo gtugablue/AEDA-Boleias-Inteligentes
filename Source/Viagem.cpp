@@ -1,4 +1,4 @@
-#include "Viagem.h"
+#include "../headers/Viagem.h"
 
 Viagem::Viagem(Membro* condutor, Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim)
 {
