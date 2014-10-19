@@ -16,7 +16,7 @@ public:
 	string getNome() const;
 	string getUtilizador() const;
 	string getPassword() const;
-	void setNome(string &nome);
+	void setNome(string &nome) ;
 	void setUtilizador(string &utilizador);
 	void setPassword(string &password);
 };
