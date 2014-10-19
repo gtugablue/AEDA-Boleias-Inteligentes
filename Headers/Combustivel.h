@@ -11,7 +11,7 @@ private:
 public:
 	Combustivel(const string &nome, float preco);
 	void setNome(const string &nome);
-	void setPreco(const string &preco);
+	void setPreco(const float &preco);
 	string getNome() const;
 	float getPreco() const;
 };

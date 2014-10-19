@@ -24,8 +24,8 @@ public:
 	virtual Membro* getAnunciante() const = 0;
 	void setTitulo(const string &titulo);
 	void setDescricao(const string &descricao);
-	void setOrigem() const;
-	void setDestino() const;
+	void setOrigem(Coordenadas &o) const;
+	void setDestino(Coordenadas &d) const;
 	virtual void setAnunciante() const = 0;
 	void adicionarCandidato(Particular* candidato);
 	void aceitarCandidato(Particular* candidato);
