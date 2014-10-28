@@ -1,4 +1,4 @@
-#include "Hora.h"
+#include "../headers/Hora.h"
 
 Hora::Hora(unsigned hora, unsigned minuto)
 {

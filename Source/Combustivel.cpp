@@ -1,4 +1,4 @@
-#include "Combustivel.h"
+#include "../headers/Combustivel.h"
 
 Combustivel::Combustivel(const string &nome, float preco)
 {

@@ -1,11 +1,19 @@
 #include "../headers/Viagem.h"
 
+Viagem::Viagem(Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim)
+{
+	this->condutor = NULL;
+	this->veiculo = veiculo;
+	this->inicio = inicio;
+	this->fim = fim;
+}
+
 Viagem::Viagem(Membro* condutor, Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim)
 {
-	this ->condutor=condutor;
-	this ->veiculo=veiculo;
-	this ->inicio=inicio;
-	this ->fim =fim;
+	this ->condutor = condutor;
+	this ->veiculo = veiculo;
+	this ->inicio = inicio;
+	this ->fim = fim;
 }
 
 Membro* Viagem:: getCondutor() const

@@ -1,4 +1,4 @@
-#include "Membro.h"
+#include "../headers/Membro.h"
 
 Membro::Membro(string nome, string utilizador, string password)
 {

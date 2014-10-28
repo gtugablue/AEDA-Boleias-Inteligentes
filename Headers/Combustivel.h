@@ -1,6 +1,8 @@
 #ifndef _COMBUSTIVEL_H
 #define _COMBUSTIVEL_H
 
+#include <string>
+
 using namespace std;
 
 class Combustivel
