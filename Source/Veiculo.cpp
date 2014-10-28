@@ -1,11 +1,12 @@
-#include "Veiculo.h"
+#include "../headers/Veiculo.h"
 
-Veiculo::Veiculo(string marca, unsigned mes, unsigned ano,unsigned cilindrada)
+Veiculo::Veiculo(string marca, unsigned mes, unsigned ano,unsigned cilindrada, Combustivel* combustivel)
 {
-	this ->marca=marca;
-	this->mes=mes;
-	this->ano=ano;
-	this->cilindrada=cilindrada;
+	this->marca = marca;
+	this->mes = mes;
+	this->ano = ano;
+	this->cilindrada = cilindrada;
+	this->combustivel = combustivel;
 }
 
 string Veiculo::getMarca() const
@@ -23,29 +24,43 @@ unsigned Veiculo::getAno()const
 	return ano;
 }
 
-string Veiculo::getCilindrada()const
+unsigned Veiculo::getCilindrada()const
 {
 	return cilindrada;
 }
 
+Combustivel* Veiculo::getCombustivel() const
+{
+	return combustivel;
+}
+
 void Veiculo::setMarca(string &marca)
 {
-	this->marca=marca;
+	this->marca = marca;
+	return;
 
 }
 
 void Veiculo::setAno(unsigned ano)
 {
-	this->ano=ano;
+	this->ano = ano;
+	return;
 }
 
 void Veiculo::setMes(unsigned mes)
 {
-	this->mes=mes;
+	this->mes = mes;
+	return;
 }
 
 void Veiculo::setCilindrada(unsigned cilindrada)
 {
-  this ->cilindrada=cilindrada;
+	this->cilindrada = cilindrada;
+	return;
 }
 
+void Veiculo::setCombustivel(Combustivel* combustivel)
+{
+	this->combustivel = combustivel;
+	return;
+}

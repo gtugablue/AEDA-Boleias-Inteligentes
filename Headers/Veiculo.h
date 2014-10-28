@@ -16,15 +16,17 @@ private:
 	Combustivel* combustivel;
 public:
 	Veiculo();
-	Veiculo(string marca, unsigned mes, unsigned ano,unsigned cilindrada);
+	Veiculo(string marca, unsigned mes, unsigned ano, unsigned cilindrada, Combustivel* combustivel);
 	string getMarca() const;
 	unsigned getMes() const;
 	unsigned getAno() const;
-	string getCilindrada() const;
+	unsigned getCilindrada() const;
+	Combustivel* getCombustivel() const;
 	void setMarca(string &marca);
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);
 	void setCilindrada(unsigned cilindrada);
+	void setCombustivel(Combustivel* combustivel);
 };
 
 #endif
