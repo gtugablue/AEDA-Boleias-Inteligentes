@@ -1,11 +1,11 @@
 #include "../headers/Anuncio.h"
 
-Anuncio::Anuncio(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, Viagem* viagem)
+Anuncio::Anuncio(const string &titulo, const string &descricao, float precoTotal, Viagem* viagem)
 {
-	this ->titulo=titulo;
-	this ->descricao=descricao;
-	this ->precoTotal=precoTotal;
-	this ->viagem=viagem;
+	this->titulo = titulo;
+	this->descricao = descricao;
+	this->precoTotal = precoTotal;
+	this->viagem = viagem;
 }
 
 string Anuncio::getTitulo() const
@@ -60,7 +60,7 @@ void Anuncio::aceitarCandidato(Particular* candidato)
 	{
 		if(candidatos[i]->getUtilizador()==candidato[i].getUtilizador())
 		{
-			viagem->adicionarPassageiro(candidatos[i]);
+			//viagem->adicionarPassageiro(candidatos[i]);
 		}
 	}
 }
