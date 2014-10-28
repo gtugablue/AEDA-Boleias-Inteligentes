@@ -1,8 +1,0 @@
-digraph "C:/Users/Gustavo/git/AEDA-Boleias-Inteligentes/Source" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  dir_74389ed8173ad57b461b9d623a1f3867 [shape=box, label="Source", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_74389ed8173ad57b461b9d623a1f3867.html"];
-  dir_692516b589a32b3bfce781ca9f6d1534 [shape=box label="Headers" URL="dir_692516b589a32b3bfce781ca9f6d1534.html"];
-  dir_74389ed8173ad57b461b9d623a1f3867->dir_692516b589a32b3bfce781ca9f6d1534 [headlabel="1", labeldistance=1.5 headhref="dir_000001_000000.html"];
-}

@@ -1,6 +1,5 @@
 var class_data =
 [
-    [ "Data", "class_data.html#af11f741cb7f587e2e495452a8905a22a", null ],
     [ "Data", "class_data.html#ab1e8f6ca4094cbf13062f243fa2bb90b", null ],
     [ "getAno", "class_data.html#a31f649c5a854de4750506a163955bb0b", null ],
     [ "getDia", "class_data.html#a07fe748ec046cb904c6854fb8b792786", null ],

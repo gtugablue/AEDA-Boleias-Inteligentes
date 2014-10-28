@@ -30,9 +30,9 @@ void \hyperlink{class_anuncio_af95db56a1347160ef1cf53ea1ec659a6}{set\+Titulo} (c
 \item 
 void \hyperlink{class_anuncio_a8746d4708c5622947b17385414320e88}{set\+Descricao} (const string \&\hyperlink{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}{descricao})
 \item 
-void \hyperlink{class_anuncio_a5587a5b1ae085b424ca58a5d4d852f42}{set\+Origem} () const 
+void \hyperlink{class_anuncio_ac88555aa5c54bc552eb6a31787334e39}{set\+Origem} (\hyperlink{class_coordenadas}{Coordenadas} \&o) const 
 \item 
-void \hyperlink{class_anuncio_a9cba8e726ac51128dd4b28cc7c2d5e47}{set\+Destino} () const 
+void \hyperlink{class_anuncio_add212eaa271e366dccaa82a8f2bee736}{set\+Destino} (\hyperlink{class_coordenadas}{Coordenadas} \&d) const 
 \item 
 virtual void \hyperlink{class_anuncio_ae1271413eb8f63fb054253057706de9a}{set\+Anunciante} () const =0
 \item 
@@ -80,6 +80,14 @@ Definition at line 10 of file Anuncio.\+h.
 \item[{{\bf Viagem} $\ast$}]{viagem}
 \end{DoxyParamCaption}
 )}}\label{class_anuncio_a5589ef34bbed97fe7ab10ccdcbbd66a1}
+
+
+Definition at line 3 of file Anuncio.\+cpp.
+
+
+
+References descricao, preco\+Total, titulo, and viagem.
+
 \hypertarget{class_anuncio_acbc854230687f95adca2fdeaa377921b}{\index{Anuncio@{Anuncio}!````~Anuncio@{$\sim$\+Anuncio}}
 \index{````~Anuncio@{$\sim$\+Anuncio}!Anuncio@{Anuncio}}
 \subsubsection[{$\sim$\+Anuncio}]{\setlength{\rightskip}{0pt plus 5cm}virtual Anuncio\+::$\sim$\+Anuncio (
@@ -97,6 +105,19 @@ Definition at line 10 of file Anuncio.\+h.
 \item[{{\bf Particular} $\ast$}]{candidato}
 \end{DoxyParamCaption}
 )}}\label{class_anuncio_a3b7642bf06c1aa75dada38c7d015cb8d}
+
+
+Definition at line 57 of file Anuncio.\+cpp.
+
+
+
+References Viagem\+::adicionar\+Passageiro(), candidatos, Membro\+::get\+Utilizador(), and viagem.
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_anuncio_a0c9937cd0d6f4748031e5aec7b61d496}{\index{Anuncio@{Anuncio}!adicionar\+Candidato@{adicionar\+Candidato}}
 \index{adicionar\+Candidato@{adicionar\+Candidato}!Anuncio@{Anuncio}}
 \subsubsection[{adicionar\+Candidato}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::adicionar\+Candidato (
@@ -104,6 +125,14 @@ Definition at line 10 of file Anuncio.\+h.
 \item[{{\bf Particular} $\ast$}]{candidato}
 \end{DoxyParamCaption}
 )}}\label{class_anuncio_a0c9937cd0d6f4748031e5aec7b61d496}
+
+
+Definition at line 41 of file Anuncio.\+cpp.
+
+
+
+References candidatos.
+
 \hypertarget{class_anuncio_ac49d84d1a011803f9676f1e47c252125}{\index{Anuncio@{Anuncio}!calcular\+Preco\+Total@{calcular\+Preco\+Total}}
 \index{calcular\+Preco\+Total@{calcular\+Preco\+Total}!Anuncio@{Anuncio}}
 \subsubsection[{calcular\+Preco\+Total}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::calcular\+Preco\+Total (
@@ -129,6 +158,14 @@ Implemented in \hyperlink{class_anuncio_procura_aadc1d2f42fd3a9629498065b931e913
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_anuncio_a693f59391a620851b4ac37063e8f4af4}
+
+
+Definition at line 16 of file Anuncio.\+cpp.
+
+
+
+References descricao.
+
 \hypertarget{class_anuncio_a207905709390f67bb9546e4d94682bb5}{\index{Anuncio@{Anuncio}!get\+Destino@{get\+Destino}}
 \index{get\+Destino@{get\+Destino}!Anuncio@{Anuncio}}
 \subsubsection[{get\+Destino}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordenadas} Anuncio\+::get\+Destino (
@@ -136,6 +173,19 @@ Implemented in \hyperlink{class_anuncio_procura_aadc1d2f42fd3a9629498065b931e913
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_anuncio_a207905709390f67bb9546e4d94682bb5}
+
+
+Definition at line 26 of file Anuncio.\+cpp.
+
+
+
+References Viagem\+::get\+Fim(), and viagem.
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_anuncio_a4a0c6be721a7fe4351cd5fa06b8bafcd}{\index{Anuncio@{Anuncio}!get\+Origem@{get\+Origem}}
 \index{get\+Origem@{get\+Origem}!Anuncio@{Anuncio}}
 \subsubsection[{get\+Origem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordenadas} Anuncio\+::get\+Origem (
@@ -143,6 +193,19 @@ Implemented in \hyperlink{class_anuncio_procura_aadc1d2f42fd3a9629498065b931e913
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_anuncio_a4a0c6be721a7fe4351cd5fa06b8bafcd}
+
+
+Definition at line 21 of file Anuncio.\+cpp.
+
+
+
+References Viagem\+::get\+Inicio(), and viagem.
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_anuncio_af712423e3645f7127f987d88793127d4}{\index{Anuncio@{Anuncio}!get\+Titulo@{get\+Titulo}}
 \index{get\+Titulo@{get\+Titulo}!Anuncio@{Anuncio}}
 \subsubsection[{get\+Titulo}]{\setlength{\rightskip}{0pt plus 5cm}string Anuncio\+::get\+Titulo (
@@ -150,6 +213,14 @@ Implemented in \hyperlink{class_anuncio_procura_aadc1d2f42fd3a9629498065b931e913
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_anuncio_af712423e3645f7127f987d88793127d4}
+
+
+Definition at line 11 of file Anuncio.\+cpp.
+
+
+
+References titulo.
+
 \hypertarget{class_anuncio_a755de86be5f1b66d66a6ddbe3f217246}{\index{Anuncio@{Anuncio}!remover\+Candidato@{remover\+Candidato}}
 \index{remover\+Candidato@{remover\+Candidato}!Anuncio@{Anuncio}}
 \subsubsection[{remover\+Candidato}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::remover\+Candidato (
@@ -157,6 +228,19 @@ Implemented in \hyperlink{class_anuncio_procura_aadc1d2f42fd3a9629498065b931e913
 \item[{{\bf Particular} $\ast$}]{candidato}
 \end{DoxyParamCaption}
 )}}\label{class_anuncio_a755de86be5f1b66d66a6ddbe3f217246}
+
+
+Definition at line 46 of file Anuncio.\+cpp.
+
+
+
+References candidatos, and Membro\+::get\+Utilizador().
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_anuncio_ae1271413eb8f63fb054253057706de9a}{\index{Anuncio@{Anuncio}!set\+Anunciante@{set\+Anunciante}}
 \index{set\+Anunciante@{set\+Anunciante}!Anuncio@{Anuncio}}
 \subsubsection[{set\+Anunciante}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Anuncio\+::set\+Anunciante (
@@ -171,20 +255,54 @@ Implemented in \hyperlink{class_anuncio_procura_aadc1d2f42fd3a9629498065b931e913
 \item[{const string \&}]{descricao}
 \end{DoxyParamCaption}
 )}}\label{class_anuncio_a8746d4708c5622947b17385414320e88}
-\hypertarget{class_anuncio_a9cba8e726ac51128dd4b28cc7c2d5e47}{\index{Anuncio@{Anuncio}!set\+Destino@{set\+Destino}}
+
+
+Definition at line 36 of file Anuncio.\+cpp.
+
+
+
+References descricao.
+
+\hypertarget{class_anuncio_add212eaa271e366dccaa82a8f2bee736}{\index{Anuncio@{Anuncio}!set\+Destino@{set\+Destino}}
 \index{set\+Destino@{set\+Destino}!Anuncio@{Anuncio}}
 \subsubsection[{set\+Destino}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::set\+Destino (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf Coordenadas} \&}]{d}
 \end{DoxyParamCaption}
-) const}}\label{class_anuncio_a9cba8e726ac51128dd4b28cc7c2d5e47}
-\hypertarget{class_anuncio_a5587a5b1ae085b424ca58a5d4d852f42}{\index{Anuncio@{Anuncio}!set\+Origem@{set\+Origem}}
+) const}}\label{class_anuncio_add212eaa271e366dccaa82a8f2bee736}
+
+
+Definition at line 73 of file Anuncio.\+cpp.
+
+
+
+References Viagem\+::set\+Fim(), and viagem.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_anuncio_ac88555aa5c54bc552eb6a31787334e39}{\index{Anuncio@{Anuncio}!set\+Origem@{set\+Origem}}
 \index{set\+Origem@{set\+Origem}!Anuncio@{Anuncio}}
 \subsubsection[{set\+Origem}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::set\+Origem (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf Coordenadas} \&}]{o}
 \end{DoxyParamCaption}
-) const}}\label{class_anuncio_a5587a5b1ae085b424ca58a5d4d852f42}
+) const}}\label{class_anuncio_ac88555aa5c54bc552eb6a31787334e39}
+
+
+Definition at line 68 of file Anuncio.\+cpp.
+
+
+
+References Viagem\+::set\+Inicio(), and viagem.
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_anuncio_af95db56a1347160ef1cf53ea1ec659a6}{\index{Anuncio@{Anuncio}!set\+Titulo@{set\+Titulo}}
 \index{set\+Titulo@{set\+Titulo}!Anuncio@{Anuncio}}
 \subsubsection[{set\+Titulo}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::set\+Titulo (
@@ -192,6 +310,14 @@ Implemented in \hyperlink{class_anuncio_procura_aadc1d2f42fd3a9629498065b931e913
 \item[{const string \&}]{titulo}
 \end{DoxyParamCaption}
 )}}\label{class_anuncio_af95db56a1347160ef1cf53ea1ec659a6}
+
+
+Definition at line 31 of file Anuncio.\+cpp.
+
+
+
+References titulo.
+
 
 
 \subsection{Member Data Documentation}
@@ -202,12 +328,20 @@ Implemented in \hyperlink{class_anuncio_procura_aadc1d2f42fd3a9629498065b931e913
 
 Definition at line 15 of file Anuncio.\+h.
 
+
+
+Referenced by aceitar\+Candidato(), adicionar\+Candidato(), and remover\+Candidato().
+
 \hypertarget{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}{\index{Anuncio@{Anuncio}!descricao@{descricao}}
 \index{descricao@{descricao}!Anuncio@{Anuncio}}
 \subsubsection[{descricao}]{\setlength{\rightskip}{0pt plus 5cm}string Anuncio\+::descricao\hspace{0.3cm}{\ttfamily [private]}}}\label{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}
 
 
 Definition at line 14 of file Anuncio.\+h.
+
+
+
+Referenced by Anuncio(), get\+Descricao(), and set\+Descricao().
 
 \hypertarget{class_anuncio_a8ba7cc797b8b582c596038a17e9bce3b}{\index{Anuncio@{Anuncio}!preco\+Total@{preco\+Total}}
 \index{preco\+Total@{preco\+Total}!Anuncio@{Anuncio}}
@@ -216,12 +350,20 @@ Definition at line 14 of file Anuncio.\+h.
 
 Definition at line 16 of file Anuncio.\+h.
 
+
+
+Referenced by Anuncio().
+
 \hypertarget{class_anuncio_adb34bedd8220f42b9ee37662c21313e6}{\index{Anuncio@{Anuncio}!titulo@{titulo}}
 \index{titulo@{titulo}!Anuncio@{Anuncio}}
 \subsubsection[{titulo}]{\setlength{\rightskip}{0pt plus 5cm}string Anuncio\+::titulo\hspace{0.3cm}{\ttfamily [private]}}}\label{class_anuncio_adb34bedd8220f42b9ee37662c21313e6}
 
 
 Definition at line 13 of file Anuncio.\+h.
+
+
+
+Referenced by Anuncio(), get\+Titulo(), and set\+Titulo().
 
 \hypertarget{class_anuncio_aa225374a19420f56f5abc258d96b691a}{\index{Anuncio@{Anuncio}!viagem@{viagem}}
 \index{viagem@{viagem}!Anuncio@{Anuncio}}
@@ -232,6 +374,11 @@ Definition at line 17 of file Anuncio.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Referenced by aceitar\+Candidato(), Anuncio(), get\+Destino(), get\+Origem(), set\+Destino(), and set\+Origem().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/\+Headers/\hyperlink{_anuncio_8h}{Anuncio.\+h}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Headers/\hyperlink{_anuncio_8h}{Anuncio.\+h}\item 
+C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Source/\hyperlink{_anuncio_8cpp}{Anuncio.\+cpp}\end{DoxyCompactItemize}

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Project: C:/Users/Gustavo/git/AEDA-Boleias-Inteligentes/Headers/ViagemPeriodica.h Source File</title>
+<title>AEDABoleiasInteligentes: C:/Users/Gustavo/git/AEDA-Boleias-Inteligentes/codigo/Headers/ViagemPeriodica.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">AEDABoleiasInteligentes
    &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
@@ -37,7 +37,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -71,33 +70,45 @@ $(document).ready(function(){initNavTree('_viagem_periodica_8h_source.html','');
 <a href="_viagem_periodica_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_viagem_8h.html">Viagem.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_viagem_periodica.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_viagem_periodica.html">ViagemPeriodica</a>: <span class="keyword">public</span> <a class="code" href="class_viagem.html">Viagem</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_viagem_periodica.html#aec0deb1571c96da485be2d49e85d48a6">    7</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="class_viagem_periodica.html#aec0deb1571c96da485be2d49e85d48a6">diasDaSemana</a>[];</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;};</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">string</span> diasDaSemana[] =</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="stringliteral">&quot;Segunda-feira&quot;</span>,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="stringliteral">&quot;Terca-feira&quot;</span>,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="stringliteral">&quot;Quarta-feira&quot;</span>,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="stringliteral">&quot;Quinta-feira&quot;</span>,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="stringliteral">&quot;Sexta-feira&quot;</span>,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="stringliteral">&quot;Sabado&quot;</span>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="stringliteral">&quot;Domingo&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    };</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_viagem_periodica.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_viagem_periodica.html">ViagemPeriodica</a>: <span class="keyword">public</span> <a class="code" href="class_viagem.html">Viagem</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_viagem_periodica.html#aec0deb1571c96da485be2d49e85d48a6">    9</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">string</span> diasDaSemana[];</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_viagem_periodica.html#ac53255ef9f3e6d862e2ac803d7e45206">   10</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="class_viagem_periodica.html#ac53255ef9f3e6d862e2ac803d7e45206">diaDaSemana</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_viagem_periodica.html">ViagemPeriodica</a>(<span class="keywordtype">char</span> diaDaSemana, <a class="code" href="class_veiculo.html">Veiculo</a>* veiculo, <span class="keyword">const</span> <a class="code" href="class_coordenadas.html">Coordenadas</a> &amp;inicio, <span class="keyword">const</span> <a class="code" href="class_coordenadas.html">Coordenadas</a> &amp;fim);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_viagem_periodica.html">ViagemPeriodica</a>(<span class="keywordtype">char</span> diaDaSemana, <a class="code" href="class_membro.html">Membro</a>* condutor, <a class="code" href="class_veiculo.html">Veiculo</a>* veiculo, <span class="keyword">const</span> <a class="code" href="class_coordenadas.html">Coordenadas</a> &amp;inicio, <span class="keyword">const</span> <a class="code" href="class_coordenadas.html">Coordenadas</a> &amp;fim);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">char</span> getDiaDaSemana() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> setDiaDaSemana(<span class="keywordtype">char</span> diaDaSemana);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">string</span> diasDaSemana[] =</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="stringliteral">&quot;Segunda-feira&quot;</span>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="stringliteral">&quot;Terca-feira&quot;</span>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="stringliteral">&quot;Quarta-feira&quot;</span>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="stringliteral">&quot;Quinta-feira&quot;</span>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="stringliteral">&quot;Sexta-feira&quot;</span>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="stringliteral">&quot;Sabado&quot;</span>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="stringliteral">&quot;Domingo&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="ttc" id="class_veiculo_html"><div class="ttname"><a href="class_veiculo.html">Veiculo</a></div><div class="ttdef"><b>Definition:</b> <a href="_veiculo_8h_source.html#l00009">Veiculo.h:9</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
 <div class="ttc" id="_viagem_8h_html"><div class="ttname"><a href="_viagem_8h.html">Viagem.h</a></div></div>
-<div class="ttc" id="class_viagem_periodica_html"><div class="ttname"><a href="class_viagem_periodica.html">ViagemPeriodica</a></div><div class="ttdef"><b>Definition:</b> <a href="_viagem_periodica_8h_source.html#l00004">ViagemPeriodica.h:4</a></div></div>
+<div class="ttc" id="class_viagem_periodica_html"><div class="ttname"><a href="class_viagem_periodica.html">ViagemPeriodica</a></div><div class="ttdef"><b>Definition:</b> <a href="_viagem_periodica_8h_source.html#l00006">ViagemPeriodica.h:6</a></div></div>
+<div class="ttc" id="class_viagem_periodica_html_ac53255ef9f3e6d862e2ac803d7e45206"><div class="ttname"><a href="class_viagem_periodica.html#ac53255ef9f3e6d862e2ac803d7e45206">ViagemPeriodica::diaDaSemana</a></div><div class="ttdeci">char diaDaSemana</div><div class="ttdef"><b>Definition:</b> <a href="_viagem_periodica_8h_source.html#l00010">ViagemPeriodica.h:10</a></div></div>
+<div class="ttc" id="class_membro_html"><div class="ttname"><a href="class_membro.html">Membro</a></div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00008">Membro.h:8</a></div></div>
 <div class="ttc" id="class_viagem_html"><div class="ttname"><a href="class_viagem.html">Viagem</a></div><div class="ttdef"><b>Definition:</b> <a href="_viagem_8h_source.html#l00010">Viagem.h:10</a></div></div>
-<div class="ttc" id="class_viagem_periodica_html_aec0deb1571c96da485be2d49e85d48a6"><div class="ttname"><a href="class_viagem_periodica.html#aec0deb1571c96da485be2d49e85d48a6">ViagemPeriodica::diasDaSemana</a></div><div class="ttdeci">static const string diasDaSemana[]</div><div class="ttdef"><b>Definition:</b> <a href="_viagem_periodica_8h_source.html#l00007">ViagemPeriodica.h:7</a></div></div>
+<div class="ttc" id="class_coordenadas_html"><div class="ttname"><a href="class_coordenadas.html">Coordenadas</a></div><div class="ttdef"><b>Definition:</b> <a href="_coordenadas_8h_source.html#l00006">Coordenadas.h:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_692516b589a32b3bfce781ca9f6d1534.html">Headers</a></li><li class="navelem"><a class="el" href="_viagem_periodica_8h.html">ViagemPeriodica.h</a></li>
-    <li class="footer">Generated on Wed Oct 15 2014 01:25:57 for My Project by
+    <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li><li class="navelem"><a class="el" href="dir_8ec053a504507d4cd016538dd4f7c72d.html">Headers</a></li><li class="navelem"><a class="el" href="_viagem_periodica_8h.html">ViagemPeriodica.h</a></li>
+    <li class="footer">Generated on Tue Oct 28 2014 16:38:17 for AEDABoleiasInteligentes by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

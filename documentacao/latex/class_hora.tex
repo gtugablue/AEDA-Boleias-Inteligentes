@@ -8,9 +8,9 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_hora_af1b32f81893707ace3cfcec7900f78a0}{Horas} ()
+\hyperlink{class_hora_a90c18369977bbf1bf3a7370d8ea9e9ae}{Hora} ()
 \item 
-\hyperlink{class_hora_a610d00d405cfd4547fdf61de7f901605}{Horas} (unsigned \hyperlink{class_hora_ab901e62ae1158965687dc736a45ee8fe}{hora}, unsigned \hyperlink{class_hora_a9d33ce2d8a3f4b3d05b2a3c6df782fa4}{minuto})
+\hyperlink{class_hora_ac2b1f6c87010f4c8af8c3f1986c02b23}{Hora} (unsigned \hyperlink{class_hora_ab901e62ae1158965687dc736a45ee8fe}{hora}, unsigned \hyperlink{class_hora_a9d33ce2d8a3f4b3d05b2a3c6df782fa4}{minuto})
 \item 
 unsigned \hyperlink{class_hora_ae55080cc8706bcbf135036edcc4112a5}{get\+Hora} () const 
 \item 
@@ -38,6 +38,32 @@ Definition at line 6 of file Hora.\+h.
 
 
 
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_hora_a90c18369977bbf1bf3a7370d8ea9e9ae}{\index{Hora@{Hora}!Hora@{Hora}}
+\index{Hora@{Hora}!Hora@{Hora}}
+\subsubsection[{Hora}]{\setlength{\rightskip}{0pt plus 5cm}Hora\+::\+Hora (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hora_a90c18369977bbf1bf3a7370d8ea9e9ae}
+\hypertarget{class_hora_ac2b1f6c87010f4c8af8c3f1986c02b23}{\index{Hora@{Hora}!Hora@{Hora}}
+\index{Hora@{Hora}!Hora@{Hora}}
+\subsubsection[{Hora}]{\setlength{\rightskip}{0pt plus 5cm}Hora\+::\+Hora (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{hora, }
+\item[{unsigned}]{minuto}
+\end{DoxyParamCaption}
+)}}\label{class_hora_ac2b1f6c87010f4c8af8c3f1986c02b23}
+
+
+Definition at line 3 of file Hora.\+cpp.
+
+
+
+References hora, and minuto.
+
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_hora_ae55080cc8706bcbf135036edcc4112a5}{\index{Hora@{Hora}!get\+Hora@{get\+Hora}}
 \index{get\+Hora@{get\+Hora}!Hora@{Hora}}
@@ -46,6 +72,18 @@ Definition at line 6 of file Hora.\+h.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_hora_ae55080cc8706bcbf135036edcc4112a5}
+
+
+Definition at line 9 of file Hora.\+cpp.
+
+
+
+References hora.
+
+
+
+Referenced by operator$<$().
+
 \hypertarget{class_hora_adccaf5d0c9e674462f77b31ae05bdb86}{\index{Hora@{Hora}!get\+Minuto@{get\+Minuto}}
 \index{get\+Minuto@{get\+Minuto}!Hora@{Hora}}
 \subsubsection[{get\+Minuto}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Hora\+::get\+Minuto (
@@ -53,21 +91,18 @@ Definition at line 6 of file Hora.\+h.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_hora_adccaf5d0c9e674462f77b31ae05bdb86}
-\hypertarget{class_hora_af1b32f81893707ace3cfcec7900f78a0}{\index{Hora@{Hora}!Horas@{Horas}}
-\index{Horas@{Horas}!Hora@{Hora}}
-\subsubsection[{Horas}]{\setlength{\rightskip}{0pt plus 5cm}Hora\+::\+Horas (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_hora_af1b32f81893707ace3cfcec7900f78a0}
-\hypertarget{class_hora_a610d00d405cfd4547fdf61de7f901605}{\index{Hora@{Hora}!Horas@{Horas}}
-\index{Horas@{Horas}!Hora@{Hora}}
-\subsubsection[{Horas}]{\setlength{\rightskip}{0pt plus 5cm}Hora\+::\+Horas (
-\begin{DoxyParamCaption}
-\item[{unsigned}]{hora, }
-\item[{unsigned}]{minuto}
-\end{DoxyParamCaption}
-)}}\label{class_hora_a610d00d405cfd4547fdf61de7f901605}
+
+
+Definition at line 14 of file Hora.\+cpp.
+
+
+
+References minuto.
+
+
+
+Referenced by operator$<$().
+
 \hypertarget{class_hora_a24d925d0c6d35e813542346e5d63eef9}{\index{Hora@{Hora}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!Hora@{Hora}}
 \subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Hora\+::operator$<$ (
@@ -75,6 +110,19 @@ Definition at line 6 of file Hora.\+h.
 \item[{const {\bf Hora} \&}]{horas}
 \end{DoxyParamCaption}
 )}}\label{class_hora_a24d925d0c6d35e813542346e5d63eef9}
+
+
+Definition at line 29 of file Hora.\+cpp.
+
+
+
+References get\+Hora(), and get\+Minuto().
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_hora_afc47b74f8d5673565ebe3de1bbfb92a6}{\index{Hora@{Hora}!set\+Hora@{set\+Hora}}
 \index{set\+Hora@{set\+Hora}!Hora@{Hora}}
 \subsubsection[{set\+Hora}]{\setlength{\rightskip}{0pt plus 5cm}void Hora\+::set\+Hora (
@@ -82,6 +130,14 @@ Definition at line 6 of file Hora.\+h.
 \item[{unsigned}]{hora}
 \end{DoxyParamCaption}
 )}}\label{class_hora_afc47b74f8d5673565ebe3de1bbfb92a6}
+
+
+Definition at line 19 of file Hora.\+cpp.
+
+
+
+References hora.
+
 \hypertarget{class_hora_abca266485eb34d8feaf1f9e84854a7f3}{\index{Hora@{Hora}!set\+Minuto@{set\+Minuto}}
 \index{set\+Minuto@{set\+Minuto}!Hora@{Hora}}
 \subsubsection[{set\+Minuto}]{\setlength{\rightskip}{0pt plus 5cm}void Hora\+::set\+Minuto (
@@ -89,6 +145,14 @@ Definition at line 6 of file Hora.\+h.
 \item[{unsigned}]{minuto}
 \end{DoxyParamCaption}
 )}}\label{class_hora_abca266485eb34d8feaf1f9e84854a7f3}
+
+
+Definition at line 24 of file Hora.\+cpp.
+
+
+
+References minuto.
+
 
 
 \subsection{Member Data Documentation}
@@ -99,6 +163,10 @@ Definition at line 6 of file Hora.\+h.
 
 Definition at line 9 of file Hora.\+h.
 
+
+
+Referenced by get\+Hora(), Hora(), and set\+Hora().
+
 \hypertarget{class_hora_a9d33ce2d8a3f4b3d05b2a3c6df782fa4}{\index{Hora@{Hora}!minuto@{minuto}}
 \index{minuto@{minuto}!Hora@{Hora}}
 \subsubsection[{minuto}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Hora\+::minuto\hspace{0.3cm}{\ttfamily [private]}}}\label{class_hora_a9d33ce2d8a3f4b3d05b2a3c6df782fa4}
@@ -108,6 +176,11 @@ Definition at line 10 of file Hora.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Referenced by get\+Minuto(), Hora(), and set\+Minuto().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/\+Headers/\hyperlink{_hora_8h}{Hora.\+h}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Headers/\hyperlink{_hora_8h}{Hora.\+h}\item 
+C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Source/\hyperlink{_hora_8cpp}{Hora.\+cpp}\end{DoxyCompactItemize}

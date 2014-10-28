@@ -1,7 +1,6 @@
 var NAVTREE =
 [
-  [ "My Project", "index.html", [
-    [ "AEDA-Boleias-Inteligentes", "md__c_1__users__gustavo_git__a_e_d_a-_boleias-_inteligentes__r_e_a_d_m_e.html", null ],
+  [ "AEDABoleiasInteligentes", "index.html", [
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
@@ -24,7 +23,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_anuncio_8h.html"
+"_anuncio_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

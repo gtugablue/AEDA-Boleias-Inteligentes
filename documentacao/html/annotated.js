@@ -12,5 +12,5 @@ var annotated =
     [ "Particular", "class_particular.html", "class_particular" ],
     [ "Veiculo", "class_veiculo.html", "class_veiculo" ],
     [ "Viagem", "class_viagem.html", "class_viagem" ],
-    [ "ViagemPeriodica", "class_viagem_periodica.html", null ]
+    [ "ViagemPeriodica", "class_viagem_periodica.html", "class_viagem_periodica" ]
 ];
