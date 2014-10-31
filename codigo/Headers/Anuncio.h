@@ -4,6 +4,7 @@
 #include "Membro.h"
 #include "Particular.h"
 #include "Viagem.h"
+#include "Preco.h"
 
 using namespace std;
 
@@ -13,10 +14,10 @@ private:
 	string titulo;
 	string descricao;
 	vector<Particular *> candidatos;
-	float precoTotal;
+	Preco* precoTotal;
 	Viagem* viagem;
 public:
-	Anuncio(const string &titulo, const string &descricao, float precoTotal, Viagem* viagem);
+	Anuncio(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem);
 	string getTitulo() const;
 	string getDescricao() const;
 	Coordenadas getOrigem() const;

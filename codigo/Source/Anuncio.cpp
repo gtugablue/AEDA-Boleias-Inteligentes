@@ -1,6 +1,6 @@
 #include "../headers/Anuncio.h"
 
-Anuncio::Anuncio(const string &titulo, const string &descricao, float precoTotal, Viagem* viagem)
+Anuncio::Anuncio(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem)
 {
 	this->titulo = titulo;
 	this->descricao = descricao;
