@@ -1,6 +1,7 @@
 #include "../headers/Viagem.h"
 
-Viagem::Viagem(Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim)
+Viagem::Viagem(Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim):
+this->inicio(inicio), this->fim(fim)
 {
 	this->condutor = NULL;
 	this->veiculo = veiculo;

@@ -1,10 +1,5 @@
 #include "../headers/Coordenadas.h"
 
-Coordenadas::Coordenadas()
-{
-
-}
-
 Coordenadas::Coordenadas(double latitude, double longitude)
 {
 	this->latitude = latitude;
