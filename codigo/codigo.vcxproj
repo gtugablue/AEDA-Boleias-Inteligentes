@@ -79,6 +79,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\Anuncio.cpp" />
+    <ClCompile Include="Source\BoleiasInteligentes.cpp" />
     <ClCompile Include="Source\Combustivel.cpp" />
     <ClCompile Include="Source\Coordenadas.cpp" />
     <ClCompile Include="Source\Data.cpp" />
@@ -98,6 +99,7 @@
     <ClInclude Include="Headers\Coordenadas.h" />
     <ClInclude Include="Headers\Data.h" />
     <ClInclude Include="Headers\Empresa.h" />
+    <ClInclude Include="Headers\BoleiasInteligentes.h" />
     <ClInclude Include="Headers\Hora.h" />
     <ClInclude Include="Headers\Membro.h" />
     <ClInclude Include="Headers\Menu.h" />
