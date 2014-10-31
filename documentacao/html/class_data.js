@@ -4,6 +4,7 @@ var class_data =
     [ "getAno", "class_data.html#a31f649c5a854de4750506a163955bb0b", null ],
     [ "getDia", "class_data.html#a07fe748ec046cb904c6854fb8b792786", null ],
     [ "getMes", "class_data.html#a070387c9894b966ec8a175e3eb3c9c06", null ],
+    [ "operator<", "class_data.html#a54019a127c7262ad527e523b98ddd26a", null ],
     [ "setAno", "class_data.html#a5ad712f23c932ee4d515213f7c66f60e", null ],
     [ "setDia", "class_data.html#ab3ea08211198373060bfd9aa7530ddff", null ],
     [ "setMes", "class_data.html#ac886172612a1bd81f1d266c4f5f94377", null ],

@@ -7,4 +7,12 @@ digraph "C:/Users/Gustavo/git/AEDA-Boleias-Inteligentes/codigo/Source/Membro.cpp
   Node2 [label="../headers/Membro.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_membro_8h.html"];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Veiculo.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_veiculo_8h.html"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Combustivel.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_combustivel_8h.html"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

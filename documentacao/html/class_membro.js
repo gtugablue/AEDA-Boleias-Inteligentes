@@ -7,7 +7,9 @@ var class_membro =
     [ "setNome", "class_membro.html#a87f95f3869ef8ce4cfaf673cff30cdcc", null ],
     [ "setPassword", "class_membro.html#ab5a7b1734090d146bb39f8cfa52be006", null ],
     [ "setUtilizador", "class_membro.html#ac0ce078ab4d7d5a72e370ea6335e8eef", null ],
+    [ "setVeiculos", "class_membro.html#ab40d72d229c4147372bd747d66176f55", null ],
     [ "nome", "class_membro.html#a2598bbe34ae32a98f41468b2202a9555", null ],
     [ "password", "class_membro.html#ae2b12fc3e91efc674c07e735edf4ac21", null ],
-    [ "utilizador", "class_membro.html#a42cc733ff94ec8d1bbfdacc62dfbb0e7", null ]
+    [ "utilizador", "class_membro.html#a42cc733ff94ec8d1bbfdacc62dfbb0e7", null ],
+    [ "veiculos", "class_membro.html#a7485fc8a9f992a05662866f19b22f74a", null ]
 ];

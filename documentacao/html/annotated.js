@@ -9,6 +9,7 @@ var annotated =
     [ "Empresa", "class_empresa.html", "class_empresa" ],
     [ "Hora", "class_hora.html", "class_hora" ],
     [ "Membro", "class_membro.html", "class_membro" ],
+    [ "Menu", "class_menu.html", "class_menu" ],
     [ "Particular", "class_particular.html", "class_particular" ],
     [ "Veiculo", "class_veiculo.html", "class_veiculo" ],
     [ "Viagem", "class_viagem.html", "class_viagem" ],

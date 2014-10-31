@@ -21,6 +21,8 @@ void \hyperlink{class_data_ab3ea08211198373060bfd9aa7530ddff}{set\+Dia} (unsigne
 void \hyperlink{class_data_ac886172612a1bd81f1d266c4f5f94377}{set\+Mes} (unsigned \hyperlink{class_data_a52f02cba5bf54c79dc1dd93545d27e5f}{mes})
 \item 
 void \hyperlink{class_data_a5ad712f23c932ee4d515213f7c66f60e}{set\+Ano} (unsigned \hyperlink{class_data_a662fc8d7cc87332b0204470c21b08383}{ano})
+\item 
+bool \hyperlink{class_data_a54019a127c7262ad527e523b98ddd26a}{operator$<$} (const \hyperlink{class_data}{Data} \&data) const 
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -76,6 +78,10 @@ Definition at line 20 of file Data.\+cpp.
 
 References ano.
 
+
+
+Referenced by operator$<$().
+
 \hypertarget{class_data_a07fe748ec046cb904c6854fb8b792786}{\index{Data@{Data}!get\+Dia@{get\+Dia}}
 \index{get\+Dia@{get\+Dia}!Data@{Data}}
 \subsubsection[{get\+Dia}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Data\+::get\+Dia (
@@ -91,6 +97,10 @@ Definition at line 10 of file Data.\+cpp.
 
 References dia.
 
+
+
+Referenced by operator$<$().
+
 \hypertarget{class_data_a070387c9894b966ec8a175e3eb3c9c06}{\index{Data@{Data}!get\+Mes@{get\+Mes}}
 \index{get\+Mes@{get\+Mes}!Data@{Data}}
 \subsubsection[{get\+Mes}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Data\+::get\+Mes (
@@ -105,6 +115,30 @@ Definition at line 15 of file Data.\+cpp.
 
 
 References mes.
+
+
+
+Referenced by operator$<$().
+
+\hypertarget{class_data_a54019a127c7262ad527e523b98ddd26a}{\index{Data@{Data}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Data@{Data}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Data\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+) const}}\label{class_data_a54019a127c7262ad527e523b98ddd26a}
+
+
+Definition at line 43 of file Data.\+cpp.
+
+
+
+References get\+Ano(), get\+Dia(), and get\+Mes().
+
+
+
+Here is the call graph for this function\+:
+
 
 \hypertarget{class_data_a5ad712f23c932ee4d515213f7c66f60e}{\index{Data@{Data}!set\+Ano@{set\+Ano}}
 \index{set\+Ano@{set\+Ano}!Data@{Data}}
