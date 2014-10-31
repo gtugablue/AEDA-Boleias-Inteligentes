@@ -1,5 +1,9 @@
 #include "../headers/Viagem.h"
+Viagem::Viagem() :
+inicio(Coordenadas(0.0, 0.0)), fim(Coordenadas(0.0, 0.0))
+{
 
+}
 Viagem::Viagem(Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim) :
 inicio(inicio), fim(fim)
 {

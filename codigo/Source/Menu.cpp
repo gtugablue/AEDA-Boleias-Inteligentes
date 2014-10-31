@@ -16,14 +16,13 @@ string Menu::readString()const
 
 int Menu::readDigit()const
 {
-	int a;
+	char c;
 
 	do
 	{
-		cin >> a;
-		cin.ignore();
-	} while (!isdigit(a));
-	return a;
+		c = _getch();
+	} while (!isdigit(c));
+	return c - '0';
 }
 
 bool Menu::readYesOrNo()const
