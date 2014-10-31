@@ -85,6 +85,7 @@
     <ClCompile Include="Source\Hora.cpp" />
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\Membro.cpp" />
+    <ClCompile Include="Source\Menu.cpp" />
     <ClCompile Include="Source\Veiculo.cpp" />
     <ClCompile Include="Source\Viagem.cpp" />
     <ClCompile Include="Source\ViagemPeriodica.cpp" />
@@ -99,6 +100,7 @@
     <ClInclude Include="Headers\Empresa.h" />
     <ClInclude Include="Headers\Hora.h" />
     <ClInclude Include="Headers\Membro.h" />
+    <ClInclude Include="Headers\Menu.h" />
     <ClInclude Include="Headers\Particular.h" />
     <ClInclude Include="Headers\Veiculo.h" />
     <ClInclude Include="Headers\Viagem.h" />
