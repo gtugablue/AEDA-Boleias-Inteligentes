@@ -1,6 +1,6 @@
 #include "../headers/BoleiasInteligentes.h"
 
-Coordenadas BoleiasInteligentes::criaCoordenadas()
+Coordenadas BoleiasInteligentes::criarCoordenadas()
 {
 	double lat;
 	double lng;
@@ -11,7 +11,7 @@ Coordenadas BoleiasInteligentes::criaCoordenadas()
 	return Coordenadas(lat, lng);
 }
 
-Combustivel BoleiasInteligentes::criacombustivel()
+Combustivel BoleiasInteligentes::criarCombustivel()
 {
 	string nome;
 	float preco;
@@ -22,7 +22,7 @@ Combustivel BoleiasInteligentes::criacombustivel()
 	return Combustivel(nome, preco);
 }
 
-Veiculo BoleiasInteligentes::criaVeiculo()
+Veiculo BoleiasInteligentes::criarVeiculo()
 {
 	string marca;
 	unsigned mes, ano, cilindrada;
@@ -36,11 +36,11 @@ Veiculo BoleiasInteligentes::criaVeiculo()
 	cin >> cilindrada;
 	
 
-	return Veiculo(marca, mes, ano, cilindrada);
+	return Veiculo(marca, mes, ano, cilindrada, NULL); // TODO --- TIRAR ESTE NULL DAQUI!
 	
 }
 
-bool BoleiasInteligentes::criaAnuncio()
+Anuncio BoleiasInteligentes::criarAnuncio()
 {
 	string nome;
 	string descricao;
@@ -50,5 +50,6 @@ bool BoleiasInteligentes::criaAnuncio()
 	cout << "Introduza a descricao do seu anuncio" << endl;
 	getline(cin, descricao);
 
+	return AnuncioOferta(new Membro());
 }
 

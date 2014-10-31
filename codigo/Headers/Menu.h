@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <ctype.h>
+#include <conio.h>
 #include "Membro.h"
 
 using namespace std;

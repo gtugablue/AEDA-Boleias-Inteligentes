@@ -28,18 +28,13 @@ int Menu::readDigit()const
 
 bool Menu::readYesOrNo()const
 {
-	char a;
+	char c;
 
 	do
 	{
-		if (a == 'y')
-		{
-			return true;
-		}
-		else
-			return false;
-
-	} while (a != 'y' || a != 'n');
+		c = _getch();
+	} while (c != 'y' && c != 'n');
+	return c == 'y';
 }
 
 void Menu::showMenu(vector<string> itens)
