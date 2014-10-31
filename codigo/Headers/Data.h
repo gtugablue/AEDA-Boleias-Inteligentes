@@ -17,6 +17,7 @@ public:
 	void setDia(unsigned dia);
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);
+	bool operator < (const Data &data)const;
 };
 
 #endif

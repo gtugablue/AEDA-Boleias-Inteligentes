@@ -1,3 +1,5 @@
+#ifndef _VIAGEM_PERIODICA_H
+#define _VIAGEM_PERIODICA_H
 #include "Viagem.h"
 #include <string>
 
@@ -25,3 +27,6 @@ static const string diasDaSemana[] =
 			"Sabado",
 			"Domingo"
 	};
+
+
+#endif
