@@ -16,9 +16,10 @@ private:
 public:
 	Menu();
 
-	string readString();
-	string readPassword();
-	int readDigit();
+	string readString() const;
+	string readPassword() const;
+	int readDigit() const;
+	bool readYesOrNo() const;
 
 	void showMenu(vector<string> itens);
 	int showLoginMenu();
