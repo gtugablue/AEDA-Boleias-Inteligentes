@@ -13,3 +13,15 @@ string Menu::readString()
 	return cenas;
 
 }
+
+int Menu::readDigit()
+{
+	int a;
+
+	do
+	{
+		cin >> a;
+		cin.ignore();
+	} while (!isdigit(a));
+	return a;
+}

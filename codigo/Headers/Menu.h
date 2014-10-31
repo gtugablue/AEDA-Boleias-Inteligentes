@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include "Membro.h"
+#include <ctype.h>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ public:
 
 	string readString();
 	string readPassword();
-	char readDigit();
+	int readDigit();
 
 	void showLoginMenu();
 };
