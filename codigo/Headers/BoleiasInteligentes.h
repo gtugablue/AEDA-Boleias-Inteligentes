@@ -8,8 +8,12 @@
 class BoleiasInteligentes
 {
 public:
-
+	Coordenadas criaCoordenadas();
+	bool criaMembro();
+	Veiculo criaVeiculo();
 	bool criaAnuncio();
+	Viagem criaViagem();
+	Combustivel criacombustivel();
 	
 };
 #endif
