@@ -39,3 +39,36 @@ void Data::setAno(unsigned ano)
 	this->ano = ano;
 	return;
 }
+
+bool Data::operator< (const Data &data)const
+{
+	if (this->getAno() < data.getAno())
+	{
+		return true;
+	}
+	else
+	if (this->getAno() == data.getAno())
+	{
+		if (this->getMes() < data.getMes())
+		{
+			return true;
+		}
+		else
+		if (this->getMes() == data.getMes())
+		{
+			if (this->getDia() < data.getDia())
+			{
+				return true;
+			}
+			else return false;
+		}
+		else
+			return false;
+
+	}
+	else
+		return false;
+}
+
+
+
