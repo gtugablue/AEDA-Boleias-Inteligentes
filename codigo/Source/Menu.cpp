@@ -41,3 +41,12 @@ bool Menu::readYesOrNo()const
 
 	} while (a != 'y' || a != 'n');
 }
+
+void Menu::showMenu(vector<string> itens)
+{
+	for (size_t i = 0; itens.size(); ++i)
+	{
+		cout << i << ". " << itens[i] << endl;
+	}
+	return;
+}
