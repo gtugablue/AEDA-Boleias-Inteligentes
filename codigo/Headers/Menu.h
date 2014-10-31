@@ -18,7 +18,12 @@ public:
 	string readPassword();
 	char readDigit();
 
-	void showLoginMenu();
+	void showMenu(vector<string> itens);
+	int showLoginMenu();
+	int showMainMenu();
+	int showAnuncios();
+	int showVehicles();
+	int showVehicleInfo();
 };
 
 #endif
