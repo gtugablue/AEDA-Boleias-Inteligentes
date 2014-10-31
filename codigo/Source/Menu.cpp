@@ -16,14 +16,13 @@ string Menu::readString()const
 
 int Menu::readDigit()const
 {
-	int a;
+	char c;
 
 	do
 	{
-		cin >> a;
-		cin.ignore();
-	} while (!isdigit(a));
-	return a;
+		c = _getch();
+	} while (!isdigit(c));
+	return c - '0';
 }
 
 bool Menu::readYesOrNo()const
@@ -39,7 +38,7 @@ bool Menu::readYesOrNo()const
 
 void Menu::showMenu(vector<string> itens)
 {
-	for (size_t i = 0; itens.size(); ++i)
+	for (size_t i = 0; i < itens.size(); ++i)
 	{
 		cout << i << ". " << itens[i] << endl;
 	}
