@@ -8,7 +8,10 @@
 #include "Coordenadas.h"
 #include "Combustivel.h"
 #include "Veiculo.h"
+#include "Preco.h"
+#include "Viagem.h"
 
+using namespace std;
 
 class BoleiasInteligentes
 {

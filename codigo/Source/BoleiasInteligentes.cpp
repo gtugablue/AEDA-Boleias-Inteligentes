@@ -50,6 +50,7 @@ Anuncio BoleiasInteligentes::criarAnuncio()
 	cout << "Introduza a descricao do seu anuncio" << endl;
 	getline(cin, descricao);
 
-	return AnuncioOferta(new Membro());
+	vector<pair<string, float>> outrasDespesas;
+	return AnuncioOferta(nome, descricao, new Preco(0.0, 0.0, outrasDespesas), new Viagem(), new Membro("Arcanjo", "arcanjo45", "fagote"));	// TODO
 }
 

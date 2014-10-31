@@ -11,7 +11,7 @@ class AnuncioOferta: public Anuncio
 private:
 	Membro* anunciante;
 public:
-	AnuncioOferta(Membro* anunciante);
+	AnuncioOferta(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem, Membro* anunciante);
 	void setAnunciante(Membro* anunciante);
 	Membro* getAnunciante() const;
 };

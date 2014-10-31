@@ -1,9 +1,24 @@
 #include "../headers/Preco.h"
 
-Preco::Preco(float combustivel, float desgaste)
+Preco::Preco(float combustivel, float desgaste, const vector<pair<string, float>> &outrasDespesas)
 {
 	this->combustivel = combustivel;
 	this->desgaste = desgaste;
+}
+
+float Preco::getCombustivel() const
+{
+	return combustivel;
+}
+
+float Preco::getDesgaste() const
+{
+	return desgaste;
+}
+
+vector<pair<string, float>> Preco::getOutrasDespesas() const
+{
+	return outrasDespesas;
 }
 
 ostream& operator<<(ostream &os, const Preco &preco)

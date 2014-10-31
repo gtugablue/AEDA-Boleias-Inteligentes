@@ -1,21 +1,20 @@
 #include "../headers/Viagem.h"
 
-Viagem::Viagem(Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim):
+Viagem::Viagem(Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim) :
 inicio(inicio), fim(fim)
 {
 	this->condutor = NULL;
 	this->veiculo = veiculo;
 }
 
-Viagem::Viagem(Membro* condutor, Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim)
-{
-	this ->condutor = condutor;
-	this ->veiculo = veiculo;
-	this ->inicio = inicio;
-	this ->fim = fim;
+Viagem::Viagem(Membro* condutor, Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim) :
+inicio(inicio), fim(fim)
+{ 
+	this->condutor = condutor;
+	this->veiculo = veiculo;
 }
 
-Membro* Viagem:: getCondutor() const
+Membro* Viagem::getCondutor() const
 {
 	return condutor;
 }
@@ -38,24 +37,24 @@ Coordenadas Viagem::getFim()const
 
 void Viagem::setCondutor(Membro* condutor)
 {
-	this ->condutor=condutor;
+	this->condutor = condutor;
 }
 
 void Viagem::setFim(const Coordenadas &fim)
 {
-	this ->fim=fim;
+	this->fim = fim;
 }
 void Viagem::setInicio(const Coordenadas &inicio)
 {
-	this ->inicio=inicio;
+	this->inicio = inicio;
 }
 
 void Viagem::setVeiculo(Veiculo* veiculo)
 {
-	this ->veiculo=veiculo;
+	this->veiculo = veiculo;
 }
 
-vector<Particular*>Viagem:: getPassageiros() const
+vector<Particular*>Viagem::getPassageiros() const
 {
 	return  passageiros;
 }

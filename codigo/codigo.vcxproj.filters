@@ -54,6 +54,9 @@
     <ClCompile Include="Source\Preco.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\AnuncioOferta.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Anuncio.h">
