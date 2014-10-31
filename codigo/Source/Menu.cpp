@@ -50,3 +50,14 @@ void Menu::showMenu(vector<string> itens)
 	}
 	return;
 }
+
+int Menu::showLoginMenu()
+{
+	vector<string> itens =
+	{
+		"Login",
+		"Sign up"
+	};
+	showMenu(itens);
+	return readDigit();
+}
