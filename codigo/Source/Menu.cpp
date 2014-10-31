@@ -6,7 +6,7 @@ Menu::Menu()
 
 }
 
-string Menu::readString() const
+string Menu::readString()const
 {
 	string cenas;
 	getline(cin, cenas);
@@ -14,7 +14,7 @@ string Menu::readString() const
 
 }
 
-int Menu::readDigit() const
+int Menu::readDigit()const
 {
 	int a;
 
@@ -26,11 +26,18 @@ int Menu::readDigit() const
 	return a;
 }
 
-void Menu::showMenu(vector<string> itens)
+bool Menu::readYesOrNo()const
 {
-	for (size_t i = 0; itens.size(); ++i)
+	char a;
+
+	do
 	{
-		cout << i << ". " << itens[i] << endl;
-	}
-	return;
+		if (a == 'y')
+		{
+			return true;
+		}
+		else
+			return false;
+
+	} while (a != 'y' || a != 'n');
 }
