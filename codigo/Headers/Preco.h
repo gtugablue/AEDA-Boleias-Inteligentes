@@ -2,6 +2,9 @@
 #define _PRECO_H
 
 #include <vector>
+#include <string>
+#include <iostream>
+
 using namespace std;
 
 class Preco
@@ -9,16 +12,16 @@ class Preco
 private:
 	float combustivel;
 	float desgaste;
-	vector<float> outrasDespesas;
+	vector<pair<string, float>> outrasDespesas;
 public:
 	Preco(float combustivel, float desgaste);
 	void showDespesas()const;
-	string getCombustivel()const;
+	float getCombustivel()const;
 	float getDesgaste()const;
+	vector<pair<string, float>> getOutrasDespesas() const;
 	void setCombustivel(float combustivel);
 	void setDesgaste(float desgaste);
-	ostream& operator<< (Preco precinho)const;
-
+	friend ostream& operator<<(ostream &os, const Preco &preco);
 };
 
 #endif
