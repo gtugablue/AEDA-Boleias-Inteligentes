@@ -34,8 +34,9 @@ Veiculo BoleiasInteligentes::criaVeiculo()
 	cin >> mes;
 	cout << "Introduza a cilindrada do seu veiculo" << endl;
 	cin >> cilindrada;
+	
 
-	return Veiculo(marca, mes, ano, cilindrada, criacombustivel());
+	return Veiculo(marca, mes, ano, cilindrada);
 	
 }
 

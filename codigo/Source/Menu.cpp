@@ -6,7 +6,7 @@ Menu::Menu()
 
 }
 
-string Menu::readString()
+string Menu::readString()const
 {
 	string cenas;
 	getline(cin, cenas);
@@ -14,7 +14,7 @@ string Menu::readString()
 
 }
 
-int Menu::readDigit()
+int Menu::readDigit()const
 {
 	int a;
 
@@ -24,4 +24,20 @@ int Menu::readDigit()
 		cin.ignore();
 	} while (!isdigit(a));
 	return a;
+}
+
+bool Menu::readYesOrNo()const
+{
+	char a;
+
+	do
+	{
+		if (a == 'y')
+		{
+			return true;
+		}
+		else
+			return false;
+
+	} while (a != 'y' || a != 'n');
 }

@@ -7,6 +7,8 @@
 
 class BoleiasInteligentes
 {
+private:
+	vector<Combustivel*>combustiveis;
 public:
 	Coordenadas criaCoordenadas();
 	bool criaMembro();
