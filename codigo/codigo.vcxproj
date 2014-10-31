@@ -104,6 +104,7 @@
     <ClInclude Include="Headers\Membro.h" />
     <ClInclude Include="Headers\Menu.h" />
     <ClInclude Include="Headers\Particular.h" />
+    <ClInclude Include="Headers\Preco.h" />
     <ClInclude Include="Headers\Veiculo.h" />
     <ClInclude Include="Headers\Viagem.h" />
     <ClInclude Include="Headers\ViagemPeriodica.h" />
