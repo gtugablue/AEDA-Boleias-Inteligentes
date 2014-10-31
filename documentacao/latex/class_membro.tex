@@ -24,6 +24,8 @@ void \hyperlink{class_membro_a87f95f3869ef8ce4cfaf673cff30cdcc}{set\+Nome} (stri
 void \hyperlink{class_membro_ac0ce078ab4d7d5a72e370ea6335e8eef}{set\+Utilizador} (string \&\hyperlink{class_membro_a42cc733ff94ec8d1bbfdacc62dfbb0e7}{utilizador})
 \item 
 void \hyperlink{class_membro_ab5a7b1734090d146bb39f8cfa52be006}{set\+Password} (string \&\hyperlink{class_membro_ae2b12fc3e91efc674c07e735edf4ac21}{password})
+\item 
+void \hyperlink{class_membro_ab40d72d229c4147372bd747d66176f55}{set\+Veiculos} (const vector$<$ \hyperlink{class_veiculo}{Veiculo} $>$ \&veiculo)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -33,13 +35,15 @@ string \hyperlink{class_membro_a2598bbe34ae32a98f41468b2202a9555}{nome}
 string \hyperlink{class_membro_a42cc733ff94ec8d1bbfdacc62dfbb0e7}{utilizador}
 \item 
 string \hyperlink{class_membro_ae2b12fc3e91efc674c07e735edf4ac21}{password}
+\item 
+vector$<$ \hyperlink{class_veiculo}{Veiculo} $>$ \hyperlink{class_membro_a7485fc8a9f992a05662866f19b22f74a}{veiculos}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 8 of file Membro.\+h.
+Definition at line 10 of file Membro.\+h.
 
 
 
@@ -158,6 +162,13 @@ Definition at line 35 of file Membro.\+cpp.
 
 References utilizador.
 
+\hypertarget{class_membro_ab40d72d229c4147372bd747d66176f55}{\index{Membro@{Membro}!set\+Veiculos@{set\+Veiculos}}
+\index{set\+Veiculos@{set\+Veiculos}!Membro@{Membro}}
+\subsubsection[{set\+Veiculos}]{\setlength{\rightskip}{0pt plus 5cm}void Membro\+::set\+Veiculos (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ {\bf Veiculo} $>$ \&}]{veiculo}
+\end{DoxyParamCaption}
+)}}\label{class_membro_ab40d72d229c4147372bd747d66176f55}
 
 
 \subsection{Member Data Documentation}
@@ -166,7 +177,7 @@ References utilizador.
 \subsubsection[{nome}]{\setlength{\rightskip}{0pt plus 5cm}string Membro\+::nome\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_membro_a2598bbe34ae32a98f41468b2202a9555}
 
 
-Definition at line 11 of file Membro.\+h.
+Definition at line 13 of file Membro.\+h.
 
 
 
@@ -177,7 +188,7 @@ Referenced by get\+Nome(), Membro(), and set\+Nome().
 \subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}string Membro\+::password\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_membro_ae2b12fc3e91efc674c07e735edf4ac21}
 
 
-Definition at line 13 of file Membro.\+h.
+Definition at line 15 of file Membro.\+h.
 
 
 
@@ -188,11 +199,18 @@ Referenced by get\+Password(), Membro(), and set\+Password().
 \subsubsection[{utilizador}]{\setlength{\rightskip}{0pt plus 5cm}string Membro\+::utilizador\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_membro_a42cc733ff94ec8d1bbfdacc62dfbb0e7}
 
 
-Definition at line 12 of file Membro.\+h.
+Definition at line 14 of file Membro.\+h.
 
 
 
 Referenced by get\+Utilizador(), Membro(), and set\+Utilizador().
+
+\hypertarget{class_membro_a7485fc8a9f992a05662866f19b22f74a}{\index{Membro@{Membro}!veiculos@{veiculos}}
+\index{veiculos@{veiculos}!Membro@{Membro}}
+\subsubsection[{veiculos}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Veiculo}$>$ Membro\+::veiculos\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_membro_a7485fc8a9f992a05662866f19b22f74a}
+
+
+Definition at line 16 of file Membro.\+h.
 
 
 

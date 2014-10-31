@@ -12,6 +12,7 @@ var hierarchy =
       [ "Empresa", "class_empresa.html", null ],
       [ "Particular", "class_particular.html", null ]
     ] ],
+    [ "Menu", "class_menu.html", null ],
     [ "Veiculo", "class_veiculo.html", null ],
     [ "Viagem", "class_viagem.html", [
       [ "ViagemPeriodica", "class_viagem_periodica.html", null ]

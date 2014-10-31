@@ -85,25 +85,24 @@ $(document).ready(function(){initNavTree('_anuncio_8h_source.html','');});
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_anuncio.html#a8ba7cc797b8b582c596038a17e9bce3b">   16</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_anuncio.html#a8ba7cc797b8b582c596038a17e9bce3b">precoTotal</a>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_anuncio.html#aa225374a19420f56f5abc258d96b691a">   17</a></span>&#160;    <a class="code" href="class_viagem.html">Viagem</a>* <a class="code" href="class_anuncio.html#aa225374a19420f56f5abc258d96b691a">viagem</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_anuncio.html">Anuncio</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;titulo, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;descricao, <span class="keyword">const</span> <a class="code" href="class_coordenadas.html">Coordenadas</a> &amp;origem, <span class="keyword">const</span> <a class="code" href="class_coordenadas.html">Coordenadas</a> &amp;destino, <a class="code" href="class_viagem.html">Viagem</a>* viagem);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_anuncio.html">Anuncio</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;titulo, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;descricao, <span class="keywordtype">float</span> precoTotal, <a class="code" href="class_viagem.html">Viagem</a>* viagem);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">string</span> getTitulo() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">string</span> getDescricao() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_coordenadas.html">Coordenadas</a> getOrigem() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_coordenadas.html">Coordenadas</a> getDestino() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_membro.html">Membro</a>* getAnunciante() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">//virtual Membro* getAnunciante() const = 0;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> setTitulo(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;titulo);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> setDescricao(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;descricao);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> setOrigem(<a class="code" href="class_coordenadas.html">Coordenadas</a> &amp;o) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> setDestino(<a class="code" href="class_coordenadas.html">Coordenadas</a> &amp;d) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAnunciante() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//virtual void setAnunciante() const = 0;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> adicionarCandidato(<a class="code" href="class_particular.html">Particular</a>* candidato);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> aceitarCandidato(<a class="code" href="class_particular.html">Particular</a>* candidato);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> removerCandidato(<a class="code" href="class_particular.html">Particular</a>* candidato);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> calcularPrecoTotal();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_anuncio.html">Anuncio</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_anuncio_html_aa225374a19420f56f5abc258d96b691a"><div class="ttname"><a href="class_anuncio.html#aa225374a19420f56f5abc258d96b691a">Anuncio::viagem</a></div><div class="ttdeci">Viagem * viagem</div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_8h_source.html#l00017">Anuncio.h:17</a></div></div>
 <div class="ttc" id="class_anuncio_html_a387f6bd1b88720d5cf0b53462e5dc0aa"><div class="ttname"><a href="class_anuncio.html#a387f6bd1b88720d5cf0b53462e5dc0aa">Anuncio::candidatos</a></div><div class="ttdeci">vector&lt; Particular * &gt; candidatos</div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_8h_source.html#l00015">Anuncio.h:15</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
@@ -111,7 +110,6 @@ $(document).ready(function(){initNavTree('_anuncio_8h_source.html','');});
 <div class="ttc" id="_particular_8h_html"><div class="ttname"><a href="_particular_8h.html">Particular.h</a></div></div>
 <div class="ttc" id="_viagem_8h_html"><div class="ttname"><a href="_viagem_8h.html">Viagem.h</a></div></div>
 <div class="ttc" id="class_anuncio_html"><div class="ttname"><a href="class_anuncio.html">Anuncio</a></div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_8h_source.html#l00010">Anuncio.h:10</a></div></div>
-<div class="ttc" id="class_membro_html"><div class="ttname"><a href="class_membro.html">Membro</a></div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00008">Membro.h:8</a></div></div>
 <div class="ttc" id="class_viagem_html"><div class="ttname"><a href="class_viagem.html">Viagem</a></div><div class="ttdef"><b>Definition:</b> <a href="_viagem_8h_source.html#l00010">Viagem.h:10</a></div></div>
 <div class="ttc" id="_membro_8h_html"><div class="ttname"><a href="_membro_8h.html">Membro.h</a></div></div>
 <div class="ttc" id="class_anuncio_html_a8ba7cc797b8b582c596038a17e9bce3b"><div class="ttname"><a href="class_anuncio.html#a8ba7cc797b8b582c596038a17e9bce3b">Anuncio::precoTotal</a></div><div class="ttdeci">float precoTotal</div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_8h_source.html#l00016">Anuncio.h:16</a></div></div>
@@ -124,7 +122,7 @@ $(document).ready(function(){initNavTree('_anuncio_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li><li class="navelem"><a class="el" href="dir_8ec053a504507d4cd016538dd4f7c72d.html">Headers</a></li><li class="navelem"><a class="el" href="_anuncio_8h.html">Anuncio.h</a></li>
-    <li class="footer">Generated on Tue Oct 28 2014 16:38:17 for AEDABoleiasInteligentes by
+    <li class="footer">Generated on Fri Oct 31 2014 14:46:32 for AEDABoleiasInteligentes by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

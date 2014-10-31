@@ -71,38 +71,44 @@ $(document).ready(function(){initNavTree('_membro_8h_source.html','');});
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _MEMBRO_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_veiculo_8h.html">Veiculo.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_membro.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_membro.html">Membro</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_membro.html#a2598bbe34ae32a98f41468b2202a9555">   11</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_membro.html#a2598bbe34ae32a98f41468b2202a9555">nome</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_membro.html#a42cc733ff94ec8d1bbfdacc62dfbb0e7">   12</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_membro.html#a42cc733ff94ec8d1bbfdacc62dfbb0e7">utilizador</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_membro.html#ae2b12fc3e91efc674c07e735edf4ac21">   13</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_membro.html#ae2b12fc3e91efc674c07e735edf4ac21">password</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_membro.html">Membro</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> utilizador, <span class="keywordtype">string</span> password);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">string</span> getNome() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">string</span> getUtilizador() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">string</span> getPassword() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> setNome(<span class="keywordtype">string</span> &amp;nome) ;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> setUtilizador(<span class="keywordtype">string</span> &amp;utilizador);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> setPassword(<span class="keywordtype">string</span> &amp;password);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_membro_html_a42cc733ff94ec8d1bbfdacc62dfbb0e7"><div class="ttname"><a href="class_membro.html#a42cc733ff94ec8d1bbfdacc62dfbb0e7">Membro::utilizador</a></div><div class="ttdeci">string utilizador</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00012">Membro.h:12</a></div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_membro.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_membro.html">Membro</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_membro.html#a2598bbe34ae32a98f41468b2202a9555">   13</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_membro.html#a2598bbe34ae32a98f41468b2202a9555">nome</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_membro.html#a42cc733ff94ec8d1bbfdacc62dfbb0e7">   14</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_membro.html#a42cc733ff94ec8d1bbfdacc62dfbb0e7">utilizador</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_membro.html#ae2b12fc3e91efc674c07e735edf4ac21">   15</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_membro.html#ae2b12fc3e91efc674c07e735edf4ac21">password</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_membro.html#a7485fc8a9f992a05662866f19b22f74a">   16</a></span>&#160;    vector&lt;Veiculo&gt; <a class="code" href="class_membro.html#a7485fc8a9f992a05662866f19b22f74a">veiculos</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_membro.html">Membro</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> utilizador, <span class="keywordtype">string</span> password);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">string</span> getNome() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">string</span> getUtilizador() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">string</span> getPassword() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> setNome(<span class="keywordtype">string</span> &amp;nome) ;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> setUtilizador(<span class="keywordtype">string</span> &amp;utilizador);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> setPassword(<span class="keywordtype">string</span> &amp;password);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> setVeiculos(<span class="keyword">const</span> vector&lt;Veiculo&gt; &amp;veiculo);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="_veiculo_8h_html"><div class="ttname"><a href="_veiculo_8h.html">Veiculo.h</a></div></div>
+<div class="ttc" id="class_membro_html_a42cc733ff94ec8d1bbfdacc62dfbb0e7"><div class="ttname"><a href="class_membro.html#a42cc733ff94ec8d1bbfdacc62dfbb0e7">Membro::utilizador</a></div><div class="ttdeci">string utilizador</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00014">Membro.h:14</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="class_membro_html_a2598bbe34ae32a98f41468b2202a9555"><div class="ttname"><a href="class_membro.html#a2598bbe34ae32a98f41468b2202a9555">Membro::nome</a></div><div class="ttdeci">string nome</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00011">Membro.h:11</a></div></div>
-<div class="ttc" id="class_membro_html"><div class="ttname"><a href="class_membro.html">Membro</a></div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00008">Membro.h:8</a></div></div>
-<div class="ttc" id="class_membro_html_ae2b12fc3e91efc674c07e735edf4ac21"><div class="ttname"><a href="class_membro.html#ae2b12fc3e91efc674c07e735edf4ac21">Membro::password</a></div><div class="ttdeci">string password</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00013">Membro.h:13</a></div></div>
+<div class="ttc" id="class_membro_html_a2598bbe34ae32a98f41468b2202a9555"><div class="ttname"><a href="class_membro.html#a2598bbe34ae32a98f41468b2202a9555">Membro::nome</a></div><div class="ttdeci">string nome</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00013">Membro.h:13</a></div></div>
+<div class="ttc" id="class_membro_html"><div class="ttname"><a href="class_membro.html">Membro</a></div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00010">Membro.h:10</a></div></div>
+<div class="ttc" id="class_membro_html_ae2b12fc3e91efc674c07e735edf4ac21"><div class="ttname"><a href="class_membro.html#ae2b12fc3e91efc674c07e735edf4ac21">Membro::password</a></div><div class="ttdeci">string password</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00015">Membro.h:15</a></div></div>
+<div class="ttc" id="class_membro_html_a7485fc8a9f992a05662866f19b22f74a"><div class="ttname"><a href="class_membro.html#a7485fc8a9f992a05662866f19b22f74a">Membro::veiculos</a></div><div class="ttdeci">vector&lt; Veiculo &gt; veiculos</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00016">Membro.h:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li><li class="navelem"><a class="el" href="dir_8ec053a504507d4cd016538dd4f7c72d.html">Headers</a></li><li class="navelem"><a class="el" href="_membro_8h.html">Membro.h</a></li>
-    <li class="footer">Generated on Tue Oct 28 2014 16:38:17 for AEDABoleiasInteligentes by
+    <li class="footer">Generated on Fri Oct 31 2014 14:46:32 for AEDABoleiasInteligentes by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

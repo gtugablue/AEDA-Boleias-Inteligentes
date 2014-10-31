@@ -21,10 +21,12 @@ digraph "C:/Users/Gustavo/git/AEDA-Boleias-Inteligentes/codigo/Source/ViagemPeri
   Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 [label="Membro.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_membro_8h.html"];
   Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node10 [label="Data.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_data_8h.html"];
-  Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node11 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 [label="Data.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_data_8h.html"];
+  Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

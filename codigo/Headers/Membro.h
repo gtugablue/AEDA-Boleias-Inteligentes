@@ -2,6 +2,8 @@
 #define _MEMBRO_H
 
 #include <string>
+#include <vector>
+#include "Veiculo.h"
 
 using namespace std;
 
@@ -11,6 +13,7 @@ protected:
 	string nome;
 	string utilizador;
 	string password;
+	vector<Veiculo> veiculos;
 public:
 	Membro(string nome, string utilizador, string password);
 	string getNome() const;
@@ -19,6 +22,7 @@ public:
 	void setNome(string &nome) ;
 	void setUtilizador(string &utilizador);
 	void setPassword(string &password);
+	void setVeiculos(const vector<Veiculo> &veiculo);
 };
 
 #endif

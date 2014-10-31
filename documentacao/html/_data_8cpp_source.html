@@ -108,7 +108,42 @@ $(document).ready(function(){initNavTree('_data_8cpp_source.html','');});
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    this-&gt;ano = <a class="code" href="class_data.html#a662fc8d7cc87332b0204470c21b08383">ano</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_data.html#a54019a127c7262ad527e523b98ddd26a">   43</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_data.html#a54019a127c7262ad527e523b98ddd26a">Data::operator&lt; </a>(<span class="keyword">const</span> <a class="code" href="class_data.html">Data</a> &amp;data)<span class="keyword">const</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="class_data.html#a31f649c5a854de4750506a163955bb0b">getAno</a>() &lt; data.<a class="code" href="class_data.html#a31f649c5a854de4750506a163955bb0b">getAno</a>())</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="class_data.html#a31f649c5a854de4750506a163955bb0b">getAno</a>() == data.<a class="code" href="class_data.html#a31f649c5a854de4750506a163955bb0b">getAno</a>())</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (this-&gt;<a class="code" href="class_data.html#a070387c9894b966ec8a175e3eb3c9c06">getMes</a>() &lt; data.<a class="code" href="class_data.html#a070387c9894b966ec8a175e3eb3c9c06">getMes</a>())</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (this-&gt;<a class="code" href="class_data.html#a070387c9894b966ec8a175e3eb3c9c06">getMes</a>() == data.<a class="code" href="class_data.html#a070387c9894b966ec8a175e3eb3c9c06">getMes</a>())</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">if</span> (this-&gt;<a class="code" href="class_data.html#a07fe748ec046cb904c6854fb8b792786">getDia</a>() &lt; data.<a class="code" href="class_data.html#a07fe748ec046cb904c6854fb8b792786">getDia</a>())</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="ttc" id="class_data_html_a31f649c5a854de4750506a163955bb0b"><div class="ttname"><a href="class_data.html#a31f649c5a854de4750506a163955bb0b">Data::getAno</a></div><div class="ttdeci">unsigned getAno() const </div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00020">Data.cpp:20</a></div></div>
+<div class="ttc" id="class_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00006">Data.h:6</a></div></div>
+<div class="ttc" id="class_data_html_a54019a127c7262ad527e523b98ddd26a"><div class="ttname"><a href="class_data.html#a54019a127c7262ad527e523b98ddd26a">Data::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Data &amp;data) const </div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00043">Data.cpp:43</a></div></div>
 <div class="ttc" id="class_data_html_a52f02cba5bf54c79dc1dd93545d27e5f"><div class="ttname"><a href="class_data.html#a52f02cba5bf54c79dc1dd93545d27e5f">Data::mes</a></div><div class="ttdeci">unsigned mes</div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00010">Data.h:10</a></div></div>
 <div class="ttc" id="class_data_html_a5ad712f23c932ee4d515213f7c66f60e"><div class="ttname"><a href="class_data.html#a5ad712f23c932ee4d515213f7c66f60e">Data::setAno</a></div><div class="ttdeci">void setAno(unsigned ano)</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00037">Data.cpp:37</a></div></div>
 <div class="ttc" id="class_data_html_ac886172612a1bd81f1d266c4f5f94377"><div class="ttname"><a href="class_data.html#ac886172612a1bd81f1d266c4f5f94377">Data::setMes</a></div><div class="ttdeci">void setMes(unsigned mes)</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00031">Data.cpp:31</a></div></div>
@@ -124,7 +159,7 @@ $(document).ready(function(){initNavTree('_data_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li><li class="navelem"><a class="el" href="dir_521c7a118aea468d74e765469b437393.html">Source</a></li><li class="navelem"><a class="el" href="_data_8cpp.html">Data.cpp</a></li>
-    <li class="footer">Generated on Tue Oct 28 2014 16:38:17 for AEDABoleiasInteligentes by
+    <li class="footer">Generated on Fri Oct 31 2014 14:46:32 for AEDABoleiasInteligentes by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
