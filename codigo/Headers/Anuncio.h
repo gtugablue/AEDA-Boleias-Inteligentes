@@ -14,7 +14,7 @@ private:
 	string titulo;
 	string descricao;
 	vector<Particular *> candidatos;
-	Preco* precoTotal;
+	Preco precoTotal;
 	Viagem* viagem;
 public:
 	Anuncio(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem);

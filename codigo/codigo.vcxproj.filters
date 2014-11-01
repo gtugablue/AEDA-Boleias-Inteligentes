@@ -108,4 +108,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="combustiveis.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="particulares.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="empresas.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

@@ -18,6 +18,18 @@ class BoleiasInteligentes
 private:
 	vector<Combustivel*>combustiveis;
 public:
+	void load();
+	void loadCombustiveis();
+	void loadMembros();
+	void loadParticulares();
+	void loadEmpresas();
+
+	void save();
+	void saveCombustiveis();
+	void saveMembros();
+	void saveParticulares();
+	void saveEmpresas();
+
 	Coordenadas BoleiasInteligentes::criarCoordenadas();
 	Veiculo BoleiasInteligentes::criarVeiculo();
 	Combustivel BoleiasInteligentes::criarCombustivel();
