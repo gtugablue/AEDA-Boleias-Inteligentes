@@ -20,9 +20,9 @@ class BoleiasInteligentes
 private:
 	string dataFolder;
 	vector<Combustivel*> combustiveis;
-	vector<Particular> membros;
+	vector<Particular> particulares;
 	vector<Empresa> empresas;
-	Membro* utilizador;
+	Membro* utilizador = NULL;
 public:
 	BoleiasInteligentes(const string &dataFolder);
 
@@ -44,5 +44,25 @@ public:
 	Veiculo BoleiasInteligentes::criarVeiculo();
 	Combustivel BoleiasInteligentes::criarCombustivel();
 	Anuncio BoleiasInteligentes::criarAnuncio();
+
+	void addEmpresa(const Empresa &empresa);
+	void addParticular(const Particular &particular);
+
+	static bool login(const string &username, const string &password);
 };
+
+template<class T>
+class UtilizadorInexistenteException
+{
+public:
+	T info;
+};
+
+template<class T>
+class PasswordErradaException
+{
+public:
+	T info;
+};
+
 #endif

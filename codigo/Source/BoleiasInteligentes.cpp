@@ -104,3 +104,20 @@ Anuncio BoleiasInteligentes::criarAnuncio()
 	return AnuncioOferta(nome, descricao, new Preco(0.0, 0.0, outrasDespesas), new Viagem(), new Membro("Arcanjo", "arcanjo45", "fagote"));	// TODO
 }
 
+void BoleiasInteligentes::addEmpresa(const Empresa &empresa)
+{
+	Empresa novaEmpresa = empresa;
+	empresas.push_back(empresa);
+}
+
+void BoleiasInteligentes::addParticular(const Particular &particular)
+{
+	Particular novoParticular = particular;
+	particulares.push_back(particular);
+}
+
+bool BoleiasInteligentes::login(const string &username, const string &password)
+{
+	// TODO
+	return true;
+}

@@ -6,6 +6,7 @@
 #include <string>
 #include <conio.h>
 #include "Membro.h"
+#include "BoleiasInteligentes.h"
 
 using namespace std;
 
@@ -16,10 +17,10 @@ private:
 public:
 	Menu();
 
-	static string readString() const;
-	static string readPassword() const;
-	static int readDigit(unsigned from, unsigned to) const;
-	static bool readYesOrNo() const;
+	static string readString();
+	static string readPassword();
+	static int readDigit(unsigned from, unsigned to);
+	static bool readYesOrNo();
 
 	static void showString(const string &str);
 

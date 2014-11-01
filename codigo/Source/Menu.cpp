@@ -6,7 +6,7 @@ Menu::Menu()
 
 }
 
-string Menu::readString()const
+string Menu::readString()
 {
 	string cenas;
 	getline(cin, cenas);
@@ -14,7 +14,7 @@ string Menu::readString()const
 
 }
 
-string Menu::readPassword() const
+string Menu::readPassword()
 {
 	string password;
 	char c;
@@ -33,9 +33,9 @@ string Menu::readPassword() const
 	return password;
 }
 
-int Menu::readDigit(unsigned from, unsigned to) const
+int readDigit(unsigned from, unsigned to)
 {
-	char c;
+	unsigned char c;
 
 	do
 	{
@@ -44,7 +44,7 @@ int Menu::readDigit(unsigned from, unsigned to) const
 	return c - '0';
 }
 
-bool Menu::readYesOrNo()const
+bool Menu::readYesOrNo()
 {
 	char c;
 
@@ -84,13 +84,31 @@ void Menu::showLoginMenu()
 		cout << "Password: ";
 		string password = readPassword();
 		cout << endl;
-		utilizador = login(username, password);
+		utilizador = BoleiasInteligentes::login(username, password);
 		return;
 	}
 	case 1:	// Sign up
 	{
 		cout << "Empresa? (y/n)";
 		bool empresa = readYesOrNo();
+		cout << endl;
+		cout << "Nome: ";
+		string nome = readString();
+		cout << endl;
+		cout << "Password: ";
+		string password = readPassword();
+		if (empresa)
+		{
+			cout << "Website (deixe em branco se nao existir): ";
+			string website = readString();
+			cout << endl;
+			
+		}
+		else
+		{
+
+		}
+
 	}
 	default: // ERRO
 	}
