@@ -14,14 +14,14 @@ string Menu::readString()const
 
 }
 
-int Menu::readDigit()const
+int Menu::readDigit(unsigned from, unsigned to) const
 {
 	char c;
 
 	do
 	{
 		c = _getch();
-	} while (!isdigit(c));
+	} while (!isdigit(c) || c < ('0' + from) || c > ('0' + to));
 	return c - '0';
 }
 
@@ -47,11 +47,11 @@ void Menu::showMenu(vector<string> itens)
 
 int Menu::showLoginMenu()
 {
-	vector<string> itens =
+	vector<string> items =
 	{
 		"Login",
 		"Sign up"
 	};
-	showMenu(itens);
-	return readDigit();
+	showMenu(items);
+	return readDigit(0, items.size() - 1);
 }

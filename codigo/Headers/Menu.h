@@ -18,7 +18,7 @@ public:
 
 	string readString() const;
 	string readPassword() const;
-	int readDigit() const;
+	int readDigit(unsigned from, unsigned to) const;
 	bool readYesOrNo() const;
 
 	void showMenu(vector<string> itens);
