@@ -5,11 +5,14 @@
 #include "AnuncioOferta.h"
 #include "AnuncioProcura.h"
 #include <iostream>
+#include <string>
+#include <vector>
 #include "Coordenadas.h"
 #include "Combustivel.h"
 #include "Veiculo.h"
 #include "Preco.h"
 #include "Viagem.h"
+#include "Membro.h"
 #include "Particular.h"
 #include "Empresa.h"
 
@@ -48,7 +51,7 @@ public:
 	void addEmpresa(const Empresa &empresa);
 	void addParticular(const Particular &particular);
 
-	static bool login(const string &username, const string &password);
+	static Membro* login(const string &username, const string &password);
 };
 
 template<class T>

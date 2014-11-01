@@ -18,29 +18,29 @@ string Menu::readPassword()
 {
 	string password;
 	char c;
-	while ((c = _getch()) != '\n')
+	while ((c = _getch()) != '\r')
 	{
-		if (c = '\b')
+		if (c == '\b')
 		{
 			cout << '\b' << '\b';
 		}
 		else
 		{
-			password += _getch();
+			password += c;
 			cout << '*';
 		}
 	}
 	return password;
 }
 
-int readDigit(unsigned from, unsigned to)
+int Menu::readDigit(unsigned from, unsigned to)
 {
 	unsigned char c;
 
 	do
 	{
 		c = _getch();
-	} while (!isdigit(c) || c < ('0' + from) || c > ('0' + to));
+	} while (!isdigit(c) || c < ('0' + from) || c >('0' + to));
 	return c - '0';
 }
 
@@ -80,7 +80,6 @@ void Menu::showLoginMenu()
 	{
 		cout << "Username: ";
 		string username = readString();
-		cout << endl;
 		cout << "Password: ";
 		string password = readPassword();
 		cout << endl;
@@ -94,22 +93,21 @@ void Menu::showLoginMenu()
 		cout << endl;
 		cout << "Nome: ";
 		string nome = readString();
-		cout << endl;
 		cout << "Password: ";
 		string password = readPassword();
 		if (empresa)
 		{
 			cout << "Website (deixe em branco se nao existir): ";
 			string website = readString();
-			cout << endl;
-			
 		}
 		else
 		{
 
 		}
+		return;
 
 	}
 	default: // ERRO
+		return;
 	}
 }

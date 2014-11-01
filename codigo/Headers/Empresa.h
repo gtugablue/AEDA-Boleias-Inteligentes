@@ -4,8 +4,6 @@
 #include "Membro.h"
 #include "Viagem.h"
 #include <vector>
-#include "Menu.h"
-
 using namespace std;
 
 class Empresa : public Membro

@@ -116,8 +116,8 @@ void BoleiasInteligentes::addParticular(const Particular &particular)
 	particulares.push_back(particular);
 }
 
-bool BoleiasInteligentes::login(const string &username, const string &password)
+Membro* BoleiasInteligentes::login(const string &username, const string &password)
 {
 	// TODO
-	return true;
+	return new Membro("Gustavo Silva", "gtugablue", "123456");
 }

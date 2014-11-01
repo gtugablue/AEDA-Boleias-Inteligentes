@@ -1,10 +1,10 @@
 #include "../headers/Anuncio.h"
 
-Anuncio::Anuncio(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem)
+Anuncio::Anuncio(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem):
+precoTotal(*precoTotal)
 {
 	this->titulo = titulo;
 	this->descricao = descricao;
-	this->precoTotal = precoTotal;
 	this->viagem = viagem;
 }
 
