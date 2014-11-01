@@ -55,17 +55,14 @@ public:
 };
 
 template<class T>
-class UtilizadorInexistenteException
+class LoginException
 {
 public:
 	T info;
-};
-
-template<class T>
-class PasswordErradaException
-{
-public:
-	T info;
+	LoginException(T info)
+	{
+		this->info = info;
+	}
 };
 
 #endif

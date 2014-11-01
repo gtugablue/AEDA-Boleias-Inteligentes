@@ -83,7 +83,16 @@ void Menu::showLoginMenu()
 		cout << "Password: ";
 		string password = readPassword();
 		cout << endl;
-		utilizador = BoleiasInteligentes::login(username, password);
+		try
+		{
+			utilizador = BoleiasInteligentes::login(username, password);
+			showMainMenu();
+		}
+		catch (LoginException<string> e)
+		{
+			cout << e.info << endl;
+			return showLoginMenu();
+		}
 		return;
 	}
 	case 1:	// Sign up
@@ -102,7 +111,7 @@ void Menu::showLoginMenu()
 		}
 		else
 		{
-
+			// TODO
 		}
 		return;
 
@@ -110,4 +119,19 @@ void Menu::showLoginMenu()
 	default: // ERRO
 		return;
 	}
+}
+
+void Menu::showMainMenu()
+{
+	vector<string> items =
+	{
+		"Item 1 - favor completar arcanjo / robocop",
+		"Item 2"
+		"Item 3"
+		"Item 4..."
+	};
+	showMenu(items);
+	int n = readDigit(0, items.size() - 1);
+	// TODO
+	return;
 }

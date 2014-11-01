@@ -26,10 +26,10 @@ public:
 
 	void showMenu(vector<string> itens);
 	void showLoginMenu();
-	int showMainMenu();
-	int showAnuncios();
-	int showVehicles();
-	int showVehicleInfo();
+	void showMainMenu();
+	void showAnuncios();
+	void showVehicles();
+	void showVehicleInfo();
 };
 
 #endif

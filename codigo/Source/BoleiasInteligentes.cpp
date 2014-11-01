@@ -119,5 +119,6 @@ void BoleiasInteligentes::addParticular(const Particular &particular)
 Membro* BoleiasInteligentes::login(const string &username, const string &password)
 {
 	// TODO
+	throw LoginException("Username inexistente");
 	return new Membro("Gustavo Silva", "gtugablue", "123456");
 }
