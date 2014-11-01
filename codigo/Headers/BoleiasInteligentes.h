@@ -16,8 +16,11 @@ using namespace std;
 class BoleiasInteligentes
 {
 private:
+	string dataFolder;
 	vector<Combustivel*>combustiveis;
 public:
+	BoleiasInteligentes(const string &dataFolder);
+
 	void load();
 	void loadCombustiveis();
 	void loadMembros();
