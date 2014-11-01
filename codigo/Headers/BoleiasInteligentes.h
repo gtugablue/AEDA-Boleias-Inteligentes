@@ -26,12 +26,16 @@ public:
 	void loadMembros();
 	void loadParticulares();
 	void loadEmpresas();
+	void loadAnunciosOferta();
+	void loadAnunciosProcura();
 
 	void save();
 	void saveCombustiveis();
 	void saveMembros();
 	void saveParticulares();
 	void saveEmpresas();
+	void saveAnunciosOferta();
+	void saveAnunciosProcura();
 
 	Coordenadas BoleiasInteligentes::criarCoordenadas();
 	Veiculo BoleiasInteligentes::criarVeiculo();
