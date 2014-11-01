@@ -16,13 +16,15 @@ private:
 public:
 	Menu();
 
-	string readString() const;
-	string readPassword() const;
-	int readDigit(unsigned from, unsigned to) const;
-	bool readYesOrNo() const;
+	static string readString() const;
+	static string readPassword() const;
+	static int readDigit(unsigned from, unsigned to) const;
+	static bool readYesOrNo() const;
+
+	static void showString(const string &str);
 
 	void showMenu(vector<string> itens);
-	int showLoginMenu();
+	void showLoginMenu();
 	int showMainMenu();
 	int showAnuncios();
 	int showVehicles();

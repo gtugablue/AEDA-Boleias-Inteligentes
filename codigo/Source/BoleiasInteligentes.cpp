@@ -1,7 +1,7 @@
 #include "../headers/BoleiasInteligentes.h"
 
 BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder):
-dataFolder(dataFolder)
+dataFolder(dataFolder), utilizador(NULL)
 {
 
 }
@@ -9,17 +9,11 @@ dataFolder(dataFolder)
 void BoleiasInteligentes::load()
 {
 	loadCombustiveis();
-	loadMembros();
 	loadParticulares();
 	loadEmpresas();
 }
 
 void BoleiasInteligentes::loadCombustiveis()
-{
-
-}
-
-void BoleiasInteligentes::loadMembros()
 {
 
 }
@@ -37,17 +31,11 @@ void BoleiasInteligentes::loadEmpresas()
 void BoleiasInteligentes::save()
 {
 	saveCombustiveis();
-	saveMembros();
 	saveParticulares();
 	saveEmpresas();
 }
 
 void BoleiasInteligentes::saveCombustiveis()
-{
-
-}
-
-void BoleiasInteligentes::saveMembros()
 {
 
 }

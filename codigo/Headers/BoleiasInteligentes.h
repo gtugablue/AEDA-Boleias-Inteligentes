@@ -10,6 +10,8 @@
 #include "Veiculo.h"
 #include "Preco.h"
 #include "Viagem.h"
+#include "Particular.h"
+#include "Empresa.h"
 
 using namespace std;
 
@@ -17,13 +19,15 @@ class BoleiasInteligentes
 {
 private:
 	string dataFolder;
-	vector<Combustivel*>combustiveis;
+	vector<Combustivel*> combustiveis;
+	vector<Particular> membros;
+	vector<Empresa> empresas;
+	Membro* utilizador;
 public:
 	BoleiasInteligentes(const string &dataFolder);
 
 	void load();
 	void loadCombustiveis();
-	void loadMembros();
 	void loadParticulares();
 	void loadEmpresas();
 	void loadAnunciosOferta();
@@ -31,7 +35,6 @@ public:
 
 	void save();
 	void saveCombustiveis();
-	void saveMembros();
 	void saveParticulares();
 	void saveEmpresas();
 	void saveAnunciosOferta();

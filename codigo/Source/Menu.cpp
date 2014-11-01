@@ -14,6 +14,25 @@ string Menu::readString()const
 
 }
 
+string Menu::readPassword() const
+{
+	string password;
+	char c;
+	while ((c = _getch()) != '\n')
+	{
+		if (c = '\b')
+		{
+			cout << '\b' << '\b';
+		}
+		else
+		{
+			password += _getch();
+			cout << '*';
+		}
+	}
+	return password;
+}
+
 int Menu::readDigit(unsigned from, unsigned to) const
 {
 	char c;
@@ -45,7 +64,7 @@ void Menu::showMenu(vector<string> itens)
 	return;
 }
 
-int Menu::showLoginMenu()
+void Menu::showLoginMenu()
 {
 	vector<string> items =
 	{
@@ -53,5 +72,26 @@ int Menu::showLoginMenu()
 		"Sign up"
 	};
 	showMenu(items);
-	return readDigit(0, items.size() - 1);
+	int n = readDigit(0, items.size() - 1);
+
+	switch (n)
+	{
+	case 0:	// Login
+	{
+		cout << "Username: ";
+		string username = readString();
+		cout << endl;
+		cout << "Password: ";
+		string password = readPassword();
+		cout << endl;
+		utilizador = login(username, password);
+		return;
+	}
+	case 1:	// Sign up
+	{
+		cout << "Empresa? (y/n)";
+		bool empresa = readYesOrNo();
+	}
+	default: // ERRO
+	}
 }
