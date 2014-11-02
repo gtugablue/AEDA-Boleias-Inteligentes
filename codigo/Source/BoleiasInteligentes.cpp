@@ -196,6 +196,7 @@ void BoleiasInteligentes::showMenu(vector<string> itens)
 
 void BoleiasInteligentes::showLoginMenu()
 {
+	clearScreen();
 	vector<string> items =
 	{
 		"Login",
@@ -217,21 +218,20 @@ void BoleiasInteligentes::showLoginMenu()
 		cout << endl;
 		try
 		{
-			login(username, password);
-			clearScreen();
+			utilizadorAtual = login(username, password);
 			showMainMenu();
 		}
 		catch (LoginException<string> e)
 		{
 			cout << e.info << endl;
 			pause();
-			clearScreen();
 			return showLoginMenu();
 		}
 		return;
 	}
 	case 1:	// Sign up
 	{
+		clearScreen();
 		cout << "Empresa? (y/n)";
 		Membro* membro;
 		if (InputUtils::readYesOrNo())
@@ -249,7 +249,6 @@ void BoleiasInteligentes::showLoginMenu()
 		clearScreen();
 		cout << "Conta criada com sucesso!" << endl;
 		pause();
-		clearScreen();
 		showLoginMenu();
 		return;
 
@@ -274,6 +273,7 @@ void BoleiasInteligentes::showLoginMenu()
 
 void BoleiasInteligentes::showMainMenu()
 {
+	clearScreen();
 	vector<string> items =
 	{
 		"Editar conta",
@@ -285,15 +285,17 @@ void BoleiasInteligentes::showMainMenu()
 	int n = InputUtils::readDigit(0, items.size() - 1);
 	switch (n)
 	{
-	case 0:
+	case 0: // Editar conta
+	{
+		clearScreen();
+		utilizadorAtual->edit();
+		return showMainMenu();
+	}
+	case 1: // Anuncios
 	{
 		// TODO
 	}
-	case 1:
-	{
-		// TODO
-	}
-	case 2:
+	case 2: // Veiculos
 	{
 		// TODO
 	}
@@ -304,14 +306,8 @@ void BoleiasInteligentes::showMainMenu()
 		if (InputUtils::readYesOrNo())
 		{
 			utilizadorAtual = NULL;
-			clearScreen();
-			return showLoginMenu();
 		}
-		else
-		{
-			clearScreen();
-			return showMainMenu();
-		}
+		return showLoginMenu();
 	}
 	}
 	return;

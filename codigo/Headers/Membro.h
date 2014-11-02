@@ -31,6 +31,7 @@ public:
 	void load();
 	void save(const string &file);
 	virtual void signup();
+	virtual void edit();
 
 	bool operator==(const Membro &membro1) const;
 };

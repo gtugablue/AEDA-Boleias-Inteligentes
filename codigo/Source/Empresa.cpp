@@ -17,3 +17,14 @@ void Empresa::signup()
 	cout << "Website (deixe em branco se nao existir): ";
 	website = InputUtils::readString();
 }
+
+void Empresa::edit()
+{
+	Membro::edit();
+	cout << "Pretende alterar o website (y/n)?" << endl;
+	if (InputUtils::readYesOrNo())
+	{
+		cout << "Introduza o novo website: ";
+		getline(cin, website);
+	}
+}
