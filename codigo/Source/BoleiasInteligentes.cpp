@@ -43,33 +43,33 @@ void BoleiasInteligentes::loadCombustiveis()
 void BoleiasInteligentes::loadMembros()
 {
 
-int N;
-int i = 0;
-fstream file;
-float preco;
+	int N;
+	int i = 0;
+	fstream file;
+	float preco;
 	string filename, nome, utilizador, password, marca, name;
-unsigned mes, ano, cilindrada;
-file.open(ficheiroMembros);
-bool empresa;
+	unsigned mes, ano, cilindrada;
+	file.open(ficheiroMembros);
+	bool empresa;
 
-file >> N;
+	file >> N;
 
-for (size_t i = 0; i < N; ++i)
-{
-	cin >> empresa;
-	cin.ignore(1000, '\n');
-	Membro* membro;
-	if (empresa)
+	for (size_t i = 0; i < N; ++i)
 	{
-		membro = new Empresa();
+		cin >> empresa;
+		cin.ignore(1000, '\n');
+		Membro* membro;
+		if (empresa)
+		{
+			membro = new Empresa();
+		}
+		else
+		{
+			membro = new Particular();
+		}
+		membro->load();
+		membros.push_back(membro);
 	}
-	else
-	{
-		membro = new Particular();
-	}
-	membro->load();
-	membros.push_back(membro);
-}
 
 
 
