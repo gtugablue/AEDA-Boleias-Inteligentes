@@ -33,7 +33,7 @@ void BoleiasInteligentes::loadParticulares()
 {
 
 	int N;
-	int i = 1;
+	int i = 0;
 	fstream file;
 	float preco;
 	string filename, nome, utilizador, password,marca,name;
@@ -51,14 +51,19 @@ void BoleiasInteligentes::loadParticulares()
 		while (i < N)
 		{
 			getline(file,marca);
+			i++;
 			file >> mes;
+			i++;
 			file >> ano;
+			i++;
 			file >> cilindrada;
+			i++;
 			getline(file, name);
 			file >> preco;
 			Combustivel * c = new Combustivel(name, preco);
 		    Veiculo  v = Veiculo(marca, mes, ano,cilindrada,c);
 			p.addveiculo(v);
+			i++;
 
 		}
 
