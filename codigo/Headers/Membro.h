@@ -30,6 +30,7 @@ public:
 	void addveiculo(Veiculo v);
 	void load();
 	virtual void signup();
+	virtual void edit();
 
 	bool operator==(const Membro &membro1) const;
 };

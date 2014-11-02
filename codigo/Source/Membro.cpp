@@ -63,6 +63,22 @@ void Membro::signup()
 	cout << endl;
 }
 
+void Membro::edit()
+{
+	cout << "Pretende alterar o nome (y/n)?" << endl;
+	if (InputUtils::readYesOrNo())
+	{
+		cout << "Introduza o novo nome: " << endl;
+		getline(cin, nome);
+	}
+	cout << "Pretende alterar a password (y/n)?" << endl;
+	if (InputUtils::readYesOrNo())
+	{
+		cout << "Introduza a nova password: " << endl;
+		getline(cin, password);
+	}
+}
+
 void Membro::load()
 {
 	Veiculo veiculo;
