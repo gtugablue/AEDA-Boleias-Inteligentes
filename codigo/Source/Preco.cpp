@@ -32,3 +32,23 @@ ostream& operator<<(ostream &os, const Preco &preco)
 	}
 	return os;
 }
+
+void Preco::show() const
+{
+	cout << "Combustivel: " << combustivel << endl;
+	cout << "Desgaste: " << desgaste << endl;
+	for (size_t i = 0; i < outrasDespesas.size(); ++i)
+	{
+		cout << outrasDespesas[i].first << ": " << outrasDespesas[i].second << endl;
+	}
+}
+
+float Preco::calcularTotal() const
+{
+	float total = combustivel + desgaste;
+	for (size_t i = 0; i < outrasDespesas.size(); ++i)
+	{
+		total += outrasDespesas[i].second;
+	}
+	return total;
+}

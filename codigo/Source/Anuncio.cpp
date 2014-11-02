@@ -1,6 +1,6 @@
 #include "../headers/Anuncio.h"
 
-Anuncio::Anuncio(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem):
+Anuncio::Anuncio(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem) :
 precoTotal(*precoTotal)
 {
 	this->titulo = titulo;
@@ -35,34 +35,34 @@ void Anuncio::setTitulo(const string &titulo)
 
 void Anuncio::setDescricao(const string &descricao)
 {
-	this->descricao=descricao;
+	this->descricao = descricao;
 }
 
 /*void Anuncio::adicionarCandidato(Particular* candidato)
 {
-	candidatos.push_back(candidato);
+candidatos.push_back(candidato);
 }
 
 void Anuncio::removerCandidato(Particular* candidato)
 {
-	for(size_t i=0; i < candidatos.size();i++)
-	{
-		if(candidatos[i]->getUtilizador()==candidato->getUtilizador())
-		{
-			candidatos.erase(candidatos.begin()+i);
-		}
-	}
+for(size_t i=0; i < candidatos.size();i++)
+{
+if(candidatos[i]->getUtilizador()==candidato->getUtilizador())
+{
+candidatos.erase(candidatos.begin()+i);
+}
+}
 }
 
 void Anuncio::aceitarCandidato(Particular* candidato)
 {
-	for(size_t i=0; i < candidatos.size();i++)
-	{
-		if(candidatos[i]->getUtilizador()==candidato[i].getUtilizador())
-		{
-			//viagem->adicionarPassageiro(candidatos[i]);
-		}
-	}
+for(size_t i=0; i < candidatos.size();i++)
+{
+if(candidatos[i]->getUtilizador()==candidato[i].getUtilizador())
+{
+//viagem->adicionarPassageiro(candidatos[i]);
+}
+}
 }*/
 
 void Anuncio::setOrigem(Coordenadas &o) const
@@ -75,3 +75,15 @@ void Anuncio::setDestino(Coordenadas &d) const
 	viagem->setLocalFim(d);
 }
 
+void Anuncio::show() const
+{
+	cout << "Titulo: " << titulo << endl;
+	cout << "Descricao: " << descricao << endl;
+	cout << "Anunciante: " << anunciante->getNome() << endl;
+	cout << endl;
+	cout << "Preco: ";
+	precoTotal.show();
+	cout << endl;
+	cout << endl;
+	cout << "Preco total: " << precoTotal.calcularTotal() << endl;
+}

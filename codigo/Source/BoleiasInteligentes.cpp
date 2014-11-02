@@ -323,7 +323,7 @@ void BoleiasInteligentes::showMainMenu()
 		cout << "Tem a certeza que pretende fazer logout (y/n)?";
 		if (InputUtils::readYesOrNo())
 		{
-			utilizadorAtual == NULL;
+			utilizadorAtual = NULL;
 			clearScreen();
 			return showLoginMenu();
 		}

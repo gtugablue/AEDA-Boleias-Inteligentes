@@ -17,7 +17,7 @@ private:
 	Coordenadas localFim;
 	vector<Particular*> passageiros; // Número total de pessoas no veículo = passageiros + 1 (condutor)
 	Data dataInicio;
-	Data dataFim; // se for igual ao inicio e um evento
+	Data dataFim; // se for igual ao inicio é um evento
 public:
 	Viagem(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim);
 	Viagem(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim);

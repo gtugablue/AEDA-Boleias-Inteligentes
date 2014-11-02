@@ -22,13 +22,14 @@ public:
 	string getDescricao() const;
 	Coordenadas getOrigem() const;
 	Coordenadas getDestino() const;
-	//virtual Membro* getAnunciante() const = 0;
+	Membro* getAnunciante() const;
 	void setTitulo(const string &titulo);
 	void setDescricao(const string &descricao);
 	void setOrigem(Coordenadas &o) const;
 	void setDestino(Coordenadas &d) const;
-	//virtual void setAnunciante() const = 0;
+	void setAnunciante() const;
 	void calcularPrecoTotal();
+	virtual void show() const;
 };
 
 #endif

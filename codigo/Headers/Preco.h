@@ -22,6 +22,8 @@ public:
 	void setCombustivel(float combustivel);
 	void setDesgaste(float desgaste);
 	friend ostream& operator<<(ostream &os, const Preco &preco);
+	void show() const;
+	float calcularTotal() const;
 };
 
 #endif
