@@ -87,3 +87,11 @@ void Anuncio::show() const
 	cout << endl;
 	cout << "Preco total: " << precoTotal.calcularTotal() << endl;
 }
+
+void Anuncio::criar()
+{
+	cout << "Insira o titulo: ";
+	getline(cin, titulo);
+	cout << "Insira uma descricao: ";
+	getline(cin, descricao);
+}
