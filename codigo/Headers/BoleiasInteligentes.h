@@ -102,4 +102,15 @@ public:
 	}
 };
 
+template<class T>
+class EmptyException
+{
+public:
+	T info;
+	EmptyException(T info)
+	{
+		this->info = info;
+	}
+};
+
 #endif

@@ -33,11 +33,11 @@ void BoleiasInteligentes::loadCombustiveis()
 
 	while (!file.eof())
 	{
-	getline(file, nome);
-	file >> n;
-	Combustivel p = Combustivel(nome, n);
-	combustiveis.push_back(p);
-    }
+		getline(file, nome);
+		file >> n;
+		Combustivel p = Combustivel(nome, n);
+		combustiveis.push_back(p);
+	}
 }
 
 /*void BoleiasInteligentes::loadMembros()
@@ -340,7 +340,12 @@ void BoleiasInteligentes::showMainMenu()
 template<class T>
 void BoleiasInteligentes::showList(const vector<T> &v, int page) const
 {
-	for (size_t i = page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE; page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE + i < v.size() && i < (page + 1) * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE ; ++i)
+	clearScreen();
+	if (v.size() == 0)
+	{
+		throw EmptyException<string>("Nenhum elemento a listar.");
+	}
+	for (size_t i = page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE; page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE + i % BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE < v.size() && i < (page + 1) * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE; ++i)
 	{
 		cout << i % BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE << ". " << v[i] << endl;
 	}
@@ -348,7 +353,7 @@ void BoleiasInteligentes::showList(const vector<T> &v, int page) const
 	cout << "7. Back" << endl;
 	cout << "8. Next" << endl;
 	cout << "9. Exit" << endl;
-	int input;
+	unsigned input;
 	try
 	{
 		do
@@ -361,19 +366,25 @@ void BoleiasInteligentes::showList(const vector<T> &v, int page) const
 		{
 			if (page == 0)
 			{
-				throw PaginaInexistenteException("Pagina inexistente.");
+				throw PaginaInexistenteException<string>("Pagina inexistente.");
 			}
 			return showList(v, page - 1);
 		}
 		case 8:
+		{
 			if (page == v.size() / BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE)
 			{
-				throw PaginaInexistenteException("Pagina inexistente");
+				throw PaginaInexistenteException<string>("Pagina inexistente");
 			}
 			return showList(v, page + 1);
 		}
+		case 9:
+		{
+			return;
+		}
+		}
 	}
-	catch (PaginaInexistenteException e)
+	catch (PaginaInexistenteException<string> e)
 	{
 		return showList(v, page);
 	}
