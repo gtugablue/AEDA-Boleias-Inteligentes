@@ -68,6 +68,7 @@ public:
 	void showMenu(vector<string> itens);
 	void showLoginMenu();
 	void showMainMenu();
+	void showAnunciosMenu();
 
 	template<class T>
 	void showList(const vector<T> &v, int page) const;

@@ -43,33 +43,33 @@ void BoleiasInteligentes::loadCombustiveis()
 void BoleiasInteligentes::loadMembros()
 {
 
-int N;
-int i = 0;
-fstream file;
-float preco;
-string filename, nome, utilizador, password,marca,name;
-unsigned mes, ano, cilindrada;
-file.open(ficheiroMembros);
-bool empresa;
+	int N;
+	int i = 0;
+	fstream file;
+	float preco;
+	string filename, nome, utilizador, password, marca, name;
+	unsigned mes, ano, cilindrada;
+	file.open(ficheiroMembros);
+	bool empresa;
 
-file >> N;
+	file >> N;
 
-for (size_t i = 0; i < N; ++i)
-{
-	cin >> empresa;
-	cin.ignore(1000, '\n');
-	Membro* membro;
-	if (empresa)
+	for (size_t i = 0; i < N; ++i)
 	{
-		membro = new Empresa();
+		cin >> empresa;
+		cin.ignore(1000, '\n');
+		Membro* membro;
+		if (empresa)
+		{
+			membro = new Empresa();
+		}
+		else
+		{
+			membro = new Particular();
+		}
+		membro->load();
+		membros.push_back(membro);
 	}
-	else
-	{
-		membro = new Particular();
-	}
-	membro->load();
-	membros.push_back(membro);
-}
 
 
 
@@ -94,7 +94,7 @@ void BoleiasInteligentes::saveCombustiveis()
 
 void BoleiasInteligentes::saveMembros()
 {
-	
+
 
 
 }
@@ -281,13 +281,12 @@ void BoleiasInteligentes::showMainMenu()
 	{
 	case 0: // Editar conta
 	{
-		clearScreen();
 		utilizadorAtual->edit();
 		return showMainMenu();
 	}
 	case 1: // Anuncios
 	{
-		// TODO
+		return showAnunciosMenu();
 	}
 	case 2: // Veiculos
 	{
@@ -302,6 +301,47 @@ void BoleiasInteligentes::showMainMenu()
 			utilizadorAtual = NULL;
 		}
 		return showLoginMenu();
+	}
+	}
+	return;
+}
+
+void BoleiasInteligentes::showAnunciosMenu()
+{
+	clearScreen();
+	vector<string> items =
+	{
+		"Criar anuncio",
+		"Ver anuncios",
+		"Voltar"
+	};
+	showMenu(items);
+	int n = InputUtils::readDigit(0, items.size() - 1);
+	switch (n)
+	{
+	case 0: // Criar anuncio
+	{
+		clearScreen();
+		utilizadorAtual->edit();
+		return showMainMenu();
+	}
+	case 1: // Ver anuncios
+	{
+		try
+		{
+			return showList(anuncios, 0);
+		}
+		catch (EmptyException<string> e)
+		{
+			cout << "Erro: " << e.info << endl;
+			pause();
+			return showAnunciosMenu();
+		}
+	}
+	case 2: // Voltar
+	{
+		clearScreen();
+		return showAnunciosMenu();
 	}
 	}
 	return;
