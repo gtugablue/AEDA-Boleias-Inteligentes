@@ -15,6 +15,7 @@ private:
 public:
 	Particular();
 	Particular(string nome, string utilizador, string password);
+	void showparticulares();
 	//Particular(Data dataNascimento);
 	//Data getDataNascimento() const;
 	//Data setDataNascimento(const Data &data);
