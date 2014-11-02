@@ -70,21 +70,6 @@ for (size_t i = 0; i < N; ++i)
 }
 
 
-while (!file.eof())
-{
-getline(file, nome);
-getline(file, utilizador);
-getline(file, password);
-membros.push_back(new Particular(nome, utilizador, password));
-
-file >> N;
-while (i < N)
-{
-
-
-}
-
-}
 
 }
 
@@ -96,16 +81,13 @@ void BoleiasInteligentes::save()
 
 void BoleiasInteligentes::saveCombustiveis()
 {
-	/*fstream file;
-	string name;
-	float preco;
-	string filename;
-	file.open(filename);
-	while (!file.eof())
+	ofstream file;
+	file.open(ficheiroCombustiveis);
+	for (size_t i = 0; i < combustiveis.size(); i++)
 	{
-	file << name << endl;
-	file << preco;
-	}*/
+		file << combustiveis.at(i).getNome() << endl;
+		file << combustiveis.at(i).getPreco() << endl;
+	}
 }
 
 void BoleiasInteligentes::saveMembros()
