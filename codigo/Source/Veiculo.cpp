@@ -88,3 +88,19 @@ void Veiculo::load()
 		Veiculo(marcas, m, a, cil, new Combustivel(name, preco));
 	}
 }
+
+void Veiculo::showVeiculo()
+{
+	cout << "Veiculo" << endl;
+	cout << endl;
+	cout << "Marca :   " << marca << endl;
+	cout << "Mes :     " << mes << endl;
+	cout << "Ano :     " << ano << endl;
+	cout << "Cilindrada " << cilindrada << endl;
+	cout << endl;
+	cout << "Gasolina   " << endl;
+	cout << endl;
+	cout << "Nome " << combustivel->getNome() << endl;
+	cout << "Preco " << combustivel->getPreco() << endl;
+
+}
