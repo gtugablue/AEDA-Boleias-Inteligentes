@@ -94,8 +94,14 @@ void BoleiasInteligentes::saveCombustiveis()
 
 void BoleiasInteligentes::saveMembros()
 {
-	
-
+	ofstream file;
+	file.open(ficheiroMembros);
+	file << membros.size();
+	for (size_t i = 0; i < membros.size(); ++i)
+	{
+		membros[i]->save(dataFolder + ficheiroMembros);
+	}
+	file.close();
 
 }
 
