@@ -1,7 +1,6 @@
 #include "../headers/Anuncio.h"
 
-Anuncio::Anuncio(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem) :
-precoTotal(*precoTotal)
+Anuncio::Anuncio(const string &titulo, const string &descricao, Membro* anunciante, Viagem* viagem)
 {
 	this->titulo = titulo;
 	this->descricao = descricao;
@@ -80,15 +79,9 @@ void Anuncio::show() const
 	cout << "Titulo: " << titulo << endl;
 	cout << "Descricao: " << descricao << endl;
 	cout << "Anunciante: " << anunciante->getNome() << endl;
-	cout << endl;
-	cout << "Preco: ";
-	precoTotal.show();
-	cout << endl;
-	cout << endl;
-	cout << "Preco total: " << precoTotal.calcularTotal() << endl;
 }
 
-void Anuncio::criar()
+void Anuncio::criar(Membro* utilizadorAtual)
 {
 	cout << "Insira o titulo: ";
 	getline(cin, titulo);

@@ -15,6 +15,7 @@ public:
 	void adicionarCondutorCandidato(const Membro* condutor);
 	void setAnunciante(Particular* anunciante);
 	Particular* getAnunciante() const;
+	void criar(Membro* utilizadorAtual);
 };
 
 #endif

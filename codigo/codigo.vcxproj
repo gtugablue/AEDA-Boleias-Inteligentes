@@ -80,6 +80,7 @@
   <ItemGroup>
     <ClCompile Include="Source\Anuncio.cpp" />
     <ClCompile Include="Source\AnuncioOferta.cpp" />
+    <ClCompile Include="Source\AnuncioProcura.cpp" />
     <ClCompile Include="Source\BoleiasInteligentes.cpp" />
     <ClCompile Include="Source\Combustivel.cpp" />
     <ClCompile Include="Source\Coordenadas.cpp" />
