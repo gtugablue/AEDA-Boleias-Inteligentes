@@ -23,6 +23,9 @@ class BoleiasInteligentes
 {
 private:
 	string dataFolder;
+	static const string ficheiroCombustiveis;
+	static const string ficheiroParticulares;
+	static const string ficheiroEmpresas;
 	vector<Combustivel*> combustiveis;
 	vector<Particular> particulares;
 	vector<Empresa> empresas;

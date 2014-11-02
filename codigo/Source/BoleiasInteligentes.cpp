@@ -1,5 +1,9 @@
 #include "../headers/BoleiasInteligentes.h"
 
+static const string ficheiroCombustiveis = "combustiveis.txt";
+static const string ficheiroParticulares = "particulares.txt";
+static const string ficheiroEmpresas = "empresas.txt";
+
 BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder):
 dataFolder(dataFolder), utilizador(NULL)
 {
@@ -197,6 +201,6 @@ void BoleiasInteligentes::addParticular(const Particular &particular)
 Membro* BoleiasInteligentes::login(const string &username, const string &password)
 {
 	// TODO
-	throw LoginException("Username inexistente");
+	throw LoginException<string>("Username inexistente");
 	return new Membro("Gustavo Silva", "gtugablue", "123456");
 }
