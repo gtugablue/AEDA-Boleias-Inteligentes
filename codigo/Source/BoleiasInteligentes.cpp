@@ -346,6 +346,48 @@ void BoleiasInteligentes::showMainMenu()
 	return;
 }
 
+template<class T>
+void BoleiasInteligentes::showList(const vector<T> &v, int page) const
+{
+	for (size_t i = page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE; page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE + i < v.size() && i < (page + 1) * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE ; ++i)
+	{
+		cout << i % BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE << ". " << v[i] << endl;
+	}
+	cout << endl;
+	cout << "7. Back" << endl;
+	cout << "8. Next" << endl;
+	cout << "9. Exit" << endl;
+	int input;
+	try
+	{
+		do
+		{
+			input = InputUtils::readDigit(0, 9);
+		} while (input > v.size() - page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE && input < 7);
+		switch (input)
+		{
+		case 7:
+		{
+			if (page == 0)
+			{
+				throw PaginaInexistenteException("Pagina inexistente.");
+			}
+			return showList(v, page - 1);
+		}
+		case 8:
+			if (page == v.size() / BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE)
+			{
+				throw PaginaInexistenteException("Pagina inexistente");
+			}
+			return showList(v, page + 1);
+		}
+	}
+	catch (PaginaInexistenteException e)
+	{
+		return showList(v, page);
+	}
+}
+
 void BoleiasInteligentes::clearScreen() const
 {
 	system("CLS");

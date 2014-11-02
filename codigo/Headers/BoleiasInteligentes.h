@@ -21,6 +21,8 @@
 
 using namespace std;
 
+#define BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE	8
+
 class BoleiasInteligentes
 {
 private:
@@ -67,6 +69,9 @@ public:
 	void showLoginMenu();
 	void showMainMenu();
 
+	template<class T>
+	void showList(const vector<T> &v, int page) const;
+
 	void showAnuncios();
 	void showVehicles();
 	void showVehicleInfo();
@@ -81,6 +86,17 @@ class LoginException
 public:
 	T info;
 	LoginException(T info)
+	{
+		this->info = info;
+	}
+};
+
+template<class T>
+class PaginaInexistenteException
+{
+public:
+	T info;
+	PaginaInexistenteException(T info)
 	{
 		this->info = info;
 	}
