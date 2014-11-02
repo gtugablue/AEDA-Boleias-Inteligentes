@@ -16,20 +16,20 @@
 #include "Membro.h"
 #include "Particular.h"
 #include "Empresa.h"
+#include <algorithm>
 
 using namespace std;
 
 class BoleiasInteligentes
 {
 private:
-	string dataFolder;
+	const string dataFolder;
 	static const string ficheiroCombustiveis;
 	static const string ficheiroParticulares;
 	static const string ficheiroEmpresas;
 	vector<Combustivel*> combustiveis;
-	vector<Particular> particulares;
-	vector<Empresa> empresas;
-	Membro* utilizador = NULL;
+	vector<Membro*> membros;
+	Membro* utilizadorAtual = NULL;
 public:
 	BoleiasInteligentes(const string &dataFolder);
 

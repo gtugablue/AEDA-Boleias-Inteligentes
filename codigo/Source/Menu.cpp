@@ -104,6 +104,7 @@ void Menu::showLoginMenu()
 		string nome = readString();
 		cout << "Password: ";
 		string password = readPassword();
+		cout << endl;
 		if (empresa)
 		{
 			cout << "Website (deixe em branco se nao existir): ";
@@ -125,10 +126,10 @@ void Menu::showMainMenu()
 {
 	vector<string> items =
 	{
-		"Item 1 - favor completar arcanjo / robocop",
-		"Item 2"
-		"Item 3"
-		"Item 4..."
+		"Editar conta",
+		"Anuncios",
+		"Veiculos",
+		"Logout"
 	};
 	showMenu(items);
 	int n = readDigit(0, items.size() - 1);

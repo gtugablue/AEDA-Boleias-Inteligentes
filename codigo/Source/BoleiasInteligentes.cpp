@@ -5,7 +5,7 @@ static const string ficheiroParticulares = "particulares.txt";
 static const string ficheiroEmpresas = "empresas.txt";
 
 BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder):
-dataFolder(dataFolder), utilizador(NULL)
+dataFolder(dataFolder), utilizadorAtual(NULL)
 {
 
 }
@@ -48,8 +48,7 @@ void BoleiasInteligentes::loadParticulares()
 		getline(file, nome);
 		getline(file, utilizador);
 		getline(file, password);
-		Particular p = Particular(nome, utilizador, password);
-		particulares.push_back(p);
+		membros.push_back(new Particular(nome, utilizador, password));
 		
 		file >> N;
 		while (i < N)
@@ -64,9 +63,7 @@ void BoleiasInteligentes::loadParticulares()
 			i++;
 			getline(file, name);
 			file >> preco;
-			Combustivel * c = new Combustivel(name, preco);
-		    Veiculo  v = Veiculo(marca, mes, ano,cilindrada,c);
-			p.addveiculo(v);
+			p.addveiculo(Veiculo(marca, mes, ano, cilindrada, new Combustivel(name, preco)));
 			i++;
 
 		}
@@ -89,7 +86,7 @@ void BoleiasInteligentes::save()
 
 void BoleiasInteligentes::saveCombustiveis()
 {
-	fstream file;
+/*	fstream file;
 	string name;
 	float preco;
 	string filename;
@@ -98,12 +95,12 @@ void BoleiasInteligentes::saveCombustiveis()
 	{
 		file << name << endl;
 		file << preco;
-	}
+	}*/
 }
 
 void BoleiasInteligentes::saveParticulares()
 {
-	fstream file;
+	/*fstream file;
 	string filename, nome, utilizador, password, marca, name;
 	unsigned mes, ano, cilindrada;
 	float preco;
@@ -122,7 +119,7 @@ void BoleiasInteligentes::saveParticulares()
 		file << cilindrada << endl;
 		file << name << endl;
 		file << preco << endl;
-	}
+	}*/
 
 
 }
@@ -188,19 +185,19 @@ Anuncio BoleiasInteligentes::criarAnuncio()
 
 void BoleiasInteligentes::addEmpresa(const Empresa &empresa)
 {
-	Empresa novaEmpresa = empresa;
-	empresas.push_back(empresa);
+	membros.push_back(new Empresa(empresa));
 }
 
 void BoleiasInteligentes::addParticular(const Particular &particular)
 {
-	Particular novoParticular = particular;
-	particulares.push_back(particular);
+	membros.push_back(new Particular(particular));
 }
 
 Membro* BoleiasInteligentes::login(const string &username, const string &password)
 {
-	// TODO
-	throw LoginException<string>("Username inexistente");
+	if (find(membros.begin(), membros.end(), Membro("", username, password)) == membros.end())
+	{
+		throw LoginException<string>("Username inexistente");
+	}
 	return new Membro("Gustavo Silva", "gtugablue", "123456");
 }
