@@ -10,7 +10,15 @@ Particular::Particular(string nome, string utilizador, string password) :Membro(
 
 }
 
-/*void Particular::signup()
+void Particular::showparticulares()
 {
-	Membro::signup();
-}*/
+	cout << "Particular " << endl;
+	cout << endl;
+	cout << "Nome :" << nome << endl;
+	cout << "Utilizador" << utilizador << endl;
+	cout << endl;
+	for (size_t i = 0; i < veiculos.size(); i++)
+	{
+		veiculos.at(i).showVeiculo();
+	}
+}
