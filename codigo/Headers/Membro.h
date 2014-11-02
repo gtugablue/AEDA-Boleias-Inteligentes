@@ -24,6 +24,8 @@ public:
 	void setPassword(string &password);
 	void setVeiculos(const vector<Veiculo> &veiculo);
 	void addveiculo(Veiculo v);
+
+	bool operator==(const Membro &membro1) const;
 };
 
 #endif

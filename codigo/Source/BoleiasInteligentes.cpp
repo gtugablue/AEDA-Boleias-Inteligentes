@@ -13,7 +13,7 @@ dataFolder(dataFolder), utilizadorAtual(NULL)
 void BoleiasInteligentes::load()
 {
 	loadCombustiveis();
-	loadMembros();
+	//loadMembros();
 }
 
 void BoleiasInteligentes::loadCombustiveis()
@@ -157,7 +157,7 @@ Veiculo BoleiasInteligentes::criarVeiculo()
 	
 }
 
-Anuncio BoleiasInteligentes::criarAnuncio()
+/*Anuncio BoleiasInteligentes::criarAnuncio()
 {
 	string nome;
 	string descricao;
@@ -168,8 +168,8 @@ Anuncio BoleiasInteligentes::criarAnuncio()
 	getline(cin, descricao);
 
 	vector<pair<string, float>> outrasDespesas;
-	return AnuncioOferta(nome, descricao, new Preco(0.0, 0.0, outrasDespesas), new Viagem(), new Membro("Arcanjo", "arcanjo45", "fagote"));	// TODO
-}
+	//return AnuncioOferta(nome, descricao, new Preco(0.0, 0.0, outrasDespesas), new Viagem(, new Membro("Arcanjo", "arcanjo45", "fagote"));	// TODO
+}*/
 
 void BoleiasInteligentes::addEmpresa(const Empresa &empresa)
 {
@@ -183,9 +183,16 @@ void BoleiasInteligentes::addParticular(const Particular &particular)
 
 Membro* BoleiasInteligentes::login(const string &username, const string &password)
 {
-	if (find(membros.begin(), membros.end(), Membro("", username, password)) == membros.end())
+	for (size_t i = 0; i < membros.size(); ++i)
 	{
-		throw LoginException<string>("Username inexistente");
+		if (membros[i]->getUtilizador() == username)
+		{
+			if (membros[i]->getPassword() == password)
+			{
+				return membros[i];
+			}
+			throw LoginException<string>("Password errada.");
+		}
 	}
-	return new Membro("Gustavo Silva", "gtugablue", "123456");
+	throw LoginException<string>("Username inexistente.");
 }

@@ -93,7 +93,6 @@
     <ClCompile Include="Source\Preco.cpp" />
     <ClCompile Include="Source\Veiculo.cpp" />
     <ClCompile Include="Source\Viagem.cpp" />
-    <ClCompile Include="Source\ViagemPeriodica.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Anuncio.h" />
@@ -111,7 +110,6 @@
     <ClInclude Include="Headers\Preco.h" />
     <ClInclude Include="Headers\Veiculo.h" />
     <ClInclude Include="Headers\Viagem.h" />
-    <ClInclude Include="Headers\ViagemPeriodica.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="combustiveis.txt" />

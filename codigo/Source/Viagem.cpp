@@ -1,18 +1,14 @@
 #include "../headers/Viagem.h"
-Viagem::Viagem() :
-inicio(Coordenadas(0.0, 0.0)), fim(Coordenadas(0.0, 0.0))
-{
 
-}
-Viagem::Viagem(Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim) :
-inicio(inicio), fim(fim)
+Viagem::Viagem(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim) :
+localInicio(localInicio), localFim(localFim), dataInicio(dataInicio), dataFim(dataFim)
 {
 	this->condutor = NULL;
 	this->veiculo = veiculo;
 }
 
-Viagem::Viagem(Membro* condutor, Veiculo* veiculo, const Coordenadas &inicio, const Coordenadas &fim) :
-inicio(inicio), fim(fim)
+Viagem::Viagem(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim):
+localInicio(localInicio), localFim(localFim), dataInicio(dataInicio), dataFim(dataFim)
 { 
 	this->condutor = condutor;
 	this->veiculo = veiculo;
@@ -29,14 +25,14 @@ Veiculo* Viagem::getVeiculo()const
 
 }
 
-Coordenadas Viagem::getInicio()const
+Coordenadas Viagem::getLocalInicio()const
 {
-	return inicio;
+	return localInicio;
 }
 
-Coordenadas Viagem::getFim()const
+Coordenadas Viagem::getLocalFim()const
 {
-	return fim;
+	return localFim;
 }
 
 void Viagem::setCondutor(Membro* condutor)
@@ -44,13 +40,13 @@ void Viagem::setCondutor(Membro* condutor)
 	this->condutor = condutor;
 }
 
-void Viagem::setFim(const Coordenadas &fim)
+void Viagem::setLocalFim(const Coordenadas &localFim)
 {
-	this->fim = fim;
+	this->localFim = localFim;
 }
-void Viagem::setInicio(const Coordenadas &inicio)
+void Viagem::setLocalInicio(const Coordenadas &localInicio)
 {
-	this->inicio = inicio;
+	this->localInicio = localInicio;
 }
 
 void Viagem::setVeiculo(Veiculo* veiculo)

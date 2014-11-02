@@ -42,9 +42,6 @@
     <ClCompile Include="Source\Viagem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ViagemPeriodica.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -99,9 +96,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Viagem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Headers\ViagemPeriodica.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Menu.h">

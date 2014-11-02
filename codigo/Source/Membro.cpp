@@ -41,3 +41,8 @@ void Membro::addveiculo(Veiculo v)
 {
 	veiculos.push_back(v);
 }
+
+bool Membro::operator==(const Membro &membro1) const
+{
+	return utilizador == membro1.utilizador;
+}

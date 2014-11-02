@@ -20,17 +20,17 @@ string Anuncio::getDescricao() const
 
 Coordenadas Anuncio::getOrigem() const
 {
-	return viagem->getInicio();
+	return viagem->getLocalInicio();
 }
 
 Coordenadas Anuncio::getDestino() const
 {
-	return viagem->getFim();
+	return viagem->getLocalFim();
 }
 
 void Anuncio::setTitulo(const string &titulo)
 {
-	this ->titulo=titulo;
+	this->titulo = titulo;
 }
 
 void Anuncio::setDescricao(const string &descricao)
@@ -38,7 +38,7 @@ void Anuncio::setDescricao(const string &descricao)
 	this->descricao=descricao;
 }
 
-void Anuncio::adicionarCandidato(Particular* candidato)
+/*void Anuncio::adicionarCandidato(Particular* candidato)
 {
 	candidatos.push_back(candidato);
 }
@@ -63,15 +63,15 @@ void Anuncio::aceitarCandidato(Particular* candidato)
 			//viagem->adicionarPassageiro(candidatos[i]);
 		}
 	}
-}
+}*/
 
 void Anuncio::setOrigem(Coordenadas &o) const
 {
-	viagem->setInicio(o);
+	viagem->setLocalInicio(o);
 }
 
 void Anuncio::setDestino(Coordenadas &d) const
 {
-	viagem->setFim(d);
+	viagem->setLocalFim(d);
 }
 

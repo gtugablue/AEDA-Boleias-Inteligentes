@@ -10,7 +10,7 @@ using namespace std;
 
 class Anuncio
 {
-private:
+protected:
 	string titulo;
 	string descricao;
 	Preco precoTotal;
@@ -28,9 +28,6 @@ public:
 	void setOrigem(Coordenadas &o) const;
 	void setDestino(Coordenadas &d) const;
 	//virtual void setAnunciante() const = 0;
-	void adicionarCandidato(Particular* candidato);
-	void aceitarCandidato(Particular* candidato);
-	void removerCandidato(Particular* candidato);
 	void calcularPrecoTotal();
 };
 
