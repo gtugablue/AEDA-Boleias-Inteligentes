@@ -15,17 +15,60 @@ void BoleiasInteligentes::load()
 
 void BoleiasInteligentes::loadCombustiveis()
 {
+	string nome;
+	float n;
+	string filename;
+	fstream file;
+	file.open(filename);
 
+	while (!file.eof())
+	{
+		getline(file, nome);
+		file >> n;
+
+	}
 }
 
 void BoleiasInteligentes::loadParticulares()
 {
 
+	int N;
+	int i = 1;
+	fstream file;
+	float preco;
+	string filename, nome, utilizador, password,marca,name;
+	unsigned mes, ano, cilindrada;
+	file.open(filename);
+	while (!file.eof())
+	{
+		getline(file, nome);
+		getline(file, utilizador);
+		getline(file, password);
+		Particular p = Particular(nome, utilizador, password);
+		particulares.push_back(p);
+		
+		file >> N;
+		while (i < N)
+		{
+			getline(file,marca);
+			file >> mes;
+			file >> ano;
+			file >> cilindrada;
+			getline(file, name);
+			file >> preco;
+			Combustivel * c = new Combustivel(name, preco);
+		    Veiculo  v = Veiculo(marca, mes, ano,cilindrada,c);
+			p.addveiculo(v);
+
+		}
+
+	}
+
 }
 
 void BoleiasInteligentes::loadEmpresas()
 {
-
+	//Igual ao de cima mas temos de decidir se uma empresa leva mais alguma coisa ou não.
 }
 
 void BoleiasInteligentes::save()
@@ -37,17 +80,47 @@ void BoleiasInteligentes::save()
 
 void BoleiasInteligentes::saveCombustiveis()
 {
-
+	fstream file;
+	string name;
+	float preco;
+	string filename;
+	file.open(filename);
+	while (!file.eof())
+	{
+		file << name << endl;
+		file << preco;
+	}
 }
 
 void BoleiasInteligentes::saveParticulares()
 {
+	fstream file;
+	string filename, nome, utilizador, password, marca, name;
+	unsigned mes, ano, cilindrada;
+	float preco;
+	int N;
+
+	file.open(filename);
+	while (!file.eof())
+	{
+		file << nome << endl;
+		file << utilizador << endl;
+		file << password << endl;
+		file << N << endl;
+		file << marca << endl;
+		file << mes << endl;
+		file << ano << endl;
+		file << cilindrada << endl;
+		file << name << endl;
+		file << preco << endl;
+	}
+
 
 }
 
 void BoleiasInteligentes::saveEmpresas()
 {
-
+	// O mesmo problema dos loads
 }
 
 Coordenadas BoleiasInteligentes::criarCoordenadas()

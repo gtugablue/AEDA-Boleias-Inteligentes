@@ -23,6 +23,7 @@ public:
 	void setUtilizador(string &utilizador);
 	void setPassword(string &password);
 	void setVeiculos(const vector<Veiculo> &veiculo);
+	void addveiculo(Veiculo v);
 };
 
 #endif

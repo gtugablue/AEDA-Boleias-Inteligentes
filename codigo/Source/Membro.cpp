@@ -36,3 +36,8 @@ void Membro::setUtilizador(string &utilizador)
 {
 	this ->utilizador=utilizador;
 }
+
+void Membro::addveiculo(Veiculo v)
+{
+	veiculos.push_back(v);
+}

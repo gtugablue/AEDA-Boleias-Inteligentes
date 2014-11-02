@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 #include "Coordenadas.h"
 #include "Combustivel.h"
 #include "Veiculo.h"
