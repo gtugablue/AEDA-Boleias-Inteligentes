@@ -327,9 +327,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 	{
 	case 0: // Criar anuncio
 	{
-		clearScreen();
-		utilizadorAtual->edit();
-		return showMainMenu();
+		// TODO
 	}
 	case 1: // Ver anuncios
 	{

@@ -30,6 +30,7 @@ public:
 	void setAnunciante() const;
 	void calcularPrecoTotal();
 	virtual void show() const;
+	virtual void criar();
 };
 
 #endif

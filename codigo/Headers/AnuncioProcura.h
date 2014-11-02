@@ -9,6 +9,7 @@ class AnuncioProcura: public Anuncio
 {
 private:
 	vector<Membro*> condutoresCandidatos;
+	vector<Membro*> passageiros;
 public:
 	AnuncioProcura(Particular* anunciante);
 	void adicionarCondutorCandidato(const Membro* condutor);
