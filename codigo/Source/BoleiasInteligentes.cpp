@@ -4,7 +4,7 @@ const string BoleiasInteligentes::ficheiroCombustiveis = "combustiveis.txt";
 const string BoleiasInteligentes::ficheiroMembros = "membros.txt";
 const string BoleiasInteligentes::ficheiroAnuncios = "anuncios.txt";
 
-BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder):
+BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder) :
 dataFolder(dataFolder), utilizadorAtual(NULL)
 {
 
@@ -34,8 +34,8 @@ void BoleiasInteligentes::loadCombustiveis()
 
 	while (!file.eof())
 	{
-		getline(file, nome);
-		file >> n;
+	getline(file, nome);
+	file >> n;
 
 	}*/
 }
@@ -43,39 +43,39 @@ void BoleiasInteligentes::loadCombustiveis()
 /*void BoleiasInteligentes::loadMembros()
 {
 
-	int N;
-	int i = 0;
-	fstream file;
-	float preco;
-	string filename, nome, utilizador, password,marca,name;
-	unsigned mes, ano, cilindrada;
-	file.open(filename);
-	while (!file.eof())
-	{
-		getline(file, nome);
-		getline(file, utilizador);
-		getline(file, password);
-		membros.push_back(new Particular(nome, utilizador, password));
-		
-		file >> N;
-		while (i < N)
-		{
-			getline(file,marca);
-			i++;
-			file >> mes;
-			i++;
-			file >> ano;
-			i++;
-			file >> cilindrada;
-			i++;
-			getline(file, name);
-			file >> preco;
-			p.addveiculo(Veiculo(marca, mes, ano, cilindrada, new Combustivel(name, preco)));
-			i++;
+int N;
+int i = 0;
+fstream file;
+float preco;
+string filename, nome, utilizador, password,marca,name;
+unsigned mes, ano, cilindrada;
+file.open(filename);
+while (!file.eof())
+{
+getline(file, nome);
+getline(file, utilizador);
+getline(file, password);
+membros.push_back(new Particular(nome, utilizador, password));
 
-		}
+file >> N;
+while (i < N)
+{
+getline(file,marca);
+i++;
+file >> mes;
+i++;
+file >> ano;
+i++;
+file >> cilindrada;
+i++;
+getline(file, name);
+file >> preco;
+p.addveiculo(Veiculo(marca, mes, ano, cilindrada, new Combustivel(name, preco)));
+i++;
 
-	}
+}
+
+}
 
 }*/
 
@@ -94,8 +94,8 @@ void BoleiasInteligentes::saveCombustiveis()
 	file.open(filename);
 	while (!file.eof())
 	{
-		file << name << endl;
-		file << preco;
+	file << name << endl;
+	file << preco;
 	}*/
 }
 
@@ -110,16 +110,16 @@ void BoleiasInteligentes::saveMembros()
 	file.open(filename);
 	while (!file.eof())
 	{
-		file << nome << endl;
-		file << utilizador << endl;
-		file << password << endl;
-		file << N << endl;
-		file << marca << endl;
-		file << mes << endl;
-		file << ano << endl;
-		file << cilindrada << endl;
-		file << name << endl;
-		file << preco << endl;
+	file << nome << endl;
+	file << utilizador << endl;
+	file << password << endl;
+	file << N << endl;
+	file << marca << endl;
+	file << mes << endl;
+	file << ano << endl;
+	file << cilindrada << endl;
+	file << name << endl;
+	file << preco << endl;
 	}*/
 
 
@@ -130,7 +130,7 @@ Coordenadas BoleiasInteligentes::criarCoordenadas()
 	double lat;
 	double lng;
 	cout << "Introduza a latitude " << endl;
-	cin >> lat ;
+	cin >> lat;
 	cout << "Introduza a longitude" << endl;
 	cin >> lng;
 	return Coordenadas(lat, lng);
@@ -159,24 +159,24 @@ Veiculo BoleiasInteligentes::criarVeiculo()
 	cin >> mes;
 	cout << "Introduza a cilindrada do seu veiculo" << endl;
 	cin >> cilindrada;
-	
+
 
 	return Veiculo(marca, mes, ano, cilindrada, NULL); // TODO --- TIRAR ESTE NULL DAQUI!
-	
+
 }
 
 /*Anuncio BoleiasInteligentes::criarAnuncio()
 {
-	string nome;
-	string descricao;
+string nome;
+string descricao;
 
-	cout << "Introduza o nome do seu anuncio" << endl;
-	getline(cin, nome);
-	cout << "Introduza a descricao do seu anuncio" << endl;
-	getline(cin, descricao);
+cout << "Introduza o nome do seu anuncio" << endl;
+getline(cin, nome);
+cout << "Introduza a descricao do seu anuncio" << endl;
+getline(cin, descricao);
 
-	vector<pair<string, float>> outrasDespesas;
-	//return AnuncioOferta(nome, descricao, new Preco(0.0, 0.0, outrasDespesas), new Viagem(, new Membro("Arcanjo", "arcanjo45", "fagote"));	// TODO
+vector<pair<string, float>> outrasDespesas;
+//return AnuncioOferta(nome, descricao, new Preco(0.0, 0.0, outrasDespesas), new Viagem(, new Membro("Arcanjo", "arcanjo45", "fagote"));	// TODO
 }*/
 
 void BoleiasInteligentes::addEmpresa(const Empresa &empresa)
@@ -219,7 +219,8 @@ void BoleiasInteligentes::showLoginMenu()
 	vector<string> items =
 	{
 		"Login",
-		"Sign up"
+		"Sign up",
+		"Sair"
 	};
 	showMenu(items);
 	int n = InputUtils::readDigit(0, items.size() - 1);
@@ -273,8 +274,21 @@ void BoleiasInteligentes::showLoginMenu()
 		return;
 
 	}
-	default: // ERRO
-		return;
+	case 2: // Sair
+	{
+		clearScreen();
+		cout << "Tem a certeza que pretende sair (y/n)?";
+		if (InputUtils::readYesOrNo())
+		{
+			cout << endl;
+			return;
+		}
+		else
+		{
+			clearScreen();
+			showLoginMenu();
+		}
+	}
 	}
 }
 
@@ -289,7 +303,37 @@ void BoleiasInteligentes::showMainMenu()
 	};
 	showMenu(items);
 	int n = InputUtils::readDigit(0, items.size() - 1);
-	// TODO
+	switch (n)
+	{
+	case 0:
+	{
+		// TODO
+	}
+	case 1:
+	{
+		// TODO
+	}
+	case 2:
+	{
+		// TODO
+	}
+	case 3:
+	{
+		clearScreen();
+		cout << "Tem a certeza que pretende fazer logout (y/n)?";
+		if (InputUtils::readYesOrNo())
+		{
+			utilizadorAtual == NULL;
+			clearScreen();
+			return showLoginMenu();
+		}
+		else
+		{
+			clearScreen();
+			return showMainMenu();
+		}
+	}
+	}
 	return;
 }
 
