@@ -123,6 +123,7 @@ void Membro::save(const string &filename)
 		file << veiculos.at(i).getMes() << endl;
 		file << veiculos.at(i).getAno() << endl;
 		file << veiculos.at(i).getCilindrada() << endl;
-		file << veiculos.at(i).getCombustivel() << endl;
+		file << veiculos.at(i).getCombustivel()->getNome() << endl;
+		file << veiculos.at(i).getCombustivel()->getPreco() << endl;
 	}
 }
