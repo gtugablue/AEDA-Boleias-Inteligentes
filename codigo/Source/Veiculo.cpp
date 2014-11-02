@@ -80,5 +80,6 @@ void Veiculo::load()
 		file >> cil;
 		getline(file, name);
 		file >> preco;
+		Veiculo(marcas, m, a, cil, new Combustivel(name, preco));
 	}
 }
