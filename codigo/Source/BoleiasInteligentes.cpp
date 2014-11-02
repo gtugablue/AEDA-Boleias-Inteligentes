@@ -26,18 +26,18 @@ void BoleiasInteligentes::load()
 
 void BoleiasInteligentes::loadCombustiveis()
 {
-	/*string nome;
+	string nome;
 	float n;
-	string filename;
 	fstream file;
-	file.open(filename);
+	file.open("combustiveis.txt");
 
 	while (!file.eof())
 	{
 	getline(file, nome);
 	file >> n;
-
-	}*/
+	Combustivel p = Combustivel(nome, n);
+	combustiveis.push_back(p);
+    }
 }
 
 /*void BoleiasInteligentes::loadMembros()
