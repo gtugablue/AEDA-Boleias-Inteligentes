@@ -5,6 +5,7 @@
 #include <vector>
 #include "Veiculo.h"
 #include <iostream>
+#include<fstream>
 #include "InputUtils.h"
 
 using namespace std;
@@ -27,6 +28,7 @@ public:
 	void setPassword(string &password);
 	void setVeiculos(const vector<Veiculo> &veiculo);
 	void addveiculo(Veiculo v);
+	void load();
 	virtual void signup();
 
 	bool operator==(const Membro &membro1) const;

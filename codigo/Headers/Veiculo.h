@@ -3,6 +3,8 @@
 
 #include <string>
 #include "Combustivel.h"
+#include <iostream>
+#include<fstream>
 
 using namespace std;
 
@@ -27,6 +29,7 @@ public:
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);
 	void setCilindrada(unsigned cilindrada);
+	void load();
 	void setCombustivel(Combustivel* combustivel);
 };
 

@@ -29,7 +29,7 @@ void BoleiasInteligentes::loadCombustiveis()
 	string nome;
 	float n;
 	fstream file;
-	file.open("combustiveis.txt");
+	file.open(ficheiroCombustiveis);
 
 	while (!file.eof())
 	{
@@ -40,7 +40,7 @@ void BoleiasInteligentes::loadCombustiveis()
 	}
 }
 
-/*void BoleiasInteligentes::loadMembros()
+void BoleiasInteligentes::loadMembros()
 {
 
 int N;
@@ -49,7 +49,27 @@ fstream file;
 float preco;
 string filename, nome, utilizador, password,marca,name;
 unsigned mes, ano, cilindrada;
-file.open(filename);
+file.open(ficheiroMembros);
+bool empresa;
+
+for (size_t i = 0; i < N; ++i)
+{
+	cin >> empresa;
+	cin.ignore(1000, '\n');
+	Membro* membro;
+	if (empresa)
+	{
+		membro = new Empresa();
+	}
+	else
+	{
+		membro = new Particular();
+	}
+	membro->load();
+	membros.push_back(membro);
+}
+
+
 while (!file.eof())
 {
 getline(file, nome);
@@ -60,24 +80,13 @@ membros.push_back(new Particular(nome, utilizador, password));
 file >> N;
 while (i < N)
 {
-getline(file,marca);
-i++;
-file >> mes;
-i++;
-file >> ano;
-i++;
-file >> cilindrada;
-i++;
-getline(file, name);
-file >> preco;
-p.addveiculo(Veiculo(marca, mes, ano, cilindrada, new Combustivel(name, preco)));
-i++;
+
 
 }
 
 }
 
-}*/
+}
 
 void BoleiasInteligentes::save()
 {

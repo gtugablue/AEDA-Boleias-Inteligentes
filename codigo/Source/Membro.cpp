@@ -62,3 +62,31 @@ void Membro::signup()
 	password = InputUtils::readPassword();
 	cout << endl;
 }
+
+void Membro::load()
+{
+	Veiculo veiculo;
+	int N;
+	int i = 0;
+	fstream file;
+	float preco;
+	string filename, nome, utilizador, password, marca, name;
+	unsigned mes, ano, cilindrada;
+	while (!file.eof())
+	{
+		getline(file, nome);
+		getline(file, utilizador);
+		getline(file, password);
+
+		file >> N;
+		cin.ignore(1000, '\n');
+		for (size_t i = 0; i < N; ++i)
+		{
+			veiculo.load();
+			veiculos.push_back(veiculo);
+
+		}
+
+	}
+
+}

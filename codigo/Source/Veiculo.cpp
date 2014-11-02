@@ -64,3 +64,22 @@ void Veiculo::setCombustivel(Combustivel* combustivel)
 	this->combustivel = combustivel;
 	return;
 }
+
+void Veiculo::load()
+{
+	fstream file;
+	string marcas, name;
+	float preco;
+	unsigned m, a, cil;
+	file.open("veiculos.txt");
+	while (!file.eof())
+	{
+		getline(file, marcas);
+		file >> m;
+		file >> a;
+		file >> cil;
+		getline(file, name);
+		file >> preco;
+		Veiculo(marcas, m, a, cil, new Combustivel(name, preco));
+	}
+}
