@@ -337,6 +337,29 @@ void BoleiasInteligentes::showMainMenu()
 	return;
 }
 
+template<class T>
+void BoleiasInteligentes::showList(vector<T> v, int page) const
+{
+	for (size_t i = page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE; page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE + i < v.size() && i < (page + 1) * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE ; ++i)
+	{
+		cout << i % BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE << ". " << v[i] << endl;
+	}
+	cout << endl;
+	cout << "7. Back" << endl;
+	cout << "8. Next" << endl;
+	cout << "9. Exit" << endl;
+	int input;
+	do
+	{
+		input = InputUtils::readDigit(0, 9);
+	} while (input > v.size() - page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE && input < 7);
+	switch (input)
+	{
+	case 7:
+
+	}
+}
+
 void BoleiasInteligentes::clearScreen() const
 {
 	system("CLS");
