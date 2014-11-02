@@ -70,7 +70,7 @@ public:
 	void showMainMenu();
 
 	template<class T>
-	void showList(vector<T> v, int page) const;
+	void showList(const vector<T> &v, int page) const;
 
 	void showAnuncios();
 	void showVehicles();
