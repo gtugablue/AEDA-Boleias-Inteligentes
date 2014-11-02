@@ -1,9 +1,8 @@
 #include "../headers/Menu.h"
 
-Menu::Menu()
+Menu::Menu(BoleiasInteligentes* boleiasInteligentes):
+boleiasInteligentes(boleiasInteligentes)
 {
-
-
 }
 
 string Menu::readString()
@@ -85,7 +84,7 @@ void Menu::showLoginMenu()
 		cout << endl;
 		try
 		{
-			utilizador = BoleiasInteligentes::login(username, password);
+			utilizador = boleiasInteligentes->login(username, password);
 			showMainMenu();
 		}
 		catch (LoginException<string> e)

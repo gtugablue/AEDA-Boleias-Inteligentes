@@ -25,25 +25,25 @@ class BoleiasInteligentes
 private:
 	const string dataFolder;
 	static const string ficheiroCombustiveis;
-	static const string ficheiroParticulares;
-	static const string ficheiroEmpresas;
-	vector<Combustivel*> combustiveis;
+	static const string ficheiroMembros;
+	static const string ficheiroAnuncios;
+	vector<Combustivel> combustiveis;
 	vector<Membro*> membros;
+	vector<Anuncio*> anuncios;
+	vector<Viagem> viagens;
 	Membro* utilizadorAtual = NULL;
 public:
 	BoleiasInteligentes(const string &dataFolder);
 
 	void load();
 	void loadCombustiveis();
-	void loadParticulares();
-	void loadEmpresas();
+	void loadMembros();
 	void loadAnunciosOferta();
 	void loadAnunciosProcura();
 
 	void save();
 	void saveCombustiveis();
-	void saveParticulares();
-	void saveEmpresas();
+	void saveMembros();
 	void saveAnunciosOferta();
 	void saveAnunciosProcura();
 
@@ -55,7 +55,7 @@ public:
 	void addEmpresa(const Empresa &empresa);
 	void addParticular(const Particular &particular);
 
-	static Membro* login(const string &username, const string &password);
+	Membro* login(const string &username, const string &password);
 };
 
 template<class T>

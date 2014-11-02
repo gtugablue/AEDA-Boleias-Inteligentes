@@ -14,6 +14,7 @@ private:
 	unsigned ano;
 	unsigned cilindrada;
 	Combustivel* combustivel;
+	unsigned int lotacao;
 public:
 	Veiculo();
 	Veiculo(string marca, unsigned mes, unsigned ano, unsigned cilindrada, Combustivel* combustivel);

@@ -8,7 +8,6 @@ using namespace std;
 
 class Empresa : public Membro
 {
-	vector<Viagem> viagens;
 	string website;
 };
 

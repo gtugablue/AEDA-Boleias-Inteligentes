@@ -13,9 +13,9 @@ class Anuncio
 private:
 	string titulo;
 	string descricao;
-	vector<Particular *> candidatos;
 	Preco precoTotal;
 	Viagem* viagem;
+	Membro* anunciante;
 public:
 	Anuncio(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem);
 	string getTitulo() const;

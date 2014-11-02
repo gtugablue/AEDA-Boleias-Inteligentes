@@ -1,8 +1,8 @@
 #include "../headers/BoleiasInteligentes.h"
 
-static const string ficheiroCombustiveis = "combustiveis.txt";
-static const string ficheiroParticulares = "particulares.txt";
-static const string ficheiroEmpresas = "empresas.txt";
+const string BoleiasInteligentes::ficheiroCombustiveis = "combustiveis.txt";
+const string BoleiasInteligentes::ficheiroMembros = "membros.txt";
+const string BoleiasInteligentes::ficheiroAnuncios = "anuncios.txt";
 
 BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder):
 dataFolder(dataFolder), utilizadorAtual(NULL)
@@ -13,8 +13,7 @@ dataFolder(dataFolder), utilizadorAtual(NULL)
 void BoleiasInteligentes::load()
 {
 	loadCombustiveis();
-	loadParticulares();
-	loadEmpresas();
+	loadMembros();
 }
 
 void BoleiasInteligentes::loadCombustiveis()
@@ -33,7 +32,7 @@ void BoleiasInteligentes::loadCombustiveis()
 	}
 }
 
-void BoleiasInteligentes::loadParticulares()
+/*void BoleiasInteligentes::loadMembros()
 {
 
 	int N;
@@ -70,23 +69,17 @@ void BoleiasInteligentes::loadParticulares()
 
 	}
 
-}
-
-void BoleiasInteligentes::loadEmpresas()
-{
-	//Igual ao de cima mas temos de decidir se uma empresa leva mais alguma coisa ou não.
-}
+}*/
 
 void BoleiasInteligentes::save()
 {
 	saveCombustiveis();
-	saveParticulares();
-	saveEmpresas();
+	saveMembros();
 }
 
 void BoleiasInteligentes::saveCombustiveis()
 {
-/*	fstream file;
+	/*fstream file;
 	string name;
 	float preco;
 	string filename;
@@ -98,7 +91,7 @@ void BoleiasInteligentes::saveCombustiveis()
 	}*/
 }
 
-void BoleiasInteligentes::saveParticulares()
+void BoleiasInteligentes::saveMembros()
 {
 	/*fstream file;
 	string filename, nome, utilizador, password, marca, name;
@@ -122,11 +115,6 @@ void BoleiasInteligentes::saveParticulares()
 	}*/
 
 
-}
-
-void BoleiasInteligentes::saveEmpresas()
-{
-	// O mesmo problema dos loads
 }
 
 Coordenadas BoleiasInteligentes::criarCoordenadas()

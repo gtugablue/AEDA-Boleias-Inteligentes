@@ -13,9 +13,10 @@ using namespace std;
 class Menu
 {
 private:
+	BoleiasInteligentes* boleiasInteligentes;
 	Membro* utilizador;
 public:
-	Menu();
+	Menu(BoleiasInteligentes* boleiasInteligentes);
 
 	static string readString();
 	static string readPassword();
