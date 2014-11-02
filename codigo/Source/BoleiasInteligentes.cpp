@@ -52,6 +52,8 @@ unsigned mes, ano, cilindrada;
 file.open(ficheiroMembros);
 bool empresa;
 
+file >> N;
+
 for (size_t i = 0; i < N; ++i)
 {
 	cin >> empresa;
@@ -92,26 +94,7 @@ void BoleiasInteligentes::saveCombustiveis()
 
 void BoleiasInteligentes::saveMembros()
 {
-	/*fstream file;
-	string filename, nome, utilizador, password, marca, name;
-	unsigned mes, ano, cilindrada;
-	float preco;
-	int N;
-
-	file.open(filename);
-	while (!file.eof())
-	{
-	file << nome << endl;
-	file << utilizador << endl;
-	file << password << endl;
-	file << N << endl;
-	file << marca << endl;
-	file << mes << endl;
-	file << ano << endl;
-	file << cilindrada << endl;
-	file << name << endl;
-	file << preco << endl;
-	}*/
+	
 
 
 }

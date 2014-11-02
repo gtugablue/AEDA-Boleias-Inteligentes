@@ -78,6 +78,7 @@ void Membro::load()
 		getline(file, utilizador);
 		getline(file, password);
 
+
 		file >> N;
 		cin.ignore(1000, '\n');
 		for (size_t i = 0; i < N; ++i)
