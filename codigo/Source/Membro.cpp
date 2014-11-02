@@ -27,6 +27,8 @@ string Membro::getPassword()const
 	return password;
 }
 
+
+
 void Membro::setNome(string &nome)
 {
 	this->nome=nome;
@@ -81,7 +83,6 @@ void Membro::edit()
 
 void Membro::load()
 {
-	Veiculo veiculo;
 	int N;
 	int i = 0;
 	fstream file;
@@ -99,6 +100,7 @@ void Membro::load()
 		cin.ignore(1000, '\n');
 		for (size_t i = 0; i < N; ++i)
 		{
+			Veiculo veiculo;
 			veiculo.load();
 			veiculos.push_back(veiculo);
 
@@ -106,4 +108,22 @@ void Membro::load()
 
 	}
 
+}
+
+void Membro::save(const string &filename)
+{
+	fstream file;
+	file.open(filename);
+	file << getNome() << endl;
+	file << getUtilizador() << endl;
+	file << getPassword() << endl;
+	for (size_t i = 0; i < veiculos.size(); i++)
+	{
+		file << veiculos.at(i).getMarca() << endl;
+		file << veiculos.at(i).getMes() << endl;
+		file << veiculos.at(i).getAno() << endl;
+		file << veiculos.at(i).getCilindrada() << endl;
+		file << veiculos.at(i).getCombustivel()->getNome() << endl;
+		file << veiculos.at(i).getCombustivel()->getPreco() << endl;
+	}
 }

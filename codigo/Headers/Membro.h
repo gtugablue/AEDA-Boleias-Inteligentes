@@ -29,6 +29,7 @@ public:
 	void setVeiculos(const vector<Veiculo> &veiculo);
 	void addveiculo(Veiculo v);
 	void load();
+	void save(const string &file);
 	virtual void signup();
 	virtual void edit();
 
