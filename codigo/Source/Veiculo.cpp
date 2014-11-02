@@ -1,5 +1,10 @@
 #include "../headers/Veiculo.h"
 
+Veiculo::Veiculo()
+{
+
+}
+
 Veiculo::Veiculo(string marca, unsigned mes, unsigned ano,unsigned cilindrada, Combustivel* combustivel)
 {
 	this->marca = marca;
