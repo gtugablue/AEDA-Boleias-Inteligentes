@@ -1,0 +1,49 @@
+#include "../Headers/InputUtils.h"
+
+string InputUtils::readString()
+{
+	string cenas;
+	getline(cin, cenas);
+	return cenas;
+}
+
+string InputUtils::readPassword()
+{
+	string password;
+	char c;
+	while ((c = _getch()) != '\r')
+	{
+		if (c == '\b')
+		{
+			cout << '\b' << '\b';
+		}
+		else
+		{
+			password += c;
+			cout << '*';
+		}
+	}
+	return password;
+}
+
+int InputUtils::readDigit(unsigned from, unsigned to)
+{
+	unsigned char c;
+
+	do
+	{
+		c = _getch();
+	} while (!isdigit(c) || c < ('0' + from) || c >('0' + to));
+	return c - '0';
+}
+
+bool InputUtils::readYesOrNo()
+{
+	char c;
+
+	do
+	{
+		c = _getch();
+	} while (c != 'y' && c != 'n');
+	return c == 'y';
+}

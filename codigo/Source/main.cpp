@@ -7,7 +7,6 @@ using namespace std;
 int main()
 {
 	BoleiasInteligentes boleiasInteligentes("data/");
-	Menu menu(&boleiasInteligentes);
-	menu.showLoginMenu();
+	boleiasInteligentes.start();
 	return 0;
 }

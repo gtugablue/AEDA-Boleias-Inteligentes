@@ -10,15 +10,23 @@ dataFolder(dataFolder), utilizadorAtual(NULL)
 
 }
 
+void BoleiasInteligentes::start()
+{
+	load();
+	showLoginMenu();
+}
+
 void BoleiasInteligentes::load()
 {
 	loadCombustiveis();
 	//loadMembros();
+	// APAGAR A PROXIMA LINHA
+	membros.push_back(new Membro("Gustavo", "gtugablue", "123"));
 }
 
 void BoleiasInteligentes::loadCombustiveis()
 {
-	string nome;
+	/*string nome;
 	float n;
 	string filename;
 	fstream file;
@@ -29,7 +37,7 @@ void BoleiasInteligentes::loadCombustiveis()
 		getline(file, nome);
 		file >> n;
 
-	}
+	}*/
 }
 
 /*void BoleiasInteligentes::loadMembros()
@@ -195,4 +203,102 @@ Membro* BoleiasInteligentes::login(const string &username, const string &passwor
 		}
 	}
 	throw LoginException<string>("Username inexistente.");
+}
+
+void BoleiasInteligentes::showMenu(vector<string> itens)
+{
+	for (size_t i = 0; i < itens.size(); ++i)
+	{
+		cout << i << ". " << itens[i] << endl;
+	}
+	return;
+}
+
+void BoleiasInteligentes::showLoginMenu()
+{
+	vector<string> items =
+	{
+		"Login",
+		"Sign up"
+	};
+	showMenu(items);
+	int n = InputUtils::readDigit(0, items.size() - 1);
+
+	switch (n)
+	{
+	case 0:	// Login
+	{
+		clearScreen();
+		cout << "Username: ";
+		string username = InputUtils::readString();
+		cout << "Password: ";
+		string password = InputUtils::readPassword();
+		cout << endl;
+		try
+		{
+			login(username, password);
+			clearScreen();
+			showMainMenu();
+		}
+		catch (LoginException<string> e)
+		{
+			cout << e.info << endl;
+			pause();
+			clearScreen();
+			return showLoginMenu();
+		}
+		return;
+	}
+	case 1:	// Sign up
+	{
+		cout << "Empresa? (y/n)";
+		Membro* membro;
+		if (InputUtils::readYesOrNo())
+		{
+			cout << endl;
+			membro = new Empresa();
+		}
+		else
+		{
+			cout << endl;
+			membro = new Particular();
+		}
+		membro->signup();
+		membros.push_back(membro);
+		clearScreen();
+		cout << "Conta criada com sucesso!" << endl;
+		pause();
+		clearScreen();
+		showLoginMenu();
+		return;
+
+	}
+	default: // ERRO
+		return;
+	}
+}
+
+void BoleiasInteligentes::showMainMenu()
+{
+	vector<string> items =
+	{
+		"Editar conta",
+		"Anuncios",
+		"Veiculos",
+		"Logout"
+	};
+	showMenu(items);
+	int n = InputUtils::readDigit(0, items.size() - 1);
+	// TODO
+	return;
+}
+
+void BoleiasInteligentes::clearScreen() const
+{
+	system("CLS");
+}
+
+void BoleiasInteligentes::pause() const
+{
+	system("pause");
 }

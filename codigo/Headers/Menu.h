@@ -12,9 +12,6 @@ using namespace std;
 
 class Menu
 {
-private:
-	BoleiasInteligentes* boleiasInteligentes;
-	Membro* utilizador;
 public:
 	Menu(BoleiasInteligentes* boleiasInteligentes);
 

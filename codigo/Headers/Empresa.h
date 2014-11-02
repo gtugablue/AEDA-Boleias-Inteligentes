@@ -4,11 +4,16 @@
 #include "Membro.h"
 #include "Viagem.h"
 #include <vector>
+
 using namespace std;
 
 class Empresa : public Membro
 {
 	string website;
+public:
+	Empresa();
+	Empresa(const string &nome, const string &utilizador, const string &password, const string &website);
+	void signup();
 };
 
 #endif

@@ -17,6 +17,7 @@
 #include "Particular.h"
 #include "Empresa.h"
 #include <algorithm>
+#include "InputUtils.h"
 
 using namespace std;
 
@@ -34,6 +35,8 @@ private:
 	Membro* utilizadorAtual = NULL;
 public:
 	BoleiasInteligentes(const string &dataFolder);
+
+	void start();
 
 	void load();
 	void loadCombustiveis();
@@ -56,6 +59,20 @@ public:
 	void addParticular(const Particular &particular);
 
 	Membro* login(const string &username, const string &password);
+
+
+	// MENU
+
+	void showMenu(vector<string> itens);
+	void showLoginMenu();
+	void showMainMenu();
+
+	void showAnuncios();
+	void showVehicles();
+	void showVehicleInfo();
+
+	void clearScreen() const;
+	void pause() const;
 };
 
 template<class T>

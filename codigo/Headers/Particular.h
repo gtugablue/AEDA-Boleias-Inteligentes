@@ -13,10 +13,12 @@ class Particular : public Membro
 private:
 	//Data dataNascimento;
 public:
+	Particular();
 	Particular(string nome, string utilizador, string password);
 	//Particular(Data dataNascimento);
 	//Data getDataNascimento() const;
 	//Data setDataNascimento(const Data &data);
+	//void signup();	COMENTADO PORQUE FAZ O MESMO QUE O MEMBRO::SIGNUP()!!!
 };
 
 #endif
