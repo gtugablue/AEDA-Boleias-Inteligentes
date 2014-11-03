@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include<fstream>
 
 using namespace std;
 
@@ -25,6 +26,7 @@ public:
 	void show() const;
 	float calcularTotal() const;
 	void criar();
+	void load();
 };
 
 #endif

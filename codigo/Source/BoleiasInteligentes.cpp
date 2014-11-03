@@ -3,6 +3,7 @@
 const string BoleiasInteligentes::ficheiroCombustiveis = "combustiveis.txt";
 const string BoleiasInteligentes::ficheiroMembros = "membros.txt";
 const string BoleiasInteligentes::ficheiroAnuncios = "anuncios.txt";
+const string BoleiasInteligentes::ficheiroPrecos = "precos.txt";
 
 BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder) :
 dataFolder(dataFolder), utilizadorAtual(NULL)

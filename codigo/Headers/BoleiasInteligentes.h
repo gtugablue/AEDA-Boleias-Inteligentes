@@ -30,6 +30,7 @@ private:
 	static const string ficheiroCombustiveis;
 	static const string ficheiroMembros;
 	static const string ficheiroAnuncios;
+	static const string ficheiroPrecos;
 	vector<Combustivel> combustiveis;
 	vector<Membro*> membros;
 	vector<Anuncio*> anuncios;
@@ -49,6 +50,7 @@ public:
 	void loadMembros();
 	void loadAnunciosOferta();
 	void loadAnunciosProcura();
+	void loadPrecos();
 
 	void save();
 	void saveCombustiveis();
