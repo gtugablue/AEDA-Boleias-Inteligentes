@@ -22,3 +22,8 @@ void Particular::showparticulares()
 		veiculos.at(i).showVeiculo();
 	}
 }
+
+void Particular::signup()
+{
+	Membro::signup();
+}

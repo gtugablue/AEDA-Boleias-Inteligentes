@@ -5,7 +5,7 @@
 #include <vector>
 #include "Veiculo.h"
 #include <iostream>
-#include<fstream>
+#include <fstream>
 #include "InputUtils.h"
 
 using namespace std;

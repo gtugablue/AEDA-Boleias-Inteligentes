@@ -19,7 +19,7 @@ public:
 	//Particular(Data dataNascimento);
 	//Data getDataNascimento() const;
 	//Data setDataNascimento(const Data &data);
-	//void signup();	COMENTADO PORQUE FAZ O MESMO QUE O MEMBRO::SIGNUP()!!!
+	void signup();
 };
 
 #endif

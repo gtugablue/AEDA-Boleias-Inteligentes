@@ -80,11 +80,3 @@ void Anuncio::show() const
 	cout << "Descricao: " << descricao << endl;
 	cout << "Anunciante: " << anunciante->getNome() << endl;
 }
-
-void Anuncio::criar(Membro* utilizadorAtual)
-{
-	cout << "Insira o titulo: ";
-	getline(cin, titulo);
-	cout << "Insira uma descricao: ";
-	getline(cin, descricao);
-}

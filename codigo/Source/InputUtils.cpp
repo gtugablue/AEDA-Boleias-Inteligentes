@@ -37,13 +37,13 @@ int InputUtils::readDigit(unsigned from, unsigned to)
 	return c - '0';
 }
 
-bool InputUtils::readYesOrNo()
+bool InputUtils::readYesOrNo(unsigned char yes, unsigned char no)
 {
 	char c;
 
 	do
 	{
 		c = _getch();
-	} while (c != 'y' && c != 'n');
-	return c == 'y';
+	} while (c != yes && c != no);
+	return c == yes;
 }

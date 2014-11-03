@@ -234,7 +234,7 @@ void BoleiasInteligentes::showLoginMenu()
 		clearScreen();
 		cout << "Empresa? (y/n)";
 		Membro* membro;
-		if (InputUtils::readYesOrNo())
+		if (InputUtils::readYesOrNo('y', 'n'))
 		{
 			cout << endl;
 			membro = new Empresa();
@@ -257,7 +257,7 @@ void BoleiasInteligentes::showLoginMenu()
 	{
 		clearScreen();
 		cout << "Tem a certeza que pretende sair (y/n)?";
-		if (InputUtils::readYesOrNo())
+		if (InputUtils::readYesOrNo('y', 'n'))
 		{
 			cout << endl;
 			return;
@@ -302,7 +302,7 @@ void BoleiasInteligentes::showMainMenu()
 	{
 		clearScreen();
 		cout << "Tem a certeza que pretende fazer logout (y/n)?";
-		if (InputUtils::readYesOrNo())
+		if (InputUtils::readYesOrNo('y', 'n'))
 		{
 			utilizadorAtual = NULL;
 		}
@@ -327,7 +327,11 @@ void BoleiasInteligentes::showAnunciosMenu()
 	{
 	case 0: // Criar anuncio
 	{
-		// TODO
+		if (dynamic_cast<Particular*>(utilizadorAtual) != NULL)
+		{
+			// Particular
+			cout << "Que tipo de anuncio pretende criar ('y' para oferta e 'n' para procura)?";
+		}
 	}
 	case 1: // Ver anuncios
 	{
