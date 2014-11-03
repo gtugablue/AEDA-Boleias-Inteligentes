@@ -112,12 +112,78 @@ void Veiculo::criar()
 	getline(cin, marca);
 	cout << "Introduza o modelo: " << endl;
 	getline(cin, modelo);
-	cout << "Introduza o ano: " << endl;
-	cin >> ano;
-	cout << "Introduza o mes: " << endl;
-	cin >> mes;
-	cout << "Introduza a cilindrada: " << endl;
-	cin >> cilindrada;
+	while (1)
+	{
+		try
+		{
+			cout << "Introduza o ano: ";
+			if (!(cin >> ano))
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw InvalidInputException<string>("Insira um inteiro");
+			}
+			cin.ignore();
+			break;
+		}
+		catch (InvalidInputException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+
+	while (1)
+	{
+		try
+		{
+			cout << "Insira o mes: ";
+			if (!(cin >> mes))
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw InvalidInputException<string>("Insira um inteiro");
+			}
+			else if (mes < 0 || mes > 12)
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw VeiculoInvalidaException<string>("Insira um valor igual ou inferior a 12");
+			}
+			cin.ignore(1000, '\n');
+			break;
+		}
+		catch (InvalidInputException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+		catch (VeiculoInvalidaException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+
+	while (1)
+	{
+		try
+		{
+			cout << "Introduza o ano: ";
+			if (!(cin >> cilindrada))
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw InvalidInputException<string>("Insira um inteiro");
+			}
+			cin.ignore();
+			break;
+		}
+		catch (InvalidInputException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+	
+
+
 }
 
 void Veiculo::editar()

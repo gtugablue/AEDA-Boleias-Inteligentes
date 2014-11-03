@@ -55,8 +55,73 @@ float Preco::calcularTotal() const
 
 void Preco::criar()
 {
-	// TODO
-	cout << "Preco goes here" << endl;
+	string nome;
+	float preco;
+	pair<string, float>despesas;
+	while (1)
+	{
+		try
+		{
+			cout << "Insira o preco do combustivel" << endl;
+			if (!(cin >> combustivel))
+			{
+				throw InvalidInputException<string>("Insira um float");
+			}
+			cin.ignore();
+			break;
+		}
+		catch (InvalidInputException<string>e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+	while (1)
+	{
+		try
+		{
+			cout << "Insira o preco do desgaste" << endl;
+			if (!(cin >> desgaste))
+			{
+				throw InvalidInputException<string>("Insira um float");
+			}
+			cin.ignore();
+			break;
+		}
+		catch (InvalidInputException<string>e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+
+	while (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Introduza o nome da sua despesa" << endl;
+		getline(cin, nome);
+		despesas.first = nome;
+		while (1)
+
+		{
+			try
+			{
+				cout << "Insira o preco da sua despesa" << endl;
+				if (!(cin >> preco))
+				{
+					throw InvalidInputException<string>("Insira um float");
+				}
+				cin.ignore();
+				break;
+			}
+			catch (InvalidInputException<string>e)
+			{
+				cout << "Erro: " << e.info << endl << endl;
+			}
+		}
+		despesas.second = preco;
+		outrasDespesas.push_back(despesas);
+
+
+
+	}
 }
 
 void Preco::load(ifstream &file)

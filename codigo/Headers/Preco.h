@@ -5,6 +5,7 @@
 #include <string>
 #include <iostream>
 #include<fstream>
+#include "InputUtils.h"
 
 using namespace std;
 
