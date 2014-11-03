@@ -512,19 +512,29 @@ void BoleiasInteligentes::showVehicles()
 	}
 }
 
-void BoleiasInteligentes::apagarViagem(Viagem viagem)
+void BoleiasInteligentes::apagarViagem(Viagem* viagem)
 {
-	if (viagem.getCondutor() != NULL)
-	{
-		for (size_t i = 0; i < viagens.size(); i++)
-		{
-			if (viagens.at(i).getCondutor()->getNome() == viagem.getCondutor()->getNome())
-			{
-				viagens.erase(viagens.begin() + i);
-			}
-		}
-	}
-	else
-		//completar esta parte
+	
 }
 
+void BoleiasInteligentes::apagarMembro(Membro * membro)
+{
+	for (size_t i = 0; i < membros.size(); i++)
+	{
+		if (membros.at(i)->getNome() == membro->getNome())
+		{
+			membros.erase(membros.begin() + i);
+		}
+	}
+}
+
+void BoleiasInteligentes::apagarCombustivel(Combustivel combustivel)
+{
+	for (size_t i = 0; i < combustiveis.size(); i++)
+	{
+		if (combustiveis.at(i).getNome() == combustivel.getNome())
+		{
+			combustiveis.erase(combustiveis.begin() + i);
+		}
+	}
+}
