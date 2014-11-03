@@ -75,6 +75,11 @@ bool Data::operator< (const Data &data)const
 		return false;
 }
 
+void Data::load()
+{
+	
+}
+
 void Data::criar()
 {
 	while (1)

@@ -1,5 +1,10 @@
 #include "../headers/Preco.h"
 
+Preco::Preco()
+{
+
+}
+
 Preco::Preco(float combustivel, float desgaste, const vector<pair<string, float>> &outrasDespesas)
 {
 	this->combustivel = combustivel;

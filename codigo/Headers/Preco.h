@@ -15,6 +15,7 @@ private:
 	float desgaste;
 	vector<pair<string, float>> outrasDespesas;
 public:
+	Preco();
 	Preco(float combustivel, float desgaste, const vector<pair<string, float>> &outrasDespesas);
 	void showDespesas() const;
 	float getCombustivel() const;

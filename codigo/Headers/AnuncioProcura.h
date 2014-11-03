@@ -9,7 +9,6 @@ class AnuncioProcura: public Anuncio
 {
 private:
 	vector<Membro*> condutoresCandidatos;
-	vector<Membro*> passageiros;
 public:
 	AnuncioProcura();
 	AnuncioProcura(Particular* anunciante);

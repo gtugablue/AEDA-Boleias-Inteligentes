@@ -5,7 +5,7 @@ AnuncioOferta::AnuncioOferta()
 	 
 }
 
-AnuncioOferta::AnuncioOferta(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Data &dataInicio, const Data &dataFim, Preco* preco):
+AnuncioOferta::AnuncioOferta(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Data &dataInicio, const Data &dataFim, Preco preco):
 Anuncio(titulo, descricao, origem, destino, dataInicio, dataFim)
 {
 	this->preco = preco;
@@ -14,7 +14,7 @@ Anuncio(titulo, descricao, origem, destino, dataInicio, dataFim)
 void AnuncioOferta::criar()
 {
 	Anuncio::criar();
-	preco->criar();
+	preco.criar();
 }
 
 void AnuncioOferta::editar()
