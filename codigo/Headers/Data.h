@@ -21,10 +21,11 @@ public:
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);
 	bool operator < (const Data &data)const;
-	void show();
 	void criar();
 	void editar();
 	bool isBissexto() const;
+
+	friend ostream& operator<<(ostream &os, const Data &data);
 };
 
 template<class T>

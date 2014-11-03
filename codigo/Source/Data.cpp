@@ -75,13 +75,6 @@ bool Data::operator< (const Data &data)const
 		return false;
 }
 
-void Data::show()
-{
-	cout << "Data: " << endl;
-	cout << endl;
-	cout << dia << "/" << mes << "/" << ano;
-}
-
 void Data::criar()
 {
 	while (1)
@@ -176,4 +169,9 @@ bool Data::isBissexto() const
 	else {
 		return false;
 	}
+}
+
+ostream& operator<<(ostream &os, const Data &data)
+{
+	return os << data.dia << "/" << data.mes << "/" << data.ano;
 }

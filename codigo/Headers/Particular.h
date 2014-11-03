@@ -11,14 +11,11 @@ using namespace std;
 class Particular : public Membro
 {
 private:
-	//Data dataNascimento;
+	Data dataNascimento;
 public:
 	Particular();
 	Particular(string nome, string utilizador, string password);
 	void show();
-	//Particular(Data dataNascimento);
-	//Data getDataNascimento() const;
-	//Data setDataNascimento(const Data &data);
 	void signup();
 };
 
