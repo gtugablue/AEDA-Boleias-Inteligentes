@@ -115,7 +115,7 @@ void BoleiasInteligentes::addParticular(const Particular &particular)
 	membros.push_back(new Particular(particular));
 }
 
-vector<AnuncioOferta*> BoleiasInteligentes::getAnunciosOferta() const
+vector<AnuncioOferta *> BoleiasInteligentes::getAnunciosOferta() const
 {
 	vector<AnuncioOferta*> anunciosOferta;
 	for (size_t i = 0; i < anuncios.size(); ++i)
@@ -128,7 +128,7 @@ vector<AnuncioOferta*> BoleiasInteligentes::getAnunciosOferta() const
 	return anunciosOferta;
 }
 
-vector<AnuncioProcura*> BoleiasInteligentes::getAnunciosProcura() const
+vector<AnuncioProcura *> BoleiasInteligentes::getAnunciosProcura() const
 {
 	vector<AnuncioProcura*> anunciosProcura;
 	for (size_t i = 0; i < anuncios.size(); ++i)
@@ -141,7 +141,7 @@ vector<AnuncioProcura*> BoleiasInteligentes::getAnunciosProcura() const
 	return anunciosProcura;
 }
 
-vector<Anuncio*> BoleiasInteligentes::getAnunciosByMembro(Membro* membro) const
+vector<Anuncio *> BoleiasInteligentes::getAnunciosByMembro(Membro* membro) const
 {
 	vector<Anuncio *> anunciosMembro;
 	for (size_t i = 0; i < anuncios.size(); ++i)
@@ -152,6 +152,19 @@ vector<Anuncio*> BoleiasInteligentes::getAnunciosByMembro(Membro* membro) const
 		}
 	}
 	return anunciosMembro;
+}
+
+vector<Boleia *> BoleiasInteligentes::getBoleiasByMembro(Membro* membro)
+{
+	vector<Boleia *> boleiasMembro;
+	for (size_t i = 0; i < boleias.size(); ++i)
+	{
+		if (boleias[i].isMembroInBoleia(membro))
+		{
+			boleiasMembro.push_back(&boleias[i]);
+		}
+	}
+	return boleiasMembro;
 }
 
 Membro* BoleiasInteligentes::login(const string &username, const string &password)
@@ -554,7 +567,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 	vector<string> items =
 	{
 		"Converter anuncio em boleia",
-		"Ver boleias",
+		"Ver minhas boleias",
 		"Editar boleias",
 		"Voltar"
 	};
@@ -595,9 +608,28 @@ void BoleiasInteligentes::showBoleiasMenu()
 			cout << "Erro: " << e.info << endl;
 		}
 	}
-	case 1: // Ver boleias
+	case 1: // Ver minhas boleias
 	{
-		// TODO
+		try
+		{
+			vector<Boleia *> minhasBoleias;
+			int input = showList(getBoleiasByMembro(utilizadorAtual));
+			if (input == -1)
+			{
+				return showBoleiasMenu();
+			}
+			else
+			{
+				clearScreen();
+				minhasBoleias[input]->show();
+				pause();
+				clearScreen();
+			}
+		}
+		catch (EmptyException<string> e)
+		{
+			cout << "Erro: " << e.info << endl;
+		}
 	}
 	case 2: // Editar boleias
 	{

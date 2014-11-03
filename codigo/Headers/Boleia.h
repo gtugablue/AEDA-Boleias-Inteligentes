@@ -5,6 +5,7 @@
 #include "Veiculo.h"
 #include "Particular.h"
 #include "Data.h"
+#include "Membro.h"
 
 using namespace std;
 
@@ -23,13 +24,14 @@ public:
 	Boleia(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim);
 	Membro* getCondutor() const;
 	Veiculo* getVeiculo() const;
-	vector<Particular*> getPassageiros() const;
+	vector<Particular *> getPassageiros() const;
 	void setCondutor(Membro* condutor);
 	void setVeiculo(Veiculo* veiculo);
 	void adicionarPassageiro(Particular* passageiro);
 	void removerPassageiro(Particular* passageiro);
-	void showViagem();
-	void criaViagem();
+	bool isMembroInBoleia(Membro* membro) const;
+	void show();
+	void cria();
 };
 
 #endif

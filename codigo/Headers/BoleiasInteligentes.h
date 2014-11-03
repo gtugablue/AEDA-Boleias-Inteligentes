@@ -60,9 +60,10 @@ public:
 
 	void addEmpresa(const Empresa &empresa);
 	void addParticular(const Particular &particular);
-	vector<AnuncioOferta*> getAnunciosOferta() const;
-	vector<AnuncioProcura*> getAnunciosProcura() const;
-	vector<Anuncio*> getAnunciosByMembro(Membro* membro) const;
+	vector<AnuncioOferta *> getAnunciosOferta() const;
+	vector<AnuncioProcura *> getAnunciosProcura() const;
+	vector<Anuncio *> getAnunciosByMembro(Membro* membro) const;
+	vector<Boleia *> getBoleiasByMembro(Membro* membro);
 
 	Membro* login(const string &username, const string &password);
 

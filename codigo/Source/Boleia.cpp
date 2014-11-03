@@ -40,7 +40,23 @@ vector<Particular*>Boleia::getPassageiros() const
 	return  passageiros;
 }
 
-void Boleia::showViagem()
+bool Boleia::isMembroInBoleia(Membro* membro) const
+{
+	if (condutor == membro)
+	{
+		return true;
+	}
+	for (size_t i = 0; i < passageiros.size(); ++i)
+	{
+		if (passageiros[i] == membro)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+void Boleia::show()
 {
 	cout << "Boleia" << endl;
 	cout << endl;
@@ -60,7 +76,7 @@ void Boleia::showViagem()
 
 }
 
-void Boleia::criaViagem()
+void Boleia::cria()
 {
 	if (condutor != NULL)
 	{
