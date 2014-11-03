@@ -433,6 +433,20 @@ void BoleiasInteligentes::showAnunciosMenu()
 	return;
 }
 
+void BoleiasInteligentes::showVeiculosMenu()
+{
+	clearScreen();
+	vector<string> items =
+	{
+		"Criar veiculo",
+		"Ver veiculos",
+		"Editar veiculo",
+		"Voltar"
+	};
+	showMenu(items);
+	int n = InputUtils::readDigit(0, items.size() - 1);
+}
+
 template<class T>
 int BoleiasInteligentes::showList(const vector<T> &v, int page) const
 {

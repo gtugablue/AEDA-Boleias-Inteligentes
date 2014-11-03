@@ -65,11 +65,11 @@ public:
 
 
 	// MENU
-
 	void showMenu(vector<string> itens);
 	void showLoginMenu();
 	void showMainMenu();
 	void showAnunciosMenu();
+	void showVeiculosMenu();
 
 	template<class T>
 	int showList(const vector<T> &v, int page) const;
