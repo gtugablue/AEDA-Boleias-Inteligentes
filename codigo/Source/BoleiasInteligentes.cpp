@@ -20,6 +20,8 @@ void BoleiasInteligentes::start()
 void BoleiasInteligentes::load()
 {
 	loadCombustiveis();
+	combustiveis[0].show();
+	pause();
 	//loadMembros();
 	// APAGAR A PROXIMA LINHA
 	membros.push_back(new Particular("Gustavo", "gtugablue", "123"));
@@ -32,9 +34,8 @@ void BoleiasInteligentes::loadCombustiveis()
 	fstream file;
 	file.open(ficheiroCombustiveis);
 
-	while (!file.eof())
+	while (getline(file, nome))
 	{
-		getline(file, nome);
 		file >> n;
 		Combustivel p = Combustivel(nome, n);
 		combustiveis.push_back(p);
