@@ -265,6 +265,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 	{
 		"Criar anuncio",
 		"Ver anuncios",
+		"Editar anuncio",
 		"Voltar"
 	};
 	showMenu(items);
@@ -338,7 +339,45 @@ void BoleiasInteligentes::showAnunciosMenu()
 			return showAnunciosMenu();
 		}
 	}
-	case 2: // Voltar
+	case 2: // Editar anuncio
+	{
+		vector<Anuncio*> meusAnuncios;
+		for (size_t i = 0; i < anuncios.size(); ++i)
+		{
+			if (anuncios[i]->getAnunciante() == utilizadorAtual)
+			{
+				meusAnuncios.push_back(anuncios[i]);
+			}
+		}
+		int input = showList(meusAnuncios, 0);
+		if (input == -1)
+		{
+			return showAnunciosMenu();
+		}
+		else
+		{
+			clearScreen();
+			meusAnuncios[input]->show();
+			pause();
+			cout << "Pretende apagar este anuncio (y/n)?";
+			if (InputUtils::readYesOrNo('y', 'n'))
+			{
+				apagarAnuncio(meusAnuncios[input]);
+				return showAnunciosMenu();
+			}
+			cout << "Pretende editar este anuncio (y/n)?";
+			if (InputUtils::readYesOrNo('y', 'n'))
+			{
+				meusAnuncios[input]->editar();
+				clearScreen();
+				cout << "Anuncio editado com sucesso." << endl;
+				return showAnunciosMenu();
+			}
+			pause();
+			return showAnunciosMenu();
+		}
+	}
+	case 3: // Voltar
 	{
 		clearScreen();
 		return showMainMenu();
@@ -412,4 +451,9 @@ void BoleiasInteligentes::clearScreen() const
 void BoleiasInteligentes::pause() const
 {
 	system("pause");
+}
+
+void BoleiasInteligentes::apagarAnuncio(Anuncio* anuncio)
+{
+	// TODO
 }

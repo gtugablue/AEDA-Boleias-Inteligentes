@@ -163,6 +163,11 @@ void Data::criar()
 	}
 }
 
+void Data::editar()
+{
+	return criar();
+}
+
 bool Data::isBissexto() const
 {
 	if (ano % 400 == 0 || (ano % 4 == 0) && (ano % 100 != 0)) {

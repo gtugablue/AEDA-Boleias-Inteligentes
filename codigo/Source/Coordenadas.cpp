@@ -87,3 +87,8 @@ void Coordenadas::criar()
 		}
 	}
 }
+
+void Coordenadas::editar()
+{
+	return criar();
+}

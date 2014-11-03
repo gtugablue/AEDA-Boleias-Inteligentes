@@ -17,6 +17,12 @@ void AnuncioOferta::criar()
 	preco->criar();
 }
 
+void AnuncioOferta::editar()
+{
+	Anuncio::editar();
+	
+}
+
 ostream& operator<<(ostream &os, const AnuncioOferta &anuncio)
 {
 	return os << anuncio.getTitulo();

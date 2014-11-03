@@ -18,6 +18,7 @@ public:
 	Particular* getAnunciante() const;
 	void criar();
 	friend ostream& operator<<(ostream &os, const AnuncioProcura &anuncio);
+	void editar();
 };
 
 #endif

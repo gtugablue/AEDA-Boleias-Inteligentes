@@ -23,6 +23,7 @@ public:
 	bool operator < (const Data &data)const;
 	void show();
 	void criar();
+	void editar();
 	bool isBissexto() const;
 };
 

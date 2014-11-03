@@ -30,6 +30,11 @@ void Anuncio::setDescricao(const string &descricao)
 	this->descricao = descricao;
 }
 
+Membro* Anuncio::getAnunciante() const
+{
+	return anunciante;
+}
+
 void Anuncio::setAnunciante(Membro* membro)
 {
 	anunciante = membro;
@@ -83,6 +88,42 @@ void Anuncio::criar()
 	dataInicio.criar();
 	cout << endl << "Data de fim: " << endl;
 	dataFim.criar();
+}
+
+void Anuncio::editar()
+{
+	cout << "Pretende editar o titulo (y/n)?";
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Introduza o novo titulo: ";
+		getline(cin, titulo);
+	}
+	cout << "Pretende editar a descricao (y/n)?";
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Introduza a nova descricao: ";
+		getline(cin, descricao);
+	}
+	cout << "Pretende editar a origem (y/n)?";
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		origem.editar();
+	}
+	cout << "Pretende editar o destino (y/n)?";
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		destino.editar();
+	}
+	cout << "Pretende editar a data de inicio (y/n)?";
+	if(InputUtils::readYesOrNo('y', 'n'))
+	{
+		dataInicio.editar();
+	}
+	cout << "Pretende editar a data de fim (y/n)?";
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		dataFim.editar();
+	}
 }
 
 ostream& operator<<(ostream &os, Anuncio* anuncio)

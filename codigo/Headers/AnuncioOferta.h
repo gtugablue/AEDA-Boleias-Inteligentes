@@ -18,6 +18,7 @@ public:
 	Membro* getAnunciante() const;
 	void criar();
 	friend ostream& operator<<(ostream &os, const AnuncioOferta &anuncio);
+	void editar();
 };
 
 #endif

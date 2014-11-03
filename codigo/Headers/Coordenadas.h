@@ -20,6 +20,7 @@ public:
 	void setLongitude(double longitude);
 	void showcoord();
 	void criar();
+	void editar();
 };
 
 #endif

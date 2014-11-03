@@ -76,6 +76,8 @@ public:
 
 	void clearScreen() const;
 	void pause() const;
+
+	void apagarAnuncio(Anuncio* anuncio);
 };
 
 template<class T>
