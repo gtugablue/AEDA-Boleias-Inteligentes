@@ -12,7 +12,8 @@ private:
 	Preco* preco;
 	vector<Particular*> passageiros;
 public:
-	AnuncioOferta(const string &titulo, const string &descricao, Preco* preco, Viagem* viagem, Membro* anunciante);
+	AnuncioOferta();
+	AnuncioOferta(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Data &dataInicio, const Data &dataFim, Preco* preco);
 	void setAnunciante(Membro* anunciante);
 	Membro* getAnunciante() const;
 };

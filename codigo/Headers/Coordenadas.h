@@ -9,6 +9,7 @@ private:
 	double latitude;
 	double longitude;
 public:
+	Coordenadas();
 	Coordenadas(const Coordenadas &coordenadas);
 	Coordenadas(double latitude, double longitude);
 	double getLatitude() const;

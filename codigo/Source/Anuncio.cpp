@@ -1,10 +1,13 @@
 #include "../headers/Anuncio.h"
 
-Anuncio::Anuncio(const string &titulo, const string &descricao, Membro* anunciante, Viagem* viagem)
+Anuncio::Anuncio()
 {
-	this->titulo = titulo;
-	this->descricao = descricao;
-	this->viagem = viagem;
+
+}
+
+Anuncio::Anuncio(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Data &dataInicio, const Data &dataFim) :
+titulo(titulo), descricao(descricao), origem(origem), destino(destino), dataInicio(dataInicio), dataFim(dataFim)
+{
 }
 
 string Anuncio::getTitulo() const
@@ -15,16 +18,6 @@ string Anuncio::getTitulo() const
 string Anuncio::getDescricao() const
 {
 	return descricao;
-}
-
-Coordenadas Anuncio::getOrigem() const
-{
-	return viagem->getLocalInicio();
-}
-
-Coordenadas Anuncio::getDestino() const
-{
-	return viagem->getLocalFim();
 }
 
 void Anuncio::setTitulo(const string &titulo)
@@ -64,19 +57,23 @@ if(candidatos[i]->getUtilizador()==candidato[i].getUtilizador())
 }
 }*/
 
-void Anuncio::setOrigem(Coordenadas &o) const
-{
-	viagem->setLocalInicio(o);
-}
-
-void Anuncio::setDestino(Coordenadas &d) const
-{
-	viagem->setLocalFim(d);
-}
-
 void Anuncio::show() const
 {
 	cout << "Titulo: " << titulo << endl;
 	cout << "Descricao: " << descricao << endl;
 	cout << "Anunciante: " << anunciante->getNome() << endl;
+}
+
+void Anuncio::criar()
+{
+	cout << "Introduza o titulo: ";
+	getline(cin, titulo);
+	cout << "Introduza uma descricao: ";
+	getline(cin, descricao);
+
+}
+
+ostream& operator<<(ostream &os, Anuncio* anuncio)
+{
+	return os << anuncio->getTitulo();
 }

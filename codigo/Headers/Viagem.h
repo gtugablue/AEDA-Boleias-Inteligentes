@@ -13,8 +13,8 @@ class Viagem
 private:
 	Membro* condutor; // NULL se ainda não existir
 	Veiculo* veiculo; // NULL se ainda não existir
-	Coordenadas localInicio;
-	Coordenadas localFim;
+	Coordenadas origem;
+	Coordenadas destino;
 	vector<Particular*> passageiros; // Número total de pessoas no veículo = passageiros + 1 (condutor)
 	Data dataInicio;
 	Data dataFim; // se for igual ao inicio é um evento
@@ -23,13 +23,9 @@ public:
 	Viagem(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim);
 	Membro* getCondutor() const;
 	Veiculo* getVeiculo() const;
-	Coordenadas getLocalInicio() const;
-	Coordenadas getLocalFim() const;
 	vector<Particular*> getPassageiros() const;
 	void setCondutor(Membro* condutor);
 	void setVeiculo(Veiculo* veiculo);
-	void setLocalInicio(const Coordenadas &localInicio);
-	void setLocalFim(const Coordenadas &localFim);
 	void adicionarPassageiro(Particular* passageiro);
 	void removerPassageiro(Particular* passageiro);
 };

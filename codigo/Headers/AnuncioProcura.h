@@ -11,6 +11,7 @@ private:
 	vector<Membro*> condutoresCandidatos;
 	vector<Membro*> passageiros;
 public:
+	AnuncioProcura();
 	AnuncioProcura(Particular* anunciante);
 	void adicionarCondutorCandidato(const Membro* condutor);
 	void setAnunciante(Particular* anunciante);

@@ -1,5 +1,9 @@
 #include "../headers/Coordenadas.h"
 
+Coordenadas::Coordenadas()
+{
+
+}
 
 Coordenadas::Coordenadas(const Coordenadas &coordenadas)
 {

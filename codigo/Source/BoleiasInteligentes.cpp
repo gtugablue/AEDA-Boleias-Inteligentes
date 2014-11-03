@@ -327,11 +327,29 @@ void BoleiasInteligentes::showAnunciosMenu()
 	{
 	case 0: // Criar anuncio
 	{
+		Anuncio* anuncio;
 		if (dynamic_cast<Particular*>(utilizadorAtual) != NULL)
 		{
 			// Particular
-			cout << "Que tipo de anuncio pretende criar ('y' para oferta e 'n' para procura)?";
+			cout << "Que tipo de anuncio pretende criar ('o' para oferta e 'o' para procura)?" << endl;
+			if (InputUtils::readYesOrNo('o', 'p'))
+			{
+				anuncio = new AnuncioOferta();
+			}
+			else
+			{
+				anuncio = new AnuncioProcura();
+			}
 		}
+		else
+		{
+			anuncio = new AnuncioOferta();
+		}
+		anuncio->criar();
+		cout << "Anuncio criado com sucesso." << endl;
+		anuncios.push_back(anuncio);
+		pause();
+		return showAnunciosMenu();
 	}
 	case 1: // Ver anuncios
 	{
@@ -356,7 +374,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 }
 
 template<class T>
-void BoleiasInteligentes::showList(const vector<T> &v, int page) const
+int BoleiasInteligentes::showList(const vector<T> &v, int page, bool selectable) const
 {
 	clearScreen();
 	if (v.size() == 0)
@@ -386,7 +404,7 @@ void BoleiasInteligentes::showList(const vector<T> &v, int page) const
 			{
 				throw PaginaInexistenteException<string>("Pagina inexistente.");
 			}
-			return showList(v, page - 1);
+			return showList(v, page - 1, selectable);
 		}
 		case 8:
 		{
@@ -394,11 +412,15 @@ void BoleiasInteligentes::showList(const vector<T> &v, int page) const
 			{
 				throw PaginaInexistenteException<string>("Pagina inexistente");
 			}
-			return showList(v, page + 1);
+			return showList(v, page + 1, selectable);
 		}
 		case 9:
 		{
-			return;
+			return -1;
+		}
+		default:	// Option selected
+		{
+			return page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE + input;
 		}
 		}
 	}

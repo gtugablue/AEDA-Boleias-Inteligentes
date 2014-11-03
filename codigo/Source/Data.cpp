@@ -1,5 +1,10 @@
 #include "../headers/Data.h"
 
+Data::Data()
+{
+	
+}
+
 Data::Data(unsigned dia, unsigned mes, unsigned ano)
 {
 	this->dia = dia;
