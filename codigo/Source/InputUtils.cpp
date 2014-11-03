@@ -15,8 +15,11 @@ string InputUtils::readPassword()
 	{
 		if (c == '\b')
 		{
-			password.pop_back();
-			cout << "\b \b";
+			if (password.size() > 0)
+			{
+				password.pop_back();
+				cout << "\b \b";
+			}
 		}
 		else
 		{
