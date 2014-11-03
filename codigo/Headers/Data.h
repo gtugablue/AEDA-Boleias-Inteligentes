@@ -2,6 +2,7 @@
 #define _DATA_H
 #include <iostream>
 #include "InputUtils.h"
+#include <fstream>
 
 using namespace std;
 
