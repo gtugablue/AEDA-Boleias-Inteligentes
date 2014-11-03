@@ -141,3 +141,15 @@ void Membro::showmembros()
 	cout << endl;
 	
 }
+
+void Membro::criaMembro()
+{
+	string name, utiliz, passw;
+	cout << "Introduza o nome do Membro" << endl;
+	getline(cin, nome);
+	cout << "Introduz o utilizador" << endl;
+	getline(cin, utiliz);
+	cout << "Introduz a password" << endl;
+	getline(cin, passw);
+
+}

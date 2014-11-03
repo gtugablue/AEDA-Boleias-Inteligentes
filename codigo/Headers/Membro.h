@@ -34,6 +34,7 @@ public:
 	virtual void signup();
 	virtual void edit();
 	void showmembros();
+	void criaMembro();
 
 	bool operator==(const Membro &membro1) const;
 };

@@ -61,3 +61,18 @@ void Viagem::showViagem()
 	dataFim.show();
 
 }
+
+void Viagem::criaViagem()
+{
+	if (condutor != NULL)
+	{
+		condutor->criaMembro();
+	}
+	veiculo->criar();
+	origem.criar();
+	destino.criar();
+	dataInicio.criar();
+	dataFim.criar();
+}
+
+

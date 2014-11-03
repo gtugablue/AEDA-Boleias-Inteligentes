@@ -29,6 +29,7 @@ public:
 	void adicionarPassageiro(Particular* passageiro);
 	void removerPassageiro(Particular* passageiro);
 	void showViagem();
+	void criaViagem();
 };
 
 #endif

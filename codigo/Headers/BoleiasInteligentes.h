@@ -82,6 +82,7 @@ public:
 	void pause() const;
 
 	void apagarAnuncio(Anuncio* anuncio);
+	void apagarViagem(Viagem viagem);
 };
 
 template<class T>

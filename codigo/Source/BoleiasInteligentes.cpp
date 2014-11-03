@@ -512,4 +512,19 @@ void BoleiasInteligentes::showVehicles()
 	}
 }
 
+void BoleiasInteligentes::apagarViagem(Viagem viagem)
+{
+	if (viagem.getCondutor() != NULL)
+	{
+		for (size_t i = 0; i < viagens.size(); i++)
+		{
+			if (viagens.at(i).getCondutor()->getNome() == viagem.getCondutor()->getNome())
+			{
+				viagens.erase(viagens.begin() + i);
+			}
+		}
+	}
+	else
+		//completar esta parte
+}
 
