@@ -17,6 +17,7 @@ public:
 	void setAnunciante(Particular* anunciante);
 	Particular* getAnunciante() const;
 	void criar();
+	friend ostream& operator<<(ostream &os, const AnuncioProcura &anuncio);
 };
 
 #endif

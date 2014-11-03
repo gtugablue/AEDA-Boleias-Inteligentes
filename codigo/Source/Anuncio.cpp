@@ -30,6 +30,11 @@ void Anuncio::setDescricao(const string &descricao)
 	this->descricao = descricao;
 }
 
+void Anuncio::setAnunciante(Membro* membro)
+{
+	anunciante = membro;
+}
+
 /*void Anuncio::adicionarCandidato(Particular* candidato)
 {
 candidatos.push_back(candidato);

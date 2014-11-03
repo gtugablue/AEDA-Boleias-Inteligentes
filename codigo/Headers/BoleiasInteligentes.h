@@ -32,6 +32,8 @@ private:
 	static const string ficheiroAnuncios;
 	vector<Combustivel> combustiveis;
 	vector<Membro*> membros;
+	vector<AnuncioProcura> anunciosProcura;
+	vector<AnuncioOferta> anunciosOferta;
 	vector<Anuncio*> anuncios;
 	vector<Viagem> viagens;
 	Membro* utilizadorAtual = NULL;

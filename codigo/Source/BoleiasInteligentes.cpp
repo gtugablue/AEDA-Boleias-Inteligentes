@@ -273,11 +273,13 @@ void BoleiasInteligentes::showAnunciosMenu()
 	{
 	case 0: // Criar anuncio
 	{
-		Anuncio* anuncio;
+		unsigned IDAnuncio;
 		if (dynamic_cast<Particular*>(utilizadorAtual) == NULL)
 		{
 			// Empresa
-			anuncio = new AnuncioOferta();
+			IDAnuncio = anunciosOferta.size();
+			anunciosOferta.push_back(AnuncioOferta());
+			anuncios.push_back(&anunciosOferta[IDAnuncio]);
 		}
 		else
 		{
@@ -285,25 +287,38 @@ void BoleiasInteligentes::showAnunciosMenu()
 			cout << "Que tipo de anuncio pretende criar ('o' para oferta e 'p' para procura)?" << endl;
 			if (InputUtils::readYesOrNo('o', 'p'))
 			{
-				anuncio = new AnuncioOferta();
+				IDAnuncio = anunciosOferta.size();
+				anunciosOferta.push_back(AnuncioOferta());
+				anuncios.push_back(&anunciosOferta[IDAnuncio]);
 			}
 			else
 			{
-				anuncio = new AnuncioProcura();
+				IDAnuncio = anunciosProcura.size();
+				anunciosProcura.push_back(AnuncioProcura());
+				anuncios.push_back(&anunciosProcura[IDAnuncio]);
 			}
 		}
-		anuncio->criar();
+		anuncios[IDAnuncio]->criar();
+		anuncios[IDAnuncio]->setAnunciante(utilizadorAtual);
 		clearScreen();
 		cout << "Anuncio criado com sucesso." << endl;
-		anuncios.push_back(anuncio);
 		pause();
 		return showAnunciosMenu();
 	}
 	case 1: // Ver anuncios
 	{
+		int input;
 		try
 		{
-			int input = showList(anuncios, 0);
+			cout << "Que tipo de anuncios pretende ver ('o' para oferta e 'p' para procura)?" << endl;
+			if (InputUtils::readYesOrNo('o', 'p'))
+			{
+				input = showList(anunciosOferta, 0);
+			}
+			else
+			{
+				input = showList(anunciosProcura, 0);
+			}
 			if (input == -1)
 			{
 				return showAnunciosMenu();
@@ -311,7 +326,9 @@ void BoleiasInteligentes::showAnunciosMenu()
 			else
 			{
 				clearScreen();
-				return anuncios[input]->show();
+				anuncios[input]->show();
+				pause();
+				return showAnunciosMenu();
 			}
 		}
 		catch (EmptyException<string> e)
@@ -324,7 +341,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 	case 2: // Voltar
 	{
 		clearScreen();
-		return showAnunciosMenu();
+		return showMainMenu();
 	}
 	}
 	return;
@@ -343,9 +360,9 @@ int BoleiasInteligentes::showList(const vector<T> &v, int page) const
 		cout << i % BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE << ". " << v[i] << endl;
 	}
 	cout << endl;
-	cout << "7. Back" << endl;
-	cout << "8. Next" << endl;
-	cout << "9. Exit" << endl;
+	cout << "7. Anterior" << endl;
+	cout << "8. Seguinte" << endl;
+	cout << "9. Sair" << endl;
 	unsigned input;
 	try
 	{

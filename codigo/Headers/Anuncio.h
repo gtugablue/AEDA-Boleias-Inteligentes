@@ -28,7 +28,7 @@ public:
 	Membro* getAnunciante() const;
 	void setTitulo(const string &titulo);
 	void setDescricao(const string &descricao);
-	void setAnunciante() const;
+	void setAnunciante(Membro* membro);
 	void calcularPrecoTotal();
 	virtual void show() const;
 	virtual void criar() = 0;
