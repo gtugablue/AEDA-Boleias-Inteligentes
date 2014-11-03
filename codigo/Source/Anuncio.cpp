@@ -136,6 +136,10 @@ void Anuncio::editar()
 
 bool Anuncio::isPronto() const
 {
+	if (condutor == NULL)
+	{
+		return false;
+	}
 	return true;
 }
 

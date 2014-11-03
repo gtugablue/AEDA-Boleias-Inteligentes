@@ -289,6 +289,9 @@ void BoleiasInteligentes::showMainMenu()
 		return showVeiculosMenu();
 	}
 	case 3: // Boleias
+	{
+		return showBoleiasMenu();
+	}
 	case 4: // Logout
 	{
 		clearScreen();
@@ -582,9 +585,15 @@ void BoleiasInteligentes::showBoleiasMenu()
 				}
 			}
 		}
+		catch (EmptyException<string> e)
+		{
+			cout << "Erro: " << e.info << endl;
+			pause();
+			return showBoleiasMenu();
+		}
 		catch (ProibidoException<string> e)
 		{
-
+			cout << "Erro: " << e.info << endl;
 		}
 	}
 	case 1: // Ver boleias

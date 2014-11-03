@@ -20,6 +20,7 @@ protected:
 	Data dataFim; // se for igual ao inicio é um evento
 	Membro* anunciante;
 	Membro* condutor;
+	Preco preco;
 public:
 	Anuncio();
 	Anuncio(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Data &dataInicio, const Data &dataFim);

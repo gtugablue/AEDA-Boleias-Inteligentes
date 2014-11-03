@@ -35,3 +35,8 @@ void Combustivel::criar()
 	cout << "Introduza o preco:" << endl;
 	cin >> preco;
 }
+
+void Combustivel::show() const
+{
+	cout << "Combustivel: " << nome << endl;
+}

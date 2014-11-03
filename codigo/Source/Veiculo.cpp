@@ -97,11 +97,7 @@ void Veiculo::show() const
 	cout << "Mes: " << mes << endl;
 	cout << "Ano: " << ano << endl;
 	cout << "Cilindrada: " << cilindrada << endl;
-	cout << endl;
-	cout << "Gasolina: " << endl;
-	cout << endl;
-	cout << "Nome: " << combustivel->getNome() << endl;
-	cout << "Preco: " << combustivel->getPreco() << endl;
+	combustivel->show();
 }
 
 void Veiculo::criar()

@@ -18,6 +18,7 @@ public:
 	string getNome() const;
 	float getPreco() const;
 	void criar();
+	void show() const;
 };
 
 #endif
