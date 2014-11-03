@@ -23,6 +23,7 @@ public:
 	string getNome() const;
 	string getUtilizador() const;
 	string getPassword() const;
+	vector<Veiculo> getVeiculos()const;
 	void setNome(string &nome) ;
 	void setUtilizador(string &utilizador);
 	void setPassword(string &password);

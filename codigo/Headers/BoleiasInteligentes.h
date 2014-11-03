@@ -38,6 +38,10 @@ private:
 public:
 	BoleiasInteligentes(const string &dataFolder);
 
+	void showmembro();
+	void showviagem();
+	
+
 	void start();
 
 	void load();

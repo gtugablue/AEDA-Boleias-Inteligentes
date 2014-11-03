@@ -22,6 +22,10 @@ string Membro::getUtilizador()const
 	return utilizador;
 }
 
+vector<Veiculo> Membro::getVeiculos()const
+{
+	return veiculos;
+}
 string Membro::getPassword()const
 {
 	return password;

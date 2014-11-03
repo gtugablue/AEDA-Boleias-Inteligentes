@@ -474,3 +474,40 @@ void BoleiasInteligentes::apagarAnuncio(Anuncio* anuncio)
 {
 	// TODO
 }
+
+void BoleiasInteligentes::showmembro()
+{
+	for (size_t i = 0; i < membros.size(); i++)
+	{
+		membros.at(i)->showmembros();
+	}
+}
+
+void BoleiasInteligentes::showviagem()
+{
+	for (size_t i = 0; i < viagens.size(); i++)
+	{
+		viagens.at(i).showViagem();
+	}
+}
+
+void BoleiasInteligentes::showAnuncios()
+{
+	for (size_t i = 0; i < anuncios.size(); i++)
+	{
+		anuncios.at(i)->show();
+	}
+}
+
+void BoleiasInteligentes::showVehicles()
+{
+	vector<Veiculo>a;
+	for (size_t i = 0; i < membros.size(); i++)
+	{
+		a = membros.at(i)->getVeiculos();
+		for (size_t j = 0; j < a.size(); j++)
+		{
+			a.at(j).showVeiculo();
+		}
+	}
+}
