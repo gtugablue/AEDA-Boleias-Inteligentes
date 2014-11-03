@@ -269,7 +269,7 @@ void BoleiasInteligentes::showMainMenu()
 	}
 	case 2: // Veiculos
 	{
-		// TODO
+		return showVeiculosMenu();
 	}
 	case 3:
 	{
@@ -446,6 +446,52 @@ void BoleiasInteligentes::showVeiculosMenu()
 	};
 	showMenu(items);
 	int n = InputUtils::readDigit(0, items.size() - 1);
+	switch (n)
+	{
+	case 0: // Criar veiculo
+	{
+		Veiculo veiculo;
+		clearScreen();
+		veiculo.criar();
+		utilizadorAtual->addVeiculo(veiculo);
+		cout << "Veiculo criado com sucesso." << endl;
+		pause();
+	}
+	case 1: // Ver veiculos
+	{
+		try
+		{
+			int input = showList(utilizadorAtual->getVeiculos(), 0);
+			if (input == -1)
+			{
+				return showVeiculosMenu();
+			}
+			else
+			{
+				clearScreen();
+				utilizadorAtual->getVeiculos()[input].show();
+				pause();
+				return showVeiculosMenu();
+			}
+		}
+		catch (EmptyException<string> e)
+		{
+			clearScreen();
+			cout << "Erro: " << e.info << endl;
+			pause();
+			return showAnunciosMenu();
+		}
+	}
+	case 2: // Editar veiculo
+	{
+		
+	}
+	case 3: // Voltar
+	{
+		clearScreen();
+		return showMainMenu();
+	}
+	}
 }
 
 template<class T>

@@ -12,6 +12,7 @@ class Veiculo
 {
 private:
 	string marca;
+	string modelo;
 	unsigned mes;
 	unsigned ano;
 	unsigned cilindrada;
@@ -33,6 +34,8 @@ public:
 	void setCombustivel(Combustivel* combustivel);
 	void show();
 	void criar();
+
+	friend ostream& operator<<(ostream &os, const Veiculo &veiculo);
 };
 
 #endif

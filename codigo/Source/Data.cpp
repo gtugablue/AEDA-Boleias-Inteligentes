@@ -114,7 +114,7 @@ void Data::criar()
 				cin.ignore(1000, '\n');
 				throw InvalidInputException<string>("Insira um inteiro");
 			}
-			else if (mes > 12)
+			else if (mes < 0 || mes > 12)
 			{
 				cin.clear();
 				cin.ignore(1000, '\n');
@@ -143,7 +143,7 @@ void Data::criar()
 				cin.ignore(1000, '\n');
 				throw InvalidInputException<string>("Insira um inteiro");
 			}
-			else if ((mes == 1 && dia > (isBissexto() ? 29 : 28)) || ((mes == 3 || mes == 5 || mes == 8 || mes == 10) && dia > 30) || dia > 31)
+			else if ((mes == 2 && dia > (isBissexto() ? 29 : 28)) || ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30) || dia > 31)
 			{
 				cin.clear();
 				cin.ignore(1000, '\n');
