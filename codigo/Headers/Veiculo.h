@@ -6,6 +6,8 @@
 #include <iostream>
 #include<fstream>
 
+#include "InputUtils.h"
+
 using namespace std;
 
 class Veiculo
@@ -37,6 +39,17 @@ public:
 	void editar();
 
 	friend ostream& operator<<(ostream &os, const Veiculo &veiculo);
+};
+
+template<class T>
+class VeiculoInvalidaException
+{
+public:
+	T info;
+	VeiculoInvalidaException(T info)
+	{
+		this->info = info;
+	}
 };
 
 #endif
