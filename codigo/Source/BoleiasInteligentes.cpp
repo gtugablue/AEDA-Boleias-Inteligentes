@@ -391,21 +391,14 @@ void BoleiasInteligentes::showAnunciosMenu()
 	}
 	case 2: // Editar anuncio
 	{
-		vector<Anuncio*> meusAnuncios;
-		for (size_t i = 0; i < anuncios.size(); ++i)
-		{
-			if (anuncios[i]->getAnunciante() == utilizadorAtual)
-			{
-				meusAnuncios.push_back(anuncios[i]);
-			}
-		}
 		try
 		{
+			vector<Anuncio*> meusAnuncios = getAnunciosByMembro(utilizadorAtual);
 			int input = showList(meusAnuncios, 0);
 			if (input == -1)
 			{
 				return showAnunciosMenu();
-			}
+			}	
 			else
 			{
 				clearScreen();
