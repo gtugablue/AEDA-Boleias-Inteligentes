@@ -134,6 +134,11 @@ void Anuncio::editar()
 	}
 }
 
+bool Anuncio::isPronto() const
+{
+	return true;
+}
+
 ostream& operator<<(ostream &os, Anuncio* anuncio)
 {
 	return os << anuncio->getTitulo();

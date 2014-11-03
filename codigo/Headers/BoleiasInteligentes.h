@@ -43,7 +43,6 @@ public:
 	void showviagem();
 	void loadAnuncios();
 	
-
 	void start();
 
 	void load();
@@ -74,7 +73,10 @@ public:
 	void showMainMenu();
 	void showAnunciosMenu();
 	void showVeiculosMenu();
+	void showBoleiasMenu();
 
+	template<class T>
+	int showList(const vector<T> &v) const;
 	template<class T>
 	int showList(const vector<T> &v, int page) const;
 
@@ -114,6 +116,17 @@ class EmptyException
 public:
 	T info;
 	EmptyException(T info)
+	{
+		this->info = info;
+	}
+};
+
+template<class T>
+class ProibidoException
+{
+public:
+	T info;
+	ProibidoException(T info)
 	{
 		this->info = info;
 	}

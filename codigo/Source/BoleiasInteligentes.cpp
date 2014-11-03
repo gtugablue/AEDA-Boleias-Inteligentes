@@ -546,6 +546,69 @@ void BoleiasInteligentes::showVeiculosMenu()
 	}
 }
 
+void BoleiasInteligentes::showBoleiasMenu()
+{
+	clearScreen();
+	vector<string> items =
+	{
+		"Converter anuncio em boleia",
+		"Ver boleias",
+		"Editar boleias",
+		"Voltar"
+	};
+	showMenu(items);
+	int n = InputUtils::readDigit(0, items.size() - 1);
+	switch (n)
+	{
+	case 0: // Converter anuncio em boleia
+	{
+		try
+		{
+			vector<Anuncio *> meusAnuncios;
+			int input = showList(getAnunciosByMembro(utilizadorAtual));
+			if (input == -1)
+			{
+				return showBoleiasMenu();
+			}
+			else
+			{
+				clearScreen();
+				meusAnuncios[input]->show();
+				pause();
+				clearScreen();
+				if (meusAnuncios[input]->getAnunciante() != utilizadorAtual)
+				{
+					throw ProibidoException<string>("Apenas o criador do anuncio pode converte-lo numa boleia.");
+				}
+			}
+		}
+		catch (ProibidoException<string> e)
+		{
+
+		}
+	}
+	case 1: // Ver boleias
+	{
+		// TODO
+	}
+	case 2: // Editar boleias
+	{
+		// TODO
+	}
+	case 3: // Voltar
+	{
+		clearScreen();
+		return showMainMenu();
+	}
+	}
+}
+
+template<class T>
+int BoleiasInteligentes::showList(const vector<T> &v) const
+{
+	return showList(v, 0);
+}
+
 template<class T>
 int BoleiasInteligentes::showList(const vector<T> &v, int page) const
 {
