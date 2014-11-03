@@ -31,7 +31,7 @@ public:
 	void setCilindrada(unsigned cilindrada);
 	void load();
 	void setCombustivel(Combustivel* combustivel);
-	void showVeiculo();
+	void show();
 	void criar();
 };
 

@@ -89,19 +89,19 @@ void Veiculo::load()
 	}
 }
 
-void Veiculo::showVeiculo()
+void Veiculo::show()
 {
 	cout << "Veiculo" << endl;
 	cout << endl;
-	cout << "Marca :   " << marca << endl;
-	cout << "Mes :     " << mes << endl;
-	cout << "Ano :     " << ano << endl;
-	cout << "Cilindrada " << cilindrada << endl;
+	cout << "Marca:   " << marca << endl;
+	cout << "Mes:     " << mes << endl;
+	cout << "Ano:     " << ano << endl;
+	cout << "Cilindrada: " << cilindrada << endl;
 	cout << endl;
-	cout << "Gasolina   " << endl;
+	cout << "Gasolina: " << endl;
 	cout << endl;
-	cout << "Nome " << combustivel->getNome() << endl;
-	cout << "Preco " << combustivel->getPreco() << endl;
+	cout << "Nome: " << combustivel->getNome() << endl;
+	cout << "Preco: " << combustivel->getPreco() << endl;
 }
 
 void Veiculo::criar()
