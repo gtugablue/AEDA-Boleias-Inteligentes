@@ -127,3 +127,13 @@ void Membro::save(const string &filename)
 		file << veiculos.at(i).getCombustivel()->getPreco() << endl;
 	}
 }
+
+void Membro::showmembros()
+{
+	cout << "Membro " << endl;
+	cout << endl;
+	cout << "Nome :" << getNome() << endl;
+	cout << "Utilizador" << getUtilizador() << endl;
+	cout << endl;
+	
+}

@@ -28,6 +28,7 @@ public:
 	void setVeiculo(Veiculo* veiculo);
 	void adicionarPassageiro(Particular* passageiro);
 	void removerPassageiro(Particular* passageiro);
+	void showViagem();
 };
 
 #endif
