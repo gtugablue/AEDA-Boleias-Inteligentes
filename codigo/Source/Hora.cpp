@@ -1,5 +1,10 @@
 #include "../headers/Hora.h"
 
+Hora::Hora()
+{
+	
+}
+
 Hora::Hora(unsigned hora, unsigned minuto)
 {
 	this->hora=hora;

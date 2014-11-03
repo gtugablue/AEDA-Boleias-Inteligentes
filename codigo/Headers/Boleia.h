@@ -6,12 +6,15 @@
 #include "Particular.h"
 #include "Data.h"
 #include "Membro.h"
+#include "Hora.h"
 
 using namespace std;
 
 class Boleia
 {
 private:
+	string titulo;
+	string descricao;
 	Membro* condutor; // NULL se ainda não existir
 	Veiculo* veiculo; // NULL se ainda não existir
 	Coordenadas origem;
@@ -19,9 +22,13 @@ private:
 	vector<Particular*> passageiros; // Número total de pessoas no veículo = passageiros + 1 (condutor)
 	Data dataInicio;
 	Data dataFim; // se for igual ao inicio é um evento
+	Hora horaInicio;
+	Hora horaFim;
+	char diaDaSemana; // 0 a 6, para o caso de ser uma boleia periódica
+
 public:
-	Boleia(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim);
-	Boleia(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim);
+	Boleia(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim);
+	Boleia(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim);
 	Membro* getCondutor() const;
 	Veiculo* getVeiculo() const;
 	vector<Particular *> getPassageiros() const;

@@ -1,13 +1,13 @@
 #include "../headers/Boleia.h"
 
-Boleia::Boleia(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim) :
+Boleia::Boleia(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim) :
 origem(localInicio), destino(localFim), dataInicio(dataInicio), dataFim(dataFim)
 {
 	this->condutor = NULL;
 	this->veiculo = veiculo;
 }
 
-Boleia::Boleia(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim):
+Boleia::Boleia(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim) :
 origem(localInicio), destino(localFim), dataInicio(dataInicio), dataFim(dataFim)
 { 
 	this->condutor = condutor;
