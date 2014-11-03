@@ -13,7 +13,7 @@ public:
 	static string readString();
 	static string readPassword();
 	static int readDigit(unsigned from, unsigned to);
-	static bool readYesOrNo();
+	static bool readYesOrNo(unsigned char yes, unsigned char no);
 };
 
 #endif

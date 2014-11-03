@@ -9,10 +9,10 @@ using namespace std;
 class AnuncioOferta: public Anuncio
 {
 private:
-	Membro* condutor;
+	Preco* preco;
 	vector<Particular*> passageiros;
 public:
-	AnuncioOferta(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem, Membro* anunciante);
+	AnuncioOferta(const string &titulo, const string &descricao, Preco* preco, Viagem* viagem, Membro* anunciante);
 	void setAnunciante(Membro* anunciante);
 	Membro* getAnunciante() const;
 };

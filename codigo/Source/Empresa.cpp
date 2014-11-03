@@ -22,7 +22,7 @@ void Empresa::edit()
 {
 	Membro::edit();
 	cout << "Pretende alterar o website (y/n)?" << endl;
-	if (InputUtils::readYesOrNo())
+	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		cout << "Introduza o novo website: ";
 		getline(cin, website);

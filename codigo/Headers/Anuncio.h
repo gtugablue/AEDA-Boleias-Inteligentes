@@ -13,11 +13,11 @@ class Anuncio
 protected:
 	string titulo;
 	string descricao;
-	Preco precoTotal;
 	Viagem* viagem;
 	Membro* anunciante;
+	Membro* condutor;
 public:
-	Anuncio(const string &titulo, const string &descricao, Preco* precoTotal, Viagem* viagem);
+	Anuncio(const string &titulo, const string &descricao, Membro* anunciante, Viagem* viagem);
 	string getTitulo() const;
 	string getDescricao() const;
 	Coordenadas getOrigem() const;
@@ -30,7 +30,6 @@ public:
 	void setAnunciante() const;
 	void calcularPrecoTotal();
 	virtual void show() const;
-	virtual void criar();
 };
 
 #endif
