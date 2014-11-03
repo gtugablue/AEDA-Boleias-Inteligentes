@@ -59,31 +59,21 @@ void Preco::criar()
 	cout << "Preco goes here" << endl;
 }
 
-void Preco::load()
+void Preco::load(const string &ficheiro)
 {
-	pair<string, float>a;
-	fstream file;
-	string cenas;
-	float comb, desg,prc;
-	file.open("precos.txt");
-	int N,S;
-	file >> N;
+	ifstream file(ficheiro);
+	file >> combustivel;
+	file >> desgaste;
+	unsigned n;
+	file >> n;
 	cin.ignore(1000, '\n');
-	for (size_t i = 0; i < N; i++)
+	for (size_t i = 0; i < n; i++)
 	{
-		file >> comb;
+		pair<string, float> despesa;
+		getline(file, despesa.first);
+		file >> despesa.second;
 		cin.ignore(1000, '\n');
-		file >> desg;
-		cin.ignore(1000, '\n');
-		file >> S;
-		cin.ignore(1000, '\n');
-		for (size_t j = 0; j < S; j++)
-		{
-			getline(file, cenas);
-			file >> prc;
-			a.first = cenas;
-			a.second = prc;
-			outrasDespesas.push_back(a);
-		}
+		outrasDespesas.push_back(despesa);
 	}
+	file.close();
 }
