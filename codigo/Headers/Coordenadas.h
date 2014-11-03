@@ -18,6 +18,7 @@ public:
 	double getLongitude() const;
 	void setLatitude(double latitude);
 	void setLongitude(double longitude);
+	float calcDistancia(const Coordenadas &coordenadas1, const Coordenadas &coordenadas2);
 	void showcoord();
 	void criar();
 	void editar();

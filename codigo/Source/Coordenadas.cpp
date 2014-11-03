@@ -92,3 +92,13 @@ void Coordenadas::editar()
 {
 	return criar();
 }
+
+float Coordenadas::calcDistancia(const Coordenadas &coordenadas1, const Coordenadas &coordenadas2)
+{
+	double dist;
+	double a = coordenadas2.getLatitude() - coordenadas1.getLatitude();
+	double b = coordenadas2.getLongitude() - coordenadas1.getLongitude();
+	dist = sqrt(pow(a, 2) + pow(b, 2));
+	return dist;
+}
+
