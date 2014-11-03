@@ -97,35 +97,40 @@ void Preco::criar()
 			cout << "Erro: " << e.info << endl << endl;
 		}
 	}
-
-	while (InputUtils::readYesOrNo('y', 'n'))
+	while (1)
 	{
-		cout << "Introduza o nome da sua despesa" << endl;
-		getline(cin, nome);
-		despesas.first = nome;
-		while (1)
-
+		cout << "Deseja introduzir uma Despesa ?(y/n)" << endl;
+		if (InputUtils::readYesOrNo('y', 'n'))
 		{
-			try
+
+			cout << "Introduza o nome da sua despesa" << endl;
+			getline(cin, nome);
+			despesas.first = nome;
+			while (1)
+
 			{
-				cout << "Insira o preco da sua despesa" << endl;
-				if (!(cin >> preco))
+				try
 				{
-					throw InvalidInputException<string>("Insira um float");
+					cout << "Insira o preco da sua despesa" << endl;
+					if (!(cin >> preco))
+					{
+						throw InvalidInputException<string>("Insira um float");
+					}
+					cin.ignore();
+					break;
 				}
-				cin.ignore();
-				break;
+				catch (InvalidInputException<string>e)
+				{
+					cout << "Erro: " << e.info << endl << endl;
+				}
 			}
-			catch (InvalidInputException<string>e)
-			{
-				cout << "Erro: " << e.info << endl << endl;
-			}
+			despesas.second = preco;
+			outrasDespesas.push_back(despesas);
+
+
+
 		}
-		despesas.second = preco;
-		outrasDespesas.push_back(despesas);
-
-
-
+		else break;
 	}
 }
 
