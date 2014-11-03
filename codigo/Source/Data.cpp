@@ -75,11 +75,100 @@ bool Data::operator< (const Data &data)const
 		return false;
 }
 
-void Data::showdata()
+void Data::show()
 {
-	cout << "Data :  " << endl;
+	cout << "Data: " << endl;
 	cout << endl;
 	cout << dia << "/" << mes << "/" << ano;
 }
 
+void Data::criar()
+{
+	while (1)
+	{
+		try
+		{
+			cout << "Insira o ano: ";
+			if (!(cin >> ano))
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw InvalidInputException<string>("Insira um inteiro");
+			}
+			cin.ignore();
+			break;
+		}
+		catch (InvalidInputException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+	while (1)
+	{
+		try
+		{
+			cout << "Insira o mes: ";
+			if (!(cin >> mes))
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw InvalidInputException<string>("Insira um inteiro");
+			}
+			else if (mes > 12)
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw DataInvalidaException<string>("Insira um valor igual ou inferior a 12");
+			}
+			cin.ignore(1000, '\n');
+			break;
+		}
+		catch (InvalidInputException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+		catch (DataInvalidaException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+	while (1)
+	{
+		try
+		{
+			cout << "Insira o dia: ";
+			if (!(cin >> dia))
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw InvalidInputException<string>("Insira um inteiro");
+			}
+			else if ((mes == 1 && dia > (isBissexto() ? 29 : 28)) || ((mes == 3 || mes == 5 || mes == 8 || mes == 10) && dia > 30) || dia > 31)
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw DataInvalidaException<string>("Insira um dia existente");
+			}
+			cin.ignore(1000, '\n');
+			break;
+		}
+		catch (InvalidInputException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+		catch (DataInvalidaException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+}
 
+bool Data::isBissexto() const
+{
+	if (ano % 400 == 0 || (ano % 4 == 0) && (ano % 100 != 0)) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}

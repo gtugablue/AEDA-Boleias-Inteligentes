@@ -102,5 +102,18 @@ void Veiculo::showVeiculo()
 	cout << endl;
 	cout << "Nome " << combustivel->getNome() << endl;
 	cout << "Preco " << combustivel->getPreco() << endl;
+}
 
+void Veiculo::criar()
+{
+	string marca;
+	unsigned mes, ano, cilindrada;
+	cout << "Introduza a marca do seu veiculo" << endl;
+	getline(cin, marca);
+	cout << "Introduza o ano do seu veiculo" << endl;
+	cin >> ano;
+	cout << "Introduza o mes do seu veiculo" << endl;
+	cin >> mes;
+	cout << "Introduza a cilindrada do seu veiculo" << endl;
+	cin >> cilindrada;
 }

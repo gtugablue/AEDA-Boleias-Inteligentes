@@ -45,3 +45,45 @@ void Coordenadas::showcoord()
 	cout << "Latitude : " << latitude << endl;
 	cout << "Longitude:  " << longitude << endl;
 }
+
+void Coordenadas::criar()
+{
+	while (1)
+	{
+		try
+		{
+			cout << "Insira a latitude (formato XX.XXXXX...): ";
+			if (!(cin >> latitude))
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw InvalidInputException<string>("Utilize o formato XX.XXXXX...");
+			}
+			cin.ignore();
+			break;
+		}
+		catch (InvalidInputException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+	while (1)
+	{
+		try
+		{
+			cout << "Insira a longitude (formato XX.XXXXX...): ";
+			if (!(cin >> longitude))
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw InvalidInputException<string>("Utilize o formato XX.XXXXX...");
+			}
+			cin.ignore();
+			break;
+		}
+		catch (InvalidInputException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+}

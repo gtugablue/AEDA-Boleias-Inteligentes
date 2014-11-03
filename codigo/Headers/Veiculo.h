@@ -32,6 +32,7 @@ public:
 	void load();
 	void setCombustivel(Combustivel* combustivel);
 	void showVeiculo();
+	void criar();
 };
 
 #endif

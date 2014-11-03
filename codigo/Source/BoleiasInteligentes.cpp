@@ -21,7 +21,7 @@ void BoleiasInteligentes::load()
 	loadCombustiveis();
 	//loadMembros();
 	// APAGAR A PROXIMA LINHA
-	membros.push_back(new Membro("Gustavo", "gtugablue", "123"));
+	membros.push_back(new Particular("Gustavo", "gtugablue", "123"));
 }
 
 void BoleiasInteligentes::loadCombustiveis()
@@ -104,60 +104,6 @@ void BoleiasInteligentes::saveMembros()
 	file.close();
 
 }
-
-Coordenadas BoleiasInteligentes::criarCoordenadas()
-{
-	double lat;
-	double lng;
-	cout << "Introduza a latitude " << endl;
-	cin >> lat;
-	cout << "Introduza a longitude" << endl;
-	cin >> lng;
-	return Coordenadas(lat, lng);
-}
-
-Combustivel BoleiasInteligentes::criarCombustivel()
-{
-	string nome;
-	float preco;
-	cout << "Introduza o nome do combustivel" << endl;
-	getline(cin, nome);
-	cout << "Introduza o seu preco" << endl;
-	cin >> preco;
-	return Combustivel(nome, preco);
-}
-
-Veiculo BoleiasInteligentes::criarVeiculo()
-{
-	string marca;
-	unsigned mes, ano, cilindrada;
-	cout << "Introduza a marca do seu veiculo" << endl;
-	getline(cin, marca);
-	cout << "Introduza o ano do seu veiculo" << endl;
-	cin >> ano;
-	cout << "Introduza o mes do seu veiculo" << endl;
-	cin >> mes;
-	cout << "Introduza a cilindrada do seu veiculo" << endl;
-	cin >> cilindrada;
-
-
-	return Veiculo(marca, mes, ano, cilindrada, NULL); // TODO --- TIRAR ESTE NULL DAQUI!
-
-}
-
-/*Anuncio BoleiasInteligentes::criarAnuncio()
-{
-string nome;
-string descricao;
-
-cout << "Introduza o nome do seu anuncio" << endl;
-getline(cin, nome);
-cout << "Introduza a descricao do seu anuncio" << endl;
-getline(cin, descricao);
-
-vector<pair<string, float>> outrasDespesas;
-//return AnuncioOferta(nome, descricao, new Preco(0.0, 0.0, outrasDespesas), new Viagem(, new Membro("Arcanjo", "arcanjo45", "fagote"));	// TODO
-}*/
 
 void BoleiasInteligentes::addEmpresa(const Empresa &empresa)
 {
@@ -328,10 +274,15 @@ void BoleiasInteligentes::showAnunciosMenu()
 	case 0: // Criar anuncio
 	{
 		Anuncio* anuncio;
-		if (dynamic_cast<Particular*>(utilizadorAtual) != NULL)
+		if (dynamic_cast<Particular*>(utilizadorAtual) == NULL)
+		{
+			// Empresa
+			anuncio = new AnuncioOferta();
+		}
+		else
 		{
 			// Particular
-			cout << "Que tipo de anuncio pretende criar ('o' para oferta e 'o' para procura)?" << endl;
+			cout << "Que tipo de anuncio pretende criar ('o' para oferta e 'p' para procura)?" << endl;
 			if (InputUtils::readYesOrNo('o', 'p'))
 			{
 				anuncio = new AnuncioOferta();
@@ -341,11 +292,8 @@ void BoleiasInteligentes::showAnunciosMenu()
 				anuncio = new AnuncioProcura();
 			}
 		}
-		else
-		{
-			anuncio = new AnuncioOferta();
-		}
 		anuncio->criar();
+		clearScreen();
 		cout << "Anuncio criado com sucesso." << endl;
 		anuncios.push_back(anuncio);
 		pause();
@@ -355,7 +303,16 @@ void BoleiasInteligentes::showAnunciosMenu()
 	{
 		try
 		{
-			return showList(anuncios, 0);
+			int input = showList(anuncios, 0);
+			if (input == -1)
+			{
+				return showAnunciosMenu();
+			}
+			else
+			{
+				clearScreen();
+				return anuncios[input]->show();
+			}
 		}
 		catch (EmptyException<string> e)
 		{
@@ -374,7 +331,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 }
 
 template<class T>
-int BoleiasInteligentes::showList(const vector<T> &v, int page, bool selectable) const
+int BoleiasInteligentes::showList(const vector<T> &v, int page) const
 {
 	clearScreen();
 	if (v.size() == 0)
@@ -404,7 +361,7 @@ int BoleiasInteligentes::showList(const vector<T> &v, int page, bool selectable)
 			{
 				throw PaginaInexistenteException<string>("Pagina inexistente.");
 			}
-			return showList(v, page - 1, selectable);
+			return showList(v, page - 1);
 		}
 		case 8:
 		{
@@ -412,7 +369,7 @@ int BoleiasInteligentes::showList(const vector<T> &v, int page, bool selectable)
 			{
 				throw PaginaInexistenteException<string>("Pagina inexistente");
 			}
-			return showList(v, page + 1, selectable);
+			return showList(v, page + 1);
 		}
 		case 9:
 		{

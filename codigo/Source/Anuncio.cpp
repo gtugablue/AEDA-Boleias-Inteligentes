@@ -70,7 +70,14 @@ void Anuncio::criar()
 	getline(cin, titulo);
 	cout << "Introduza uma descricao: ";
 	getline(cin, descricao);
-
+	cout << endl << "Origem:" << endl;
+	origem.criar();
+	cout << endl << "Destino: " << endl;
+	destino.criar();
+	cout << endl << "Data de inicio: " << endl;
+	dataInicio.criar();
+	cout << endl << "Data de fim: " << endl;
+	dataFim.criar();
 }
 
 ostream& operator<<(ostream &os, Anuncio* anuncio)

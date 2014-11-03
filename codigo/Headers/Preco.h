@@ -24,6 +24,7 @@ public:
 	friend ostream& operator<<(ostream &os, const Preco &preco);
 	void show() const;
 	float calcularTotal() const;
+	void criar();
 };
 
 #endif

@@ -47,17 +47,17 @@ void Viagem::showViagem()
 	cout << "Condutor" << endl;
 	condutor->showmembros();
 	cout << "Coordenadas de Inicio" <<endl;
-	localInicio.showcoord();
+	origem.showcoord();
 	cout << "Coordenadas de Fim" << endl;
-	localFim.showcoord();
+	destino.showcoord();
 	cout << endl;
 	for (size_t i = 0; i < passageiros.size(); i++)
 	{
 		passageiros.at(i)->showparticulares();
 	}
 	cout << "Data de Inicio" << endl;
-	dataInicio.showdata();
+	dataInicio.show();
 	cout << "Data de Fim" << endl;
-	dataFim.showdata();
+	dataFim.show();
 
 }

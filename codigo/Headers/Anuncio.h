@@ -31,7 +31,7 @@ public:
 	void setAnunciante() const;
 	void calcularPrecoTotal();
 	virtual void show() const;
-	virtual void criar();
+	virtual void criar() = 0;
 	
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);
 };

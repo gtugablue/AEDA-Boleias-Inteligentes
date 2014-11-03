@@ -10,3 +10,9 @@ Anuncio(titulo, descricao, origem, destino, dataInicio, dataFim)
 {
 	this->preco = preco;
 }
+
+void AnuncioOferta::criar()
+{
+	Anuncio::criar();
+	preco->criar();
+}

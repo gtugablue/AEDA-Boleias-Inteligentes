@@ -52,3 +52,9 @@ float Preco::calcularTotal() const
 	}
 	return total;
 }
+
+void Preco::criar()
+{
+	// TODO
+	cout << "Preco goes here" << endl;
+}

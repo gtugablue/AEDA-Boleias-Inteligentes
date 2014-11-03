@@ -25,3 +25,13 @@ void Combustivel::setPreco(const float &preco)
 {
 	this ->preco=preco;
 }
+
+void Combustivel::criar()
+{
+	string nome;
+	float preco;
+	cout << "Introduza o nome do combustivel:" << endl;
+	getline(cin, nome);
+	cout << "Introduza o preco:" << endl;
+	cin >> preco;
+}

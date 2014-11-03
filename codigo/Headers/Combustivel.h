@@ -2,6 +2,7 @@
 #define _COMBUSTIVEL_H
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -16,6 +17,7 @@ public:
 	void setPreco(const float &preco);
 	string getNome() const;
 	float getPreco() const;
+	void criar();
 };
 
 #endif

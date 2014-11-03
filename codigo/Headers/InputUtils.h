@@ -16,4 +16,15 @@ public:
 	static bool readYesOrNo(unsigned char yes, unsigned char no);
 };
 
+template<class T>
+class InvalidInputException
+{
+public:
+	T info;
+	InvalidInputException(T info)
+	{
+		this->info = info;
+	}
+};
+
 #endif

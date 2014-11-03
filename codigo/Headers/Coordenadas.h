@@ -1,6 +1,7 @@
 #ifndef _COORDENADAS_H
 #define _COORDENADAS_H
-#include<iostream>
+#include <iostream>
+#include "InputUtils.h"
 
 using namespace std;
 
@@ -18,6 +19,7 @@ public:
 	void setLatitude(double latitude);
 	void setLongitude(double longitude);
 	void showcoord();
+	void criar();
 };
 
 #endif

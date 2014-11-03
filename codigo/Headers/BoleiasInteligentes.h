@@ -52,11 +52,6 @@ public:
 	void saveAnunciosOferta();
 	void saveAnunciosProcura();
 
-	Coordenadas BoleiasInteligentes::criarCoordenadas();
-	Veiculo BoleiasInteligentes::criarVeiculo();
-	Combustivel BoleiasInteligentes::criarCombustivel();
-	Anuncio BoleiasInteligentes::criarAnuncio();
-
 	void addEmpresa(const Empresa &empresa);
 	void addParticular(const Particular &particular);
 
@@ -71,7 +66,7 @@ public:
 	void showAnunciosMenu();
 
 	template<class T>
-	void showList(const vector<T> &v, int page) const;
+	int showList(const vector<T> &v, int page) const;
 
 	void showAnuncios();
 	void showVehicles();
