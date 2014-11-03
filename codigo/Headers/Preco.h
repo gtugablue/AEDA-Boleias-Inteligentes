@@ -26,7 +26,7 @@ public:
 	void show() const;
 	float calcularTotal() const;
 	void criar();
-	void load();
+	void load(const string &ficheiro);
 };
 
 #endif
