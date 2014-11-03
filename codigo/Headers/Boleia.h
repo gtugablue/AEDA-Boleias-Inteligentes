@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class Viagem
+class Boleia
 {
 private:
 	Membro* condutor; // NULL se ainda não existir
@@ -19,8 +19,8 @@ private:
 	Data dataInicio;
 	Data dataFim; // se for igual ao inicio é um evento
 public:
-	Viagem(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim);
-	Viagem(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim);
+	Boleia(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim);
+	Boleia(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim);
 	Membro* getCondutor() const;
 	Veiculo* getVeiculo() const;
 	vector<Particular*> getPassageiros() const;

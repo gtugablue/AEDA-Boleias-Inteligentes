@@ -3,7 +3,7 @@
 
 #include "Membro.h"
 #include "Particular.h"
-#include "Viagem.h"
+#include "Boleia.h"
 #include "Preco.h"
 
 using namespace std;
@@ -36,8 +36,6 @@ public:
 	virtual void criar() = 0;
 	virtual void editar() = 0;
 
-
-	
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);
 };
 

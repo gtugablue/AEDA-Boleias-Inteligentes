@@ -265,6 +265,7 @@ void BoleiasInteligentes::showMainMenu()
 		"Editar conta",
 		"Anuncios",
 		"Veiculos",
+		"Boleias",
 		"Logout"
 	};
 	showMenu(items);
@@ -287,7 +288,8 @@ void BoleiasInteligentes::showMainMenu()
 	{
 		return showVeiculosMenu();
 	}
-	case 3:
+	case 3: // Boleias
+	case 4: // Logout
 	{
 		clearScreen();
 		cout << "Tem a certeza que pretende fazer logout (y/n)?";
@@ -661,16 +663,8 @@ void BoleiasInteligentes::loadAnuncios()
 		// TODO DAQUI PARA BAIXO
 		if (oferta)
 		{
-			file >> numPassageiros;
-			cin.ignore(1000, '\n');
-			for (size_t j = 0; j < numPassageiros; j++)
-			{
-				file >> ID;
-				cin.ignore(1000, '\n');
-				passageiros.push_back((Particular *)membros[ID]);
-
-			}
-			preco->load(file);
+			Preco preco;
+			preco.criar();
 			anuncios.push_back(new AnuncioOferta(titulo, descricao, origem, destino, dataInicio, dataFim, preco));
 		}
 	}

@@ -1,48 +1,48 @@
-#include "../headers/Viagem.h"
+#include "../headers/Boleia.h"
 
-Viagem::Viagem(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim) :
+Boleia::Boleia(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim) :
 origem(localInicio), destino(localFim), dataInicio(dataInicio), dataFim(dataFim)
 {
 	this->condutor = NULL;
 	this->veiculo = veiculo;
 }
 
-Viagem::Viagem(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim):
+Boleia::Boleia(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim):
 origem(localInicio), destino(localFim), dataInicio(dataInicio), dataFim(dataFim)
 { 
 	this->condutor = condutor;
 	this->veiculo = veiculo;
 }
 
-Membro* Viagem::getCondutor() const
+Membro* Boleia::getCondutor() const
 {
 	return condutor;
 }
 
-Veiculo* Viagem::getVeiculo()const
+Veiculo* Boleia::getVeiculo()const
 {
 	return veiculo;
 
 }
 
-void Viagem::setCondutor(Membro* condutor)
+void Boleia::setCondutor(Membro* condutor)
 {
 	this->condutor = condutor;
 }
 
-void Viagem::setVeiculo(Veiculo* veiculo)
+void Boleia::setVeiculo(Veiculo* veiculo)
 {
 	this->veiculo = veiculo;
 }
 
-vector<Particular*>Viagem::getPassageiros() const
+vector<Particular*>Boleia::getPassageiros() const
 {
 	return  passageiros;
 }
 
-void Viagem::showViagem()
+void Boleia::showViagem()
 {
-	cout << "Viagem" << endl;
+	cout << "Boleia" << endl;
 	cout << endl;
 	cout << "Condutor" << endl;
 	condutor->showmembros();
@@ -60,7 +60,7 @@ void Viagem::showViagem()
 
 }
 
-void Viagem::criaViagem()
+void Boleia::criaViagem()
 {
 	if (condutor != NULL)
 	{

@@ -70,7 +70,7 @@ for(size_t i=0; i < candidatos.size();i++)
 {
 if(candidatos[i]->getUtilizador()==candidato[i].getUtilizador())
 {
-//viagem->adicionarPassageiro(candidatos[i]);
+//boleia->adicionarPassageiro(candidatos[i]);
 }
 }
 }*/

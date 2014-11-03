@@ -2,7 +2,7 @@
 #define _EMPRESA_H
 
 #include "Membro.h"
-#include "Viagem.h"
+#include "Boleia.h"
 #include <vector>
 
 using namespace std;
