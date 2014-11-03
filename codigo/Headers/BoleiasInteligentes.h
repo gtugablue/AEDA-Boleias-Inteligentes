@@ -34,7 +34,7 @@ private:
 	vector<Combustivel> combustiveis;
 	vector<Membro*> membros;
 	vector<Anuncio*> anuncios;
-	vector<Boleia> viagens;
+	vector<Boleia> boleias;
 	Membro* utilizadorAtual = NULL;
 public:
 	BoleiasInteligentes(const string &dataFolder);

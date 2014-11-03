@@ -20,8 +20,6 @@ void BoleiasInteligentes::start()
 void BoleiasInteligentes::load()
 {
 	loadCombustiveis();
-	combustiveis[0].show();
-	pause();
 	//loadMembros();
 	// APAGAR A PROXIMA LINHA
 	membros.push_back(new Particular("Gustavo", "gtugablue", "123"));
