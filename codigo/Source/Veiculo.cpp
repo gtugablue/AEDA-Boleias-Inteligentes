@@ -89,7 +89,7 @@ void Veiculo::load()
 	}
 }
 
-void Veiculo::show()
+void Veiculo::show() const
 {
 	cout << "Veiculo" << endl;
 	cout << endl;
@@ -118,6 +118,11 @@ void Veiculo::criar()
 	cin >> mes;
 	cout << "Introduza a cilindrada: " << endl;
 	cin >> cilindrada;
+}
+
+void Veiculo::editar()
+{
+	// TODO
 }
 
 ostream& operator<<(ostream &os, const Veiculo &veiculo)

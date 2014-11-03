@@ -32,8 +32,9 @@ public:
 	void setCilindrada(unsigned cilindrada);
 	void load();
 	void setCombustivel(Combustivel* combustivel);
-	void show();
+	void show() const;
 	void criar();
+	void editar();
 
 	friend ostream& operator<<(ostream &os, const Veiculo &veiculo);
 };

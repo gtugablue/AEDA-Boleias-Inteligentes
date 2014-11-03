@@ -479,12 +479,52 @@ void BoleiasInteligentes::showVeiculosMenu()
 			clearScreen();
 			cout << "Erro: " << e.info << endl;
 			pause();
-			return showAnunciosMenu();
+			return showVeiculosMenu();
 		}
 	}
 	case 2: // Editar veiculo
 	{
-		
+		try
+		{
+			int input = showList(utilizadorAtual->getVeiculos(), 0);
+			if (input == -1)
+			{
+				return showVeiculosMenu();
+			}
+			else
+			{
+				clearScreen();
+				utilizadorAtual->getVeiculos()[input].show();
+				pause();
+				clearScreen();
+				cout << "Pretende apagar este veiculo (y/n)?" << endl;
+				if (InputUtils::readYesOrNo('y', 'n'))
+				{
+					utilizadorAtual->removeVeiculo(&utilizadorAtual->getVeiculos()[input]); // Não falha, porque está garantido que o veículo existe
+					cout << "Veiculo apagado com sucesso." << endl;
+					pause();
+					return showVeiculosMenu();
+				}
+				cout << "Pretende editar este veiculo (y/n)?" << endl;
+				if (InputUtils::readYesOrNo('y', 'n'))
+				{
+					utilizadorAtual->getVeiculos()[input].editar();
+					clearScreen();
+					cout << "Veiculo editado com sucesso." << endl;
+					pause();
+					return showVeiculosMenu();
+				}
+				pause();
+				return showAnunciosMenu();
+			}
+		}
+		catch (EmptyException<string> e)
+		{
+			clearScreen();
+			cout << "Erro: " << e.info << endl;
+			pause();
+			return showAnunciosMenu();
+		}
 	}
 	case 3: // Voltar
 	{
