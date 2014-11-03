@@ -514,3 +514,81 @@ void BoleiasInteligentes::pause() const
 {
 	system("pause");
 }
+
+void BoleiasInteligentes::loadAnuncios()
+{
+	bool oferta;
+	string titulo;
+	string descricao;
+	int N,S,ID;
+	ifstream file;
+	file.open(ficheiroAnuncios);
+	file >> N;
+	for (size_t i = 0; i < N; i++)
+	{
+		Anuncio *anuncio;
+		Membro * condutor, *anunciante;
+		vector<Particular *> passageiros;
+		Coordenadas origem;
+		Coordenadas destino;
+		Data inicio;
+		Data fim;
+		Preco *preco;
+		file >> oferta;
+		if (oferta)
+		{
+			getline(file, titulo);
+			getline(file, descricao);
+			origem.load(file);
+			destino.load(file);
+			file >> S;
+			cin.ignore(1000, '\n');
+			for (size_t j = 0; j < S; j++)
+			{
+				file >> ID;
+				cin.ignore(1000, '\n');
+				passageiros.push_back((Particular *)membros[ID]);
+
+			}
+			inicio.load(file);
+			fim.load(file);
+			anunciante->load();
+			condutor->load();
+			preco->load(file);
+			anuncios.push_back(new AnuncioOferta(titulo, descricao, origem, destino, inicio, fim, preco));
+
+		}
+		else
+		int G, T;
+
+        getline(file, titulo);
+		getline(file, descricao);
+		origem.load(file);
+		destino.load(file);
+		file >> S;
+		cin.ignore(1000, '\n');
+		for (size_t j = 0; j < S; j++)
+		{
+			file >> ID;
+			cin.ignore(1000, '\n');
+			passageiros.push_back((Particular *)membros[ID]);
+
+		}
+		inicio.load(file);
+		fim.load(file);
+		anunciante->load();
+		condutor->load();
+		file >> G;
+		for (size_t i = 0; i < G; i++)
+		{
+
+		}
+		
+	
+		
+		
+
+
+		
+	}
+}

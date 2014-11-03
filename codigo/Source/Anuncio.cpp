@@ -24,7 +24,15 @@ void Anuncio::setTitulo(const string &titulo)
 {
 	this->titulo = titulo;
 }
+Coordenadas Anuncio::getOrigem()
+{
+	return origem;
+}
 
+Coordenadas Anuncio::getDestino()
+{
+	return destino;
+}
 void Anuncio::setDescricao(const string &descricao)
 {
 	this->descricao = descricao;
@@ -130,3 +138,4 @@ ostream& operator<<(ostream &os, Anuncio* anuncio)
 {
 	return os << anuncio->getTitulo();
 }
+

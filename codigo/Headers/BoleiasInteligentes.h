@@ -41,6 +41,7 @@ public:
 
 	void showmembro();
 	void showviagem();
+	void loadAnuncios();
 	
 
 	void start();

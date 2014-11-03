@@ -8,9 +8,9 @@ using namespace std;
 class Data
 {
 protected:
-	unsigned dia;
-	unsigned mes;
-	unsigned ano;
+	unsigned int dia;
+	unsigned int mes;
+	unsigned int ano;
 public:
 	Data();
 	Data(unsigned dia, unsigned mes, unsigned ano);
@@ -24,6 +24,7 @@ public:
 	void show();
 	void criar();
 	void editar();
+	void load(ifstream &file);
 	bool isBissexto() const;
 };
 

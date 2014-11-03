@@ -1,6 +1,7 @@
 #ifndef _COORDENADAS_H
 #define _COORDENADAS_H
 #include <iostream>
+#include <fstream>
 #include "InputUtils.h"
 
 using namespace std;
@@ -22,6 +23,7 @@ public:
 	void showcoord();
 	void criar();
 	void editar();
+	void load(ifstream &file);
 };
 
 #endif

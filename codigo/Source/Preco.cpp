@@ -59,9 +59,8 @@ void Preco::criar()
 	cout << "Preco goes here" << endl;
 }
 
-void Preco::load(const string &ficheiro)
+void Preco::load(ifstream &file)
 {
-	ifstream file(ficheiro);
 	file >> combustivel;
 	file >> desgaste;
 	unsigned n;

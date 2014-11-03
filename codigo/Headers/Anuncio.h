@@ -27,12 +27,15 @@ public:
 	string getDescricao() const;
 	Membro* getAnunciante() const;
 	void setTitulo(const string &titulo);
+	Coordenadas getOrigem();
+	Coordenadas getDestino();
 	void setDescricao(const string &descricao);
 	void setAnunciante(Membro* membro);
 	void calcularPrecoTotal();
 	virtual void show() const;
 	virtual void criar() = 0;
 	virtual void editar() = 0;
+
 
 	
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);

@@ -102,3 +102,9 @@ float Coordenadas::calcDistancia(const Coordenadas &coordenadas)
 	return dist;
 }
 
+void Coordenadas::load(ifstream &file)
+{
+	file >> latitude;
+	file >> longitude;
+}
+
