@@ -55,10 +55,8 @@ void Viagem::showViagem()
 	{
 		passageiros.at(i)->show();
 	}
-	cout << "Data de Inicio" << endl;
-	dataInicio.show();
-	cout << "Data de Fim" << endl;
-	dataFim.show();
+	cout << "Data de Inicio: " << dataInicio << endl;
+	cout << "Data de Fim: " << dataFim << endl;
 
 }
 

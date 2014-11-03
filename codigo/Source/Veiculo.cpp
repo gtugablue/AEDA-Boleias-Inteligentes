@@ -89,7 +89,7 @@ void Veiculo::load()
 	}
 }
 
-void Veiculo::show()
+void Veiculo::show() const
 {
 	cout << "Veiculo" << endl;
 	cout << endl;
@@ -108,12 +108,24 @@ void Veiculo::criar()
 {
 	string marca;
 	unsigned mes, ano, cilindrada;
-	cout << "Introduza a marca do seu veiculo" << endl;
+	cout << "Introduza a marca: " << endl;
 	getline(cin, marca);
-	cout << "Introduza o ano do seu veiculo" << endl;
+	cout << "Introduza o modelo: " << endl;
+	getline(cin, modelo);
+	cout << "Introduza o ano: " << endl;
 	cin >> ano;
-	cout << "Introduza o mes do seu veiculo" << endl;
+	cout << "Introduza o mes: " << endl;
 	cin >> mes;
-	cout << "Introduza a cilindrada do seu veiculo" << endl;
+	cout << "Introduza a cilindrada: " << endl;
 	cin >> cilindrada;
+}
+
+void Veiculo::editar()
+{
+	// TODO
+}
+
+ostream& operator<<(ostream &os, const Veiculo &veiculo)
+{
+	return os << veiculo.marca << " " << veiculo.modelo << endl;
 }

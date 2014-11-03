@@ -31,8 +31,6 @@ string Membro::getPassword()const
 	return password;
 }
 
-
-
 void Membro::setNome(string &nome)
 {
 	this->nome=nome;
@@ -48,9 +46,14 @@ void Membro::setUtilizador(string &utilizador)
 	this ->utilizador=utilizador;
 }
 
-void Membro::addveiculo(Veiculo v)
+void Membro::addVeiculo(Veiculo veiculo)
 {
-	veiculos.push_back(v);
+	veiculos.push_back(veiculo);
+}
+
+void Membro::removeVeiculo(Veiculo* veiculo)
+{
+	// TODO
 }
 
 bool Membro::operator==(const Membro &membro1) const

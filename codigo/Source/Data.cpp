@@ -75,13 +75,6 @@ bool Data::operator< (const Data &data)const
 		return false;
 }
 
-void Data::show()
-{
-	cout << "Data: " << endl;
-	cout << endl;
-	cout << dia << "/" << mes << "/" << ano;
-}
-
 void Data::criar()
 {
 	while (1)
@@ -114,7 +107,7 @@ void Data::criar()
 				cin.ignore(1000, '\n');
 				throw InvalidInputException<string>("Insira um inteiro");
 			}
-			else if (mes > 12)
+			else if (mes < 0 || mes > 12)
 			{
 				cin.clear();
 				cin.ignore(1000, '\n');
@@ -143,7 +136,7 @@ void Data::criar()
 				cin.ignore(1000, '\n');
 				throw InvalidInputException<string>("Insira um inteiro");
 			}
-			else if ((mes == 1 && dia > (isBissexto() ? 29 : 28)) || ((mes == 3 || mes == 5 || mes == 8 || mes == 10) && dia > 30) || dia > 31)
+			else if ((mes == 2 && dia > (isBissexto() ? 29 : 28)) || ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30) || dia > 31)
 			{
 				cin.clear();
 				cin.ignore(1000, '\n');
@@ -178,10 +171,7 @@ bool Data::isBissexto() const
 	}
 }
 
-void Data::load(ifstream &file)
+ostream& operator<<(ostream &os, const Data &data)
 {
-	file >> dia;
-	file >> mes;
-	file >> ano;
-	cin.ignore(1000, '\n');
+	return os << data.dia << "/" << data.mes << "/" << data.ano;
 }

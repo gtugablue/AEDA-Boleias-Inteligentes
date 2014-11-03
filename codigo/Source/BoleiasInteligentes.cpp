@@ -142,6 +142,19 @@ vector<AnuncioProcura*> BoleiasInteligentes::getAnunciosProcura() const
 	return anunciosProcura;
 }
 
+vector<Anuncio*> BoleiasInteligentes::getAnunciosByMembro(Membro* membro) const
+{
+	vector<Anuncio *> anunciosMembro;
+	for (size_t i = 0; i < anuncios.size(); ++i)
+	{
+		if (anuncios[i]->getAnunciante() == membro)
+		{
+			anunciosMembro.push_back(anuncios[i]);
+		}
+	}
+	return anunciosMembro;
+}
+
 Membro* BoleiasInteligentes::login(const string &username, const string &password)
 {
 	for (size_t i = 0; i < membros.size(); ++i)
@@ -260,7 +273,10 @@ void BoleiasInteligentes::showMainMenu()
 	{
 	case 0: // Editar conta
 	{
+		clearScreen();
 		utilizadorAtual->edit();
+		cout << "Conta editada com sucesso." << endl;
+		pause();
 		return showMainMenu();
 	}
 	case 1: // Anuncios
@@ -269,7 +285,7 @@ void BoleiasInteligentes::showMainMenu()
 	}
 	case 2: // Veiculos
 	{
-		// TODO
+		return showVeiculosMenu();
 	}
 	case 3:
 	{
@@ -375,21 +391,14 @@ void BoleiasInteligentes::showAnunciosMenu()
 	}
 	case 2: // Editar anuncio
 	{
-		vector<Anuncio*> meusAnuncios;
-		for (size_t i = 0; i < anuncios.size(); ++i)
-		{
-			if (anuncios[i]->getAnunciante() == utilizadorAtual)
-			{
-				meusAnuncios.push_back(anuncios[i]);
-			}
-		}
 		try
 		{
+			vector<Anuncio*> meusAnuncios = getAnunciosByMembro(utilizadorAtual);
 			int input = showList(meusAnuncios, 0);
 			if (input == -1)
 			{
 				return showAnunciosMenu();
-			}
+			}	
 			else
 			{
 				clearScreen();
@@ -407,6 +416,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 				cout << "Pretende editar este anuncio (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
+					cout << "Bambora";
 					meusAnuncios[input]->editar();
 					clearScreen();
 					cout << "Anuncio editado com sucesso." << endl;
@@ -446,6 +456,92 @@ void BoleiasInteligentes::showVeiculosMenu()
 	};
 	showMenu(items);
 	int n = InputUtils::readDigit(0, items.size() - 1);
+	switch (n)
+	{
+	case 0: // Criar veiculo
+	{
+		Veiculo veiculo;
+		clearScreen();
+		veiculo.criar();
+		utilizadorAtual->addVeiculo(veiculo);
+		cout << "Veiculo criado com sucesso." << endl;
+		pause();
+	}
+	case 1: // Ver veiculos
+	{
+		try
+		{
+			int input = showList(utilizadorAtual->getVeiculos(), 0);
+			if (input == -1)
+			{
+				return showVeiculosMenu();
+			}
+			else
+			{
+				clearScreen();
+				utilizadorAtual->getVeiculos()[input].show();
+				pause();
+				return showVeiculosMenu();
+			}
+		}
+		catch (EmptyException<string> e)
+		{
+			clearScreen();
+			cout << "Erro: " << e.info << endl;
+			pause();
+			return showVeiculosMenu();
+		}
+	}
+	case 2: // Editar veiculo
+	{
+		try
+		{
+			int input = showList(utilizadorAtual->getVeiculos(), 0);
+			if (input == -1)
+			{
+				return showVeiculosMenu();
+			}
+			else
+			{
+				clearScreen();
+				utilizadorAtual->getVeiculos()[input].show();
+				pause();
+				clearScreen();
+				cout << "Pretende apagar este veiculo (y/n)?" << endl;
+				if (InputUtils::readYesOrNo('y', 'n'))
+				{
+					utilizadorAtual->removeVeiculo(&utilizadorAtual->getVeiculos()[input]); // Não falha, porque está garantido que o veículo existe
+					cout << "Veiculo apagado com sucesso." << endl;
+					pause();
+					return showVeiculosMenu();
+				}
+				cout << "Pretende editar este veiculo (y/n)?" << endl;
+				if (InputUtils::readYesOrNo('y', 'n'))
+				{
+					utilizadorAtual->getVeiculos()[input].editar();
+					clearScreen();
+					cout << "Veiculo editado com sucesso." << endl;
+					pause();
+					return showVeiculosMenu();
+				}
+				pause();
+				return showAnunciosMenu();
+			}
+		}
+		catch (EmptyException<string> e)
+		{
+			clearScreen();
+			cout << "Erro: " << e.info << endl;
+			pause();
+			return showAnunciosMenu();
+		}
+	}
+	case 3: // Voltar
+	{
+		clearScreen();
+		return showMainMenu();
+	}
+	}
 }
 
 template<class T>

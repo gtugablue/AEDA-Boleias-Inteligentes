@@ -12,10 +12,9 @@ Particular::Particular(string nome, string utilizador, string password) :Membro(
 
 void Particular::show()
 {
-	cout << "Particular " << endl;
-	cout << endl;
-	cout << "Nome :" << nome << endl;
-	cout << "Utilizador" << utilizador << endl;
+	cout << "Nome: " << nome << endl;
+	cout << "Utilizador: " << utilizador << endl;
+	cout << "Data de nascimento: " << dataNascimento << endl;
 	cout << endl << "Veiculos: " << endl;
 	for (size_t i = 0; i < veiculos.size(); i++)
 	{

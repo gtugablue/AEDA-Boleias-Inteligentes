@@ -12,7 +12,7 @@ void AnuncioProcura::criar()
 
 void AnuncioProcura::editar()
 {
-	return criar();
+	Anuncio::editar();
 }
 
 ostream& operator<<(ostream &os, const AnuncioProcura &anuncio)

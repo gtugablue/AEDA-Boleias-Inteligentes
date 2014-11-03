@@ -15,7 +15,8 @@ string InputUtils::readPassword()
 	{
 		if (c == '\b')
 		{
-			cout << '\b' << '\b';
+			password.pop_back();
+			cout << "\b \b";
 		}
 		else
 		{
