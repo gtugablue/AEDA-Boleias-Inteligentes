@@ -265,6 +265,7 @@ void BoleiasInteligentes::showMainMenu()
 		"Editar conta",
 		"Anuncios",
 		"Veiculos",
+		"Boleias",
 		"Logout"
 	};
 	showMenu(items);
@@ -287,7 +288,8 @@ void BoleiasInteligentes::showMainMenu()
 	{
 		return showVeiculosMenu();
 	}
-	case 3:
+	case 3: // Boleias
+	case 4: // Logout
 	{
 		clearScreen();
 		cout << "Tem a certeza que pretende fazer logout (y/n)?";

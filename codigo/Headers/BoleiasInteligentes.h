@@ -12,7 +12,7 @@
 #include "Combustivel.h"
 #include "Veiculo.h"
 #include "Preco.h"
-#include "Viagem.h"
+#include "Boleia.h"
 #include "Membro.h"
 #include "Particular.h"
 #include "Empresa.h"
@@ -34,7 +34,7 @@ private:
 	vector<Combustivel> combustiveis;
 	vector<Membro*> membros;
 	vector<Anuncio*> anuncios;
-	vector<Viagem> viagens;
+	vector<Boleia> viagens;
 	Membro* utilizadorAtual = NULL;
 public:
 	BoleiasInteligentes(const string &dataFolder);

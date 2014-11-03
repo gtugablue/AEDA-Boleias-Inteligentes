@@ -3,7 +3,7 @@
 
 #include "Membro.h"
 #include "Particular.h"
-#include "Viagem.h"
+#include "Boleia.h"
 #include "Preco.h"
 
 using namespace std;

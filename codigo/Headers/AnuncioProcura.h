@@ -2,7 +2,7 @@
 #define _ANUNCIO_PROCURA_H
 
 #include "Anuncio.h"
-#include "Viagem.h"
+#include "Boleia.h"
 #include <vector>
 
 class AnuncioProcura: public Anuncio
