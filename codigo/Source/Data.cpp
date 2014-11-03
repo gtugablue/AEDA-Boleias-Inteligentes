@@ -70,5 +70,11 @@ bool Data::operator< (const Data &data)const
 		return false;
 }
 
+void Data::showdata()
+{
+	cout << "Data :  " << endl;
+	cout << endl;
+	cout << dia << "/" << mes << "/" << ano;
+}
 
 

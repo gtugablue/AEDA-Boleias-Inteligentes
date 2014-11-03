@@ -32,6 +32,7 @@ public:
 	void setLocalFim(const Coordenadas &localFim);
 	void adicionarPassageiro(Particular* passageiro);
 	void removerPassageiro(Particular* passageiro);
+	void showViagem();
 };
 
 #endif

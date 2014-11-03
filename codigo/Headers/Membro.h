@@ -32,6 +32,7 @@ public:
 	void save(const string &file);
 	virtual void signup();
 	virtual void edit();
+	void showmembros();
 
 	bool operator==(const Membro &membro1) const;
 };

@@ -1,5 +1,6 @@
 #ifndef _COORDENADAS_H
 #define _COORDENADAS_H
+#include<iostream>
 
 using namespace std;
 
@@ -15,6 +16,7 @@ public:
 	double getLongitude() const;
 	void setLatitude(double latitude);
 	void setLongitude(double longitude);
+	void showcoord();
 };
 
 #endif
