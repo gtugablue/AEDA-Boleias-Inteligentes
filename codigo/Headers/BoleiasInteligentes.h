@@ -62,6 +62,7 @@ public:
 	void addParticular(const Particular &particular);
 	vector<AnuncioOferta*> getAnunciosOferta() const;
 	vector<AnuncioProcura*> getAnunciosProcura() const;
+	vector<Anuncio*> getAnunciosByMembro(Membro* membro) const;
 
 	Membro* login(const string &username, const string &password);
 

@@ -142,6 +142,19 @@ vector<AnuncioProcura*> BoleiasInteligentes::getAnunciosProcura() const
 	return anunciosProcura;
 }
 
+vector<Anuncio*> BoleiasInteligentes::getAnunciosByMembro(Membro* membro) const
+{
+	vector<Anuncio *> anunciosMembro;
+	for (size_t i = 0; i < anuncios.size(); ++i)
+	{
+		if (anuncios[i]->getAnunciante() == membro)
+		{
+			anunciosMembro.push_back(anuncios[i]);
+		}
+	}
+	return anunciosMembro;
+}
+
 Membro* BoleiasInteligentes::login(const string &username, const string &password)
 {
 	for (size_t i = 0; i < membros.size(); ++i)
@@ -260,7 +273,10 @@ void BoleiasInteligentes::showMainMenu()
 	{
 	case 0: // Editar conta
 	{
+		clearScreen();
 		utilizadorAtual->edit();
+		cout << "Conta editada com sucesso." << endl;
+		pause();
 		return showMainMenu();
 	}
 	case 1: // Anuncios
