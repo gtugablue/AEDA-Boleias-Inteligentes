@@ -32,8 +32,6 @@ private:
 	static const string ficheiroAnuncios;
 	vector<Combustivel> combustiveis;
 	vector<Membro*> membros;
-	vector<AnuncioProcura> anunciosProcura;
-	vector<AnuncioOferta> anunciosOferta;
 	vector<Anuncio*> anuncios;
 	vector<Viagem> viagens;
 	Membro* utilizadorAtual = NULL;
@@ -56,6 +54,8 @@ public:
 
 	void addEmpresa(const Empresa &empresa);
 	void addParticular(const Particular &particular);
+	vector<AnuncioOferta*> getAnunciosOferta() const;
+	vector<AnuncioProcura*> getAnunciosProcura() const;
 
 	Membro* login(const string &username, const string &password);
 

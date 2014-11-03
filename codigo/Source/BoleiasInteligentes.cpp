@@ -115,6 +115,32 @@ void BoleiasInteligentes::addParticular(const Particular &particular)
 	membros.push_back(new Particular(particular));
 }
 
+vector<AnuncioOferta*> BoleiasInteligentes::getAnunciosOferta() const
+{
+	vector<AnuncioOferta*> anunciosOferta;
+	for (size_t i = 0; i < anuncios.size(); ++i)
+	{
+		if (dynamic_cast<AnuncioOferta*>(anuncios[i]) != NULL)
+		{
+			anunciosOferta.push_back((AnuncioOferta*)anuncios[i]);
+		}
+	}
+	return anunciosOferta;
+}
+
+vector<AnuncioProcura*> BoleiasInteligentes::getAnunciosProcura() const
+{
+	vector<AnuncioProcura*> anunciosProcura;
+	for (size_t i = 0; i < anuncios.size(); ++i)
+	{
+		if (dynamic_cast<AnuncioProcura*>(anuncios[i]) != NULL)
+		{
+			anunciosProcura.push_back((AnuncioProcura*)anuncios[i]);
+		}
+	}
+	return anunciosProcura;
+}
+
 Membro* BoleiasInteligentes::login(const string &username, const string &password)
 {
 	for (size_t i = 0; i < membros.size(); ++i)
@@ -274,13 +300,11 @@ void BoleiasInteligentes::showAnunciosMenu()
 	{
 	case 0: // Criar anuncio
 	{
-		unsigned IDAnuncio;
+		Anuncio* anuncio;
 		if (dynamic_cast<Particular*>(utilizadorAtual) == NULL)
 		{
 			// Empresa
-			IDAnuncio = anunciosOferta.size();
-			anunciosOferta.push_back(AnuncioOferta());
-			anuncios.push_back(&anunciosOferta[IDAnuncio]);
+			anuncio = new AnuncioOferta();
 		}
 		else
 		{
@@ -288,19 +312,16 @@ void BoleiasInteligentes::showAnunciosMenu()
 			cout << "Que tipo de anuncio pretende criar ('o' para oferta e 'p' para procura)?" << endl;
 			if (InputUtils::readYesOrNo('o', 'p'))
 			{
-				IDAnuncio = anunciosOferta.size();
-				anunciosOferta.push_back(AnuncioOferta());
-				anuncios.push_back(&anunciosOferta[IDAnuncio]);
+				anuncio = new AnuncioOferta();
 			}
 			else
 			{
-				IDAnuncio = anunciosProcura.size();
-				anunciosProcura.push_back(AnuncioProcura());
-				anuncios.push_back(&anunciosProcura[IDAnuncio]);
+				anuncio = new AnuncioProcura();
 			}
 		}
-		anuncios[IDAnuncio]->criar();
-		anuncios[IDAnuncio]->setAnunciante(utilizadorAtual);
+		anuncio->criar();
+		anuncio->setAnunciante(utilizadorAtual);
+		anuncios.push_back(anuncio);
 		clearScreen();
 		cout << "Anuncio criado com sucesso." << endl;
 		pause();
@@ -309,32 +330,24 @@ void BoleiasInteligentes::showAnunciosMenu()
 	case 1: // Ver anuncios
 	{
 		int input;
-		try
+		clearScreen();
+		cout << "Que tipo de anuncios pretende ver ('o' para oferta e 'p' para procura)?" << endl;
+		if (InputUtils::readYesOrNo('o', 'p'))
 		{
-			cout << "Que tipo de anuncios pretende ver ('o' para oferta e 'p' para procura)?" << endl;
-			if (InputUtils::readYesOrNo('o', 'p'))
-			{
-				input = showList(anunciosOferta, 0);
-			}
-			else
-			{
-				input = showList(anunciosProcura, 0);
-			}
-			if (input == -1)
-			{
-				return showAnunciosMenu();
-			}
-			else
-			{
-				clearScreen();
-				anuncios[input]->show();
-				pause();
-				return showAnunciosMenu();
-			}
+			input = showList(getAnunciosOferta(), 0);
 		}
-		catch (EmptyException<string> e)
+		else
 		{
-			cout << "Erro: " << e.info << endl;
+			input = showList(getAnunciosProcura(), 0);
+		}
+		if (input == -1)
+		{
+			return showAnunciosMenu();
+		}
+		else
+		{
+			clearScreen();
+			anuncios[input]->show();
 			pause();
 			return showAnunciosMenu();
 		}
@@ -359,18 +372,22 @@ void BoleiasInteligentes::showAnunciosMenu()
 			clearScreen();
 			meusAnuncios[input]->show();
 			pause();
-			cout << "Pretende apagar este anuncio (y/n)?";
+			clearScreen();
+			cout << "Pretende apagar este anuncio (y/n)?" << endl;
 			if (InputUtils::readYesOrNo('y', 'n'))
 			{
-				apagarAnuncio(meusAnuncios[input]);
+				anuncios.erase(find(anuncios.begin(), anuncios.end(), meusAnuncios[input])); // Não falha, porque está garantido que o anúncio existe
+				cout << "Anuncio apagado com sucesso." << endl;
+				pause();
 				return showAnunciosMenu();
 			}
-			cout << "Pretende editar este anuncio (y/n)?";
+			cout << "Pretende editar este anuncio (y/n)?" << endl;
 			if (InputUtils::readYesOrNo('y', 'n'))
 			{
 				meusAnuncios[input]->editar();
 				clearScreen();
 				cout << "Anuncio editado com sucesso." << endl;
+				pause();
 				return showAnunciosMenu();
 			}
 			pause();
