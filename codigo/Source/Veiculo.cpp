@@ -93,9 +93,9 @@ void Veiculo::show()
 {
 	cout << "Veiculo" << endl;
 	cout << endl;
-	cout << "Marca:   " << marca << endl;
-	cout << "Mes:     " << mes << endl;
-	cout << "Ano:     " << ano << endl;
+	cout << "Marca: " << marca << endl;
+	cout << "Mes: " << mes << endl;
+	cout << "Ano: " << ano << endl;
 	cout << "Cilindrada: " << cilindrada << endl;
 	cout << endl;
 	cout << "Gasolina: " << endl;

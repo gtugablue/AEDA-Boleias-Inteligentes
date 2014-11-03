@@ -53,7 +53,7 @@ void Viagem::showViagem()
 	cout << endl;
 	for (size_t i = 0; i < passageiros.size(); i++)
 	{
-		passageiros.at(i)->showparticulares();
+		passageiros.at(i)->show();
 	}
 	cout << "Data de Inicio" << endl;
 	dataInicio.show();

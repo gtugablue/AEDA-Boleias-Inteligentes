@@ -335,11 +335,31 @@ void BoleiasInteligentes::showAnunciosMenu()
 		cout << "Que tipo de anuncios pretende ver ('o' para oferta e 'p' para procura)?" << endl;
 		if (InputUtils::readYesOrNo('o', 'p'))
 		{
-			input = showList(getAnunciosOferta(), 0);
+			try
+			{
+				input = showList(getAnunciosOferta(), 0);
+			}
+			catch (EmptyException<string> e)
+			{
+				clearScreen();
+				cout << "Erro: " << e.info << endl;
+				pause();
+				return showAnunciosMenu();
+			}
 		}
 		else
 		{
-			input = showList(getAnunciosProcura(), 0);
+			try
+			{
+				input = showList(getAnunciosProcura(), 0);
+			}
+			catch (EmptyException<string> e)
+			{
+				clearScreen();
+				cout << "Erro: " << e.info << endl;
+				pause();
+				return showAnunciosMenu();
+			}
 		}
 		if (input == -1)
 		{
@@ -363,34 +383,44 @@ void BoleiasInteligentes::showAnunciosMenu()
 				meusAnuncios.push_back(anuncios[i]);
 			}
 		}
-		int input = showList(meusAnuncios, 0);
-		if (input == -1)
+		try
 		{
-			return showAnunciosMenu();
-		}
-		else
-		{
-			clearScreen();
-			meusAnuncios[input]->show();
-			pause();
-			clearScreen();
-			cout << "Pretende apagar este anuncio (y/n)?" << endl;
-			if (InputUtils::readYesOrNo('y', 'n'))
+			int input = showList(meusAnuncios, 0);
+			if (input == -1)
 			{
-				anuncios.erase(find(anuncios.begin(), anuncios.end(), meusAnuncios[input])); // Não falha, porque está garantido que o anúncio existe
-				cout << "Anuncio apagado com sucesso." << endl;
-				pause();
 				return showAnunciosMenu();
 			}
-			cout << "Pretende editar este anuncio (y/n)?" << endl;
-			if (InputUtils::readYesOrNo('y', 'n'))
+			else
 			{
-				meusAnuncios[input]->editar();
 				clearScreen();
-				cout << "Anuncio editado com sucesso." << endl;
+				meusAnuncios[input]->show();
+				pause();
+				clearScreen();
+				cout << "Pretende apagar este anuncio (y/n)?" << endl;
+				if (InputUtils::readYesOrNo('y', 'n'))
+				{
+					anuncios.erase(find(anuncios.begin(), anuncios.end(), meusAnuncios[input])); // Não falha, porque está garantido que o anúncio existe
+					cout << "Anuncio apagado com sucesso." << endl;
+					pause();
+					return showAnunciosMenu();
+				}
+				cout << "Pretende editar este anuncio (y/n)?" << endl;
+				if (InputUtils::readYesOrNo('y', 'n'))
+				{
+					meusAnuncios[input]->editar();
+					clearScreen();
+					cout << "Anuncio editado com sucesso." << endl;
+					pause();
+					return showAnunciosMenu();
+				}
 				pause();
 				return showAnunciosMenu();
 			}
+		}
+		catch (EmptyException<string> e)
+		{
+			clearScreen();
+			cout << "Erro: " << e.info << endl;
 			pause();
 			return showAnunciosMenu();
 		}
