@@ -92,34 +92,34 @@ void Anuncio::criar()
 
 void Anuncio::editar()
 {
-	cout << "Pretende editar o titulo (y/n)?";
+	cout << "Pretende editar o titulo (y/n)?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		cout << "Introduza o novo titulo: ";
 		getline(cin, titulo);
 	}
-	cout << "Pretende editar a descricao (y/n)?";
+	cout << "Pretende editar a descricao (y/n)?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		cout << "Introduza a nova descricao: ";
 		getline(cin, descricao);
 	}
-	cout << "Pretende editar a origem (y/n)?";
+	cout << "Pretende editar a origem (y/n)?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		origem.editar();
 	}
-	cout << "Pretende editar o destino (y/n)?";
+	cout << "Pretende editar o destino (y/n)?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		destino.editar();
 	}
-	cout << "Pretende editar a data de inicio (y/n)?";
+	cout << "Pretende editar a data de inicio (y/n)?" << endl;
 	if(InputUtils::readYesOrNo('y', 'n'))
 	{
 		dataInicio.editar();
 	}
-	cout << "Pretende editar a data de fim (y/n)?";
+	cout << "Pretende editar a data de fim (y/n)?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		dataFim.editar();

@@ -416,6 +416,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 				cout << "Pretende editar este anuncio (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
+					cout << "Bambora";
 					meusAnuncios[input]->editar();
 					clearScreen();
 					cout << "Anuncio editado com sucesso." << endl;
