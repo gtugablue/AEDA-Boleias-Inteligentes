@@ -87,17 +87,3 @@ void Boleia::show()
 	cout << "Data de Fim: " << dataFim << endl;
 
 }
-
-void Boleia::cria()
-{
-	if (condutor != NULL)
-	{
-		condutor->criar();
-	}
-	veiculo->criar();
-	origem.criar();
-	destino.criar();
-	dataInicio.criar();
-	dataFim.criar();
-}
-

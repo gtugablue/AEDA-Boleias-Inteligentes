@@ -7,9 +7,9 @@ Membro::Membro()
 
 Membro::Membro(string nome, string utilizador, string password)
 {
-	this ->nome=nome;
-	this->utilizador=utilizador;
-	this ->password=password;
+	this->nome = nome;
+	this->utilizador = utilizador;
+	this->password = password;
 }
 
 string Membro::getNome()const
@@ -33,17 +33,17 @@ string Membro::getPassword()const
 
 void Membro::setNome(string &nome)
 {
-	this->nome=nome;
+	this->nome = nome;
 }
 
 void Membro::setPassword(string &password)
 {
-	this->password=password;
+	this->password = password;
 }
 
 void Membro::setUtilizador(string &utilizador)
 {
-	this ->utilizador=utilizador;
+	this->utilizador = utilizador;
 }
 
 void Membro::addVeiculo(Veiculo veiculo)
@@ -59,34 +59,6 @@ void Membro::removeVeiculo(Veiculo* veiculo)
 bool Membro::operator==(const Membro &membro1) const
 {
 	return utilizador == membro1.utilizador;
-}
-
-void Membro::signup()
-{
-	string utilizador2;
-	cout << "Nome: ";
-	nome = InputUtils::readString();
-	while (1)
-	{
-		try
-		{
-			cout << "Username: ";
-			getline(cin, utilizador2);
-			if (utilizador2 == utilizador)
-			{
-				throw InvalidUtilizador<string>("Utilizador já exitente");
-			}
-			else
-				utilizador = InputUtils::readString();
-		}
-			catch (InvalidUtilizador<string>e)
-			{
-				cout << "Erro: " << e.info << endl << endl;
-			}
-		}
-	cout << "Password: ";
-	password = InputUtils::readPassword();
-	cout << endl;
 }
 
 void Membro::edit()
@@ -140,16 +112,4 @@ void Membro::show()
 {
 	cout << "Nome: " << nome << endl;
 	cout << "Utilizador: " << utilizador << endl;
-}
-
-void Membro::criar()
-{
-	string name, utiliz, passw;
-	cout << "Introduza o nome do Membro" << endl;
-	getline(cin, nome);
-	cout << "Introduz o utilizador" << endl;
-	getline(cin, utiliz);
-	cout << "Introduz a password" << endl;
-	getline(cin, passw);
-
 }

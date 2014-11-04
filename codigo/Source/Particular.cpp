@@ -25,5 +25,4 @@ void Particular::show()
 
 void Particular::signup()
 {
-	Membro::signup();
 }

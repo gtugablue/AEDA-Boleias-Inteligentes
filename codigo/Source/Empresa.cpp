@@ -13,7 +13,6 @@ Membro(nome, utilizador, password)
 
 void Empresa::signup()
 {
-	Membro::signup();
 	cout << "Website (deixe em branco se nao existir): ";
 	website = InputUtils::readString();
 }

@@ -32,23 +32,22 @@ public:
 	void removeVeiculo(Veiculo* veiculo);
 	void load(ifstream &file);
 	void save(ofstream &file);
-	virtual void signup();
+	virtual void signup() = 0;
 	virtual void edit();
 	void show();
-	void criar();
 
 	bool operator==(const Membro &membro1) const;
+};
 
-	template<class T>
-	class InvalidUtilizador
+template<class T>
+class UtilizadorRepetidoException
+{
+public:
+	T info;
+	UtilizadorRepetidoException(T info)
 	{
-	public:
-		T info;
-		InvalidUtilizador(T info)
-		{
-			this->info = info;
-		}
-	};
+		this->info = info;
+	}
 };
 
 #endif

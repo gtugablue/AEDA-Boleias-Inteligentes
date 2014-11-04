@@ -40,7 +40,6 @@ public:
 	void removerPassageiro(Particular* passageiro);
 	bool isMembroInBoleia(Membro* membro) const;
 	void show();
-	void cria();
 	
 };
 

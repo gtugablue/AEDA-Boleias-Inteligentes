@@ -66,6 +66,7 @@ public:
 	vector<Boleia *> getBoleiasWhereMembroExists(Membro* membro);
 
 	Membro* login(const string &username, const string &password);
+	bool existsUtilizador(const string &username) const;
 
 
 	// MENU

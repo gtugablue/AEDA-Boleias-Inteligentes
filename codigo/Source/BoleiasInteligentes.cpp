@@ -175,6 +175,18 @@ Membro* BoleiasInteligentes::login(const string &username, const string &passwor
 	throw LoginException<string>("Username inexistente.");
 }
 
+bool BoleiasInteligentes::existsUtilizador(const string &username) const
+{
+	for (size_t i = 0; i < membros.size(); ++i)
+	{
+		if (membros[i]->getUtilizador() == username)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
 void BoleiasInteligentes::showMenu(vector<string> itens)
 {
 	for (size_t i = 0; i < itens.size(); ++i)
@@ -234,6 +246,28 @@ void BoleiasInteligentes::showLoginMenu()
 			cout << endl;
 			membro = new Particular();
 		}
+		cout << "Nome: ";
+		membro->setNome(InputUtils::readString());
+		try
+		{
+			cout << "Username: ";
+			membro->setUtilizador(InputUtils::readString());
+			if (existsUtilizador(membro->getUtilizador()))
+			{
+				throw UtilizadorRepetidoException<string>("Utilizador ja existente");
+			}
+		}
+		catch (UtilizadorRepetidoException<string> e)
+		{
+			clearScreen();
+			cout << "Erro: " << e.info << endl;
+			pause();
+			delete membro;
+			return showLoginMenu();
+		}
+		cout << "Password: ";
+		membro->setPassword(InputUtils::readPassword());
+		cout << endl;
 		membro->signup();
 		membros.push_back(membro);
 		clearScreen();
