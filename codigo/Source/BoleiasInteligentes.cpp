@@ -3,7 +3,6 @@
 const string BoleiasInteligentes::ficheiroCombustiveis = "combustiveis.txt";
 const string BoleiasInteligentes::ficheiroMembros = "membros.txt";
 const string BoleiasInteligentes::ficheiroAnuncios = "anuncios.txt";
-const string BoleiasInteligentes::ficheiroPrecos = "precos.txt";
 
 BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder) :
 dataFolder(dataFolder), utilizadorAtual(NULL)
@@ -196,7 +195,7 @@ void BoleiasInteligentes::showMenu(vector<string> itens)
 
 void BoleiasInteligentes::showLoginMenu()
 {
-	clearScreen();
+	OutputUtils::clearScreen();
 	vector<string> items =
 	{
 		"Login",
@@ -210,7 +209,7 @@ void BoleiasInteligentes::showLoginMenu()
 	{
 	case 0:	// Login
 	{
-		clearScreen();
+		OutputUtils::clearScreen();
 		cout << "Username: ";
 		string username = InputUtils::readString();
 		cout << "Password: ";
@@ -231,7 +230,7 @@ void BoleiasInteligentes::showLoginMenu()
 	}
 	case 1:	// Sign up
 	{
-		clearScreen();
+		OutputUtils::clearScreen();
 		cout << "Empresa? (y/n)";
 		Membro* membro;
 		if (InputUtils::readYesOrNo('y', 'n'))
@@ -257,7 +256,7 @@ void BoleiasInteligentes::showLoginMenu()
 		}
 		catch (UtilizadorRepetidoException<string> e)
 		{
-			clearScreen();
+			OutputUtils::clearScreen();
 			cout << "Erro: " << e.info << endl;
 			pause();
 			delete membro;
@@ -268,7 +267,7 @@ void BoleiasInteligentes::showLoginMenu()
 		cout << endl;
 		membro->signup();
 		membros.push_back(membro);
-		clearScreen();
+		OutputUtils::clearScreen();
 		cout << "Conta criada com sucesso!" << endl;
 		pause();
 		showLoginMenu();
@@ -277,7 +276,7 @@ void BoleiasInteligentes::showLoginMenu()
 	}
 	case 2: // Sair
 	{
-		clearScreen();
+		OutputUtils::clearScreen();
 		cout << "Tem a certeza que pretende sair (y/n)?";
 		if (InputUtils::readYesOrNo('y', 'n'))
 		{
@@ -287,7 +286,7 @@ void BoleiasInteligentes::showLoginMenu()
 		}
 		else
 		{
-			clearScreen();
+			OutputUtils::clearScreen();
 			showLoginMenu();
 		}
 	}
@@ -296,7 +295,7 @@ void BoleiasInteligentes::showLoginMenu()
 
 void BoleiasInteligentes::showMainMenu()
 {
-	clearScreen();
+	OutputUtils::clearScreen();
 	vector<string> items =
 	{
 		"Editar conta",
@@ -311,7 +310,7 @@ void BoleiasInteligentes::showMainMenu()
 	{
 	case 0: // Editar conta
 	{
-		clearScreen();
+		OutputUtils::clearScreen();
 		utilizadorAtual->edit();
 		cout << "Conta editada com sucesso." << endl;
 		pause();
@@ -331,7 +330,7 @@ void BoleiasInteligentes::showMainMenu()
 	}
 	case 4: // Logout
 	{
-		clearScreen();
+		OutputUtils::clearScreen();
 		cout << "Tem a certeza que pretende fazer logout (y/n)?";
 		if (InputUtils::readYesOrNo('y', 'n'))
 		{
@@ -345,7 +344,7 @@ void BoleiasInteligentes::showMainMenu()
 
 void BoleiasInteligentes::showAnunciosMenu()
 {
-	clearScreen();
+	OutputUtils::clearScreen();
 	vector<string> items =
 	{
 		"Criar anuncio",
@@ -381,7 +380,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 		anuncio->criar();
 		anuncio->setAnunciante(utilizadorAtual);
 		anuncios.push_back(anuncio);
-		clearScreen();
+		OutputUtils::clearScreen();
 		cout << "Anuncio criado com sucesso." << endl;
 		pause();
 		return showAnunciosMenu();
@@ -389,7 +388,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 	case 1: // Ver anuncios
 	{
 		int input;
-		clearScreen();
+		OutputUtils::clearScreen();
 		cout << "Que tipo de anuncios pretende ver ('o' para oferta e 'p' para procura)?" << endl;
 		if (InputUtils::readYesOrNo('o', 'p'))
 		{
@@ -399,7 +398,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 			}
 			catch (EmptyException<string> e)
 			{
-				clearScreen();
+				OutputUtils::clearScreen();
 				cout << "Erro: " << e.info << endl;
 				pause();
 				return showAnunciosMenu();
@@ -413,7 +412,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 			}
 			catch (EmptyException<string> e)
 			{
-				clearScreen();
+				OutputUtils::clearScreen();
 				cout << "Erro: " << e.info << endl;
 				pause();
 				return showAnunciosMenu();
@@ -425,7 +424,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 		}
 		else
 		{
-			clearScreen();
+			OutputUtils::clearScreen();
 			anuncios[input]->show();
 			pause();
 			return showAnunciosMenu();
@@ -443,10 +442,10 @@ void BoleiasInteligentes::showAnunciosMenu()
 			}
 			else
 			{
-				clearScreen();
+				OutputUtils::clearScreen();
 				meusAnuncios[input]->show();
 				pause();
-				clearScreen();
+				OutputUtils::clearScreen();
 				cout << "Pretende apagar este anuncio (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
@@ -460,7 +459,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 				{
 					cout << "Bambora";
 					meusAnuncios[input]->editar();
-					clearScreen();
+					OutputUtils::clearScreen();
 					cout << "Anuncio editado com sucesso." << endl;
 					pause();
 					return showAnunciosMenu();
@@ -471,7 +470,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 		}
 		catch (EmptyException<string> e)
 		{
-			clearScreen();
+			OutputUtils::clearScreen();
 			cout << "Erro: " << e.info << endl;
 			pause();
 			return showAnunciosMenu();
@@ -479,7 +478,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 	}
 	case 3: // Voltar
 	{
-		clearScreen();
+		OutputUtils::clearScreen();
 		return showMainMenu();
 	}
 	}
@@ -530,7 +529,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 		}
 		catch (EmptyException<string> e)
 		{
-			clearScreen();
+			OutputUtils::clearScreen();
 			cout << "Erro: " << e.info << endl;
 			pause();
 			return showVeiculosMenu();
@@ -547,10 +546,10 @@ void BoleiasInteligentes::showVeiculosMenu()
 			}
 			else
 			{
-				clearScreen();
+				OutputUtils::clearScreen();
 				utilizadorAtual->getVeiculos()[input].show();
 				pause();
-				clearScreen();
+				OutputUtils::clearScreen();
 				cout << "Pretende apagar este veiculo (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
@@ -563,7 +562,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
 					utilizadorAtual->getVeiculos()[input].editar();
-					clearScreen();
+					OutputUtils::clearScreen();
 					cout << "Veiculo editado com sucesso." << endl;
 					pause();
 					return showVeiculosMenu();
@@ -574,7 +573,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 		}
 		catch (EmptyException<string> e)
 		{
-			clearScreen();
+			OutputUtils::clearScreen();
 			cout << "Erro: " << e.info << endl;
 			pause();
 			return showAnunciosMenu();
@@ -582,7 +581,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 	}
 	case 3: // Voltar
 	{
-		clearScreen();
+		OutputUtils::clearScreen();
 		return showMainMenu();
 	}
 	}
@@ -590,7 +589,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 
 void BoleiasInteligentes::showBoleiasMenu()
 {
-	clearScreen();
+	OutputUtils::clearScreen();
 	vector<string> items =
 	{
 		"Converter anuncio em boleia",
@@ -618,10 +617,10 @@ void BoleiasInteligentes::showBoleiasMenu()
 				{
 					throw AnuncioIncompletoException<string>("Impossivel converter um anuncio incompleto numa boleia.");
 				}
-				clearScreen();
+				OutputUtils::clearScreen();
 				meusAnuncios[input]->show();
 				pause();
-				clearScreen();
+				OutputUtils::clearScreen();
 				if (meusAnuncios[input]->getAnunciante() != utilizadorAtual)
 				{
 					throw ProibidoException<string>("Apenas o criador do anuncio pode converte-lo numa boleia.");
@@ -659,10 +658,10 @@ void BoleiasInteligentes::showBoleiasMenu()
 			}
 			else
 			{
-				clearScreen();
+				OutputUtils::clearScreen();
 				minhasBoleias[input]->show();
 				pause();
-				clearScreen();
+				OutputUtils::clearScreen();
 			}
 		}
 		catch (EmptyException<string> e)
@@ -684,7 +683,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 			}
 			else
 			{
-				clearScreen();
+				OutputUtils::clearScreen();
 				if (minhasBoleias[input]->getCondutor() == utilizadorAtual)
 				{
 					// Apagar boleia
@@ -704,7 +703,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 					cout << "Removido da boleia com sucesso." << endl;
 				}
 				pause();
-				clearScreen();
+				OutputUtils::clearScreen();
 			}
 		}
 		catch (EmptyException<string> e)
@@ -716,7 +715,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 	}
 	case 3: // Voltar
 	{
-		clearScreen();
+		OutputUtils::clearScreen();
 		return showMainMenu();
 	}
 	}
