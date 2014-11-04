@@ -40,3 +40,9 @@ void Combustivel::show() const
 {
 	cout << "Combustivel: " << nome << endl;
 }
+
+void Combustivel::save(ofstream &file) const
+{
+	file << nome << endl;
+	file << preco << endl;
+}

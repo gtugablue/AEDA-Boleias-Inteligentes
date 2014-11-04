@@ -33,6 +33,7 @@ void BoleiasInteligentes::loadCombustiveis()
 	while (getline(file, nome))
 	{
 		file >> n;
+		file.ignore(1000, '\n');
 		Combustivel p = Combustivel(nome, n);
 		combustiveis.push_back(p);
 	}
@@ -76,12 +77,10 @@ void BoleiasInteligentes::save()
 
 void BoleiasInteligentes::saveCombustiveis()
 {
-	ofstream file;
-	file.open(ficheiroCombustiveis);
+	ofstream file(dataFolder + ficheiroCombustiveis);
 	for (size_t i = 0; i < combustiveis.size(); i++)
 	{
-		file << combustiveis.at(i).getNome() << endl;
-		file << combustiveis.at(i).getPreco() << endl;
+		combustiveis[i].save(file);
 	}
 }
 
@@ -251,6 +250,7 @@ void BoleiasInteligentes::showLoginMenu()
 		if (InputUtils::readYesOrNo('y', 'n'))
 		{
 			save();
+			cout << endl;
 			return;
 		}
 		else

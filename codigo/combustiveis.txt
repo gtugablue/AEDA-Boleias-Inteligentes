@@ -1,4 +1,4 @@
 Gasolina 95
 1.61
-
-1.61
+Gasoleo
+1.3

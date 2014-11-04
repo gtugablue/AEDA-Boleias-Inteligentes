@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -19,6 +20,7 @@ public:
 	float getPreco() const;
 	void criar();
 	void show() const;
+	void save(ofstream &file) const;
 };
 
 #endif
