@@ -89,4 +89,12 @@ void Boleia::cria()
 	dataFim.criar();
 }
 
-
+void Boleia::edit()
+{
+	cout << "Pretende alterar o titulo (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Introduza o novo titulo: ";
+		getline(cin, titulo);
+	}
+}

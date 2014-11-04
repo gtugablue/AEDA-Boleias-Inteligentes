@@ -7,6 +7,7 @@
 #include "Data.h"
 #include "Membro.h"
 #include "Hora.h"
+#include "Preco.h"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ private:
 	Veiculo* veiculo; // NULL se ainda não existir
 	Coordenadas origem;
 	Coordenadas destino;
+	Preco preco;
 	vector<Particular*> passageiros; // Número total de pessoas no veículo = passageiros + 1 (condutor)
 	Data dataInicio;
 	Data dataFim; // se for igual ao inicio é um evento
@@ -39,6 +41,7 @@ public:
 	bool isMembroInBoleia(Membro* membro) const;
 	void show();
 	void cria();
+	void edit();
 };
 
 #endif

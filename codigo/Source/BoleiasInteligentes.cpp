@@ -606,6 +606,8 @@ void BoleiasInteligentes::showBoleiasMenu()
 		catch (ProibidoException<string> e)
 		{
 			cout << "Erro: " << e.info << endl;
+			pause();
+			return showBoleiasMenu();
 		}
 	}
 	case 1: // Ver minhas boleias
@@ -629,11 +631,34 @@ void BoleiasInteligentes::showBoleiasMenu()
 		catch (EmptyException<string> e)
 		{
 			cout << "Erro: " << e.info << endl;
+			pause();
+			return showBoleiasMenu();
 		}
 	}
 	case 2: // Editar boleias
 	{
-		// TODO
+		try
+		{
+			vector<Boleia *> minhasBoleias;
+			int input = showList(getBoleiasByMembro(utilizadorAtual));
+			if (input == -1)
+			{
+				return showBoleiasMenu();
+			}
+			else
+			{
+				clearScreen();
+				minhasBoleias[input]->editar();
+				pause();
+				clearScreen();
+			}
+		}
+		catch (EmptyException<string> e)
+		{
+			cout << "Erro: " << e.info << endl;
+			pause();
+			return showBoleiasMenu();
+		}
 	}
 	case 3: // Voltar
 	{
