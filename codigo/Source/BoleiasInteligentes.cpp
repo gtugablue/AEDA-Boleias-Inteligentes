@@ -71,9 +71,9 @@ void BoleiasInteligentes::loadAnuncios()
 	unsigned numAnuncios;
 	file >> numAnuncios;
 	bool oferta;
+	Anuncio *anuncio;
 	for (size_t i = 0; i < numAnuncios; ++i)
 	{
-		Anuncio *anuncio;
 		file >> oferta;
 		file.ignore(1000, '\n');
 		if (oferta)
