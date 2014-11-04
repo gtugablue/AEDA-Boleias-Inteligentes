@@ -41,7 +41,7 @@ public:
 	bool isMembroInBoleia(Membro* membro) const;
 	void show();
 	void cria();
-	void edit();
+	
 };
 
 #endif
