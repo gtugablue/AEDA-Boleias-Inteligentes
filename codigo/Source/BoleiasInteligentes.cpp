@@ -20,9 +20,7 @@ void BoleiasInteligentes::start()
 void BoleiasInteligentes::load()
 {
 	loadCombustiveis();
-	//loadMembros();
-	// APAGAR A PROXIMA LINHA
-	membros.push_back(new Particular("Gustavo", "gtugablue", "123"));
+	loadMembros();
 }
 
 void BoleiasInteligentes::loadCombustiveis()
@@ -56,8 +54,8 @@ void BoleiasInteligentes::loadMembros()
 
 	for (size_t i = 0; i < N; ++i)
 	{
-		cin >> empresa;
-		cin.ignore(1000, '\n');
+		file >> empresa;
+		file.ignore(1000, '\n');
 		Membro* membro;
 		if (empresa)
 		{
@@ -69,10 +67,9 @@ void BoleiasInteligentes::loadMembros()
 		}
 		membro->load();
 		membros.push_back(membro);
+		membro->show();
+		pause();
 	}
-
-
-
 }
 
 void BoleiasInteligentes::save()

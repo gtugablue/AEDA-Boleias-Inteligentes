@@ -73,7 +73,7 @@ void Boleia::show()
 	cout << "Boleia" << endl;
 	cout << endl;
 	cout << "Condutor" << endl;
-	condutor->showmembros();
+	condutor->show();
 	cout << "Coordenadas de Inicio" <<endl;
 	origem.showcoord();
 	cout << "Coordenadas de Fim" << endl;
@@ -92,7 +92,7 @@ void Boleia::cria()
 {
 	if (condutor != NULL)
 	{
-		condutor->criaMembro();
+		condutor->criar();
 	}
 	veiculo->criar();
 	origem.criar();

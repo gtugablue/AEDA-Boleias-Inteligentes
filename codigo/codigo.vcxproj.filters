@@ -115,10 +115,7 @@
     <Text Include="combustiveis.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="particulares.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="empresas.txt">
+    <Text Include="membros.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

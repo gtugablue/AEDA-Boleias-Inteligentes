@@ -96,9 +96,8 @@ void Membro::load()
 	float preco;
 	string filename, nome, utilizador, password, marca, name;
 	unsigned mes, ano, cilindrada;
-	while (!file.eof())
+	while (getline(file, nome))
 	{
-		getline(file, nome);
 		getline(file, utilizador);
 		getline(file, password);
 
@@ -110,11 +109,8 @@ void Membro::load()
 			Veiculo veiculo;
 			veiculo.load();
 			veiculos.push_back(veiculo);
-
 		}
-
 	}
-
 }
 
 void Membro::save(const string &filename)
@@ -135,17 +131,13 @@ void Membro::save(const string &filename)
 	}
 }
 
-void Membro::showmembros()
+void Membro::show()
 {
-	cout << "Membro " << endl;
-	cout << endl;
-	cout << "Nome :" << getNome() << endl;
-	cout << "Utilizador" << getUtilizador() << endl;
-	cout << endl;
-	
+	cout << "Nome: " << nome << endl;
+	cout << "Utilizador: " << utilizador << endl;
 }
 
-void Membro::criaMembro()
+void Membro::criar()
 {
 	string name, utiliz, passw;
 	cout << "Introduza o nome do Membro" << endl;

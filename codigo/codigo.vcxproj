@@ -114,8 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="combustiveis.txt" />
-    <Text Include="empresas.txt" />
-    <Text Include="particulares.txt" />
+    <Text Include="membros.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
