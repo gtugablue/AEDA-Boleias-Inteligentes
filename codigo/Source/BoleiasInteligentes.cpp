@@ -28,7 +28,7 @@ void BoleiasInteligentes::loadCombustiveis()
 	string nome;
 	float n;
 	fstream file;
-	file.open(ficheiroCombustiveis);
+	file.open(dataFolder + ficheiroCombustiveis);
 
 	while (getline(file, nome))
 	{
@@ -40,19 +40,16 @@ void BoleiasInteligentes::loadCombustiveis()
 
 void BoleiasInteligentes::loadMembros()
 {
-
-	int N;
+	unsigned numMembros;
 	int i = 0;
-	fstream file;
+	ifstream file;
 	float preco;
 	string filename, nome, utilizador, password, marca, name;
 	unsigned mes, ano, cilindrada;
 	file.open(ficheiroMembros);
 	bool empresa;
-
-	file >> N;
-
-	for (size_t i = 0; i < N; ++i)
+	file >> numMembros;
+	for (size_t i = 0; i < numMembros; ++i)
 	{
 		file >> empresa;
 		file.ignore(1000, '\n');
@@ -65,7 +62,7 @@ void BoleiasInteligentes::loadMembros()
 		{
 			membro = new Particular();
 		}
-		membro->load();
+		membro->load(file);
 		membros.push_back(membro);
 		membro->show();
 		pause();
@@ -706,7 +703,7 @@ int BoleiasInteligentes::showList(const vector<T> &v, int page) const
 	{
 		throw EmptyException<string>("Nenhum elemento a listar.");
 	}
-	for (size_t i = page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE; page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE + i % BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE < v.size() && i < (page + 1) * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE; ++i)
+	for (size_t i = page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE; (unsigned)(page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE + i % BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE) < v.size() && i < (unsigned)((page + 1) * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE); ++i)
 	{
 		cout << i % BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE << ". " << v[i] << endl;
 	}
@@ -770,7 +767,7 @@ void BoleiasInteligentes::loadAnuncios()
 	bool oferta;
 	string titulo;
 	string descricao;
-	int numAnuncios, numPassageiros, ID;
+	unsigned numAnuncios, numPassageiros, ID;
 	ifstream file;
 	file.open(ficheiroAnuncios);
 	file >> numAnuncios;

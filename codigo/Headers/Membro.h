@@ -30,8 +30,8 @@ public:
 	void setVeiculos(const vector<Veiculo> &veiculo);
 	void addVeiculo(Veiculo veiculo);
 	void removeVeiculo(Veiculo* veiculo);
-	void load();
-	void save(const string &file);
+	void load(ifstream &file);
+	void save(const string &ficheiro);
 	virtual void signup();
 	virtual void edit();
 	void show();

@@ -88,22 +88,18 @@ void Membro::edit()
 	}
 }
 
-void Membro::load()
+void Membro::load(ifstream &file)
 {
 	int N;
 	int i = 0;
-	fstream file;
-	float preco;
-	string filename, nome, utilizador, password, marca, name;
 	unsigned mes, ano, cilindrada;
+	cout << "b";
 	while (getline(file, nome))
 	{
 		getline(file, utilizador);
 		getline(file, password);
-
-
 		file >> N;
-		cin.ignore(1000, '\n');
+		file.ignore(1000, '\n');
 		for (size_t i = 0; i < N; ++i)
 		{
 			Veiculo veiculo;
@@ -111,12 +107,13 @@ void Membro::load()
 			veiculos.push_back(veiculo);
 		}
 	}
+	file.close();
 }
 
-void Membro::save(const string &filename)
+void Membro::save(const string &ficheiro)
 {
 	fstream file;
-	file.open(filename);
+	file.open(ficheiro);
 	file << getNome() << endl;
 	file << getUtilizador() << endl;
 	file << getPassword() << endl;
@@ -129,6 +126,7 @@ void Membro::save(const string &filename)
 		file << veiculos.at(i).getCombustivel()->getNome() << endl;
 		file << veiculos.at(i).getCombustivel()->getPreco() << endl;
 	}
+	file.close();
 }
 
 void Membro::show()
