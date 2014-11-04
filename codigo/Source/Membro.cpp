@@ -80,18 +80,16 @@ void Membro::edit()
 void Membro::load(ifstream &file)
 {
 	unsigned numVeiculos;
-	while (getline(file, nome))
+	getline(file, nome);
+	getline(file, utilizador);
+	getline(file, password);
+	file >> numVeiculos;
+	file.ignore(1000, '\n');
+	for (size_t i = 0; i < numVeiculos; ++i)
 	{
-		getline(file, utilizador);
-		getline(file, password);
-		file >> numVeiculos;
-		file.ignore(1000, '\n');
-		for (size_t i = 0; i < numVeiculos; ++i)
-		{
-			Veiculo veiculo;
-			veiculo.load();
-			veiculos.push_back(veiculo);
-		}
+		Veiculo veiculo;
+		veiculo.load();
+		veiculos.push_back(veiculo);
 	}
 	file.close();
 }
@@ -99,8 +97,9 @@ void Membro::load(ifstream &file)
 void Membro::save(ofstream &file)
 {
 	file << nome << endl;
-	file << getUtilizador() << endl;
-	file << getPassword() << endl;
+	file << utilizador << endl;
+	file << password << endl;
+	file << veiculos.size() << endl;
 	for (size_t i = 0; i < veiculos.size(); i++)
 	{
 		// TODO

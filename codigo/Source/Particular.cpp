@@ -26,3 +26,9 @@ void Particular::show()
 void Particular::signup()
 {
 }
+
+void Particular::save(ofstream &file)
+{
+	file << 0 << endl;
+	Membro::save(file);
+}

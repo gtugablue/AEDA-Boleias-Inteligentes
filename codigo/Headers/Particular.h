@@ -17,6 +17,7 @@ public:
 	Particular(string nome, string utilizador, string password);
 	void show();
 	void signup();
+	void save(ofstream &file);
 };
 
 #endif

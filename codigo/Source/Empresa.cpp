@@ -27,3 +27,9 @@ void Empresa::edit()
 		getline(cin, website);
 	}
 }
+
+void Empresa::save(ofstream &file)
+{
+	file << 1 << endl;
+	Membro::save(file);
+}

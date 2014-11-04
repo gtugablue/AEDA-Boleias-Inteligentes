@@ -42,11 +42,8 @@ void BoleiasInteligentes::loadCombustiveis()
 void BoleiasInteligentes::loadMembros()
 {
 	unsigned numMembros;
-	int i = 0;
 	ifstream file(dataFolder + ficheiroMembros);
 	float preco;
-	string filename, nome, utilizador, password, marca, name;
-	unsigned mes, ano, cilindrada;
 	bool empresa;
 	file >> numMembros;
 	for (size_t i = 0; i < numMembros; ++i)
@@ -88,13 +85,12 @@ void BoleiasInteligentes::saveMembros()
 {
 	ofstream file;
 	file.open(dataFolder + ficheiroMembros);
-	file << membros.size();
+	file << membros.size() << endl;
 	for (size_t i = 0; i < membros.size(); ++i)
 	{
 		membros[i]->save(file);
 	}
 	file.close();
-
 }
 
 void BoleiasInteligentes::addEmpresa(const Empresa &empresa)
@@ -800,7 +796,7 @@ void BoleiasInteligentes::loadAnuncios()
 	bool oferta;
 	string titulo;
 	string descricao;
-	unsigned numAnuncios, numPassageiros, ID;
+	unsigned numAnuncios, ID;
 	ifstream file;
 	file.open(ficheiroAnuncios);
 	file >> numAnuncios;

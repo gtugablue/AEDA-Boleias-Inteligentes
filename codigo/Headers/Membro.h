@@ -31,11 +31,11 @@ public:
 	void addVeiculo(Veiculo veiculo);
 	void removeVeiculo(Veiculo* veiculo);
 	void load(ifstream &file);
-	void save(ofstream &file);
+	virtual void save(ofstream &file);
 	virtual void signup() = 0;
 	virtual void edit();
 	void show();
-
+	
 	bool operator==(const Membro &membro1) const;
 };
 
