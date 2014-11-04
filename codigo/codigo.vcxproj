@@ -90,6 +90,7 @@
     <ClCompile Include="Source\InputUtils.cpp" />
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\Membro.cpp" />
+    <ClCompile Include="Source\OutputUtils.cpp" />
     <ClCompile Include="Source\Particular.cpp" />
     <ClCompile Include="Source\Preco.cpp" />
     <ClCompile Include="Source\Veiculo.cpp" />
@@ -107,6 +108,7 @@
     <ClInclude Include="Headers\Hora.h" />
     <ClInclude Include="Headers\InputUtils.h" />
     <ClInclude Include="Headers\Membro.h" />
+    <ClInclude Include="Headers\OutputUtils.h" />
     <ClInclude Include="Headers\Particular.h" />
     <ClInclude Include="Headers\Preco.h" />
     <ClInclude Include="Headers\Veiculo.h" />

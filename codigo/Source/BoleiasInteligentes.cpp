@@ -59,7 +59,7 @@ void BoleiasInteligentes::loadMembros()
 		{
 			membro = new Particular();
 		}
-		membro->load(file);
+		membro->load(file, &combustiveis);
 		membros.push_back(membro);
 	}
 }
@@ -85,7 +85,7 @@ void BoleiasInteligentes::saveMembros()
 	file << membros.size() << endl;
 	for (size_t i = 0; i < membros.size(); ++i)
 	{
-		membros[i]->save(file);
+		membros[i]->save(file, &combustiveis);
 	}
 	file.close();
 }
@@ -183,19 +183,6 @@ bool BoleiasInteligentes::existsUtilizador(const string &username) const
 		}
 	}
 	return false;
-}
-
-Combustivel* BoleiasInteligentes::escolherCombustivel()
-{
-	int input = showList(combustiveis);
-	if (input == -1)
-	{
-		return escolherCombustivel();
-	}
-	else
-	{
-		return &combustiveis[input];
-	}
 }
 
 void BoleiasInteligentes::showMenu(vector<string> itens)
@@ -408,7 +395,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 		{
 			try
 			{
-				input = showList(getAnunciosOferta(), 0);
+				input = OutputUtils::showList(getAnunciosOferta(), 0);
 			}
 			catch (EmptyException<string> e)
 			{
@@ -422,7 +409,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 		{
 			try
 			{
-				input = showList(getAnunciosProcura(), 0);
+				input = OutputUtils::showList(getAnunciosProcura(), 0);
 			}
 			catch (EmptyException<string> e)
 			{
@@ -449,7 +436,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 		try
 		{
 			vector<Anuncio*> meusAnuncios = getAnunciosByMembro(utilizadorAtual);
-			int input = showList(meusAnuncios, 0);
+			int input = OutputUtils::showList(meusAnuncios, 0);
 			if (input == -1)
 			{
 				return showAnunciosMenu();
@@ -501,7 +488,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 
 void BoleiasInteligentes::showVeiculosMenu()
 {
-	clearScreen();
+	OutputUtils::clearScreen();
 	vector<string> items =
 	{
 		"Criar veiculo",
@@ -516,9 +503,8 @@ void BoleiasInteligentes::showVeiculosMenu()
 	case 0: // Criar veiculo
 	{
 		Veiculo veiculo;
-		clearScreen();
-		veiculo.criar();
-		veiculo.setCombustivel(escolherCombustivel());
+		OutputUtils::clearScreen();
+		veiculo.criar(&combustiveis);
 		utilizadorAtual->addVeiculo(veiculo);
 		cout << "Veiculo criado com sucesso." << endl;
 		pause();
@@ -528,14 +514,15 @@ void BoleiasInteligentes::showVeiculosMenu()
 	{
 		try
 		{
-			int input = showList(utilizadorAtual->getVeiculos(), 0);
+			OutputUtils::clearScreen();
+			int input = OutputUtils::showList(utilizadorAtual->getVeiculos(), 0);
 			if (input == -1)
 			{
 				return showVeiculosMenu();
 			}
 			else
 			{
-				clearScreen();
+				OutputUtils::clearScreen();
 				utilizadorAtual->getVeiculos()[input].show();
 				pause();
 				return showVeiculosMenu();
@@ -553,7 +540,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 	{
 		try
 		{
-			int input = showList(utilizadorAtual->getVeiculos(), 0);
+			int input = OutputUtils::showList(utilizadorAtual->getVeiculos(), 0);
 			if (input == -1)
 			{
 				return showVeiculosMenu();
@@ -620,7 +607,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 		try
 		{
 			vector<Anuncio *> meusAnuncios;
-			int input = showList(getAnunciosByMembro(utilizadorAtual));
+			int input = OutputUtils::showList(getAnunciosByMembro(utilizadorAtual));
 			if (input == -1)
 			{
 				return showBoleiasMenu();
@@ -665,7 +652,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 		try
 		{
 			vector<Boleia *> minhasBoleias;
-			int input = showList(getBoleiasWhereMembroExists(utilizadorAtual));
+			int input = OutputUtils::showList(getBoleiasWhereMembroExists(utilizadorAtual));
 			if (input == -1)
 			{
 				return showBoleiasMenu();
@@ -690,7 +677,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 		try
 		{
 			vector<Boleia *> minhasBoleias;
-			int input = showList(getBoleiasWhereMembroExists(utilizadorAtual));
+			int input = OutputUtils::showList(getBoleiasWhereMembroExists(utilizadorAtual));
 			if (input == -1)
 			{
 				return showBoleiasMenu();
@@ -732,69 +719,6 @@ void BoleiasInteligentes::showBoleiasMenu()
 		clearScreen();
 		return showMainMenu();
 	}
-	}
-}
-
-template<class T>
-int BoleiasInteligentes::showList(const vector<T> &v)
-{
-	return showList(v, 0);
-}
-
-template<class T>
-int BoleiasInteligentes::showList(const vector<T> &v, int page)
-{
-	clearScreen();
-	if (v.size() == 0)
-	{
-		throw EmptyException<string>("Nenhum elemento a listar.");
-	}
-	for (size_t i = page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE; (unsigned)(page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE + i % BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE) < v.size() && i < (unsigned)((page + 1) * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE); ++i)
-	{
-		cout << i % BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE << ". " << v[i] << endl;
-	}
-	cout << endl;
-	cout << "7. Anterior" << endl;
-	cout << "8. Seguinte" << endl;
-	cout << "9. Sair" << endl;
-	unsigned input;
-	try
-	{
-		do
-		{
-			input = InputUtils::readDigit(0, 9);
-		} while (input > v.size() - page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE && input < 7);
-		switch (input)
-		{
-		case 7:
-		{
-			if (page == 0)
-			{
-				throw PaginaInexistenteException<string>("Pagina inexistente.");
-			}
-			return showList(v, page - 1);
-		}
-		case 8:
-		{
-			if (page == v.size() / BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE)
-			{
-				throw PaginaInexistenteException<string>("Pagina inexistente");
-			}
-			return showList(v, page + 1);
-		}
-		case 9:
-		{
-			return -1;
-		}
-		default:	// Option selected
-		{
-			return page * BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE + input;
-		}
-		}
-	}
-	catch (PaginaInexistenteException<string> e)
-	{
-		return showList(v, page);
 	}
 }
 

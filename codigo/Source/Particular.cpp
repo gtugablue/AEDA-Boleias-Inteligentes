@@ -27,8 +27,8 @@ void Particular::signup()
 {
 }
 
-void Particular::save(ofstream &file)
+void Particular::save(ofstream &file, vector<Combustivel> *combustiveis)
 {
 	file << 0 << endl;
-	Membro::save(file);
+	Membro::save(file, combustiveis);
 }

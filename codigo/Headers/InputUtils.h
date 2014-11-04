@@ -14,6 +14,7 @@ public:
 	static string readPassword();
 	static int readDigit(unsigned from, unsigned to);
 	static bool readYesOrNo(unsigned char yes, unsigned char no);
+	static void pause();
 };
 
 template<class T>

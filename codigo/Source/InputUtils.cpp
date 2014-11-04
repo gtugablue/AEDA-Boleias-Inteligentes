@@ -51,3 +51,8 @@ bool InputUtils::readYesOrNo(unsigned char yes, unsigned char no)
 	} while (c != yes && c != no);
 	return c == yes;
 }
+
+void InputUtils::pause()
+{
+	system("pause");
+}

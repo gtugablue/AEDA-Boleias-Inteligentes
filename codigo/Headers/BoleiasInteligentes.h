@@ -18,10 +18,9 @@
 #include "Empresa.h"
 #include <algorithm>
 #include "InputUtils.h"
+#include "OutputUtils.h"
 
 using namespace std;
-
-#define BOLEIAS_INTELIGENTES_LIST_ITEMS_PER_PAGE	8
 
 class BoleiasInteligentes
 {
@@ -68,7 +67,6 @@ public:
 
 	Membro* login(const string &username, const string &password);
 	bool existsUtilizador(const string &username) const;
-	Combustivel* escolherCombustivel();
 
 
 	// MENU
@@ -78,11 +76,6 @@ public:
 	void showAnunciosMenu();
 	void showVeiculosMenu();
 	void showBoleiasMenu();
-
-	template<class T>
-	static int showList(const vector<T> &v);
-	template<class T>
-	static int showList(const vector<T> &v, int page);
 
 	void showAnuncios();
 	void showVehicles();
@@ -98,28 +91,6 @@ class LoginException
 public:
 	T info;
 	LoginException(T info)
-	{
-		this->info = info;
-	}
-};
-
-template<class T>
-class PaginaInexistenteException
-{
-public:
-	T info;
-	PaginaInexistenteException(T info)
-	{
-		this->info = info;
-	}
-};
-
-template<class T>
-class EmptyException
-{
-public:
-	T info;
-	EmptyException(T info)
 	{
 		this->info = info;
 	}

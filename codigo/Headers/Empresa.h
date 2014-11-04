@@ -15,7 +15,7 @@ public:
 	Empresa(const string &nome, const string &utilizador, const string &password, const string &website);
 	void signup();
 	void edit();
-	void save(ofstream &file);
+	void save(ofstream &file, vector<Combustivel> *combustiveis);
 };
 
 #endif

@@ -7,7 +7,7 @@
 #include <fstream>
 #include "Data.h"
 #include <vector>
-
+#include "OutputUtils.h"
 #include "InputUtils.h"
 
 using namespace std;
@@ -24,8 +24,8 @@ private:
 	unsigned int lotacao;
 public:
 	Veiculo();
-	Veiculo(string marca, unsigned mes, unsigned ano, unsigned cilindrada, Combustivel* combustivel);
 	string getMarca() const;
+	string getModelo() const;
 	unsigned getMes() const;
 	unsigned getAno() const;
 	unsigned getCilindrada() const;
@@ -33,12 +33,12 @@ public:
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);
 	void setCilindrada(unsigned cilindrada);
-	void load(ifstream &file); // TODO
-	void save(ofstream &file);
+	void load(ifstream &file, vector<Combustivel> *combustiveis);
+	void save(ofstream &file, vector<Combustivel> *combustiveis);
 	void setCombustivel(Combustivel *combustivel);
-	void escolherCombustivel();
+	Combustivel* escolherCombustivel(vector<Combustivel> *combustiveis);
 	void show() const;
-	void criar();
+	void criar(vector<Combustivel> *combustiveis);
 	void editar();
 
 	friend ostream& operator<<(ostream &os, const Veiculo &veiculo);

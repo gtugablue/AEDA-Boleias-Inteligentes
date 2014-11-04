@@ -5,18 +5,14 @@ Veiculo::Veiculo()
 
 }
 
-Veiculo::Veiculo(string marca, unsigned mes, unsigned ano, unsigned cilindrada, Combustivel *combustivel)
-{
-	this->marca = marca;
-	this->mes = mes;
-	this->ano = ano;
-	this->cilindrada = cilindrada;
-	this->combustivel = combustivel;
-}
-
 string Veiculo::getMarca() const
 {
 	return marca;
+}
+
+string Veiculo::getModelo() const
+{
+	return modelo;
 }
 
 unsigned Veiculo::getMes()const
@@ -65,27 +61,48 @@ void Veiculo::setCombustivel(Combustivel *combustivel)
 	return;
 }
 
-void Veiculo::load(ifstream &file)
+Combustivel* Veiculo::escolherCombustivel(vector<Combustivel> *combustiveis)
+{
+	int input = OutputUtils::showList(*combustiveis);
+	if (input == -1)
+	{
+		return escolherCombustivel(combustiveis);
+	}
+	else
+	{
+		return &(*combustiveis)[input];
+	}
+}
+
+void Veiculo::load(ifstream &file, vector<Combustivel> *combustiveis)
 {
 	getline(file, marca);
 	getline(file, modelo);
 	file >> mes;
 	file >> ano;
 	file >> cilindrada;
-	file.ignore(1000, '\n');
-	combustivel->load(file);
+	unsigned combustivelID;
+	file >> combustivelID;
+	combustivel = &(*combustiveis)[combustivelID];
 	file >> lotacao;
 	file.ignore(1000, '\n');
 }
 
-void Veiculo::save(ofstream &file)
+void Veiculo::save(ofstream &file, vector<Combustivel> *combustiveis)
 {
 	file << marca << endl;
 	file << modelo << endl;
 	file << mes << endl;
 	file << ano << endl;
 	file << cilindrada << endl;
-	// TODO COMBUSTIVEL
+	for (size_t i = 0; i < combustiveis->size(); ++i)
+	{
+		if (&(*combustiveis)[i] == combustivel)
+		{
+			file << i << endl;
+			break;
+		}
+	}
 	file << lotacao << endl;
 }
 
@@ -99,7 +116,7 @@ void Veiculo::show() const
 	combustivel->show();
 }
 
-void Veiculo::criar()
+void Veiculo::criar(vector<Combustivel> *combustiveis)
 {
 	cout << "Introduza a marca: ";
 	getline(cin, marca);
@@ -192,6 +209,9 @@ void Veiculo::criar()
 			cout << "Erro: " << e.info << endl << endl;
 		}
 	}
+	cout << "Escolha um combustivel da lista que se segue..." << endl;
+	InputUtils::pause();
+	combustivel = escolherCombustivel(combustiveis);
 }
 
 void Veiculo::editar()
@@ -201,5 +221,5 @@ void Veiculo::editar()
 
 ostream& operator<<(ostream &os, const Veiculo &veiculo)
 {
-	return os << veiculo.marca << " " << veiculo.modelo << endl;
+	return os << veiculo.getMarca() << " " << veiculo.getModelo() << endl;
 }

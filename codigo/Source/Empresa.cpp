@@ -28,8 +28,8 @@ void Empresa::edit()
 	}
 }
 
-void Empresa::save(ofstream &file)
+void Empresa::save(ofstream &file, vector<Combustivel> *combustiveis)
 {
 	file << 1 << endl;
-	Membro::save(file);
+	Membro::save(file, combustiveis);
 }

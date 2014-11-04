@@ -77,7 +77,7 @@ void Membro::edit()
 	}
 }
 
-void Membro::load(ifstream &file)
+void Membro::load(ifstream &file, vector<Combustivel> *combustiveis)
 {
 	unsigned numVeiculos;
 	getline(file, nome);
@@ -88,12 +88,12 @@ void Membro::load(ifstream &file)
 	for (size_t i = 0; i < numVeiculos; ++i)
 	{
 		Veiculo veiculo;
-		veiculo.load(file);
+		veiculo.load(file, combustiveis);
 		veiculos.push_back(veiculo);
 	}
 }
 
-void Membro::save(ofstream &file)
+void Membro::save(ofstream &file, vector<Combustivel> *combustiveis)
 {
 	file << nome << endl;
 	file << utilizador << endl;
@@ -101,7 +101,7 @@ void Membro::save(ofstream &file)
 	file << veiculos.size() << endl;
 	for (size_t i = 0; i < veiculos.size(); i++)
 	{
-		veiculos[i].save(file);
+		veiculos[i].save(file, combustiveis);
 	}
 }
 
