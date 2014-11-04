@@ -568,7 +568,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 	{
 		"Converter anuncio em boleia",
 		"Ver minhas boleias",
-		"Editar boleias",
+		"Remover-me de uma boleia",
 		"Voltar"
 	};
 	showMenu(items);
@@ -635,7 +635,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 			return showBoleiasMenu();
 		}
 	}
-	case 2: // Editar boleias
+	case 2: // Remover-me de uma boleia
 	{
 		try
 		{
