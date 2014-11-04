@@ -82,6 +82,60 @@ void Anuncio::show() const
 	cout << "Anunciante: " << anunciante->getNome() << endl;
 }
 
+void Anuncio::load(ifstream &file, vector<Membro *> *membros)
+{
+	int ID;
+	getline(file, titulo);
+	getline(file, descricao);
+	origem.load(file);
+	destino.load(file);
+	unsigned numPassageiros;
+	file >> numPassageiros;
+	for (size_t i = 0; i < numPassageiros; ++i)
+	{
+		file >> ID;
+		passageiros[i] = (Particular *)((*membros)[ID]);
+	}
+	file.ignore(1000, '\n');
+	dataInicio.load(file);
+	dataFim.load(file);
+	file >> ID;
+	anunciante = (*membros)[ID];
+	file >> ID;
+	if (ID < 0)
+	{
+		condutor = NULL;
+	}
+	else
+	{
+		condutor = (*membros)[ID];
+	}
+	file.ignore(1000, '\n');
+	preco.load(file);
+	horaInicio.load(file);
+	horaFim.load(file);
+	file >> diaDaSemana;
+	file.ignore(1000, '\n');
+}
+
+void Anuncio::save(ofstream &file, vector<Membro *> *membros)
+{
+	file << titulo << endl;
+	file << descricao << endl;
+	origem.save(file);
+	destino.save(file);
+	file << passageiros.size() << endl;
+	// TODO GUARDAR PASSAGEIROS
+	//dataInicio.save(file);
+	//dataFim.save(file);
+	// TODO GUARDAR ANUNCIANTE
+	// TODO GUARDAR CONDUTOR (NÃO ESQUECER DO -1 SE FOR NULL)
+	//preco.save(file);
+	//horaInicio.save(file);
+	//horaFim.save(file);
+	file << diaDaSemana << endl;
+}
+
 void Anuncio::criar()
 {
 	cout << "Introduza o titulo: ";

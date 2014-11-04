@@ -124,5 +124,8 @@
     <Text Include="membros.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="anuncios.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

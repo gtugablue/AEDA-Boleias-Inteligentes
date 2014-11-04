@@ -39,22 +39,18 @@ public:
 
 	void showmembro();
 	void showviagem();
-	void loadAnuncios();
 	
 	void start();
 
 	void load();
 	void loadCombustiveis();
 	void loadMembros();
-	void loadAnunciosOferta();
-	void loadAnunciosProcura();
-	void loadPrecos();
+	void loadAnuncios();
 
 	void save();
 	void saveCombustiveis();
 	void saveMembros();
-	void saveAnunciosOferta();
-	void saveAnunciosProcura();
+	void saveAnuncios();
 
 	void addEmpresa(const Empresa &empresa);
 	void addParticular(const Particular &particular);

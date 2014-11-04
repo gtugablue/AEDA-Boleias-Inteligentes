@@ -106,5 +106,11 @@ void Coordenadas::load(ifstream &file)
 {
 	file >> latitude;
 	file >> longitude;
+	cin.ignore(1000, '\n');
 }
 
+void Coordenadas::save(ofstream &file)
+{
+	file << latitude << endl;
+	file << longitude << endl;
+}

@@ -20,6 +20,7 @@ void BoleiasInteligentes::load()
 {
 	loadCombustiveis();
 	loadMembros();
+	loadAnuncios();
 }
 
 void BoleiasInteligentes::loadCombustiveis()
@@ -61,6 +62,32 @@ void BoleiasInteligentes::loadMembros()
 		membro->load(file, &combustiveis);
 		membros.push_back(membro);
 	}
+	file.close();
+}
+
+void BoleiasInteligentes::loadAnuncios()
+{
+	ifstream file(dataFolder + ficheiroAnuncios);
+	unsigned numAnuncios;
+	file >> numAnuncios;
+	bool oferta;
+	for (size_t i = 0; i < numAnuncios; ++i)
+	{
+		Anuncio *anuncio;
+		file >> oferta;
+		file.ignore(1000, '\n');
+		if (oferta)
+		{
+			anuncio = new AnuncioOferta();
+		}
+		else
+		{
+			anuncio = new AnuncioProcura();
+		}
+		anuncio->load(file, &membros);
+		anuncios.push_back(anuncio);
+	}
+	file.close();
 }
 
 void BoleiasInteligentes::save()
@@ -76,6 +103,7 @@ void BoleiasInteligentes::saveCombustiveis()
 	{
 		combustiveis[i].save(file);
 	}
+	file.close();
 }
 
 void BoleiasInteligentes::saveMembros()
@@ -85,6 +113,28 @@ void BoleiasInteligentes::saveMembros()
 	for (size_t i = 0; i < membros.size(); ++i)
 	{
 		membros[i]->save(file, &combustiveis);
+	}
+	file.close();
+}
+
+void BoleiasInteligentes::saveAnuncios()
+{
+	ofstream file(dataFolder + ficheiroAnuncios);
+	file << anuncios.size() << endl;
+	for (size_t i = 0; i < anuncios.size(); ++i)
+	{
+		if (dynamic_cast<AnuncioOferta *>(anuncios[i]) == NULL)
+		{
+			// Procura
+			file << false << endl;
+		}
+		else
+		{
+			// Oferta
+			file << true << endl;
+		}
+		anuncios[i]->save(file, &membros);
+		delete anuncios[i];
 	}
 	file.close();
 }
@@ -721,69 +771,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 	}
 }
 
-void BoleiasInteligentes::clearScreen()
-{
-	system("CLS");
-}
-
 void BoleiasInteligentes::pause()
 {
 	system("pause");
-}
-
-void BoleiasInteligentes::loadAnuncios()
-{
-	bool oferta;
-	string titulo;
-	string descricao;
-	unsigned numAnuncios, ID;
-	ifstream file;
-	file.open(ficheiroAnuncios);
-	file >> numAnuncios;
-	for (size_t i = 0; i < numAnuncios; i++)
-	{
-		Anuncio* anuncio;
-		Membro *condutor, *anunciante;
-		vector<Particular *> passageiros;
-		Coordenadas origem;
-		Coordenadas destino;
-		Data dataInicio;
-		Data dataFim;
-		Preco* preco;
-		file >> oferta;
-		getline(file, titulo);
-		getline(file, descricao);
-		origem.load(file);
-		destino.load(file);
-		dataInicio.load(file);
-		dataFim.load(file);
-		cin >> ID;
-		cin.ignore(1000, '\n');
-		if (ID == -1)
-		{
-			anunciante = NULL;
-		}
-		else
-		{
-			anunciante = membros[ID];
-		}
-		cin >> ID;
-		cin.ignore(1000, '\n');
-		if (ID == -1)
-		{
-			condutor = NULL;
-		}
-		else
-		{
-			condutor = membros[ID];
-		}
-
-		// TODO DAQUI PARA BAIXO
-		if (oferta)
-		{
-			Preco preco;
-			preco.criar();
-			anuncios.push_back(new AnuncioOferta(titulo, descricao, origem, destino, dataInicio, dataFim, preco));
-		}
-	}
 }

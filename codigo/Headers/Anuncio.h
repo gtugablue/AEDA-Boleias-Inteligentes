@@ -5,6 +5,7 @@
 #include "Particular.h"
 #include "Boleia.h"
 #include "Preco.h"
+#include <fstream>
 
 using namespace std;
 
@@ -37,6 +38,8 @@ public:
 	void setAnunciante(Membro* membro);
 	void calcularPrecoTotal();
 	virtual void show() const;
+	virtual void load(ifstream &file, vector<Membro *> *membros);
+	virtual void save(ofstream &file, vector<Membro *> *membros);
 	virtual void criar() = 0;
 	virtual void editar() = 0;
 	bool isPronto() const;

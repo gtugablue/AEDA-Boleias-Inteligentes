@@ -115,6 +115,7 @@
     <ClInclude Include="Headers\Boleia.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="anuncios.txt" />
     <Text Include="combustiveis.txt" />
     <Text Include="membros.txt" />
   </ItemGroup>

@@ -50,3 +50,10 @@ bool Hora::operator<(const Hora &horas)
 	 else
 		 return false;
 }
+
+void Hora::load(ifstream &file)
+{
+	file >> hora;
+	file >> minuto;
+	file.ignore(1000, '\n');
+}

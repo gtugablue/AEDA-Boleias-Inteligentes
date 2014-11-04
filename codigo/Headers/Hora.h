@@ -1,6 +1,8 @@
 #ifndef _HORA_H
 #define _HORA_H
 
+#include <fstream>
+
 using namespace std;
 
 class Hora
@@ -16,6 +18,7 @@ public:
 	void setHora(unsigned hora);
 	void setMinuto(unsigned minuto);
 	bool operator<(const Hora &horas);
+	void load(ifstream &file);
 };
 
 #endif

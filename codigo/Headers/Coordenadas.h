@@ -24,6 +24,7 @@ public:
 	void criar();
 	void editar();
 	void load(ifstream &file);
+	void save(ofstream &file);
 };
 
 #endif
