@@ -31,7 +31,7 @@ public:
 	void addVeiculo(Veiculo veiculo);
 	void removeVeiculo(Veiculo* veiculo);
 	void load(ifstream &file);
-	void save(const string &ficheiro);
+	void save(ofstream &file);
 	virtual void signup();
 	virtual void edit();
 	void show();

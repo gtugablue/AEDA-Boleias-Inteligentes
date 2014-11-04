@@ -42,11 +42,10 @@ void BoleiasInteligentes::loadMembros()
 {
 	unsigned numMembros;
 	int i = 0;
-	ifstream file;
+	ifstream file(dataFolder + ficheiroMembros);
 	float preco;
 	string filename, nome, utilizador, password, marca, name;
 	unsigned mes, ano, cilindrada;
-	file.open(ficheiroMembros);
 	bool empresa;
 	file >> numMembros;
 	for (size_t i = 0; i < numMembros; ++i)
@@ -89,11 +88,11 @@ void BoleiasInteligentes::saveCombustiveis()
 void BoleiasInteligentes::saveMembros()
 {
 	ofstream file;
-	file.open(ficheiroMembros);
+	file.open(dataFolder + ficheiroMembros);
 	file << membros.size();
 	for (size_t i = 0; i < membros.size(); ++i)
 	{
-		membros[i]->save(dataFolder + ficheiroMembros);
+		membros[i]->save(file);
 	}
 	file.close();
 
@@ -251,7 +250,7 @@ void BoleiasInteligentes::showLoginMenu()
 		cout << "Tem a certeza que pretende sair (y/n)?";
 		if (InputUtils::readYesOrNo('y', 'n'))
 		{
-			cout << endl;
+			save();
 			return;
 		}
 		else

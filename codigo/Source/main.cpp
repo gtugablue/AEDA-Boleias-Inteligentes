@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	BoleiasInteligentes boleiasInteligentes("data/");
+	BoleiasInteligentes boleiasInteligentes("");
 	boleiasInteligentes.start();
 	return 0;
 }
