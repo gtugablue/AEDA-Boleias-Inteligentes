@@ -64,9 +64,11 @@ public:
 	vector<AnuncioProcura *> getAnunciosProcura() const;
 	vector<Anuncio *> getAnunciosByMembro(Membro* membro) const;
 	vector<Boleia *> getBoleiasWhereMembroExists(Membro* membro);
+	vector<Combustivel> getCombustiveis();
 
 	Membro* login(const string &username, const string &password);
 	bool existsUtilizador(const string &username) const;
+	Combustivel* escolherCombustivel();
 
 
 	// MENU
@@ -78,16 +80,16 @@ public:
 	void showBoleiasMenu();
 
 	template<class T>
-	int showList(const vector<T> &v) const;
+	static int showList(const vector<T> &v);
 	template<class T>
-	int showList(const vector<T> &v, int page) const;
+	static int showList(const vector<T> &v, int page);
 
 	void showAnuncios();
 	void showVehicles();
 	void showVehicleInfo();
 
-	void clearScreen() const;
-	void pause() const;
+	static void clearScreen();
+	static void pause();
 };
 
 template<class T>

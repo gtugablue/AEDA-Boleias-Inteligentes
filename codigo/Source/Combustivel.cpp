@@ -30,10 +30,11 @@ void Combustivel::criar()
 {
 	string nome;
 	float preco;
-	cout << "Introduza o nome do combustivel:" << endl;
+	cout << "Introduza o nome do combustivel: ";
 	getline(cin, nome);
-	cout << "Introduza o preco:" << endl;
+	cout << "Introduza o preco: ";
 	cin >> preco;
+	cin.ignore(1000, '\n');
 }
 
 void Combustivel::show() const
@@ -52,4 +53,9 @@ void Combustivel::save(ofstream &file) const
 {
 	file << nome << endl;
 	file << preco << endl;
+}
+
+ostream& operator<<(ostream &os, const Combustivel &combustivel)
+{
+	return os << combustivel.nome;
 }

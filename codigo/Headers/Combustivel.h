@@ -22,6 +22,8 @@ public:
 	void show() const;
 	void load(ifstream &file);
 	void save(ofstream &file) const;
+
+	friend ostream& operator<<(ostream &os, const Combustivel &combustivel);
 };
 
 #endif

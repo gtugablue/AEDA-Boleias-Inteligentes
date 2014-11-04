@@ -5,7 +5,7 @@ Veiculo::Veiculo()
 
 }
 
-Veiculo::Veiculo(string marca, unsigned mes, unsigned ano,unsigned cilindrada, Combustivel* combustivel)
+Veiculo::Veiculo(string marca, unsigned mes, unsigned ano, unsigned cilindrada, Combustivel *combustivel)
 {
 	this->marca = marca;
 	this->mes = mes;
@@ -34,11 +34,6 @@ unsigned Veiculo::getCilindrada()const
 	return cilindrada;
 }
 
-Combustivel* Veiculo::getCombustivel() const
-{
-	return combustivel;
-}
-
 void Veiculo::setMarca(string &marca)
 {
 	this->marca = marca;
@@ -64,7 +59,7 @@ void Veiculo::setCilindrada(unsigned cilindrada)
 	return;
 }
 
-void Veiculo::setCombustivel(Combustivel* combustivel)
+void Veiculo::setCombustivel(Combustivel *combustivel)
 {
 	this->combustivel = combustivel;
 	return;
@@ -85,20 +80,19 @@ void Veiculo::load(ifstream &file)
 
 void Veiculo::save(ofstream &file)
 {
-	file << marca;
-	file << modelo;
-	file << mes;
-	file << ano;
-	file << cilindrada;
-	combustivel->save(file);
-	file << lotacao;
+	file << marca << endl;
+	file << modelo << endl;
+	file << mes << endl;
+	file << ano << endl;
+	file << cilindrada << endl;
+	// TODO COMBUSTIVEL
+	file << lotacao << endl;
 }
 
 void Veiculo::show() const
 {
-	cout << "Veiculo" << endl;
-	cout << endl;
 	cout << "Marca: " << marca << endl;
+	cout << "Modelo: " << modelo << endl;
 	cout << "Mes: " << mes << endl;
 	cout << "Ano: " << ano << endl;
 	cout << "Cilindrada: " << cilindrada << endl;
@@ -107,11 +101,9 @@ void Veiculo::show() const
 
 void Veiculo::criar()
 {
-	string marca;
-	unsigned mes, ano, cilindrada;
-	cout << "Introduza a marca: " << endl;
+	cout << "Introduza a marca: ";
 	getline(cin, marca);
-	cout << "Introduza o modelo: " << endl;
+	cout << "Introduza o modelo: ";
 	getline(cin, modelo);
 	while (1)
 	{
@@ -148,7 +140,7 @@ void Veiculo::criar()
 			{
 				cin.clear();
 				cin.ignore(1000, '\n');
-				throw VeiculoInvalidaException<string>("Insira um valor igual ou inferior a 12");
+				throw DataInvalidaException<string>("Insira um valor igual ou inferior a 12");
 			}
 			cin.ignore(1000, '\n');
 			break;
@@ -157,12 +149,11 @@ void Veiculo::criar()
 		{
 			cout << "Erro: " << e.info << endl << endl;
 		}
-		catch (VeiculoInvalidaException<string> e)
+		catch (DataInvalidaException<string> e)
 		{
 			cout << "Erro: " << e.info << endl << endl;
 		}
 	}
-
 	while (1)
 	{
 		try
@@ -182,9 +173,25 @@ void Veiculo::criar()
 			cout << "Erro: " << e.info << endl << endl;
 		}
 	}
-	
-
-
+	while (1)
+	{
+		try
+		{
+			cout << "Introduza a lotacao maxima: ";
+			if (!(cin >> lotacao))
+			{
+				cin.clear();
+				cin.ignore(1000, '\n');
+				throw InvalidInputException<string>("Insira um inteiro");
+			}
+			cin.ignore();
+			break;
+		}
+		catch (InvalidInputException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
 }
 
 void Veiculo::editar()

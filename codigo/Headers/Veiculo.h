@@ -5,6 +5,8 @@
 #include "Combustivel.h"
 #include <iostream>
 #include <fstream>
+#include "Data.h"
+#include <vector>
 
 #include "InputUtils.h"
 
@@ -18,7 +20,7 @@ private:
 	unsigned mes;
 	unsigned ano;
 	unsigned cilindrada;
-	Combustivel* combustivel;
+	Combustivel *combustivel;
 	unsigned int lotacao;
 public:
 	Veiculo();
@@ -27,30 +29,19 @@ public:
 	unsigned getMes() const;
 	unsigned getAno() const;
 	unsigned getCilindrada() const;
-	Combustivel* getCombustivel() const;
 	void setMarca(string &marca);
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);
 	void setCilindrada(unsigned cilindrada);
 	void load(ifstream &file); // TODO
 	void save(ofstream &file);
-	void setCombustivel(Combustivel* combustivel);
+	void setCombustivel(Combustivel *combustivel);
+	void escolherCombustivel();
 	void show() const;
 	void criar();
 	void editar();
 
 	friend ostream& operator<<(ostream &os, const Veiculo &veiculo);
-};
-
-template<class T>
-class VeiculoInvalidaException
-{
-public:
-	T info;
-	VeiculoInvalidaException(T info)
-	{
-		this->info = info;
-	}
 };
 
 #endif

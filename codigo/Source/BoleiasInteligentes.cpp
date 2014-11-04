@@ -152,6 +152,11 @@ vector<Boleia *> BoleiasInteligentes::getBoleiasWhereMembroExists(Membro* membro
 	return boleiasMembro;
 }
 
+vector<Combustivel> BoleiasInteligentes::getCombustiveis()
+{
+	return combustiveis;
+}
+
 Membro* BoleiasInteligentes::login(const string &username, const string &password)
 {
 	for (size_t i = 0; i < membros.size(); ++i)
@@ -178,6 +183,19 @@ bool BoleiasInteligentes::existsUtilizador(const string &username) const
 		}
 	}
 	return false;
+}
+
+Combustivel* BoleiasInteligentes::escolherCombustivel()
+{
+	int input = showList(combustiveis);
+	if (input == -1)
+	{
+		return escolherCombustivel();
+	}
+	else
+	{
+		return &combustiveis[input];
+	}
 }
 
 void BoleiasInteligentes::showMenu(vector<string> itens)
@@ -500,9 +518,11 @@ void BoleiasInteligentes::showVeiculosMenu()
 		Veiculo veiculo;
 		clearScreen();
 		veiculo.criar();
+		veiculo.setCombustivel(escolherCombustivel());
 		utilizadorAtual->addVeiculo(veiculo);
 		cout << "Veiculo criado com sucesso." << endl;
 		pause();
+		return showVeiculosMenu();
 	}
 	case 1: // Ver veiculos
 	{
@@ -716,13 +736,13 @@ void BoleiasInteligentes::showBoleiasMenu()
 }
 
 template<class T>
-int BoleiasInteligentes::showList(const vector<T> &v) const
+int BoleiasInteligentes::showList(const vector<T> &v)
 {
 	return showList(v, 0);
 }
 
 template<class T>
-int BoleiasInteligentes::showList(const vector<T> &v, int page) const
+int BoleiasInteligentes::showList(const vector<T> &v, int page)
 {
 	clearScreen();
 	if (v.size() == 0)
@@ -778,12 +798,12 @@ int BoleiasInteligentes::showList(const vector<T> &v, int page) const
 	}
 }
 
-void BoleiasInteligentes::clearScreen() const
+void BoleiasInteligentes::clearScreen()
 {
 	system("CLS");
 }
 
-void BoleiasInteligentes::pause() const
+void BoleiasInteligentes::pause()
 {
 	system("pause");
 }
