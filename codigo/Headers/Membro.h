@@ -38,6 +38,17 @@ public:
 	void criar();
 
 	bool operator==(const Membro &membro1) const;
+
+	template<class T>
+	class InvalidUtilizador
+	{
+	public:
+		T info;
+		InvalidUtilizador(T info)
+		{
+			this->info = info;
+		}
+	};
 };
 
 #endif

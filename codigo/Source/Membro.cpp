@@ -63,10 +63,27 @@ bool Membro::operator==(const Membro &membro1) const
 
 void Membro::signup()
 {
+	string utilizador2;
 	cout << "Nome: ";
 	nome = InputUtils::readString();
-	cout << "Username: ";
-	utilizador = InputUtils::readString();
+	while (1)
+	{
+		try
+		{
+			cout << "Username: ";
+			getline(cin, utilizador2);
+			if (utilizador2 == utilizador)
+			{
+				throw InvalidUtilizador<string>("Utilizador já exitente");
+			}
+			else
+				utilizador = InputUtils::readString();
+		}
+			catch (InvalidUtilizador<string>e)
+			{
+				cout << "Erro: " << e.info << endl << endl;
+			}
+		}
 	cout << "Password: ";
 	password = InputUtils::readPassword();
 	cout << endl;
