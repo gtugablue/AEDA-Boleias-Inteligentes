@@ -648,7 +648,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 			else
 			{
 				clearScreen();
-				minhasBoleias[input]->editar();
+				minhasBoleias[input]->edit();
 				pause();
 				clearScreen();
 			}
