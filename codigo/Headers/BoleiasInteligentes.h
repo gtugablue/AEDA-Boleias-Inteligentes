@@ -63,7 +63,7 @@ public:
 	vector<AnuncioOferta *> getAnunciosOferta() const;
 	vector<AnuncioProcura *> getAnunciosProcura() const;
 	vector<Anuncio *> getAnunciosByMembro(Membro* membro) const;
-	vector<Boleia *> getBoleiasByMembro(Membro* membro);
+	vector<Boleia *> getBoleiasWhereMembroExists(Membro* membro);
 
 	Membro* login(const string &username, const string &password);
 

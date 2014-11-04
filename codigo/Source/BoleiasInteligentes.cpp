@@ -154,7 +154,7 @@ vector<Anuncio *> BoleiasInteligentes::getAnunciosByMembro(Membro* membro) const
 	return anunciosMembro;
 }
 
-vector<Boleia *> BoleiasInteligentes::getBoleiasByMembro(Membro* membro)
+vector<Boleia *> BoleiasInteligentes::getBoleiasWhereMembroExists(Membro* membro)
 {
 	vector<Boleia *> boleiasMembro;
 	for (size_t i = 0; i < boleias.size(); ++i)
@@ -615,7 +615,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 		try
 		{
 			vector<Boleia *> minhasBoleias;
-			int input = showList(getBoleiasByMembro(utilizadorAtual));
+			int input = showList(getBoleiasWhereMembroExists(utilizadorAtual));
 			if (input == -1)
 			{
 				return showBoleiasMenu();
@@ -640,7 +640,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 		try
 		{
 			vector<Boleia *> minhasBoleias;
-			int input = showList(getBoleiasByMembro(utilizadorAtual));
+			int input = showList(getBoleiasWhereMembroExists(utilizadorAtual));
 			if (input == -1)
 			{
 				return showBoleiasMenu();
@@ -648,7 +648,24 @@ void BoleiasInteligentes::showBoleiasMenu()
 			else
 			{
 				clearScreen();
-				minhasBoleias[input]->edit();
+				if (minhasBoleias[input]->getCondutor() == utilizadorAtual)
+				{
+					// Apagar boleia
+					for (size_t i = 0; i < boleias.size(); ++i)
+					{
+						if (&boleias[i] == minhasBoleias[input])
+						{
+							boleias.erase(boleias.begin() + i);
+							break; // Não é necessário continuar o loop
+						}
+					}
+					cout << "Boleia apagada com sucesso." << endl;
+				}
+				else
+				{
+					minhasBoleias[input]->removerPassageiro((Particular *)utilizadorAtual);
+					cout << "Removido da boleia com sucesso." << endl;
+				}
 				pause();
 				clearScreen();
 			}

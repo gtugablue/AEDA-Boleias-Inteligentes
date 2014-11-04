@@ -35,6 +35,18 @@ void Boleia::setVeiculo(Veiculo* veiculo)
 	this->veiculo = veiculo;
 }
 
+void Boleia::removerPassageiro(Particular* passageiro)
+{
+	for (size_t i = 0; i < passageiros.size(); ++i)
+	{
+		if (passageiros[i] == passageiro)
+		{
+			passageiros.erase(passageiros.begin() + i);
+			return;
+		}
+	}
+}
+
 vector<Particular*>Boleia::getPassageiros() const
 {
 	return  passageiros;
