@@ -91,7 +91,6 @@ void Membro::load(ifstream &file)
 		veiculo.load();
 		veiculos.push_back(veiculo);
 	}
-	file.close();
 }
 
 void Membro::save(ofstream &file)
@@ -104,7 +103,6 @@ void Membro::save(ofstream &file)
 	{
 		// TODO
 	}
-	file.close();
 }
 
 void Membro::show()

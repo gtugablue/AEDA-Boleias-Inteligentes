@@ -61,8 +61,6 @@ void BoleiasInteligentes::loadMembros()
 		}
 		membro->load(file);
 		membros.push_back(membro);
-		membro->show();
-		pause();
 	}
 }
 
@@ -83,8 +81,7 @@ void BoleiasInteligentes::saveCombustiveis()
 
 void BoleiasInteligentes::saveMembros()
 {
-	ofstream file;
-	file.open(dataFolder + ficheiroMembros);
+	ofstream file(dataFolder + ficheiroMembros);
 	file << membros.size() << endl;
 	for (size_t i = 0; i < membros.size(); ++i)
 	{
