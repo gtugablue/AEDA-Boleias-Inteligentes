@@ -134,6 +134,18 @@ void Preco::criar()
 	}
 }
 
+void Preco::save(ofstream &file)
+{
+	file << combustivel << endl;
+	file << desgaste << endl;
+	file << outrasDespesas.size() << endl;
+	for (size_t i = 0; i < outrasDespesas.size(); ++i)
+	{
+		file << outrasDespesas[i].first << endl;
+		file << outrasDespesas[i].second << endl;
+	}
+}
+
 void Preco::load(ifstream &file)
 {
 	file >> combustivel;

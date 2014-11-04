@@ -124,15 +124,53 @@ void Anuncio::save(ofstream &file, vector<Membro *> *membros)
 	file << descricao << endl;
 	origem.save(file);
 	destino.save(file);
+	
+	// Guardar passageiros
 	file << passageiros.size() << endl;
-	// TODO GUARDAR PASSAGEIROS
-	//dataInicio.save(file);
-	//dataFim.save(file);
-	// TODO GUARDAR ANUNCIANTE
-	// TODO GUARDAR CONDUTOR (NÃO ESQUECER DO -1 SE FOR NULL)
-	//preco.save(file);
-	//horaInicio.save(file);
-	//horaFim.save(file);
+	for (size_t i = 0; i < passageiros.size(); ++i)
+	{
+		for (size_t j = 0; j < membros->size(); ++j)
+		{
+			if (passageiros[i] == (*membros)[j])
+			{
+				file << j;
+				break;	// Next passageiro
+			}
+		}
+	}
+
+	dataInicio.save(file);
+	dataFim.save(file);
+	
+	// Guardar anunciante
+	for (size_t i = 0; i < membros->size(); ++i)
+	{
+		if ((*membros)[i] == anunciante)
+		{
+			file << i;
+			break;
+		}
+	}
+
+	// Guardar condutor
+	if (condutor == NULL)
+	{
+		file << -1;
+	}
+	{
+		for (size_t i = 0; i < membros->size(); ++i)
+		{
+			if ((*membros)[i] == condutor)
+			{
+				file << i;
+				break;
+			}
+		}
+	}
+
+	preco.save(file);
+	horaInicio.save(file);
+	horaFim.save(file);
 	file << diaDaSemana << endl;
 }
 

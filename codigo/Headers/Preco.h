@@ -28,6 +28,7 @@ public:
 	void show() const;
 	float calcularTotal() const;
 	void criar();
+	void save(ofstream &file);
 	void load(ifstream &file);
 };
 

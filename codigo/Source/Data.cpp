@@ -75,11 +75,19 @@ bool Data::operator< (const Data &data)const
 		return false;
 }
 
+void Data::save(ofstream &file)
+{
+	file << dia << endl;
+	file << mes << endl;
+	file << ano << endl;
+}
+
 void Data::load(ifstream &file)
 {
 	file >> dia;
 	file >> mes;
 	file >> ano;
+	cin.ignore(1000, '\n');
 }
 
 void Data::criar()

@@ -18,6 +18,7 @@ public:
 	void setHora(unsigned hora);
 	void setMinuto(unsigned minuto);
 	bool operator<(const Hora &horas);
+	void save(ofstream &file);
 	void load(ifstream &file);
 };
 

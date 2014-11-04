@@ -51,6 +51,12 @@ bool Hora::operator<(const Hora &horas)
 		 return false;
 }
 
+void Hora::save(ofstream &file)
+{
+	file << hora << endl;
+	file << minuto << endl;
+}
+
 void Hora::load(ifstream &file)
 {
 	file >> hora;

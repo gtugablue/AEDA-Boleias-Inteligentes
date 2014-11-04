@@ -22,10 +22,10 @@ public:
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);
 	bool operator < (const Data &data)const;
-	void load();
+	void save(ofstream &file);
+	void load(ifstream &file);
 	void criar();
 	void editar();
-	void load(ifstream &file);
 	bool isBissexto() const;
 
 	friend ostream& operator<<(ostream &os, const Data &data);
