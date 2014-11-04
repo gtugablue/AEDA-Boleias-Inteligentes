@@ -70,23 +70,28 @@ void Veiculo::setCombustivel(Combustivel* combustivel)
 	return;
 }
 
-void Veiculo::load()
+void Veiculo::load(ifstream &file)
 {
-	fstream file;
-	string marcas, name;
-	float preco;
-	unsigned m, a, cil;
-	file.open("veiculos.txt");
-	while (!file.eof())
-	{
-		getline(file, marcas);
-		file >> m;
-		file >> a;
-		file >> cil;
-		getline(file, name);
-		file >> preco;
-		Veiculo(marcas, m, a, cil, new Combustivel(name, preco));
-	}
+	getline(file, marca);
+	getline(file, modelo);
+	file >> mes;
+	file >> ano;
+	file >> cilindrada;
+	file.ignore(1000, '\n');
+	combustivel->load(file);
+	file >> lotacao;
+	file.ignore(1000, '\n');
+}
+
+void Veiculo::save(ofstream &file)
+{
+	file << marca;
+	file << modelo;
+	file << mes;
+	file << ano;
+	file << cilindrada;
+	combustivel->save(file);
+	file << lotacao;
 }
 
 void Veiculo::show() const
@@ -162,7 +167,7 @@ void Veiculo::criar()
 	{
 		try
 		{
-			cout << "Introduza o ano: ";
+			cout << "Introduza a cilindrada: ";
 			if (!(cin >> cilindrada))
 			{
 				cin.clear();

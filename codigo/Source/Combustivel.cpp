@@ -41,6 +41,13 @@ void Combustivel::show() const
 	cout << "Combustivel: " << nome << endl;
 }
 
+void Combustivel::load(ifstream &file)
+{
+	getline(file, nome);
+	file >> preco;
+	file.ignore(1000, '\n');
+}
+
 void Combustivel::save(ofstream &file) const
 {
 	file << nome << endl;

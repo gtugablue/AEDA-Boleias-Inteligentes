@@ -88,7 +88,7 @@ void Membro::load(ifstream &file)
 	for (size_t i = 0; i < numVeiculos; ++i)
 	{
 		Veiculo veiculo;
-		veiculo.load();
+		veiculo.load(file);
 		veiculos.push_back(veiculo);
 	}
 }
@@ -101,7 +101,7 @@ void Membro::save(ofstream &file)
 	file << veiculos.size() << endl;
 	for (size_t i = 0; i < veiculos.size(); i++)
 	{
-		// TODO
+		veiculos[i].save(file);
 	}
 }
 

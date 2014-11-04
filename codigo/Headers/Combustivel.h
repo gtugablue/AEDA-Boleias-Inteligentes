@@ -20,6 +20,7 @@ public:
 	float getPreco() const;
 	void criar();
 	void show() const;
+	void load(ifstream &file);
 	void save(ofstream &file) const;
 };
 

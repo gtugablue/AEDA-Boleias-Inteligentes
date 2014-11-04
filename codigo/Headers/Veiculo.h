@@ -4,7 +4,7 @@
 #include <string>
 #include "Combustivel.h"
 #include <iostream>
-#include<fstream>
+#include <fstream>
 
 #include "InputUtils.h"
 
@@ -32,7 +32,8 @@ public:
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);
 	void setCilindrada(unsigned cilindrada);
-	void load();
+	void load(ifstream &file); // TODO
+	void save(ofstream &file);
 	void setCombustivel(Combustivel* combustivel);
 	void show() const;
 	void criar();
