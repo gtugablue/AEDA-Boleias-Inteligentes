@@ -39,9 +39,20 @@ public:
 	virtual void show() const;
 	virtual void criar() = 0;
 	virtual void editar() = 0;
-	virtual bool isPronto() const;
+	bool isPronto() const;
 
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);
+};
+
+template<class T>
+class AnuncioIncompletoException
+{
+public:
+	T info;
+	AnuncioIncompletoException(T info)
+	{
+		this->info = info;
+	}
 };
 
 #endif

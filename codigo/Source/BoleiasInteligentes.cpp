@@ -587,6 +587,10 @@ void BoleiasInteligentes::showBoleiasMenu()
 			}
 			else
 			{
+				if (!meusAnuncios[input]->isPronto())
+				{
+					throw AnuncioIncompletoException<string>("Impossivel converter um anuncio incompleto numa boleia.");
+				}
 				clearScreen();
 				meusAnuncios[input]->show();
 				pause();
@@ -604,6 +608,12 @@ void BoleiasInteligentes::showBoleiasMenu()
 			return showBoleiasMenu();
 		}
 		catch (ProibidoException<string> e)
+		{
+			cout << "Erro: " << e.info << endl;
+			pause();
+			return showBoleiasMenu();
+		}
+		catch (AnuncioIncompletoException<string> e)
 		{
 			cout << "Erro: " << e.info << endl;
 			pause();
