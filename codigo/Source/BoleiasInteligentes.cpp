@@ -549,6 +549,33 @@ void BoleiasInteligentes::showAnunciosMenu()
 				meusAnuncios[input]->show();
 				pause();
 				OutputUtils::clearScreen();
+				
+				// Aceitar candidatos
+				if (meusAnuncios[input]->getCondutor() == NULL)
+				{
+					cout << "Pretende aceitar candidatos a condutor (y/n)?" << endl;
+					if (InputUtils::readYesOrNo('y', 'n'))
+					{
+						OutputUtils::clearScreen();
+						int input2 = OutputUtils::showList(((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos());
+						if (input2 == -1)
+						{
+							return showAnunciosMenu();
+						}
+						else
+						{
+							OutputUtils::clearScreen();
+							cout << "Pretende aceitar o condutor " << ((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos()[input2].first->getNome() << "?" << endl;
+							if (InputUtils::readYesOrNo('y', 'n'))
+							{
+								meusAnuncios[input]->setCondutor(((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos()[input2].first);
+								cout << "Condutor definido com sucesso." << endl;
+								((AnuncioProcura *)meusAnuncios[input])->cleanCondutoresCandidatos();	// Não há necessidade de deixar ficar a lista de candidatos quando já existe um condutor
+							}
+						}
+					}
+				}
+
 				cout << "Pretende apagar este anuncio (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{

@@ -4,8 +4,9 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include<fstream>
+#include <fstream>
 #include "InputUtils.h"
+#include <iomanip>
 
 using namespace std;
 
@@ -30,6 +31,7 @@ public:
 	void criar();
 	void save(ofstream &file);
 	void load(ifstream &file);
+	friend ostream& operator<<(ostream &os, const Preco &preco);
 };
 
 #endif

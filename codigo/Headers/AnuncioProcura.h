@@ -13,8 +13,10 @@ public:
 	AnuncioProcura();
 	AnuncioProcura(Particular* anunciante);
 	void adicionarCondutorCandidato(pair<Membro *, Preco> &condutorCandidato);
+	vector<pair<Membro *, Preco>> getCondutoresCandidatos();
 	void setAnunciante(Particular* anunciante);
 	Particular* getAnunciante() const;
+	void cleanCondutoresCandidatos();
 	void criar(vector<Combustivel> *combustiveis);
 	void save(ofstream &file, vector<Membro *> *membros);
 	void load(ifstream &file, vector<Membro *> *membros);
@@ -22,5 +24,7 @@ public:
 	void editar();
 	void show()const;
 };
+
+ostream& operator<<(ostream &os, pair < Membro *, Preco > condutorCandidato);
 
 #endif

@@ -341,4 +341,3 @@ ostream& operator<<(ostream &os, Anuncio* anuncio)
 {
 	return os << anuncio->getTitulo();
 }
-

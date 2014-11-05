@@ -20,6 +20,16 @@ void AnuncioProcura::editar()
 	Anuncio::editar();
 }
 
+vector<pair<Membro *, Preco>> AnuncioProcura::getCondutoresCandidatos()
+{
+	return condutoresCandidatos;
+}
+
+void AnuncioProcura::cleanCondutoresCandidatos()
+{
+	condutoresCandidatos.clear();
+}
+
 void AnuncioProcura::save(ofstream &file, vector<Membro *> *membros)
 {
 	Anuncio::save(file, membros);
@@ -68,4 +78,9 @@ void AnuncioProcura::show()const
 	{
 		cout << condutoresCandidatos[i].first->getNome() << endl;
 	}
+}
+
+ostream& operator<<(ostream &os, pair < Membro *, Preco > condutorCandidato)
+{
+	return os << condutorCandidato.first->getNome() << " - " << condutorCandidato.second;
 }
