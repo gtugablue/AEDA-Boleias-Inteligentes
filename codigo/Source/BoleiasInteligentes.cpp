@@ -22,6 +22,7 @@ void BoleiasInteligentes::load()
 	loadCombustiveis();
 	loadMembros();
 	loadAnuncios();
+	loadBoleias();
 }
 
 void BoleiasInteligentes::loadCombustiveis()
@@ -71,6 +72,7 @@ void BoleiasInteligentes::loadAnuncios()
 	ifstream file(dataFolder + ficheiroAnuncios);
 	unsigned numAnuncios;
 	file >> numAnuncios;
+	file.ignore(1000, '\n');
 	bool oferta;
 	Anuncio *anuncio;
 	for (size_t i = 0; i < numAnuncios; ++i)
@@ -91,11 +93,26 @@ void BoleiasInteligentes::loadAnuncios()
 	file.close();
 }
 
+void BoleiasInteligentes::loadBoleias()
+{
+	ifstream file(dataFolder + ficheiroBoleias);
+	unsigned numBoleias;
+	file >> numBoleias;
+	for (size_t i = 0; i < numBoleias; ++i)
+	{
+		Boleia boleia;
+		boleia.load(file, &membros);
+		boleias.push_back(boleia);
+	}
+	file.close();
+}
+
 void BoleiasInteligentes::save()
 {
 	saveCombustiveis();
 	saveMembros();
 	saveAnuncios();
+	saveBoleias();
 }
 
 void BoleiasInteligentes::saveCombustiveis()
@@ -137,6 +154,17 @@ void BoleiasInteligentes::saveAnuncios()
 		}
 		anuncios[i]->save(file, &membros);
 		delete anuncios[i];
+	}
+	file.close();
+}
+
+void BoleiasInteligentes::saveBoleias()
+{
+	ofstream file(dataFolder + ficheiroBoleias);
+	file << boleias.size() << endl;
+	for (size_t i = 0; i < boleias.size(); ++i)
+	{
+		boleias[i].save(file, &membros);
 	}
 	file.close();
 }

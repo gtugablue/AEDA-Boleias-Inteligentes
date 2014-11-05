@@ -47,11 +47,13 @@ public:
 	void loadCombustiveis();
 	void loadMembros();
 	void loadAnuncios();
+	void loadBoleias();
 
 	void save();
 	void saveCombustiveis();
 	void saveMembros();
 	void saveAnuncios();
+	void saveBoleias();
 
 	void addEmpresa(const Empresa &empresa);
 	void addParticular(const Particular &particular);

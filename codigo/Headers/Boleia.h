@@ -29,6 +29,7 @@ private:
 	char diaDaSemana; // 0 a 6, para o caso de ser uma boleia periódica
 
 public:
+	Boleia();
 	Boleia(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim);
 	Boleia(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim);
 	Membro* getCondutor() const;

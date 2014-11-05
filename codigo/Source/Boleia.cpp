@@ -1,5 +1,10 @@
 #include "../headers/Boleia.h"
 
+Boleia::Boleia()
+{
+
+}
+
 Boleia::Boleia(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim) :
 origem(localInicio), destino(localFim), dataInicio(dataInicio), dataFim(dataFim)
 {
