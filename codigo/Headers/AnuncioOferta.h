@@ -14,7 +14,7 @@ public:
 	AnuncioOferta(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Data &dataInicio, const Data &dataFim, Preco preco);
 	void setAnunciante(Membro* anunciante);
 	Membro* getAnunciante() const;
-	void criar();
+	void criar(vector<Combustivel> *combustiveis);
 	friend ostream& operator<<(ostream &os, const AnuncioOferta &anuncio);
 	void editar();
 	void show()const;

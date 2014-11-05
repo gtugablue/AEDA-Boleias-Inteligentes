@@ -457,7 +457,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 				anuncio = new AnuncioProcura();
 			}
 		}
-		anuncio->criar();
+		anuncio->criar(&combustiveis);
 		anuncio->setAnunciante(utilizadorAtual);
 		anuncios.push_back(anuncio);
 		OutputUtils::clearScreen();

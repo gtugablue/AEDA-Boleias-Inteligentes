@@ -245,7 +245,7 @@ void Anuncio::criar(vector<Combustivel>*combustiveis)
 	dataFim.criar();
 	anunciante->criarMembro();
 	condutor->criarMembro();
-	veiculo->criar(vector<Combustivel>*combustiveis);
+	veiculo->criar(combustiveis);
 	preco.criar();
 	horaInicio.criar();
 	horaFim.criar();
