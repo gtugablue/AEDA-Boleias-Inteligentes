@@ -121,3 +121,13 @@ bool Membro::temVeiculo() const
 {
 	return veiculos.size() > 0;
 }
+
+void Membro::criarMembro()
+{
+	cout << "Introduza um nome: ";
+	getline(cin, nome);
+	cout << "Introduza um utilizador: ";
+	getline(cin, utilizador);
+	cout << "Introduza uma password: ";
+	getline(cin, password);
+}
