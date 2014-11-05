@@ -71,3 +71,12 @@ void Hora::showHora()const
 	cout << minuto << endl;
 }
 
+
+void Hora::criar()
+{
+	cout << "Introduza uma hora:";
+	cin >> hora;
+	cout << "Introduza minutos:";
+	cin >> minuto;
+
+}

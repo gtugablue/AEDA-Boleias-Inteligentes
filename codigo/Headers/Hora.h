@@ -22,6 +22,7 @@ public:
 	bool operator<(const Hora &horas);
 	void save(ofstream &file);
 	void load(ifstream &file);
+	void criar();
 };
 
 #endif

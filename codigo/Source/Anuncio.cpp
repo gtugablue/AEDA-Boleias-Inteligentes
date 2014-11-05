@@ -235,18 +235,23 @@ void Anuncio::save(ofstream &file, vector<Membro *> *membros)
 
 void Anuncio::criar()
 {
-	cout << "Introduza o titulo: ";
+	cout << "Introduza um titulo:";
 	getline(cin, titulo);
-	cout << "Introduza uma descricao: ";
+	cout << "Introduza uma descricao";
 	getline(cin, descricao);
-	cout << endl << "Origem:" << endl;
 	origem.criar();
-	cout << endl << "Destino: " << endl;
 	destino.criar();
-	cout << endl << "Data de inicio: " << endl;
 	dataInicio.criar();
-	cout << endl << "Data de fim: " << endl;
 	dataFim.criar();
+	anunciante->criarMembro();
+	condutor->criarMembro();
+	veiculo->criar();
+	preco.criar();
+	horaInicio.criar();
+	horaFim.criar();
+	cout << "Introduza o dia da semana :";
+	cin >> diaDaSemana;
+
 }
 
 void Anuncio::editar()
