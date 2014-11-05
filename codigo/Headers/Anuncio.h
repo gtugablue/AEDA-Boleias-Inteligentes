@@ -34,10 +34,12 @@ public:
 	string getDescricao() const;
 	Membro* getAnunciante() const;
 	void setTitulo(const string &titulo);
+	void setCondutor(Membro *membro);
 	Coordenadas getOrigem();
 	Coordenadas getDestino();
 	void setDescricao(const string &descricao);
-	void setAnunciante(Membro* membro);
+	void setAnunciante(Membro *membro);
+	void addPassageiro(Particular *membro);
 	void calcularPrecoTotal();
 	virtual void show() const;
 	virtual void load(ifstream &file, vector<Membro *> *membros);
@@ -45,7 +47,8 @@ public:
 	virtual void criar() = 0;
 	virtual void editar() = 0;
 	bool isPronto() const;
-
+	bool podeSerPassageiro(Membro* membro) const;
+	bool podeSerCondutor(Membro* membro) const;
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);
 };
 

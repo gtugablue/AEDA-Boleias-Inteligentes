@@ -470,7 +470,8 @@ void BoleiasInteligentes::showAnunciosMenu()
 		int input;
 		OutputUtils::clearScreen();
 		cout << "Que tipo de anuncios pretende ver ('o' para oferta e 'p' para procura)?" << endl;
-		if (InputUtils::readYesOrNo('o', 'p'))
+		bool oferta;
+		if (oferta = InputUtils::readYesOrNo('o', 'p'))
 		{
 			try
 			{
@@ -507,7 +508,27 @@ void BoleiasInteligentes::showAnunciosMenu()
 		{
 			OutputUtils::clearScreen();
 			anuncios[input]->show();
-			pause();
+			InputUtils::pause();
+			if (anuncios[input]->podeSerCondutor(utilizadorAtual))
+			{
+				cout << "Pretende ser o condutor (y/n)?" << endl;
+				if (InputUtils::readYesOrNo('y', 'n'))
+				{
+					anuncios[input]->setCondutor(utilizadorAtual);
+					cout << "Tornou-se no condutor desta viagem com sucesso." << endl;
+					InputUtils::pause();
+				}
+			}
+			if (anuncios[input]->podeSerPassageiro(utilizadorAtual))
+			{
+				cout << "Pretende ser passageiro (y/n)?" << endl;
+				if (InputUtils::readYesOrNo('y', 'n'))
+				{
+					anuncios[input]->addPassageiro((Particular *)utilizadorAtual);
+					cout << "Tornou-se num passageiro desta viagem com sucesso." << endl;
+					InputUtils::pause();
+				}
+			}
 			return showAnunciosMenu();
 		}
 	}

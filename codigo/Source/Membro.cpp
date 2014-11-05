@@ -116,3 +116,8 @@ void Membro::show()
 	cout << "Nome: " << nome << endl;
 	cout << "Utilizador: " << utilizador << endl;
 }
+
+bool Membro::temVeiculo() const
+{
+	return veiculos.size() > 0;
+}

@@ -26,6 +26,7 @@ public:
 	Veiculo();
 	string getMarca() const;
 	string getModelo() const;
+	unsigned getLotacao() const;
 	unsigned getMes() const;
 	unsigned getAno() const;
 	unsigned getCilindrada() const;
@@ -40,7 +41,6 @@ public:
 	void show() const;
 	void criar(vector<Combustivel> *combustiveis);
 	void editar();
-
 	friend ostream& operator<<(ostream &os, const Veiculo &veiculo);
 };
 

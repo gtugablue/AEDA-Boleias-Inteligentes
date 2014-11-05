@@ -35,7 +35,7 @@ public:
 	virtual void signup() = 0;
 	virtual void edit();
 	void show();
-	
+	bool temVeiculo() const;
 	bool operator==(const Membro &membro1) const;
 };
 

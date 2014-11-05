@@ -30,6 +30,11 @@ unsigned Veiculo::getCilindrada()const
 	return cilindrada;
 }
 
+unsigned Veiculo::getLotacao() const
+{
+	return lotacao;
+}
+
 void Veiculo::setMarca(string &marca)
 {
 	this->marca = marca;

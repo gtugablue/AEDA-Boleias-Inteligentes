@@ -24,6 +24,12 @@ void Anuncio::setTitulo(const string &titulo)
 {
 	this->titulo = titulo;
 }
+
+void Anuncio::setCondutor(Membro* membro)
+{
+	condutor = membro;
+}
+
 Coordenadas Anuncio::getOrigem()
 {
 	return origem;
@@ -33,6 +39,7 @@ Coordenadas Anuncio::getDestino()
 {
 	return destino;
 }
+
 void Anuncio::setDescricao(const string &descricao)
 {
 	this->descricao = descricao;
@@ -46,6 +53,11 @@ Membro* Anuncio::getAnunciante() const
 void Anuncio::setAnunciante(Membro* membro)
 {
 	anunciante = membro;
+}
+
+void Anuncio::addPassageiro(Particular *membro)
+{
+	passageiros.push_back(membro);
 }
 
 /*void Anuncio::adicionarCandidato(Particular* candidato)
@@ -266,6 +278,44 @@ bool Anuncio::isPronto() const
 		return false;
 	}
 	return true;
+}
+
+bool Anuncio::podeSerPassageiro(Membro* membro) const
+{
+	if (dynamic_cast<Particular *>(membro) == NULL)
+	{
+		// Empresa
+		return false;
+	}
+	else if (veiculo == NULL)
+	{
+		return false;
+	}
+	else if (condutor == membro)
+	{
+		return false;
+	}
+	else if (find(passageiros.begin(), passageiros.end(), membro) != passageiros.end())
+	{
+		return false;
+	}
+	else
+	{
+		return passageiros.size() < veiculo->getLotacao();
+	}
+}
+
+bool Anuncio::podeSerCondutor(Membro* membro) const
+{
+	if (condutor != NULL)
+	{
+		return false;
+	}
+	if (find(passageiros.begin(), passageiros.end(), membro) != passageiros.end())
+	{
+		return false;
+	}
+	return condutor == NULL;
 }
 
 ostream& operator<<(ostream &os, Anuncio* anuncio)

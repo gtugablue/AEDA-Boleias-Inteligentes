@@ -18,6 +18,7 @@ public:
 	void show();
 	void signup();
 	void save(ofstream &file, vector<Combustivel> *combustiveis);
+	void load(ofstream &file, vector<Combustivel> *combustiveis);	// TODO
 };
 
 #endif
