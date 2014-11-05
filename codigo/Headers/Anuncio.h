@@ -45,7 +45,7 @@ public:
 	virtual void show() const;
 	virtual void load(ifstream &file, vector<Membro *> *membros);
 	virtual void save(ofstream &file, vector<Membro *> *membros);
-	virtual void criar() = 0;
+	virtual void criar(vector<Combustivel>*combustiveis) = 0;
 	virtual void editar() = 0;
 	bool isPronto() const;
 	bool podeSerPassageiro(Membro* membro) const;
