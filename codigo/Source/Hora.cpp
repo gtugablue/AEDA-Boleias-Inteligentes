@@ -64,3 +64,10 @@ void Hora::load(ifstream &file)
 	file >> minuto;
 	file.ignore(1000, '\n');
 }
+
+void Hora::showHora()const
+{
+	cout << hora << endl;
+	cout << minuto << endl;
+}
+

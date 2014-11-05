@@ -20,6 +20,7 @@ public:
 	void load(ifstream &file, vector<Membro *> *membros);
 	friend ostream& operator<<(ostream &os, const AnuncioProcura &anuncio);
 	void editar();
+	void show()const;
 };
 
 #endif

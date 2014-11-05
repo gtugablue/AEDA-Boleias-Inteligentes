@@ -27,3 +27,8 @@ ostream& operator<<(ostream &os, const AnuncioOferta &anuncio)
 {
 	return os << anuncio.getTitulo();
 }
+
+void AnuncioOferta::show()const
+{
+	Anuncio::show();
+}

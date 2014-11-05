@@ -27,6 +27,7 @@ public:
 	void criar();
 	void editar();
 	bool isBissexto() const;
+	void showData()const;
 
 	friend ostream& operator<<(ostream &os, const Data &data);
 };

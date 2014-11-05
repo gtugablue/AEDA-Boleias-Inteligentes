@@ -2,6 +2,7 @@
 #define _HORA_H
 
 #include <fstream>
+#include<iostream>
 
 using namespace std;
 
@@ -12,6 +13,7 @@ private:
 	unsigned minuto;
 public:
 	Hora();
+	void showHora() const ;
 	Hora(unsigned hora, unsigned minuto);
 	unsigned getHora() const;
 	unsigned getMinuto() const;

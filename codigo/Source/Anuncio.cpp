@@ -96,7 +96,16 @@ void Anuncio::show() const
 {
 	cout << "Titulo: " << titulo << endl;
 	cout << "Descricao: " << descricao << endl;
+	dataInicio.showData();
+	dataFim.showData();
 	cout << "Anunciante: " << anunciante->getNome() << endl;
+	cout << "Condutor: " << condutor->getNome() << endl;
+	veiculo->show();
+	preco.show();
+	horaInicio.showHora();
+	horaFim.showHora();
+	cout << "Dia da Semana:" << diaDaSemana << endl;
+
 }
 
 void Anuncio::load(ifstream &file, vector<Membro *> *membros)

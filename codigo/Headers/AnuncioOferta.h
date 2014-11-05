@@ -17,6 +17,7 @@ public:
 	void criar();
 	friend ostream& operator<<(ostream &os, const AnuncioOferta &anuncio);
 	void editar();
+	void show()const;
 };
 
 #endif

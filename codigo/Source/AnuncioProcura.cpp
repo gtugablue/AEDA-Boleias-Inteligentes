@@ -57,3 +57,12 @@ ostream& operator<<(ostream &os, const AnuncioProcura &anuncio)
 {
 	return os << anuncio.getTitulo();
 }
+
+void AnuncioProcura::show()const
+{
+	Anuncio::show();
+	for (size_t i = 0; i < condutoresCandidatos.size(); i++)
+	{
+		cout << condutoresCandidatos.at(i)->getNome() << endl;
+	}
+}
