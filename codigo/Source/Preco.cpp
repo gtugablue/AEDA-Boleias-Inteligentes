@@ -149,17 +149,18 @@ void Preco::save(ofstream &file)
 void Preco::load(ifstream &file)
 {
 	file >> combustivel;
+	file.ignore(1000, '\n');
 	file >> desgaste;
+	file.ignore(1000, '\n');
 	unsigned n;
 	file >> n;
-	cin.ignore(1000, '\n');
+	file.ignore(1000, '\n');
 	for (size_t i = 0; i < n; i++)
 	{
 		pair<string, float> despesa;
 		getline(file, despesa.first);
 		file >> despesa.second;
-		cin.ignore(1000, '\n');
+		file.ignore(1000, '\n');
 		outrasDespesas.push_back(despesa);
 	}
-	file.close();
 }

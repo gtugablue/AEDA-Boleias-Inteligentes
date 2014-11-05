@@ -17,6 +17,7 @@ public:
 	Particular* getAnunciante() const;
 	void criar();
 	void save(ofstream &file, vector<Membro *> *membros);
+	void load(ifstream &file, vector<Membro *> *membros);
 	friend ostream& operator<<(ostream &os, const AnuncioProcura &anuncio);
 	void editar();
 };

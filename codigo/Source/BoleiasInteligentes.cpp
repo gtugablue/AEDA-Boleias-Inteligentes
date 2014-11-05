@@ -94,6 +94,7 @@ void BoleiasInteligentes::save()
 {
 	saveCombustiveis();
 	saveMembros();
+	saveAnuncios();
 }
 
 void BoleiasInteligentes::saveCombustiveis()

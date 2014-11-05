@@ -85,9 +85,11 @@ void Data::save(ofstream &file)
 void Data::load(ifstream &file)
 {
 	file >> dia;
+	file.ignore(1000, '\n');
 	file >> mes;
+	file.ignore(1000, '\n');
 	file >> ano;
-	cin.ignore(1000, '\n');
+	file.ignore(1000, '\n');
 }
 
 void Data::criar()

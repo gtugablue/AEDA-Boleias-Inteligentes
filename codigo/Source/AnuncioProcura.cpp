@@ -17,6 +17,7 @@ void AnuncioProcura::editar()
 
 void AnuncioProcura::save(ofstream &file, vector<Membro *> *membros)
 {
+	Anuncio::save(file, membros);
 	// Guardar condutores candidatos
 	file << condutoresCandidatos.size() << endl;
 	for (size_t i = 0; i < condutoresCandidatos.size(); ++i)
@@ -25,10 +26,25 @@ void AnuncioProcura::save(ofstream &file, vector<Membro *> *membros)
 		{
 			if (condutoresCandidatos[i] == (*membros)[j])
 			{
-				file << j;
+				file << j << endl;
 				break;	// Next condutor candidato
 			}
 		}
+	}
+}
+
+void AnuncioProcura::load(ifstream &file, vector<Membro *> *membros)
+{
+	Anuncio::load(file, membros);
+	// Carregar condutores candidatos
+	unsigned numCondutores, ID;
+	file >> numCondutores;
+	file.ignore(1000, '\n');
+	for (size_t i = 0; i < numCondutores; ++i)
+	{
+		file >> ID;
+		file.ignore(1000, '\n');
+		condutoresCandidatos.push_back((*membros)[ID]);
 	}
 }
 

@@ -105,8 +105,9 @@ float Coordenadas::calcDistancia(const Coordenadas &coordenadas)
 void Coordenadas::load(ifstream &file)
 {
 	file >> latitude;
+	file.ignore(1000, '\n');
 	file >> longitude;
-	cin.ignore(1000, '\n');
+	file.ignore(1000, '\n');
 }
 
 void Coordenadas::save(ofstream &file)

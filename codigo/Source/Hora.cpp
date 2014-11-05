@@ -60,6 +60,7 @@ void Hora::save(ofstream &file)
 void Hora::load(ifstream &file)
 {
 	file >> hora;
+	file.ignore(1000, '\n');
 	file >> minuto;
 	file.ignore(1000, '\n');
 }

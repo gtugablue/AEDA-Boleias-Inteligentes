@@ -91,17 +91,20 @@ void Anuncio::load(ifstream &file, vector<Membro *> *membros)
 	destino.load(file);
 	unsigned numPassageiros;
 	file >> numPassageiros;
+	file.ignore(1000, '\n');
 	for (size_t i = 0; i < numPassageiros; ++i)
 	{
 		file >> ID;
+		file.ignore(1000, '\n');
 		passageiros[i] = (Particular *)((*membros)[ID]);
 	}
-	file.ignore(1000, '\n');
 	dataInicio.load(file);
 	dataFim.load(file);
 	file >> ID;
+	file.ignore(1000, '\n');
 	anunciante = (*membros)[ID];
 	file >> ID;
+	file.ignore(1000, '\n');
 	if (ID < 0)
 	{
 		condutor = NULL;
@@ -110,7 +113,6 @@ void Anuncio::load(ifstream &file, vector<Membro *> *membros)
 	{
 		condutor = (*membros)[ID];
 	}
-	file.ignore(1000, '\n');
 	preco.load(file);
 	horaInicio.load(file);
 	horaFim.load(file);
@@ -133,7 +135,7 @@ void Anuncio::save(ofstream &file, vector<Membro *> *membros)
 		{
 			if (passageiros[i] == (*membros)[j])
 			{
-				file << j;
+				file << j << endl;
 				break;	// Next passageiro
 			}
 		}
@@ -147,7 +149,7 @@ void Anuncio::save(ofstream &file, vector<Membro *> *membros)
 	{
 		if ((*membros)[i] == anunciante)
 		{
-			file << i;
+			file << i << endl;
 			break;
 		}
 	}
@@ -155,14 +157,14 @@ void Anuncio::save(ofstream &file, vector<Membro *> *membros)
 	// Guardar condutor
 	if (condutor == NULL)
 	{
-		file << -1;
+		file << -1 << endl;
 	}
 	{
 		for (size_t i = 0; i < membros->size(); ++i)
 		{
 			if ((*membros)[i] == condutor)
 			{
-				file << i;
+				file << i << endl;
 				break;
 			}
 		}

@@ -24,7 +24,7 @@ protected:
 	Preco preco;
 	Hora horaInicio;
 	Hora horaFim;
-	char diaDaSemana; // 0 a 6, para o caso de ser uma boleia periódica
+	unsigned diaDaSemana; // 0 a 6, para o caso de ser uma boleia periódica
 public:
 	Anuncio();
 	Anuncio(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Data &dataInicio, const Data &dataFim);
