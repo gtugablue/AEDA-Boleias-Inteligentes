@@ -233,7 +233,7 @@ void Anuncio::save(ofstream &file, vector<Membro *> *membros)
 	file << diaDaSemana << endl;
 }
 
-void Anuncio::criar()
+void Anuncio::criar(vector<Combustivel>*combustiveis)
 {
 	cout << "Introduza um titulo:";
 	getline(cin, titulo);
@@ -245,7 +245,7 @@ void Anuncio::criar()
 	dataFim.criar();
 	anunciante->criarMembro();
 	condutor->criarMembro();
-	veiculo->criar();
+	veiculo->criar(vector<Combustivel>*combustiveis);
 	preco.criar();
 	horaInicio.criar();
 	horaFim.criar();
