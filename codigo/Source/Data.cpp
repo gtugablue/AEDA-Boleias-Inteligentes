@@ -190,5 +190,12 @@ bool Data::isBissexto() const
 
 ostream& operator<<(ostream &os, const Data &data)
 {
-	return os << data.dia << "/" << data.mes << "/" << data.ano;
+	return os << data.getDia() << "/" << data.getMes() << "/" << data.getAno();
+}
+
+void Data::showData()const
+{
+	cout << dia << endl;
+	cout << mes << endl;
+	cout << ano << endl;
 }
