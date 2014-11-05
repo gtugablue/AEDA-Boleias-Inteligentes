@@ -686,19 +686,20 @@ void BoleiasInteligentes::showBoleiasMenu()
 	{
 		try
 		{
-			vector<Anuncio *> meusAnuncios;
-			int input = OutputUtils::showList(getAnunciosByMembro(utilizadorAtual));
+			vector<Anuncio *> meusAnuncios = getAnunciosByMembro(utilizadorAtual);
+			OutputUtils::clearScreen();
+			int input = OutputUtils::showList(meusAnuncios);
 			if (input == -1)
 			{
 				return showBoleiasMenu();
 			}
 			else
 			{
+				OutputUtils::clearScreen();
 				if (!meusAnuncios[input]->isPronto())
 				{
 					throw AnuncioIncompletoException<string>("Impossivel converter um anuncio incompleto numa boleia.");
 				}
-				OutputUtils::clearScreen();
 				meusAnuncios[input]->show();
 				pause();
 				OutputUtils::clearScreen();
@@ -731,8 +732,9 @@ void BoleiasInteligentes::showBoleiasMenu()
 	{
 		try
 		{
-			vector<Boleia *> minhasBoleias;
-			int input = OutputUtils::showList(getBoleiasWhereMembroExists(utilizadorAtual));
+			vector<Boleia *> minhasBoleias = getBoleiasWhereMembroExists(utilizadorAtual);
+			OutputUtils::clearScreen();
+			int input = OutputUtils::showList(minhasBoleias);
 			if (input == -1)
 			{
 				return showBoleiasMenu();
@@ -756,8 +758,9 @@ void BoleiasInteligentes::showBoleiasMenu()
 	{
 		try
 		{
-			vector<Boleia *> minhasBoleias;
-			int input = OutputUtils::showList(getBoleiasWhereMembroExists(utilizadorAtual));
+			vector<Boleia *> minhasBoleias = getBoleiasWhereMembroExists(utilizadorAtual);
+			OutputUtils::clearScreen();
+			int input = OutputUtils::showList(minhasBoleias);
 			if (input == -1)
 			{
 				return showBoleiasMenu();
