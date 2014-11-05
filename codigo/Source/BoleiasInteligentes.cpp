@@ -551,6 +551,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 				cout << "Pretende apagar este anuncio (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
+					delete meusAnuncios[input];
 					anuncios.erase(find(anuncios.begin(), anuncios.end(), meusAnuncios[input])); // Não falha, porque está garantido que o anúncio existe
 					cout << "Anuncio apagado com sucesso." << endl;
 					pause();
@@ -615,7 +616,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 		try
 		{
 			OutputUtils::clearScreen();
-			int input = OutputUtils::showList(utilizadorAtual->getVeiculos(), 0);
+			int input = OutputUtils::showList(utilizadorAtual->getVeiculos());
 			if (input == -1)
 			{
 				return showVeiculosMenu();
@@ -638,9 +639,10 @@ void BoleiasInteligentes::showVeiculosMenu()
 	}
 	case 2: // Editar veiculo
 	{
+		OutputUtils::clearScreen();
 		try
 		{
-			int input = OutputUtils::showList(utilizadorAtual->getVeiculos(), 0);
+			int input = OutputUtils::showList(utilizadorAtual->getVeiculos());
 			if (input == -1)
 			{
 				return showVeiculosMenu();

@@ -228,3 +228,8 @@ ostream& operator<<(ostream &os, const Veiculo &veiculo)
 {
 	return os << veiculo.getMarca() << " " << veiculo.getModelo() << endl;
 }
+
+ostream& operator<<(ostream &os, Veiculo *veiculo)
+{
+	return os << veiculo->getMarca() << " " << veiculo->getModelo() << endl;
+}

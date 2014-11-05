@@ -42,6 +42,7 @@ public:
 	void criar(vector<Combustivel> *combustiveis);
 	void editar();
 	friend ostream& operator<<(ostream &os, const Veiculo &veiculo);
+	friend ostream& operator<<(ostream &os, Veiculo *veiculo);
 };
 
 #endif
