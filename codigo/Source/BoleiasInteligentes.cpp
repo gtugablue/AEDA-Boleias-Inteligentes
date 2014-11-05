@@ -45,7 +45,6 @@ void BoleiasInteligentes::loadMembros()
 {
 	unsigned numMembros;
 	ifstream file(dataFolder + ficheiroMembros);
-	float preco;
 	bool empresa;
 	file >> numMembros;
 	for (size_t i = 0; i < numMembros; ++i)
@@ -514,7 +513,9 @@ void BoleiasInteligentes::showAnunciosMenu()
 				cout << "Pretende-se candidatar a condutor (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
-					((AnuncioProcura *)anuncios[input])->adicionarCondutorCandidato(utilizadorAtual);
+					Preco preco;
+					preco.criar();
+					((AnuncioProcura *)anuncios[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
 					cout << "Tornou-se num candidato a condutor desta viagem com sucesso." << endl;
 					InputUtils::pause();
 				}

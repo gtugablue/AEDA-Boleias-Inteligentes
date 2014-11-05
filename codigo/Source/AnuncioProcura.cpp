@@ -5,9 +5,9 @@ AnuncioProcura::AnuncioProcura()
 
 }
 
-void AnuncioProcura::adicionarCondutorCandidato(Membro *condutor)
+void AnuncioProcura::adicionarCondutorCandidato(pair<Membro *, Preco> &condutorCandidato)
 {
-	condutoresCandidatos.push_back(condutor);
+	condutoresCandidatos.push_back(condutorCandidato);
 }
 
 void AnuncioProcura::criar(vector<Combustivel> *combustiveis)
@@ -29,9 +29,10 @@ void AnuncioProcura::save(ofstream &file, vector<Membro *> *membros)
 	{
 		for (size_t j = 0; j < membros->size(); ++j)
 		{
-			if (condutoresCandidatos[i] == (*membros)[j])
+			if (condutoresCandidatos[i].first == (*membros)[j])
 			{
 				file << j << endl;
+				condutoresCandidatos[i].second.save(file);
 				break;	// Next condutor candidato
 			}
 		}
@@ -49,7 +50,9 @@ void AnuncioProcura::load(ifstream &file, vector<Membro *> *membros)
 	{
 		file >> ID;
 		file.ignore(1000, '\n');
-		condutoresCandidatos.push_back((*membros)[ID]);
+		Preco preco;
+		preco.load(file);
+		condutoresCandidatos.push_back(make_pair((*membros)[ID], preco));
 	}
 }
 
@@ -63,6 +66,6 @@ void AnuncioProcura::show()const
 	Anuncio::show();
 	for (size_t i = 0; i < condutoresCandidatos.size(); i++)
 	{
-		cout << condutoresCandidatos.at(i)->getNome() << endl;
+		cout << condutoresCandidatos[i].first->getNome() << endl;
 	}
 }

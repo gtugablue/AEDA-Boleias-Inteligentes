@@ -8,11 +8,11 @@
 class AnuncioProcura: public Anuncio
 {
 private:
-	vector<Membro*> condutoresCandidatos;
+	vector<pair<Membro *, Preco>> condutoresCandidatos;
 public:
 	AnuncioProcura();
 	AnuncioProcura(Particular* anunciante);
-	void adicionarCondutorCandidato(Membro* condutor);
+	void adicionarCondutorCandidato(pair<Membro *, Preco> &condutorCandidato);
 	void setAnunciante(Particular* anunciante);
 	Particular* getAnunciante() const;
 	void criar(vector<Combustivel> *combustiveis);
