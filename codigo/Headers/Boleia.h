@@ -16,14 +16,14 @@ class Boleia
 private:
 	string titulo;
 	string descricao;
-	Membro* condutor;
-	Veiculo* veiculo;
 	Coordenadas origem;
 	Coordenadas destino;
 	Preco preco;
 	vector<Particular*> passageiros; // Número total de pessoas no veículo = passageiros + 1 (condutor)
 	Data dataInicio;
 	Data dataFim; // se for igual ao inicio é um evento
+	Membro* condutor;
+	Veiculo* veiculo;
 	Hora horaInicio;
 	Hora horaFim;
 	char diaDaSemana; // 0 a 6, para o caso de ser uma boleia periódica

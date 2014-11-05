@@ -29,6 +29,7 @@ private:
 	static const string ficheiroCombustiveis;
 	static const string ficheiroMembros;
 	static const string ficheiroAnuncios;
+	static const string ficheiroBoleias;
 	vector<Combustivel> combustiveis;
 	vector<Membro*> membros;
 	vector<Anuncio*> anuncios;

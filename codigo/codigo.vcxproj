@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="anuncios.txt" />
+    <Text Include="boleias.txt" />
     <Text Include="combustiveis.txt" />
     <Text Include="membros.txt" />
   </ItemGroup>

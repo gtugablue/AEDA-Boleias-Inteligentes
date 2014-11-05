@@ -127,5 +127,8 @@
     <Text Include="anuncios.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="boleias.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
