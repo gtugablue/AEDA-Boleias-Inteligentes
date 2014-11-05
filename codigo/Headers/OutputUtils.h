@@ -55,7 +55,7 @@ static int OutputUtils::showList(const vector<T> &v)
 template<class T>
 static int OutputUtils::showList(const vector<T> &v, int page)
 {
-	//clearScreen();
+	OutputUtils::clearScreen();
 	if (v.size() == 0)
 	{
 		throw EmptyException<string>("Nenhum elemento a listar.");
