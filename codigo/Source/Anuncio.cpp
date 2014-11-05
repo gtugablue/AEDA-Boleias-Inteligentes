@@ -25,6 +25,11 @@ void Anuncio::setTitulo(const string &titulo)
 	this->titulo = titulo;
 }
 
+Membro* Anuncio::getCondutor()
+{
+	return condutor;
+}
+
 void Anuncio::setCondutor(Membro* membro)
 {
 	condutor = membro;

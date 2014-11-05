@@ -12,7 +12,7 @@ private:
 public:
 	AnuncioProcura();
 	AnuncioProcura(Particular* anunciante);
-	void adicionarCondutorCandidato(const Membro* condutor);
+	void adicionarCondutorCandidato(Membro* condutor);
 	void setAnunciante(Particular* anunciante);
 	Particular* getAnunciante() const;
 	void criar();

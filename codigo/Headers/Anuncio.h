@@ -34,6 +34,7 @@ public:
 	string getDescricao() const;
 	Membro* getAnunciante() const;
 	void setTitulo(const string &titulo);
+	Membro* getCondutor();
 	void setCondutor(Membro *membro);
 	Coordenadas getOrigem();
 	Coordenadas getDestino();

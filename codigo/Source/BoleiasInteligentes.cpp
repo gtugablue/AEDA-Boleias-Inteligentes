@@ -511,11 +511,11 @@ void BoleiasInteligentes::showAnunciosMenu()
 			InputUtils::pause();
 			if (anuncios[input]->podeSerCondutor(utilizadorAtual))
 			{
-				cout << "Pretende ser o condutor (y/n)?" << endl;
+				cout << "Pretende-se candidatar a condutor (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
-					anuncios[input]->setCondutor(utilizadorAtual);
-					cout << "Tornou-se no condutor desta viagem com sucesso." << endl;
+					((AnuncioProcura *)anuncios[input])->adicionarCondutorCandidato(utilizadorAtual);
+					cout << "Tornou-se num candidato a condutor desta viagem com sucesso." << endl;
 					InputUtils::pause();
 				}
 			}
@@ -559,7 +559,6 @@ void BoleiasInteligentes::showAnunciosMenu()
 				cout << "Pretende editar este anuncio (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
-					cout << "Bambora";
 					meusAnuncios[input]->editar();
 					OutputUtils::clearScreen();
 					cout << "Anuncio editado com sucesso." << endl;

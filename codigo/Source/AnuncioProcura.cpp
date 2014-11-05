@@ -5,6 +5,11 @@ AnuncioProcura::AnuncioProcura()
 
 }
 
+void AnuncioProcura::adicionarCondutorCandidato(Membro *condutor)
+{
+	condutoresCandidatos.push_back(condutor);
+}
+
 void AnuncioProcura::criar()
 {
 	Anuncio::criar();
