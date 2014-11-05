@@ -457,13 +457,14 @@ void BoleiasInteligentes::showAnunciosMenu()
 		}
 		else
 		{
+			OutputUtils::clearScreen();
 			try
 			{
+				OutputUtils::clearScreen();
 				input = OutputUtils::showList(getAnunciosProcura(), 0);
 			}
 			catch (EmptyException<string> e)
 			{
-				OutputUtils::clearScreen();
 				cout << "Erro: " << e.info << endl;
 				pause();
 				return showAnunciosMenu();
@@ -573,7 +574,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 			else
 			{
 				OutputUtils::clearScreen();
-				utilizadorAtual->getVeiculos()[input].show();
+				utilizadorAtual->getVeiculos()[input]->show();
 				pause();
 				return showVeiculosMenu();
 			}
@@ -598,13 +599,13 @@ void BoleiasInteligentes::showVeiculosMenu()
 			else
 			{
 				OutputUtils::clearScreen();
-				utilizadorAtual->getVeiculos()[input].show();
+				utilizadorAtual->getVeiculos()[input]->show();
 				pause();
 				OutputUtils::clearScreen();
 				cout << "Pretende apagar este veiculo (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
-					utilizadorAtual->removeVeiculo(&utilizadorAtual->getVeiculos()[input]); // Não falha, porque está garantido que o veículo existe
+					utilizadorAtual->removeVeiculo(utilizadorAtual->getVeiculos()[input]); // Não falha, porque está garantido que o veículo existe
 					cout << "Veiculo apagado com sucesso." << endl;
 					pause();
 					return showVeiculosMenu();
@@ -612,7 +613,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 				cout << "Pretende editar este veiculo (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
-					utilizadorAtual->getVeiculos()[input].editar();
+					utilizadorAtual->getVeiculos()[input]->editar();
 					OutputUtils::clearScreen();
 					cout << "Veiculo editado com sucesso." << endl;
 					pause();

@@ -103,6 +103,7 @@ void Anuncio::load(ifstream &file, vector<Membro *> *membros)
 	file >> ID;
 	file.ignore(1000, '\n');
 	anunciante = (*membros)[ID];
+
 	file >> ID;
 	file.ignore(1000, '\n');
 	if (ID < 0)
@@ -113,6 +114,18 @@ void Anuncio::load(ifstream &file, vector<Membro *> *membros)
 	{
 		condutor = (*membros)[ID];
 	}
+
+	file >> ID;
+	file.ignore(1000, '\n');
+	if (ID < 0)
+	{
+		veiculo = NULL;
+	}
+	else
+	{
+		veiculo = condutor->getVeiculos()[ID];
+	}
+
 	preco.load(file);
 	horaInicio.load(file);
 	horaFim.load(file);
@@ -159,10 +172,28 @@ void Anuncio::save(ofstream &file, vector<Membro *> *membros)
 	{
 		file << -1 << endl;
 	}
+	else
 	{
 		for (size_t i = 0; i < membros->size(); ++i)
 		{
 			if ((*membros)[i] == condutor)
+			{
+				file << i << endl;
+				break;
+			}
+		}
+	}
+
+	// Guardar veiculo
+	if (veiculo == NULL)
+	{
+		file << -1 << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < condutor->getVeiculos().size(); ++i)
+		{
+			if (condutor->getVeiculos()[i] == veiculo)
 			{
 				file << i << endl;
 				break;
@@ -230,7 +261,7 @@ void Anuncio::editar()
 
 bool Anuncio::isPronto() const
 {
-	if (condutor == NULL)
+	if (condutor == NULL || veiculo == NULL)
 	{
 		return false;
 	}

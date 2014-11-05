@@ -5,6 +5,7 @@
 #include "Particular.h"
 #include "Boleia.h"
 #include "Preco.h"
+#include "Veiculo.h"
 #include <fstream>
 
 using namespace std;
@@ -21,6 +22,7 @@ protected:
 	Data dataFim; // se for igual ao inicio é um evento
 	Membro* anunciante;
 	Membro* condutor;
+	Veiculo* veiculo;
 	Preco preco;
 	Hora horaInicio;
 	Hora horaFim;

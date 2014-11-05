@@ -22,10 +22,16 @@ string Membro::getUtilizador()const
 	return utilizador;
 }
 
-vector<Veiculo> Membro::getVeiculos()const
+vector<Veiculo *> Membro::getVeiculos()
 {
-	return veiculos;
+	vector<Veiculo *> veiculosPtr;
+	for (size_t i = 0; i < veiculos.size(); ++i)
+	{
+		veiculosPtr.push_back(&veiculos[i]);
+	}
+	return veiculosPtr;
 }
+
 string Membro::getPassword()const
 {
 	return password;

@@ -16,8 +16,8 @@ class Boleia
 private:
 	string titulo;
 	string descricao;
-	Membro* condutor; // NULL se ainda não existir
-	Veiculo* veiculo; // NULL se ainda não existir
+	Membro* condutor;
+	Veiculo* veiculo;
 	Coordenadas origem;
 	Coordenadas destino;
 	Preco preco;
@@ -40,7 +40,8 @@ public:
 	void removerPassageiro(Particular* passageiro);
 	bool isMembroInBoleia(Membro* membro) const;
 	void show();
-	
+	void load(ifstream &file, vector<Membro *> *membros);
+	void save(ofstream &file, vector<Membro *> *membros);
 };
 
 #endif
