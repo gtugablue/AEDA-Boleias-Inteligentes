@@ -84,12 +84,18 @@ void Veiculo::load(ifstream &file, vector<Combustivel> *combustiveis)
 	getline(file, marca);
 	getline(file, modelo);
 	file >> mes;
+	file.ignore(1000, '\n');
 	file >> ano;
+	file.ignore(1000, '\n');
 	file >> cilindrada;
+	file.ignore(1000, '\n');
 	unsigned combustivelID;
 	file >> combustivelID;
+	file.ignore(1000, '\n');
 	combustivel = &(*combustiveis)[combustivelID];
 	file >> lotacao;
+	file.ignore(1000, '\n');
+	file >> consumo;
 	file.ignore(1000, '\n');
 }
 
@@ -109,6 +115,7 @@ void Veiculo::save(ofstream &file, vector<Combustivel> *combustiveis)
 		}
 	}
 	file << lotacao << endl;
+	file << consumo << endl;
 }
 
 void Veiculo::show() const
@@ -119,6 +126,7 @@ void Veiculo::show() const
 	cout << "Ano: " << ano << endl;
 	cout << "Cilindrada: " << cilindrada << endl;
 	combustivel->show();
+	cout << "Consumo: " << consumo << " l/100km" << endl;
 }
 
 void Veiculo::criar(vector<Combustivel> *combustiveis)
@@ -132,13 +140,7 @@ void Veiculo::criar(vector<Combustivel> *combustiveis)
 		try
 		{
 			cout << "Introduza o ano: ";
-			if (!(cin >> ano))
-			{
-				cin.clear();
-				cin.ignore(1000, '\n');
-				throw InvalidInputException<string>("Insira um inteiro");
-			}
-			cin.ignore();
+			ano = InputUtils::readInt();
 			break;
 		}
 		catch (InvalidInputException<string> e)
@@ -152,19 +154,11 @@ void Veiculo::criar(vector<Combustivel> *combustiveis)
 		try
 		{
 			cout << "Insira o mes: ";
-			if (!(cin >> mes))
+			mes = InputUtils::readInt();
+			if (mes < 0 || mes > 12)
 			{
-				cin.clear();
-				cin.ignore(1000, '\n');
-				throw InvalidInputException<string>("Insira um inteiro");
-			}
-			else if (mes < 0 || mes > 12)
-			{
-				cin.clear();
-				cin.ignore(1000, '\n');
 				throw DataInvalidaException<string>("Insira um valor igual ou inferior a 12");
 			}
-			cin.ignore(1000, '\n');
 			break;
 		}
 		catch (InvalidInputException<string> e)
@@ -181,13 +175,7 @@ void Veiculo::criar(vector<Combustivel> *combustiveis)
 		try
 		{
 			cout << "Introduza a cilindrada: ";
-			if (!(cin >> cilindrada))
-			{
-				cin.clear();
-				cin.ignore(1000, '\n');
-				throw InvalidInputException<string>("Insira um inteiro");
-			}
-			cin.ignore();
+			cilindrada = InputUtils::readInt();
 			break;
 		}
 		catch (InvalidInputException<string> e)
@@ -200,13 +188,20 @@ void Veiculo::criar(vector<Combustivel> *combustiveis)
 		try
 		{
 			cout << "Introduza a lotacao maxima: ";
-			if (!(cin >> lotacao))
-			{
-				cin.clear();
-				cin.ignore(1000, '\n');
-				throw InvalidInputException<string>("Insira um inteiro");
-			}
-			cin.ignore();
+			lotacao = InputUtils::readInt();
+			break;
+		}
+		catch (InvalidInputException<string> e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+	}
+	while (1)
+	{
+		try
+		{
+			cout << "Introduza o consumo medio do veiculo (l/100km): ";
+			lotacao = InputUtils::readDouble();
 			break;
 		}
 		catch (InvalidInputException<string> e)

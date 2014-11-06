@@ -22,6 +22,7 @@ private:
 	unsigned cilindrada;
 	Combustivel *combustivel;
 	unsigned int lotacao;
+	float consumo; // l/100km
 public:
 	Veiculo();
 	string getMarca() const;

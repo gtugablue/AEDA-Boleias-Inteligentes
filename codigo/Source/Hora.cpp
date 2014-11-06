@@ -77,7 +77,7 @@ void Hora::criar()
 	{
 		try
 		{
-			cout << "Introduza uma hora:";
+			cout << "Introduza uma hora: ";
 			hora = InputUtils::readInt();
 			break;
 		}
@@ -90,7 +90,7 @@ void Hora::criar()
 	{
 		try
 		{
-			cout << "Introduza os minutos:";
+			cout << "Introduza os minutos: ";
 			minuto = InputUtils::readInt();
 			break;
 		}
