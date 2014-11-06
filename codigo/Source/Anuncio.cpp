@@ -218,6 +218,7 @@ void Anuncio::criar(Membro* utilizadorAtual)
 
 	// Escolher veiculo
 	cout << "Escolha um veiculo da lista que se segue..." << endl;
+	InputUtils::pause();
 	int input;
 	do
 	{

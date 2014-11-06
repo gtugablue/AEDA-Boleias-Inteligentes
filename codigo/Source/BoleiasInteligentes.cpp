@@ -460,6 +460,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 				anuncio = new AnuncioProcura();
 			}
 		}
+		OutputUtils::clearScreen();
 		anuncio->criar(utilizadorAtual);
 		anuncios.push_back(anuncio);
 		OutputUtils::clearScreen();
