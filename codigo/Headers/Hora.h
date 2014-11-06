@@ -2,7 +2,7 @@
 #define _HORA_H
 
 #include <fstream>
-#include<iostream>
+#include "InputUtils.h"
 
 using namespace std;
 
