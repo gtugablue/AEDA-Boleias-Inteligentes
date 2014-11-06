@@ -235,18 +235,6 @@ void Anuncio::criar(Membro* utilizadorAtual)
 	cout << "Introduza a hora da boleia:" << endl;
 	hora.criar();
 	anunciante = utilizadorAtual;
-
-	// Escolher veiculo
-	cout << "Escolha um veiculo da lista que se segue..." << endl;
-	InputUtils::pause();
-	int input;
-	do
-	{
-		input = OutputUtils::showList(utilizadorAtual->getVeiculos());
-	} while (input == -1);
-	veiculo = utilizadorAtual->getVeiculos()[input];
-
-	preco.criar();
 }
 
 void Anuncio::editar()
