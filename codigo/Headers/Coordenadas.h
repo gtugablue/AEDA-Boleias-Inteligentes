@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include "InputUtils.h"
+#include <math.h>
 
 using namespace std;
 
@@ -19,7 +20,8 @@ public:
 	double getLongitude() const;
 	void setLatitude(double latitude);
 	void setLongitude(double longitude);
-	float calcDistancia(const Coordenadas &coordenadas);
+	double toRad(double degrees);
+	double calcDistancia(const Coordenadas &coordenadas);
 	void showcoord();
 	void criar();
 	void editar();

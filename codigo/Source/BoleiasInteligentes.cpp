@@ -461,11 +461,20 @@ void BoleiasInteligentes::showAnunciosMenu()
 			}
 		}
 		OutputUtils::clearScreen();
-		anuncio->criar(utilizadorAtual);
-		anuncios.push_back(anuncio);
-		OutputUtils::clearScreen();
-		cout << "Anuncio criado com sucesso." << endl;
-		pause();
+		try
+		{
+			anuncio->criar(utilizadorAtual);
+			anuncio->getPreco()->updatePrecoCombustivel(anuncio->getVeiculo()->getConsumo(), anuncio->getVeiculo()->getCombustivel()->getPreco(), anuncio->getOrigem().calcDistancia(anuncio->getDestino()));
+			anuncios.push_back(anuncio);
+			OutputUtils::clearScreen();
+			cout << "Anuncio criado com sucesso." << endl;
+		}
+		catch (EmptyException<string> e)
+		{
+			cout << "Erro: " << e.info << endl;
+			delete anuncio;
+		}
+		InputUtils::pause();
 		return showAnunciosMenu();
 	}
 	case 1: // Ver anuncios
@@ -517,8 +526,14 @@ void BoleiasInteligentes::showAnunciosMenu()
 				cout << "Pretende-se candidatar a condutor (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
+					do
+					{
+						OutputUtils::showList(utilizadorAtual->getVeiculos());
+					} while (input == -1);
+					anuncios[input]->setVeiculo(utilizadorAtual->getVeiculos()[input]);
 					Preco preco;
 					preco.criar();
+					preco.updatePrecoCombustivel(anuncios[input]->getVeiculo()->getConsumo(), anuncios[input]->getVeiculo()->getCombustivel()->getPreco(), anuncios[input]->getOrigem().calcDistancia(anuncios[input]->getDestino()));
 					((AnuncioProcura *)anuncios[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
 					cout << "Tornou-se num candidato a condutor desta viagem com sucesso." << endl;
 					InputUtils::pause();
@@ -573,6 +588,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 							if (InputUtils::readYesOrNo('y', 'n'))
 							{
 								meusAnuncios[input]->setCondutor(((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos()[input2].first);
+								meusAnuncios[input]->setPreco(((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos()[input2].second);
 								cout << "Condutor definido com sucesso." << endl;
 								((AnuncioProcura *)meusAnuncios[input])->cleanCondutoresCandidatos();	// Não há necessidade de deixar ficar a lista de candidatos quando já existe um condutor
 							}

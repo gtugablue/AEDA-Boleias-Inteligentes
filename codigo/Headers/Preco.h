@@ -28,6 +28,7 @@ public:
 	friend ostream& operator<<(ostream &os, const Preco &preco);
 	void show() const;
 	float calcularTotal() const;
+	void updatePrecoCombustivel(float consumo, float precoCombustivel, double distancia);
 	void criar();
 	void save(ofstream &file);
 	void load(ifstream &file);

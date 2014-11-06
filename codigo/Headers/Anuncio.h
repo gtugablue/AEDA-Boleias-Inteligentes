@@ -32,8 +32,12 @@ public:
 	string getDescricao() const;
 	Membro* getAnunciante() const;
 	void setTitulo(const string &titulo);
+	void setVeiculo(Veiculo* veiculo);
+	Veiculo* getVeiculo();
 	Membro* getCondutor();
+	Preco* getPreco();
 	void setCondutor(Membro *membro);
+	void setPreco(const Preco &preco);
 	Coordenadas getOrigem();
 	Coordenadas getDestino();
 	void setDescricao(const string &descricao);

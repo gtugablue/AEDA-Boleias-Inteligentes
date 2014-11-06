@@ -20,9 +20,22 @@ int InputUtils::readInt()
 	return n;
 }
 
+float InputUtils::readFloat()
+{
+	float n;
+	if (!(cin >> n))
+	{
+		cin.clear();
+		cin.ignore(1000, '\n');
+		throw InvalidInputException<string>("Insira um numero decimal");
+	}
+	cin.ignore(1000, '\n');
+	return n;
+}
+
 double InputUtils::readDouble()
 {
-	int n;
+	double n;
 	if (!(cin >> n))
 	{
 		cin.clear();

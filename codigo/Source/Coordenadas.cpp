@@ -93,13 +93,24 @@ void Coordenadas::editar()
 	return criar();
 }
 
-float Coordenadas::calcDistancia(const Coordenadas &coordenadas)
+double Coordenadas::toRad(double degrees)
 {
-	double dist;
-	double a = latitude - coordenadas.getLatitude();
-	double b = longitude - coordenadas.getLongitude();
-	dist = sqrt(pow(a, 2) + pow(b, 2));
-	return dist;
+	double radians = degrees * (atan(1.0) * 4) / 180;
+	return radians;
+}
+
+double Coordenadas::calcDistancia(const Coordenadas &coordenadas)
+{
+	double earthRadius = 3958.75;
+	double dLat = toRad(coordenadas.latitude - latitude);
+	double dLng = toRad(coordenadas.longitude - longitude);
+	double a = sin(dLat / 2) * sin(dLat / 2) +
+		cos(toRad(latitude)) * cos(toRad(coordenadas.latitude)) *
+		sin(dLng / 2) * sin(dLng / 2);
+	double c = 2 * atan2(sqrt(a), sqrt(1 - a));
+	double dist = earthRadius * c;
+	double meterConversion = 1609.00;
+	return dist * meterConversion;
 }
 
 void Coordenadas::load(ifstream &file)

@@ -31,6 +31,8 @@ public:
 	unsigned getMes() const;
 	unsigned getAno() const;
 	unsigned getCilindrada() const;
+	float getConsumo() const;
+	Combustivel *getCombustivel();
 	void setMarca(string &marca);
 	void setMes(unsigned mes);
 	void setAno(unsigned ano);

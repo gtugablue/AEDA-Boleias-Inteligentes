@@ -25,14 +25,34 @@ void Anuncio::setTitulo(const string &titulo)
 	this->titulo = titulo;
 }
 
+void Anuncio::setVeiculo(Veiculo* veiculo)
+{
+	this->veiculo = veiculo;
+}
+
+Veiculo* Anuncio::getVeiculo()
+{
+	return veiculo;
+}
+
 Membro* Anuncio::getCondutor()
 {
 	return condutor;
 }
 
+Preco* Anuncio::getPreco()
+{
+	return &preco;
+}
+
 void Anuncio::setCondutor(Membro* membro)
 {
 	condutor = membro;
+}
+
+void Anuncio::setPreco(const Preco &preco)
+{
+	this->preco = preco;
 }
 
 Coordenadas Anuncio::getOrigem()

@@ -35,6 +35,16 @@ unsigned Veiculo::getLotacao() const
 	return lotacao;
 }
 
+float Veiculo::getConsumo() const
+{
+	return consumo;
+}
+
+Combustivel *Veiculo::getCombustivel()
+{
+	return combustivel;
+}
+
 void Veiculo::setMarca(string &marca)
 {
 	this->marca = marca;
@@ -201,7 +211,7 @@ void Veiculo::criar(vector<Combustivel> *combustiveis)
 		try
 		{
 			cout << "Introduza o consumo medio do veiculo (l/100km): ";
-			lotacao = InputUtils::readDouble();
+			consumo = InputUtils::readFloat();
 			break;
 		}
 		catch (InvalidInputException<string> e)

@@ -12,6 +12,7 @@ class InputUtils
 public:
 	static string readLine();
 	static int readInt();
+	static float readFloat();
 	static double readDouble();
 	static string readPassword();
 	static int readDigit(unsigned from, unsigned to);

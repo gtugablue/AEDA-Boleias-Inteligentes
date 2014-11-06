@@ -58,6 +58,11 @@ float Preco::calcularTotal() const
 	return total;
 }
 
+void Preco::updatePrecoCombustivel(float consumo, float precoCombustivel, double distancia)
+{
+	combustivel = (float)(100.0 * distancia * precoCombustivel / consumo);
+}
+
 void Preco::criar()
 {
 	string nome;
@@ -67,25 +72,8 @@ void Preco::criar()
 	{
 		try
 		{
-			cout << "Insira o preco do combustivel" << endl;
-			if (!(cin >> combustivel))
-			{
-				throw InvalidInputException<string>("Insira um float");
-			}
-			cin.ignore();
-			break;
-		}
-		catch (InvalidInputException<string>e)
-		{
-			cout << "Erro: " << e.info << endl << endl;
-		}
-	}
-	while (1)
-	{
-		try
-		{
 			cout << "Introduza o preco do desgaste:" << endl;
-			desgaste = InputUtils::readDouble();
+			desgaste = InputUtils::readFloat();
 			break;
 		}
 		catch (InvalidInputException<string>e)
@@ -106,7 +94,7 @@ void Preco::criar()
 				try
 				{
 					cout << "Insira o preco da despesa:" << endl;
-					preco = InputUtils::readDouble();
+					preco = InputUtils::readFloat();
 					break;
 				}
 				catch (InvalidInputException<string>e)
