@@ -73,23 +73,24 @@ void Hora::show()const
 
 void Hora::criar()
 {
-	cout << "Introduza uma hora:";
 	while (1)
 	{
 		try
 		{
+			cout << "Introduza uma hora:";
 			hora = InputUtils::readInt();
+			break;
 		}
 		catch (InvalidInputException<string> e)
 		{
 			cout << "Erro: " << e.info;
 		}
 	}
-	cout << "Introduza os minutos:";
 	while (1)
 	{
 		try
 		{
+			cout << "Introduza os minutos:";
 			minuto = InputUtils::readInt();
 			break;
 		}

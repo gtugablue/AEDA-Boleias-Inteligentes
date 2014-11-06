@@ -415,6 +415,10 @@ void BoleiasInteligentes::showMainMenu()
 		{
 			utilizadorAtual = NULL;
 		}
+		else
+		{
+			return showMainMenu();
+		}
 		return showLoginMenu();
 	}
 	}

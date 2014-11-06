@@ -124,7 +124,6 @@ void Anuncio::load(ifstream &file, vector<Membro *> *membros)
 
 	preco.load(file);
 	hora.load(file);
-	file.ignore(1000, '\n');
 }
 
 void Anuncio::save(ofstream &file, vector<Membro *> *membros)
