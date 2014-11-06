@@ -65,33 +65,6 @@ void Anuncio::addPassageiro(Particular *membro)
 	passageiros.push_back(membro);
 }
 
-/*void Anuncio::adicionarCandidato(Particular* candidato)
-{
-candidatos.push_back(candidato);
-}
-
-void Anuncio::removerCandidato(Particular* candidato)
-{
-for(size_t i=0; i < candidatos.size();i++)
-{
-if(candidatos[i]->getUtilizador()==candidato->getUtilizador())
-{
-candidatos.erase(candidatos.begin()+i);
-}
-}
-}
-
-void Anuncio::aceitarCandidato(Particular* candidato)
-{
-for(size_t i=0; i < candidatos.size();i++)
-{
-if(candidatos[i]->getUtilizador()==candidato[i].getUtilizador())
-{
-//boleia->adicionarPassageiro(candidatos[i]);
-}
-}
-}*/
-
 void Anuncio::show() const
 {
 	cout << "Titulo: " << titulo << endl;
@@ -102,10 +75,7 @@ void Anuncio::show() const
 	cout << "Condutor: " << condutor->getNome() << endl;
 	veiculo->show();
 	preco.show();
-	horaInicio.showHora();
-	horaFim.showHora();
-	cout << "Dia da Semana:" << diaDaSemana << endl;
-
+	hora.show();
 }
 
 void Anuncio::load(ifstream &file, vector<Membro *> *membros)
@@ -153,9 +123,7 @@ void Anuncio::load(ifstream &file, vector<Membro *> *membros)
 	}
 
 	preco.load(file);
-	horaInicio.load(file);
-	horaFim.load(file);
-	file >> diaDaSemana;
+	hora.load(file);
 	file.ignore(1000, '\n');
 }
 
@@ -228,30 +196,37 @@ void Anuncio::save(ofstream &file, vector<Membro *> *membros)
 	}
 
 	preco.save(file);
-	horaInicio.save(file);
-	horaFim.save(file);
-	file << diaDaSemana << endl;
+	hora.save(file);
 }
 
-void Anuncio::criar(vector<Combustivel>*combustiveis)
+void Anuncio::criar(Membro* utilizadorAtual)
 {
-	cout << "Introduza um titulo:";
+	cout << "Introduza um titulo: ";
 	getline(cin, titulo);
-	cout << "Introduza uma descricao";
+	cout << "Introduza uma descricao: ";
 	getline(cin, descricao);
+	cout << "Introduza as coordenadas de origem:" << endl;
 	origem.criar();
+	cout << "Introduza as coordenadas de destino:" << endl;
 	destino.criar();
+	cout << "Introduza a data de inicio (apenas deve diferir da data de fim caso seja uma boleia a repetir-se semanalmente):" << endl;
 	dataInicio.criar();
+	cout << "Introduza a data de fim (apenas deve diferir da data de inicio caso seja uma boleia a repetir-se semanalmente):" << endl;
 	dataFim.criar();
-	anunciante->criarMembro();
-	condutor->criarMembro();
-	veiculo->criar(combustiveis);
-	preco.criar();
-	horaInicio.criar();
-	horaFim.criar();
-	cout << "Introduza o dia da semana :";
-	cin >> diaDaSemana;
+	cout << "Introduza a hora da boleia:" << endl;
+	hora.criar();
+	anunciante = utilizadorAtual;
 
+	// Escolher veiculo
+	cout << "Escolha um veiculo da lista que se segue..." << endl;
+	int input;
+	do
+	{
+		input = OutputUtils::showList(utilizadorAtual->getVeiculos());
+	} while (input == -1);
+	veiculo = utilizadorAtual->getVeiculos()[input];
+
+	preco.criar();
 }
 
 void Anuncio::editar()

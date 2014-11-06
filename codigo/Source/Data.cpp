@@ -118,13 +118,8 @@ void Data::criar()
 		try
 		{
 			cout << "Insira o mes: ";
-			if (!(cin >> mes))
-			{
-				cin.clear();
-				cin.ignore(1000, '\n');
-				throw InvalidInputException<string>("Insira um inteiro");
-			}
-			else if (mes < 0 || mes > 12)
+			mes = InputUtils::readInt();
+			if (mes < 0 || mes > 12)
 			{
 				cin.clear();
 				cin.ignore(1000, '\n');
@@ -147,13 +142,8 @@ void Data::criar()
 		try
 		{
 			cout << "Insira o dia: ";
-			if (!(cin >> dia))
-			{
-				cin.clear();
-				cin.ignore(1000, '\n');
-				throw InvalidInputException<string>("Insira um inteiro");
-			}
-			else if ((mes == 2 && dia > (isBissexto() ? 29 : 28)) || ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30) || dia > 31)
+			dia = InputUtils::readInt();
+			if ((mes == 2 && dia > (isBissexto() ? 29 : 28)) || ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30) || dia > 31)
 			{
 				cin.clear();
 				cin.ignore(1000, '\n');

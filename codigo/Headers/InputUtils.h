@@ -10,7 +10,9 @@ using namespace std;
 class InputUtils
 {
 public:
-	static string readString();
+	static string readLine();
+	static int readInt();
+	static double readDouble();
 	static string readPassword();
 	static int readDigit(unsigned from, unsigned to);
 	static bool readYesOrNo(unsigned char yes, unsigned char no);

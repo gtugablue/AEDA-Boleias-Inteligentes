@@ -24,9 +24,7 @@ protected:
 	Membro* condutor;
 	Veiculo* veiculo;
 	Preco preco;
-	Hora horaInicio;
-	Hora horaFim;
-	unsigned diaDaSemana; // 0 a 6, para o caso de ser uma boleia periódica
+	Hora hora;
 public:
 	Anuncio();
 	Anuncio(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Data &dataInicio, const Data &dataFim);
@@ -45,7 +43,7 @@ public:
 	virtual void show() const;
 	virtual void load(ifstream &file, vector<Membro *> *membros);
 	virtual void save(ofstream &file, vector<Membro *> *membros);
-	virtual void criar(vector<Combustivel> *combustiveis);
+	virtual void criar(Membro* utilizadorAtual);
 	virtual void editar() = 0;
 	bool isPronto() const;
 	bool podeSerPassageiro(Membro* membro) const;

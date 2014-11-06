@@ -17,7 +17,7 @@ public:
 	void setAnunciante(Particular* anunciante);
 	Particular* getAnunciante() const;
 	void cleanCondutoresCandidatos();
-	void criar(vector<Combustivel> *combustiveis);
+	void criar(Membro* utilizadorAtual);
 	void save(ofstream &file, vector<Membro *> *membros);
 	void load(ifstream &file, vector<Membro *> *membros);
 	friend ostream& operator<<(ostream &os, const AnuncioProcura &anuncio);

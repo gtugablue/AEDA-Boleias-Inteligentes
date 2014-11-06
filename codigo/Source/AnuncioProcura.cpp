@@ -10,9 +10,9 @@ void AnuncioProcura::adicionarCondutorCandidato(pair<Membro *, Preco> &condutorC
 	condutoresCandidatos.push_back(condutorCandidato);
 }
 
-void AnuncioProcura::criar(vector<Combustivel> *combustiveis)
+void AnuncioProcura::criar(Membro *utilizadorAtual)
 {
-	Anuncio::criar(combustiveis);
+	Anuncio::criar(utilizadorAtual);
 }
 
 void AnuncioProcura::editar()

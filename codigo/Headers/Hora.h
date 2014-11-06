@@ -13,7 +13,7 @@ private:
 	unsigned minuto;
 public:
 	Hora();
-	void showHora() const ;
+	void show() const;
 	Hora(unsigned hora, unsigned minuto);
 	unsigned getHora() const;
 	unsigned getMinuto() const;

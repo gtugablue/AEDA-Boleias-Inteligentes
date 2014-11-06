@@ -1,10 +1,36 @@
 #include "../Headers/InputUtils.h"
 
-string InputUtils::readString()
+string InputUtils::readLine()
 {
 	string cenas;
 	getline(cin, cenas);
 	return cenas;
+}
+
+int InputUtils::readInt()
+{
+	int n;
+	cin >> n;
+	if (!(cin >> n))
+	{
+		cin.clear();
+		cin.ignore(1000, '\n');
+		throw InvalidInputException<string>("Insira um inteiro");
+	}
+	return n;
+}
+
+double InputUtils::readDouble()
+{
+	int n;
+	cin >> n;
+	if (!(cin >> n))
+	{
+		cin.clear();
+		cin.ignore(1000, '\n');
+		throw InvalidInputException<string>("Insira um numero decimal");
+	}
+	return n;
 }
 
 string InputUtils::readPassword()

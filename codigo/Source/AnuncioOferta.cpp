@@ -11,9 +11,9 @@ Anuncio(titulo, descricao, origem, destino, dataInicio, dataFim)
 	this->preco = preco;
 }
 
-void AnuncioOferta::criar(vector<Combustivel> *combustiveis)
+void AnuncioOferta::criar(Membro* utilizadorAtual)
 {
-	Anuncio::criar(combustiveis);
+	Anuncio::criar(utilizadorAtual);
 	preco.criar();
 }
 

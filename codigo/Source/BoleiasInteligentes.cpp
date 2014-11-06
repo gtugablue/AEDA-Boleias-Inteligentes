@@ -290,7 +290,7 @@ void BoleiasInteligentes::showLoginMenu()
 	{
 		OutputUtils::clearScreen();
 		cout << "Username: ";
-		string username = InputUtils::readString();
+		string username = InputUtils::readLine();
 		cout << "Password: ";
 		string password = InputUtils::readPassword();
 		cout << endl;
@@ -323,11 +323,11 @@ void BoleiasInteligentes::showLoginMenu()
 			membro = new Particular();
 		}
 		cout << "Nome: ";
-		membro->setNome(InputUtils::readString());
+		membro->setNome(InputUtils::readLine());
 		try
 		{
 			cout << "Username: ";
-			membro->setUtilizador(InputUtils::readString());
+			membro->setUtilizador(InputUtils::readLine());
 			if (existsUtilizador(membro->getUtilizador()))
 			{
 				throw UtilizadorRepetidoException<string>("Utilizador ja existente");
@@ -456,8 +456,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 				anuncio = new AnuncioProcura();
 			}
 		}
-		anuncio->criar(&combustiveis);
-		anuncio->setAnunciante(utilizadorAtual);
+		anuncio->criar(utilizadorAtual);
 		anuncios.push_back(anuncio);
 		OutputUtils::clearScreen();
 		cout << "Anuncio criado com sucesso." << endl;
