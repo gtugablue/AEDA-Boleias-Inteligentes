@@ -11,7 +11,7 @@ using namespace std;
 class Particular : public Membro
 {
 private:
-	Data dataNascimento;
+	vector<pair<Membro *, unsigned>> conhecidos;
 public:
 	Particular();
 	Particular(string nome, string utilizador, string password);
@@ -19,6 +19,7 @@ public:
 	void signup();
 	void save(ofstream &file, vector<Combustivel> *combustiveis);
 	void load(ofstream &file, vector<Combustivel> *combustiveis);	// TODO
+	void updateConhecidos(vector<Membro *> passageiros);
 };
 
 #endif

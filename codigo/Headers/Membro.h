@@ -34,6 +34,7 @@ public:
 	virtual void save(ofstream &file, vector<Combustivel> *combustiveis);
 	virtual void signup() = 0;
 	virtual void edit();
+	virtual void updateConhecidos(vector<Membro *> passageiros);
 	void show();
 	void criarMembro();
 	bool temVeiculo() const;

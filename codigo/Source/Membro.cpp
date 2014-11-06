@@ -131,3 +131,8 @@ void Membro::criarMembro()
 	cout << "Introduza uma password: ";
 	getline(cin, password);
 }
+
+void Membro::updateConhecidos(vector<Membro *> passageiros)
+{
+	
+}

@@ -5,7 +5,7 @@ const string BoleiasInteligentes::ficheiroMembros = "membros.txt";
 const string BoleiasInteligentes::ficheiroAnuncios = "anuncios.txt";
 const string BoleiasInteligentes::ficheiroBoleias = "boleias.txt";
 
-BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder) :
+BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder):
 dataFolder(dataFolder), utilizadorAtual(NULL)
 {
 
@@ -441,6 +441,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 	{
 	case 0: // Criar anuncio
 	{
+		bool oferta;
 		Anuncio* anuncio;
 		if (dynamic_cast<Particular*>(utilizadorAtual) == NULL)
 		{
@@ -453,10 +454,12 @@ void BoleiasInteligentes::showAnunciosMenu()
 			cout << "Que tipo de anuncio pretende criar ('o' para oferta e 'p' para procura)?" << endl;
 			if (InputUtils::readYesOrNo('o', 'p'))
 			{
+				oferta = true;
 				anuncio = new AnuncioOferta();
 			}
 			else
 			{
+				oferta = false;
 				anuncio = new AnuncioProcura();
 			}
 		}
@@ -464,7 +467,11 @@ void BoleiasInteligentes::showAnunciosMenu()
 		try
 		{
 			anuncio->criar(utilizadorAtual);
-			anuncio->getPreco()->updatePrecoCombustivel(anuncio->getVeiculo()->getConsumo(), anuncio->getVeiculo()->getCombustivel()->getPreco(), anuncio->getOrigem().calcDistancia(anuncio->getDestino()));
+			if (oferta)
+			{
+				anuncio->getPreco()->updatePrecoCombustivel(anuncio->getVeiculo()->getConsumo(), anuncio->getVeiculo()->getCombustivel()->getPreco(), anuncio->getOrigem().calcDistancia(anuncio->getDestino()));
+				anuncio->setCondutor(utilizadorAtual);
+			}
 			anuncios.push_back(anuncio);
 			OutputUtils::clearScreen();
 			cout << "Anuncio criado com sucesso." << endl;
@@ -770,13 +777,37 @@ void BoleiasInteligentes::showBoleiasMenu()
 				{
 					throw AnuncioIncompletoException<string>("Impossivel converter um anuncio incompleto numa boleia.");
 				}
-				meusAnuncios[input]->show();
-				pause();
-				OutputUtils::clearScreen();
 				if (meusAnuncios[input]->getAnunciante() != utilizadorAtual)
 				{
 					throw ProibidoException<string>("Apenas o criador do anuncio pode converte-lo numa boleia.");
 				}
+
+				OutputUtils::clearScreen();
+				meusAnuncios[input]->updateConhecidos();
+				boleias.push_back(Boleia(
+					meusAnuncios[input]->getTitulo(),
+					meusAnuncios[input]->getDescricao(),
+					meusAnuncios[input]->getOrigem(),
+					meusAnuncios[input]->getDestino(),
+					*(meusAnuncios[input]->getPreco()),
+					meusAnuncios[input]->getPassageiros(),
+					meusAnuncios[input]->getDataInicio(),
+					meusAnuncios[input]->getDataFim(),
+					meusAnuncios[input]->getCondutor(),
+					meusAnuncios[input]->getVeiculo(),
+					meusAnuncios[input]->getHora()));
+
+				for (size_t i = 0; i < anuncios.size(); ++i)
+				{
+					if (anuncios[i] == meusAnuncios[input])
+					{
+						delete anuncios[i];
+						anuncios.erase(anuncios.begin() + i);
+					}
+				}
+				OutputUtils::clearScreen();
+				cout << "Conversao efetuada com sucesso." << endl;
+				InputUtils::pause();
 			}
 		}
 		catch (EmptyException<string> e)
@@ -797,6 +828,7 @@ void BoleiasInteligentes::showBoleiasMenu()
 			pause();
 			return showBoleiasMenu();
 		}
+		return showAnunciosMenu();
 	}
 	case 1: // Ver minhas boleias
 	{
@@ -821,8 +853,8 @@ void BoleiasInteligentes::showBoleiasMenu()
 		{
 			cout << "Erro: " << e.info << endl;
 			pause();
-			return showBoleiasMenu();
 		}
+		return showBoleiasMenu();
 	}
 	case 2: // Remover-me de uma boleia
 	{
@@ -856,16 +888,15 @@ void BoleiasInteligentes::showBoleiasMenu()
 					minhasBoleias[input]->removerPassageiro((Particular *)utilizadorAtual);
 					cout << "Removido da boleia com sucesso." << endl;
 				}
-				pause();
-				OutputUtils::clearScreen();
+				InputUtils::pause();
 			}
 		}
 		catch (EmptyException<string> e)
 		{
 			cout << "Erro: " << e.info << endl;
-			pause();
-			return showBoleiasMenu();
+			InputUtils::pause();
 		}
+		return showBoleiasMenu();
 	}
 	case 3: // Voltar
 	{

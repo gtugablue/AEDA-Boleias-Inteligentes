@@ -65,6 +65,26 @@ Coordenadas Anuncio::getDestino()
 	return destino;
 }
 
+vector<Particular *> Anuncio::getPassageiros()
+{
+	return passageiros;
+}
+
+Hora Anuncio::getHora() const
+{
+	return hora;
+}
+
+Data Anuncio::getDataInicio() const
+{
+	return dataInicio;
+}
+
+Data Anuncio::getDataFim() const
+{
+	return dataFim;
+}
+
 void Anuncio::setDescricao(const string &descricao)
 {
 	this->descricao = descricao;
@@ -92,7 +112,10 @@ void Anuncio::show() const
 	dataInicio.showData();
 	dataFim.showData();
 	cout << "Anunciante: " << anunciante->getNome() << endl;
-	cout << "Condutor: " << condutor->getNome() << endl;
+	if (condutor != NULL)
+	{
+		cout << "Condutor: " << condutor->getNome() << endl;
+	}
 	veiculo->show();
 	preco.show();
 	hora.show();
@@ -318,6 +341,20 @@ bool Anuncio::podeSerCondutor(Membro* membro) const
 		return false;
 	}
 	return condutor == NULL;
+}
+
+void Anuncio::updateConhecidos()
+{
+	vector<Membro *> passageirosMaisCondutor;
+	for (size_t i = 0; i < passageiros.size(); ++i)
+	{
+		passageirosMaisCondutor.push_back(passageiros[i]);
+	}
+	passageirosMaisCondutor.push_back(condutor);
+	for (size_t i = 0; i < passageiros.size(); ++i)
+	{
+		passageiros[i]->updateConhecidos(passageirosMaisCondutor);
+	}
 }
 
 ostream& operator<<(ostream &os, Anuncio* anuncio)

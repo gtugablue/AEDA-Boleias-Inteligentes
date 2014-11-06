@@ -17,7 +17,7 @@ protected:
 	string descricao;
 	Coordenadas origem;
 	Coordenadas destino;
-	vector<Particular*> passageiros; // Número total de pessoas no veículo = passageiros + 1 (condutor)
+	vector<Particular *> passageiros; // Número total de pessoas no veículo = passageiros + 1 (condutor)
 	Data dataInicio;
 	Data dataFim; // se for igual ao inicio é um evento
 	Membro* anunciante;
@@ -36,6 +36,10 @@ public:
 	Veiculo* getVeiculo();
 	Membro* getCondutor();
 	Preco* getPreco();
+	Hora getHora() const;
+	Data getDataInicio() const;
+	Data getDataFim() const;
+	vector<Particular *> getPassageiros();
 	void setCondutor(Membro *membro);
 	void setPreco(const Preco &preco);
 	Coordenadas getOrigem();
@@ -52,6 +56,7 @@ public:
 	bool isPronto() const;
 	bool podeSerPassageiro(Membro* membro) const;
 	bool podeSerCondutor(Membro* membro) const;
+	virtual void updateConhecidos();
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);
 };
 

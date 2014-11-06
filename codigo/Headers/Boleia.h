@@ -24,14 +24,11 @@ private:
 	Data dataFim; // se for igual ao inicio é um evento
 	Membro* condutor;
 	Veiculo* veiculo;
-	Hora horaInicio;
-	Hora horaFim;
-	char diaDaSemana; // 0 a 6, para o caso de ser uma boleia periódica
+	Hora hora;
 
 public:
 	Boleia();
-	Boleia(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim);
-	Boleia(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim);
+	Boleia(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Preco &preco, const vector<Particular*> &passageiros, const Data &dataInicio, const Data &dataFim, Membro *condutor, Veiculo *veiculo, const Hora &hora);
 	Membro* getCondutor() const;
 	Veiculo* getVeiculo() const;
 	vector<Particular *> getPassageiros() const;
@@ -43,6 +40,7 @@ public:
 	void show();
 	void load(ifstream &file, vector<Membro *> *membros);
 	void save(ofstream &file, vector<Membro *> *membros);
+	friend ostream& operator<<(ostream& os, Boleia* boleia);
 };
 
 #endif

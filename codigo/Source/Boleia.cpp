@@ -5,18 +5,10 @@ Boleia::Boleia()
 
 }
 
-Boleia::Boleia(Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim) :
-origem(localInicio), destino(localFim), dataInicio(dataInicio), dataFim(dataFim)
+Boleia::Boleia(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Preco &preco, const vector<Particular*> &passageiros, const Data &dataInicio, const Data &dataFim, Membro *condutor, Veiculo *veiculo, const Hora &hora) :
+titulo(titulo), descricao(descricao), origem(origem), destino(destino), preco(preco), passageiros(passageiros), dataInicio(dataInicio), dataFim(dataFim), condutor(condutor), veiculo(veiculo), hora(hora)
 {
-	this->condutor = NULL;
-	this->veiculo = veiculo;
-}
-
-Boleia::Boleia(Membro* condutor, Veiculo* veiculo, const Coordenadas &localInicio, const Coordenadas &localFim, const Data &dataInicio, const Data &dataFim, const Hora &horaInicio, const Hora &horaFim) :
-origem(localInicio), destino(localFim), dataInicio(dataInicio), dataFim(dataFim)
-{ 
-	this->condutor = condutor;
-	this->veiculo = veiculo;
+	
 }
 
 Membro* Boleia::getCondutor() const
@@ -136,9 +128,7 @@ void Boleia::load(ifstream &file, vector<Membro *> *membros)
 		veiculo = condutor->getVeiculos()[ID];
 	}
 
-	horaInicio.load(file);
-	horaFim.load(file);
-	file >> diaDaSemana;
+	hora.load(file);
 	file.ignore(1000, '\n');
 }
 
@@ -201,7 +191,10 @@ void Boleia::save(ofstream &file, vector<Membro *> *membros)
 		}
 	}
 
-	horaInicio.save(file);
-	horaFim.save(file);
-	file << diaDaSemana << endl;
+	hora.save(file);
+}
+
+ostream& operator<<(ostream& os, Boleia* boleia)
+{
+	return os << boleia->titulo;
 }
