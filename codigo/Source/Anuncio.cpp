@@ -362,16 +362,16 @@ ostream& operator<<(ostream &os, Anuncio* anuncio)
 	return os << anuncio->getTitulo();
 }
 
-unsigned Anuncio::calcularFriendPoints(Particular* utilizadorAtual)
+double Anuncio::calcularFriendPoints(Particular* utilizadorAtual)
 {
-	unsigned friendPoints = 0;
+	double friendPoints = 0;
 	if (condutor != NULL)
 	{
 		for (size_t i = 0; i < utilizadorAtual->getConhecidos().size(); ++i)
 		{
 			if (condutor == utilizadorAtual->getConhecidos()[i].first)
 			{
-				friendPoints += utilizadorAtual->getConhecidos()[i].second;
+				friendPoints += sqrt(utilizadorAtual->getConhecidos()[i].second);	// sqrt() to make sure the number doesn't grow too fast
 				break;
 			}
 		}
@@ -382,7 +382,7 @@ unsigned Anuncio::calcularFriendPoints(Particular* utilizadorAtual)
 		{
 			if (passageiros[i] == utilizadorAtual->getConhecidos()[j].first)
 			{
-				friendPoints += utilizadorAtual->getConhecidos()[j].second;
+				friendPoints += sqrt(utilizadorAtual->getConhecidos()[j].second);	// sqrt() to make sure the number doesn't grow too fast
 				break; // Próximo passageiro
 			}
 		}
@@ -390,6 +390,7 @@ unsigned Anuncio::calcularFriendPoints(Particular* utilizadorAtual)
 	return friendPoints;
 }
 
-bool Anuncio::menosRelevanteQue(Particular* utilizadorAtual, Anuncio *anuncio)
+double Anuncio::calcularAnuncioPoints(double friendPoints, double diferenca, double distanciaTotal)
 {
+	return friendPoints * (distanciaTotal / diferenca); 
 }

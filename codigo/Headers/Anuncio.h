@@ -59,7 +59,6 @@ public:
 	virtual void updateConhecidos();
 	double calcularFriendPoints(Particular* utilizadorAtual);
 	double calcularAnuncioPoints(double friendPoints, double diferenca, double distanciaTotal);
-	bool menosRelevanteQue(Particular* utilizadorAtual, Anuncio *anuncio);
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);
 };
 
