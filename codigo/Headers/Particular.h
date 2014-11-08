@@ -15,6 +15,7 @@ private:
 public:
 	Particular();
 	Particular(string nome, string utilizador, string password);
+	vector<pair<Membro*, unsigned>> getConhecidos() const;
 	void show();
 	void signup();
 	void save(ofstream &file, vector<Combustivel> *combustiveis);

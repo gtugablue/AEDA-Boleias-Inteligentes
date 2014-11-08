@@ -57,6 +57,8 @@ public:
 	bool podeSerPassageiro(Membro* membro) const;
 	bool podeSerCondutor(Membro* membro) const;
 	virtual void updateConhecidos();
+	unsigned calcularFriendPoints(Particular* utilizadorAtual);
+	bool menosRelevanteQue(Particular* utilizadorAtual, Anuncio *anuncio);
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);
 };
 

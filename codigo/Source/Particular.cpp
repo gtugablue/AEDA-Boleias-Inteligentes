@@ -10,6 +10,11 @@ Particular::Particular(string nome, string utilizador, string password) :Membro(
 
 }
 
+vector<pair<Membro*, unsigned>> Particular::getConhecidos() const
+{
+	return conhecidos;
+}
+
 void Particular::show()
 {
 	cout << "Nome: " << nome << endl;

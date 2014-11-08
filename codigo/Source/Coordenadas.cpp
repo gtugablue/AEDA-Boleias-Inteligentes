@@ -110,7 +110,7 @@ double Coordenadas::calcDistancia(const Coordenadas &coordenadas)
 	double c = 2 * atan2(sqrt(a), sqrt(1 - a));
 	double dist = earthRadius * c;
 	double meterConversion = 1609.00;
-	return dist * meterConversion;
+	return dist * meterConversion;	// metros
 }
 
 void Coordenadas::load(ifstream &file)

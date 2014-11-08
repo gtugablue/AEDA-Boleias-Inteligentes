@@ -361,3 +361,35 @@ ostream& operator<<(ostream &os, Anuncio* anuncio)
 {
 	return os << anuncio->getTitulo();
 }
+
+unsigned Anuncio::calcularFriendPoints(Particular* utilizadorAtual)
+{
+	unsigned friendPoints = 0;
+	if (condutor != NULL)
+	{
+		for (size_t i = 0; i < utilizadorAtual->getConhecidos().size(); ++i)
+		{
+			if (condutor == utilizadorAtual->getConhecidos()[i].first)
+			{
+				friendPoints += utilizadorAtual->getConhecidos()[i].second;
+				break;
+			}
+		}
+	}
+	for (size_t i = 0; i < passageiros.size(); ++i)
+	{
+		for (size_t j = 0; j < utilizadorAtual->getConhecidos().size(); ++j)
+		{
+			if (passageiros[i] == utilizadorAtual->getConhecidos()[j].first)
+			{
+				friendPoints += utilizadorAtual->getConhecidos()[j].second;
+				break; // Próximo passageiro
+			}
+		}
+	}
+	return friendPoints;
+}
+
+bool Anuncio::menosRelevanteQue(Particular* utilizadorAtual, Anuncio *anuncio)
+{
+}
