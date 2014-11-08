@@ -20,8 +20,8 @@ public:
 	double getLongitude() const;
 	void setLatitude(double latitude);
 	void setLongitude(double longitude);
-	double toRad(double degrees);
-	double calcDistancia(const Coordenadas &coordenadas);
+	double toRad(double degrees) const;
+	double calcDistancia(const Coordenadas &coordenadas) const;
 	void showcoord();
 	void criar();
 	void editar();

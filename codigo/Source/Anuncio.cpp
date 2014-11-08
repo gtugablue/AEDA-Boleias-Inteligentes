@@ -390,7 +390,12 @@ double Anuncio::calcularFriendPoints(Particular* utilizadorAtual)
 	return friendPoints;
 }
 
-double Anuncio::calcularAnuncioPoints(double friendPoints, double diferenca, double distanciaTotal)
+double Anuncio::calcularDistanciaPoints(const Coordenadas &origem, const Coordenadas &destino) const
 {
-	return friendPoints * (distanciaTotal / diferenca); 
+	return ((this->origem.calcDistancia(this->destino) + origem.calcDistancia(destino)) / 2) / (this->origem.calcDistancia(origem) + this->destino.calcDistancia(destino));
+}
+
+double Anuncio::calcularAnuncioPoints(Particular* utilizadorAtual, const Coordenadas &origem, const Coordenadas &destino)
+{
+	return calcularFriendPoints(utilizadorAtual) * calcularDistanciaPoints(origem, destino);
 }

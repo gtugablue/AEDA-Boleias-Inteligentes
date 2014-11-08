@@ -93,13 +93,13 @@ void Coordenadas::editar()
 	return criar();
 }
 
-double Coordenadas::toRad(double degrees)
+double Coordenadas::toRad(double degrees) const
 {
 	double radians = degrees * (atan(1.0) * 4) / 180;
 	return radians;
 }
 
-double Coordenadas::calcDistancia(const Coordenadas &coordenadas)
+double Coordenadas::calcDistancia(const Coordenadas &coordenadas) const
 {
 	double earthRadius = 3958.75;
 	double dLat = toRad(coordenadas.latitude - latitude);
