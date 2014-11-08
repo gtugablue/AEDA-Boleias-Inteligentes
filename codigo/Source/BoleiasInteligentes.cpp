@@ -97,6 +97,7 @@ void BoleiasInteligentes::loadBoleias()
 	ifstream file(dataFolder + ficheiroBoleias);
 	unsigned numBoleias;
 	file >> numBoleias;
+	file.ignore(1000, '\n');
 	for (size_t i = 0; i < numBoleias; ++i)
 	{
 		Boleia boleia;
