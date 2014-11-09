@@ -79,8 +79,7 @@ public:
 	void showVehicles();
 	void showVehicleInfo();
 
-	static void clearScreen();
-	static void pause();
+	void sortAnuncios(const Coordenadas &origem, const Coordenadas &destino, int left, int right);
 };
 
 template<class T>

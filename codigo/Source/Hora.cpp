@@ -101,3 +101,8 @@ void Hora::criar()
 	}
 
 }
+
+ostream& operator<<(ostream &os, const Hora &hora)
+{
+	return os << hora.hora << ":" << hora.minuto << endl;
+}

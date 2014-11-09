@@ -5,7 +5,7 @@ const string BoleiasInteligentes::ficheiroMembros = "membros.txt";
 const string BoleiasInteligentes::ficheiroAnuncios = "anuncios.txt";
 const string BoleiasInteligentes::ficheiroBoleias = "boleias.txt";
 
-BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder):
+BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder) :
 dataFolder(dataFolder), utilizadorAtual(NULL)
 {
 
@@ -303,7 +303,7 @@ void BoleiasInteligentes::showLoginMenu()
 		catch (LoginException<string> e)
 		{
 			cout << e.info << endl;
-			pause();
+			InputUtils::pause();
 			return showLoginMenu();
 		}
 		return;
@@ -338,7 +338,7 @@ void BoleiasInteligentes::showLoginMenu()
 		{
 			OutputUtils::clearScreen();
 			cout << "Erro: " << e.info << endl;
-			pause();
+			InputUtils::pause();
 			delete membro;
 			return showLoginMenu();
 		}
@@ -349,7 +349,7 @@ void BoleiasInteligentes::showLoginMenu()
 		membros.push_back(membro);
 		OutputUtils::clearScreen();
 		cout << "Conta criada com sucesso!" << endl;
-		pause();
+		InputUtils::pause();
 		showLoginMenu();
 		return;
 
@@ -393,7 +393,7 @@ void BoleiasInteligentes::showMainMenu()
 		OutputUtils::clearScreen();
 		utilizadorAtual->edit();
 		cout << "Conta editada com sucesso." << endl;
-		pause();
+		InputUtils::pause();
 		return showMainMenu();
 	}
 	case 1: // Anuncios
@@ -432,7 +432,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 	vector<string> items =
 	{
 		"Criar anuncio",
-		"Ver anuncios",
+		"Pesquisar anuncios",
 		"Editar anuncio",
 		"Voltar"
 	};
@@ -485,9 +485,21 @@ void BoleiasInteligentes::showAnunciosMenu()
 		InputUtils::pause();
 		return showAnunciosMenu();
 	}
-	case 1: // Ver anuncios
+	case 1: // Pesquisar anuncios
 	{
 		int input;
+
+		if (dynamic_cast<Empresa *>(utilizadorAtual) == NULL)
+		{
+			OutputUtils::clearScreen();
+			Coordenadas origemPretendida, destinoPretendido;
+			cout << "Indique as coordenadas do ponto de partida." << endl;
+			origemPretendida.criar();
+			cout << "Indique as coordenadas do destino." << endl;
+			destinoPretendido.criar();
+			sortAnuncios(origemPretendida, destinoPretendido, 0, anuncios.size() - 1);
+		}
+
 		OutputUtils::clearScreen();
 		cout << "Que tipo de anuncios pretende ver ('o' para oferta e 'p' para procura)?" << endl;
 		bool oferta;
@@ -501,7 +513,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 			{
 				OutputUtils::clearScreen();
 				cout << "Erro: " << e.info << endl;
-				pause();
+				InputUtils::pause();
 				return showAnunciosMenu();
 			}
 		}
@@ -516,7 +528,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 			catch (EmptyException<string> e)
 			{
 				cout << "Erro: " << e.info << endl;
-				pause();
+				InputUtils::pause();
 				return showAnunciosMenu();
 			}
 		}
@@ -545,6 +557,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 					((AnuncioProcura *)anuncios[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
 					cout << "Tornou-se num candidato a condutor desta viagem com sucesso." << endl;
 					InputUtils::pause();
+					return showAnunciosMenu();
 				}
 			}
 			if (anuncios[input]->podeSerPassageiro(utilizadorAtual))
@@ -557,6 +570,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 					InputUtils::pause();
 				}
 			}
+			InputUtils::pause();
 			return showAnunciosMenu();
 		}
 	}
@@ -574,9 +588,9 @@ void BoleiasInteligentes::showAnunciosMenu()
 			{
 				OutputUtils::clearScreen();
 				meusAnuncios[input]->show();
-				pause();
+				InputUtils::pause();
 				OutputUtils::clearScreen();
-				
+
 				// Aceitar candidatos
 				if (meusAnuncios[input]->getCondutor() == NULL)
 				{
@@ -610,7 +624,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 					delete meusAnuncios[input];
 					anuncios.erase(find(anuncios.begin(), anuncios.end(), meusAnuncios[input])); // Não falha, porque está garantido que o anúncio existe
 					cout << "Anuncio apagado com sucesso." << endl;
-					pause();
+					InputUtils::pause();
 					return showAnunciosMenu();
 				}
 				cout << "Pretende editar este anuncio (y/n)?" << endl;
@@ -619,10 +633,10 @@ void BoleiasInteligentes::showAnunciosMenu()
 					meusAnuncios[input]->editar();
 					OutputUtils::clearScreen();
 					cout << "Anuncio editado com sucesso." << endl;
-					pause();
+					InputUtils::pause();
 					return showAnunciosMenu();
 				}
-				pause();
+				InputUtils::pause();
 				return showAnunciosMenu();
 			}
 		}
@@ -630,7 +644,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 		{
 			OutputUtils::clearScreen();
 			cout << "Erro: " << e.info << endl;
-			pause();
+			InputUtils::pause();
 			return showAnunciosMenu();
 		}
 	}
@@ -664,7 +678,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 		veiculo.criar(&combustiveis);
 		utilizadorAtual->addVeiculo(veiculo);
 		cout << "Veiculo criado com sucesso." << endl;
-		pause();
+		InputUtils::pause();
 		return showVeiculosMenu();
 	}
 	case 1: // Ver veiculos
@@ -681,7 +695,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 			{
 				OutputUtils::clearScreen();
 				utilizadorAtual->getVeiculos()[input]->show();
-				pause();
+				InputUtils::pause();
 				return showVeiculosMenu();
 			}
 		}
@@ -689,7 +703,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 		{
 			OutputUtils::clearScreen();
 			cout << "Erro: " << e.info << endl;
-			pause();
+			InputUtils::pause();
 			return showVeiculosMenu();
 		}
 	}
@@ -707,14 +721,14 @@ void BoleiasInteligentes::showVeiculosMenu()
 			{
 				OutputUtils::clearScreen();
 				utilizadorAtual->getVeiculos()[input]->show();
-				pause();
+				InputUtils::pause();
 				OutputUtils::clearScreen();
 				cout << "Pretende apagar este veiculo (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
 					utilizadorAtual->removeVeiculo(utilizadorAtual->getVeiculos()[input]); // Não falha, porque está garantido que o veículo existe
 					cout << "Veiculo apagado com sucesso." << endl;
-					pause();
+					InputUtils::pause();
 					return showVeiculosMenu();
 				}
 				cout << "Pretende editar este veiculo (y/n)?" << endl;
@@ -723,10 +737,10 @@ void BoleiasInteligentes::showVeiculosMenu()
 					utilizadorAtual->getVeiculos()[input]->editar();
 					OutputUtils::clearScreen();
 					cout << "Veiculo editado com sucesso." << endl;
-					pause();
+					InputUtils::pause();
 					return showVeiculosMenu();
 				}
-				pause();
+				InputUtils::pause();
 				return showAnunciosMenu();
 			}
 		}
@@ -734,7 +748,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 		{
 			OutputUtils::clearScreen();
 			cout << "Erro: " << e.info << endl;
-			pause();
+			InputUtils::pause();
 			return showAnunciosMenu();
 		}
 	}
@@ -814,19 +828,19 @@ void BoleiasInteligentes::showBoleiasMenu()
 		catch (EmptyException<string> e)
 		{
 			cout << "Erro: " << e.info << endl;
-			pause();
+			InputUtils::pause();
 			return showBoleiasMenu();
 		}
 		catch (ProibidoException<string> e)
 		{
 			cout << "Erro: " << e.info << endl;
-			pause();
+			InputUtils::pause();
 			return showBoleiasMenu();
 		}
 		catch (AnuncioIncompletoException<string> e)
 		{
 			cout << "Erro: " << e.info << endl;
-			pause();
+			InputUtils::pause();
 			return showBoleiasMenu();
 		}
 		return showAnunciosMenu();
@@ -846,14 +860,14 @@ void BoleiasInteligentes::showBoleiasMenu()
 			{
 				OutputUtils::clearScreen();
 				minhasBoleias[input]->show();
-				pause();
+				InputUtils::pause();
 				OutputUtils::clearScreen();
 			}
 		}
 		catch (EmptyException<string> e)
 		{
 			cout << "Erro: " << e.info << endl;
-			pause();
+			InputUtils::pause();
 		}
 		return showBoleiasMenu();
 	}
@@ -907,7 +921,39 @@ void BoleiasInteligentes::showBoleiasMenu()
 	}
 }
 
-void BoleiasInteligentes::pause()
+void BoleiasInteligentes::sortAnuncios(const Coordenadas &origem, const Coordenadas &destino, int left, int right)
 {
-	system("pause");
+	int i, j;
+	Anuncio *x, *y;
+	i = left;
+	j = right;
+	x = anuncios[(left + right) / 2];
+
+	while (i <= j)
+	{
+		while (anuncios[i] < x && i < right)
+		{
+			i++;
+		}
+		while (anuncios[j] > x && j > left)
+		{
+			j--;
+		}
+		if (i <= j)
+		{
+			y = anuncios[i];
+			anuncios[i] = anuncios[j];
+			anuncios[j] = y;
+			i++;
+			j--;
+		}
+	}
+	if (j > right)
+	{
+		sortAnuncios(origem, destino, left, j);
+	}
+	if (i < right)
+	{
+		sortAnuncios(origem, destino, i, right);
+	}
 }

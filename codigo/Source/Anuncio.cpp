@@ -109,16 +109,29 @@ void Anuncio::show() const
 {
 	cout << "Titulo: " << titulo << endl;
 	cout << "Descricao: " << descricao << endl;
-	dataInicio.showData();
-	dataFim.showData();
+	if (dataInicio == dataFim)
+	{
+		cout << "Data: " << dataInicio << endl;
+	}
+	else
+	{
+		cout << "Data de inicio: " << dataInicio << endl;
+		cout << "Data de fim: " << dataFim << endl;
+	}
 	cout << "Anunciante: " << anunciante->getNome() << endl;
 	if (condutor != NULL)
 	{
 		cout << "Condutor: " << condutor->getNome() << endl;
 	}
-	veiculo->show();
+	if (veiculo != NULL)
+	{
+		cout << endl << "Veiculo: " << endl;
+		veiculo->show();
+		cout << endl;
+	}
+	cout << endl << "Preco:" << endl;
 	preco.show();
-	hora.show();
+	cout << endl << endl << "Hora: " << hora << endl;
 }
 
 void Anuncio::load(ifstream &file, vector<Membro *> *membros)
@@ -332,10 +345,6 @@ bool Anuncio::podeSerPassageiro(Membro* membro) const
 
 bool Anuncio::podeSerCondutor(Membro* membro) const
 {
-	if (condutor != NULL)
-	{
-		return false;
-	}
 	if (find(passageiros.begin(), passageiros.end(), membro) != passageiros.end())
 	{
 		return false;
@@ -362,7 +371,7 @@ ostream& operator<<(ostream &os, Anuncio* anuncio)
 	return os << anuncio->getTitulo();
 }
 
-double Anuncio::calcularFriendPoints(Particular* utilizadorAtual)
+double Anuncio::calcularFriendPoints(const Particular* utilizadorAtual) const
 {
 	double friendPoints = 0;
 	if (condutor != NULL)
@@ -395,7 +404,7 @@ double Anuncio::calcularDistanciaPoints(const Coordenadas &origem, const Coorden
 	return ((this->origem.calcDistancia(this->destino) + origem.calcDistancia(destino)) / 2) / (this->origem.calcDistancia(origem) + this->destino.calcDistancia(destino));
 }
 
-double Anuncio::calcularAnuncioPoints(Particular* utilizadorAtual, const Coordenadas &origem, const Coordenadas &destino)
+double Anuncio::calcularAnuncioPoints(const Particular* utilizadorAtual, const Coordenadas &origem, const Coordenadas &destino) const
 {
 	return calcularFriendPoints(utilizadorAtual) * calcularDistanciaPoints(origem, destino);
 }

@@ -111,7 +111,6 @@
     <ClInclude Include="Headers\OutputUtils.h" />
     <ClInclude Include="Headers\Particular.h" />
     <ClInclude Include="Headers\Preco.h" />
-    <ClInclude Include="Headers\SortUtils.h" />
     <ClInclude Include="Headers\Veiculo.h" />
     <ClInclude Include="Headers\Boleia.h" />
   </ItemGroup>

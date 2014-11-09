@@ -116,9 +116,6 @@
     <ClInclude Include="Headers\OutputUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\SortUtils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="combustiveis.txt">

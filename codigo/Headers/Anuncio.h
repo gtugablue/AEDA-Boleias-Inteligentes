@@ -57,9 +57,9 @@ public:
 	bool podeSerPassageiro(Membro* membro) const;
 	bool podeSerCondutor(Membro* membro) const;
 	virtual void updateConhecidos();
-	double calcularFriendPoints(Particular* utilizadorAtual);
+	double calcularFriendPoints(const Particular* utilizadorAtual) const;
 	double calcularDistanciaPoints(const Coordenadas &origem, const Coordenadas &destino) const;
-	double calcularAnuncioPoints(Particular* utilizadorAtual, const Coordenadas &origem, const Coordenadas &destino);
+	double calcularAnuncioPoints(const Particular* utilizadorAtual, const Coordenadas &origem, const Coordenadas &destino) const;
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);
 };
 

@@ -74,6 +74,13 @@ ostream& operator<<(ostream &os, const AnuncioProcura &anuncio)
 void AnuncioProcura::show()const
 {
 	Anuncio::show();
+	cout << endl << "Condutores candidatos: ";
+	if (condutoresCandidatos.size() == 0)
+	{
+		cout << "Nenhum" << endl << endl;
+		return;
+	}
+	cout << endl;
 	for (size_t i = 0; i < condutoresCandidatos.size(); i++)
 	{
 		cout << condutoresCandidatos[i].first->getNome() << endl;
