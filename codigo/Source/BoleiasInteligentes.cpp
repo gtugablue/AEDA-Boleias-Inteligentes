@@ -13,8 +13,19 @@ dataFolder(dataFolder), utilizadorAtual(NULL)
 
 void BoleiasInteligentes::start()
 {
-	load();
-	showLoginMenu();
+	while (1)
+	{
+		try
+		{
+			load();
+			showLoginMenu();
+		}
+		catch (FileException<string>e)
+		{
+			cout << "Erro: " << e.info << endl << endl;
+		}
+		
+	}
 }
 
 void BoleiasInteligentes::load()
@@ -31,6 +42,10 @@ void BoleiasInteligentes::loadCombustiveis()
 	float n;
 	fstream file;
 	file.open(dataFolder + ficheiroCombustiveis);
+	if (!file.is_open())
+	{
+		throw FileException<string>("Erro ao abrir o ficheiro membros");
+	}
 
 	while (getline(file, nome))
 	{
@@ -45,6 +60,11 @@ void BoleiasInteligentes::loadMembros()
 {
 	unsigned numMembros;
 	ifstream file(dataFolder + ficheiroMembros);
+	if (!file.is_open())
+	{
+		throw FileException<string>("Erro ao abrir o ficheiro membros");
+	}
+
 	bool empresa;
 	file >> numMembros;
 	for (size_t i = 0; i < numMembros; ++i)
@@ -70,9 +90,13 @@ void BoleiasInteligentes::loadAnuncios()
 {
 	ifstream file(dataFolder + ficheiroAnuncios);
 	unsigned numAnuncios;
+	if (!file.is_open())
+	{
+		throw FileException<string>("Erro ao abrir o ficheiro anuncios");
+	}
 	file >> numAnuncios;
 	file.ignore(1000, '\n');
-	bool oferta;
+	bool oferta=true;
 	Anuncio *anuncio;
 	for (size_t i = 0; i < numAnuncios; ++i)
 	{
@@ -96,6 +120,10 @@ void BoleiasInteligentes::loadBoleias()
 {
 	ifstream file(dataFolder + ficheiroBoleias);
 	unsigned numBoleias;
+	if (!file.is_open())
+	{
+		throw FileException<string>("Erro ao abrir o ficheiro boleias");
+	}
 	file >> numBoleias;
 	file.ignore(1000, '\n');
 	for (size_t i = 0; i < numBoleias; ++i)

@@ -42,7 +42,7 @@ public:
 
 	void showmembro();///Função que mostra no ecrã toda a informação de um determinado membro.
 	void showviagem();///Função que mostra no ecrã toda a informação de uma determinada boleia.
-	
+
 	void start();///Função que da inicio ao programa fazendo load da informação dos ficheiros e mostrando o menu inicial da aplicação.
 
 	void load();///Função que engloba todas as outras funções responsaveis por fazer load da informação contida nos ficheiros txt para os respectivos vectores.
@@ -103,6 +103,17 @@ class ProibidoException
 public:
 	T info;
 	ProibidoException(T info)
+	{
+		this->info = info;
+	}
+};
+
+template<class T>
+class FileException
+{
+public:
+	T info;
+	FileException(T info)
 	{
 		this->info = info;
 	}
