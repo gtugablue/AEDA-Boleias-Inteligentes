@@ -26,26 +26,15 @@ vector<pair<string, float>> Preco::getOutrasDespesas() const
 	return outrasDespesas;
 }
 
-ostream& operator<<(ostream &os, const Preco &preco)
-{
-	os << "Combustivel: " << preco.getCombustivel() << endl;
-	os << "Desgaste: " << preco.getDesgaste() << endl;
-	vector<pair<string, float>> outrasDespesas = preco.getOutrasDespesas();
-	for (size_t i = 0; i < outrasDespesas.size(); ++i)
-	{
-		os << outrasDespesas[i].first << ": " << outrasDespesas[i].second << endl;
-	}
-	return os;
-}
-
 void Preco::show() const
 {
-	cout << "Combustivel: " << combustivel << endl;
-	cout << "Desgaste: " << desgaste << endl;
+	cout << fixed << setprecision(2) <<  "Combustivel: " << combustivel << endl;
+	cout << fixed << setprecision(2) << "Desgaste: " << desgaste << endl;
 	for (size_t i = 0; i < outrasDespesas.size(); ++i)
 	{
-		cout << outrasDespesas[i].first << ": " << outrasDespesas[i].second << endl;
+		cout << fixed << setprecision(2) << outrasDespesas[i].first << ": " << outrasDespesas[i].second << endl;
 	}
+	cout << "Preco total: " << calcularTotal() << endl;
 }
 
 float Preco::calcularTotal() const
@@ -111,7 +100,7 @@ void Preco::criar()
 
 void Preco::save(ofstream &file)
 {
-	file << combustivel << endl;
+	file << fixed << endl;
 	file << desgaste << endl;
 	file << outrasDespesas.size() << endl;
 	for (size_t i = 0; i < outrasDespesas.size(); ++i)
@@ -138,4 +127,9 @@ void Preco::load(ifstream &file)
 		file.ignore(1000, '\n');
 		outrasDespesas.push_back(despesa);
 	}
+}
+
+ostream& operator<<(ostream &os, const Preco &preco)
+{
+	return os << fixed << setprecision(2) << preco.calcularTotal() << " euros" << endl;
 }
