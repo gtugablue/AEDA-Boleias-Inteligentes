@@ -594,11 +594,15 @@ void BoleiasInteligentes::showAnunciosMenu()
 					{
 						OutputUtils::showList(utilizadorAtual->getVeiculos());
 					} while (input == -1);
-					anuncios[input]->setVeiculo(utilizadorAtual->getVeiculos()[input]);
+					Veiculo* veiculo = utilizadorAtual->getVeiculos()[input];
 					Preco preco;
 					preco.criar();
-					preco.updatePrecoCombustivel(anuncios[input]->getVeiculo()->getConsumo(), anuncios[input]->getVeiculo()->getCombustivel()->getPreco(), anuncios[input]->getOrigem().calcDistancia(anuncios[input]->getDestino()));
-					((AnuncioProcura *)anuncios[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
+					preco.updatePrecoCombustivel(utilizadorAtual->getVeiculos()[input]->getConsumo(), utilizadorAtual->getVeiculos()[input]->getCombustivel()->getPreco(), anuncios[input]->getOrigem().calcDistancia(anuncios[input]->getDestino()));
+					CondutorCandidato condutorCandidato;
+					condutorCandidato.condutor = utilizadorAtual;
+					condutorCandidato.preco = preco;
+					condutorCandidato.veiculo = veiculo;
+					((AnuncioProcura *)anuncios[input])->adicionarCondutorCandidato(condutorCandidato);
 					cout << "Tornou-se num candidato a condutor desta viagem com sucesso." << endl;
 					InputUtils::pause();
 					return showAnunciosMenu();
@@ -655,11 +659,15 @@ void BoleiasInteligentes::showAnunciosMenu()
 					{
 						OutputUtils::showList(utilizadorAtual->getVeiculos());
 					} while (input == -1);
-					anunciosDestino[input]->setVeiculo(utilizadorAtual->getVeiculos()[input]);
+					Veiculo *veiculo = utilizadorAtual->getVeiculos()[input];
 					Preco preco;
 					preco.criar();
 					preco.updatePrecoCombustivel(anunciosDestino[input]->getVeiculo()->getConsumo(), anunciosDestino[input]->getVeiculo()->getCombustivel()->getPreco(), anunciosDestino[input]->getOrigem().calcDistancia(anunciosDestino[input]->getDestino()));
-					((AnuncioProcura *)anunciosDestino[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
+					CondutorCandidato condutorCandidato;
+					condutorCandidato.condutor = utilizadorAtual;
+					condutorCandidato.preco = preco;
+					condutorCandidato.veiculo = veiculo;
+					((AnuncioProcura *)anunciosDestino[input])->adicionarCondutorCandidato(condutorCandidato);
 					cout << "Tornou-se num candidato a condutor desta viagem com sucesso." << endl;
 					InputUtils::pause();
 					return showAnunciosMenu();
@@ -741,11 +749,15 @@ void BoleiasInteligentes::showAnunciosMenu()
 					{
 						OutputUtils::showList(utilizadorAtual->getVeiculos());
 					} while (input == -1);
-					anunciosAnunciante[input]->setVeiculo(utilizadorAtual->getVeiculos()[input]);
+					Veiculo *veiculo = utilizadorAtual->getVeiculos()[input];
 					Preco preco;
 					preco.criar();
 					preco.updatePrecoCombustivel(anunciosAnunciante[input]->getVeiculo()->getConsumo(), anunciosAnunciante[input]->getVeiculo()->getCombustivel()->getPreco(), anunciosAnunciante[input]->getOrigem().calcDistancia(anunciosAnunciante[input]->getDestino()));
-					((AnuncioProcura *)anunciosAnunciante[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
+					CondutorCandidato condutorCandidato;
+					condutorCandidato.condutor = utilizadorAtual;
+					condutorCandidato.preco = preco;
+					condutorCandidato.veiculo = veiculo;
+					((AnuncioProcura *)anunciosAnunciante[input])->adicionarCondutorCandidato(condutorCandidato);
 					cout << "Tornou-se num candidato a condutor desta viagem com sucesso." << endl;
 					InputUtils::pause();
 					return showAnunciosMenu();
@@ -796,11 +808,11 @@ void BoleiasInteligentes::showAnunciosMenu()
 						else
 						{
 							OutputUtils::clearScreen();
-							cout << "Pretende aceitar o condutor " << ((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos()[input2].first->getNome() << "?" << endl;
+							cout << "Pretende aceitar o condutor " << ((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos()[input2].condutor->getNome() << "?" << endl;
 							if (InputUtils::readYesOrNo('y', 'n'))
 							{
-								meusAnuncios[input]->setCondutor(((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos()[input2].first);
-								meusAnuncios[input]->setPreco(((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos()[input2].second);
+								meusAnuncios[input]->setCondutor(((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos()[input2].condutor);
+								meusAnuncios[input]->setPreco(((AnuncioProcura *)meusAnuncios[input])->getCondutoresCandidatos()[input2].preco);
 								cout << "Condutor definido com sucesso." << endl;
 								((AnuncioProcura *)meusAnuncios[input])->cleanCondutoresCandidatos();	// Não há necessidade de deixar ficar a lista de candidatos quando já existe um condutor
 							}

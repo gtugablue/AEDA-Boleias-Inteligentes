@@ -5,7 +5,7 @@ AnuncioProcura::AnuncioProcura()
 
 }
 
-void AnuncioProcura::adicionarCondutorCandidato(pair<Membro *, Preco> &condutorCandidato)
+void AnuncioProcura::adicionarCondutorCandidato(CondutorCandidato &condutorCandidato)
 {
 	condutoresCandidatos.push_back(condutorCandidato);
 }
@@ -16,7 +16,7 @@ bool AnuncioProcura::podeSerPassageiro(Membro* membro) const
 	{
 		for (size_t i = 0; i < condutoresCandidatos.size(); ++i)
 		{
-			if (condutoresCandidatos[i].first == membro)
+			if (condutoresCandidatos[i].condutor == membro)
 			{
 				return false;
 			}
@@ -32,7 +32,7 @@ bool AnuncioProcura::podeSerCondutor(Membro* membro) const
 	{
 		for (size_t i = 0; i < condutoresCandidatos.size(); ++i)
 		{
-			if (condutoresCandidatos[i].first == membro)
+			if (condutoresCandidatos[i].condutor == membro)
 			{
 				return false;
 			}
@@ -53,7 +53,7 @@ void AnuncioProcura::editar()
 	Anuncio::editar();
 }
 
-vector<pair<Membro *, Preco>> AnuncioProcura::getCondutoresCandidatos()
+vector<CondutorCandidato> AnuncioProcura::getCondutoresCandidatos()
 {
 	return condutoresCandidatos;
 }
@@ -72,10 +72,18 @@ void AnuncioProcura::save(ofstream &file, vector<Membro *> *membros)
 	{
 		for (size_t j = 0; j < membros->size(); ++j)
 		{
-			if (condutoresCandidatos[i].first == (*membros)[j])
+			if (condutoresCandidatos[i].condutor == (*membros)[j])
 			{
 				file << j << endl;
-				condutoresCandidatos[i].second.save(file);
+				condutoresCandidatos[i].preco.save(file);
+				for (size_t k = 0; k < condutoresCandidatos[i].condutor->getVeiculos().size(); ++k)
+				{
+					if (condutoresCandidatos[i].condutor->getVeiculos()[i] == condutoresCandidatos[i].veiculo)
+					{
+						file << k << endl;
+						break;
+					}
+				}
 				break;	// Next condutor candidato
 			}
 		}
@@ -86,7 +94,7 @@ void AnuncioProcura::load(ifstream &file, vector<Membro *> *membros)
 {
 	Anuncio::load(file, membros);
 	// Carregar condutores candidatos
-	unsigned numCondutores, ID;
+	unsigned numCondutores, ID, ID2;
 	file >> numCondutores;
 	file.ignore(1000, '\n');
 	for (size_t i = 0; i < numCondutores; ++i)
@@ -95,7 +103,13 @@ void AnuncioProcura::load(ifstream &file, vector<Membro *> *membros)
 		file.ignore(1000, '\n');
 		Preco preco;
 		preco.load(file);
-		condutoresCandidatos.push_back(make_pair((*membros)[ID], preco));
+		CondutorCandidato condutorCandidato;
+		condutorCandidato.condutor = (*membros)[ID];
+		condutorCandidato.preco = preco;
+		file >> ID2;
+		file.ignore(1000, '\n');
+		condutorCandidato.veiculo = (*membros)[ID]->getVeiculos()[ID2];
+		condutoresCandidatos.push_back(condutorCandidato);
 	}
 }
 
@@ -122,7 +136,7 @@ void AnuncioProcura::show()const
 	}*/
 }
 
-ostream& operator<<(ostream &os, pair < Membro *, Preco > condutorCandidato)
+ostream& operator<<(ostream &os, CondutorCandidato condutorCandidato)
 {
-	return os << condutorCandidato.first->getNome() << " - " << condutorCandidato.second;
+	return os << condutorCandidato.condutor->getNome() << " - " << condutorCandidato.preco;
 }
