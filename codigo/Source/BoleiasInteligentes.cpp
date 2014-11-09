@@ -570,7 +570,6 @@ void BoleiasInteligentes::showAnunciosMenu()
 					InputUtils::pause();
 				}
 			}
-			InputUtils::pause();
 			return showAnunciosMenu();
 		}
 	}

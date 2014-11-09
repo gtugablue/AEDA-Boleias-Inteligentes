@@ -70,7 +70,6 @@ void Hora::show()const
 	cout << "Hora: " << hora << minuto << endl;
 }
 
-
 void Hora::criar()
 {
 	while (1)
@@ -100,6 +99,11 @@ void Hora::criar()
 		}
 	}
 
+}
+
+void Hora::editar()
+{
+	return criar();
 }
 
 ostream& operator<<(ostream &os, const Hora &hora)

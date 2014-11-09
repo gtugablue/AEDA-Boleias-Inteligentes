@@ -10,6 +10,38 @@ void AnuncioProcura::adicionarCondutorCandidato(pair<Membro *, Preco> &condutorC
 	condutoresCandidatos.push_back(condutorCandidato);
 }
 
+bool AnuncioProcura::podeSerPassageiro(Membro* membro) const
+{
+	if (Anuncio::podeSerPassageiro(membro))
+	{
+		for (size_t i = 0; i < condutoresCandidatos.size(); ++i)
+		{
+			if (condutoresCandidatos[i].first == membro)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	return false;
+}
+
+bool AnuncioProcura::podeSerCondutor(Membro* membro) const
+{
+	if (Anuncio::podeSerCondutor(membro))
+	{
+		for (size_t i = 0; i < condutoresCandidatos.size(); ++i)
+		{
+			if (condutoresCandidatos[i].first == membro)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	return false;
+}
+
 void AnuncioProcura::criar(Membro *utilizadorAtual)
 {
 	Anuncio::criar(utilizadorAtual);

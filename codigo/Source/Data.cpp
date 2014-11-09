@@ -2,7 +2,7 @@
 
 Data::Data()
 {
-	
+
 }
 
 Data::Data(unsigned dia, unsigned mes, unsigned ano)
@@ -52,27 +52,27 @@ bool Data::operator< (const Data &data)const
 		return true;
 	}
 	else
-	if (this->getAno() == data.getAno())
-	{
-		if (this->getMes() < data.getMes())
+		if (this->getAno() == data.getAno())
 		{
-			return true;
-		}
-		else
-		if (this->getMes() == data.getMes())
-		{
-			if (this->getDia() < data.getDia())
+			if (this->getMes() < data.getMes())
 			{
 				return true;
 			}
-			else return false;
+			else
+				if (this->getMes() == data.getMes())
+				{
+					if (this->getDia() < data.getDia())
+					{
+						return true;
+					}
+					else return false;
+				}
+				else
+					return false;
+
 		}
 		else
 			return false;
-
-	}
-	else
-		return false;
 }
 
 void Data::save(ofstream &file)
@@ -119,11 +119,11 @@ void Data::criar()
 			}
 			break;
 		}
-		catch (InvalidInputException<string> e)
+		catch (DataInvalidaException<string> e)
 		{
 			cout << "Erro: " << e.info << endl << endl;
 		}
-		catch (DataInvalidaException<string> e)
+		catch (InvalidInputException<string> e)
 		{
 			cout << "Erro: " << e.info << endl << endl;
 		}
@@ -134,17 +134,17 @@ void Data::criar()
 		{
 			cout << "Insira o dia: ";
 			dia = InputUtils::readInt();
-			if ((mes == 2 && dia > (isBissexto() ? 29 : 28)) || ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30) || dia > 31)
+			if ((mes == 2 && dia > (unsigned)(isBissexto() ? 29 : 28)) || ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30) || dia > 31)
 			{
 				throw DataInvalidaException<string>("Insira um dia existente");
 			}
 			break;
 		}
-		catch (InvalidInputException<string> e)
+		catch (DataInvalidaException<string> e)
 		{
 			cout << "Erro: " << e.info << endl << endl;
 		}
-		catch (DataInvalidaException<string> e)
+		catch (InvalidInputException<string> e)
 		{
 			cout << "Erro: " << e.info << endl << endl;
 		}

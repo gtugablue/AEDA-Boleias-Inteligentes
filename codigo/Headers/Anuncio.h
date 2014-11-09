@@ -6,7 +6,12 @@
 #include "Boleia.h"
 #include "Preco.h"
 #include "Veiculo.h"
+#include "Data.h"
 #include <fstream>
+#include <vector>
+#include <string>
+#include "Hora.h"
+#include "Coordenadas.h"
 
 using namespace std;
 
@@ -54,8 +59,8 @@ public:
 	virtual void criar(Membro* utilizadorAtual);
 	virtual void editar() = 0;
 	bool isPronto() const;
-	bool podeSerPassageiro(Membro* membro) const;
-	bool podeSerCondutor(Membro* membro) const;
+	virtual bool podeSerPassageiro(Membro* membro) const;
+	virtual bool podeSerCondutor(Membro* membro) const;
 	virtual void updateConhecidos();
 	double calcularFriendPoints(const Particular* utilizadorAtual) const;
 	double calcularDistanciaPoints(const Coordenadas &origem, const Coordenadas &destino) const;

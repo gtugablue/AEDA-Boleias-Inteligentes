@@ -53,13 +53,7 @@ void Coordenadas::criar()
 		try
 		{
 			cout << "Insira a latitude (formato XX.XXXXX...): ";
-			if (!(cin >> latitude))
-			{
-				cin.clear();
-				cin.ignore(1000, '\n');
-				throw InvalidInputException<string>("Utilize o formato XX.XXXXX...");
-			}
-			cin.ignore();
+			InputUtils::readDouble();
 			break;
 		}
 		catch (InvalidInputException<string> e)
@@ -72,13 +66,7 @@ void Coordenadas::criar()
 		try
 		{
 			cout << "Insira a longitude (formato XX.XXXXX...): ";
-			if (!(cin >> longitude))
-			{
-				cin.clear();
-				cin.ignore(1000, '\n');
-				throw InvalidInputException<string>("Utilize o formato XX.XXXXX...");
-			}
-			cin.ignore();
+			InputUtils::readDouble();
 			break;
 		}
 		catch (InvalidInputException<string> e)

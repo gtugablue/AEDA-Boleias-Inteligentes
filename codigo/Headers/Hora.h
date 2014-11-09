@@ -23,6 +23,7 @@ public:
 	void save(ofstream &file);
 	void load(ifstream &file);
 	void criar();
+	void editar();
 
 	friend ostream& operator<<(ostream &os, const Hora &hora);
 };

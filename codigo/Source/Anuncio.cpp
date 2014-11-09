@@ -188,7 +188,7 @@ void Anuncio::save(ofstream &file, vector<Membro *> *membros)
 	file << descricao << endl;
 	origem.save(file);
 	destino.save(file);
-	
+
 	// Guardar passageiros
 	file << passageiros.size() << endl;
 	for (size_t i = 0; i < passageiros.size(); ++i)
@@ -205,7 +205,7 @@ void Anuncio::save(ofstream &file, vector<Membro *> *membros)
 
 	dataInicio.save(file);
 	dataFim.save(file);
-	
+
 	// Guardar anunciante
 	for (size_t i = 0; i < membros->size(); ++i)
 	{
@@ -278,14 +278,36 @@ void Anuncio::editar()
 	cout << "Pretende editar o titulo (y/n)?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
-		cout << "Introduza o novo titulo: ";
-		getline(cin, titulo);
+		while (1)
+		{
+			try
+			{
+				cout << "Introduza o novo titulo: ";
+				titulo = InputUtils::readLine();
+				break;
+			}
+			catch (InvalidInputException<string> e)
+			{
+				cout << "Erro: " << e.info << endl << endl;
+			}
+		}
 	}
 	cout << "Pretende editar a descricao (y/n)?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
-		cout << "Introduza a nova descricao: ";
-		getline(cin, descricao);
+		while (1)
+		{
+			try
+			{
+				cout << "Introduza a nova descricao: ";
+				descricao = InputUtils::readLine();
+				break;
+			}
+			catch (InvalidInputException<string> e)
+			{
+				cout << "Erro: " << e.info << endl << endl;
+			}
+		}
 	}
 	cout << "Pretende editar a origem (y/n)?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
@@ -298,7 +320,7 @@ void Anuncio::editar()
 		destino.editar();
 	}
 	cout << "Pretende editar a data de inicio (y/n)?" << endl;
-	if(InputUtils::readYesOrNo('y', 'n'))
+	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		dataInicio.editar();
 	}
@@ -306,6 +328,12 @@ void Anuncio::editar()
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		dataFim.editar();
+	}
+	cout << "Pretende editar a hora (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Introduza a nova hora: ";
+		hora.editar();
 	}
 }
 
