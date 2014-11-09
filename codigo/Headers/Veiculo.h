@@ -24,27 +24,27 @@ private:
 	unsigned int lotacao;
 	float consumo; // l/100km
 public:
-	Veiculo();
-	string getMarca() const;
-	string getModelo() const;
-	unsigned getLotacao() const;
-	unsigned getMes() const;
-	unsigned getAno() const;
-	unsigned getCilindrada() const;
-	float getConsumo() const;
-	Combustivel *getCombustivel();
-	void setMarca(string &marca);
-	void setMes(unsigned mes);
-	void setAno(unsigned ano);
-	void setCilindrada(unsigned cilindrada);
-	void load(ifstream &file, vector<Combustivel> *combustiveis);
-	void save(ofstream &file, vector<Combustivel> *combustiveis);
-	void setCombustivel(Combustivel *combustivel);
-	Combustivel* escolherCombustivel(vector<Combustivel> *combustiveis);
-	void show() const;
-	void criar(vector<Combustivel> *combustiveis);
-	void editar(vector<Combustivel> *combustiveis);
-	friend ostream& operator<<(ostream &os, const Veiculo &veiculo);
+	Veiculo();///Construtor por defeito da classe
+	string getMarca() const;///Método que retorna a marca do veiculo
+	string getModelo() const;///Método que retorna o modelo do veiculo
+	unsigned getLotacao() const;///Método que retorna a lotação do veiculo
+	unsigned getMes() const;///Método que retorna o mes em que foi comprado o veiculo
+	unsigned getAno() const;///Método que retorna o ano em que foi comprado o veiculo
+	unsigned getCilindrada() const;///Método que retorna a cilindrada do veiculo
+	float getConsumo() const;///Método que retorna o consumo do veiculo
+	Combustivel *getCombustivel();///Método que retorna o combustivel do veiculo
+	void setMarca(string &marca);///Método que permite alterar a marca do veiculo
+	void setMes(unsigned mes);///Método que permite alterar o mes do veiculo
+	void setAno(unsigned ano);///Método que permite alterar o ano do veiculo
+	void setCilindrada(unsigned cilindrada);///Método que permite alterar a cilindrada do veiculo
+	void load(ifstream &file, vector<Combustivel> *combustiveis);///Função que carrega a informação relativa a um veiculo contida no respectivo txt para o programa
+	void save(ofstream &file, vector<Combustivel> *combustiveis);///Função que grava a informação relativa a um veiculo no ficheiro txt respectivo
+	void setCombustivel(Combustivel *combustivel);///Função que permite alterar o combustivel
+	Combustivel* escolherCombustivel(vector<Combustivel> *combustiveis);///Função que permite escolher o combustivel que queremos associar ao veiculo a partir de um vector onde estão todos os combustiveis existentes
+	void show() const;///Função que mostra no ecrã toda a informação de um veiculo
+	void criar(vector<Combustivel> *combustiveis);///Função que permite criar um veiculo
+	void editar(vector<Combustivel> *combustiveis);///Função que permite editar a informação de um veiculo
+	friend ostream& operator<<(ostream &os, const Veiculo &veiculo);///Overload do operador << que permtie a impressã no ecra dos parametros do veiculo
 	friend ostream& operator<<(ostream &os, Veiculo *veiculo);
 };
 
