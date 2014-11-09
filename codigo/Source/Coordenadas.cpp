@@ -38,11 +38,9 @@ void Coordenadas::setLongitude(double longitude)
 	return;
 }
 
-void Coordenadas::showcoord()
+void Coordenadas::show() const
 {
-	cout << "Coordenadas" << endl;
-	cout << endl;
-	cout << "Latitude : " << latitude << endl;
+	cout << "Latitude: " << latitude << endl;
 	cout << "Longitude:  " << longitude << endl;
 }
 

@@ -22,7 +22,7 @@ public:
 	void setLongitude(double longitude);///Método para alterar a longitude de uma coordenada
 	double toRad(double degrees) const;///Função para passar um determinado valor em graus para radianos.
 	double calcDistancia(const Coordenadas &coordenadas) const;///Função para calcular a distancia entre duas coordenadas diferentes.
-	void showcoord();///Função para mostrar no ecra da Consola umas determinadas coordenadas.
+	void show() const;///Função para mostrar no ecra da Consola umas determinadas coordenadas.
 	void criar();///Função para criar novas coordenadas.
 	void editar();///Função responsavel por editar informação referente a coordenadas ja existentes.
 	void load(ifstream &file);///Função responsavel por fazer load da informação das coordenadas presentes num txt.

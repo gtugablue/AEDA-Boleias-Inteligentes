@@ -5,6 +5,8 @@ const string BoleiasInteligentes::ficheiroMembros = "membros.txt";
 const string BoleiasInteligentes::ficheiroAnuncios = "anuncios.txt";
 const string BoleiasInteligentes::ficheiroBoleias = "boleias.txt";
 
+#define	BOLEIASINTELIGENTES_DESTINO_DISTANCIA_ACEITAVEL		0.002
+
 BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder) :
 dataFolder(dataFolder), utilizadorAtual(NULL)
 {
@@ -216,6 +218,19 @@ vector<Anuncio *> BoleiasInteligentes::getAnunciosByMembro(Membro* membro) const
 		}
 	}
 	return anunciosMembro;
+}
+
+vector<Anuncio *> BoleiasInteligentes::getAnunciosByDestino(const Coordenadas &destino) const
+{
+	vector<Anuncio *> anunciosDestino;
+	for (size_t i = 0; i < anuncios.size(); ++i)
+	{
+		if (abs(anuncios[i]->getDestino().getLatitude() - destino.getLatitude()) < BOLEIASINTELIGENTES_DESTINO_DISTANCIA_ACEITAVEL && abs(anuncios[i]->getDestino().getLongitude() - destino.getLongitude()) < BOLEIASINTELIGENTES_DESTINO_DISTANCIA_ACEITAVEL)
+		{
+			anunciosDestino.push_back(anuncios[i]);
+		}
+	}
+	return anunciosDestino;
 }
 
 vector<Boleia *> BoleiasInteligentes::getBoleiasWhereMembroExists(Membro* membro)
@@ -433,6 +448,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 	{
 		"Criar anuncio",
 		"Pesquisar anuncios",
+		"Pesquisar anuncios por destino",
 		"Editar anuncio",
 		"Voltar"
 	};
@@ -573,7 +589,67 @@ void BoleiasInteligentes::showAnunciosMenu()
 			return showAnunciosMenu();
 		}
 	}
-	case 2: // Editar anuncio
+	case 2: // Pesquisar anuncios por destino
+	{
+		int input;
+		OutputUtils::clearScreen();
+		Coordenadas destinoPretendido;
+		cout << "Indique as coordenadas do destino." << endl;
+		destinoPretendido.criar();
+		OutputUtils::clearScreen();
+		try
+		{
+			OutputUtils::clearScreen();
+			input = OutputUtils::showList(getAnunciosByDestino(destinoPretendido), 0);
+		}
+		catch (EmptyException<string> e)
+		{
+			cout << "Erro: " << e.info << endl;
+			InputUtils::pause();
+			return showAnunciosMenu();
+		}
+		if (input == -1)
+		{
+			return showAnunciosMenu();
+		}
+		else
+		{
+			OutputUtils::clearScreen();
+			anuncios[input]->show();
+			InputUtils::pause();
+			if (anuncios[input]->podeSerCondutor(utilizadorAtual))
+			{
+				cout << "Pretende-se candidatar a condutor (y/n)?" << endl;
+				if (InputUtils::readYesOrNo('y', 'n'))
+				{
+					do
+					{
+						OutputUtils::showList(utilizadorAtual->getVeiculos());
+					} while (input == -1);
+					anuncios[input]->setVeiculo(utilizadorAtual->getVeiculos()[input]);
+					Preco preco;
+					preco.criar();
+					preco.updatePrecoCombustivel(anuncios[input]->getVeiculo()->getConsumo(), anuncios[input]->getVeiculo()->getCombustivel()->getPreco(), anuncios[input]->getOrigem().calcDistancia(anuncios[input]->getDestino()));
+					((AnuncioProcura *)anuncios[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
+					cout << "Tornou-se num candidato a condutor desta viagem com sucesso." << endl;
+					InputUtils::pause();
+					return showAnunciosMenu();
+				}
+			}
+			if (anuncios[input]->podeSerPassageiro(utilizadorAtual))
+			{
+				cout << "Pretende ser passageiro (y/n)?" << endl;
+				if (InputUtils::readYesOrNo('y', 'n'))
+				{
+					anuncios[input]->addPassageiro((Particular *)utilizadorAtual);
+					cout << "Tornou-se num passageiro desta viagem com sucesso." << endl;
+					InputUtils::pause();
+				}
+			}
+			return showAnunciosMenu();
+		}
+	}
+	case 3: // Editar anuncio
 	{
 		try
 		{
@@ -647,7 +723,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 			return showAnunciosMenu();
 		}
 	}
-	case 3: // Voltar
+	case 4: // Voltar
 	{
 		OutputUtils::clearScreen();
 		return showMainMenu();

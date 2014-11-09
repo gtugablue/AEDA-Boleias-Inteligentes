@@ -109,6 +109,10 @@ void Anuncio::show() const
 {
 	cout << "Titulo: " << titulo << endl;
 	cout << "Descricao: " << descricao << endl;
+	cout << endl << "Origem:" << endl;
+	origem.show();
+	cout << endl << "Destino:" << endl;
+	destino.show();
 	if (dataInicio == dataFim)
 	{
 		cout << "Data: " << dataInicio << endl;

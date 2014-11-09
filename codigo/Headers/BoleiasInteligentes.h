@@ -43,7 +43,7 @@ public:
 	void showmembro();///Função que mostra no ecrã toda a informação de um determinado membro.
 	void showviagem();///Função que mostra no ecrã toda a informação de uma determinada boleia.
 	
-	void start();///Função que da inicio ao programa fazendo load da informação dos ficheiros e mostrando o menu inicial da aplicação.
+	void start();///Função que dá inicio ao programa fazendo load da informação dos ficheiros e mostrando o menu inicial da aplicação.
 
 	void load();///Função que engloba todas as outras funções responsaveis por fazer load da informação contida nos ficheiros txt para os respectivos vectores.
 	void loadCombustiveis();///Função que faz load da informação do txt de combustiveis para o vector de combustiveis.
@@ -62,6 +62,7 @@ public:
 	vector<AnuncioOferta *> getAnunciosOferta() const;///Método que retorna todos os anuncios de oferta.
 	vector<AnuncioProcura *> getAnunciosProcura() const;///Método que retorna todos os anuncios de procura.
 	vector<Anuncio *> getAnunciosByMembro(Membro* membro) const;///Função que retorna um vector com todos os anuncios pertencentes a um determinado anunciante.
+	vector<Anuncio *> getAnunciosByDestino(const Coordenadas &destino) const;///Função que retorna um vector com todos os anuncios perto de um determinado destino.
 	vector<Boleia *> getBoleiasWhereMembroExists(Membro* membro);///Função que retorna um vector com todos os anuncios em que um determinado membro esta presente independentemente de que forma.
 	vector<Combustivel> getCombustiveis();///Função que retorna um vector com todos os combustiveis existentes.
 
@@ -81,7 +82,7 @@ public:
 	void showVehicles();///Função que mostra todos os veiculos
 	void showVehicleInfo();///Função que mostra a informação de cada veiculo.
 
-	void sortAnuncios(const Coordenadas &origem, const Coordenadas &destino, int left, int right);///Funcao que ordena os anuncios por distancia
+	void sortAnuncios(const Coordenadas &origem, const Coordenadas &destino, int left, int right);///Função que ordena os anuncios por distância.
 };
 
 

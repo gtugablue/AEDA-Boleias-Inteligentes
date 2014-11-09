@@ -69,12 +69,12 @@ void Boleia::show()
 {
 	cout << "Boleia" << endl;
 	cout << endl;
-	cout << "Condutor" << endl;
+	cout << endl << "Condutor: " << endl;
 	condutor->show();
-	cout << "Coordenadas de Inicio" <<endl;
-	origem.showcoord();
-	cout << "Coordenadas de Fim" << endl;
-	destino.showcoord();
+	cout << endl << "Origem: " <<endl;
+	origem.show();
+	cout << endl << "Destino: " << endl;
+	destino.show();
 	cout << endl;
 	for (size_t i = 0; i < passageiros.size(); i++)
 	{
