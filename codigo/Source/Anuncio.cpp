@@ -153,7 +153,7 @@ void Anuncio::load(ifstream &file, vector<Membro *> *membros)
 	{
 		file >> ID;
 		file.ignore(1000, '\n');
-		passageiros[i] = (Particular *)((*membros)[ID]);
+		passageiros.push_back((Particular *)(*membros)[ID]);
 	}
 	dataInicio.load(file);
 	dataFim.load(file);
