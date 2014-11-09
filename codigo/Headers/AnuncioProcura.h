@@ -19,7 +19,7 @@ public:
 	void setAnunciante(Particular* anunciante);///Método para alterar um anunciante
 	Particular* getAnunciante() const;///Metodo para retornar o anunciante
 	void cleanCondutoresCandidatos();///Função para eliminar os condutores candidatos
-	void criar(Membro* utilizadorAtual);///Função para criar um anuncio de procura
+	void criar(Particular* utilizadorAtual);///Função para criar um anuncio de procura
 	void save(ofstream &file, vector<Membro *> *membros);///função para gravar a informação do anuncio no ficheiro respectivo.
 	void load(ifstream &file, vector<Membro *> *membros);///função para preencher um anuncio com a informação do respectivo ficheiro txt.
 	friend ostream& operator<<(ostream &os, const AnuncioProcura &anuncio);///Overload do operador de impressão.

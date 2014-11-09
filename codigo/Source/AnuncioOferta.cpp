@@ -14,6 +14,8 @@ Anuncio(titulo, descricao, origem, destino, dataInicio, dataFim)
 void AnuncioOferta::criar(Membro* utilizadorAtual)
 {
 	Anuncio::criar(utilizadorAtual);
+	condutor = utilizadorAtual;
+
 	// Escolher veiculo
 	cout << "Escolha um veiculo da lista que se segue..." << endl;
 	InputUtils::pause();
@@ -23,6 +25,7 @@ void AnuncioOferta::criar(Membro* utilizadorAtual)
 		input = OutputUtils::showList(utilizadorAtual->getVeiculos());
 	} while (input == -1);
 	veiculo = utilizadorAtual->getVeiculos()[input];
+
 	preco.criar();
 	preco.updatePrecoCombustivel(veiculo->getConsumo(), veiculo->getCombustivel()->getPreco(), origem.calcDistancia(destino));
 }

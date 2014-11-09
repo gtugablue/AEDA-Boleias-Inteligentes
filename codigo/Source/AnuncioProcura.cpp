@@ -42,9 +42,10 @@ bool AnuncioProcura::podeSerCondutor(Membro* membro) const
 	return false;
 }
 
-void AnuncioProcura::criar(Membro *utilizadorAtual)
+void AnuncioProcura::criar(Particular *utilizadorAtual)
 {
 	Anuncio::criar(utilizadorAtual);
+	passageiros.push_back(utilizadorAtual);
 }
 
 void AnuncioProcura::editar()
