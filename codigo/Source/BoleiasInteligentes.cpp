@@ -621,11 +621,12 @@ void BoleiasInteligentes::showAnunciosMenu()
 		Coordenadas destinoPretendido;
 		cout << "Indique as coordenadas do destino." << endl;
 		destinoPretendido.criar();
+		vector<Anuncio *> anunciosDestino = getAnunciosByDestino(destinoPretendido);
 		OutputUtils::clearScreen();
 		try
 		{
 			OutputUtils::clearScreen();
-			input = OutputUtils::showList(getAnunciosByDestino(destinoPretendido), 0);
+			input = OutputUtils::showList(anunciosDestino, 0);
 		}
 		catch (EmptyException<string> e)
 		{
@@ -640,9 +641,9 @@ void BoleiasInteligentes::showAnunciosMenu()
 		else
 		{
 			OutputUtils::clearScreen();
-			anuncios[input]->show();
+			anunciosDestino[input]->show();
 			InputUtils::pause();
-			if (anuncios[input]->podeSerCondutor(utilizadorAtual))
+			if (anunciosDestino[input]->podeSerCondutor(utilizadorAtual))
 			{
 				cout << "Pretende-se candidatar a condutor (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
@@ -651,22 +652,22 @@ void BoleiasInteligentes::showAnunciosMenu()
 					{
 						OutputUtils::showList(utilizadorAtual->getVeiculos());
 					} while (input == -1);
-					anuncios[input]->setVeiculo(utilizadorAtual->getVeiculos()[input]);
+					anunciosDestino[input]->setVeiculo(utilizadorAtual->getVeiculos()[input]);
 					Preco preco;
 					preco.criar();
-					preco.updatePrecoCombustivel(anuncios[input]->getVeiculo()->getConsumo(), anuncios[input]->getVeiculo()->getCombustivel()->getPreco(), anuncios[input]->getOrigem().calcDistancia(anuncios[input]->getDestino()));
-					((AnuncioProcura *)anuncios[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
+					preco.updatePrecoCombustivel(anunciosDestino[input]->getVeiculo()->getConsumo(), anunciosDestino[input]->getVeiculo()->getCombustivel()->getPreco(), anunciosDestino[input]->getOrigem().calcDistancia(anunciosDestino[input]->getDestino()));
+					((AnuncioProcura *)anunciosDestino[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
 					cout << "Tornou-se num candidato a condutor desta viagem com sucesso." << endl;
 					InputUtils::pause();
 					return showAnunciosMenu();
 				}
 			}
-			if (anuncios[input]->podeSerPassageiro(utilizadorAtual))
+			if (anunciosDestino[input]->podeSerPassageiro(utilizadorAtual))
 			{
 				cout << "Pretende ser passageiro (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
-					anuncios[input]->addPassageiro((Particular *)utilizadorAtual);
+					anunciosDestino[input]->addPassageiro((Particular *)utilizadorAtual);
 					cout << "Tornou-se num passageiro desta viagem com sucesso." << endl;
 					InputUtils::pause();
 				}
@@ -707,11 +708,11 @@ void BoleiasInteligentes::showAnunciosMenu()
 				continue;
 			}
 		}
-		OutputUtils::clearScreen();
+		vector<Anuncio *> anunciosAnunciante = getAnunciosByMembro(anunciante);
 		try
 		{
 			OutputUtils::clearScreen();
-			input = OutputUtils::showList(getAnunciosByMembro(anunciante));
+			input = OutputUtils::showList(anunciosAnunciante);
 		}
 		catch (EmptyException<string> e)
 		{
@@ -726,9 +727,9 @@ void BoleiasInteligentes::showAnunciosMenu()
 		else
 		{
 			OutputUtils::clearScreen();
-			anuncios[input]->show();
+			anunciosAnunciante[input]->show();
 			InputUtils::pause();
-			if (anuncios[input]->podeSerCondutor(utilizadorAtual))
+			if (anunciosAnunciante[input]->podeSerCondutor(utilizadorAtual))
 			{
 				cout << "Pretende-se candidatar a condutor (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
@@ -737,22 +738,22 @@ void BoleiasInteligentes::showAnunciosMenu()
 					{
 						OutputUtils::showList(utilizadorAtual->getVeiculos());
 					} while (input == -1);
-					anuncios[input]->setVeiculo(utilizadorAtual->getVeiculos()[input]);
+					anunciosAnunciante[input]->setVeiculo(utilizadorAtual->getVeiculos()[input]);
 					Preco preco;
 					preco.criar();
-					preco.updatePrecoCombustivel(anuncios[input]->getVeiculo()->getConsumo(), anuncios[input]->getVeiculo()->getCombustivel()->getPreco(), anuncios[input]->getOrigem().calcDistancia(anuncios[input]->getDestino()));
-					((AnuncioProcura *)anuncios[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
+					preco.updatePrecoCombustivel(anunciosAnunciante[input]->getVeiculo()->getConsumo(), anunciosAnunciante[input]->getVeiculo()->getCombustivel()->getPreco(), anunciosAnunciante[input]->getOrigem().calcDistancia(anunciosAnunciante[input]->getDestino()));
+					((AnuncioProcura *)anunciosAnunciante[input])->adicionarCondutorCandidato(make_pair(utilizadorAtual, preco));
 					cout << "Tornou-se num candidato a condutor desta viagem com sucesso." << endl;
 					InputUtils::pause();
 					return showAnunciosMenu();
 				}
 			}
-			if (anuncios[input]->podeSerPassageiro(utilizadorAtual))
+			if (anunciosAnunciante[input]->podeSerPassageiro(utilizadorAtual))
 			{
 				cout << "Pretende ser passageiro (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
-					anuncios[input]->addPassageiro((Particular *)utilizadorAtual);
+					anunciosAnunciante[input]->addPassageiro((Particular *)utilizadorAtual);
 					cout << "Tornou-se num passageiro desta viagem com sucesso." << endl;
 					InputUtils::pause();
 				}
