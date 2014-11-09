@@ -109,4 +109,15 @@ public:
 	}
 };
 
+template<class T>
+class FileException
+{
+public:
+	T info;
+	FileException(T info)
+	{
+		this->info = info;
+	}
+};
+
 #endif
