@@ -1,11 +1,11 @@
-\hypertarget{class_data}{\section{Data Class Reference}
+\hypertarget{class_data}{\section{Referência à classe Data}
 \label{class_data}\index{Data@{Data}}
 }
 
 
 {\ttfamily \#include $<$Data.\+h$>$}
 
-\subsection*{Public Member Functions}
+\subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data} ()
@@ -38,7 +38,7 @@ bool \hyperlink{class_data_a5b6b3123dc96de5969fc435f26322bc2}{is\+Bissexto} () c
 \begin{DoxyCompactList}\small\item\em Função que permite editar uma data ja existente. \end{DoxyCompactList}\item 
 bool \hyperlink{class_data_a682016837c60b8e801d4bcee3e694039}{operator==} (const \hyperlink{class_data}{Data} \&data) const 
 \begin{DoxyCompactList}\small\item\em Função que verifica se um ano é bissexto e retorna true caso seja verdade. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Protected Attributes}
+\subsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
 unsigned int \hyperlink{class_data_a71a904380d17858da0b902e9a2563546}{dia}
@@ -47,21 +47,21 @@ unsigned int \hyperlink{class_data_a586deb479ec2031a0d3ceec8280f7706}{mes}
 \item 
 unsigned int \hyperlink{class_data_a1811fab972bdf6ed644c4eb7412bd043}{ano}
 \end{DoxyCompactItemize}
-\subsection*{Friends}
+\subsection*{Amigos}
 \begin{DoxyCompactItemize}
 \item 
 ostream \& \hyperlink{class_data_acab3a0f9e78c85c62b0ea9348aa877d8}{operator$<$$<$} (ostream \&os, const \hyperlink{class_data}{Data} \&data)
 \begin{DoxyCompactList}\small\item\em Overload do operador de igualdade para que seja possivel comparar datas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsection{Descrição detalhada}
 
 
-Definition at line 9 of file Data.\+h.
+Definido na linha 9 do ficheiro Data.\+h.
 
 
 
-\subsection{Constructor \& Destructor Documentation}
+\subsection{Documentação dos Construtores \& Destrutor}
 \hypertarget{class_data_af11f741cb7f587e2e495452a8905a22a}{\index{Data@{Data}!Data@{Data}}
 \index{Data@{Data}!Data@{Data}}
 \subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}Data\+::\+Data (
@@ -71,7 +71,7 @@ Definition at line 9 of file Data.\+h.
 )}}\label{class_data_af11f741cb7f587e2e495452a8905a22a}
 
 
-Definition at line 3 of file Data.\+cpp.
+Definido na linha 3 do ficheiro Data.\+cpp.
 
 \hypertarget{class_data_ab1e8f6ca4094cbf13062f243fa2bb90b}{\index{Data@{Data}!Data@{Data}}
 \index{Data@{Data}!Data@{Data}}
@@ -88,15 +88,15 @@ Construtor por defeito da classe.
 
 
 
-Definition at line 8 of file Data.\+cpp.
+Definido na linha 8 do ficheiro Data.\+cpp.
 
 
 
-References ano, dia, and mes.
+Referências ano, dia e mes.
 
 
 
-\subsection{Member Function Documentation}
+\subsection{Documentação dos métodos}
 \hypertarget{class_data_a49854285a6916770352d131eb96e9bb6}{\index{Data@{Data}!criar@{criar}}
 \index{criar@{criar}!Data@{Data}}
 \subsubsection[{criar}]{\setlength{\rightskip}{0pt plus 5cm}void Data\+::criar (
@@ -110,19 +110,19 @@ Função que carrega a informação relativa a uma data para a execução de um 
 
 
 
-Definition at line 95 of file Data.\+cpp.
+Definido na linha 95 do ficheiro Data.\+cpp.
 
 
 
-References ano, dia, Invalid\+Input\+Exception$<$ T $>$\+::info, Data\+Invalida\+Exception$<$ T $>$\+::info, is\+Bissexto(), mes, and Input\+Utils\+::read\+Int().
+Referências ano, dia, Invalid\+Input\+Exception$<$ T $>$\+::info, Data\+Invalida\+Exception$<$ T $>$\+::info, is\+Bissexto(), mes e Input\+Utils\+::read\+Int().
 
 
 
-Referenced by Anuncio\+::criar(), and editar().
+Referenciado por Anuncio\+::criar() e editar().
 
 
 
-Here is the call graph for this function\+:\nopagebreak
+Grafo de chamadas desta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -144,19 +144,19 @@ Função que permite criar uma nova data.
 
 
 
-Definition at line 154 of file Data.\+cpp.
+Definido na linha 154 do ficheiro Data.\+cpp.
 
 
 
-References criar().
+Referências criar().
 
 
 
-Referenced by Anuncio\+::editar().
+Referenciado por Anuncio\+::editar().
 
 
 
-Here is the call graph for this function\+:\nopagebreak
+Grafo de chamadas desta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -178,15 +178,15 @@ método para retornar o parametro mes de uma data
 
 
 
-Definition at line 25 of file Data.\+cpp.
+Definido na linha 25 do ficheiro Data.\+cpp.
 
 
 
-References ano.
+Referências ano.
 
 
 
-Referenced by operator$<$(), and operator$<$$<$().
+Referenciado por operator$<$() e operator$<$$<$().
 
 \hypertarget{class_data_a07fe748ec046cb904c6854fb8b792786}{\index{Data@{Data}!get\+Dia@{get\+Dia}}
 \index{get\+Dia@{get\+Dia}!Data@{Data}}
@@ -201,15 +201,15 @@ Construtor com parametros da classe.
 
 
 
-Definition at line 15 of file Data.\+cpp.
+Definido na linha 15 do ficheiro Data.\+cpp.
 
 
 
-References dia.
+Referências dia.
 
 
 
-Referenced by operator$<$(), and operator$<$$<$().
+Referenciado por operator$<$() e operator$<$$<$().
 
 \hypertarget{class_data_a070387c9894b966ec8a175e3eb3c9c06}{\index{Data@{Data}!get\+Mes@{get\+Mes}}
 \index{get\+Mes@{get\+Mes}!Data@{Data}}
@@ -224,15 +224,15 @@ método para retornar o parametro dia de uma data
 
 
 
-Definition at line 20 of file Data.\+cpp.
+Definido na linha 20 do ficheiro Data.\+cpp.
 
 
 
-References mes.
+Referências mes.
 
 
 
-Referenced by operator$<$(), and operator$<$$<$().
+Referenciado por operator$<$() e operator$<$$<$().
 
 \hypertarget{class_data_a5b6b3123dc96de5969fc435f26322bc2}{\index{Data@{Data}!is\+Bissexto@{is\+Bissexto}}
 \index{is\+Bissexto@{is\+Bissexto}!Data@{Data}}
@@ -247,15 +247,15 @@ Função que permite editar uma data ja existente.
 
 
 
-Definition at line 159 of file Data.\+cpp.
+Definido na linha 159 do ficheiro Data.\+cpp.
 
 
 
-References ano.
+Referências ano.
 
 
 
-Referenced by criar().
+Referenciado por criar().
 
 \hypertarget{class_data_a12855e1e008ed1aecd58b41727c4774b}{\index{Data@{Data}!load@{load}}
 \index{load@{load}!Data@{Data}}
@@ -270,15 +270,15 @@ Função que grava a informação relativa a uma data no ficheiro correspondente
 
 
 
-Definition at line 85 of file Data.\+cpp.
+Definido na linha 85 do ficheiro Data.\+cpp.
 
 
 
-References ano, dia, and mes.
+Referências ano, dia e mes.
 
 
 
-Referenced by Boleia\+::load(), and Anuncio\+::load().
+Referenciado por Boleia\+::load() e Anuncio\+::load().
 
 \hypertarget{class_data_a54019a127c7262ad527e523b98ddd26a}{\index{Data@{Data}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!Data@{Data}}
@@ -293,15 +293,15 @@ metodo para alterar o ano de uma data
 
 
 
-Definition at line 48 of file Data.\+cpp.
+Definido na linha 48 do ficheiro Data.\+cpp.
 
 
 
-References get\+Ano(), get\+Dia(), and get\+Mes().
+Referências get\+Ano(), get\+Dia() e get\+Mes().
 
 
 
-Here is the call graph for this function\+:\nopagebreak
+Grafo de chamadas desta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -323,11 +323,11 @@ Função que verifica se um ano é bissexto e retorna true caso seja verdade.
 
 
 
-Definition at line 169 of file Data.\+cpp.
+Definido na linha 169 do ficheiro Data.\+cpp.
 
 
 
-References ano, dia, and mes.
+Referências ano, dia e mes.
 
 \hypertarget{class_data_af215a52677977e69efbcab64fa9300e8}{\index{Data@{Data}!save@{save}}
 \index{save@{save}!Data@{Data}}
@@ -342,15 +342,15 @@ Overload do operador $<$ para comparar datas.
 
 
 
-Definition at line 78 of file Data.\+cpp.
+Definido na linha 78 do ficheiro Data.\+cpp.
 
 
 
-References ano, dia, and mes.
+Referências ano, dia e mes.
 
 
 
-Referenced by Boleia\+::save(), and Anuncio\+::save().
+Referenciado por Boleia\+::save() e Anuncio\+::save().
 
 \hypertarget{class_data_a5ad712f23c932ee4d515213f7c66f60e}{\index{Data@{Data}!set\+Ano@{set\+Ano}}
 \index{set\+Ano@{set\+Ano}!Data@{Data}}
@@ -365,11 +365,11 @@ metodo para alterar o mes de uma data
 
 
 
-Definition at line 42 of file Data.\+cpp.
+Definido na linha 42 do ficheiro Data.\+cpp.
 
 
 
-References ano.
+Referências ano.
 
 \hypertarget{class_data_ab3ea08211198373060bfd9aa7530ddff}{\index{Data@{Data}!set\+Dia@{set\+Dia}}
 \index{set\+Dia@{set\+Dia}!Data@{Data}}
@@ -384,11 +384,11 @@ metodo para retornar o paramentro ano de uma data
 
 
 
-Definition at line 30 of file Data.\+cpp.
+Definido na linha 30 do ficheiro Data.\+cpp.
 
 
 
-References dia.
+Referências dia.
 
 \hypertarget{class_data_ac886172612a1bd81f1d266c4f5f94377}{\index{Data@{Data}!set\+Mes@{set\+Mes}}
 \index{set\+Mes@{set\+Mes}!Data@{Data}}
@@ -403,15 +403,15 @@ método para alterar o dia de uma data
 
 
 
-Definition at line 36 of file Data.\+cpp.
+Definido na linha 36 do ficheiro Data.\+cpp.
 
 
 
-References mes.
+Referências mes.
 
 
 
-\subsection{Friends And Related Function Documentation}
+\subsection{Documentação das classes amigas e funções relacionadas}
 \hypertarget{class_data_acab3a0f9e78c85c62b0ea9348aa877d8}{\index{Data@{Data}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Data@{Data}}
 \subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
@@ -426,47 +426,47 @@ Overload do operador de igualdade para que seja possivel comparar datas.
 
 
 
-Definition at line 174 of file Data.\+cpp.
+Definido na linha 174 do ficheiro Data.\+cpp.
 
 
 
-\subsection{Member Data Documentation}
+\subsection{Documentação dos dados membro}
 \hypertarget{class_data_a1811fab972bdf6ed644c4eb7412bd043}{\index{Data@{Data}!ano@{ano}}
 \index{ano@{ano}!Data@{Data}}
 \subsubsection[{ano}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Data\+::ano\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_data_a1811fab972bdf6ed644c4eb7412bd043}
 
 
-Definition at line 14 of file Data.\+h.
+Definido na linha 14 do ficheiro Data.\+h.
 
 
 
-Referenced by criar(), Data(), get\+Ano(), is\+Bissexto(), load(), operator==(), save(), and set\+Ano().
+Referenciado por criar(), Data(), get\+Ano(), is\+Bissexto(), load(), operator==(), save() e set\+Ano().
 
 \hypertarget{class_data_a71a904380d17858da0b902e9a2563546}{\index{Data@{Data}!dia@{dia}}
 \index{dia@{dia}!Data@{Data}}
 \subsubsection[{dia}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Data\+::dia\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_data_a71a904380d17858da0b902e9a2563546}
 
 
-Definition at line 12 of file Data.\+h.
+Definido na linha 12 do ficheiro Data.\+h.
 
 
 
-Referenced by criar(), Data(), get\+Dia(), load(), operator==(), save(), and set\+Dia().
+Referenciado por criar(), Data(), get\+Dia(), load(), operator==(), save() e set\+Dia().
 
 \hypertarget{class_data_a586deb479ec2031a0d3ceec8280f7706}{\index{Data@{Data}!mes@{mes}}
 \index{mes@{mes}!Data@{Data}}
 \subsubsection[{mes}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Data\+::mes\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_data_a586deb479ec2031a0d3ceec8280f7706}
 
 
-Definition at line 13 of file Data.\+h.
+Definido na linha 13 do ficheiro Data.\+h.
 
 
 
-Referenced by criar(), Data(), get\+Mes(), load(), operator==(), save(), and set\+Mes().
+Referenciado por criar(), Data(), get\+Mes(), load(), operator==(), save() e set\+Mes().
 
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{_data_8h}{Data.\+h}\item 
 \hyperlink{_data_8cpp}{Data.\+cpp}\end{DoxyCompactItemize}
