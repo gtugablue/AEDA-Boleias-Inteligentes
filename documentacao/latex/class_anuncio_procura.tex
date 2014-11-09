@@ -12,10 +12,22 @@ Classe derivada da classe mãe anuncio.
 
 
 
-Inheritance diagram for Anuncio\+Procura\+:
+Inheritance diagram for Anuncio\+Procura\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_anuncio_procura__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for Anuncio\+Procura\+:
+Collaboration diagram for Anuncio\+Procura\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anuncio_procura__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,7 +49,7 @@ void \hyperlink{class_anuncio_procura_a303be648c388693e6b92e6bf467c06ff}{set\+An
 \begin{DoxyCompactList}\small\item\em Método para alterar um anunciante. \end{DoxyCompactList}\item 
 void \hyperlink{class_anuncio_procura_a7258f159f42bb53a3d7fe96f34e04280}{clean\+Condutores\+Candidatos} ()
 \begin{DoxyCompactList}\small\item\em Metodo para retornar o anunciante. \end{DoxyCompactList}\item 
-void \hyperlink{class_anuncio_procura_a73abd85989eee52b20c7ffca120ae5de}{criar} (\hyperlink{class_membro}{Membro} $\ast$utilizador\+Atual)
+void \hyperlink{class_anuncio_procura_a222f513534812e754a16e6442bfc8770}{criar} (\hyperlink{class_particular}{Particular} $\ast$utilizador\+Atual)
 \begin{DoxyCompactList}\small\item\em Função para eliminar os condutores candidatos. \end{DoxyCompactList}\item 
 void \hyperlink{class_anuncio_procura_a3e41646018004c3efb37c9dab3482c96}{save} (ofstream \&file, vector$<$ \hyperlink{class_membro}{Membro} $\ast$ $>$ $\ast$membros)
 \begin{DoxyCompactList}\small\item\em Função para criar um anuncio de procura. \end{DoxyCompactList}\item 
@@ -125,26 +137,22 @@ Metodo para retornar o anunciante.
 
 
 
-Definition at line 60 of file Anuncio\+Procura.\+cpp.
+Definition at line 61 of file Anuncio\+Procura.\+cpp.
 
 
 
 References condutores\+Candidatos.
 
-\hypertarget{class_anuncio_procura_a73abd85989eee52b20c7ffca120ae5de}{\index{Anuncio\+Procura@{Anuncio\+Procura}!criar@{criar}}
+\hypertarget{class_anuncio_procura_a222f513534812e754a16e6442bfc8770}{\index{Anuncio\+Procura@{Anuncio\+Procura}!criar@{criar}}
 \index{criar@{criar}!Anuncio\+Procura@{Anuncio\+Procura}}
 \subsubsection[{criar}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+Procura\+::criar (
 \begin{DoxyParamCaption}
-\item[{{\bf Membro} $\ast$}]{utilizador\+Atual}
+\item[{{\bf Particular} $\ast$}]{utilizador\+Atual}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_procura_a73abd85989eee52b20c7ffca120ae5de}
+)}}\label{class_anuncio_procura_a222f513534812e754a16e6442bfc8770}
 
 
 Função para eliminar os condutores candidatos. 
-
-
-
-Reimplemented from \hyperlink{class_anuncio_a00fb20c3afcd57ef4edc07a09526bde4}{Anuncio}.
 
 
 
@@ -152,11 +160,17 @@ Definition at line 45 of file Anuncio\+Procura.\+cpp.
 
 
 
-References Anuncio\+::criar().
+References Anuncio\+::criar(), and Anuncio\+::passageiros.
 
 
 
-Here is the call graph for this function\+:
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anuncio_procura_a222f513534812e754a16e6442bfc8770_cgraph}
+\end{center}
+\end{figure}
 
 
 \hypertarget{class_anuncio_procura_ae7ef0a393b385df69d7ee4d22a10e4ec}{\index{Anuncio\+Procura@{Anuncio\+Procura}!editar@{editar}}
@@ -176,7 +190,7 @@ Implements \hyperlink{class_anuncio_a82600e3de68746059d60206df6ceee56}{Anuncio}.
 
 
 
-Definition at line 50 of file Anuncio\+Procura.\+cpp.
+Definition at line 51 of file Anuncio\+Procura.\+cpp.
 
 
 
@@ -184,7 +198,13 @@ References Anuncio\+::editar().
 
 
 
-Here is the call graph for this function\+:
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anuncio_procura_ae7ef0a393b385df69d7ee4d22a10e4ec_cgraph}
+\end{center}
+\end{figure}
 
 
 \hypertarget{class_anuncio_procura_aadc1d2f42fd3a9629498065b931e9134}{\index{Anuncio\+Procura@{Anuncio\+Procura}!get\+Anunciante@{get\+Anunciante}}
@@ -211,7 +231,7 @@ Método para alterar as informações do anunciante.
 
 
 
-Definition at line 55 of file Anuncio\+Procura.\+cpp.
+Definition at line 56 of file Anuncio\+Procura.\+cpp.
 
 
 
@@ -235,7 +255,7 @@ Reimplemented from \hyperlink{class_anuncio_a58f1190bb4a2f1743ee76109be853e31}{A
 
 
 
-Definition at line 84 of file Anuncio\+Procura.\+cpp.
+Definition at line 85 of file Anuncio\+Procura.\+cpp.
 
 
 
@@ -243,7 +263,13 @@ References condutores\+Candidatos, Preco\+::load(), Anuncio\+::load(), and Anunc
 
 
 
-Here is the call graph for this function\+:
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anuncio_procura_a9983a05725bcdcee8aee8f778c79920b_cgraph}
+\end{center}
+\end{figure}
 
 
 \hypertarget{class_anuncio_procura_aa7689f1ae7175e99b144c48422231e17}{\index{Anuncio\+Procura@{Anuncio\+Procura}!pode\+Ser\+Condutor@{pode\+Ser\+Condutor}}
@@ -271,7 +297,13 @@ References condutores\+Candidatos, and Anuncio\+::pode\+Ser\+Condutor().
 
 
 
-Here is the call graph for this function\+:
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anuncio_procura_aa7689f1ae7175e99b144c48422231e17_cgraph}
+\end{center}
+\end{figure}
 
 
 \hypertarget{class_anuncio_procura_aab615cb1457ec3784d55149d44cdc458}{\index{Anuncio\+Procura@{Anuncio\+Procura}!pode\+Ser\+Passageiro@{pode\+Ser\+Passageiro}}
@@ -299,7 +331,13 @@ References condutores\+Candidatos, and Anuncio\+::pode\+Ser\+Passageiro().
 
 
 
-Here is the call graph for this function\+:
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anuncio_procura_aab615cb1457ec3784d55149d44cdc458_cgraph}
+\end{center}
+\end{figure}
 
 
 \hypertarget{class_anuncio_procura_a3e41646018004c3efb37c9dab3482c96}{\index{Anuncio\+Procura@{Anuncio\+Procura}!save@{save}}
@@ -320,7 +358,7 @@ Reimplemented from \hyperlink{class_anuncio_a66e74841f18c8c0f95b4f3b66ce77797}{A
 
 
 
-Definition at line 65 of file Anuncio\+Procura.\+cpp.
+Definition at line 66 of file Anuncio\+Procura.\+cpp.
 
 
 
@@ -328,7 +366,13 @@ References condutores\+Candidatos, and Anuncio\+::save().
 
 
 
-Here is the call graph for this function\+:
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anuncio_procura_a3e41646018004c3efb37c9dab3482c96_cgraph}
+\end{center}
+\end{figure}
 
 
 \hypertarget{class_anuncio_procura_a303be648c388693e6b92e6bf467c06ff}{\index{Anuncio\+Procura@{Anuncio\+Procura}!set\+Anunciante@{set\+Anunciante}}
@@ -359,7 +403,7 @@ Reimplemented from \hyperlink{class_anuncio_a71729dba796d57356afe20eff021c2d5}{A
 
 
 
-Definition at line 106 of file Anuncio\+Procura.\+cpp.
+Definition at line 107 of file Anuncio\+Procura.\+cpp.
 
 
 
@@ -367,7 +411,13 @@ References condutores\+Candidatos, and Anuncio\+::show().
 
 
 
-Here is the call graph for this function\+:
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anuncio_procura_a7a9ac26488642a35643f5322acf40788_cgraph}
+\end{center}
+\end{figure}
 
 
 
@@ -387,7 +437,7 @@ função para preencher um anuncio com a informação do respectivo ficheiro txt
 
 
 
-Definition at line 101 of file Anuncio\+Procura.\+cpp.
+Definition at line 102 of file Anuncio\+Procura.\+cpp.
 
 
 
@@ -407,5 +457,5 @@ Referenced by adicionar\+Condutor\+Candidato(), clean\+Condutores\+Candidatos(),
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Headers/\hyperlink{_anuncio_procura_8h}{Anuncio\+Procura.\+h}\item 
-C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Source/\hyperlink{_anuncio_procura_8cpp}{Anuncio\+Procura.\+cpp}\end{DoxyCompactItemize}
+\hyperlink{_anuncio_procura_8h}{Anuncio\+Procura.\+h}\item 
+\hyperlink{_anuncio_procura_8cpp}{Anuncio\+Procura.\+cpp}\end{DoxyCompactItemize}

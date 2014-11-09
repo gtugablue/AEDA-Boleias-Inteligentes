@@ -4,7 +4,7 @@ var class_anuncio_procura =
     [ "AnuncioProcura", "class_anuncio_procura.html#a03743cdc7492d168d554b8dcd56982aa", null ],
     [ "adicionarCondutorCandidato", "class_anuncio_procura.html#a1aede1a94eb45ff994d537379091077c", null ],
     [ "cleanCondutoresCandidatos", "class_anuncio_procura.html#a7258f159f42bb53a3d7fe96f34e04280", null ],
-    [ "criar", "class_anuncio_procura.html#a73abd85989eee52b20c7ffca120ae5de", null ],
+    [ "criar", "class_anuncio_procura.html#a222f513534812e754a16e6442bfc8770", null ],
     [ "editar", "class_anuncio_procura.html#ae7ef0a393b385df69d7ee4d22a10e4ec", null ],
     [ "getAnunciante", "class_anuncio_procura.html#aadc1d2f42fd3a9629498065b931e9134", null ],
     [ "getCondutoresCandidatos", "class_anuncio_procura.html#a8149478f041f545ce8ccb8958d39cfbd", null ],
