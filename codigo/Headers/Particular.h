@@ -8,19 +8,19 @@
 
 using namespace std;
 
-class Particular : public Membro
+class Particular : public Membro  ///Classe derivada da classe mãe membro
 {
 private:
 	vector<pair<Membro *, unsigned>> conhecidos;
 public:
-	Particular();
-	Particular(string nome, string utilizador, string password);
+	Particular();///Construtor por defeito da classe
+	Particular(string nome, string utilizador, string password);///Construtor com parâmetros da classe
 	vector<pair<Membro*, unsigned>> getConhecidos() const;
-	void show();
-	void signup();
-	void save(ofstream &file, vector<Combustivel> *combustiveis);
-	void load(ofstream &file, vector<Combustivel> *combustiveis);	// TODO
-	void updateConhecidos(vector<Membro *> passageiros);
+	void show();///Função que imprime no ecrã a informação de um particular
+	void signup();///Função que permite a um particular criar conta na API
+	void save(ofstream &file, vector<Combustivel> *combustiveis);///Função que grava a informação de um particular no ficheiro respectivo
+	void load(ofstream &file, vector<Combustivel> *combustiveis);///Função que carrega a informação de um particular do ficheiro para o programa
+	void updateConhecidos(vector<Membro *> passageiros);///Função que permite editar os cada conhecido desse mesmo particular
 };
 
 #endif
