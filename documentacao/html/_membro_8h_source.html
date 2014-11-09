@@ -109,39 +109,51 @@ $(document).ready(function(){initNavTree('_membro_8h_source.html','');});
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_membro.html">Membro</a> &amp;membro1) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_utilizador_repetido_exception.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_utilizador_repetido_exception.html">UtilizadorRepetidoException</a></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_utilizador_repetido_exception.html#a7ec9106fbba66bfc9d6bb55cc624209e">   50</a></span>&#160;    T <a class="code" href="class_utilizador_repetido_exception.html#a7ec9106fbba66bfc9d6bb55cc624209e">info</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_utilizador_repetido_exception.html#a4e9a802fb2f345555195cee795fada4c">   51</a></span>&#160;    <a class="code" href="class_utilizador_repetido_exception.html#a4e9a802fb2f345555195cee795fada4c">UtilizadorRepetidoException</a>(T info)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        this-&gt;info = info;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_utilizador_repetido_exception.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_utilizador_repetido_exception.html">UtilizadorRepetidoException</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_utilizador_repetido_exception.html#a7ec9106fbba66bfc9d6bb55cc624209e">   48</a></span>&#160;    T <a class="code" href="class_utilizador_repetido_exception.html#a7ec9106fbba66bfc9d6bb55cc624209e">info</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_utilizador_repetido_exception.html#a4e9a802fb2f345555195cee795fada4c">   49</a></span>&#160;    <a class="code" href="class_utilizador_repetido_exception.html#a4e9a802fb2f345555195cee795fada4c">UtilizadorRepetidoException</a>(T info)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        this-&gt;info = info;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_utilizador_inexistente_exception.html">   57</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_utilizador_inexistente_exception.html">UtilizadorInexistenteException</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_utilizador_inexistente_exception.html#adb3a79924461811fbac14298ebe653b9">   60</a></span>&#160;    T <a class="code" href="class_utilizador_inexistente_exception.html#adb3a79924461811fbac14298ebe653b9">info</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_utilizador_inexistente_exception.html#a68662cc3580729103c7cbeec1d0be1da">   61</a></span>&#160;    <a class="code" href="class_utilizador_inexistente_exception.html#a68662cc3580729103c7cbeec1d0be1da">UtilizadorInexistenteException</a>(T info)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        this-&gt;info = info;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="_veiculo_8h_html"><div class="ttname"><a href="_veiculo_8h.html">Veiculo.h</a></div></div>
 <div class="ttc" id="class_veiculo_html"><div class="ttname"><a href="class_veiculo.html">Veiculo</a></div><div class="ttdef"><b>Definition:</b> <a href="_veiculo_8h_source.html#l00015">Veiculo.h:15</a></div></div>
 <div class="ttc" id="class_membro_html_a42cc733ff94ec8d1bbfdacc62dfbb0e7"><div class="ttname"><a href="class_membro.html#a42cc733ff94ec8d1bbfdacc62dfbb0e7">Membro::utilizador</a></div><div class="ttdeci">string utilizador</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00017">Membro.h:17</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="class_utilizador_repetido_exception_html_a7ec9106fbba66bfc9d6bb55cc624209e"><div class="ttname"><a href="class_utilizador_repetido_exception.html#a7ec9106fbba66bfc9d6bb55cc624209e">UtilizadorRepetidoException::info</a></div><div class="ttdeci">T info</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00050">Membro.h:50</a></div></div>
+<div class="ttc" id="class_utilizador_repetido_exception_html_a7ec9106fbba66bfc9d6bb55cc624209e"><div class="ttname"><a href="class_utilizador_repetido_exception.html#a7ec9106fbba66bfc9d6bb55cc624209e">UtilizadorRepetidoException::info</a></div><div class="ttdeci">T info</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00048">Membro.h:48</a></div></div>
 <div class="ttc" id="class_membro_html_a2598bbe34ae32a98f41468b2202a9555"><div class="ttname"><a href="class_membro.html#a2598bbe34ae32a98f41468b2202a9555">Membro::nome</a></div><div class="ttdeci">string nome</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00016">Membro.h:16</a></div></div>
-<div class="ttc" id="class_utilizador_repetido_exception_html"><div class="ttname"><a href="class_utilizador_repetido_exception.html">UtilizadorRepetidoException</a></div><div class="ttdoc">Tratamento da excepção de quando se verifica o caso de o utilizador ser repetido. ...</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00047">Membro.h:47</a></div></div>
+<div class="ttc" id="class_utilizador_repetido_exception_html"><div class="ttname"><a href="class_utilizador_repetido_exception.html">UtilizadorRepetidoException</a></div><div class="ttdoc">Tratamento da excepção de quando se verifica o caso de o utilizador ser repetido. ...</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00045">Membro.h:45</a></div></div>
 <div class="ttc" id="_input_utils_8h_html"><div class="ttname"><a href="_input_utils_8h.html">InputUtils.h</a></div></div>
 <div class="ttc" id="class_membro_html"><div class="ttname"><a href="class_membro.html">Membro</a></div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00013">Membro.h:13</a></div></div>
 <div class="ttc" id="class_membro_html_ae2b12fc3e91efc674c07e735edf4ac21"><div class="ttname"><a href="class_membro.html#ae2b12fc3e91efc674c07e735edf4ac21">Membro::password</a></div><div class="ttdeci">string password</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00018">Membro.h:18</a></div></div>
-<div class="ttc" id="class_utilizador_repetido_exception_html_a4e9a802fb2f345555195cee795fada4c"><div class="ttname"><a href="class_utilizador_repetido_exception.html#a4e9a802fb2f345555195cee795fada4c">UtilizadorRepetidoException::UtilizadorRepetidoException</a></div><div class="ttdeci">UtilizadorRepetidoException(T info)</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00051">Membro.h:51</a></div></div>
+<div class="ttc" id="class_utilizador_inexistente_exception_html"><div class="ttname"><a href="class_utilizador_inexistente_exception.html">UtilizadorInexistenteException</a></div><div class="ttdoc">Excepção lançada quando se pesquisa por um utilizador inexistente. </div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00057">Membro.h:57</a></div></div>
+<div class="ttc" id="class_utilizador_repetido_exception_html_a4e9a802fb2f345555195cee795fada4c"><div class="ttname"><a href="class_utilizador_repetido_exception.html#a4e9a802fb2f345555195cee795fada4c">UtilizadorRepetidoException::UtilizadorRepetidoException</a></div><div class="ttdeci">UtilizadorRepetidoException(T info)</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00049">Membro.h:49</a></div></div>
 <div class="ttc" id="class_membro_html_a7485fc8a9f992a05662866f19b22f74a"><div class="ttname"><a href="class_membro.html#a7485fc8a9f992a05662866f19b22f74a">Membro::veiculos</a></div><div class="ttdeci">vector&lt; Veiculo &gt; veiculos</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00019">Membro.h:19</a></div></div>
+<div class="ttc" id="class_utilizador_inexistente_exception_html_a68662cc3580729103c7cbeec1d0be1da"><div class="ttname"><a href="class_utilizador_inexistente_exception.html#a68662cc3580729103c7cbeec1d0be1da">UtilizadorInexistenteException::UtilizadorInexistenteException</a></div><div class="ttdeci">UtilizadorInexistenteException(T info)</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00061">Membro.h:61</a></div></div>
+<div class="ttc" id="class_utilizador_inexistente_exception_html_adb3a79924461811fbac14298ebe653b9"><div class="ttname"><a href="class_utilizador_inexistente_exception.html#adb3a79924461811fbac14298ebe653b9">UtilizadorInexistenteException::info</a></div><div class="ttdeci">T info</div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00060">Membro.h:60</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li><li class="navelem"><a class="el" href="dir_8ec053a504507d4cd016538dd4f7c72d.html">Headers</a></li><li class="navelem"><a class="el" href="_membro_8h.html">Membro.h</a></li>
-    <li class="footer">Gerado em Domingo, 9 de Novembro de 2014 17:22:57 para AEDABoleiasInteligentes por
+    <li class="footer">Gerado em Domingo, 9 de Novembro de 2014 23:40:56 para AEDABoleiasInteligentes por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

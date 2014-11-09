@@ -204,7 +204,7 @@ Função chave para organizar os anuncios por distância pois organiza os pontos
 
 
 
-Definido na linha 435 do ficheiro Anuncio.\+cpp.
+Definido na linha 440 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -235,7 +235,7 @@ Função que calcula os pontos obtidos por um membro de acordo com os conhecidos
 
 
 
-Definido na linha 430 do ficheiro Anuncio.\+cpp.
+Definido na linha 435 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -269,7 +269,7 @@ Função que da update aos conhecidos.
 
 sqrt() to make sure the number doesn't grow too fast 
 
-Definido na linha 402 do ficheiro Anuncio.\+cpp.
+Definido na linha 407 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -314,11 +314,11 @@ Função virtual que grava a informação do anuncio no ficheiro de anuncios.
 
 
 
-Reimplementado em \hyperlink{class_anuncio_oferta_a796d66969f1f391fc62685ad8e6c81cb}{Anuncio\+Oferta}.
+Reimplementado em \hyperlink{class_anuncio_procura_a73abd85989eee52b20c7ffca120ae5de}{Anuncio\+Procura} e \hyperlink{class_anuncio_oferta_a796d66969f1f391fc62685ad8e6c81cb}{Anuncio\+Oferta}.
 
 
 
-Definido na linha 257 do ficheiro Anuncio.\+cpp.
+Definido na linha 262 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -356,7 +356,7 @@ Implementado em \hyperlink{class_anuncio_procura_ae7ef0a393b385df69d7ee4d22a10e4
 
 
 
-Definido na linha 276 do ficheiro Anuncio.\+cpp.
+Definido na linha 281 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -638,7 +638,7 @@ Função responsavel por editar as componentes de um anuncio.
 
 
 
-Definido na linha 340 do ficheiro Anuncio.\+cpp.
+Definido na linha 345 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -662,7 +662,7 @@ Reimplementado em \hyperlink{class_anuncio_procura_a9983a05725bcdcee8aee8f778c79
 
 
 
-Definido na linha 137 do ficheiro Anuncio.\+cpp.
+Definido na linha 142 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -700,7 +700,7 @@ Reimplementado em \hyperlink{class_anuncio_procura_aa7689f1ae7175e99b144c4842223
 
 
 
-Definido na linha 374 do ficheiro Anuncio.\+cpp.
+Definido na linha 379 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -727,7 +727,7 @@ Reimplementado em \hyperlink{class_anuncio_procura_aab615cb1457ec3784d55149d44cd
 
 
 
-Definido na linha 349 do ficheiro Anuncio.\+cpp.
+Definido na linha 354 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -766,7 +766,7 @@ Reimplementado em \hyperlink{class_anuncio_procura_a3e41646018004c3efb37c9dab348
 
 
 
-Definido na linha 185 do ficheiro Anuncio.\+cpp.
+Definido na linha 190 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -926,7 +926,7 @@ Definido na linha 108 do ficheiro Anuncio.\+cpp.
 
 
 
-Referências anunciante, condutor, data\+Fim, data\+Inicio, descricao, Membro\+::get\+Nome(), hora, preco, Preco\+::show(), Veiculo\+::show(), titulo e veiculo.
+Referências anunciante, Coordenadas\+::calc\+Distancia(), condutor, data\+Fim, data\+Inicio, descricao, destino, Membro\+::get\+Nome(), hora, origem, preco, Coordenadas\+::show(), Preco\+::show(), Veiculo\+::show(), titulo e veiculo.
 
 
 
@@ -934,7 +934,8 @@ Referenciado por Anuncio\+Oferta\+::show() e Anuncio\+Procura\+::show().
 
 
 
-Grafo de chamadas desta função\+:\nopagebreak
+Grafo de chamadas desta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -956,7 +957,7 @@ Funçao responsavel por determinar se um determinado membro é condutor.\+Se o f
 
 
 
-Definido na linha 383 do ficheiro Anuncio.\+cpp.
+Definido na linha 388 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -979,7 +980,7 @@ Calcula o rsultado final entre os friend points e a distancia para ordenar os an
 
 
 
-Definido na linha 397 do ficheiro Anuncio.\+cpp.
+Definido na linha 402 do ficheiro Anuncio.\+cpp.
 
 
 
@@ -1008,7 +1009,7 @@ Definido na linha 29 do ficheiro Anuncio.\+h.
 
 
 
-Referenciado por calcular\+Friend\+Points(), Anuncio\+Oferta\+::criar(), get\+Condutor(), is\+Pronto(), load(), pode\+Ser\+Condutor(), pode\+Ser\+Passageiro(), save(), set\+Condutor(), show() e update\+Conhecidos().
+Referenciado por calcular\+Friend\+Points(), Anuncio\+Oferta\+::criar(), get\+Condutor(), is\+Pronto(), load(), Anuncio\+Procura\+::pode\+Ser\+Condutor(), pode\+Ser\+Condutor(), Anuncio\+Procura\+::pode\+Ser\+Passageiro(), pode\+Ser\+Passageiro(), Anuncio\+Procura\+::save(), save(), set\+Condutor(), show() e update\+Conhecidos().
 
 \hypertarget{class_anuncio_ac3b9182cc541cb68215f8aa09fb0e11a}{\index{Anuncio@{Anuncio}!data\+Fim@{data\+Fim}}
 \index{data\+Fim@{data\+Fim}!Anuncio@{Anuncio}}
@@ -1056,7 +1057,7 @@ Definido na linha 24 do ficheiro Anuncio.\+h.
 
 
 
-Referenciado por Anuncio\+Oferta\+::criar(), criar(), editar(), get\+Destino(), load() e save().
+Referenciado por Anuncio\+Oferta\+::criar(), criar(), editar(), get\+Destino(), load(), save() e show().
 
 \hypertarget{class_anuncio_aee851839cb45594b8ee550a032236cfe}{\index{Anuncio@{Anuncio}!hora@{hora}}
 \index{hora@{hora}!Anuncio@{Anuncio}}
@@ -1078,7 +1079,7 @@ Definido na linha 23 do ficheiro Anuncio.\+h.
 
 
 
-Referenciado por Anuncio\+Oferta\+::criar(), criar(), editar(), get\+Origem(), load() e save().
+Referenciado por Anuncio\+Oferta\+::criar(), criar(), editar(), get\+Origem(), load(), save() e show().
 
 \hypertarget{class_anuncio_a76cdb1291df7bd8736141304d759ef35}{\index{Anuncio@{Anuncio}!passageiros@{passageiros}}
 \index{passageiros@{passageiros}!Anuncio@{Anuncio}}

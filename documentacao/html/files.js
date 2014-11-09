@@ -15,11 +15,12 @@ var files =
     [ "Boleia.h", "_boleia_8h.html", [
       [ "Boleia", "class_boleia.html", "class_boleia" ]
     ] ],
-    [ "BoleiasInteligentes.cpp", "_boleias_inteligentes_8cpp.html", null ],
+    [ "BoleiasInteligentes.cpp", "_boleias_inteligentes_8cpp.html", "_boleias_inteligentes_8cpp" ],
     [ "BoleiasInteligentes.h", "_boleias_inteligentes_8h.html", [
       [ "BoleiasInteligentes", "class_boleias_inteligentes.html", "class_boleias_inteligentes" ],
       [ "LoginException", "class_login_exception.html", "class_login_exception" ],
-      [ "ProibidoException", "class_proibido_exception.html", "class_proibido_exception" ]
+      [ "ProibidoException", "class_proibido_exception.html", "class_proibido_exception" ],
+      [ "FileException", "class_file_exception.html", "class_file_exception" ]
     ] ],
     [ "Combustivel.cpp", "_combustivel_8cpp.html", "_combustivel_8cpp" ],
     [ "Combustivel.h", "_combustivel_8h.html", [
@@ -51,7 +52,8 @@ var files =
     [ "Membro.cpp", "_membro_8cpp.html", null ],
     [ "Membro.h", "_membro_8h.html", [
       [ "Membro", "class_membro.html", "class_membro" ],
-      [ "UtilizadorRepetidoException", "class_utilizador_repetido_exception.html", "class_utilizador_repetido_exception" ]
+      [ "UtilizadorRepetidoException", "class_utilizador_repetido_exception.html", "class_utilizador_repetido_exception" ],
+      [ "UtilizadorInexistenteException", "class_utilizador_inexistente_exception.html", "class_utilizador_inexistente_exception" ]
     ] ],
     [ "Menu.cpp", "_menu_8cpp.html", null ],
     [ "Menu.h", "_menu_8h.html", [

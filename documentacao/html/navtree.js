@@ -26,7 +26,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_anuncio_8cpp.html",
-"class_coordenadas.html#a9b1c73edfba7e5c4e0c6cae72174633c"
+"class_coordenadas.html#a328c0d572b3a7d47bfbd866f5d6d6489"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

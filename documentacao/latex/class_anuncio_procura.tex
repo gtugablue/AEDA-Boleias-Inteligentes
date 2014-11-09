@@ -35,13 +35,13 @@ Diagrama de colaboração para Anuncio\+Procura\+:\nopagebreak
 \item 
 \hyperlink{class_anuncio_procura_a03743cdc7492d168d554b8dcd56982aa}{Anuncio\+Procura} (\hyperlink{class_particular}{Particular} $\ast$\hyperlink{class_anuncio_a58250bfc8ab82d4308839b1e26213a0f}{anunciante})
 \begin{DoxyCompactList}\small\item\em Construtor por defeito. \end{DoxyCompactList}\item 
-void \hyperlink{class_anuncio_procura_a1aede1a94eb45ff994d537379091077c}{adicionar\+Condutor\+Candidato} (pair$<$ \hyperlink{class_membro}{Membro} $\ast$, \hyperlink{class_preco}{Preco} $>$ \&condutor\+Candidato)
+void \hyperlink{class_anuncio_procura_a13d30275e62d58a007baed6d53635a22}{adicionar\+Condutor\+Candidato} (\hyperlink{struct_condutor_candidato}{Condutor\+Candidato} \&condutor\+Candidato)
 \begin{DoxyCompactList}\small\item\em Construtor com parâmetros. \end{DoxyCompactList}\item 
 bool \hyperlink{class_anuncio_procura_aab615cb1457ec3784d55149d44cdc458}{pode\+Ser\+Passageiro} (\hyperlink{class_membro}{Membro} $\ast$membro) const 
 \begin{DoxyCompactList}\small\item\em Função para adicionar um condutor aos candidatos a condutor da boleia anunciada. \end{DoxyCompactList}\item 
 bool \hyperlink{class_anuncio_procura_aa7689f1ae7175e99b144c48422231e17}{pode\+Ser\+Condutor} (\hyperlink{class_membro}{Membro} $\ast$membro) const 
 \begin{DoxyCompactList}\small\item\em Função que verifica se um membro pode ser passageiro e retorna true caso tal situacai se verifique. \end{DoxyCompactList}\item 
-vector$<$ pair$<$ \hyperlink{class_membro}{Membro} $\ast$, \hyperlink{class_preco}{Preco} $>$ $>$ \hyperlink{class_anuncio_procura_a8149478f041f545ce8ccb8958d39cfbd}{get\+Condutores\+Candidatos} ()
+vector$<$ \hyperlink{struct_condutor_candidato}{Condutor\+Candidato} $>$ \hyperlink{class_anuncio_procura_a5ceb65dc092e5fd576dbc5db90ef6187}{get\+Condutores\+Candidatos} ()
 \begin{DoxyCompactList}\small\item\em Método para alterar as informações do anunciante. \end{DoxyCompactList}\item 
 void \hyperlink{class_anuncio_procura_a303be648c388693e6b92e6bf467c06ff}{set\+Anunciante} (\hyperlink{class_particular}{Particular} $\ast$\hyperlink{class_anuncio_a58250bfc8ab82d4308839b1e26213a0f}{anunciante})
 \begin{DoxyCompactList}\small\item\em Método para retornar os condutores candidatos. \end{DoxyCompactList}\item 
@@ -49,7 +49,7 @@ void \hyperlink{class_anuncio_procura_a303be648c388693e6b92e6bf467c06ff}{set\+An
 \begin{DoxyCompactList}\small\item\em Método para alterar um anunciante. \end{DoxyCompactList}\item 
 void \hyperlink{class_anuncio_procura_a7258f159f42bb53a3d7fe96f34e04280}{clean\+Condutores\+Candidatos} ()
 \begin{DoxyCompactList}\small\item\em Metodo para retornar o anunciante. \end{DoxyCompactList}\item 
-void \hyperlink{class_anuncio_procura_a222f513534812e754a16e6442bfc8770}{criar} (\hyperlink{class_particular}{Particular} $\ast$utilizador\+Atual)
+void \hyperlink{class_anuncio_procura_a73abd85989eee52b20c7ffca120ae5de}{criar} (\hyperlink{class_membro}{Membro} $\ast$utilizador\+Atual)
 \begin{DoxyCompactList}\small\item\em Função para eliminar os condutores candidatos. \end{DoxyCompactList}\item 
 void \hyperlink{class_anuncio_procura_a3e41646018004c3efb37c9dab3482c96}{save} (ofstream \&file, vector$<$ \hyperlink{class_membro}{Membro} $\ast$ $>$ $\ast$membros)
 \begin{DoxyCompactList}\small\item\em Função para criar um anuncio de procura. \end{DoxyCompactList}\item 
@@ -62,7 +62,7 @@ void \hyperlink{class_anuncio_procura_a7a9ac26488642a35643f5322acf40788}{show} (
 \subsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ pair$<$ \hyperlink{class_membro}{Membro} $\ast$, \hyperlink{class_preco}{Preco} $>$ $>$ \hyperlink{class_anuncio_procura_a3e08d3fe714ffbff0434f5e3675a7601}{condutores\+Candidatos}
+vector$<$ \hyperlink{struct_condutor_candidato}{Condutor\+Candidato} $>$ \hyperlink{class_anuncio_procura_a610f0c6542e76bb10e81850e5db7db8a}{condutores\+Candidatos}
 \end{DoxyCompactItemize}
 \subsection*{Amigos}
 \begin{DoxyCompactItemize}
@@ -75,7 +75,7 @@ ostream \& \hyperlink{class_anuncio_procura_a588ca84de59923ef22b29a8f0ca114cf}{o
 \subsection{Descrição detalhada}
 Classe derivada da classe mãe anuncio. 
 
-Definido na linha 8 do ficheiro Anuncio\+Procura.\+h.
+Definido na linha 15 do ficheiro Anuncio\+Procura.\+h.
 
 
 
@@ -105,13 +105,13 @@ Construtor por defeito.
 
 
 \subsection{Documentação dos métodos}
-\hypertarget{class_anuncio_procura_a1aede1a94eb45ff994d537379091077c}{\index{Anuncio\+Procura@{Anuncio\+Procura}!adicionar\+Condutor\+Candidato@{adicionar\+Condutor\+Candidato}}
+\hypertarget{class_anuncio_procura_a13d30275e62d58a007baed6d53635a22}{\index{Anuncio\+Procura@{Anuncio\+Procura}!adicionar\+Condutor\+Candidato@{adicionar\+Condutor\+Candidato}}
 \index{adicionar\+Condutor\+Candidato@{adicionar\+Condutor\+Candidato}!Anuncio\+Procura@{Anuncio\+Procura}}
 \subsubsection[{adicionar\+Condutor\+Candidato}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+Procura\+::adicionar\+Condutor\+Candidato (
 \begin{DoxyParamCaption}
-\item[{pair$<$ {\bf Membro} $\ast$, {\bf Preco} $>$ \&}]{condutor\+Candidato}
+\item[{{\bf Condutor\+Candidato} \&}]{condutor\+Candidato}
 \end{DoxyParamCaption}
-)}}\label{class_anuncio_procura_a1aede1a94eb45ff994d537379091077c}
+)}}\label{class_anuncio_procura_a13d30275e62d58a007baed6d53635a22}
 
 
 Construtor com parâmetros. 
@@ -143,16 +143,20 @@ Definido na linha 61 do ficheiro Anuncio\+Procura.\+cpp.
 
 Referências condutores\+Candidatos.
 
-\hypertarget{class_anuncio_procura_a222f513534812e754a16e6442bfc8770}{\index{Anuncio\+Procura@{Anuncio\+Procura}!criar@{criar}}
+\hypertarget{class_anuncio_procura_a73abd85989eee52b20c7ffca120ae5de}{\index{Anuncio\+Procura@{Anuncio\+Procura}!criar@{criar}}
 \index{criar@{criar}!Anuncio\+Procura@{Anuncio\+Procura}}
 \subsubsection[{criar}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+Procura\+::criar (
 \begin{DoxyParamCaption}
-\item[{{\bf Particular} $\ast$}]{utilizador\+Atual}
+\item[{{\bf Membro} $\ast$}]{utilizador\+Atual}
 \end{DoxyParamCaption}
-)}}\label{class_anuncio_procura_a222f513534812e754a16e6442bfc8770}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_procura_a73abd85989eee52b20c7ffca120ae5de}
 
 
 Função para eliminar os condutores candidatos. 
+
+
+
+Reimplementado de \hyperlink{class_anuncio_a00fb20c3afcd57ef4edc07a09526bde4}{Anuncio}.
 
 
 
@@ -164,11 +168,12 @@ Referências Anuncio\+::criar() e Anuncio\+::passageiros.
 
 
 
-Grafo de chamadas desta função\+:\nopagebreak
+Grafo de chamadas desta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_anuncio_procura_a222f513534812e754a16e6442bfc8770_cgraph}
+\includegraphics[width=350pt]{class_anuncio_procura_a73abd85989eee52b20c7ffca120ae5de_cgraph}
 \end{center}
 \end{figure}
 
@@ -218,13 +223,13 @@ Grafo de chamadas desta função\+:\nopagebreak
 
 Método para alterar um anunciante. 
 
-\hypertarget{class_anuncio_procura_a8149478f041f545ce8ccb8958d39cfbd}{\index{Anuncio\+Procura@{Anuncio\+Procura}!get\+Condutores\+Candidatos@{get\+Condutores\+Candidatos}}
+\hypertarget{class_anuncio_procura_a5ceb65dc092e5fd576dbc5db90ef6187}{\index{Anuncio\+Procura@{Anuncio\+Procura}!get\+Condutores\+Candidatos@{get\+Condutores\+Candidatos}}
 \index{get\+Condutores\+Candidatos@{get\+Condutores\+Candidatos}!Anuncio\+Procura@{Anuncio\+Procura}}
-\subsubsection[{get\+Condutores\+Candidatos}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ pair$<$ {\bf Membro} $\ast$, {\bf Preco} $>$ $>$ Anuncio\+Procura\+::get\+Condutores\+Candidatos (
+\subsubsection[{get\+Condutores\+Candidatos}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Condutor\+Candidato} $>$ Anuncio\+Procura\+::get\+Condutores\+Candidatos (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_anuncio_procura_a8149478f041f545ce8ccb8958d39cfbd}
+)}}\label{class_anuncio_procura_a5ceb65dc092e5fd576dbc5db90ef6187}
 
 
 Método para alterar as informações do anunciante. 
@@ -255,11 +260,11 @@ Reimplementado de \hyperlink{class_anuncio_a58f1190bb4a2f1743ee76109be853e31}{An
 
 
 
-Definido na linha 85 do ficheiro Anuncio\+Procura.\+cpp.
+Definido na linha 93 do ficheiro Anuncio\+Procura.\+cpp.
 
 
 
-Referências condutores\+Candidatos, Preco\+::load(), Anuncio\+::load() e Anuncio\+::preco.
+Referências Condutor\+Candidato\+::condutor, condutores\+Candidatos, Preco\+::load(), Anuncio\+::load(), Condutor\+Candidato\+::preco, Anuncio\+::preco e Condutor\+Candidato\+::veiculo.
 
 
 
@@ -293,7 +298,7 @@ Definido na linha 29 do ficheiro Anuncio\+Procura.\+cpp.
 
 
 
-Referências condutores\+Candidatos e Anuncio\+::pode\+Ser\+Condutor().
+Referências Anuncio\+::condutor, condutores\+Candidatos e Anuncio\+::pode\+Ser\+Condutor().
 
 
 
@@ -327,7 +332,7 @@ Definido na linha 13 do ficheiro Anuncio\+Procura.\+cpp.
 
 
 
-Referências condutores\+Candidatos e Anuncio\+::pode\+Ser\+Passageiro().
+Referências Anuncio\+::condutor, condutores\+Candidatos e Anuncio\+::pode\+Ser\+Passageiro().
 
 
 
@@ -362,11 +367,12 @@ Definido na linha 66 do ficheiro Anuncio\+Procura.\+cpp.
 
 
 
-Referências condutores\+Candidatos e Anuncio\+::save().
+Referências Anuncio\+::condutor, condutores\+Candidatos, Membro\+::get\+Veiculos() e Anuncio\+::save().
 
 
 
-Grafo de chamadas desta função\+:\nopagebreak
+Grafo de chamadas desta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -403,15 +409,16 @@ Reimplementado de \hyperlink{class_anuncio_a71729dba796d57356afe20eff021c2d5}{An
 
 
 
-Definido na linha 107 do ficheiro Anuncio\+Procura.\+cpp.
+Definido na linha 121 do ficheiro Anuncio\+Procura.\+cpp.
 
 
 
-Referências condutores\+Candidatos e Anuncio\+::show().
+Referências Anuncio\+::show().
 
 
 
-Grafo de chamadas desta função\+:\nopagebreak
+Grafo de chamadas desta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -437,21 +444,21 @@ função para preencher um anuncio com a informação do respectivo ficheiro txt
 
 
 
-Definido na linha 102 do ficheiro Anuncio\+Procura.\+cpp.
+Definido na linha 116 do ficheiro Anuncio\+Procura.\+cpp.
 
 
 
 \subsection{Documentação dos dados membro}
-\hypertarget{class_anuncio_procura_a3e08d3fe714ffbff0434f5e3675a7601}{\index{Anuncio\+Procura@{Anuncio\+Procura}!condutores\+Candidatos@{condutores\+Candidatos}}
+\hypertarget{class_anuncio_procura_a610f0c6542e76bb10e81850e5db7db8a}{\index{Anuncio\+Procura@{Anuncio\+Procura}!condutores\+Candidatos@{condutores\+Candidatos}}
 \index{condutores\+Candidatos@{condutores\+Candidatos}!Anuncio\+Procura@{Anuncio\+Procura}}
-\subsubsection[{condutores\+Candidatos}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$pair$<${\bf Membro} $\ast$, {\bf Preco}$>$ $>$ Anuncio\+Procura\+::condutores\+Candidatos\hspace{0.3cm}{\ttfamily [private]}}}\label{class_anuncio_procura_a3e08d3fe714ffbff0434f5e3675a7601}
+\subsubsection[{condutores\+Candidatos}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Condutor\+Candidato}$>$ Anuncio\+Procura\+::condutores\+Candidatos\hspace{0.3cm}{\ttfamily [private]}}}\label{class_anuncio_procura_a610f0c6542e76bb10e81850e5db7db8a}
 
 
-Definido na linha 11 do ficheiro Anuncio\+Procura.\+h.
+Definido na linha 18 do ficheiro Anuncio\+Procura.\+h.
 
 
 
-Referenciado por adicionar\+Condutor\+Candidato(), clean\+Condutores\+Candidatos(), get\+Condutores\+Candidatos(), load(), pode\+Ser\+Condutor(), pode\+Ser\+Passageiro(), save() e show().
+Referenciado por adicionar\+Condutor\+Candidato(), clean\+Condutores\+Candidatos(), get\+Condutores\+Candidatos(), load(), pode\+Ser\+Condutor(), pode\+Ser\+Passageiro() e save().
 
 
 

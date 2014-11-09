@@ -12,7 +12,7 @@ var class_coordenadas =
     [ "save", "class_coordenadas.html#ae2ed52ac8bc8bcf634db2627a7b5b3a2", null ],
     [ "setLatitude", "class_coordenadas.html#a035cce119d74a61cb24676ef76f0f518", null ],
     [ "setLongitude", "class_coordenadas.html#af03ec9230d72b041265a9cbcf17a0369", null ],
-    [ "showcoord", "class_coordenadas.html#ace2f5bfc3615c206d4f642f6714cf626", null ],
+    [ "show", "class_coordenadas.html#ac970d558f2fac57dbe0f34c4a132d110", null ],
     [ "toRad", "class_coordenadas.html#a24cb37fe0c7b21e2cc1f4c4353119d4f", null ],
     [ "latitude", "class_coordenadas.html#ad7aa0271fc0ca8c8da179f9cfe859bf0", null ],
     [ "longitude", "class_coordenadas.html#a328c0d572b3a7d47bfbd866f5d6d6489", null ]

@@ -26,7 +26,7 @@ double \hyperlink{class_coordenadas_a24cb37fe0c7b21e2cc1f4c4353119d4f}{to\+Rad} 
 \begin{DoxyCompactList}\small\item\em Método para alterar a longitude de uma coordenada. \end{DoxyCompactList}\item 
 double \hyperlink{class_coordenadas_ab64cdc4dd54abd1eb0e8fa8b031c475f}{calc\+Distancia} (const \hyperlink{class_coordenadas}{Coordenadas} \&coordenadas) const 
 \begin{DoxyCompactList}\small\item\em Função para passar um determinado valor em graus para radianos. \end{DoxyCompactList}\item 
-void \hyperlink{class_coordenadas_ace2f5bfc3615c206d4f642f6714cf626}{showcoord} ()
+void \hyperlink{class_coordenadas_ac970d558f2fac57dbe0f34c4a132d110}{show} () const 
 \begin{DoxyCompactList}\small\item\em Função para calcular a distancia entre duas coordenadas diferentes. \end{DoxyCompactList}\item 
 void \hyperlink{class_coordenadas_a9b1c73edfba7e5c4e0c6cae72174633c}{criar} ()
 \begin{DoxyCompactList}\small\item\em Função para mostrar no ecra da Consola umas determinadas coordenadas. \end{DoxyCompactList}\item 
@@ -119,7 +119,7 @@ Função para passar um determinado valor em graus para radianos.
 
 
 
-Definido na linha 90 do ficheiro Coordenadas.\+cpp.
+Definido na linha 88 do ficheiro Coordenadas.\+cpp.
 
 
 
@@ -127,7 +127,7 @@ Referências latitude, longitude e to\+Rad().
 
 
 
-Referenciado por Anuncio\+::calcular\+Distancia\+Points(), Anuncio\+Oferta\+::criar() e Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
+Referenciado por Anuncio\+::calcular\+Distancia\+Points(), Anuncio\+Oferta\+::criar(), Anuncio\+::show() e Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
 
 
 
@@ -153,11 +153,11 @@ Função para mostrar no ecra da Consola umas determinadas coordenadas.
 
 
 
-Definido na linha 49 do ficheiro Coordenadas.\+cpp.
+Definido na linha 47 do ficheiro Coordenadas.\+cpp.
 
 
 
-Referências Invalid\+Input\+Exception$<$ T $>$\+::info e Input\+Utils\+::read\+Double().
+Referências Invalid\+Input\+Exception$<$ T $>$\+::info, latitude, longitude e Input\+Utils\+::read\+Double().
 
 
 
@@ -187,7 +187,7 @@ Função para criar novas coordenadas.
 
 
 
-Definido na linha 79 do ficheiro Coordenadas.\+cpp.
+Definido na linha 77 do ficheiro Coordenadas.\+cpp.
 
 
 
@@ -227,6 +227,10 @@ Definido na linha 19 do ficheiro Coordenadas.\+cpp.
 
 Referências latitude.
 
+
+
+Referenciado por Boleias\+Inteligentes\+::get\+Anuncios\+By\+Destino().
+
 \hypertarget{class_coordenadas_ae2f616716136f0651d389e4824092c55}{\index{Coordenadas@{Coordenadas}!get\+Longitude@{get\+Longitude}}
 \index{get\+Longitude@{get\+Longitude}!Coordenadas@{Coordenadas}}
 \subsubsection[{get\+Longitude}]{\setlength{\rightskip}{0pt plus 5cm}double Coordenadas\+::get\+Longitude (
@@ -246,6 +250,10 @@ Definido na linha 24 do ficheiro Coordenadas.\+cpp.
 
 Referências longitude.
 
+
+
+Referenciado por Boleias\+Inteligentes\+::get\+Anuncios\+By\+Destino().
+
 \hypertarget{class_coordenadas_ad503a2c6cfc48f13683217e17eb48596}{\index{Coordenadas@{Coordenadas}!load@{load}}
 \index{load@{load}!Coordenadas@{Coordenadas}}
 \subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Coordenadas\+::load (
@@ -259,7 +267,7 @@ Função responsavel por editar informação referente a coordenadas ja existent
 
 
 
-Definido na linha 104 do ficheiro Coordenadas.\+cpp.
+Definido na linha 102 do ficheiro Coordenadas.\+cpp.
 
 
 
@@ -282,7 +290,7 @@ Função responsavel por fazer load da informação das coordenadas presentes nu
 
 
 
-Definido na linha 112 do ficheiro Coordenadas.\+cpp.
+Definido na linha 110 do ficheiro Coordenadas.\+cpp.
 
 
 
@@ -330,13 +338,13 @@ Definido na linha 35 do ficheiro Coordenadas.\+cpp.
 
 Referências longitude.
 
-\hypertarget{class_coordenadas_ace2f5bfc3615c206d4f642f6714cf626}{\index{Coordenadas@{Coordenadas}!showcoord@{showcoord}}
-\index{showcoord@{showcoord}!Coordenadas@{Coordenadas}}
-\subsubsection[{showcoord}]{\setlength{\rightskip}{0pt plus 5cm}void Coordenadas\+::showcoord (
+\hypertarget{class_coordenadas_ac970d558f2fac57dbe0f34c4a132d110}{\index{Coordenadas@{Coordenadas}!show@{show}}
+\index{show@{show}!Coordenadas@{Coordenadas}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Coordenadas\+::show (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_coordenadas_ace2f5bfc3615c206d4f642f6714cf626}
+) const}}\label{class_coordenadas_ac970d558f2fac57dbe0f34c4a132d110}
 
 
 Função para calcular a distancia entre duas coordenadas diferentes. 
@@ -351,7 +359,7 @@ Referências latitude e longitude.
 
 
 
-Referenciado por Boleia\+::show().
+Referenciado por Boleia\+::show() e Anuncio\+::show().
 
 \hypertarget{class_coordenadas_a24cb37fe0c7b21e2cc1f4c4353119d4f}{\index{Coordenadas@{Coordenadas}!to\+Rad@{to\+Rad}}
 \index{to\+Rad@{to\+Rad}!Coordenadas@{Coordenadas}}
@@ -366,7 +374,7 @@ Método para alterar a longitude de uma coordenada.
 
 
 
-Definido na linha 84 do ficheiro Coordenadas.\+cpp.
+Definido na linha 82 do ficheiro Coordenadas.\+cpp.
 
 
 
@@ -384,7 +392,7 @@ Definido na linha 13 do ficheiro Coordenadas.\+h.
 
 
 
-Referenciado por calc\+Distancia(), Coordenadas(), get\+Latitude(), load(), save(), set\+Latitude() e showcoord().
+Referenciado por calc\+Distancia(), Coordenadas(), criar(), get\+Latitude(), load(), save(), set\+Latitude() e show().
 
 \hypertarget{class_coordenadas_a328c0d572b3a7d47bfbd866f5d6d6489}{\index{Coordenadas@{Coordenadas}!longitude@{longitude}}
 \index{longitude@{longitude}!Coordenadas@{Coordenadas}}
@@ -395,7 +403,7 @@ Definido na linha 14 do ficheiro Coordenadas.\+h.
 
 
 
-Referenciado por calc\+Distancia(), Coordenadas(), get\+Longitude(), load(), save(), set\+Longitude() e showcoord().
+Referenciado por calc\+Distancia(), Coordenadas(), criar(), get\+Longitude(), load(), save(), set\+Longitude() e show().
 
 
 
