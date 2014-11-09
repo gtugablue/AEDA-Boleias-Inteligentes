@@ -408,7 +408,7 @@ double Anuncio::calcularFriendPoints(const Particular* utilizadorAtual) const
 		{
 			if (condutor == utilizadorAtual->getConhecidos()[i].first)
 			{
-				friendPoints += sqrt(utilizadorAtual->getConhecidos()[i].second);	// sqrt() to make sure the number doesn't grow too fast
+				friendPoints += sqrt(utilizadorAtual->getConhecidos()[i].second);	/// sqrt() to make sure the number doesn't grow too fast
 				break;
 			}
 		}
