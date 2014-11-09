@@ -41,14 +41,24 @@ public:
 };
 
 ///Tratamento da excepção de quando se verifica o caso de o utilizador ser repetido
-
-
 template<class T>
 class UtilizadorRepetidoException
 {
 public:
 	T info;
 	UtilizadorRepetidoException(T info)
+	{
+		this->info = info;
+	}
+};
+
+///Excepção lançada quando se pesquisa por um utilizador inexistente
+template<class T>
+class UtilizadorInexistenteException
+{
+public:
+	T info;
+	UtilizadorInexistenteException(T info)
 	{
 		this->info = info;
 	}
