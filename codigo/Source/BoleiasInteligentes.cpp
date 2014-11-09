@@ -15,18 +15,14 @@ dataFolder(dataFolder), utilizadorAtual(NULL)
 
 void BoleiasInteligentes::start()
 {
-	while (1)
+	try
 	{
-		try
-		{
-			load();
-			showLoginMenu();
-		}
-		catch (FileException<string>e)
-		{
-			cout << "Erro: " << e.info << endl << endl;
-		}
-		
+		load();
+		showLoginMenu();
+	}
+	catch (FileException<string>e)
+	{
+		cout << "Erro: " << e.info << endl << endl;
 	}
 }
 
@@ -98,7 +94,7 @@ void BoleiasInteligentes::loadAnuncios()
 	}
 	file >> numAnuncios;
 	file.ignore(1000, '\n');
-	bool oferta=true;
+	bool oferta = true;
 	Anuncio *anuncio;
 	for (size_t i = 0; i < numAnuncios; ++i)
 	{
