@@ -10,18 +10,28 @@
 \item 
 \hyperlink{class_hora_a90c18369977bbf1bf3a7370d8ea9e9ae}{Hora} ()
 \item 
+void \hyperlink{class_hora_a22a4cc9c0bd37db37040680d9e772221}{show} () const 
+\begin{DoxyCompactList}\small\item\em Construtor por defeito da classe. \end{DoxyCompactList}\item 
 \hyperlink{class_hora_ac2b1f6c87010f4c8af8c3f1986c02b23}{Hora} (unsigned \hyperlink{class_hora_ab901e62ae1158965687dc736a45ee8fe}{hora}, unsigned \hyperlink{class_hora_a9d33ce2d8a3f4b3d05b2a3c6df782fa4}{minuto})
-\item 
+\begin{DoxyCompactList}\small\item\em Função que permite mostrar na Consola a informação referente a uma hora. \end{DoxyCompactList}\item 
 unsigned \hyperlink{class_hora_ae55080cc8706bcbf135036edcc4112a5}{get\+Hora} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor com parâmetros da classe. \end{DoxyCompactList}\item 
 unsigned \hyperlink{class_hora_adccaf5d0c9e674462f77b31ae05bdb86}{get\+Minuto} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Método para retornar a hora. \end{DoxyCompactList}\item 
 void \hyperlink{class_hora_afc47b74f8d5673565ebe3de1bbfb92a6}{set\+Hora} (unsigned \hyperlink{class_hora_ab901e62ae1158965687dc736a45ee8fe}{hora})
-\item 
+\begin{DoxyCompactList}\small\item\em Método para retornar os minutos. \end{DoxyCompactList}\item 
 void \hyperlink{class_hora_abca266485eb34d8feaf1f9e84854a7f3}{set\+Minuto} (unsigned \hyperlink{class_hora_a9d33ce2d8a3f4b3d05b2a3c6df782fa4}{minuto})
-\item 
+\begin{DoxyCompactList}\small\item\em Método para alterar a hora. \end{DoxyCompactList}\item 
 bool \hyperlink{class_hora_a24d925d0c6d35e813542346e5d63eef9}{operator$<$} (const \hyperlink{class_hora}{Hora} \&horas)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método para alterar os minutos. \end{DoxyCompactList}\item 
+void \hyperlink{class_hora_a61d7bd0b06ffbb4c446be735199c61cb}{save} (ofstream \&file)
+\begin{DoxyCompactList}\small\item\em Overload do operadro $<$ de forma a se puder comparar horas. \end{DoxyCompactList}\item 
+void \hyperlink{class_hora_a622aa86821d01f80e4117f27529e6879}{load} (ifstream \&file)
+\begin{DoxyCompactList}\small\item\em Função responsavel por gravar as informações relativas as hora no respectivo ficheiro. \end{DoxyCompactList}\item 
+void \hyperlink{class_hora_a7aa53826fa618dab6f6d1d5f2dc81451}{criar} ()
+\begin{DoxyCompactList}\small\item\em Função responsavel por descarregar a informação de um ficheiro sobre as horas. \end{DoxyCompactList}\item 
+void \hyperlink{class_hora_acedba833ccd61d7e60ec2c4d0ca95cda}{editar} ()
+\begin{DoxyCompactList}\small\item\em Função para criar uma nova hora. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,12 +39,17 @@ unsigned \hyperlink{class_hora_ab901e62ae1158965687dc736a45ee8fe}{hora}
 \item 
 unsigned \hyperlink{class_hora_a9d33ce2d8a3f4b3d05b2a3c6df782fa4}{minuto}
 \end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_hora_a5c50c8f5bda98e7f8a87a3d705da96a5}{operator$<$$<$} (ostream \&os, const \hyperlink{class_hora}{Hora} \&\hyperlink{class_hora_ab901e62ae1158965687dc736a45ee8fe}{hora})
+\begin{DoxyCompactList}\small\item\em Função para editar as informações referentes a uma hora ja existente. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 6 of file Hora.\+h.
+Definition at line 9 of file Hora.\+h.
 
 
 
@@ -46,6 +61,10 @@ Definition at line 6 of file Hora.\+h.
 {}
 \end{DoxyParamCaption}
 )}}\label{class_hora_a90c18369977bbf1bf3a7370d8ea9e9ae}
+
+
+Definition at line 3 of file Hora.\+cpp.
+
 \hypertarget{class_hora_ac2b1f6c87010f4c8af8c3f1986c02b23}{\index{Hora@{Hora}!Hora@{Hora}}
 \index{Hora@{Hora}!Hora@{Hora}}
 \subsubsection[{Hora}]{\setlength{\rightskip}{0pt plus 5cm}Hora\+::\+Hora (
@@ -56,7 +75,11 @@ Definition at line 6 of file Hora.\+h.
 )}}\label{class_hora_ac2b1f6c87010f4c8af8c3f1986c02b23}
 
 
-Definition at line 3 of file Hora.\+cpp.
+Função que permite mostrar na Consola a informação referente a uma hora. 
+
+
+
+Definition at line 8 of file Hora.\+cpp.
 
 
 
@@ -65,6 +88,62 @@ References hora, and minuto.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_hora_a7aa53826fa618dab6f6d1d5f2dc81451}{\index{Hora@{Hora}!criar@{criar}}
+\index{criar@{criar}!Hora@{Hora}}
+\subsubsection[{criar}]{\setlength{\rightskip}{0pt plus 5cm}void Hora\+::criar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hora_a7aa53826fa618dab6f6d1d5f2dc81451}
+
+
+Função responsavel por descarregar a informação de um ficheiro sobre as horas. 
+
+
+
+Definition at line 73 of file Hora.\+cpp.
+
+
+
+References hora, Invalid\+Input\+Exception$<$ T $>$\+::info, minuto, and Input\+Utils\+::read\+Int().
+
+
+
+Referenced by Anuncio\+::criar(), and editar().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_hora_acedba833ccd61d7e60ec2c4d0ca95cda}{\index{Hora@{Hora}!editar@{editar}}
+\index{editar@{editar}!Hora@{Hora}}
+\subsubsection[{editar}]{\setlength{\rightskip}{0pt plus 5cm}void Hora\+::editar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hora_acedba833ccd61d7e60ec2c4d0ca95cda}
+
+
+Função para criar uma nova hora. 
+
+
+
+Definition at line 104 of file Hora.\+cpp.
+
+
+
+References criar().
+
+
+
+Referenced by Anuncio\+::editar().
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_hora_ae55080cc8706bcbf135036edcc4112a5}{\index{Hora@{Hora}!get\+Hora@{get\+Hora}}
 \index{get\+Hora@{get\+Hora}!Hora@{Hora}}
 \subsubsection[{get\+Hora}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Hora\+::get\+Hora (
@@ -74,7 +153,11 @@ References hora, and minuto.
 ) const}}\label{class_hora_ae55080cc8706bcbf135036edcc4112a5}
 
 
-Definition at line 9 of file Hora.\+cpp.
+Construtor com parâmetros da classe. 
+
+
+
+Definition at line 14 of file Hora.\+cpp.
 
 
 
@@ -93,7 +176,11 @@ Referenced by operator$<$().
 ) const}}\label{class_hora_adccaf5d0c9e674462f77b31ae05bdb86}
 
 
-Definition at line 14 of file Hora.\+cpp.
+Método para retornar a hora. 
+
+
+
+Definition at line 19 of file Hora.\+cpp.
 
 
 
@@ -102,6 +189,29 @@ References minuto.
 
 
 Referenced by operator$<$().
+
+\hypertarget{class_hora_a622aa86821d01f80e4117f27529e6879}{\index{Hora@{Hora}!load@{load}}
+\index{load@{load}!Hora@{Hora}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Hora\+::load (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_hora_a622aa86821d01f80e4117f27529e6879}
+
+
+Função responsavel por gravar as informações relativas as hora no respectivo ficheiro. 
+
+
+
+Definition at line 60 of file Hora.\+cpp.
+
+
+
+References hora, and minuto.
+
+
+
+Referenced by Boleia\+::load(), and Anuncio\+::load().
 
 \hypertarget{class_hora_a24d925d0c6d35e813542346e5d63eef9}{\index{Hora@{Hora}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!Hora@{Hora}}
@@ -112,7 +222,11 @@ Referenced by operator$<$().
 )}}\label{class_hora_a24d925d0c6d35e813542346e5d63eef9}
 
 
-Definition at line 29 of file Hora.\+cpp.
+Método para alterar os minutos. 
+
+
+
+Definition at line 34 of file Hora.\+cpp.
 
 
 
@@ -123,6 +237,29 @@ References get\+Hora(), and get\+Minuto().
 Here is the call graph for this function\+:
 
 
+\hypertarget{class_hora_a61d7bd0b06ffbb4c446be735199c61cb}{\index{Hora@{Hora}!save@{save}}
+\index{save@{save}!Hora@{Hora}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Hora\+::save (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_hora_a61d7bd0b06ffbb4c446be735199c61cb}
+
+
+Overload do operadro $<$ de forma a se puder comparar horas. 
+
+
+
+Definition at line 54 of file Hora.\+cpp.
+
+
+
+References hora, and minuto.
+
+
+
+Referenced by Boleia\+::save(), and Anuncio\+::save().
+
 \hypertarget{class_hora_afc47b74f8d5673565ebe3de1bbfb92a6}{\index{Hora@{Hora}!set\+Hora@{set\+Hora}}
 \index{set\+Hora@{set\+Hora}!Hora@{Hora}}
 \subsubsection[{set\+Hora}]{\setlength{\rightskip}{0pt plus 5cm}void Hora\+::set\+Hora (
@@ -132,7 +269,11 @@ Here is the call graph for this function\+:
 )}}\label{class_hora_afc47b74f8d5673565ebe3de1bbfb92a6}
 
 
-Definition at line 19 of file Hora.\+cpp.
+Método para retornar os minutos. 
+
+
+
+Definition at line 24 of file Hora.\+cpp.
 
 
 
@@ -147,11 +288,53 @@ References hora.
 )}}\label{class_hora_abca266485eb34d8feaf1f9e84854a7f3}
 
 
-Definition at line 24 of file Hora.\+cpp.
+Método para alterar a hora. 
+
+
+
+Definition at line 29 of file Hora.\+cpp.
 
 
 
 References minuto.
+
+\hypertarget{class_hora_a22a4cc9c0bd37db37040680d9e772221}{\index{Hora@{Hora}!show@{show}}
+\index{show@{show}!Hora@{Hora}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Hora\+::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_hora_a22a4cc9c0bd37db37040680d9e772221}
+
+
+Construtor por defeito da classe. 
+
+
+
+Definition at line 68 of file Hora.\+cpp.
+
+
+
+References hora, and minuto.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_hora_a5c50c8f5bda98e7f8a87a3d705da96a5}{\index{Hora@{Hora}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Hora@{Hora}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Hora} \&}]{hora}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_hora_a5c50c8f5bda98e7f8a87a3d705da96a5}
+
+
+Função para editar as informações referentes a uma hora ja existente. 
+
+
+
+Definition at line 109 of file Hora.\+cpp.
 
 
 
@@ -161,22 +344,22 @@ References minuto.
 \subsubsection[{hora}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Hora\+::hora\hspace{0.3cm}{\ttfamily [private]}}}\label{class_hora_ab901e62ae1158965687dc736a45ee8fe}
 
 
-Definition at line 9 of file Hora.\+h.
+Definition at line 12 of file Hora.\+h.
 
 
 
-Referenced by get\+Hora(), Hora(), and set\+Hora().
+Referenced by criar(), get\+Hora(), Hora(), load(), operator$<$$<$(), save(), set\+Hora(), and show().
 
 \hypertarget{class_hora_a9d33ce2d8a3f4b3d05b2a3c6df782fa4}{\index{Hora@{Hora}!minuto@{minuto}}
 \index{minuto@{minuto}!Hora@{Hora}}
 \subsubsection[{minuto}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Hora\+::minuto\hspace{0.3cm}{\ttfamily [private]}}}\label{class_hora_a9d33ce2d8a3f4b3d05b2a3c6df782fa4}
 
 
-Definition at line 10 of file Hora.\+h.
+Definition at line 13 of file Hora.\+h.
 
 
 
-Referenced by get\+Minuto(), Hora(), and set\+Minuto().
+Referenced by criar(), get\+Minuto(), Hora(), load(), operator$<$$<$(), save(), set\+Minuto(), and show().
 
 
 

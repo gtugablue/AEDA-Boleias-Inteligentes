@@ -5,15 +5,18 @@ digraph "AnuncioOferta"
   Node1 [label="AnuncioOferta",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="Anuncio",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_anuncio.html"];
-  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" viagem" ,fontname="Helvetica"];
-  Node3 [label="Viagem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_viagem.html"];
-  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fim\ninicio" ,fontname="Helvetica"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hora" ,fontname="Helvetica"];
+  Node3 [label="Hora",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_hora.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" origem\ndestino" ,fontname="Helvetica"];
   Node4 [label="Coordenadas",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_coordenadas.html"];
-  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" veiculo" ,fontname="Helvetica"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" veiculo" ,fontname="Helvetica"];
   Node5 [label="Veiculo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_veiculo.html"];
   Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" combustivel" ,fontname="Helvetica"];
   Node6 [label="Combustivel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_combustivel.html"];
-  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" condutor" ,fontname="Helvetica"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" condutor\nanunciante" ,fontname="Helvetica"];
   Node7 [label="Membro",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_membro.html"];
-  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" anunciante" ,fontname="Helvetica"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dataFim\ndataInicio" ,fontname="Helvetica"];
+  Node8 [label="Data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data.html"];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" preco" ,fontname="Helvetica"];
+  Node9 [label="Preco",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_preco.html"];
 }

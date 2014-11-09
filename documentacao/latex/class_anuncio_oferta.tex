@@ -3,6 +3,11 @@
 }
 
 
+Classe derivada da classe mãe anuncio.  
+
+
+
+
 {\ttfamily \#include $<$Anuncio\+Oferta.\+h$>$}
 
 
@@ -14,37 +19,131 @@ Collaboration diagram for Anuncio\+Oferta\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_anuncio_oferta_a49321070a1da7dfba74e92a4da8a3073}{Anuncio\+Oferta} (\hyperlink{class_membro}{Membro} $\ast$\hyperlink{class_anuncio_oferta_a5de28c6a5a698a5ddabcf258c3c42d3c}{anunciante})
+\hyperlink{class_anuncio_oferta_a5828e85f76169ec6b3a5b51fabe42d1c}{Anuncio\+Oferta} ()
 \item 
-void \hyperlink{class_anuncio_oferta_a2bb132a1679d5a51edf54ac823bb9c4e}{set\+Anunciante} (\hyperlink{class_membro}{Membro} $\ast$\hyperlink{class_anuncio_oferta_a5de28c6a5a698a5ddabcf258c3c42d3c}{anunciante})
-\item 
+\hyperlink{class_anuncio_oferta_a1bc1fd4199b766b00e7234385732720f}{Anuncio\+Oferta} (const string \&\hyperlink{class_anuncio_adb34bedd8220f42b9ee37662c21313e6}{titulo}, const string \&\hyperlink{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}{descricao}, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_anuncio_a9b3f8ac29ebf2a44e24ea2273064a7f5}{origem}, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_anuncio_acdac86595f84cfb8a2bf54c414857168}{destino}, const \hyperlink{class_data}{Data} \&\hyperlink{class_anuncio_abeb7d8c5fe5e7d127005044981a3cd3d}{data\+Inicio}, const \hyperlink{class_data}{Data} \&\hyperlink{class_anuncio_ac3b9182cc541cb68215f8aa09fb0e11a}{data\+Fim}, \hyperlink{class_preco}{Preco} \hyperlink{class_anuncio_aa780fd8e07586a3af117fd20593fb1b4}{preco})
+\begin{DoxyCompactList}\small\item\em Construtor por defeito. \end{DoxyCompactList}\item 
+void \hyperlink{class_anuncio_oferta_a2bb132a1679d5a51edf54ac823bb9c4e}{set\+Anunciante} (\hyperlink{class_membro}{Membro} $\ast$\hyperlink{class_anuncio_a58250bfc8ab82d4308839b1e26213a0f}{anunciante})
+\begin{DoxyCompactList}\small\item\em Construtor da classe com parâmetros. \end{DoxyCompactList}\item 
 \hyperlink{class_membro}{Membro} $\ast$ \hyperlink{class_anuncio_oferta_a517173f7de8f7952e402e58b8b5d19b9}{get\+Anunciante} () const 
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
+\begin{DoxyCompactList}\small\item\em Método para alterar a informação de um anunciante. \end{DoxyCompactList}\item 
+void \hyperlink{class_anuncio_oferta_a796d66969f1f391fc62685ad8e6c81cb}{criar} (\hyperlink{class_membro}{Membro} $\ast$utilizador\+Atual)
+\begin{DoxyCompactList}\small\item\em Método para retornar o anunciante da \hyperlink{class_boleia}{Boleia}. \end{DoxyCompactList}\item 
+void \hyperlink{class_anuncio_oferta_a802538a48708716a4eef52823642c9d8}{editar} ()
+\begin{DoxyCompactList}\small\item\em Overload do operador de impressão de anuncios. \end{DoxyCompactList}\item 
+void \hyperlink{class_anuncio_oferta_a046a87a9ba9b1fedb071a6c5ba09663c}{show} () const 
+\begin{DoxyCompactList}\small\item\em Função para alterar a informação de um anuncio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_membro}{Membro} $\ast$ \hyperlink{class_anuncio_oferta_a5de28c6a5a698a5ddabcf258c3c42d3c}{anunciante}
-\end{DoxyCompactItemize}
+ostream \& \hyperlink{class_anuncio_oferta_ae598d56987e55ce3482c24e720e386ad}{operator$<$$<$} (ostream \&os, const \hyperlink{class_anuncio_oferta}{Anuncio\+Oferta} \&anuncio)
+\begin{DoxyCompactList}\small\item\em Função para criar um anuncio com ainformação desta classe derivada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-
+Classe derivada da classe mãe anuncio. 
 
 Definition at line 9 of file Anuncio\+Oferta.\+h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_anuncio_oferta_a49321070a1da7dfba74e92a4da8a3073}{\index{Anuncio\+Oferta@{Anuncio\+Oferta}!Anuncio\+Oferta@{Anuncio\+Oferta}}
+\hypertarget{class_anuncio_oferta_a5828e85f76169ec6b3a5b51fabe42d1c}{\index{Anuncio\+Oferta@{Anuncio\+Oferta}!Anuncio\+Oferta@{Anuncio\+Oferta}}
 \index{Anuncio\+Oferta@{Anuncio\+Oferta}!Anuncio\+Oferta@{Anuncio\+Oferta}}
 \subsubsection[{Anuncio\+Oferta}]{\setlength{\rightskip}{0pt plus 5cm}Anuncio\+Oferta\+::\+Anuncio\+Oferta (
 \begin{DoxyParamCaption}
-\item[{{\bf Membro} $\ast$}]{anunciante}
+{}
 \end{DoxyParamCaption}
-)}}\label{class_anuncio_oferta_a49321070a1da7dfba74e92a4da8a3073}
+)}}\label{class_anuncio_oferta_a5828e85f76169ec6b3a5b51fabe42d1c}
+
+
+Definition at line 3 of file Anuncio\+Oferta.\+cpp.
+
+\hypertarget{class_anuncio_oferta_a1bc1fd4199b766b00e7234385732720f}{\index{Anuncio\+Oferta@{Anuncio\+Oferta}!Anuncio\+Oferta@{Anuncio\+Oferta}}
+\index{Anuncio\+Oferta@{Anuncio\+Oferta}!Anuncio\+Oferta@{Anuncio\+Oferta}}
+\subsubsection[{Anuncio\+Oferta}]{\setlength{\rightskip}{0pt plus 5cm}Anuncio\+Oferta\+::\+Anuncio\+Oferta (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{titulo, }
+\item[{const string \&}]{descricao, }
+\item[{const {\bf Coordenadas} \&}]{origem, }
+\item[{const {\bf Coordenadas} \&}]{destino, }
+\item[{const {\bf Data} \&}]{data\+Inicio, }
+\item[{const {\bf Data} \&}]{data\+Fim, }
+\item[{{\bf Preco}}]{preco}
+\end{DoxyParamCaption}
+)}}\label{class_anuncio_oferta_a1bc1fd4199b766b00e7234385732720f}
+
+
+Construtor por defeito. 
+
+
+
+Definition at line 8 of file Anuncio\+Oferta.\+cpp.
+
+
+
+References Anuncio\+::preco.
+
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_anuncio_oferta_a796d66969f1f391fc62685ad8e6c81cb}{\index{Anuncio\+Oferta@{Anuncio\+Oferta}!criar@{criar}}
+\index{criar@{criar}!Anuncio\+Oferta@{Anuncio\+Oferta}}
+\subsubsection[{criar}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+Oferta\+::criar (
+\begin{DoxyParamCaption}
+\item[{{\bf Membro} $\ast$}]{utilizador\+Atual}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_oferta_a796d66969f1f391fc62685ad8e6c81cb}
+
+
+Método para retornar o anunciante da \hyperlink{class_boleia}{Boleia}. 
+
+
+
+Reimplemented from \hyperlink{class_anuncio_a00fb20c3afcd57ef4edc07a09526bde4}{Anuncio}.
+
+
+
+Definition at line 14 of file Anuncio\+Oferta.\+cpp.
+
+
+
+References Coordenadas\+::calc\+Distancia(), Preco\+::criar(), Anuncio\+::criar(), Anuncio\+::destino, Veiculo\+::get\+Combustivel(), Veiculo\+::get\+Consumo(), Combustivel\+::get\+Preco(), Membro\+::get\+Veiculos(), Anuncio\+::origem, Input\+Utils\+::pause(), Anuncio\+::preco, Output\+Utils\+::show\+List(), Preco\+::update\+Preco\+Combustivel(), and Anuncio\+::veiculo.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_anuncio_oferta_a802538a48708716a4eef52823642c9d8}{\index{Anuncio\+Oferta@{Anuncio\+Oferta}!editar@{editar}}
+\index{editar@{editar}!Anuncio\+Oferta@{Anuncio\+Oferta}}
+\subsubsection[{editar}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+Oferta\+::editar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_oferta_a802538a48708716a4eef52823642c9d8}
+
+
+Overload do operador de impressão de anuncios. 
+
+
+
+Implements \hyperlink{class_anuncio_a82600e3de68746059d60206df6ceee56}{Anuncio}.
+
+
+
+Definition at line 30 of file Anuncio\+Oferta.\+cpp.
+
+
+
+References Anuncio\+::editar().
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_anuncio_oferta_a517173f7de8f7952e402e58b8b5d19b9}{\index{Anuncio\+Oferta@{Anuncio\+Oferta}!get\+Anunciante@{get\+Anunciante}}
 \index{get\+Anunciante@{get\+Anunciante}!Anuncio\+Oferta@{Anuncio\+Oferta}}
 \subsubsection[{get\+Anunciante}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Membro}$\ast$ Anuncio\+Oferta\+::get\+Anunciante (
@@ -52,6 +151,10 @@ Definition at line 9 of file Anuncio\+Oferta.\+h.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_anuncio_oferta_a517173f7de8f7952e402e58b8b5d19b9}
+
+
+Método para alterar a informação de um anunciante. 
+
 \hypertarget{class_anuncio_oferta_a2bb132a1679d5a51edf54ac823bb9c4e}{\index{Anuncio\+Oferta@{Anuncio\+Oferta}!set\+Anunciante@{set\+Anunciante}}
 \index{set\+Anunciante@{set\+Anunciante}!Anuncio\+Oferta@{Anuncio\+Oferta}}
 \subsubsection[{set\+Anunciante}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+Oferta\+::set\+Anunciante (
@@ -61,16 +164,58 @@ Definition at line 9 of file Anuncio\+Oferta.\+h.
 )}}\label{class_anuncio_oferta_a2bb132a1679d5a51edf54ac823bb9c4e}
 
 
-\subsection{Member Data Documentation}
-\hypertarget{class_anuncio_oferta_a5de28c6a5a698a5ddabcf258c3c42d3c}{\index{Anuncio\+Oferta@{Anuncio\+Oferta}!anunciante@{anunciante}}
-\index{anunciante@{anunciante}!Anuncio\+Oferta@{Anuncio\+Oferta}}
-\subsubsection[{anunciante}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Membro}$\ast$ Anuncio\+Oferta\+::anunciante\hspace{0.3cm}{\ttfamily [private]}}}\label{class_anuncio_oferta_a5de28c6a5a698a5ddabcf258c3c42d3c}
+Construtor da classe com parâmetros. 
+
+\hypertarget{class_anuncio_oferta_a046a87a9ba9b1fedb071a6c5ba09663c}{\index{Anuncio\+Oferta@{Anuncio\+Oferta}!show@{show}}
+\index{show@{show}!Anuncio\+Oferta@{Anuncio\+Oferta}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+Oferta\+::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_oferta_a046a87a9ba9b1fedb071a6c5ba09663c}
 
 
-Definition at line 12 of file Anuncio\+Oferta.\+h.
+Função para alterar a informação de um anuncio. 
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Reimplemented from \hyperlink{class_anuncio_a71729dba796d57356afe20eff021c2d5}{Anuncio}.
+
+
+
+Definition at line 41 of file Anuncio\+Oferta.\+cpp.
+
+
+
+References Anuncio\+::show().
+
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_anuncio_oferta_ae598d56987e55ce3482c24e720e386ad}{\index{Anuncio\+Oferta@{Anuncio\+Oferta}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Anuncio\+Oferta@{Anuncio\+Oferta}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Anuncio\+Oferta} \&}]{anuncio}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_anuncio_oferta_ae598d56987e55ce3482c24e720e386ad}
+
+
+Função para criar um anuncio com ainformação desta classe derivada. 
+
+
+
+Definition at line 36 of file Anuncio\+Oferta.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Headers/\hyperlink{_anuncio_oferta_8h}{Anuncio\+Oferta.\+h}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Headers/\hyperlink{_anuncio_oferta_8h}{Anuncio\+Oferta.\+h}\item 
+C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Source/\hyperlink{_anuncio_oferta_8cpp}{Anuncio\+Oferta.\+cpp}\end{DoxyCompactItemize}

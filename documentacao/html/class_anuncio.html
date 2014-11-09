@@ -67,10 +67,11 @@ $(document).ready(function(){initNavTree('class_anuncio.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_anuncio-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Anuncio Class Reference</div>  </div>
+<div class="title">Anuncio Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -92,51 +93,165 @@ Collaboration diagram for Anuncio:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9234fed1e72396ea1c304919c0ed2a3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a9234fed1e72396ea1c304919c0ed2a3a">Anuncio</a> (const string &amp;<a class="el" href="class_anuncio.html#adb34bedd8220f42b9ee37662c21313e6">titulo</a>, const string &amp;<a class="el" href="class_anuncio.html#aa6a9eb8d08cb06d16061b006eb2c8b97">descricao</a>, float <a class="el" href="class_anuncio.html#a8ba7cc797b8b582c596038a17e9bce3b">precoTotal</a>, <a class="el" href="class_viagem.html">Viagem</a> *<a class="el" href="class_anuncio.html#aa225374a19420f56f5abc258d96b691a">viagem</a>)</td></tr>
-<tr class="separator:a9234fed1e72396ea1c304919c0ed2a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97da342f390c8ee647d60cf29a923667"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a97da342f390c8ee647d60cf29a923667">Anuncio</a> ()</td></tr>
+<tr class="separator:a97da342f390c8ee647d60cf29a923667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0adf24f36f64c2c786871e8f29ad8b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#ad0adf24f36f64c2c786871e8f29ad8b5">Anuncio</a> (const string &amp;<a class="el" href="class_anuncio.html#adb34bedd8220f42b9ee37662c21313e6">titulo</a>, const string &amp;<a class="el" href="class_anuncio.html#aa6a9eb8d08cb06d16061b006eb2c8b97">descricao</a>, const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;<a class="el" href="class_anuncio.html#a9b3f8ac29ebf2a44e24ea2273064a7f5">origem</a>, const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;<a class="el" href="class_anuncio.html#acdac86595f84cfb8a2bf54c414857168">destino</a>, const <a class="el" href="class_data.html">Data</a> &amp;<a class="el" href="class_anuncio.html#abeb7d8c5fe5e7d127005044981a3cd3d">dataInicio</a>, const <a class="el" href="class_data.html">Data</a> &amp;<a class="el" href="class_anuncio.html#ac3b9182cc541cb68215f8aa09fb0e11a">dataFim</a>)</td></tr>
+<tr class="memdesc:ad0adf24f36f64c2c786871e8f29ad8b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor sem parâmetros.  <a href="#ad0adf24f36f64c2c786871e8f29ad8b5">More...</a><br /></td></tr>
+<tr class="separator:ad0adf24f36f64c2c786871e8f29ad8b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af712423e3645f7127f987d88793127d4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#af712423e3645f7127f987d88793127d4">getTitulo</a> () const </td></tr>
+<tr class="memdesc:af712423e3645f7127f987d88793127d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor com parâmetros.  <a href="#af712423e3645f7127f987d88793127d4">More...</a><br /></td></tr>
 <tr class="separator:af712423e3645f7127f987d88793127d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a693f59391a620851b4ac37063e8f4af4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a693f59391a620851b4ac37063e8f4af4">getDescricao</a> () const </td></tr>
+<tr class="memdesc:a693f59391a620851b4ac37063e8f4af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter o titulo do anuncio.  <a href="#a693f59391a620851b4ac37063e8f4af4">More...</a><br /></td></tr>
 <tr class="separator:a693f59391a620851b4ac37063e8f4af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0c6be721a7fe4351cd5fa06b8bafcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_coordenadas.html">Coordenadas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a4a0c6be721a7fe4351cd5fa06b8bafcd">getOrigem</a> () const </td></tr>
-<tr class="separator:a4a0c6be721a7fe4351cd5fa06b8bafcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a207905709390f67bb9546e4d94682bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_coordenadas.html">Coordenadas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a207905709390f67bb9546e4d94682bb5">getDestino</a> () const </td></tr>
-<tr class="separator:a207905709390f67bb9546e4d94682bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c4c8b294b3bdda618a6a0708bf4647"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_membro.html">Membro</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a35c4c8b294b3bdda618a6a0708bf4647">getAnunciante</a> () const </td></tr>
+<tr class="memdesc:a35c4c8b294b3bdda618a6a0708bf4647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter a descrição do anuncio.  <a href="#a35c4c8b294b3bdda618a6a0708bf4647">More...</a><br /></td></tr>
+<tr class="separator:a35c4c8b294b3bdda618a6a0708bf4647"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af95db56a1347160ef1cf53ea1ec659a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#af95db56a1347160ef1cf53ea1ec659a6">setTitulo</a> (const string &amp;<a class="el" href="class_anuncio.html#adb34bedd8220f42b9ee37662c21313e6">titulo</a>)</td></tr>
+<tr class="memdesc:af95db56a1347160ef1cf53ea1ec659a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter o membro responsavel pelo <a class="el" href="class_anuncio.html">Anuncio</a>.  <a href="#af95db56a1347160ef1cf53ea1ec659a6">More...</a><br /></td></tr>
 <tr class="separator:af95db56a1347160ef1cf53ea1ec659a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4d8a46abfa73a073f7df39b2601e17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#acf4d8a46abfa73a073f7df39b2601e17">setVeiculo</a> (<a class="el" href="class_veiculo.html">Veiculo</a> *<a class="el" href="class_anuncio.html#a3cffe1ce2024500bddaf07bd0f7ecc81">veiculo</a>)</td></tr>
+<tr class="memdesc:acf4d8a46abfa73a073f7df39b2601e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para alterar o titulo.  <a href="#acf4d8a46abfa73a073f7df39b2601e17">More...</a><br /></td></tr>
+<tr class="separator:acf4d8a46abfa73a073f7df39b2601e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68f4b30d497dbccf1e3ab5f83b140da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_veiculo.html">Veiculo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#ae68f4b30d497dbccf1e3ab5f83b140da">getVeiculo</a> ()</td></tr>
+<tr class="memdesc:ae68f4b30d497dbccf1e3ab5f83b140da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para alteras as informações do veículo.  <a href="#ae68f4b30d497dbccf1e3ab5f83b140da">More...</a><br /></td></tr>
+<tr class="separator:ae68f4b30d497dbccf1e3ab5f83b140da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6344f8ce7de909f6841429ac14b97b7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_membro.html">Membro</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a6344f8ce7de909f6841429ac14b97b7a">getCondutor</a> ()</td></tr>
+<tr class="memdesc:a6344f8ce7de909f6841429ac14b97b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter o veiculo do <a class="el" href="class_anuncio.html">Anuncio</a>.  <a href="#a6344f8ce7de909f6841429ac14b97b7a">More...</a><br /></td></tr>
+<tr class="separator:a6344f8ce7de909f6841429ac14b97b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566dfb63e64851909367d5136963670d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_preco.html">Preco</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a566dfb63e64851909367d5136963670d">getPreco</a> ()</td></tr>
+<tr class="memdesc:a566dfb63e64851909367d5136963670d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter o condutor do veiculo.  <a href="#a566dfb63e64851909367d5136963670d">More...</a><br /></td></tr>
+<tr class="separator:a566dfb63e64851909367d5136963670d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8850dd9d778dfe5ea92268f654d7b563"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hora.html">Hora</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a8850dd9d778dfe5ea92268f654d7b563">getHora</a> () const </td></tr>
+<tr class="memdesc:a8850dd9d778dfe5ea92268f654d7b563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter o preço discriminado do <a class="el" href="class_anuncio.html">Anuncio</a> de <a class="el" href="class_boleia.html">Boleia</a>.  <a href="#a8850dd9d778dfe5ea92268f654d7b563">More...</a><br /></td></tr>
+<tr class="separator:a8850dd9d778dfe5ea92268f654d7b563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d85e1cf72f81a767ca666cb17ef88ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a7d85e1cf72f81a767ca666cb17ef88ac">getDataInicio</a> () const </td></tr>
+<tr class="memdesc:a7d85e1cf72f81a767ca666cb17ef88ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter a hora de inicio da <a class="el" href="class_boleia.html">Boleia</a>.  <a href="#a7d85e1cf72f81a767ca666cb17ef88ac">More...</a><br /></td></tr>
+<tr class="separator:a7d85e1cf72f81a767ca666cb17ef88ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e5adcc932f13615ab7bfc1e69964d4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a2e5adcc932f13615ab7bfc1e69964d4e">getDataFim</a> () const </td></tr>
+<tr class="memdesc:a2e5adcc932f13615ab7bfc1e69964d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter a data de inicio do anuncio.  <a href="#a2e5adcc932f13615ab7bfc1e69964d4e">More...</a><br /></td></tr>
+<tr class="separator:a2e5adcc932f13615ab7bfc1e69964d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dcd647bd001e6ccced77ffc213434f6"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_particular.html">Particular</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a5dcd647bd001e6ccced77ffc213434f6">getPassageiros</a> ()</td></tr>
+<tr class="memdesc:a5dcd647bd001e6ccced77ffc213434f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter a data de fim do anuncio.  <a href="#a5dcd647bd001e6ccced77ffc213434f6">More...</a><br /></td></tr>
+<tr class="separator:a5dcd647bd001e6ccced77ffc213434f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaede8d69a67be68cd3d8bfa0935f068b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#aaede8d69a67be68cd3d8bfa0935f068b">setCondutor</a> (<a class="el" href="class_membro.html">Membro</a> *membro)</td></tr>
+<tr class="memdesc:aaede8d69a67be68cd3d8bfa0935f068b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter os passageiros ja instalados no veiculo.  <a href="#aaede8d69a67be68cd3d8bfa0935f068b">More...</a><br /></td></tr>
+<tr class="separator:aaede8d69a67be68cd3d8bfa0935f068b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6b1de1396b3ac962931dea7f50af3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a2d6b1de1396b3ac962931dea7f50af3a">setPreco</a> (const <a class="el" href="class_preco.html">Preco</a> &amp;<a class="el" href="class_anuncio.html#aa780fd8e07586a3af117fd20593fb1b4">preco</a>)</td></tr>
+<tr class="memdesc:a2d6b1de1396b3ac962931dea7f50af3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para alterar o condutor.  <a href="#a2d6b1de1396b3ac962931dea7f50af3a">More...</a><br /></td></tr>
+<tr class="separator:a2d6b1de1396b3ac962931dea7f50af3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f21112a31b6812a3128d9cac198c42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_coordenadas.html">Coordenadas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#ac0f21112a31b6812a3128d9cac198c42">getOrigem</a> ()</td></tr>
+<tr class="memdesc:ac0f21112a31b6812a3128d9cac198c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para alterar o preço do anuncio.  <a href="#ac0f21112a31b6812a3128d9cac198c42">More...</a><br /></td></tr>
+<tr class="separator:ac0f21112a31b6812a3128d9cac198c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f2d6fa24c7255bb608e4c653740bb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_coordenadas.html">Coordenadas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a12f2d6fa24c7255bb608e4c653740bb8">getDestino</a> ()</td></tr>
+<tr class="memdesc:a12f2d6fa24c7255bb608e4c653740bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna as coordenadas do local de inicio da <a class="el" href="class_boleia.html">Boleia</a>.  <a href="#a12f2d6fa24c7255bb608e4c653740bb8">More...</a><br /></td></tr>
+<tr class="separator:a12f2d6fa24c7255bb608e4c653740bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8746d4708c5622947b17385414320e88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a8746d4708c5622947b17385414320e88">setDescricao</a> (const string &amp;<a class="el" href="class_anuncio.html#aa6a9eb8d08cb06d16061b006eb2c8b97">descricao</a>)</td></tr>
+<tr class="memdesc:a8746d4708c5622947b17385414320e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna as coordenadas do local onde termina a <a class="el" href="class_boleia.html">Boleia</a>.  <a href="#a8746d4708c5622947b17385414320e88">More...</a><br /></td></tr>
 <tr class="separator:a8746d4708c5622947b17385414320e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac88555aa5c54bc552eb6a31787334e39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#ac88555aa5c54bc552eb6a31787334e39">setOrigem</a> (<a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;o) const </td></tr>
-<tr class="separator:ac88555aa5c54bc552eb6a31787334e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add212eaa271e366dccaa82a8f2bee736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#add212eaa271e366dccaa82a8f2bee736">setDestino</a> (<a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;d) const </td></tr>
-<tr class="separator:add212eaa271e366dccaa82a8f2bee736"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c9937cd0d6f4748031e5aec7b61d496"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a0c9937cd0d6f4748031e5aec7b61d496">adicionarCandidato</a> (<a class="el" href="class_particular.html">Particular</a> *candidato)</td></tr>
-<tr class="separator:a0c9937cd0d6f4748031e5aec7b61d496"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b7642bf06c1aa75dada38c7d015cb8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a3b7642bf06c1aa75dada38c7d015cb8d">aceitarCandidato</a> (<a class="el" href="class_particular.html">Particular</a> *candidato)</td></tr>
-<tr class="separator:a3b7642bf06c1aa75dada38c7d015cb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a755de86be5f1b66d66a6ddbe3f217246"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a755de86be5f1b66d66a6ddbe3f217246">removerCandidato</a> (<a class="el" href="class_particular.html">Particular</a> *candidato)</td></tr>
-<tr class="separator:a755de86be5f1b66d66a6ddbe3f217246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b9bb731a6bf78af45ac2e77ad9e69b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#ae0b9bb731a6bf78af45ac2e77ad9e69b">setAnunciante</a> (<a class="el" href="class_membro.html">Membro</a> *membro)</td></tr>
+<tr class="memdesc:ae0b9bb731a6bf78af45ac2e77ad9e69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para alterar a descrição do anuncio.  <a href="#ae0b9bb731a6bf78af45ac2e77ad9e69b">More...</a><br /></td></tr>
+<tr class="separator:ae0b9bb731a6bf78af45ac2e77ad9e69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae923c9a29c91a103aecd705824f198aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#ae923c9a29c91a103aecd705824f198aa">addPassageiro</a> (<a class="el" href="class_particular.html">Particular</a> *membro)</td></tr>
+<tr class="memdesc:ae923c9a29c91a103aecd705824f198aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para alterar o anunciante.  <a href="#ae923c9a29c91a103aecd705824f198aa">More...</a><br /></td></tr>
+<tr class="separator:ae923c9a29c91a103aecd705824f198aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac49d84d1a011803f9676f1e47c252125"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#ac49d84d1a011803f9676f1e47c252125">calcularPrecoTotal</a> ()</td></tr>
+<tr class="memdesc:ac49d84d1a011803f9676f1e47c252125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para adicionar um passageiro á viagem.  <a href="#ac49d84d1a011803f9676f1e47c252125">More...</a><br /></td></tr>
 <tr class="separator:ac49d84d1a011803f9676f1e47c252125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71729dba796d57356afe20eff021c2d5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a71729dba796d57356afe20eff021c2d5">show</a> () const </td></tr>
+<tr class="memdesc:a71729dba796d57356afe20eff021c2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para calcular o preço final com todos os custos ja associados.  <a href="#a71729dba796d57356afe20eff021c2d5">More...</a><br /></td></tr>
+<tr class="separator:a71729dba796d57356afe20eff021c2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f1190bb4a2f1743ee76109be853e31"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a58f1190bb4a2f1743ee76109be853e31">load</a> (ifstream &amp;file, vector&lt; <a class="el" href="class_membro.html">Membro</a> * &gt; *membros)</td></tr>
+<tr class="memdesc:a58f1190bb4a2f1743ee76109be853e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que mostra no ecrã da consola toda a informação de um determinado anuncio.  <a href="#a58f1190bb4a2f1743ee76109be853e31">More...</a><br /></td></tr>
+<tr class="separator:a58f1190bb4a2f1743ee76109be853e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e74841f18c8c0f95b4f3b66ce77797"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a66e74841f18c8c0f95b4f3b66ce77797">save</a> (ofstream &amp;file, vector&lt; <a class="el" href="class_membro.html">Membro</a> * &gt; *membros)</td></tr>
+<tr class="memdesc:a66e74841f18c8c0f95b4f3b66ce77797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função virtual que carrega de um ficheiro para o vector toda a informação do anuncio.  <a href="#a66e74841f18c8c0f95b4f3b66ce77797">More...</a><br /></td></tr>
+<tr class="separator:a66e74841f18c8c0f95b4f3b66ce77797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00fb20c3afcd57ef4edc07a09526bde4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a00fb20c3afcd57ef4edc07a09526bde4">criar</a> (<a class="el" href="class_membro.html">Membro</a> *utilizadorAtual)</td></tr>
+<tr class="memdesc:a00fb20c3afcd57ef4edc07a09526bde4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função virtual que grava a informação do anuncio no ficheiro de anuncios.  <a href="#a00fb20c3afcd57ef4edc07a09526bde4">More...</a><br /></td></tr>
+<tr class="separator:a00fb20c3afcd57ef4edc07a09526bde4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82600e3de68746059d60206df6ceee56"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a82600e3de68746059d60206df6ceee56">editar</a> ()=0</td></tr>
+<tr class="memdesc:a82600e3de68746059d60206df6ceee56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função virtual responsavel por criar um anuncio.  <a href="#a82600e3de68746059d60206df6ceee56">More...</a><br /></td></tr>
+<tr class="separator:a82600e3de68746059d60206df6ceee56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bacb9aa1be4db0dfc8b8ce0c04b593"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a88bacb9aa1be4db0dfc8b8ce0c04b593">isPronto</a> () const </td></tr>
+<tr class="memdesc:a88bacb9aa1be4db0dfc8b8ce0c04b593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função responsavel por editar as componentes de um anuncio.  <a href="#a88bacb9aa1be4db0dfc8b8ce0c04b593">More...</a><br /></td></tr>
+<tr class="separator:a88bacb9aa1be4db0dfc8b8ce0c04b593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3267758a53d30c2a825ddf7e7cd3d8bd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a3267758a53d30c2a825ddf7e7cd3d8bd">podeSerPassageiro</a> (<a class="el" href="class_membro.html">Membro</a> *membro) const </td></tr>
+<tr class="memdesc:a3267758a53d30c2a825ddf7e7cd3d8bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funçao que confirma se o anuncio já tem condutor e veiculo,ou seja, se já está pronto para começar a viagem.  <a href="#a3267758a53d30c2a825ddf7e7cd3d8bd">More...</a><br /></td></tr>
+<tr class="separator:a3267758a53d30c2a825ddf7e7cd3d8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d7036cd0fbfd2c0eb8078006ca836e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#ab2d7036cd0fbfd2c0eb8078006ca836e">podeSerCondutor</a> (<a class="el" href="class_membro.html">Membro</a> *membro) const </td></tr>
+<tr class="memdesc:ab2d7036cd0fbfd2c0eb8078006ca836e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função responsavel por determinar se um determinado membro é passageiro.Se o for retorna true.  <a href="#ab2d7036cd0fbfd2c0eb8078006ca836e">More...</a><br /></td></tr>
+<tr class="separator:ab2d7036cd0fbfd2c0eb8078006ca836e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc37e812bc9aa7ca401716c1326cfb5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#aedc37e812bc9aa7ca401716c1326cfb5">updateConhecidos</a> ()</td></tr>
+<tr class="memdesc:aedc37e812bc9aa7ca401716c1326cfb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funçao responsavel por determinar se um determinado membro é condutor.Se o for retorna true.  <a href="#aedc37e812bc9aa7ca401716c1326cfb5">More...</a><br /></td></tr>
+<tr class="separator:aedc37e812bc9aa7ca401716c1326cfb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a56180c8250d42d8c4d5ae4d834634b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a3a56180c8250d42d8c4d5ae4d834634b">calcularFriendPoints</a> (const <a class="el" href="class_particular.html">Particular</a> *utilizadorAtual) const </td></tr>
+<tr class="memdesc:a3a56180c8250d42d8c4d5ae4d834634b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que da update aos conhecidos.  <a href="#a3a56180c8250d42d8c4d5ae4d834634b">More...</a><br /></td></tr>
+<tr class="separator:a3a56180c8250d42d8c4d5ae4d834634b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa432828d0e8b6d84fc284d24fa920911"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#aa432828d0e8b6d84fc284d24fa920911">calcularDistanciaPoints</a> (const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;<a class="el" href="class_anuncio.html#a9b3f8ac29ebf2a44e24ea2273064a7f5">origem</a>, const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;<a class="el" href="class_anuncio.html#acdac86595f84cfb8a2bf54c414857168">destino</a>) const </td></tr>
+<tr class="memdesc:aa432828d0e8b6d84fc284d24fa920911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que calcula os pontos obtidos por um membro de acordo com os conhecidos que posssui e com o numero de vezes que ja viajou com cada conhecido.  <a href="#aa432828d0e8b6d84fc284d24fa920911">More...</a><br /></td></tr>
+<tr class="separator:aa432828d0e8b6d84fc284d24fa920911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbede34af2bb9824ec0811d4a85cc035"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#adbede34af2bb9824ec0811d4a85cc035">calcularAnuncioPoints</a> (const <a class="el" href="class_particular.html">Particular</a> *utilizadorAtual, const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;<a class="el" href="class_anuncio.html#a9b3f8ac29ebf2a44e24ea2273064a7f5">origem</a>, const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;<a class="el" href="class_anuncio.html#acdac86595f84cfb8a2bf54c414857168">destino</a>) const </td></tr>
+<tr class="memdesc:adbede34af2bb9824ec0811d4a85cc035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função chave para organizar os anuncios por distância pois organiza os pontos atribuidos de acordo com a distancia a que esta do utilizador.  <a href="#adbede34af2bb9824ec0811d4a85cc035">More...</a><br /></td></tr>
+<tr class="separator:adbede34af2bb9824ec0811d4a85cc035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:adb34bedd8220f42b9ee37662c21313e6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#adb34bedd8220f42b9ee37662c21313e6">titulo</a></td></tr>
 <tr class="separator:adb34bedd8220f42b9ee37662c21313e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6a9eb8d08cb06d16061b006eb2c8b97"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#aa6a9eb8d08cb06d16061b006eb2c8b97">descricao</a></td></tr>
 <tr class="separator:aa6a9eb8d08cb06d16061b006eb2c8b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a387f6bd1b88720d5cf0b53462e5dc0aa"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_particular.html">Particular</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a387f6bd1b88720d5cf0b53462e5dc0aa">candidatos</a></td></tr>
-<tr class="separator:a387f6bd1b88720d5cf0b53462e5dc0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ba7cc797b8b582c596038a17e9bce3b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a8ba7cc797b8b582c596038a17e9bce3b">precoTotal</a></td></tr>
-<tr class="separator:a8ba7cc797b8b582c596038a17e9bce3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa225374a19420f56f5abc258d96b691a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_viagem.html">Viagem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#aa225374a19420f56f5abc258d96b691a">viagem</a></td></tr>
-<tr class="separator:aa225374a19420f56f5abc258d96b691a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b3f8ac29ebf2a44e24ea2273064a7f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_coordenadas.html">Coordenadas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a9b3f8ac29ebf2a44e24ea2273064a7f5">origem</a></td></tr>
+<tr class="separator:a9b3f8ac29ebf2a44e24ea2273064a7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdac86595f84cfb8a2bf54c414857168"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_coordenadas.html">Coordenadas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#acdac86595f84cfb8a2bf54c414857168">destino</a></td></tr>
+<tr class="separator:acdac86595f84cfb8a2bf54c414857168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76cdb1291df7bd8736141304d759ef35"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_particular.html">Particular</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a76cdb1291df7bd8736141304d759ef35">passageiros</a></td></tr>
+<tr class="separator:a76cdb1291df7bd8736141304d759ef35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb7d8c5fe5e7d127005044981a3cd3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#abeb7d8c5fe5e7d127005044981a3cd3d">dataInicio</a></td></tr>
+<tr class="memdesc:abeb7d8c5fe5e7d127005044981a3cd3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Número total de pessoas no veículo = passageiros + 1 (condutor)  <a href="#abeb7d8c5fe5e7d127005044981a3cd3d">More...</a><br /></td></tr>
+<tr class="separator:abeb7d8c5fe5e7d127005044981a3cd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b9182cc541cb68215f8aa09fb0e11a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#ac3b9182cc541cb68215f8aa09fb0e11a">dataFim</a></td></tr>
+<tr class="separator:ac3b9182cc541cb68215f8aa09fb0e11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58250bfc8ab82d4308839b1e26213a0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_membro.html">Membro</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a58250bfc8ab82d4308839b1e26213a0f">anunciante</a></td></tr>
+<tr class="memdesc:a58250bfc8ab82d4308839b1e26213a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">se for igual ao inicio é um evento  <a href="#a58250bfc8ab82d4308839b1e26213a0f">More...</a><br /></td></tr>
+<tr class="separator:a58250bfc8ab82d4308839b1e26213a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8771818ef0855c6b70e2aca6c89e3177"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_membro.html">Membro</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a8771818ef0855c6b70e2aca6c89e3177">condutor</a></td></tr>
+<tr class="separator:a8771818ef0855c6b70e2aca6c89e3177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cffe1ce2024500bddaf07bd0f7ecc81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_veiculo.html">Veiculo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a3cffe1ce2024500bddaf07bd0f7ecc81">veiculo</a></td></tr>
+<tr class="separator:a3cffe1ce2024500bddaf07bd0f7ecc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa780fd8e07586a3af117fd20593fb1b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_preco.html">Preco</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#aa780fd8e07586a3af117fd20593fb1b4">preco</a></td></tr>
+<tr class="separator:aa780fd8e07586a3af117fd20593fb1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee851839cb45594b8ee550a032236cfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hora.html">Hora</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#aee851839cb45594b8ee550a032236cfe">hora</a></td></tr>
+<tr class="separator:aee851839cb45594b8ee550a032236cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a210dcebbee42a02d8b82245fd2a579af"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anuncio.html#a210dcebbee42a02d8b82245fd2a579af">operator&lt;&lt;</a> (ostream &amp;os, <a class="el" href="class_anuncio.html">Anuncio</a> *anuncio)</td></tr>
+<tr class="memdesc:a210dcebbee42a02d8b82245fd2a579af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o rsultado final entre os friend points e a distancia para ordenar os anuncios.  <a href="#a210dcebbee42a02d8b82245fd2a579af">More...</a><br /></td></tr>
+<tr class="separator:a210dcebbee42a02d8b82245fd2a579af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00010">10</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00018">18</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a9234fed1e72396ea1c304919c0ed2a3a"></a>
+<a class="anchor" id="a97da342f390c8ee647d60cf29a923667"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Anuncio::Anuncio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00003">3</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad0adf24f36f64c2c786871e8f29ad8b5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -155,14 +270,26 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>precoTotal</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;&#160;</td>
+          <td class="paramname"><em>origem</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_viagem.html">Viagem</a> *&#160;</td>
-          <td class="paramname"><em>viagem</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;&#160;</td>
+          <td class="paramname"><em>destino</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_data.html">Data</a> &amp;&#160;</td>
+          <td class="paramname"><em>dataInicio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_data.html">Data</a> &amp;&#160;</td>
+          <td class="paramname"><em>dataFim</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -172,59 +299,156 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00003">3</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Construtor sem parâmetros. </p>
 
-<p>References <a class="el" href="_anuncio_8h_source.html#l00014">descricao</a>, <a class="el" href="_anuncio_8h_source.html#l00016">precoTotal</a>, <a class="el" href="_anuncio_8h_source.html#l00013">titulo</a>, and <a class="el" href="_anuncio_8h_source.html#l00017">viagem</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00008">8</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a3b7642bf06c1aa75dada38c7d015cb8d"></a>
+<a class="anchor" id="ae923c9a29c91a103aecd705824f198aa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Anuncio::aceitarCandidato </td>
+          <td class="memname">void Anuncio::addPassageiro </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_particular.html">Particular</a> *&#160;</td>
-          <td class="paramname"><em>candidato</em></td><td>)</td>
+          <td class="paramname"><em>membro</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00057">57</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Método para alterar o anunciante. </p>
 
-<p>References <a class="el" href="_anuncio_8h_source.html#l00015">candidatos</a>, and <a class="el" href="_membro_8cpp_source.html#l00015">Membro::getUtilizador()</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00103">103</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00025">passageiros</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adbede34af2bb9824ec0811d4a85cc035"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Anuncio::calcularAnuncioPoints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_particular.html">Particular</a> *&#160;</td>
+          <td class="paramname"><em>utilizadorAtual</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;&#160;</td>
+          <td class="paramname"><em>origem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;&#160;</td>
+          <td class="paramname"><em>destino</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função chave para organizar os anuncios por distância pois organiza os pontos atribuidos de acordo com a distancia a que esta do utilizador. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00435">435</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8cpp_source.html#l00430">calcularDistanciaPoints()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00402">calcularFriendPoints()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_anuncio_a3b7642bf06c1aa75dada38c7d015cb8d_cgraph.png" border="0" usemap="#class_anuncio_a3b7642bf06c1aa75dada38c7d015cb8d_cgraph" alt=""/></div>
-<map name="class_anuncio_a3b7642bf06c1aa75dada38c7d015cb8d_cgraph" id="class_anuncio_a3b7642bf06c1aa75dada38c7d015cb8d_cgraph">
+<div class="center"><img src="class_anuncio_adbede34af2bb9824ec0811d4a85cc035_cgraph.png" border="0" usemap="#class_anuncio_adbede34af2bb9824ec0811d4a85cc035_cgraph" alt=""/></div>
+<map name="class_anuncio_adbede34af2bb9824ec0811d4a85cc035_cgraph" id="class_anuncio_adbede34af2bb9824ec0811d4a85cc035_cgraph">
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a0c9937cd0d6f4748031e5aec7b61d496"></a>
+<a class="anchor" id="aa432828d0e8b6d84fc284d24fa920911"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Anuncio::adicionarCandidato </td>
+          <td class="memname">double Anuncio::calcularDistanciaPoints </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_particular.html">Particular</a> *&#160;</td>
-          <td class="paramname"><em>candidato</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;&#160;</td>
+          <td class="paramname"><em>origem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;&#160;</td>
+          <td class="paramname"><em>destino</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00041">41</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Função que calcula os pontos obtidos por um membro de acordo com os conhecidos que posssui e com o numero de vezes que ja viajou com cada conhecido. </p>
 
-<p>References <a class="el" href="_anuncio_8h_source.html#l00015">candidatos</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00430">430</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_coordenadas_8cpp_source.html#l00090">Coordenadas::calcDistancia()</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00435">calcularAnuncioPoints()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_anuncio_aa432828d0e8b6d84fc284d24fa920911_cgraph.png" border="0" usemap="#class_anuncio_aa432828d0e8b6d84fc284d24fa920911_cgraph" alt=""/></div>
+<map name="class_anuncio_aa432828d0e8b6d84fc284d24fa920911_cgraph" id="class_anuncio_aa432828d0e8b6d84fc284d24fa920911_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a56180c8250d42d8c4d5ae4d834634b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Anuncio::calcularFriendPoints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_particular.html">Particular</a> *&#160;</td>
+          <td class="paramname"><em>utilizadorAtual</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que da update aos conhecidos. </p>
+<p>sqrt() to make sure the number doesn't grow too fast </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00402">402</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00029">condutor</a>, <a class="el" href="_particular_8cpp_source.html#l00013">Particular::getConhecidos()</a>, and <a class="el" href="_anuncio_8h_source.html#l00025">passageiros</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00435">calcularAnuncioPoints()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_anuncio_a3a56180c8250d42d8c4d5ae4d834634b_cgraph.png" border="0" usemap="#class_anuncio_a3a56180c8250d42d8c4d5ae4d834634b_cgraph" alt=""/></div>
+<map name="class_anuncio_a3a56180c8250d42d8c4d5ae4d834634b_cgraph" id="class_anuncio_a3a56180c8250d42d8c4d5ae4d834634b_cgraph">
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -241,6 +465,177 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Função para adicionar um passageiro á viagem. </p>
+
+</div>
+</div>
+<a class="anchor" id="a00fb20c3afcd57ef4edc07a09526bde4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Anuncio::criar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_membro.html">Membro</a> *&#160;</td>
+          <td class="paramname"><em>utilizadorAtual</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função virtual que grava a informação do anuncio no ficheiro de anuncios. </p>
+
+<p>Reimplemented in <a class="el" href="class_anuncio_procura.html#a73abd85989eee52b20c7ffca120ae5de">AnuncioProcura</a>, and <a class="el" href="class_anuncio_oferta.html#a796d66969f1f391fc62685ad8e6c81cb">AnuncioOferta</a>.</p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00257">257</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00028">anunciante</a>, <a class="el" href="_hora_8cpp_source.html#l00073">Hora::criar()</a>, <a class="el" href="_coordenadas_8cpp_source.html#l00049">Coordenadas::criar()</a>, <a class="el" href="_data_8cpp_source.html#l00095">Data::criar()</a>, <a class="el" href="_anuncio_8h_source.html#l00027">dataFim</a>, <a class="el" href="_anuncio_8h_source.html#l00026">dataInicio</a>, <a class="el" href="_anuncio_8h_source.html#l00022">descricao</a>, <a class="el" href="_anuncio_8h_source.html#l00024">destino</a>, <a class="el" href="_anuncio_8h_source.html#l00032">hora</a>, <a class="el" href="_anuncio_8h_source.html#l00023">origem</a>, and <a class="el" href="_anuncio_8h_source.html#l00021">titulo</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_oferta_8cpp_source.html#l00014">AnuncioOferta::criar()</a>, <a class="el" href="_anuncio_procura_8cpp_source.html#l00045">AnuncioProcura::criar()</a>, and <a class="el" href="_boleias_inteligentes_8cpp_source.html#l00429">BoleiasInteligentes::showAnunciosMenu()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_anuncio_a00fb20c3afcd57ef4edc07a09526bde4_cgraph.png" border="0" usemap="#class_anuncio_a00fb20c3afcd57ef4edc07a09526bde4_cgraph" alt=""/></div>
+<map name="class_anuncio_a00fb20c3afcd57ef4edc07a09526bde4_cgraph" id="class_anuncio_a00fb20c3afcd57ef4edc07a09526bde4_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a82600e3de68746059d60206df6ceee56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Anuncio::editar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função virtual responsavel por criar um anuncio. </p>
+
+<p>Implemented in <a class="el" href="class_anuncio_procura.html#ae7ef0a393b385df69d7ee4d22a10e4ec">AnuncioProcura</a>, and <a class="el" href="class_anuncio_oferta.html#a802538a48708716a4eef52823642c9d8">AnuncioOferta</a>.</p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00276">276</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00027">dataFim</a>, <a class="el" href="_anuncio_8h_source.html#l00026">dataInicio</a>, <a class="el" href="_anuncio_8h_source.html#l00022">descricao</a>, <a class="el" href="_anuncio_8h_source.html#l00024">destino</a>, <a class="el" href="_hora_8cpp_source.html#l00104">Hora::editar()</a>, <a class="el" href="_coordenadas_8cpp_source.html#l00079">Coordenadas::editar()</a>, <a class="el" href="_data_8cpp_source.html#l00154">Data::editar()</a>, <a class="el" href="_anuncio_8h_source.html#l00032">hora</a>, <a class="el" href="_input_utils_8h_source.html#l00030">InvalidInputException&lt; T &gt;::info</a>, <a class="el" href="_anuncio_8h_source.html#l00023">origem</a>, <a class="el" href="_input_utils_8cpp_source.html#l00003">InputUtils::readLine()</a>, <a class="el" href="_input_utils_8cpp_source.html#l00083">InputUtils::readYesOrNo()</a>, and <a class="el" href="_anuncio_8h_source.html#l00021">titulo</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_oferta_8cpp_source.html#l00030">AnuncioOferta::editar()</a>, and <a class="el" href="_anuncio_procura_8cpp_source.html#l00050">AnuncioProcura::editar()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_anuncio_a82600e3de68746059d60206df6ceee56_cgraph.png" border="0" usemap="#class_anuncio_a82600e3de68746059d60206df6ceee56_cgraph" alt=""/></div>
+<map name="class_anuncio_a82600e3de68746059d60206df6ceee56_cgraph" id="class_anuncio_a82600e3de68746059d60206df6ceee56_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a35c4c8b294b3bdda618a6a0708bf4647"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_membro.html">Membro</a> * Anuncio::getAnunciante </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para obter a descrição do anuncio. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00093">93</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00028">anunciante</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6344f8ce7de909f6841429ac14b97b7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_membro.html">Membro</a> * Anuncio::getCondutor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para obter o veiculo do <a class="el" href="class_anuncio.html">Anuncio</a>. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00038">38</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00029">condutor</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e5adcc932f13615ab7bfc1e69964d4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a> Anuncio::getDataFim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para obter a data de inicio do anuncio. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00083">83</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00027">dataFim</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d85e1cf72f81a767ca666cb17ef88ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a> Anuncio::getDataInicio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para obter a hora de inicio da <a class="el" href="class_boleia.html">Boleia</a>. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00078">78</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00026">dataInicio</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a693f59391a620851b4ac37063e8f4af4"></a>
@@ -256,13 +651,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00016">16</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Método para obter o titulo do anuncio. </p>
 
-<p>References <a class="el" href="_anuncio_8h_source.html#l00014">descricao</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00018">18</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00022">descricao</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a207905709390f67bb9546e4d94682bb5"></a>
+<a class="anchor" id="a12f2d6fa24c7255bb608e4c653740bb8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -270,32 +667,27 @@ Here is the call graph for this function:</div>
           <td class="memname"><a class="el" href="class_coordenadas.html">Coordenadas</a> Anuncio::getDestino </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00026">26</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Método que retorna as coordenadas do local de inicio da <a class="el" href="class_boleia.html">Boleia</a>. </p>
 
-<p>References <a class="el" href="_viagem_8cpp_source.html#l00035">Viagem::getFim()</a>, and <a class="el" href="_anuncio_8h_source.html#l00017">viagem</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00063">63</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_anuncio_a207905709390f67bb9546e4d94682bb5_cgraph.png" border="0" usemap="#class_anuncio_a207905709390f67bb9546e4d94682bb5_cgraph" alt=""/></div>
-<map name="class_anuncio_a207905709390f67bb9546e4d94682bb5_cgraph" id="class_anuncio_a207905709390f67bb9546e4d94682bb5_cgraph">
-</map>
-</div>
-</p>
+<p>References <a class="el" href="_anuncio_8h_source.html#l00024">destino</a>.</p>
+
+<p>Referenced by <a class="el" href="_boleias_inteligentes_8cpp_source.html#l00429">BoleiasInteligentes::showAnunciosMenu()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4a0c6be721a7fe4351cd5fa06b8bafcd"></a>
+<a class="anchor" id="a8850dd9d778dfe5ea92268f654d7b563"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_coordenadas.html">Coordenadas</a> Anuncio::getOrigem </td>
+          <td class="memname"><a class="el" href="class_hora.html">Hora</a> Anuncio::getHora </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -303,18 +695,78 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00021">21</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Método para obter o preço discriminado do <a class="el" href="class_anuncio.html">Anuncio</a> de <a class="el" href="class_boleia.html">Boleia</a>. </p>
 
-<p>References <a class="el" href="_viagem_8cpp_source.html#l00030">Viagem::getInicio()</a>, and <a class="el" href="_anuncio_8h_source.html#l00017">viagem</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00073">73</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_anuncio_a4a0c6be721a7fe4351cd5fa06b8bafcd_cgraph.png" border="0" usemap="#class_anuncio_a4a0c6be721a7fe4351cd5fa06b8bafcd_cgraph" alt=""/></div>
-<map name="class_anuncio_a4a0c6be721a7fe4351cd5fa06b8bafcd_cgraph" id="class_anuncio_a4a0c6be721a7fe4351cd5fa06b8bafcd_cgraph">
-</map>
+<p>References <a class="el" href="_anuncio_8h_source.html#l00032">hora</a>.</p>
+
 </div>
-</p>
+</div>
+<a class="anchor" id="ac0f21112a31b6812a3128d9cac198c42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_coordenadas.html">Coordenadas</a> Anuncio::getOrigem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para alterar o preço do anuncio. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00058">58</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00023">origem</a>.</p>
+
+<p>Referenced by <a class="el" href="_boleias_inteligentes_8cpp_source.html#l00429">BoleiasInteligentes::showAnunciosMenu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5dcd647bd001e6ccced77ffc213434f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_particular.html">Particular</a> * &gt; Anuncio::getPassageiros </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para obter a data de fim do anuncio. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00068">68</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00025">passageiros</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a566dfb63e64851909367d5136963670d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_preco.html">Preco</a> * Anuncio::getPreco </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para obter o condutor do veiculo. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00043">43</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00031">preco</a>.</p>
+
+<p>Referenced by <a class="el" href="_boleias_inteligentes_8cpp_source.html#l00429">BoleiasInteligentes::showAnunciosMenu()</a>.</p>
 
 </div>
 </div>
@@ -331,38 +783,286 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00011">11</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Construtor com parâmetros. </p>
 
-<p>References <a class="el" href="_anuncio_8h_source.html#l00013">titulo</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00013">13</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00021">titulo</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00397">operator&lt;&lt;()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a755de86be5f1b66d66a6ddbe3f217246"></a>
+<a class="anchor" id="ae68f4b30d497dbccf1e3ab5f83b140da"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Anuncio::removerCandidato </td>
+          <td class="memname"><a class="el" href="class_veiculo.html">Veiculo</a> * Anuncio::getVeiculo </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_particular.html">Particular</a> *&#160;</td>
-          <td class="paramname"><em>candidato</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00046">46</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Método para alteras as informações do veículo. </p>
 
-<p>References <a class="el" href="_anuncio_8h_source.html#l00015">candidatos</a>, and <a class="el" href="_membro_8cpp_source.html#l00015">Membro::getUtilizador()</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00033">33</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00030">veiculo</a>.</p>
+
+<p>Referenced by <a class="el" href="_boleias_inteligentes_8cpp_source.html#l00429">BoleiasInteligentes::showAnunciosMenu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a88bacb9aa1be4db0dfc8b8ce0c04b593"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Anuncio::isPronto </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função responsavel por editar as componentes de um anuncio. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00340">340</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00029">condutor</a>, and <a class="el" href="_anuncio_8h_source.html#l00030">veiculo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a58f1190bb4a2f1743ee76109be853e31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Anuncio::load </td>
+          <td>(</td>
+          <td class="paramtype">ifstream &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_membro.html">Membro</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>membros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função que mostra no ecrã da consola toda a informação de um determinado anuncio. </p>
+
+<p>Reimplemented in <a class="el" href="class_anuncio_procura.html#a9983a05725bcdcee8aee8f778c79920b">AnuncioProcura</a>.</p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00137">137</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00028">anunciante</a>, <a class="el" href="_anuncio_8h_source.html#l00029">condutor</a>, <a class="el" href="_anuncio_8h_source.html#l00027">dataFim</a>, <a class="el" href="_anuncio_8h_source.html#l00026">dataInicio</a>, <a class="el" href="_anuncio_8h_source.html#l00022">descricao</a>, <a class="el" href="_anuncio_8h_source.html#l00024">destino</a>, <a class="el" href="_membro_8cpp_source.html#l00025">Membro::getVeiculos()</a>, <a class="el" href="_anuncio_8h_source.html#l00032">hora</a>, <a class="el" href="_hora_8cpp_source.html#l00060">Hora::load()</a>, <a class="el" href="_data_8cpp_source.html#l00085">Data::load()</a>, <a class="el" href="_coordenadas_8cpp_source.html#l00104">Coordenadas::load()</a>, <a class="el" href="_preco_8cpp_source.html#l00124">Preco::load()</a>, <a class="el" href="_anuncio_8h_source.html#l00023">origem</a>, <a class="el" href="_anuncio_8h_source.html#l00025">passageiros</a>, <a class="el" href="_anuncio_8h_source.html#l00031">preco</a>, <a class="el" href="_anuncio_8h_source.html#l00021">titulo</a>, and <a class="el" href="_anuncio_8h_source.html#l00030">veiculo</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_procura_8cpp_source.html#l00084">AnuncioProcura::load()</a>, and <a class="el" href="_boleias_inteligentes_8cpp_source.html#l00069">BoleiasInteligentes::loadAnuncios()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_anuncio_a755de86be5f1b66d66a6ddbe3f217246_cgraph.png" border="0" usemap="#class_anuncio_a755de86be5f1b66d66a6ddbe3f217246_cgraph" alt=""/></div>
-<map name="class_anuncio_a755de86be5f1b66d66a6ddbe3f217246_cgraph" id="class_anuncio_a755de86be5f1b66d66a6ddbe3f217246_cgraph">
+<div class="center"><img src="class_anuncio_a58f1190bb4a2f1743ee76109be853e31_cgraph.png" border="0" usemap="#class_anuncio_a58f1190bb4a2f1743ee76109be853e31_cgraph" alt=""/></div>
+<map name="class_anuncio_a58f1190bb4a2f1743ee76109be853e31_cgraph" id="class_anuncio_a58f1190bb4a2f1743ee76109be853e31_cgraph">
 </map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="ab2d7036cd0fbfd2c0eb8078006ca836e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Anuncio::podeSerCondutor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_membro.html">Membro</a> *&#160;</td>
+          <td class="paramname"><em>membro</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função responsavel por determinar se um determinado membro é passageiro.Se o for retorna true. </p>
+
+<p>Reimplemented in <a class="el" href="class_anuncio_procura.html#aa7689f1ae7175e99b144c48422231e17">AnuncioProcura</a>.</p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00374">374</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00029">condutor</a>, and <a class="el" href="_anuncio_8h_source.html#l00025">passageiros</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_procura_8cpp_source.html#l00029">AnuncioProcura::podeSerCondutor()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3267758a53d30c2a825ddf7e7cd3d8bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Anuncio::podeSerPassageiro </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_membro.html">Membro</a> *&#160;</td>
+          <td class="paramname"><em>membro</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Funçao que confirma se o anuncio já tem condutor e veiculo,ou seja, se já está pronto para começar a viagem. </p>
+
+<p>Reimplemented in <a class="el" href="class_anuncio_procura.html#aab615cb1457ec3784d55149d44cdc458">AnuncioProcura</a>.</p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00349">349</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00029">condutor</a>, <a class="el" href="_veiculo_8cpp_source.html#l00033">Veiculo::getLotacao()</a>, <a class="el" href="_anuncio_8h_source.html#l00025">passageiros</a>, and <a class="el" href="_anuncio_8h_source.html#l00030">veiculo</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_procura_8cpp_source.html#l00013">AnuncioProcura::podeSerPassageiro()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_anuncio_a3267758a53d30c2a825ddf7e7cd3d8bd_cgraph.png" border="0" usemap="#class_anuncio_a3267758a53d30c2a825ddf7e7cd3d8bd_cgraph" alt=""/></div>
+<map name="class_anuncio_a3267758a53d30c2a825ddf7e7cd3d8bd_cgraph" id="class_anuncio_a3267758a53d30c2a825ddf7e7cd3d8bd_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a66e74841f18c8c0f95b4f3b66ce77797"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Anuncio::save </td>
+          <td>(</td>
+          <td class="paramtype">ofstream &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_membro.html">Membro</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>membros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função virtual que carrega de um ficheiro para o vector toda a informação do anuncio. </p>
+
+<p>Reimplemented in <a class="el" href="class_anuncio_procura.html#a3e41646018004c3efb37c9dab3482c96">AnuncioProcura</a>.</p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00185">185</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00028">anunciante</a>, <a class="el" href="_anuncio_8h_source.html#l00029">condutor</a>, <a class="el" href="_anuncio_8h_source.html#l00027">dataFim</a>, <a class="el" href="_anuncio_8h_source.html#l00026">dataInicio</a>, <a class="el" href="_anuncio_8h_source.html#l00022">descricao</a>, <a class="el" href="_anuncio_8h_source.html#l00024">destino</a>, <a class="el" href="_membro_8cpp_source.html#l00025">Membro::getVeiculos()</a>, <a class="el" href="_anuncio_8h_source.html#l00032">hora</a>, <a class="el" href="_anuncio_8h_source.html#l00023">origem</a>, <a class="el" href="_anuncio_8h_source.html#l00025">passageiros</a>, <a class="el" href="_anuncio_8h_source.html#l00031">preco</a>, <a class="el" href="_hora_8cpp_source.html#l00054">Hora::save()</a>, <a class="el" href="_data_8cpp_source.html#l00078">Data::save()</a>, <a class="el" href="_coordenadas_8cpp_source.html#l00112">Coordenadas::save()</a>, <a class="el" href="_preco_8cpp_source.html#l00112">Preco::save()</a>, <a class="el" href="_anuncio_8h_source.html#l00021">titulo</a>, and <a class="el" href="_anuncio_8h_source.html#l00030">veiculo</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_procura_8cpp_source.html#l00065">AnuncioProcura::save()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_anuncio_a66e74841f18c8c0f95b4f3b66ce77797_cgraph.png" border="0" usemap="#class_anuncio_a66e74841f18c8c0f95b4f3b66ce77797_cgraph" alt=""/></div>
+<map name="class_anuncio_a66e74841f18c8c0f95b4f3b66ce77797_cgraph" id="class_anuncio_a66e74841f18c8c0f95b4f3b66ce77797_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0b9bb731a6bf78af45ac2e77ad9e69b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Anuncio::setAnunciante </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_membro.html">Membro</a> *&#160;</td>
+          <td class="paramname"><em>membro</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para alterar a descrição do anuncio. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00098">98</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00028">anunciante</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaede8d69a67be68cd3d8bfa0935f068b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Anuncio::setCondutor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_membro.html">Membro</a> *&#160;</td>
+          <td class="paramname"><em>membro</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para obter os passageiros ja instalados no veiculo. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00048">48</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00029">condutor</a>.</p>
+
+<p>Referenced by <a class="el" href="_boleias_inteligentes_8cpp_source.html#l00429">BoleiasInteligentes::showAnunciosMenu()</a>.</p>
 
 </div>
 </div>
@@ -380,67 +1080,33 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00036">36</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Método que retorna as coordenadas do local onde termina a <a class="el" href="class_boleia.html">Boleia</a>. </p>
 
-<p>References <a class="el" href="_anuncio_8h_source.html#l00014">descricao</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00088">88</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00022">descricao</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="add212eaa271e366dccaa82a8f2bee736"></a>
+<a class="anchor" id="a2d6b1de1396b3ac962931dea7f50af3a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Anuncio::setDestino </td>
+          <td class="memname">void Anuncio::setPreco </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const <a class="el" href="class_preco.html">Preco</a> &amp;&#160;</td>
+          <td class="paramname"><em>preco</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00073">73</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Método para alterar o condutor. </p>
 
-<p>References <a class="el" href="_viagem_8cpp_source.html#l00045">Viagem::setFim()</a>, and <a class="el" href="_anuncio_8h_source.html#l00017">viagem</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00053">53</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_anuncio_add212eaa271e366dccaa82a8f2bee736_cgraph.png" border="0" usemap="#class_anuncio_add212eaa271e366dccaa82a8f2bee736_cgraph" alt=""/></div>
-<map name="class_anuncio_add212eaa271e366dccaa82a8f2bee736_cgraph" id="class_anuncio_add212eaa271e366dccaa82a8f2bee736_cgraph">
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ac88555aa5c54bc552eb6a31787334e39"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Anuncio::setOrigem </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_coordenadas.html">Coordenadas</a> &amp;&#160;</td>
-          <td class="paramname"><em>o</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00068">68</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
-
-<p>References <a class="el" href="_viagem_8cpp_source.html#l00049">Viagem::setInicio()</a>, and <a class="el" href="_anuncio_8h_source.html#l00017">viagem</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_anuncio_ac88555aa5c54bc552eb6a31787334e39_cgraph.png" border="0" usemap="#class_anuncio_ac88555aa5c54bc552eb6a31787334e39_cgraph" alt=""/></div>
-<map name="class_anuncio_ac88555aa5c54bc552eb6a31787334e39_cgraph" id="class_anuncio_ac88555aa5c54bc552eb6a31787334e39_cgraph">
-</map>
-</div>
-</p>
+<p>References <a class="el" href="_anuncio_8h_source.html#l00031">preco</a>.</p>
 
 </div>
 </div>
@@ -458,14 +1124,37 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00031">31</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+<p>Método para obter o membro responsavel pelo <a class="el" href="class_anuncio.html">Anuncio</a>. </p>
 
-<p>References <a class="el" href="_anuncio_8h_source.html#l00013">titulo</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00023">23</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00021">titulo</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a387f6bd1b88720d5cf0b53462e5dc0aa"></a>
+<a class="anchor" id="acf4d8a46abfa73a073f7df39b2601e17"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Anuncio::setVeiculo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_veiculo.html">Veiculo</a> *&#160;</td>
+          <td class="paramname"><em>veiculo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método para alterar o titulo. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00028">28</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00030">veiculo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a71729dba796d57356afe20eff021c2d5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -473,19 +1162,206 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt;<a class="el" href="class_particular.html">Particular</a> *&gt; Anuncio::candidatos</td>
+          <td class="memname">void Anuncio::show </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00015">15</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+<p>Função para calcular o preço final com todos os custos ja associados. </p>
 
-<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00057">aceitarCandidato()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00041">adicionarCandidato()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00046">removerCandidato()</a>.</p>
+<p>Reimplemented in <a class="el" href="class_anuncio_procura.html#a7a9ac26488642a35643f5322acf40788">AnuncioProcura</a>, and <a class="el" href="class_anuncio_oferta.html#a046a87a9ba9b1fedb071a6c5ba09663c">AnuncioOferta</a>.</p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00108">108</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00028">anunciante</a>, <a class="el" href="_anuncio_8h_source.html#l00029">condutor</a>, <a class="el" href="_anuncio_8h_source.html#l00027">dataFim</a>, <a class="el" href="_anuncio_8h_source.html#l00026">dataInicio</a>, <a class="el" href="_anuncio_8h_source.html#l00022">descricao</a>, <a class="el" href="_membro_8cpp_source.html#l00015">Membro::getNome()</a>, <a class="el" href="_anuncio_8h_source.html#l00032">hora</a>, <a class="el" href="_anuncio_8h_source.html#l00031">preco</a>, <a class="el" href="_preco_8cpp_source.html#l00041">Preco::show()</a>, <a class="el" href="_veiculo_8cpp_source.html#l00131">Veiculo::show()</a>, <a class="el" href="_anuncio_8h_source.html#l00021">titulo</a>, and <a class="el" href="_anuncio_8h_source.html#l00030">veiculo</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_oferta_8cpp_source.html#l00041">AnuncioOferta::show()</a>, and <a class="el" href="_anuncio_procura_8cpp_source.html#l00106">AnuncioProcura::show()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_anuncio_a71729dba796d57356afe20eff021c2d5_cgraph.png" border="0" usemap="#class_anuncio_a71729dba796d57356afe20eff021c2d5_cgraph" alt=""/></div>
+<map name="class_anuncio_a71729dba796d57356afe20eff021c2d5_cgraph" id="class_anuncio_a71729dba796d57356afe20eff021c2d5_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aedc37e812bc9aa7ca401716c1326cfb5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Anuncio::updateConhecidos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Funçao responsavel por determinar se um determinado membro é condutor.Se o for retorna true. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00383">383</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+<p>References <a class="el" href="_anuncio_8h_source.html#l00029">condutor</a>, and <a class="el" href="_anuncio_8h_source.html#l00025">passageiros</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a210dcebbee42a02d8b82245fd2a579af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_anuncio.html">Anuncio</a> *&#160;</td>
+          <td class="paramname"><em>anuncio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calcula o rsultado final entre os friend points e a distancia para ordenar os anuncios. </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8cpp_source.html#l00397">397</a> of file <a class="el" href="_anuncio_8cpp_source.html">Anuncio.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a58250bfc8ab82d4308839b1e26213a0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_membro.html">Membro</a>* Anuncio::anunciante</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>se for igual ao inicio é um evento </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00028">28</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00257">criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00093">getAnunciante()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00098">setAnunciante()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00108">show()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8771818ef0855c6b70e2aca6c89e3177"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_membro.html">Membro</a>* Anuncio::condutor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00029">29</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00402">calcularFriendPoints()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00038">getCondutor()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00340">isPronto()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00374">podeSerCondutor()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00349">podeSerPassageiro()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00048">setCondutor()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00108">show()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00383">updateConhecidos()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3b9182cc541cb68215f8aa09fb0e11a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a> Anuncio::dataFim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00027">27</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00257">criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00276">editar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00083">getDataFim()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00108">show()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abeb7d8c5fe5e7d127005044981a3cd3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a> Anuncio::dataInicio</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Número total de pessoas no veículo = passageiros + 1 (condutor) </p>
+
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00026">26</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00257">criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00276">editar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00078">getDataInicio()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00108">show()</a>.</p>
 
 </div>
 </div>
@@ -502,18 +1378,18 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00014">14</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00022">22</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00003">Anuncio()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00016">getDescricao()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00036">setDescricao()</a>.</p>
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00257">criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00276">editar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00018">getDescricao()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00088">setDescricao()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00108">show()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8ba7cc797b8b582c596038a17e9bce3b"></a>
+<a class="anchor" id="acdac86595f84cfb8a2bf54c414857168"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -521,19 +1397,115 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Anuncio::precoTotal</td>
+          <td class="memname"><a class="el" href="class_coordenadas.html">Coordenadas</a> Anuncio::destino</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00016">16</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00024">24</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00003">Anuncio()</a>.</p>
+<p>Referenced by <a class="el" href="_anuncio_oferta_8cpp_source.html#l00014">AnuncioOferta::criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00257">criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00276">editar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00063">getDestino()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee851839cb45594b8ee550a032236cfe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_hora.html">Hora</a> Anuncio::hora</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00032">32</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00257">criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00276">editar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00073">getHora()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00108">show()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b3f8ac29ebf2a44e24ea2273064a7f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_coordenadas.html">Coordenadas</a> Anuncio::origem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00023">23</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_oferta_8cpp_source.html#l00014">AnuncioOferta::criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00257">criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00276">editar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00058">getOrigem()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76cdb1291df7bd8736141304d759ef35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_particular.html">Particular</a> *&gt; Anuncio::passageiros</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00025">25</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00103">addPassageiro()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00402">calcularFriendPoints()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00068">getPassageiros()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00374">podeSerCondutor()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00349">podeSerPassageiro()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00383">updateConhecidos()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa780fd8e07586a3af117fd20593fb1b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_preco.html">Preco</a> Anuncio::preco</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00031">31</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_anuncio_oferta_8cpp_source.html#l00008">AnuncioOferta::AnuncioOferta()</a>, <a class="el" href="_anuncio_oferta_8cpp_source.html#l00014">AnuncioOferta::criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00043">getPreco()</a>, <a class="el" href="_anuncio_procura_8cpp_source.html#l00084">AnuncioProcura::load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00053">setPreco()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00108">show()</a>.</p>
 
 </div>
 </div>
@@ -550,18 +1522,18 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00013">13</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00021">21</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00003">Anuncio()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00011">getTitulo()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00031">setTitulo()</a>.</p>
+<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00257">criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00276">editar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00013">getTitulo()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00023">setTitulo()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00108">show()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa225374a19420f56f5abc258d96b691a"></a>
+<a class="anchor" id="a3cffe1ce2024500bddaf07bd0f7ecc81"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -569,19 +1541,19 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_viagem.html">Viagem</a>* Anuncio::viagem</td>
+          <td class="memname"><a class="el" href="class_veiculo.html">Veiculo</a>* Anuncio::veiculo</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00017">17</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
+<p>Definition at line <a class="el" href="_anuncio_8h_source.html#l00030">30</a> of file <a class="el" href="_anuncio_8h_source.html">Anuncio.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_anuncio_8cpp_source.html#l00003">Anuncio()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00026">getDestino()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00021">getOrigem()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00073">setDestino()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00068">setOrigem()</a>.</p>
+<p>Referenced by <a class="el" href="_anuncio_oferta_8cpp_source.html#l00014">AnuncioOferta::criar()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00033">getVeiculo()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00340">isPronto()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00137">load()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00349">podeSerPassageiro()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00185">save()</a>, <a class="el" href="_anuncio_8cpp_source.html#l00028">setVeiculo()</a>, and <a class="el" href="_anuncio_8cpp_source.html#l00108">show()</a>.</p>
 
 </div>
 </div>
@@ -595,7 +1567,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_anuncio.html">Anuncio</a></li>
-    <li class="footer">Generated on Fri Oct 31 2014 14:46:32 for AEDABoleiasInteligentes by
+    <li class="footer">Generated on Sun Nov 9 2014 16:47:59 for AEDABoleiasInteligentes by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -3,6 +3,11 @@
 }
 
 
+Classe derivada da classe mãe \hyperlink{class_membro}{Membro}.  
+
+
+
+
 {\ttfamily \#include $<$Empresa.\+h$>$}
 
 
@@ -11,10 +16,23 @@ Inheritance diagram for Empresa\+:
 
 
 Collaboration diagram for Empresa\+:
-\subsection*{Private Attributes}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ \hyperlink{class_viagem}{Viagem} $>$ \hyperlink{class_empresa_a922a041abeb39daf38135963dbe821f5}{viagens}
+\hyperlink{class_empresa_aff124b958356c479ab50ddf4cf302193}{Empresa} ()
+\item 
+\hyperlink{class_empresa_a8d57f5422b13a48395f63d82a51bede5}{Empresa} (const string \&\hyperlink{class_membro_a2598bbe34ae32a98f41468b2202a9555}{nome}, const string \&\hyperlink{class_membro_a42cc733ff94ec8d1bbfdacc62dfbb0e7}{utilizador}, const string \&\hyperlink{class_membro_ae2b12fc3e91efc674c07e735edf4ac21}{password}, const string \&\hyperlink{class_empresa_a809624b98d1db18f8627ce2fa394dddd}{website})
+\begin{DoxyCompactList}\small\item\em Construtor por defeito da classe. \end{DoxyCompactList}\item 
+void \hyperlink{class_empresa_a93293b79b5b56973c3a3d3880d325c14}{signup} ()
+\begin{DoxyCompactList}\small\item\em Construtor com parâmetros da classe. \end{DoxyCompactList}\item 
+void \hyperlink{class_empresa_a97feeb44a837e086f7aa92f8c9a1ea10}{edit} ()
+\begin{DoxyCompactList}\small\item\em Função que cria um novo website. \end{DoxyCompactList}\item 
+void \hyperlink{class_empresa_a508c9c178a2933255eadc7955d3f8089}{save} (ofstream \&file, vector$<$ \hyperlink{class_combustivel}{Combustivel} $>$ $\ast$combustiveis)
+\begin{DoxyCompactList}\small\item\em Função que permite editar a informação de um website. \end{DoxyCompactList}\item 
+void \hyperlink{class_empresa_a707dc497843f63a2d094fb6871fa5b7d}{show} () const 
+\begin{DoxyCompactList}\small\item\em Função que grava a informação relativa a uma empresa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
 string \hyperlink{class_empresa_a809624b98d1db18f8627ce2fa394dddd}{website}
 \end{DoxyCompactItemize}
@@ -22,29 +40,179 @@ string \hyperlink{class_empresa_a809624b98d1db18f8627ce2fa394dddd}{website}
 
 
 \subsection{Detailed Description}
+Classe derivada da classe mãe \hyperlink{class_membro}{Membro}. 
+
+Definition at line 10 of file Empresa.\+h.
 
 
-Definition at line 13 of file Empresa.\+h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_empresa_aff124b958356c479ab50ddf4cf302193}{\index{Empresa@{Empresa}!Empresa@{Empresa}}
+\index{Empresa@{Empresa}!Empresa@{Empresa}}
+\subsubsection[{Empresa}]{\setlength{\rightskip}{0pt plus 5cm}Empresa\+::\+Empresa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_empresa_aff124b958356c479ab50ddf4cf302193}
+
+
+Definition at line 3 of file Empresa.\+cpp.
+
+\hypertarget{class_empresa_a8d57f5422b13a48395f63d82a51bede5}{\index{Empresa@{Empresa}!Empresa@{Empresa}}
+\index{Empresa@{Empresa}!Empresa@{Empresa}}
+\subsubsection[{Empresa}]{\setlength{\rightskip}{0pt plus 5cm}Empresa\+::\+Empresa (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{nome, }
+\item[{const string \&}]{utilizador, }
+\item[{const string \&}]{password, }
+\item[{const string \&}]{website}
+\end{DoxyParamCaption}
+)}}\label{class_empresa_a8d57f5422b13a48395f63d82a51bede5}
+
+
+Construtor por defeito da classe. 
+
+
+
+Definition at line 8 of file Empresa.\+cpp.
+
+
+
+References website.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_empresa_a97feeb44a837e086f7aa92f8c9a1ea10}{\index{Empresa@{Empresa}!edit@{edit}}
+\index{edit@{edit}!Empresa@{Empresa}}
+\subsubsection[{edit}]{\setlength{\rightskip}{0pt plus 5cm}void Empresa\+::edit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_empresa_a97feeb44a837e086f7aa92f8c9a1ea10}
+
+
+Função que cria um novo website. 
+
+
+
+Reimplemented from \hyperlink{class_membro_a0e4aef4dc61b9f22b277591249714452}{Membro}.
+
+
+
+Definition at line 20 of file Empresa.\+cpp.
+
+
+
+References Membro\+::edit(), Input\+Utils\+::read\+Yes\+Or\+No(), and website.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_empresa_a508c9c178a2933255eadc7955d3f8089}{\index{Empresa@{Empresa}!save@{save}}
+\index{save@{save}!Empresa@{Empresa}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Empresa\+::save (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{file, }
+\item[{vector$<$ {\bf Combustivel} $>$ $\ast$}]{combustiveis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_empresa_a508c9c178a2933255eadc7955d3f8089}
+
+
+Função que permite editar a informação de um website. 
+
+
+
+Reimplemented from \hyperlink{class_membro_a2a8ceaddac1fb7b0f894b1adc9315f03}{Membro}.
+
+
+
+Definition at line 31 of file Empresa.\+cpp.
+
+
+
+References Membro\+::save().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_empresa_a707dc497843f63a2d094fb6871fa5b7d}{\index{Empresa@{Empresa}!show@{show}}
+\index{show@{show}!Empresa@{Empresa}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Empresa\+::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_empresa_a707dc497843f63a2d094fb6871fa5b7d}
+
+
+Função que grava a informação relativa a uma empresa. 
+
+
+
+Reimplemented from \hyperlink{class_membro_a9931c13a2894a9a62760a5dddb867997}{Membro}.
+
+
+
+Definition at line 37 of file Empresa.\+cpp.
+
+
+
+References Membro\+::show(), and website.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_empresa_a93293b79b5b56973c3a3d3880d325c14}{\index{Empresa@{Empresa}!signup@{signup}}
+\index{signup@{signup}!Empresa@{Empresa}}
+\subsubsection[{signup}]{\setlength{\rightskip}{0pt plus 5cm}void Empresa\+::signup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_empresa_a93293b79b5b56973c3a3d3880d325c14}
+
+
+Construtor com parâmetros da classe. 
+
+
+
+Implements \hyperlink{class_membro_ab88b510a234c18aa035c28f4253140b3}{Membro}.
+
+
+
+Definition at line 14 of file Empresa.\+cpp.
+
+
+
+References Input\+Utils\+::read\+Line(), and website.
+
+
+
+Here is the call graph for this function\+:
+
 
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_empresa_a922a041abeb39daf38135963dbe821f5}{\index{Empresa@{Empresa}!viagens@{viagens}}
-\index{viagens@{viagens}!Empresa@{Empresa}}
-\subsubsection[{viagens}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Viagem}$>$ Empresa\+::viagens\hspace{0.3cm}{\ttfamily [private]}}}\label{class_empresa_a922a041abeb39daf38135963dbe821f5}
-
-
-Definition at line 15 of file Empresa.\+h.
-
 \hypertarget{class_empresa_a809624b98d1db18f8627ce2fa394dddd}{\index{Empresa@{Empresa}!website@{website}}
 \index{website@{website}!Empresa@{Empresa}}
 \subsubsection[{website}]{\setlength{\rightskip}{0pt plus 5cm}string Empresa\+::website\hspace{0.3cm}{\ttfamily [private]}}}\label{class_empresa_a809624b98d1db18f8627ce2fa394dddd}
 
 
-Definition at line 16 of file Empresa.\+h.
+Definition at line 12 of file Empresa.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Referenced by edit(), Empresa(), show(), and signup().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Headers/\hyperlink{_empresa_8h}{Empresa.\+h}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Headers/\hyperlink{_empresa_8h}{Empresa.\+h}\item 
+C\+:/\+Users/\+Gustavo/git/\+A\+E\+D\+A-\/\+Boleias-\/\+Inteligentes/codigo/\+Source/\hyperlink{_empresa_8cpp}{Empresa.\+cpp}\end{DoxyCompactItemize}

@@ -10,16 +10,32 @@
 \item 
 \hyperlink{class_coordenadas_a1c58a9c0153e6955da84b0861a925c68}{Coordenadas} ()
 \item 
+\hyperlink{class_coordenadas_a020d5ed69cf70031b77ec5bc3bcb62cb}{Coordenadas} (const \hyperlink{class_coordenadas}{Coordenadas} \&coordenadas)
+\begin{DoxyCompactList}\small\item\em Construtor por defeito da classe. \end{DoxyCompactList}\item 
 \hyperlink{class_coordenadas_a48d1210d6636eadb64690a2a75686658}{Coordenadas} (double \hyperlink{class_coordenadas_ad7aa0271fc0ca8c8da179f9cfe859bf0}{latitude}, double \hyperlink{class_coordenadas_a328c0d572b3a7d47bfbd866f5d6d6489}{longitude})
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor com um objecto da classe. \end{DoxyCompactList}\item 
 double \hyperlink{class_coordenadas_a1eac916230125776b081b09bf5121c8e}{get\+Latitude} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor com parametros da classe. \end{DoxyCompactList}\item 
 double \hyperlink{class_coordenadas_ae2f616716136f0651d389e4824092c55}{get\+Longitude} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Método para retornar a latitude de uma coordenada. \end{DoxyCompactList}\item 
 void \hyperlink{class_coordenadas_a035cce119d74a61cb24676ef76f0f518}{set\+Latitude} (double \hyperlink{class_coordenadas_ad7aa0271fc0ca8c8da179f9cfe859bf0}{latitude})
-\item 
+\begin{DoxyCompactList}\small\item\em Método para retornar a longitude de uma coordenada. \end{DoxyCompactList}\item 
 void \hyperlink{class_coordenadas_af03ec9230d72b041265a9cbcf17a0369}{set\+Longitude} (double \hyperlink{class_coordenadas_a328c0d572b3a7d47bfbd866f5d6d6489}{longitude})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método para alterar a latitude de uma coordenada. \end{DoxyCompactList}\item 
+double \hyperlink{class_coordenadas_a24cb37fe0c7b21e2cc1f4c4353119d4f}{to\+Rad} (double degrees) const 
+\begin{DoxyCompactList}\small\item\em Método para alterar a longitude de uma coordenada. \end{DoxyCompactList}\item 
+double \hyperlink{class_coordenadas_ab64cdc4dd54abd1eb0e8fa8b031c475f}{calc\+Distancia} (const \hyperlink{class_coordenadas}{Coordenadas} \&coordenadas) const 
+\begin{DoxyCompactList}\small\item\em Função para passar um determinado valor em graus para radianos. \end{DoxyCompactList}\item 
+void \hyperlink{class_coordenadas_ace2f5bfc3615c206d4f642f6714cf626}{showcoord} ()
+\begin{DoxyCompactList}\small\item\em Função para calcular a distancia entre duas coordenadas diferentes. \end{DoxyCompactList}\item 
+void \hyperlink{class_coordenadas_a9b1c73edfba7e5c4e0c6cae72174633c}{criar} ()
+\begin{DoxyCompactList}\small\item\em Função para mostrar no ecra da Consola umas determinadas coordenadas. \end{DoxyCompactList}\item 
+void \hyperlink{class_coordenadas_ad77fe69d9094889ae677bfa87459de3f}{editar} ()
+\begin{DoxyCompactList}\small\item\em Função para criar novas coordenadas. \end{DoxyCompactList}\item 
+void \hyperlink{class_coordenadas_ad503a2c6cfc48f13683217e17eb48596}{load} (ifstream \&file)
+\begin{DoxyCompactList}\small\item\em Função responsavel por editar informação referente a coordenadas ja existentes. \end{DoxyCompactList}\item 
+void \hyperlink{class_coordenadas_ae2ed52ac8bc8bcf634db2627a7b5b3a2}{save} (ofstream \&file)
+\begin{DoxyCompactList}\small\item\em Função responsavel por fazer load da informação das coordenadas presentes num txt. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,7 +48,7 @@ double \hyperlink{class_coordenadas_a328c0d572b3a7d47bfbd866f5d6d6489}{longitude
 \subsection{Detailed Description}
 
 
-Definition at line 6 of file Coordenadas.\+h.
+Definition at line 10 of file Coordenadas.\+h.
 
 
 
@@ -48,6 +64,25 @@ Definition at line 6 of file Coordenadas.\+h.
 
 Definition at line 3 of file Coordenadas.\+cpp.
 
+\hypertarget{class_coordenadas_a020d5ed69cf70031b77ec5bc3bcb62cb}{\index{Coordenadas@{Coordenadas}!Coordenadas@{Coordenadas}}
+\index{Coordenadas@{Coordenadas}!Coordenadas@{Coordenadas}}
+\subsubsection[{Coordenadas}]{\setlength{\rightskip}{0pt plus 5cm}Coordenadas\+::\+Coordenadas (
+\begin{DoxyParamCaption}
+\item[{const {\bf Coordenadas} \&}]{coordenadas}
+\end{DoxyParamCaption}
+)}}\label{class_coordenadas_a020d5ed69cf70031b77ec5bc3bcb62cb}
+
+
+Construtor por defeito da classe. 
+
+
+
+Definition at line 8 of file Coordenadas.\+cpp.
+
+
+
+References latitude, and longitude.
+
 \hypertarget{class_coordenadas_a48d1210d6636eadb64690a2a75686658}{\index{Coordenadas@{Coordenadas}!Coordenadas@{Coordenadas}}
 \index{Coordenadas@{Coordenadas}!Coordenadas@{Coordenadas}}
 \subsubsection[{Coordenadas}]{\setlength{\rightskip}{0pt plus 5cm}Coordenadas\+::\+Coordenadas (
@@ -58,7 +93,11 @@ Definition at line 3 of file Coordenadas.\+cpp.
 )}}\label{class_coordenadas_a48d1210d6636eadb64690a2a75686658}
 
 
-Definition at line 8 of file Coordenadas.\+cpp.
+Construtor com um objecto da classe. 
+
+
+
+Definition at line 13 of file Coordenadas.\+cpp.
 
 
 
@@ -67,6 +106,90 @@ References latitude, and longitude.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_coordenadas_ab64cdc4dd54abd1eb0e8fa8b031c475f}{\index{Coordenadas@{Coordenadas}!calc\+Distancia@{calc\+Distancia}}
+\index{calc\+Distancia@{calc\+Distancia}!Coordenadas@{Coordenadas}}
+\subsubsection[{calc\+Distancia}]{\setlength{\rightskip}{0pt plus 5cm}double Coordenadas\+::calc\+Distancia (
+\begin{DoxyParamCaption}
+\item[{const {\bf Coordenadas} \&}]{coordenadas}
+\end{DoxyParamCaption}
+) const}}\label{class_coordenadas_ab64cdc4dd54abd1eb0e8fa8b031c475f}
+
+
+Função para passar um determinado valor em graus para radianos. 
+
+
+
+Definition at line 90 of file Coordenadas.\+cpp.
+
+
+
+References latitude, longitude, and to\+Rad().
+
+
+
+Referenced by Anuncio\+::calcular\+Distancia\+Points(), Anuncio\+Oferta\+::criar(), and Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_coordenadas_a9b1c73edfba7e5c4e0c6cae72174633c}{\index{Coordenadas@{Coordenadas}!criar@{criar}}
+\index{criar@{criar}!Coordenadas@{Coordenadas}}
+\subsubsection[{criar}]{\setlength{\rightskip}{0pt plus 5cm}void Coordenadas\+::criar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_coordenadas_a9b1c73edfba7e5c4e0c6cae72174633c}
+
+
+Função para mostrar no ecra da Consola umas determinadas coordenadas. 
+
+
+
+Definition at line 49 of file Coordenadas.\+cpp.
+
+
+
+References Invalid\+Input\+Exception$<$ T $>$\+::info, and Input\+Utils\+::read\+Double().
+
+
+
+Referenced by Anuncio\+::criar(), editar(), and Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_coordenadas_ad77fe69d9094889ae677bfa87459de3f}{\index{Coordenadas@{Coordenadas}!editar@{editar}}
+\index{editar@{editar}!Coordenadas@{Coordenadas}}
+\subsubsection[{editar}]{\setlength{\rightskip}{0pt plus 5cm}void Coordenadas\+::editar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_coordenadas_ad77fe69d9094889ae677bfa87459de3f}
+
+
+Função para criar novas coordenadas. 
+
+
+
+Definition at line 79 of file Coordenadas.\+cpp.
+
+
+
+References criar().
+
+
+
+Referenced by Anuncio\+::editar().
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_coordenadas_a1eac916230125776b081b09bf5121c8e}{\index{Coordenadas@{Coordenadas}!get\+Latitude@{get\+Latitude}}
 \index{get\+Latitude@{get\+Latitude}!Coordenadas@{Coordenadas}}
 \subsubsection[{get\+Latitude}]{\setlength{\rightskip}{0pt plus 5cm}double Coordenadas\+::get\+Latitude (
@@ -76,7 +199,11 @@ References latitude, and longitude.
 ) const}}\label{class_coordenadas_a1eac916230125776b081b09bf5121c8e}
 
 
-Definition at line 14 of file Coordenadas.\+cpp.
+Construtor com parametros da classe. 
+
+
+
+Definition at line 19 of file Coordenadas.\+cpp.
 
 
 
@@ -91,11 +218,61 @@ References latitude.
 ) const}}\label{class_coordenadas_ae2f616716136f0651d389e4824092c55}
 
 
-Definition at line 19 of file Coordenadas.\+cpp.
+Método para retornar a latitude de uma coordenada. 
+
+
+
+Definition at line 24 of file Coordenadas.\+cpp.
 
 
 
 References longitude.
+
+\hypertarget{class_coordenadas_ad503a2c6cfc48f13683217e17eb48596}{\index{Coordenadas@{Coordenadas}!load@{load}}
+\index{load@{load}!Coordenadas@{Coordenadas}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Coordenadas\+::load (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_coordenadas_ad503a2c6cfc48f13683217e17eb48596}
+
+
+Função responsavel por editar informação referente a coordenadas ja existentes. 
+
+
+
+Definition at line 104 of file Coordenadas.\+cpp.
+
+
+
+References latitude, and longitude.
+
+
+
+Referenced by Boleia\+::load(), and Anuncio\+::load().
+
+\hypertarget{class_coordenadas_ae2ed52ac8bc8bcf634db2627a7b5b3a2}{\index{Coordenadas@{Coordenadas}!save@{save}}
+\index{save@{save}!Coordenadas@{Coordenadas}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Coordenadas\+::save (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_coordenadas_ae2ed52ac8bc8bcf634db2627a7b5b3a2}
+
+
+Função responsavel por fazer load da informação das coordenadas presentes num txt. 
+
+
+
+Definition at line 112 of file Coordenadas.\+cpp.
+
+
+
+References latitude, and longitude.
+
+
+
+Referenced by Boleia\+::save(), and Anuncio\+::save().
 
 \hypertarget{class_coordenadas_a035cce119d74a61cb24676ef76f0f518}{\index{Coordenadas@{Coordenadas}!set\+Latitude@{set\+Latitude}}
 \index{set\+Latitude@{set\+Latitude}!Coordenadas@{Coordenadas}}
@@ -106,7 +283,11 @@ References longitude.
 )}}\label{class_coordenadas_a035cce119d74a61cb24676ef76f0f518}
 
 
-Definition at line 24 of file Coordenadas.\+cpp.
+Método para retornar a longitude de uma coordenada. 
+
+
+
+Definition at line 29 of file Coordenadas.\+cpp.
 
 
 
@@ -121,11 +302,57 @@ References latitude.
 )}}\label{class_coordenadas_af03ec9230d72b041265a9cbcf17a0369}
 
 
-Definition at line 30 of file Coordenadas.\+cpp.
+Método para alterar a latitude de uma coordenada. 
+
+
+
+Definition at line 35 of file Coordenadas.\+cpp.
 
 
 
 References longitude.
+
+\hypertarget{class_coordenadas_ace2f5bfc3615c206d4f642f6714cf626}{\index{Coordenadas@{Coordenadas}!showcoord@{showcoord}}
+\index{showcoord@{showcoord}!Coordenadas@{Coordenadas}}
+\subsubsection[{showcoord}]{\setlength{\rightskip}{0pt plus 5cm}void Coordenadas\+::showcoord (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_coordenadas_ace2f5bfc3615c206d4f642f6714cf626}
+
+
+Função para calcular a distancia entre duas coordenadas diferentes. 
+
+
+
+Definition at line 41 of file Coordenadas.\+cpp.
+
+
+
+References latitude, and longitude.
+
+
+
+Referenced by Boleia\+::show().
+
+\hypertarget{class_coordenadas_a24cb37fe0c7b21e2cc1f4c4353119d4f}{\index{Coordenadas@{Coordenadas}!to\+Rad@{to\+Rad}}
+\index{to\+Rad@{to\+Rad}!Coordenadas@{Coordenadas}}
+\subsubsection[{to\+Rad}]{\setlength{\rightskip}{0pt plus 5cm}double Coordenadas\+::to\+Rad (
+\begin{DoxyParamCaption}
+\item[{double}]{degrees}
+\end{DoxyParamCaption}
+) const}}\label{class_coordenadas_a24cb37fe0c7b21e2cc1f4c4353119d4f}
+
+
+Método para alterar a longitude de uma coordenada. 
+
+
+
+Definition at line 84 of file Coordenadas.\+cpp.
+
+
+
+Referenced by calc\+Distancia().
 
 
 
@@ -135,22 +362,22 @@ References longitude.
 \subsubsection[{latitude}]{\setlength{\rightskip}{0pt plus 5cm}double Coordenadas\+::latitude\hspace{0.3cm}{\ttfamily [private]}}}\label{class_coordenadas_ad7aa0271fc0ca8c8da179f9cfe859bf0}
 
 
-Definition at line 9 of file Coordenadas.\+h.
+Definition at line 13 of file Coordenadas.\+h.
 
 
 
-Referenced by Coordenadas(), get\+Latitude(), and set\+Latitude().
+Referenced by calc\+Distancia(), Coordenadas(), get\+Latitude(), load(), save(), set\+Latitude(), and showcoord().
 
 \hypertarget{class_coordenadas_a328c0d572b3a7d47bfbd866f5d6d6489}{\index{Coordenadas@{Coordenadas}!longitude@{longitude}}
 \index{longitude@{longitude}!Coordenadas@{Coordenadas}}
 \subsubsection[{longitude}]{\setlength{\rightskip}{0pt plus 5cm}double Coordenadas\+::longitude\hspace{0.3cm}{\ttfamily [private]}}}\label{class_coordenadas_a328c0d572b3a7d47bfbd866f5d6d6489}
 
 
-Definition at line 10 of file Coordenadas.\+h.
+Definition at line 14 of file Coordenadas.\+h.
 
 
 
-Referenced by Coordenadas(), get\+Longitude(), and set\+Longitude().
+Referenced by calc\+Distancia(), Coordenadas(), get\+Longitude(), load(), save(), set\+Longitude(), and showcoord().
 
 
 

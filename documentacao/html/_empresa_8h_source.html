@@ -70,26 +70,30 @@ $(document).ready(function(){initNavTree('_empresa_8h_source.html','');});
 <a href="_empresa_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _EMPRESA_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _EMPRESA_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_membro_8h.html">Membro.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_viagem_8h.html">Viagem.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_empresa.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_empresa.html">Empresa</a> : <span class="keyword">public</span> <a class="code" href="class_membro.html">Membro</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_empresa.html#a922a041abeb39daf38135963dbe821f5">   15</a></span>&#160;    vector&lt;Viagem&gt; <a class="code" href="class_empresa.html#a922a041abeb39daf38135963dbe821f5">viagens</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_empresa.html#a809624b98d1db18f8627ce2fa394dddd">   16</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_empresa.html#a809624b98d1db18f8627ce2fa394dddd">website</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_membro_8h.html">Membro.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_boleia_8h.html">Boleia.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_empresa.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_empresa.html">Empresa</a> : <span class="keyword">public</span> <a class="code" href="class_membro.html">Membro</a>   </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_empresa.html#a809624b98d1db18f8627ce2fa394dddd">   12</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_empresa.html#a809624b98d1db18f8627ce2fa394dddd">website</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_empresa.html">Empresa</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_empresa.html">Empresa</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nome, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;utilizador, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;password, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;website);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> signup();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> edit();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> save(ofstream &amp;file, vector&lt;Combustivel&gt; *combustiveis);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> show() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="class_empresa_html"><div class="ttname"><a href="class_empresa.html">Empresa</a></div><div class="ttdef"><b>Definition:</b> <a href="_empresa_8h_source.html#l00013">Empresa.h:13</a></div></div>
-<div class="ttc" id="class_empresa_html_a922a041abeb39daf38135963dbe821f5"><div class="ttname"><a href="class_empresa.html#a922a041abeb39daf38135963dbe821f5">Empresa::viagens</a></div><div class="ttdeci">vector&lt; Viagem &gt; viagens</div><div class="ttdef"><b>Definition:</b> <a href="_empresa_8h_source.html#l00015">Empresa.h:15</a></div></div>
-<div class="ttc" id="_viagem_8h_html"><div class="ttname"><a href="_viagem_8h.html">Viagem.h</a></div></div>
-<div class="ttc" id="class_empresa_html_a809624b98d1db18f8627ce2fa394dddd"><div class="ttname"><a href="class_empresa.html#a809624b98d1db18f8627ce2fa394dddd">Empresa::website</a></div><div class="ttdeci">string website</div><div class="ttdef"><b>Definition:</b> <a href="_empresa_8h_source.html#l00016">Empresa.h:16</a></div></div>
-<div class="ttc" id="class_membro_html"><div class="ttname"><a href="class_membro.html">Membro</a></div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00010">Membro.h:10</a></div></div>
+<div class="ttc" id="class_empresa_html"><div class="ttname"><a href="class_empresa.html">Empresa</a></div><div class="ttdoc">Classe derivada da classe mãe Membro. </div><div class="ttdef"><b>Definition:</b> <a href="_empresa_8h_source.html#l00010">Empresa.h:10</a></div></div>
+<div class="ttc" id="_boleia_8h_html"><div class="ttname"><a href="_boleia_8h.html">Boleia.h</a></div></div>
+<div class="ttc" id="class_empresa_html_a809624b98d1db18f8627ce2fa394dddd"><div class="ttname"><a href="class_empresa.html#a809624b98d1db18f8627ce2fa394dddd">Empresa::website</a></div><div class="ttdeci">string website</div><div class="ttdef"><b>Definition:</b> <a href="_empresa_8h_source.html#l00012">Empresa.h:12</a></div></div>
+<div class="ttc" id="class_membro_html"><div class="ttname"><a href="class_membro.html">Membro</a></div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00013">Membro.h:13</a></div></div>
 <div class="ttc" id="_membro_8h_html"><div class="ttname"><a href="_membro_8h.html">Membro.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -97,7 +101,7 @@ $(document).ready(function(){initNavTree('_empresa_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li><li class="navelem"><a class="el" href="dir_8ec053a504507d4cd016538dd4f7c72d.html">Headers</a></li><li class="navelem"><a class="el" href="_empresa_8h.html">Empresa.h</a></li>
-    <li class="footer">Generated on Fri Oct 31 2014 14:46:32 for AEDABoleiasInteligentes by
+    <li class="footer">Generated on Sun Nov 9 2014 16:47:58 for AEDABoleiasInteligentes by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -71,34 +71,43 @@ $(document).ready(function(){initNavTree('_combustivel_8h_source.html','');});
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _COMBUSTIVEL_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_combustivel.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_combustivel.html">Combustivel</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_combustivel.html#adfa329c4c4b60abcb87c1f3c82be4145">   11</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_combustivel.html#adfa329c4c4b60abcb87c1f3c82be4145">nome</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_combustivel.html#ac910a8410930ba553861f584da9f48d1">   12</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_combustivel.html#ac910a8410930ba553861f584da9f48d1">preco</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_combustivel.html">Combustivel</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nome, <span class="keywordtype">float</span> preco);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> setNome(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nome);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> setPreco(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;preco);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">string</span> getNome() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">float</span> getPreco() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_combustivel_html_ac910a8410930ba553861f584da9f48d1"><div class="ttname"><a href="class_combustivel.html#ac910a8410930ba553861f584da9f48d1">Combustivel::preco</a></div><div class="ttdeci">float preco</div><div class="ttdef"><b>Definition:</b> <a href="_combustivel_8h_source.html#l00012">Combustivel.h:12</a></div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_combustivel.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_combustivel.html">Combustivel</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_combustivel.html#adfa329c4c4b60abcb87c1f3c82be4145">   13</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_combustivel.html#adfa329c4c4b60abcb87c1f3c82be4145">nome</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_combustivel.html#ac910a8410930ba553861f584da9f48d1">   14</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_combustivel.html#ac910a8410930ba553861f584da9f48d1">preco</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_combustivel.html">Combustivel</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nome, <span class="keywordtype">float</span> preco);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> setNome(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nome);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> setPreco(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;preco);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">string</span> getNome() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">float</span> getPreco() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> criar();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> show() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> load(ifstream &amp;file);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> save(ofstream &amp;file) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">friend</span> ostream&amp; <a class="code" href="_anuncio_procura_8h.html#a367aa4dd26479577bed983ad8ef57b9b">operator&lt;&lt;</a>(ostream &amp;os, <span class="keyword">const</span> <a class="code" href="class_combustivel.html">Combustivel</a> &amp;combustivel);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_combustivel_html_ac910a8410930ba553861f584da9f48d1"><div class="ttname"><a href="class_combustivel.html#ac910a8410930ba553861f584da9f48d1">Combustivel::preco</a></div><div class="ttdeci">float preco</div><div class="ttdef"><b>Definition:</b> <a href="_combustivel_8h_source.html#l00014">Combustivel.h:14</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="class_combustivel_html_adfa329c4c4b60abcb87c1f3c82be4145"><div class="ttname"><a href="class_combustivel.html#adfa329c4c4b60abcb87c1f3c82be4145">Combustivel::nome</a></div><div class="ttdeci">string nome</div><div class="ttdef"><b>Definition:</b> <a href="_combustivel_8h_source.html#l00011">Combustivel.h:11</a></div></div>
-<div class="ttc" id="class_combustivel_html"><div class="ttname"><a href="class_combustivel.html">Combustivel</a></div><div class="ttdef"><b>Definition:</b> <a href="_combustivel_8h_source.html#l00008">Combustivel.h:8</a></div></div>
+<div class="ttc" id="class_combustivel_html_adfa329c4c4b60abcb87c1f3c82be4145"><div class="ttname"><a href="class_combustivel.html#adfa329c4c4b60abcb87c1f3c82be4145">Combustivel::nome</a></div><div class="ttdeci">string nome</div><div class="ttdef"><b>Definition:</b> <a href="_combustivel_8h_source.html#l00013">Combustivel.h:13</a></div></div>
+<div class="ttc" id="_anuncio_procura_8h_html_a367aa4dd26479577bed983ad8ef57b9b"><div class="ttname"><a href="_anuncio_procura_8h.html#a367aa4dd26479577bed983ad8ef57b9b">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, pair&lt; Membro *, Preco &gt; condutorCandidato)</div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_procura_8cpp_source.html#l00122">AnuncioProcura.cpp:122</a></div></div>
+<div class="ttc" id="class_combustivel_html"><div class="ttname"><a href="class_combustivel.html">Combustivel</a></div><div class="ttdef"><b>Definition:</b> <a href="_combustivel_8h_source.html#l00010">Combustivel.h:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li><li class="navelem"><a class="el" href="dir_8ec053a504507d4cd016538dd4f7c72d.html">Headers</a></li><li class="navelem"><a class="el" href="_combustivel_8h.html">Combustivel.h</a></li>
-    <li class="footer">Generated on Fri Oct 31 2014 14:46:32 for AEDABoleiasInteligentes by
+    <li class="footer">Generated on Sun Nov 9 2014 16:47:58 for AEDABoleiasInteligentes by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

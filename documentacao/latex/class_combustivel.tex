@@ -11,13 +11,21 @@
 \hyperlink{class_combustivel_a101e8181fe6c4e21aa3c73cd3888467e}{Combustivel} (const string \&\hyperlink{class_combustivel_adfa329c4c4b60abcb87c1f3c82be4145}{nome}, float \hyperlink{class_combustivel_ac910a8410930ba553861f584da9f48d1}{preco})
 \item 
 void \hyperlink{class_combustivel_a0f1311345a421884cf290b413e1df9b4}{set\+Nome} (const string \&\hyperlink{class_combustivel_adfa329c4c4b60abcb87c1f3c82be4145}{nome})
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor com parâmetros da classe. \end{DoxyCompactList}\item 
 void \hyperlink{class_combustivel_ac0ddd40d9511ca92c5d44a9e4f503d95}{set\+Preco} (const float \&\hyperlink{class_combustivel_ac910a8410930ba553861f584da9f48d1}{preco})
-\item 
+\begin{DoxyCompactList}\small\item\em Método que altera o nome do combustivel. \end{DoxyCompactList}\item 
 string \hyperlink{class_combustivel_a20ab48a38371dedfc40ca4b5e11dbb5e}{get\+Nome} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Método que altera o preço do combustivel. \end{DoxyCompactList}\item 
 float \hyperlink{class_combustivel_a7e4bbd943b0534fc2c1fdf3ce6861f14}{get\+Preco} () const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que retorna o nome do \hyperlink{class_combustivel}{Combustivel}. \end{DoxyCompactList}\item 
+void \hyperlink{class_combustivel_a4d1c201ebce40ff26f47d289a3c77c5e}{criar} ()
+\begin{DoxyCompactList}\small\item\em Método que retorna o preço do \hyperlink{class_combustivel}{Combustivel}. \end{DoxyCompactList}\item 
+void \hyperlink{class_combustivel_a1b96054fb39f1a8abadf0dbb3b4e6795}{show} () const 
+\begin{DoxyCompactList}\small\item\em Função responsavel por criar um \hyperlink{class_combustivel}{Combustivel} novo. \end{DoxyCompactList}\item 
+void \hyperlink{class_combustivel_a8c56fe49436bf236ff3e1f652cee7a00}{load} (ifstream \&file)
+\begin{DoxyCompactList}\small\item\em Função que mostra no ecrã da Consola toda a informação relativa a um \hyperlink{class_combustivel}{Combustivel}. \end{DoxyCompactList}\item 
+void \hyperlink{class_combustivel_a33e0390d12dc70d302ce0c8a3c4cfb3e}{save} (ofstream \&file) const 
+\begin{DoxyCompactList}\small\item\em Função que faz load de toda a informação relativa combustiveis presente no ficheiro de combustiveis. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,12 +33,17 @@ string \hyperlink{class_combustivel_adfa329c4c4b60abcb87c1f3c82be4145}{nome}
 \item 
 float \hyperlink{class_combustivel_ac910a8410930ba553861f584da9f48d1}{preco}
 \end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_combustivel_aa2eefe07fdd78b0fa4dfbb6465cf0075}{operator$<$$<$} (ostream \&os, const \hyperlink{class_combustivel}{Combustivel} \&combustivel)
+\begin{DoxyCompactList}\small\item\em Função que grava a informação de um combustivel no respectivo ficheiro txt. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 8 of file Combustivel.\+h.
+Definition at line 10 of file Combustivel.\+h.
 
 
 
@@ -54,6 +67,25 @@ References nome, and preco.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_combustivel_a4d1c201ebce40ff26f47d289a3c77c5e}{\index{Combustivel@{Combustivel}!criar@{criar}}
+\index{criar@{criar}!Combustivel@{Combustivel}}
+\subsubsection[{criar}]{\setlength{\rightskip}{0pt plus 5cm}void Combustivel\+::criar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_combustivel_a4d1c201ebce40ff26f47d289a3c77c5e}
+
+
+Método que retorna o preço do \hyperlink{class_combustivel}{Combustivel}. 
+
+
+
+Definition at line 29 of file Combustivel.\+cpp.
+
+
+
+References nome, and preco.
+
 \hypertarget{class_combustivel_a20ab48a38371dedfc40ca4b5e11dbb5e}{\index{Combustivel@{Combustivel}!get\+Nome@{get\+Nome}}
 \index{get\+Nome@{get\+Nome}!Combustivel@{Combustivel}}
 \subsubsection[{get\+Nome}]{\setlength{\rightskip}{0pt plus 5cm}string Combustivel\+::get\+Nome (
@@ -61,6 +93,10 @@ References nome, and preco.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_combustivel_a20ab48a38371dedfc40ca4b5e11dbb5e}
+
+
+Método que altera o preço do combustivel. 
+
 
 
 Definition at line 9 of file Combustivel.\+cpp.
@@ -78,11 +114,57 @@ References nome.
 ) const}}\label{class_combustivel_a7e4bbd943b0534fc2c1fdf3ce6861f14}
 
 
+Método que retorna o nome do \hyperlink{class_combustivel}{Combustivel}. 
+
+
+
 Definition at line 14 of file Combustivel.\+cpp.
 
 
 
 References preco.
+
+
+
+Referenced by Anuncio\+Oferta\+::criar(), and Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
+
+\hypertarget{class_combustivel_a8c56fe49436bf236ff3e1f652cee7a00}{\index{Combustivel@{Combustivel}!load@{load}}
+\index{load@{load}!Combustivel@{Combustivel}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Combustivel\+::load (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_combustivel_a8c56fe49436bf236ff3e1f652cee7a00}
+
+
+Função que mostra no ecrã da Consola toda a informação relativa a um \hyperlink{class_combustivel}{Combustivel}. 
+
+
+
+Definition at line 45 of file Combustivel.\+cpp.
+
+
+
+References nome, and preco.
+
+\hypertarget{class_combustivel_a33e0390d12dc70d302ce0c8a3c4cfb3e}{\index{Combustivel@{Combustivel}!save@{save}}
+\index{save@{save}!Combustivel@{Combustivel}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Combustivel\+::save (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{file}
+\end{DoxyParamCaption}
+) const}}\label{class_combustivel_a33e0390d12dc70d302ce0c8a3c4cfb3e}
+
+
+Função que faz load de toda a informação relativa combustiveis presente no ficheiro de combustiveis. 
+
+
+
+Definition at line 52 of file Combustivel.\+cpp.
+
+
+
+References nome, and preco.
 
 \hypertarget{class_combustivel_a0f1311345a421884cf290b413e1df9b4}{\index{Combustivel@{Combustivel}!set\+Nome@{set\+Nome}}
 \index{set\+Nome@{set\+Nome}!Combustivel@{Combustivel}}
@@ -91,6 +173,10 @@ References preco.
 \item[{const string \&}]{nome}
 \end{DoxyParamCaption}
 )}}\label{class_combustivel_a0f1311345a421884cf290b413e1df9b4}
+
+
+Construtor com parâmetros da classe. 
+
 
 
 Definition at line 19 of file Combustivel.\+cpp.
@@ -108,11 +194,57 @@ References nome.
 )}}\label{class_combustivel_ac0ddd40d9511ca92c5d44a9e4f503d95}
 
 
+Método que altera o nome do combustivel. 
+
+
+
 Definition at line 24 of file Combustivel.\+cpp.
 
 
 
 References preco.
+
+\hypertarget{class_combustivel_a1b96054fb39f1a8abadf0dbb3b4e6795}{\index{Combustivel@{Combustivel}!show@{show}}
+\index{show@{show}!Combustivel@{Combustivel}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Combustivel\+::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_combustivel_a1b96054fb39f1a8abadf0dbb3b4e6795}
+
+
+Função responsavel por criar um \hyperlink{class_combustivel}{Combustivel} novo. 
+
+
+
+Definition at line 40 of file Combustivel.\+cpp.
+
+
+
+References nome.
+
+
+
+Referenced by Veiculo\+::show().
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_combustivel_aa2eefe07fdd78b0fa4dfbb6465cf0075}{\index{Combustivel@{Combustivel}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Combustivel@{Combustivel}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Combustivel} \&}]{combustivel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_combustivel_aa2eefe07fdd78b0fa4dfbb6465cf0075}
+
+
+Função que grava a informação de um combustivel no respectivo ficheiro txt. 
+
+
+
+Definition at line 58 of file Combustivel.\+cpp.
 
 
 
@@ -122,22 +254,22 @@ References preco.
 \subsubsection[{nome}]{\setlength{\rightskip}{0pt plus 5cm}string Combustivel\+::nome\hspace{0.3cm}{\ttfamily [private]}}}\label{class_combustivel_adfa329c4c4b60abcb87c1f3c82be4145}
 
 
-Definition at line 11 of file Combustivel.\+h.
+Definition at line 13 of file Combustivel.\+h.
 
 
 
-Referenced by Combustivel(), get\+Nome(), and set\+Nome().
+Referenced by Combustivel(), criar(), get\+Nome(), load(), operator$<$$<$(), save(), set\+Nome(), and show().
 
 \hypertarget{class_combustivel_ac910a8410930ba553861f584da9f48d1}{\index{Combustivel@{Combustivel}!preco@{preco}}
 \index{preco@{preco}!Combustivel@{Combustivel}}
 \subsubsection[{preco}]{\setlength{\rightskip}{0pt plus 5cm}float Combustivel\+::preco\hspace{0.3cm}{\ttfamily [private]}}}\label{class_combustivel_ac910a8410930ba553861f584da9f48d1}
 
 
-Definition at line 12 of file Combustivel.\+h.
+Definition at line 14 of file Combustivel.\+h.
 
 
 
-Referenced by Combustivel(), get\+Preco(), and set\+Preco().
+Referenced by Combustivel(), criar(), get\+Preco(), load(), save(), and set\+Preco().
 
 
 

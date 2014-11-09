@@ -3,14 +3,18 @@ digraph "Anuncio"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="Anuncio",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" viagem" ];
-  Node2 [label="Viagem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_viagem.html"];
-  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fim\ninicio" ];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hora" ];
+  Node2 [label="Hora",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_hora.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" origem\ndestino" ];
   Node3 [label="Coordenadas",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_coordenadas.html"];
-  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" veiculo" ];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" veiculo" ];
   Node4 [label="Veiculo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_veiculo.html"];
   Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" combustivel" ];
   Node5 [label="Combustivel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_combustivel.html"];
-  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" condutor" ];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" condutor\nanunciante" ];
   Node6 [label="Membro",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_membro.html"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dataFim\ndataInicio" ];
+  Node7 [label="Data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data.html"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" preco" ];
+  Node8 [label="Preco",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_preco.html"];
 }

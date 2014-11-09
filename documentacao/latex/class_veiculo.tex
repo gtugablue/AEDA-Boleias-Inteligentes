@@ -13,32 +13,50 @@ Collaboration diagram for Veiculo\+:
 \item 
 \hyperlink{class_veiculo_aafab27708a2639bc83a4c3721e57d196}{Veiculo} ()
 \item 
-\hyperlink{class_veiculo_a6c66e8e5759b1f8d21c292865d4a12bd}{Veiculo} (string \hyperlink{class_veiculo_ab20b89442a0ddaedd074bb0de75838c8}{marca}, unsigned \hyperlink{class_veiculo_ac4146f7b3d38e31e3225074e0fb0dea9}{mes}, unsigned \hyperlink{class_veiculo_ae141824a9353b3f7ed99d5c34c830fe2}{ano}, unsigned \hyperlink{class_veiculo_a3c3b3f2f958a98b48fa5e4f46007c9f9}{cilindrada}, \hyperlink{class_combustivel}{Combustivel} $\ast$\hyperlink{class_veiculo_ad8416cc9da449baed5e07ed146572712}{combustivel})
-\item 
 string \hyperlink{class_veiculo_a2a9d144f41694ea56a33f20a1c97f80b}{get\+Marca} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor por defeito da classe. \end{DoxyCompactList}\item 
+string \hyperlink{class_veiculo_a96eb5720c0be78eb8ed7023904c6b1be}{get\+Modelo} () const 
+\begin{DoxyCompactList}\small\item\em Método que retorna a marca do veiculo. \end{DoxyCompactList}\item 
+unsigned \hyperlink{class_veiculo_aaebc59082f462ee46de233311281aef2}{get\+Lotacao} () const 
+\begin{DoxyCompactList}\small\item\em Método que retorna o modelo do veiculo. \end{DoxyCompactList}\item 
 unsigned \hyperlink{class_veiculo_a9cd8a208e3a1dbf1ba02281f1e97f99c}{get\+Mes} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Método que retorna a lotação do veiculo. \end{DoxyCompactList}\item 
 unsigned \hyperlink{class_veiculo_af86f9122ce46d301c58e6247c641ff7b}{get\+Ano} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Método que retorna o mes em que foi comprado o veiculo. \end{DoxyCompactList}\item 
 unsigned \hyperlink{class_veiculo_a03fe5c5380da49cdc25014bf90934263}{get\+Cilindrada} () const 
-\item 
-\hyperlink{class_combustivel}{Combustivel} $\ast$ \hyperlink{class_veiculo_a20bc51c40fba45b910ca01db48f192fb}{get\+Combustivel} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Método que retorna o ano em que foi comprado o veiculo. \end{DoxyCompactList}\item 
+float \hyperlink{class_veiculo_ad40e432b47edddbdff461d4b44a4cb14}{get\+Consumo} () const 
+\begin{DoxyCompactList}\small\item\em Método que retorna a cilindrada do veiculo. \end{DoxyCompactList}\item 
+\hyperlink{class_combustivel}{Combustivel} $\ast$ \hyperlink{class_veiculo_a2198e13a144ece6d32634dd6bdb160c9}{get\+Combustivel} ()
+\begin{DoxyCompactList}\small\item\em Método que retorna o consumo do veiculo. \end{DoxyCompactList}\item 
 void \hyperlink{class_veiculo_a4376b75295af584bea72db312e909d52}{set\+Marca} (string \&\hyperlink{class_veiculo_ab20b89442a0ddaedd074bb0de75838c8}{marca})
-\item 
+\begin{DoxyCompactList}\small\item\em Método que retorna o combustivel do veiculo. \end{DoxyCompactList}\item 
 void \hyperlink{class_veiculo_abce426bdb78d81f59e4bd3de01b05fea}{set\+Mes} (unsigned \hyperlink{class_veiculo_ac4146f7b3d38e31e3225074e0fb0dea9}{mes})
-\item 
+\begin{DoxyCompactList}\small\item\em Método que permite alterar a marca do veiculo. \end{DoxyCompactList}\item 
 void \hyperlink{class_veiculo_ad71370069a5a0f587fced2c49028cdfa}{set\+Ano} (unsigned \hyperlink{class_veiculo_ae141824a9353b3f7ed99d5c34c830fe2}{ano})
-\item 
+\begin{DoxyCompactList}\small\item\em Método que permite alterar o mes do veiculo. \end{DoxyCompactList}\item 
 void \hyperlink{class_veiculo_ad41e09a8864fc77143c30218c2441f77}{set\+Cilindrada} (unsigned \hyperlink{class_veiculo_a3c3b3f2f958a98b48fa5e4f46007c9f9}{cilindrada})
-\item 
+\begin{DoxyCompactList}\small\item\em Método que permite alterar o ano do veiculo. \end{DoxyCompactList}\item 
+void \hyperlink{class_veiculo_a1e72c5592016f150fec8fcede73eb536}{load} (ifstream \&file, vector$<$ \hyperlink{class_combustivel}{Combustivel} $>$ $\ast$combustiveis)
+\begin{DoxyCompactList}\small\item\em Método que permite alterar a cilindrada do veiculo. \end{DoxyCompactList}\item 
+void \hyperlink{class_veiculo_a9f7396b5b6ba78f18b16192e38f501df}{save} (ofstream \&file, vector$<$ \hyperlink{class_combustivel}{Combustivel} $>$ $\ast$combustiveis)
+\begin{DoxyCompactList}\small\item\em Função que carrega a informação relativa a um veiculo contida no respectivo txt para o programa. \end{DoxyCompactList}\item 
 void \hyperlink{class_veiculo_a885e49550f411dc99fa09ba226476679}{set\+Combustivel} (\hyperlink{class_combustivel}{Combustivel} $\ast$\hyperlink{class_veiculo_ad8416cc9da449baed5e07ed146572712}{combustivel})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função que grava a informação relativa a um veiculo no ficheiro txt respectivo. \end{DoxyCompactList}\item 
+\hyperlink{class_combustivel}{Combustivel} $\ast$ \hyperlink{class_veiculo_a1f712b4c2a5b88c9d7fc6b0c35bd1547}{escolher\+Combustivel} (vector$<$ \hyperlink{class_combustivel}{Combustivel} $>$ $\ast$combustiveis)
+\begin{DoxyCompactList}\small\item\em Função que permite alterar o combustivel. \end{DoxyCompactList}\item 
+void \hyperlink{class_veiculo_ada18ff760e31a0ff31893eab3ac707ea}{show} () const 
+\begin{DoxyCompactList}\small\item\em Função que permite escolher o combustivel que queremos associar ao veiculo a partir de um vector onde estão todos os combustiveis existentes. \end{DoxyCompactList}\item 
+void \hyperlink{class_veiculo_a74d91260effb553fecdfdab126336d06}{criar} (vector$<$ \hyperlink{class_combustivel}{Combustivel} $>$ $\ast$combustiveis)
+\begin{DoxyCompactList}\small\item\em Função que mostra no ecrã toda a informação de um veiculo. \end{DoxyCompactList}\item 
+void \hyperlink{class_veiculo_af5d45a28c046917dda3ccfbfd3603825}{editar} (vector$<$ \hyperlink{class_combustivel}{Combustivel} $>$ $\ast$combustiveis)
+\begin{DoxyCompactList}\small\item\em Função que permite criar um veiculo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 string \hyperlink{class_veiculo_ab20b89442a0ddaedd074bb0de75838c8}{marca}
+\item 
+string \hyperlink{class_veiculo_a313c15811b7fffa4787eea0dcf12fc13}{modelo}
 \item 
 unsigned \hyperlink{class_veiculo_ac4146f7b3d38e31e3225074e0fb0dea9}{mes}
 \item 
@@ -47,13 +65,24 @@ unsigned \hyperlink{class_veiculo_ae141824a9353b3f7ed99d5c34c830fe2}{ano}
 unsigned \hyperlink{class_veiculo_a3c3b3f2f958a98b48fa5e4f46007c9f9}{cilindrada}
 \item 
 \hyperlink{class_combustivel}{Combustivel} $\ast$ \hyperlink{class_veiculo_ad8416cc9da449baed5e07ed146572712}{combustivel}
+\item 
+unsigned int \hyperlink{class_veiculo_af9dc20956b1b60e54b9a79f76cd971d3}{lotacao}
+\item 
+float \hyperlink{class_veiculo_ab403615f82fdad74215512cedce23762}{consumo}
 \end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_veiculo_abd6e2d8cf61fd95d821137237fe1d043}{operator$<$$<$} (ostream \&os, const \hyperlink{class_veiculo}{Veiculo} \&veiculo)
+\begin{DoxyCompactList}\small\item\em Função que permite editar a informação de um veiculo. \end{DoxyCompactList}\item 
+ostream \& \hyperlink{class_veiculo_ab1e5fb7dfcdaf15014ab3363dd4f8dc1}{operator$<$$<$} (ostream \&os, \hyperlink{class_veiculo}{Veiculo} $\ast$veiculo)
+\begin{DoxyCompactList}\small\item\em Overload do operador $<$$<$ que permtie a impressã no ecra dos parametros do veiculo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 9 of file Veiculo.\+h.
+Definition at line 15 of file Veiculo.\+h.
 
 
 
@@ -65,28 +94,93 @@ Definition at line 9 of file Veiculo.\+h.
 {}
 \end{DoxyParamCaption}
 )}}\label{class_veiculo_aafab27708a2639bc83a4c3721e57d196}
-\hypertarget{class_veiculo_a6c66e8e5759b1f8d21c292865d4a12bd}{\index{Veiculo@{Veiculo}!Veiculo@{Veiculo}}
-\index{Veiculo@{Veiculo}!Veiculo@{Veiculo}}
-\subsubsection[{Veiculo}]{\setlength{\rightskip}{0pt plus 5cm}Veiculo\+::\+Veiculo (
-\begin{DoxyParamCaption}
-\item[{string}]{marca, }
-\item[{unsigned}]{mes, }
-\item[{unsigned}]{ano, }
-\item[{unsigned}]{cilindrada, }
-\item[{{\bf Combustivel} $\ast$}]{combustivel}
-\end{DoxyParamCaption}
-)}}\label{class_veiculo_a6c66e8e5759b1f8d21c292865d4a12bd}
 
 
 Definition at line 3 of file Veiculo.\+cpp.
 
 
 
-References ano, cilindrada, combustivel, marca, and mes.
-
-
-
 \subsection{Member Function Documentation}
+\hypertarget{class_veiculo_a74d91260effb553fecdfdab126336d06}{\index{Veiculo@{Veiculo}!criar@{criar}}
+\index{criar@{criar}!Veiculo@{Veiculo}}
+\subsubsection[{criar}]{\setlength{\rightskip}{0pt plus 5cm}void Veiculo\+::criar (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Combustivel} $>$ $\ast$}]{combustiveis}
+\end{DoxyParamCaption}
+)}}\label{class_veiculo_a74d91260effb553fecdfdab126336d06}
+
+
+Função que mostra no ecrã toda a informação de um veiculo. 
+
+
+
+Definition at line 142 of file Veiculo.\+cpp.
+
+
+
+References ano, cilindrada, combustivel, consumo, escolher\+Combustivel(), Invalid\+Input\+Exception$<$ T $>$\+::info, Data\+Invalida\+Exception$<$ T $>$\+::info, lotacao, marca, mes, modelo, Input\+Utils\+::pause(), Input\+Utils\+::read\+Float(), and Input\+Utils\+::read\+Int().
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Veiculos\+Menu().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_veiculo_af5d45a28c046917dda3ccfbfd3603825}{\index{Veiculo@{Veiculo}!editar@{editar}}
+\index{editar@{editar}!Veiculo@{Veiculo}}
+\subsubsection[{editar}]{\setlength{\rightskip}{0pt plus 5cm}void Veiculo\+::editar (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Combustivel} $>$ $\ast$}]{combustiveis}
+\end{DoxyParamCaption}
+)}}\label{class_veiculo_af5d45a28c046917dda3ccfbfd3603825}
+
+
+Função que permite criar um veiculo. 
+
+
+
+Definition at line 227 of file Veiculo.\+cpp.
+
+
+
+References ano, cilindrada, combustivel, consumo, escolher\+Combustivel(), Invalid\+Input\+Exception$<$ T $>$\+::info, Data\+Invalida\+Exception$<$ T $>$\+::info, lotacao, marca, mes, modelo, Input\+Utils\+::pause(), Input\+Utils\+::read\+Float(), Input\+Utils\+::read\+Int(), and Input\+Utils\+::read\+Yes\+Or\+No().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_veiculo_a1f712b4c2a5b88c9d7fc6b0c35bd1547}{\index{Veiculo@{Veiculo}!escolher\+Combustivel@{escolher\+Combustivel}}
+\index{escolher\+Combustivel@{escolher\+Combustivel}!Veiculo@{Veiculo}}
+\subsubsection[{escolher\+Combustivel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Combustivel} $\ast$ Veiculo\+::escolher\+Combustivel (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Combustivel} $>$ $\ast$}]{combustiveis}
+\end{DoxyParamCaption}
+)}}\label{class_veiculo_a1f712b4c2a5b88c9d7fc6b0c35bd1547}
+
+
+Função que permite alterar o combustivel. 
+
+
+
+Definition at line 79 of file Veiculo.\+cpp.
+
+
+
+References Output\+Utils\+::show\+List().
+
+
+
+Referenced by criar(), and editar().
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_veiculo_af86f9122ce46d301c58e6247c641ff7b}{\index{Veiculo@{Veiculo}!get\+Ano@{get\+Ano}}
 \index{get\+Ano@{get\+Ano}!Veiculo@{Veiculo}}
 \subsubsection[{get\+Ano}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Veiculo\+::get\+Ano (
@@ -96,7 +190,11 @@ References ano, cilindrada, combustivel, marca, and mes.
 ) const}}\label{class_veiculo_af86f9122ce46d301c58e6247c641ff7b}
 
 
-Definition at line 22 of file Veiculo.\+cpp.
+Método que retorna o mes em que foi comprado o veiculo. 
+
+
+
+Definition at line 23 of file Veiculo.\+cpp.
 
 
 
@@ -111,26 +209,84 @@ References ano.
 ) const}}\label{class_veiculo_a03fe5c5380da49cdc25014bf90934263}
 
 
-Definition at line 27 of file Veiculo.\+cpp.
+Método que retorna o ano em que foi comprado o veiculo. 
+
+
+
+Definition at line 28 of file Veiculo.\+cpp.
 
 
 
 References cilindrada.
 
-\hypertarget{class_veiculo_a20bc51c40fba45b910ca01db48f192fb}{\index{Veiculo@{Veiculo}!get\+Combustivel@{get\+Combustivel}}
+\hypertarget{class_veiculo_a2198e13a144ece6d32634dd6bdb160c9}{\index{Veiculo@{Veiculo}!get\+Combustivel@{get\+Combustivel}}
 \index{get\+Combustivel@{get\+Combustivel}!Veiculo@{Veiculo}}
 \subsubsection[{get\+Combustivel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Combustivel} $\ast$ Veiculo\+::get\+Combustivel (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}\label{class_veiculo_a20bc51c40fba45b910ca01db48f192fb}
+)}}\label{class_veiculo_a2198e13a144ece6d32634dd6bdb160c9}
 
 
-Definition at line 32 of file Veiculo.\+cpp.
+Método que retorna o consumo do veiculo. 
+
+
+
+Definition at line 43 of file Veiculo.\+cpp.
 
 
 
 References combustivel.
+
+
+
+Referenced by Anuncio\+Oferta\+::criar(), and Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
+
+\hypertarget{class_veiculo_ad40e432b47edddbdff461d4b44a4cb14}{\index{Veiculo@{Veiculo}!get\+Consumo@{get\+Consumo}}
+\index{get\+Consumo@{get\+Consumo}!Veiculo@{Veiculo}}
+\subsubsection[{get\+Consumo}]{\setlength{\rightskip}{0pt plus 5cm}float Veiculo\+::get\+Consumo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_veiculo_ad40e432b47edddbdff461d4b44a4cb14}
+
+
+Método que retorna a cilindrada do veiculo. 
+
+
+
+Definition at line 38 of file Veiculo.\+cpp.
+
+
+
+References consumo.
+
+
+
+Referenced by Anuncio\+Oferta\+::criar(), and Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
+
+\hypertarget{class_veiculo_aaebc59082f462ee46de233311281aef2}{\index{Veiculo@{Veiculo}!get\+Lotacao@{get\+Lotacao}}
+\index{get\+Lotacao@{get\+Lotacao}!Veiculo@{Veiculo}}
+\subsubsection[{get\+Lotacao}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Veiculo\+::get\+Lotacao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_veiculo_aaebc59082f462ee46de233311281aef2}
+
+
+Método que retorna o modelo do veiculo. 
+
+
+
+Definition at line 33 of file Veiculo.\+cpp.
+
+
+
+References lotacao.
+
+
+
+Referenced by Anuncio\+::pode\+Ser\+Passageiro().
 
 \hypertarget{class_veiculo_a2a9d144f41694ea56a33f20a1c97f80b}{\index{Veiculo@{Veiculo}!get\+Marca@{get\+Marca}}
 \index{get\+Marca@{get\+Marca}!Veiculo@{Veiculo}}
@@ -141,11 +297,19 @@ References combustivel.
 ) const}}\label{class_veiculo_a2a9d144f41694ea56a33f20a1c97f80b}
 
 
-Definition at line 12 of file Veiculo.\+cpp.
+Construtor por defeito da classe. 
+
+
+
+Definition at line 8 of file Veiculo.\+cpp.
 
 
 
 References marca.
+
+
+
+Referenced by operator$<$$<$().
 
 \hypertarget{class_veiculo_a9cd8a208e3a1dbf1ba02281f1e97f99c}{\index{Veiculo@{Veiculo}!get\+Mes@{get\+Mes}}
 \index{get\+Mes@{get\+Mes}!Veiculo@{Veiculo}}
@@ -156,11 +320,82 @@ References marca.
 ) const}}\label{class_veiculo_a9cd8a208e3a1dbf1ba02281f1e97f99c}
 
 
-Definition at line 17 of file Veiculo.\+cpp.
+Método que retorna a lotação do veiculo. 
+
+
+
+Definition at line 18 of file Veiculo.\+cpp.
 
 
 
 References mes.
+
+\hypertarget{class_veiculo_a96eb5720c0be78eb8ed7023904c6b1be}{\index{Veiculo@{Veiculo}!get\+Modelo@{get\+Modelo}}
+\index{get\+Modelo@{get\+Modelo}!Veiculo@{Veiculo}}
+\subsubsection[{get\+Modelo}]{\setlength{\rightskip}{0pt plus 5cm}string Veiculo\+::get\+Modelo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_veiculo_a96eb5720c0be78eb8ed7023904c6b1be}
+
+
+Método que retorna a marca do veiculo. 
+
+
+
+Definition at line 13 of file Veiculo.\+cpp.
+
+
+
+References modelo.
+
+
+
+Referenced by operator$<$$<$().
+
+\hypertarget{class_veiculo_a1e72c5592016f150fec8fcede73eb536}{\index{Veiculo@{Veiculo}!load@{load}}
+\index{load@{load}!Veiculo@{Veiculo}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Veiculo\+::load (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{file, }
+\item[{vector$<$ {\bf Combustivel} $>$ $\ast$}]{combustiveis}
+\end{DoxyParamCaption}
+)}}\label{class_veiculo_a1e72c5592016f150fec8fcede73eb536}
+
+
+Método que permite alterar a cilindrada do veiculo. 
+
+
+
+Definition at line 92 of file Veiculo.\+cpp.
+
+
+
+References ano, cilindrada, combustivel, consumo, lotacao, marca, mes, and modelo.
+
+
+
+Referenced by Membro\+::load().
+
+\hypertarget{class_veiculo_a9f7396b5b6ba78f18b16192e38f501df}{\index{Veiculo@{Veiculo}!save@{save}}
+\index{save@{save}!Veiculo@{Veiculo}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Veiculo\+::save (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{file, }
+\item[{vector$<$ {\bf Combustivel} $>$ $\ast$}]{combustiveis}
+\end{DoxyParamCaption}
+)}}\label{class_veiculo_a9f7396b5b6ba78f18b16192e38f501df}
+
+
+Função que carrega a informação relativa a um veiculo contida no respectivo txt para o programa. 
+
+
+
+Definition at line 112 of file Veiculo.\+cpp.
+
+
+
+References ano, cilindrada, combustivel, consumo, lotacao, marca, mes, and modelo.
 
 \hypertarget{class_veiculo_ad71370069a5a0f587fced2c49028cdfa}{\index{Veiculo@{Veiculo}!set\+Ano@{set\+Ano}}
 \index{set\+Ano@{set\+Ano}!Veiculo@{Veiculo}}
@@ -171,7 +406,11 @@ References mes.
 )}}\label{class_veiculo_ad71370069a5a0f587fced2c49028cdfa}
 
 
-Definition at line 44 of file Veiculo.\+cpp.
+Método que permite alterar o mes do veiculo. 
+
+
+
+Definition at line 55 of file Veiculo.\+cpp.
 
 
 
@@ -186,7 +425,11 @@ References ano.
 )}}\label{class_veiculo_ad41e09a8864fc77143c30218c2441f77}
 
 
-Definition at line 56 of file Veiculo.\+cpp.
+Método que permite alterar o ano do veiculo. 
+
+
+
+Definition at line 67 of file Veiculo.\+cpp.
 
 
 
@@ -201,7 +444,11 @@ References cilindrada.
 )}}\label{class_veiculo_a885e49550f411dc99fa09ba226476679}
 
 
-Definition at line 62 of file Veiculo.\+cpp.
+Função que grava a informação relativa a um veiculo no ficheiro txt respectivo. 
+
+
+
+Definition at line 73 of file Veiculo.\+cpp.
 
 
 
@@ -216,7 +463,11 @@ References combustivel.
 )}}\label{class_veiculo_a4376b75295af584bea72db312e909d52}
 
 
-Definition at line 37 of file Veiculo.\+cpp.
+Método que retorna o combustivel do veiculo. 
+
+
+
+Definition at line 48 of file Veiculo.\+cpp.
 
 
 
@@ -231,11 +482,78 @@ References marca.
 )}}\label{class_veiculo_abce426bdb78d81f59e4bd3de01b05fea}
 
 
-Definition at line 50 of file Veiculo.\+cpp.
+Método que permite alterar a marca do veiculo. 
+
+
+
+Definition at line 61 of file Veiculo.\+cpp.
 
 
 
 References mes.
+
+\hypertarget{class_veiculo_ada18ff760e31a0ff31893eab3ac707ea}{\index{Veiculo@{Veiculo}!show@{show}}
+\index{show@{show}!Veiculo@{Veiculo}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Veiculo\+::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_veiculo_ada18ff760e31a0ff31893eab3ac707ea}
+
+
+Função que permite escolher o combustivel que queremos associar ao veiculo a partir de um vector onde estão todos os combustiveis existentes. 
+
+
+
+Definition at line 131 of file Veiculo.\+cpp.
+
+
+
+References ano, cilindrada, combustivel, consumo, marca, mes, modelo, and Combustivel\+::show().
+
+
+
+Referenced by Anuncio\+::show().
+
+
+
+Here is the call graph for this function\+:
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_veiculo_abd6e2d8cf61fd95d821137237fe1d043}{\index{Veiculo@{Veiculo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Veiculo@{Veiculo}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Veiculo} \&}]{veiculo}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_veiculo_abd6e2d8cf61fd95d821137237fe1d043}
+
+
+Função que permite editar a informação de um veiculo. 
+
+
+
+Definition at line 343 of file Veiculo.\+cpp.
+
+\hypertarget{class_veiculo_ab1e5fb7dfcdaf15014ab3363dd4f8dc1}{\index{Veiculo@{Veiculo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Veiculo@{Veiculo}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{{\bf Veiculo} $\ast$}]{veiculo}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_veiculo_ab1e5fb7dfcdaf15014ab3363dd4f8dc1}
+
+
+Overload do operador $<$$<$ que permtie a impressã no ecra dos parametros do veiculo. 
+
+
+
+Definition at line 348 of file Veiculo.\+cpp.
 
 
 
@@ -245,55 +563,88 @@ References mes.
 \subsubsection[{ano}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Veiculo\+::ano\hspace{0.3cm}{\ttfamily [private]}}}\label{class_veiculo_ae141824a9353b3f7ed99d5c34c830fe2}
 
 
-Definition at line 14 of file Veiculo.\+h.
+Definition at line 21 of file Veiculo.\+h.
 
 
 
-Referenced by get\+Ano(), set\+Ano(), and Veiculo().
+Referenced by criar(), editar(), get\+Ano(), load(), save(), set\+Ano(), and show().
 
 \hypertarget{class_veiculo_a3c3b3f2f958a98b48fa5e4f46007c9f9}{\index{Veiculo@{Veiculo}!cilindrada@{cilindrada}}
 \index{cilindrada@{cilindrada}!Veiculo@{Veiculo}}
 \subsubsection[{cilindrada}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Veiculo\+::cilindrada\hspace{0.3cm}{\ttfamily [private]}}}\label{class_veiculo_a3c3b3f2f958a98b48fa5e4f46007c9f9}
 
 
-Definition at line 15 of file Veiculo.\+h.
+Definition at line 22 of file Veiculo.\+h.
 
 
 
-Referenced by get\+Cilindrada(), set\+Cilindrada(), and Veiculo().
+Referenced by criar(), editar(), get\+Cilindrada(), load(), save(), set\+Cilindrada(), and show().
 
 \hypertarget{class_veiculo_ad8416cc9da449baed5e07ed146572712}{\index{Veiculo@{Veiculo}!combustivel@{combustivel}}
 \index{combustivel@{combustivel}!Veiculo@{Veiculo}}
 \subsubsection[{combustivel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Combustivel}$\ast$ Veiculo\+::combustivel\hspace{0.3cm}{\ttfamily [private]}}}\label{class_veiculo_ad8416cc9da449baed5e07ed146572712}
 
 
-Definition at line 16 of file Veiculo.\+h.
+Definition at line 23 of file Veiculo.\+h.
 
 
 
-Referenced by get\+Combustivel(), set\+Combustivel(), and Veiculo().
+Referenced by criar(), editar(), get\+Combustivel(), load(), save(), set\+Combustivel(), and show().
+
+\hypertarget{class_veiculo_ab403615f82fdad74215512cedce23762}{\index{Veiculo@{Veiculo}!consumo@{consumo}}
+\index{consumo@{consumo}!Veiculo@{Veiculo}}
+\subsubsection[{consumo}]{\setlength{\rightskip}{0pt plus 5cm}float Veiculo\+::consumo\hspace{0.3cm}{\ttfamily [private]}}}\label{class_veiculo_ab403615f82fdad74215512cedce23762}
+
+
+Definition at line 25 of file Veiculo.\+h.
+
+
+
+Referenced by criar(), editar(), get\+Consumo(), load(), save(), and show().
+
+\hypertarget{class_veiculo_af9dc20956b1b60e54b9a79f76cd971d3}{\index{Veiculo@{Veiculo}!lotacao@{lotacao}}
+\index{lotacao@{lotacao}!Veiculo@{Veiculo}}
+\subsubsection[{lotacao}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Veiculo\+::lotacao\hspace{0.3cm}{\ttfamily [private]}}}\label{class_veiculo_af9dc20956b1b60e54b9a79f76cd971d3}
+
+
+Definition at line 24 of file Veiculo.\+h.
+
+
+
+Referenced by criar(), editar(), get\+Lotacao(), load(), and save().
 
 \hypertarget{class_veiculo_ab20b89442a0ddaedd074bb0de75838c8}{\index{Veiculo@{Veiculo}!marca@{marca}}
 \index{marca@{marca}!Veiculo@{Veiculo}}
 \subsubsection[{marca}]{\setlength{\rightskip}{0pt plus 5cm}string Veiculo\+::marca\hspace{0.3cm}{\ttfamily [private]}}}\label{class_veiculo_ab20b89442a0ddaedd074bb0de75838c8}
 
 
-Definition at line 12 of file Veiculo.\+h.
+Definition at line 18 of file Veiculo.\+h.
 
 
 
-Referenced by get\+Marca(), set\+Marca(), and Veiculo().
+Referenced by criar(), editar(), get\+Marca(), load(), save(), set\+Marca(), and show().
 
 \hypertarget{class_veiculo_ac4146f7b3d38e31e3225074e0fb0dea9}{\index{Veiculo@{Veiculo}!mes@{mes}}
 \index{mes@{mes}!Veiculo@{Veiculo}}
 \subsubsection[{mes}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Veiculo\+::mes\hspace{0.3cm}{\ttfamily [private]}}}\label{class_veiculo_ac4146f7b3d38e31e3225074e0fb0dea9}
 
 
-Definition at line 13 of file Veiculo.\+h.
+Definition at line 20 of file Veiculo.\+h.
 
 
 
-Referenced by get\+Mes(), set\+Mes(), and Veiculo().
+Referenced by criar(), editar(), get\+Mes(), load(), save(), set\+Mes(), and show().
+
+\hypertarget{class_veiculo_a313c15811b7fffa4787eea0dcf12fc13}{\index{Veiculo@{Veiculo}!modelo@{modelo}}
+\index{modelo@{modelo}!Veiculo@{Veiculo}}
+\subsubsection[{modelo}]{\setlength{\rightskip}{0pt plus 5cm}string Veiculo\+::modelo\hspace{0.3cm}{\ttfamily [private]}}}\label{class_veiculo_a313c15811b7fffa4787eea0dcf12fc13}
+
+
+Definition at line 19 of file Veiculo.\+h.
+
+
+
+Referenced by criar(), editar(), get\+Modelo(), load(), save(), and show().
 
 
 

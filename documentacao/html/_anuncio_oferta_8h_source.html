@@ -75,30 +75,37 @@ $(document).ready(function(){initNavTree('_anuncio_oferta_8h_source.html','');})
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_anuncio_oferta.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_anuncio_oferta.html">AnuncioOferta</a>: <span class="keyword">public</span> <a class="code" href="class_anuncio.html">Anuncio</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_anuncio_oferta.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_anuncio_oferta.html">AnuncioOferta</a>: <span class="keyword">public</span> <a class="code" href="class_anuncio.html">Anuncio</a>   </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_anuncio_oferta.html#a5de28c6a5a698a5ddabcf258c3c42d3c">   12</a></span>&#160;    <a class="code" href="class_membro.html">Membro</a>* <a class="code" href="class_anuncio_oferta.html#a5de28c6a5a698a5ddabcf258c3c42d3c">anunciante</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_anuncio_oferta.html">AnuncioOferta</a>(<a class="code" href="class_membro.html">Membro</a>* anunciante);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_anuncio_oferta.html">AnuncioOferta</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_anuncio_oferta.html">AnuncioOferta</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;titulo, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;descricao, <span class="keyword">const</span> <a class="code" href="class_coordenadas.html">Coordenadas</a> &amp;origem, <span class="keyword">const</span> <a class="code" href="class_coordenadas.html">Coordenadas</a> &amp;destino, <span class="keyword">const</span> <a class="code" href="class_data.html">Data</a> &amp;dataInicio, <span class="keyword">const</span> <a class="code" href="class_data.html">Data</a> &amp;dataFim, <a class="code" href="class_preco.html">Preco</a> preco);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> setAnunciante(<a class="code" href="class_membro.html">Membro</a>* anunciante);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_membro.html">Membro</a>* getAnunciante() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_anuncio_oferta_html_a5de28c6a5a698a5ddabcf258c3c42d3c"><div class="ttname"><a href="class_anuncio_oferta.html#a5de28c6a5a698a5ddabcf258c3c42d3c">AnuncioOferta::anunciante</a></div><div class="ttdeci">Membro * anunciante</div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_oferta_8h_source.html#l00012">AnuncioOferta.h:12</a></div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> criar(<a class="code" href="class_membro.html">Membro</a> *utilizadorAtual);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">friend</span> ostream&amp; <a class="code" href="_anuncio_procura_8h.html#a367aa4dd26479577bed983ad8ef57b9b">operator&lt;&lt;</a>(ostream &amp;os, <span class="keyword">const</span> <a class="code" href="class_anuncio_oferta.html">AnuncioOferta</a> &amp;anuncio);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> editar();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> show()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00009">Data.h:9</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
 <div class="ttc" id="_anuncio_8h_html"><div class="ttname"><a href="_anuncio_8h.html">Anuncio.h</a></div></div>
-<div class="ttc" id="class_anuncio_html"><div class="ttname"><a href="class_anuncio.html">Anuncio</a></div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_8h_source.html#l00010">Anuncio.h:10</a></div></div>
-<div class="ttc" id="class_membro_html"><div class="ttname"><a href="class_membro.html">Membro</a></div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00010">Membro.h:10</a></div></div>
-<div class="ttc" id="class_anuncio_oferta_html"><div class="ttname"><a href="class_anuncio_oferta.html">AnuncioOferta</a></div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_oferta_8h_source.html#l00009">AnuncioOferta.h:9</a></div></div>
+<div class="ttc" id="class_anuncio_html"><div class="ttname"><a href="class_anuncio.html">Anuncio</a></div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_8h_source.html#l00018">Anuncio.h:18</a></div></div>
+<div class="ttc" id="_anuncio_procura_8h_html_a367aa4dd26479577bed983ad8ef57b9b"><div class="ttname"><a href="_anuncio_procura_8h.html#a367aa4dd26479577bed983ad8ef57b9b">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, pair&lt; Membro *, Preco &gt; condutorCandidato)</div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_procura_8cpp_source.html#l00122">AnuncioProcura.cpp:122</a></div></div>
+<div class="ttc" id="class_membro_html"><div class="ttname"><a href="class_membro.html">Membro</a></div><div class="ttdef"><b>Definition:</b> <a href="_membro_8h_source.html#l00013">Membro.h:13</a></div></div>
+<div class="ttc" id="class_preco_html"><div class="ttname"><a href="class_preco.html">Preco</a></div><div class="ttdef"><b>Definition:</b> <a href="_preco_8h_source.html#l00013">Preco.h:13</a></div></div>
+<div class="ttc" id="class_coordenadas_html"><div class="ttname"><a href="class_coordenadas.html">Coordenadas</a></div><div class="ttdef"><b>Definition:</b> <a href="_coordenadas_8h_source.html#l00010">Coordenadas.h:10</a></div></div>
+<div class="ttc" id="class_anuncio_oferta_html"><div class="ttname"><a href="class_anuncio_oferta.html">AnuncioOferta</a></div><div class="ttdoc">Classe derivada da classe mãe anuncio. </div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_oferta_8h_source.html#l00009">AnuncioOferta.h:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li><li class="navelem"><a class="el" href="dir_8ec053a504507d4cd016538dd4f7c72d.html">Headers</a></li><li class="navelem"><a class="el" href="_anuncio_oferta_8h.html">AnuncioOferta.h</a></li>
-    <li class="footer">Generated on Fri Oct 31 2014 14:46:32 for AEDABoleiasInteligentes by
+    <li class="footer">Generated on Sun Nov 9 2014 16:47:58 for AEDABoleiasInteligentes by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

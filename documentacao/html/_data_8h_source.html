@@ -69,39 +69,68 @@ $(document).ready(function(){initNavTree('_data_8h_source.html','');});
 <div class="contents">
 <a href="_data_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _DATA_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _DATA_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_data.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_data.html">Data</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_data.html#afd7c86fbe8808298e8ac555d15374c97">    9</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="class_data.html#afd7c86fbe8808298e8ac555d15374c97">dia</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_data.html#a52f02cba5bf54c79dc1dd93545d27e5f">   10</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="class_data.html#a52f02cba5bf54c79dc1dd93545d27e5f">mes</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_data.html#a662fc8d7cc87332b0204470c21b08383">   11</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="class_data.html#a662fc8d7cc87332b0204470c21b08383">ano</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_data.html">Data</a>(<span class="keywordtype">unsigned</span> dia, <span class="keywordtype">unsigned</span> mes, <span class="keywordtype">unsigned</span> ano);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">unsigned</span> getDia() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">unsigned</span> getMes() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">unsigned</span> getAno() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> setDia(<span class="keywordtype">unsigned</span> dia);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> setMes(<span class="keywordtype">unsigned</span> mes);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> setAno(<span class="keywordtype">unsigned</span> ano);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> operator &lt; (<span class="keyword">const</span> <a class="code" href="class_data.html">Data</a> &amp;data)<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00006">Data.h:6</a></div></div>
-<div class="ttc" id="class_data_html_a52f02cba5bf54c79dc1dd93545d27e5f"><div class="ttname"><a href="class_data.html#a52f02cba5bf54c79dc1dd93545d27e5f">Data::mes</a></div><div class="ttdeci">unsigned mes</div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00010">Data.h:10</a></div></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_input_utils_8h.html">InputUtils.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_data.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_data.html">Data</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_data.html#a71a904380d17858da0b902e9a2563546">   12</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_data.html#a71a904380d17858da0b902e9a2563546">dia</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_data.html#a586deb479ec2031a0d3ceec8280f7706">   13</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_data.html#a586deb479ec2031a0d3ceec8280f7706">mes</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_data.html#a1811fab972bdf6ed644c4eb7412bd043">   14</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_data.html#a1811fab972bdf6ed644c4eb7412bd043">ano</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_data.html">Data</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_data.html">Data</a>(<span class="keywordtype">unsigned</span> dia, <span class="keywordtype">unsigned</span> mes, <span class="keywordtype">unsigned</span> ano);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">unsigned</span> getDia() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">unsigned</span> getMes() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">unsigned</span> getAno() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> setDia(<span class="keywordtype">unsigned</span> dia);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> setMes(<span class="keywordtype">unsigned</span> mes);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> setAno(<span class="keywordtype">unsigned</span> ano);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">bool</span> operator &lt; (<span class="keyword">const</span> <a class="code" href="class_data.html">Data</a> &amp;data)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> save(ofstream &amp;file);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> load(ifstream &amp;file);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> criar();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> editar();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> isBissexto() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_data.html">Data</a> &amp;data) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">friend</span> ostream&amp; <a class="code" href="_anuncio_procura_8h.html#a367aa4dd26479577bed983ad8ef57b9b">operator&lt;&lt;</a>(ostream &amp;os, <span class="keyword">const</span> <a class="code" href="class_data.html">Data</a> &amp;data);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_data_invalida_exception.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_data_invalida_exception.html">DataInvalidaException</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_data_invalida_exception.html#af18317fc711713866d877787125c2721">   41</a></span>&#160;    T <a class="code" href="class_data_invalida_exception.html#af18317fc711713866d877787125c2721">info</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_data_invalida_exception.html#a5cee631ac6493bf3dd8a3751429c0cd0">   42</a></span>&#160;    <a class="code" href="class_data_invalida_exception.html#a5cee631ac6493bf3dd8a3751429c0cd0">DataInvalidaException</a>(T info)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        this-&gt;info = info;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_data_invalida_exception_html_af18317fc711713866d877787125c2721"><div class="ttname"><a href="class_data_invalida_exception.html#af18317fc711713866d877787125c2721">DataInvalidaException::info</a></div><div class="ttdeci">T info</div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00041">Data.h:41</a></div></div>
+<div class="ttc" id="class_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00009">Data.h:9</a></div></div>
+<div class="ttc" id="class_data_invalida_exception_html_a5cee631ac6493bf3dd8a3751429c0cd0"><div class="ttname"><a href="class_data_invalida_exception.html#a5cee631ac6493bf3dd8a3751429c0cd0">DataInvalidaException::DataInvalidaException</a></div><div class="ttdeci">DataInvalidaException(T info)</div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00042">Data.h:42</a></div></div>
+<div class="ttc" id="class_data_html_a586deb479ec2031a0d3ceec8280f7706"><div class="ttname"><a href="class_data.html#a586deb479ec2031a0d3ceec8280f7706">Data::mes</a></div><div class="ttdeci">unsigned int mes</div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00013">Data.h:13</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="class_data_html_a662fc8d7cc87332b0204470c21b08383"><div class="ttname"><a href="class_data.html#a662fc8d7cc87332b0204470c21b08383">Data::ano</a></div><div class="ttdeci">unsigned ano</div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00011">Data.h:11</a></div></div>
-<div class="ttc" id="class_data_html_afd7c86fbe8808298e8ac555d15374c97"><div class="ttname"><a href="class_data.html#afd7c86fbe8808298e8ac555d15374c97">Data::dia</a></div><div class="ttdeci">unsigned dia</div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00009">Data.h:9</a></div></div>
+<div class="ttc" id="class_data_invalida_exception_html"><div class="ttname"><a href="class_data_invalida_exception.html">DataInvalidaException</a></div><div class="ttdoc">Tratamento da excepção para quando se introduz parametros invalidos numa data. </div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00038">Data.h:38</a></div></div>
+<div class="ttc" id="_anuncio_procura_8h_html_a367aa4dd26479577bed983ad8ef57b9b"><div class="ttname"><a href="_anuncio_procura_8h.html#a367aa4dd26479577bed983ad8ef57b9b">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, pair&lt; Membro *, Preco &gt; condutorCandidato)</div><div class="ttdef"><b>Definition:</b> <a href="_anuncio_procura_8cpp_source.html#l00122">AnuncioProcura.cpp:122</a></div></div>
+<div class="ttc" id="_input_utils_8h_html"><div class="ttname"><a href="_input_utils_8h.html">InputUtils.h</a></div></div>
+<div class="ttc" id="class_data_html_a1811fab972bdf6ed644c4eb7412bd043"><div class="ttname"><a href="class_data.html#a1811fab972bdf6ed644c4eb7412bd043">Data::ano</a></div><div class="ttdeci">unsigned int ano</div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00014">Data.h:14</a></div></div>
+<div class="ttc" id="class_data_html_a71a904380d17858da0b902e9a2563546"><div class="ttname"><a href="class_data.html#a71a904380d17858da0b902e9a2563546">Data::dia</a></div><div class="ttdeci">unsigned int dia</div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00012">Data.h:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li><li class="navelem"><a class="el" href="dir_8ec053a504507d4cd016538dd4f7c72d.html">Headers</a></li><li class="navelem"><a class="el" href="_data_8h.html">Data.h</a></li>
-    <li class="footer">Generated on Fri Oct 31 2014 14:46:32 for AEDABoleiasInteligentes by
+    <li class="footer">Generated on Sun Nov 9 2014 16:47:58 for AEDABoleiasInteligentes by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

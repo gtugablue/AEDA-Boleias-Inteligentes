@@ -8,41 +8,71 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_data_ab1e8f6ca4094cbf13062f243fa2bb90b}{Data} (unsigned \hyperlink{class_data_afd7c86fbe8808298e8ac555d15374c97}{dia}, unsigned \hyperlink{class_data_a52f02cba5bf54c79dc1dd93545d27e5f}{mes}, unsigned \hyperlink{class_data_a662fc8d7cc87332b0204470c21b08383}{ano})
+\hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data} ()
 \item 
+\hyperlink{class_data_ab1e8f6ca4094cbf13062f243fa2bb90b}{Data} (unsigned \hyperlink{class_data_a71a904380d17858da0b902e9a2563546}{dia}, unsigned \hyperlink{class_data_a586deb479ec2031a0d3ceec8280f7706}{mes}, unsigned \hyperlink{class_data_a1811fab972bdf6ed644c4eb7412bd043}{ano})
+\begin{DoxyCompactList}\small\item\em Construtor por defeito da classe. \end{DoxyCompactList}\item 
 unsigned \hyperlink{class_data_a07fe748ec046cb904c6854fb8b792786}{get\+Dia} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor com parametros da classe. \end{DoxyCompactList}\item 
 unsigned \hyperlink{class_data_a070387c9894b966ec8a175e3eb3c9c06}{get\+Mes} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em método para retornar o parametro dia de uma data \end{DoxyCompactList}\item 
 unsigned \hyperlink{class_data_a31f649c5a854de4750506a163955bb0b}{get\+Ano} () const 
-\item 
-void \hyperlink{class_data_ab3ea08211198373060bfd9aa7530ddff}{set\+Dia} (unsigned \hyperlink{class_data_afd7c86fbe8808298e8ac555d15374c97}{dia})
-\item 
-void \hyperlink{class_data_ac886172612a1bd81f1d266c4f5f94377}{set\+Mes} (unsigned \hyperlink{class_data_a52f02cba5bf54c79dc1dd93545d27e5f}{mes})
-\item 
-void \hyperlink{class_data_a5ad712f23c932ee4d515213f7c66f60e}{set\+Ano} (unsigned \hyperlink{class_data_a662fc8d7cc87332b0204470c21b08383}{ano})
-\item 
+\begin{DoxyCompactList}\small\item\em método para retornar o parametro mes de uma data \end{DoxyCompactList}\item 
+void \hyperlink{class_data_ab3ea08211198373060bfd9aa7530ddff}{set\+Dia} (unsigned \hyperlink{class_data_a71a904380d17858da0b902e9a2563546}{dia})
+\begin{DoxyCompactList}\small\item\em metodo para retornar o paramentro ano de uma data \end{DoxyCompactList}\item 
+void \hyperlink{class_data_ac886172612a1bd81f1d266c4f5f94377}{set\+Mes} (unsigned \hyperlink{class_data_a586deb479ec2031a0d3ceec8280f7706}{mes})
+\begin{DoxyCompactList}\small\item\em método para alterar o dia de uma data \end{DoxyCompactList}\item 
+void \hyperlink{class_data_a5ad712f23c932ee4d515213f7c66f60e}{set\+Ano} (unsigned \hyperlink{class_data_a1811fab972bdf6ed644c4eb7412bd043}{ano})
+\begin{DoxyCompactList}\small\item\em metodo para alterar o mes de uma data \end{DoxyCompactList}\item 
 bool \hyperlink{class_data_a54019a127c7262ad527e523b98ddd26a}{operator$<$} (const \hyperlink{class_data}{Data} \&data) const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em metodo para alterar o ano de uma data \end{DoxyCompactList}\item 
+void \hyperlink{class_data_af215a52677977e69efbcab64fa9300e8}{save} (ofstream \&file)
+\begin{DoxyCompactList}\small\item\em Overload do operador $<$ para comparar datas. \end{DoxyCompactList}\item 
+void \hyperlink{class_data_a12855e1e008ed1aecd58b41727c4774b}{load} (ifstream \&file)
+\begin{DoxyCompactList}\small\item\em Função que grava a informação relativa a uma data no ficheiro correspondente. \end{DoxyCompactList}\item 
+void \hyperlink{class_data_a49854285a6916770352d131eb96e9bb6}{criar} ()
+\begin{DoxyCompactList}\small\item\em Função que carrega a informação relativa a uma data para a execução de um programa. \end{DoxyCompactList}\item 
+void \hyperlink{class_data_a825a14af1b07c88040d8bc96a4833f3a}{editar} ()
+\begin{DoxyCompactList}\small\item\em Função que permite criar uma nova data. \end{DoxyCompactList}\item 
+bool \hyperlink{class_data_a5b6b3123dc96de5969fc435f26322bc2}{is\+Bissexto} () const 
+\begin{DoxyCompactList}\small\item\em Função que permite editar uma data ja existente. \end{DoxyCompactList}\item 
+bool \hyperlink{class_data_a682016837c60b8e801d4bcee3e694039}{operator==} (const \hyperlink{class_data}{Data} \&data) const 
+\begin{DoxyCompactList}\small\item\em Função que verifica se um ano é bissexto e retorna true caso seja verdade. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-unsigned \hyperlink{class_data_afd7c86fbe8808298e8ac555d15374c97}{dia}
+unsigned int \hyperlink{class_data_a71a904380d17858da0b902e9a2563546}{dia}
 \item 
-unsigned \hyperlink{class_data_a52f02cba5bf54c79dc1dd93545d27e5f}{mes}
+unsigned int \hyperlink{class_data_a586deb479ec2031a0d3ceec8280f7706}{mes}
 \item 
-unsigned \hyperlink{class_data_a662fc8d7cc87332b0204470c21b08383}{ano}
+unsigned int \hyperlink{class_data_a1811fab972bdf6ed644c4eb7412bd043}{ano}
 \end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_data_acab3a0f9e78c85c62b0ea9348aa877d8}{operator$<$$<$} (ostream \&os, const \hyperlink{class_data}{Data} \&data)
+\begin{DoxyCompactList}\small\item\em Overload do operador de igualdade para que seja possivel comparar datas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 6 of file Data.\+h.
+Definition at line 9 of file Data.\+h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_data_af11f741cb7f587e2e495452a8905a22a}{\index{Data@{Data}!Data@{Data}}
+\index{Data@{Data}!Data@{Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}Data\+::\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_data_af11f741cb7f587e2e495452a8905a22a}
+
+
+Definition at line 3 of file Data.\+cpp.
+
 \hypertarget{class_data_ab1e8f6ca4094cbf13062f243fa2bb90b}{\index{Data@{Data}!Data@{Data}}
 \index{Data@{Data}!Data@{Data}}
 \subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}Data\+::\+Data (
@@ -54,7 +84,11 @@ Definition at line 6 of file Data.\+h.
 )}}\label{class_data_ab1e8f6ca4094cbf13062f243fa2bb90b}
 
 
-Definition at line 3 of file Data.\+cpp.
+Construtor por defeito da classe. 
+
+
+
+Definition at line 8 of file Data.\+cpp.
 
 
 
@@ -63,6 +97,62 @@ References ano, dia, and mes.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_data_a49854285a6916770352d131eb96e9bb6}{\index{Data@{Data}!criar@{criar}}
+\index{criar@{criar}!Data@{Data}}
+\subsubsection[{criar}]{\setlength{\rightskip}{0pt plus 5cm}void Data\+::criar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_data_a49854285a6916770352d131eb96e9bb6}
+
+
+Função que carrega a informação relativa a uma data para a execução de um programa. 
+
+
+
+Definition at line 95 of file Data.\+cpp.
+
+
+
+References ano, dia, Invalid\+Input\+Exception$<$ T $>$\+::info, Data\+Invalida\+Exception$<$ T $>$\+::info, is\+Bissexto(), mes, and Input\+Utils\+::read\+Int().
+
+
+
+Referenced by Anuncio\+::criar(), and editar().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_data_a825a14af1b07c88040d8bc96a4833f3a}{\index{Data@{Data}!editar@{editar}}
+\index{editar@{editar}!Data@{Data}}
+\subsubsection[{editar}]{\setlength{\rightskip}{0pt plus 5cm}void Data\+::editar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_data_a825a14af1b07c88040d8bc96a4833f3a}
+
+
+Função que permite criar uma nova data. 
+
+
+
+Definition at line 154 of file Data.\+cpp.
+
+
+
+References criar().
+
+
+
+Referenced by Anuncio\+::editar().
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_data_a31f649c5a854de4750506a163955bb0b}{\index{Data@{Data}!get\+Ano@{get\+Ano}}
 \index{get\+Ano@{get\+Ano}!Data@{Data}}
 \subsubsection[{get\+Ano}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Data\+::get\+Ano (
@@ -72,7 +162,11 @@ References ano, dia, and mes.
 ) const}}\label{class_data_a31f649c5a854de4750506a163955bb0b}
 
 
-Definition at line 20 of file Data.\+cpp.
+método para retornar o parametro mes de uma data 
+
+
+
+Definition at line 25 of file Data.\+cpp.
 
 
 
@@ -80,7 +174,7 @@ References ano.
 
 
 
-Referenced by operator$<$().
+Referenced by operator$<$(), and operator$<$$<$().
 
 \hypertarget{class_data_a07fe748ec046cb904c6854fb8b792786}{\index{Data@{Data}!get\+Dia@{get\+Dia}}
 \index{get\+Dia@{get\+Dia}!Data@{Data}}
@@ -91,7 +185,11 @@ Referenced by operator$<$().
 ) const}}\label{class_data_a07fe748ec046cb904c6854fb8b792786}
 
 
-Definition at line 10 of file Data.\+cpp.
+Construtor com parametros da classe. 
+
+
+
+Definition at line 15 of file Data.\+cpp.
 
 
 
@@ -99,7 +197,7 @@ References dia.
 
 
 
-Referenced by operator$<$().
+Referenced by operator$<$(), and operator$<$$<$().
 
 \hypertarget{class_data_a070387c9894b966ec8a175e3eb3c9c06}{\index{Data@{Data}!get\+Mes@{get\+Mes}}
 \index{get\+Mes@{get\+Mes}!Data@{Data}}
@@ -110,7 +208,11 @@ Referenced by operator$<$().
 ) const}}\label{class_data_a070387c9894b966ec8a175e3eb3c9c06}
 
 
-Definition at line 15 of file Data.\+cpp.
+método para retornar o parametro dia de uma data 
+
+
+
+Definition at line 20 of file Data.\+cpp.
 
 
 
@@ -118,7 +220,53 @@ References mes.
 
 
 
-Referenced by operator$<$().
+Referenced by operator$<$(), and operator$<$$<$().
+
+\hypertarget{class_data_a5b6b3123dc96de5969fc435f26322bc2}{\index{Data@{Data}!is\+Bissexto@{is\+Bissexto}}
+\index{is\+Bissexto@{is\+Bissexto}!Data@{Data}}
+\subsubsection[{is\+Bissexto}]{\setlength{\rightskip}{0pt plus 5cm}bool Data\+::is\+Bissexto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_data_a5b6b3123dc96de5969fc435f26322bc2}
+
+
+Função que permite editar uma data ja existente. 
+
+
+
+Definition at line 159 of file Data.\+cpp.
+
+
+
+References ano.
+
+
+
+Referenced by criar().
+
+\hypertarget{class_data_a12855e1e008ed1aecd58b41727c4774b}{\index{Data@{Data}!load@{load}}
+\index{load@{load}!Data@{Data}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Data\+::load (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_data_a12855e1e008ed1aecd58b41727c4774b}
+
+
+Função que grava a informação relativa a uma data no ficheiro correspondente. 
+
+
+
+Definition at line 85 of file Data.\+cpp.
+
+
+
+References ano, dia, and mes.
+
+
+
+Referenced by Boleia\+::load(), and Anuncio\+::load().
 
 \hypertarget{class_data_a54019a127c7262ad527e523b98ddd26a}{\index{Data@{Data}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!Data@{Data}}
@@ -129,7 +277,11 @@ Referenced by operator$<$().
 ) const}}\label{class_data_a54019a127c7262ad527e523b98ddd26a}
 
 
-Definition at line 43 of file Data.\+cpp.
+metodo para alterar o ano de uma data 
+
+
+
+Definition at line 48 of file Data.\+cpp.
 
 
 
@@ -140,6 +292,48 @@ References get\+Ano(), get\+Dia(), and get\+Mes().
 Here is the call graph for this function\+:
 
 
+\hypertarget{class_data_a682016837c60b8e801d4bcee3e694039}{\index{Data@{Data}!operator==@{operator==}}
+\index{operator==@{operator==}!Data@{Data}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Data\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+) const}}\label{class_data_a682016837c60b8e801d4bcee3e694039}
+
+
+Função que verifica se um ano é bissexto e retorna true caso seja verdade. 
+
+
+
+Definition at line 169 of file Data.\+cpp.
+
+
+
+References ano, dia, and mes.
+
+\hypertarget{class_data_af215a52677977e69efbcab64fa9300e8}{\index{Data@{Data}!save@{save}}
+\index{save@{save}!Data@{Data}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Data\+::save (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_data_af215a52677977e69efbcab64fa9300e8}
+
+
+Overload do operador $<$ para comparar datas. 
+
+
+
+Definition at line 78 of file Data.\+cpp.
+
+
+
+References ano, dia, and mes.
+
+
+
+Referenced by Boleia\+::save(), and Anuncio\+::save().
+
 \hypertarget{class_data_a5ad712f23c932ee4d515213f7c66f60e}{\index{Data@{Data}!set\+Ano@{set\+Ano}}
 \index{set\+Ano@{set\+Ano}!Data@{Data}}
 \subsubsection[{set\+Ano}]{\setlength{\rightskip}{0pt plus 5cm}void Data\+::set\+Ano (
@@ -149,7 +343,11 @@ Here is the call graph for this function\+:
 )}}\label{class_data_a5ad712f23c932ee4d515213f7c66f60e}
 
 
-Definition at line 37 of file Data.\+cpp.
+metodo para alterar o mes de uma data 
+
+
+
+Definition at line 42 of file Data.\+cpp.
 
 
 
@@ -164,7 +362,11 @@ References ano.
 )}}\label{class_data_ab3ea08211198373060bfd9aa7530ddff}
 
 
-Definition at line 25 of file Data.\+cpp.
+metodo para retornar o paramentro ano de uma data 
+
+
+
+Definition at line 30 of file Data.\+cpp.
 
 
 
@@ -179,7 +381,11 @@ References dia.
 )}}\label{class_data_ac886172612a1bd81f1d266c4f5f94377}
 
 
-Definition at line 31 of file Data.\+cpp.
+método para alterar o dia de uma data 
+
+
+
+Definition at line 36 of file Data.\+cpp.
 
 
 
@@ -187,39 +393,58 @@ References mes.
 
 
 
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_data_acab3a0f9e78c85c62b0ea9348aa877d8}{\index{Data@{Data}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Data@{Data}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_data_acab3a0f9e78c85c62b0ea9348aa877d8}
+
+
+Overload do operador de igualdade para que seja possivel comparar datas. 
+
+
+
+Definition at line 174 of file Data.\+cpp.
+
+
+
 \subsection{Member Data Documentation}
-\hypertarget{class_data_a662fc8d7cc87332b0204470c21b08383}{\index{Data@{Data}!ano@{ano}}
+\hypertarget{class_data_a1811fab972bdf6ed644c4eb7412bd043}{\index{Data@{Data}!ano@{ano}}
 \index{ano@{ano}!Data@{Data}}
-\subsubsection[{ano}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Data\+::ano\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_data_a662fc8d7cc87332b0204470c21b08383}
+\subsubsection[{ano}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Data\+::ano\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_data_a1811fab972bdf6ed644c4eb7412bd043}
 
 
-Definition at line 11 of file Data.\+h.
+Definition at line 14 of file Data.\+h.
 
 
 
-Referenced by Data(), get\+Ano(), and set\+Ano().
+Referenced by criar(), Data(), get\+Ano(), is\+Bissexto(), load(), operator==(), save(), and set\+Ano().
 
-\hypertarget{class_data_afd7c86fbe8808298e8ac555d15374c97}{\index{Data@{Data}!dia@{dia}}
+\hypertarget{class_data_a71a904380d17858da0b902e9a2563546}{\index{Data@{Data}!dia@{dia}}
 \index{dia@{dia}!Data@{Data}}
-\subsubsection[{dia}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Data\+::dia\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_data_afd7c86fbe8808298e8ac555d15374c97}
+\subsubsection[{dia}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Data\+::dia\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_data_a71a904380d17858da0b902e9a2563546}
 
 
-Definition at line 9 of file Data.\+h.
+Definition at line 12 of file Data.\+h.
 
 
 
-Referenced by Data(), get\+Dia(), and set\+Dia().
+Referenced by criar(), Data(), get\+Dia(), load(), operator==(), save(), and set\+Dia().
 
-\hypertarget{class_data_a52f02cba5bf54c79dc1dd93545d27e5f}{\index{Data@{Data}!mes@{mes}}
+\hypertarget{class_data_a586deb479ec2031a0d3ceec8280f7706}{\index{Data@{Data}!mes@{mes}}
 \index{mes@{mes}!Data@{Data}}
-\subsubsection[{mes}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Data\+::mes\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_data_a52f02cba5bf54c79dc1dd93545d27e5f}
+\subsubsection[{mes}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Data\+::mes\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_data_a586deb479ec2031a0d3ceec8280f7706}
 
 
-Definition at line 10 of file Data.\+h.
+Definition at line 13 of file Data.\+h.
 
 
 
-Referenced by Data(), get\+Mes(), and set\+Mes().
+Referenced by criar(), Data(), get\+Mes(), load(), operator==(), save(), and set\+Mes().
 
 
 

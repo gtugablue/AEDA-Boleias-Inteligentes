@@ -11,22 +11,46 @@ Inheritance diagram for Membro\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{class_membro_a29dfd4ec647ea5cdefcd11d85deb5d1d}{Membro} ()
+\item 
 \hyperlink{class_membro_a2dc48d0c0febf2d3270128734bdce7d0}{Membro} (string \hyperlink{class_membro_a2598bbe34ae32a98f41468b2202a9555}{nome}, string \hyperlink{class_membro_a42cc733ff94ec8d1bbfdacc62dfbb0e7}{utilizador}, string \hyperlink{class_membro_ae2b12fc3e91efc674c07e735edf4ac21}{password})
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor por defeito da classe. \end{DoxyCompactList}\item 
 string \hyperlink{class_membro_af7cfd42d45960183ccf1002246cb0bd2}{get\+Nome} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor com parametros da classe. \end{DoxyCompactList}\item 
 string \hyperlink{class_membro_ae124b54c2b8572e531c873788263222d}{get\+Utilizador} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Método para retornar o nome do membro. \end{DoxyCompactList}\item 
 string \hyperlink{class_membro_af9c84eb5f83b1fd64d4c542f419d6953}{get\+Password} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Método para retornar o utilizador do membro. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{class_veiculo}{Veiculo} $\ast$ $>$ \hyperlink{class_membro_afdd3c41bfc8e859bb8762516440c8144}{get\+Veiculos} ()
+\begin{DoxyCompactList}\small\item\em Método para retornar a password do membro. \end{DoxyCompactList}\item 
 void \hyperlink{class_membro_a87f95f3869ef8ce4cfaf673cff30cdcc}{set\+Nome} (string \&\hyperlink{class_membro_a2598bbe34ae32a98f41468b2202a9555}{nome})
-\item 
+\begin{DoxyCompactList}\small\item\em Método para retornar os veiculos associados a um membro. \end{DoxyCompactList}\item 
 void \hyperlink{class_membro_ac0ce078ab4d7d5a72e370ea6335e8eef}{set\+Utilizador} (string \&\hyperlink{class_membro_a42cc733ff94ec8d1bbfdacc62dfbb0e7}{utilizador})
-\item 
+\begin{DoxyCompactList}\small\item\em Método para alterar o nome de um membro. \end{DoxyCompactList}\item 
 void \hyperlink{class_membro_ab5a7b1734090d146bb39f8cfa52be006}{set\+Password} (string \&\hyperlink{class_membro_ae2b12fc3e91efc674c07e735edf4ac21}{password})
-\item 
+\begin{DoxyCompactList}\small\item\em Método para alterar o utilizador de um membro. \end{DoxyCompactList}\item 
 void \hyperlink{class_membro_ab40d72d229c4147372bd747d66176f55}{set\+Veiculos} (const vector$<$ \hyperlink{class_veiculo}{Veiculo} $>$ \&veiculo)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método para alterar a password e um membro. \end{DoxyCompactList}\item 
+void \hyperlink{class_membro_a5b553a2050694926ea081585dc041c8a}{add\+Veiculo} (\hyperlink{class_veiculo}{Veiculo} veiculo)
+\begin{DoxyCompactList}\small\item\em Método para alterar os veiculos associados a um membro. \end{DoxyCompactList}\item 
+void \hyperlink{class_membro_a9d1b070ef532a6357ecbd0bb52a2be0a}{remove\+Veiculo} (\hyperlink{class_veiculo}{Veiculo} $\ast$veiculo)
+\begin{DoxyCompactList}\small\item\em Função para adicionar um veiculo ao vector de veiculos. \end{DoxyCompactList}\item 
+void \hyperlink{class_membro_a3f6fcbde8bb6e631101e838e07240126}{load} (ifstream \&file, vector$<$ \hyperlink{class_combustivel}{Combustivel} $>$ $\ast$combustiveis)
+\begin{DoxyCompactList}\small\item\em Função para remover um veiculo. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_membro_a2a8ceaddac1fb7b0f894b1adc9315f03}{save} (ofstream \&file, vector$<$ \hyperlink{class_combustivel}{Combustivel} $>$ $\ast$combustiveis)
+\begin{DoxyCompactList}\small\item\em Função para carregar a informação de um membro. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_membro_ab88b510a234c18aa035c28f4253140b3}{signup} ()=0
+\begin{DoxyCompactList}\small\item\em Função para gravar a informação de um membro no ficheiro de membros. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_membro_a0e4aef4dc61b9f22b277591249714452}{edit} ()
+\begin{DoxyCompactList}\small\item\em Função abstrata para criar um novo utilizador da A\+P\+I. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_membro_a67dab9bc0fd069a6e3204044005c197f}{update\+Conhecidos} (vector$<$ \hyperlink{class_membro}{Membro} $\ast$ $>$ passageiros)
+\begin{DoxyCompactList}\small\item\em Função virtual para editar a informação relativa a um membro. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_membro_a9931c13a2894a9a62760a5dddb867997}{show} () const 
+\item 
+bool \hyperlink{class_membro_a2d507bc34837f55b91510a86d507d8bc}{tem\+Veiculo} () const 
+\begin{DoxyCompactList}\small\item\em Função para imprimir no ecrã toda a informação relativa a um membro. \end{DoxyCompactList}\item 
+bool \hyperlink{class_membro_a1561028d847eead98b720c339557262c}{operator==} (const \hyperlink{class_membro}{Membro} \&membro1) const 
+\begin{DoxyCompactList}\small\item\em Função para confirmar se um membro tem veiculos(retorna true caso se confirme) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -43,11 +67,22 @@ vector$<$ \hyperlink{class_veiculo}{Veiculo} $>$ \hyperlink{class_membro_a7485fc
 \subsection{Detailed Description}
 
 
-Definition at line 10 of file Membro.\+h.
+Definition at line 13 of file Membro.\+h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_membro_a29dfd4ec647ea5cdefcd11d85deb5d1d}{\index{Membro@{Membro}!Membro@{Membro}}
+\index{Membro@{Membro}!Membro@{Membro}}
+\subsubsection[{Membro}]{\setlength{\rightskip}{0pt plus 5cm}Membro\+::\+Membro (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_membro_a29dfd4ec647ea5cdefcd11d85deb5d1d}
+
+
+Definition at line 3 of file Membro.\+cpp.
+
 \hypertarget{class_membro_a2dc48d0c0febf2d3270128734bdce7d0}{\index{Membro@{Membro}!Membro@{Membro}}
 \index{Membro@{Membro}!Membro@{Membro}}
 \subsubsection[{Membro}]{\setlength{\rightskip}{0pt plus 5cm}Membro\+::\+Membro (
@@ -59,7 +94,11 @@ Definition at line 10 of file Membro.\+h.
 )}}\label{class_membro_a2dc48d0c0febf2d3270128734bdce7d0}
 
 
-Definition at line 3 of file Membro.\+cpp.
+Construtor por defeito da classe. 
+
+
+
+Definition at line 8 of file Membro.\+cpp.
 
 
 
@@ -68,6 +107,61 @@ References nome, password, and utilizador.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_membro_a5b553a2050694926ea081585dc041c8a}{\index{Membro@{Membro}!add\+Veiculo@{add\+Veiculo}}
+\index{add\+Veiculo@{add\+Veiculo}!Membro@{Membro}}
+\subsubsection[{add\+Veiculo}]{\setlength{\rightskip}{0pt plus 5cm}void Membro\+::add\+Veiculo (
+\begin{DoxyParamCaption}
+\item[{{\bf Veiculo}}]{veiculo}
+\end{DoxyParamCaption}
+)}}\label{class_membro_a5b553a2050694926ea081585dc041c8a}
+
+
+Método para alterar os veiculos associados a um membro. 
+
+
+
+Definition at line 55 of file Membro.\+cpp.
+
+
+
+References veiculos.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Veiculos\+Menu().
+
+\hypertarget{class_membro_a0e4aef4dc61b9f22b277591249714452}{\index{Membro@{Membro}!edit@{edit}}
+\index{edit@{edit}!Membro@{Membro}}
+\subsubsection[{edit}]{\setlength{\rightskip}{0pt plus 5cm}void Membro\+::edit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_membro_a0e4aef4dc61b9f22b277591249714452}
+
+
+Função abstrata para criar um novo utilizador da A\+P\+I. 
+
+
+
+Reimplemented in \hyperlink{class_empresa_a97feeb44a837e086f7aa92f8c9a1ea10}{Empresa}.
+
+
+
+Definition at line 77 of file Membro.\+cpp.
+
+
+
+References nome, password, and Input\+Utils\+::read\+Yes\+Or\+No().
+
+
+
+Referenced by Empresa\+::edit(), and Boleias\+Inteligentes\+::show\+Main\+Menu().
+
+
+
+Here is the call graph for this function\+:
+
+
 \hypertarget{class_membro_af7cfd42d45960183ccf1002246cb0bd2}{\index{Membro@{Membro}!get\+Nome@{get\+Nome}}
 \index{get\+Nome@{get\+Nome}!Membro@{Membro}}
 \subsubsection[{get\+Nome}]{\setlength{\rightskip}{0pt plus 5cm}string Membro\+::get\+Nome (
@@ -77,11 +171,19 @@ References nome, password, and utilizador.
 ) const}}\label{class_membro_af7cfd42d45960183ccf1002246cb0bd2}
 
 
-Definition at line 10 of file Membro.\+cpp.
+Construtor com parametros da classe. 
+
+
+
+Definition at line 15 of file Membro.\+cpp.
 
 
 
 References nome.
+
+
+
+Referenced by Anuncio\+::show().
 
 \hypertarget{class_membro_af9c84eb5f83b1fd64d4c542f419d6953}{\index{Membro@{Membro}!get\+Password@{get\+Password}}
 \index{get\+Password@{get\+Password}!Membro@{Membro}}
@@ -92,7 +194,11 @@ References nome.
 ) const}}\label{class_membro_af9c84eb5f83b1fd64d4c542f419d6953}
 
 
-Definition at line 20 of file Membro.\+cpp.
+Método para retornar o utilizador do membro. 
+
+
+
+Definition at line 35 of file Membro.\+cpp.
 
 
 
@@ -107,7 +213,11 @@ References password.
 ) const}}\label{class_membro_ae124b54c2b8572e531c873788263222d}
 
 
-Definition at line 15 of file Membro.\+cpp.
+Método para retornar o nome do membro. 
+
+
+
+Definition at line 20 of file Membro.\+cpp.
 
 
 
@@ -115,7 +225,129 @@ References utilizador.
 
 
 
-Referenced by Anuncio\+::aceitar\+Candidato(), and Anuncio\+::remover\+Candidato().
+Referenced by Boleias\+Inteligentes\+::show\+Login\+Menu().
+
+\hypertarget{class_membro_afdd3c41bfc8e859bb8762516440c8144}{\index{Membro@{Membro}!get\+Veiculos@{get\+Veiculos}}
+\index{get\+Veiculos@{get\+Veiculos}!Membro@{Membro}}
+\subsubsection[{get\+Veiculos}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Veiculo} $\ast$ $>$ Membro\+::get\+Veiculos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_membro_afdd3c41bfc8e859bb8762516440c8144}
+
+
+Método para retornar a password do membro. 
+
+
+
+Definition at line 25 of file Membro.\+cpp.
+
+
+
+References veiculos.
+
+
+
+Referenced by Anuncio\+Oferta\+::criar(), Boleia\+::load(), Anuncio\+::load(), Boleia\+::save(), Anuncio\+::save(), Boleias\+Inteligentes\+::show\+Anuncios\+Menu(), and Boleias\+Inteligentes\+::show\+Veiculos\+Menu().
+
+\hypertarget{class_membro_a3f6fcbde8bb6e631101e838e07240126}{\index{Membro@{Membro}!load@{load}}
+\index{load@{load}!Membro@{Membro}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Membro\+::load (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{file, }
+\item[{vector$<$ {\bf Combustivel} $>$ $\ast$}]{combustiveis}
+\end{DoxyParamCaption}
+)}}\label{class_membro_a3f6fcbde8bb6e631101e838e07240126}
+
+
+Função para remover um veiculo. 
+
+
+
+Definition at line 93 of file Membro.\+cpp.
+
+
+
+References Veiculo\+::load(), nome, password, utilizador, and veiculos.
+
+
+
+Referenced by Boleias\+Inteligentes\+::load\+Membros().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_membro_a1561028d847eead98b720c339557262c}{\index{Membro@{Membro}!operator==@{operator==}}
+\index{operator==@{operator==}!Membro@{Membro}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Membro\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Membro} \&}]{membro1}
+\end{DoxyParamCaption}
+) const}}\label{class_membro_a1561028d847eead98b720c339557262c}
+
+
+Função para confirmar se um membro tem veiculos(retorna true caso se confirme) 
+
+
+
+Definition at line 72 of file Membro.\+cpp.
+
+
+
+References utilizador.
+
+\hypertarget{class_membro_a9d1b070ef532a6357ecbd0bb52a2be0a}{\index{Membro@{Membro}!remove\+Veiculo@{remove\+Veiculo}}
+\index{remove\+Veiculo@{remove\+Veiculo}!Membro@{Membro}}
+\subsubsection[{remove\+Veiculo}]{\setlength{\rightskip}{0pt plus 5cm}void Membro\+::remove\+Veiculo (
+\begin{DoxyParamCaption}
+\item[{{\bf Veiculo} $\ast$}]{veiculo}
+\end{DoxyParamCaption}
+)}}\label{class_membro_a9d1b070ef532a6357ecbd0bb52a2be0a}
+
+
+Função para adicionar um veiculo ao vector de veiculos. 
+
+
+
+Definition at line 60 of file Membro.\+cpp.
+
+
+
+References veiculos.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Veiculos\+Menu().
+
+\hypertarget{class_membro_a2a8ceaddac1fb7b0f894b1adc9315f03}{\index{Membro@{Membro}!save@{save}}
+\index{save@{save}!Membro@{Membro}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Membro\+::save (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{file, }
+\item[{vector$<$ {\bf Combustivel} $>$ $\ast$}]{combustiveis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_membro_a2a8ceaddac1fb7b0f894b1adc9315f03}
+
+
+Função para carregar a informação de um membro. 
+
+
+
+Reimplemented in \hyperlink{class_particular_a3925d68794b2e91a9c46346e5110b013}{Particular}, and \hyperlink{class_empresa_a508c9c178a2933255eadc7955d3f8089}{Empresa}.
+
+
+
+Definition at line 109 of file Membro.\+cpp.
+
+
+
+References nome, password, utilizador, and veiculos.
+
+
+
+Referenced by Empresa\+::save(), and Particular\+::save().
 
 \hypertarget{class_membro_a87f95f3869ef8ce4cfaf673cff30cdcc}{\index{Membro@{Membro}!set\+Nome@{set\+Nome}}
 \index{set\+Nome@{set\+Nome}!Membro@{Membro}}
@@ -126,11 +358,19 @@ Referenced by Anuncio\+::aceitar\+Candidato(), and Anuncio\+::remover\+Candidato
 )}}\label{class_membro_a87f95f3869ef8ce4cfaf673cff30cdcc}
 
 
-Definition at line 25 of file Membro.\+cpp.
+Método para retornar os veiculos associados a um membro. 
+
+
+
+Definition at line 40 of file Membro.\+cpp.
 
 
 
 References nome.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Login\+Menu().
 
 \hypertarget{class_membro_ab5a7b1734090d146bb39f8cfa52be006}{\index{Membro@{Membro}!set\+Password@{set\+Password}}
 \index{set\+Password@{set\+Password}!Membro@{Membro}}
@@ -141,11 +381,19 @@ References nome.
 )}}\label{class_membro_ab5a7b1734090d146bb39f8cfa52be006}
 
 
-Definition at line 30 of file Membro.\+cpp.
+Método para alterar o utilizador de um membro. 
+
+
+
+Definition at line 45 of file Membro.\+cpp.
 
 
 
 References password.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Login\+Menu().
 
 \hypertarget{class_membro_ac0ce078ab4d7d5a72e370ea6335e8eef}{\index{Membro@{Membro}!set\+Utilizador@{set\+Utilizador}}
 \index{set\+Utilizador@{set\+Utilizador}!Membro@{Membro}}
@@ -156,11 +404,19 @@ References password.
 )}}\label{class_membro_ac0ce078ab4d7d5a72e370ea6335e8eef}
 
 
-Definition at line 35 of file Membro.\+cpp.
+Método para alterar o nome de um membro. 
+
+
+
+Definition at line 50 of file Membro.\+cpp.
 
 
 
 References utilizador.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Login\+Menu().
 
 \hypertarget{class_membro_ab40d72d229c4147372bd747d66176f55}{\index{Membro@{Membro}!set\+Veiculos@{set\+Veiculos}}
 \index{set\+Veiculos@{set\+Veiculos}!Membro@{Membro}}
@@ -171,46 +427,134 @@ References utilizador.
 )}}\label{class_membro_ab40d72d229c4147372bd747d66176f55}
 
 
+Método para alterar a password e um membro. 
+
+\hypertarget{class_membro_a9931c13a2894a9a62760a5dddb867997}{\index{Membro@{Membro}!show@{show}}
+\index{show@{show}!Membro@{Membro}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Membro\+::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_membro_a9931c13a2894a9a62760a5dddb867997}
+
+
+Reimplemented in \hyperlink{class_empresa_a707dc497843f63a2d094fb6871fa5b7d}{Empresa}.
+
+
+
+Definition at line 121 of file Membro.\+cpp.
+
+
+
+References nome, and utilizador.
+
+
+
+Referenced by Empresa\+::show(), and Boleia\+::show().
+
+\hypertarget{class_membro_ab88b510a234c18aa035c28f4253140b3}{\index{Membro@{Membro}!signup@{signup}}
+\index{signup@{signup}!Membro@{Membro}}
+\subsubsection[{signup}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Membro\+::signup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_membro_ab88b510a234c18aa035c28f4253140b3}
+
+
+Função para gravar a informação de um membro no ficheiro de membros. 
+
+
+
+Implemented in \hyperlink{class_particular_aa8459c54108da82bb5ae21f2779c53da}{Particular}, and \hyperlink{class_empresa_a93293b79b5b56973c3a3d3880d325c14}{Empresa}.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Login\+Menu().
+
+\hypertarget{class_membro_a2d507bc34837f55b91510a86d507d8bc}{\index{Membro@{Membro}!tem\+Veiculo@{tem\+Veiculo}}
+\index{tem\+Veiculo@{tem\+Veiculo}!Membro@{Membro}}
+\subsubsection[{tem\+Veiculo}]{\setlength{\rightskip}{0pt plus 5cm}bool Membro\+::tem\+Veiculo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_membro_a2d507bc34837f55b91510a86d507d8bc}
+
+
+Função para imprimir no ecrã toda a informação relativa a um membro. 
+
+
+
+Definition at line 127 of file Membro.\+cpp.
+
+
+
+References veiculos.
+
+\hypertarget{class_membro_a67dab9bc0fd069a6e3204044005c197f}{\index{Membro@{Membro}!update\+Conhecidos@{update\+Conhecidos}}
+\index{update\+Conhecidos@{update\+Conhecidos}!Membro@{Membro}}
+\subsubsection[{update\+Conhecidos}]{\setlength{\rightskip}{0pt plus 5cm}void Membro\+::update\+Conhecidos (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Membro} $\ast$ $>$}]{passageiros}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_membro_a67dab9bc0fd069a6e3204044005c197f}
+
+
+Função virtual para editar a informação relativa a um membro. 
+
+
+
+Reimplemented in \hyperlink{class_particular_a544f2ee62236cd4734aa6a7e9848fbae}{Particular}.
+
+
+
+Definition at line 132 of file Membro.\+cpp.
+
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_membro_a2598bbe34ae32a98f41468b2202a9555}{\index{Membro@{Membro}!nome@{nome}}
 \index{nome@{nome}!Membro@{Membro}}
 \subsubsection[{nome}]{\setlength{\rightskip}{0pt plus 5cm}string Membro\+::nome\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_membro_a2598bbe34ae32a98f41468b2202a9555}
 
 
-Definition at line 13 of file Membro.\+h.
+Definition at line 16 of file Membro.\+h.
 
 
 
-Referenced by get\+Nome(), Membro(), and set\+Nome().
+Referenced by edit(), get\+Nome(), load(), Membro(), save(), set\+Nome(), Particular\+::show(), and show().
 
 \hypertarget{class_membro_ae2b12fc3e91efc674c07e735edf4ac21}{\index{Membro@{Membro}!password@{password}}
 \index{password@{password}!Membro@{Membro}}
 \subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}string Membro\+::password\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_membro_ae2b12fc3e91efc674c07e735edf4ac21}
 
 
-Definition at line 15 of file Membro.\+h.
+Definition at line 18 of file Membro.\+h.
 
 
 
-Referenced by get\+Password(), Membro(), and set\+Password().
+Referenced by edit(), get\+Password(), load(), Membro(), save(), and set\+Password().
 
 \hypertarget{class_membro_a42cc733ff94ec8d1bbfdacc62dfbb0e7}{\index{Membro@{Membro}!utilizador@{utilizador}}
 \index{utilizador@{utilizador}!Membro@{Membro}}
 \subsubsection[{utilizador}]{\setlength{\rightskip}{0pt plus 5cm}string Membro\+::utilizador\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_membro_a42cc733ff94ec8d1bbfdacc62dfbb0e7}
 
 
-Definition at line 14 of file Membro.\+h.
+Definition at line 17 of file Membro.\+h.
 
 
 
-Referenced by get\+Utilizador(), Membro(), and set\+Utilizador().
+Referenced by get\+Utilizador(), load(), Membro(), operator==(), save(), set\+Utilizador(), Particular\+::show(), and show().
 
 \hypertarget{class_membro_a7485fc8a9f992a05662866f19b22f74a}{\index{Membro@{Membro}!veiculos@{veiculos}}
 \index{veiculos@{veiculos}!Membro@{Membro}}
 \subsubsection[{veiculos}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Veiculo}$>$ Membro\+::veiculos\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_membro_a7485fc8a9f992a05662866f19b22f74a}
 
 
-Definition at line 16 of file Membro.\+h.
+Definition at line 19 of file Membro.\+h.
+
+
+
+Referenced by add\+Veiculo(), get\+Veiculos(), load(), remove\+Veiculo(), save(), Particular\+::show(), and tem\+Veiculo().
 
 
 

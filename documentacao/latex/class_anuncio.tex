@@ -14,110 +14,251 @@ Collaboration diagram for Anuncio\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_anuncio_a9234fed1e72396ea1c304919c0ed2a3a}{Anuncio} (const string \&\hyperlink{class_anuncio_adb34bedd8220f42b9ee37662c21313e6}{titulo}, const string \&\hyperlink{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}{descricao}, float \hyperlink{class_anuncio_a8ba7cc797b8b582c596038a17e9bce3b}{preco\+Total}, \hyperlink{class_viagem}{Viagem} $\ast$\hyperlink{class_anuncio_aa225374a19420f56f5abc258d96b691a}{viagem})
+\hyperlink{class_anuncio_a97da342f390c8ee647d60cf29a923667}{Anuncio} ()
 \item 
+\hyperlink{class_anuncio_ad0adf24f36f64c2c786871e8f29ad8b5}{Anuncio} (const string \&\hyperlink{class_anuncio_adb34bedd8220f42b9ee37662c21313e6}{titulo}, const string \&\hyperlink{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}{descricao}, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_anuncio_a9b3f8ac29ebf2a44e24ea2273064a7f5}{origem}, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_anuncio_acdac86595f84cfb8a2bf54c414857168}{destino}, const \hyperlink{class_data}{Data} \&\hyperlink{class_anuncio_abeb7d8c5fe5e7d127005044981a3cd3d}{data\+Inicio}, const \hyperlink{class_data}{Data} \&\hyperlink{class_anuncio_ac3b9182cc541cb68215f8aa09fb0e11a}{data\+Fim})
+\begin{DoxyCompactList}\small\item\em Construtor sem parâmetros. \end{DoxyCompactList}\item 
 string \hyperlink{class_anuncio_af712423e3645f7127f987d88793127d4}{get\+Titulo} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor com parâmetros. \end{DoxyCompactList}\item 
 string \hyperlink{class_anuncio_a693f59391a620851b4ac37063e8f4af4}{get\+Descricao} () const 
-\item 
-\hyperlink{class_coordenadas}{Coordenadas} \hyperlink{class_anuncio_a4a0c6be721a7fe4351cd5fa06b8bafcd}{get\+Origem} () const 
-\item 
-\hyperlink{class_coordenadas}{Coordenadas} \hyperlink{class_anuncio_a207905709390f67bb9546e4d94682bb5}{get\+Destino} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Método para obter o titulo do anuncio. \end{DoxyCompactList}\item 
+\hyperlink{class_membro}{Membro} $\ast$ \hyperlink{class_anuncio_a35c4c8b294b3bdda618a6a0708bf4647}{get\+Anunciante} () const 
+\begin{DoxyCompactList}\small\item\em Método para obter a descrição do anuncio. \end{DoxyCompactList}\item 
 void \hyperlink{class_anuncio_af95db56a1347160ef1cf53ea1ec659a6}{set\+Titulo} (const string \&\hyperlink{class_anuncio_adb34bedd8220f42b9ee37662c21313e6}{titulo})
-\item 
+\begin{DoxyCompactList}\small\item\em Método para obter o membro responsavel pelo \hyperlink{class_anuncio}{Anuncio}. \end{DoxyCompactList}\item 
+void \hyperlink{class_anuncio_acf4d8a46abfa73a073f7df39b2601e17}{set\+Veiculo} (\hyperlink{class_veiculo}{Veiculo} $\ast$\hyperlink{class_anuncio_a3cffe1ce2024500bddaf07bd0f7ecc81}{veiculo})
+\begin{DoxyCompactList}\small\item\em Método para alterar o titulo. \end{DoxyCompactList}\item 
+\hyperlink{class_veiculo}{Veiculo} $\ast$ \hyperlink{class_anuncio_ae68f4b30d497dbccf1e3ab5f83b140da}{get\+Veiculo} ()
+\begin{DoxyCompactList}\small\item\em Método para alteras as informações do veículo. \end{DoxyCompactList}\item 
+\hyperlink{class_membro}{Membro} $\ast$ \hyperlink{class_anuncio_a6344f8ce7de909f6841429ac14b97b7a}{get\+Condutor} ()
+\begin{DoxyCompactList}\small\item\em Método para obter o veiculo do \hyperlink{class_anuncio}{Anuncio}. \end{DoxyCompactList}\item 
+\hyperlink{class_preco}{Preco} $\ast$ \hyperlink{class_anuncio_a566dfb63e64851909367d5136963670d}{get\+Preco} ()
+\begin{DoxyCompactList}\small\item\em Método para obter o condutor do veiculo. \end{DoxyCompactList}\item 
+\hyperlink{class_hora}{Hora} \hyperlink{class_anuncio_a8850dd9d778dfe5ea92268f654d7b563}{get\+Hora} () const 
+\begin{DoxyCompactList}\small\item\em Método para obter o preço discriminado do \hyperlink{class_anuncio}{Anuncio} de \hyperlink{class_boleia}{Boleia}. \end{DoxyCompactList}\item 
+\hyperlink{class_data}{Data} \hyperlink{class_anuncio_a7d85e1cf72f81a767ca666cb17ef88ac}{get\+Data\+Inicio} () const 
+\begin{DoxyCompactList}\small\item\em Método para obter a hora de inicio da \hyperlink{class_boleia}{Boleia}. \end{DoxyCompactList}\item 
+\hyperlink{class_data}{Data} \hyperlink{class_anuncio_a2e5adcc932f13615ab7bfc1e69964d4e}{get\+Data\+Fim} () const 
+\begin{DoxyCompactList}\small\item\em Método para obter a data de inicio do anuncio. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{class_particular}{Particular} $\ast$ $>$ \hyperlink{class_anuncio_a5dcd647bd001e6ccced77ffc213434f6}{get\+Passageiros} ()
+\begin{DoxyCompactList}\small\item\em Método para obter a data de fim do anuncio. \end{DoxyCompactList}\item 
+void \hyperlink{class_anuncio_aaede8d69a67be68cd3d8bfa0935f068b}{set\+Condutor} (\hyperlink{class_membro}{Membro} $\ast$membro)
+\begin{DoxyCompactList}\small\item\em Método para obter os passageiros ja instalados no veiculo. \end{DoxyCompactList}\item 
+void \hyperlink{class_anuncio_a2d6b1de1396b3ac962931dea7f50af3a}{set\+Preco} (const \hyperlink{class_preco}{Preco} \&\hyperlink{class_anuncio_aa780fd8e07586a3af117fd20593fb1b4}{preco})
+\begin{DoxyCompactList}\small\item\em Método para alterar o condutor. \end{DoxyCompactList}\item 
+\hyperlink{class_coordenadas}{Coordenadas} \hyperlink{class_anuncio_ac0f21112a31b6812a3128d9cac198c42}{get\+Origem} ()
+\begin{DoxyCompactList}\small\item\em Método para alterar o preço do anuncio. \end{DoxyCompactList}\item 
+\hyperlink{class_coordenadas}{Coordenadas} \hyperlink{class_anuncio_a12f2d6fa24c7255bb608e4c653740bb8}{get\+Destino} ()
+\begin{DoxyCompactList}\small\item\em Método que retorna as coordenadas do local de inicio da \hyperlink{class_boleia}{Boleia}. \end{DoxyCompactList}\item 
 void \hyperlink{class_anuncio_a8746d4708c5622947b17385414320e88}{set\+Descricao} (const string \&\hyperlink{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}{descricao})
-\item 
-void \hyperlink{class_anuncio_ac88555aa5c54bc552eb6a31787334e39}{set\+Origem} (\hyperlink{class_coordenadas}{Coordenadas} \&o) const 
-\item 
-void \hyperlink{class_anuncio_add212eaa271e366dccaa82a8f2bee736}{set\+Destino} (\hyperlink{class_coordenadas}{Coordenadas} \&d) const 
-\item 
-void \hyperlink{class_anuncio_a0c9937cd0d6f4748031e5aec7b61d496}{adicionar\+Candidato} (\hyperlink{class_particular}{Particular} $\ast$candidato)
-\item 
-void \hyperlink{class_anuncio_a3b7642bf06c1aa75dada38c7d015cb8d}{aceitar\+Candidato} (\hyperlink{class_particular}{Particular} $\ast$candidato)
-\item 
-void \hyperlink{class_anuncio_a755de86be5f1b66d66a6ddbe3f217246}{remover\+Candidato} (\hyperlink{class_particular}{Particular} $\ast$candidato)
-\item 
+\begin{DoxyCompactList}\small\item\em Método que retorna as coordenadas do local onde termina a \hyperlink{class_boleia}{Boleia}. \end{DoxyCompactList}\item 
+void \hyperlink{class_anuncio_ae0b9bb731a6bf78af45ac2e77ad9e69b}{set\+Anunciante} (\hyperlink{class_membro}{Membro} $\ast$membro)
+\begin{DoxyCompactList}\small\item\em Método para alterar a descrição do anuncio. \end{DoxyCompactList}\item 
+void \hyperlink{class_anuncio_ae923c9a29c91a103aecd705824f198aa}{add\+Passageiro} (\hyperlink{class_particular}{Particular} $\ast$membro)
+\begin{DoxyCompactList}\small\item\em Método para alterar o anunciante. \end{DoxyCompactList}\item 
 void \hyperlink{class_anuncio_ac49d84d1a011803f9676f1e47c252125}{calcular\+Preco\+Total} ()
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
+\begin{DoxyCompactList}\small\item\em Função para adicionar um passageiro á viagem. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_anuncio_a71729dba796d57356afe20eff021c2d5}{show} () const 
+\begin{DoxyCompactList}\small\item\em Função para calcular o preço final com todos os custos ja associados. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_anuncio_a58f1190bb4a2f1743ee76109be853e31}{load} (ifstream \&file, vector$<$ \hyperlink{class_membro}{Membro} $\ast$ $>$ $\ast$membros)
+\begin{DoxyCompactList}\small\item\em Função que mostra no ecrã da consola toda a informação de um determinado anuncio. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_anuncio_a66e74841f18c8c0f95b4f3b66ce77797}{save} (ofstream \&file, vector$<$ \hyperlink{class_membro}{Membro} $\ast$ $>$ $\ast$membros)
+\begin{DoxyCompactList}\small\item\em Função virtual que carrega de um ficheiro para o vector toda a informação do anuncio. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_anuncio_a00fb20c3afcd57ef4edc07a09526bde4}{criar} (\hyperlink{class_membro}{Membro} $\ast$utilizador\+Atual)
+\begin{DoxyCompactList}\small\item\em Função virtual que grava a informação do anuncio no ficheiro de anuncios. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_anuncio_a82600e3de68746059d60206df6ceee56}{editar} ()=0
+\begin{DoxyCompactList}\small\item\em Função virtual responsavel por criar um anuncio. \end{DoxyCompactList}\item 
+bool \hyperlink{class_anuncio_a88bacb9aa1be4db0dfc8b8ce0c04b593}{is\+Pronto} () const 
+\begin{DoxyCompactList}\small\item\em Função responsavel por editar as componentes de um anuncio. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_anuncio_a3267758a53d30c2a825ddf7e7cd3d8bd}{pode\+Ser\+Passageiro} (\hyperlink{class_membro}{Membro} $\ast$membro) const 
+\begin{DoxyCompactList}\small\item\em Funçao que confirma se o anuncio já tem condutor e veiculo,ou seja, se já está pronto para começar a viagem. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_anuncio_ab2d7036cd0fbfd2c0eb8078006ca836e}{pode\+Ser\+Condutor} (\hyperlink{class_membro}{Membro} $\ast$membro) const 
+\begin{DoxyCompactList}\small\item\em Função responsavel por determinar se um determinado membro é passageiro.\+Se o for retorna true. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_anuncio_aedc37e812bc9aa7ca401716c1326cfb5}{update\+Conhecidos} ()
+\begin{DoxyCompactList}\small\item\em Funçao responsavel por determinar se um determinado membro é condutor.\+Se o for retorna true. \end{DoxyCompactList}\item 
+double \hyperlink{class_anuncio_a3a56180c8250d42d8c4d5ae4d834634b}{calcular\+Friend\+Points} (const \hyperlink{class_particular}{Particular} $\ast$utilizador\+Atual) const 
+\begin{DoxyCompactList}\small\item\em Função que da update aos conhecidos. \end{DoxyCompactList}\item 
+double \hyperlink{class_anuncio_aa432828d0e8b6d84fc284d24fa920911}{calcular\+Distancia\+Points} (const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_anuncio_a9b3f8ac29ebf2a44e24ea2273064a7f5}{origem}, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_anuncio_acdac86595f84cfb8a2bf54c414857168}{destino}) const 
+\begin{DoxyCompactList}\small\item\em Função que calcula os pontos obtidos por um membro de acordo com os conhecidos que posssui e com o numero de vezes que ja viajou com cada conhecido. \end{DoxyCompactList}\item 
+double \hyperlink{class_anuncio_adbede34af2bb9824ec0811d4a85cc035}{calcular\+Anuncio\+Points} (const \hyperlink{class_particular}{Particular} $\ast$utilizador\+Atual, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_anuncio_a9b3f8ac29ebf2a44e24ea2273064a7f5}{origem}, const \hyperlink{class_coordenadas}{Coordenadas} \&\hyperlink{class_anuncio_acdac86595f84cfb8a2bf54c414857168}{destino}) const 
+\begin{DoxyCompactList}\small\item\em Função chave para organizar os anuncios por distância pois organiza os pontos atribuidos de acordo com a distancia a que esta do utilizador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 string \hyperlink{class_anuncio_adb34bedd8220f42b9ee37662c21313e6}{titulo}
 \item 
 string \hyperlink{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}{descricao}
 \item 
-vector$<$ \hyperlink{class_particular}{Particular} $\ast$ $>$ \hyperlink{class_anuncio_a387f6bd1b88720d5cf0b53462e5dc0aa}{candidatos}
+\hyperlink{class_coordenadas}{Coordenadas} \hyperlink{class_anuncio_a9b3f8ac29ebf2a44e24ea2273064a7f5}{origem}
 \item 
-float \hyperlink{class_anuncio_a8ba7cc797b8b582c596038a17e9bce3b}{preco\+Total}
+\hyperlink{class_coordenadas}{Coordenadas} \hyperlink{class_anuncio_acdac86595f84cfb8a2bf54c414857168}{destino}
 \item 
-\hyperlink{class_viagem}{Viagem} $\ast$ \hyperlink{class_anuncio_aa225374a19420f56f5abc258d96b691a}{viagem}
+vector$<$ \hyperlink{class_particular}{Particular} $\ast$ $>$ \hyperlink{class_anuncio_a76cdb1291df7bd8736141304d759ef35}{passageiros}
+\item 
+\hyperlink{class_data}{Data} \hyperlink{class_anuncio_abeb7d8c5fe5e7d127005044981a3cd3d}{data\+Inicio}
+\begin{DoxyCompactList}\small\item\em Número total de pessoas no veículo = passageiros + 1 (condutor) \end{DoxyCompactList}\item 
+\hyperlink{class_data}{Data} \hyperlink{class_anuncio_ac3b9182cc541cb68215f8aa09fb0e11a}{data\+Fim}
+\item 
+\hyperlink{class_membro}{Membro} $\ast$ \hyperlink{class_anuncio_a58250bfc8ab82d4308839b1e26213a0f}{anunciante}
+\begin{DoxyCompactList}\small\item\em se for igual ao inicio é um evento \end{DoxyCompactList}\item 
+\hyperlink{class_membro}{Membro} $\ast$ \hyperlink{class_anuncio_a8771818ef0855c6b70e2aca6c89e3177}{condutor}
+\item 
+\hyperlink{class_veiculo}{Veiculo} $\ast$ \hyperlink{class_anuncio_a3cffe1ce2024500bddaf07bd0f7ecc81}{veiculo}
+\item 
+\hyperlink{class_preco}{Preco} \hyperlink{class_anuncio_aa780fd8e07586a3af117fd20593fb1b4}{preco}
+\item 
+\hyperlink{class_hora}{Hora} \hyperlink{class_anuncio_aee851839cb45594b8ee550a032236cfe}{hora}
 \end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_anuncio_a210dcebbee42a02d8b82245fd2a579af}{operator$<$$<$} (ostream \&os, \hyperlink{class_anuncio}{Anuncio} $\ast$anuncio)
+\begin{DoxyCompactList}\small\item\em Calcula o rsultado final entre os friend points e a distancia para ordenar os anuncios. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 10 of file Anuncio.\+h.
+Definition at line 18 of file Anuncio.\+h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_anuncio_a9234fed1e72396ea1c304919c0ed2a3a}{\index{Anuncio@{Anuncio}!Anuncio@{Anuncio}}
+\hypertarget{class_anuncio_a97da342f390c8ee647d60cf29a923667}{\index{Anuncio@{Anuncio}!Anuncio@{Anuncio}}
+\index{Anuncio@{Anuncio}!Anuncio@{Anuncio}}
+\subsubsection[{Anuncio}]{\setlength{\rightskip}{0pt plus 5cm}Anuncio\+::\+Anuncio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_anuncio_a97da342f390c8ee647d60cf29a923667}
+
+
+Definition at line 3 of file Anuncio.\+cpp.
+
+\hypertarget{class_anuncio_ad0adf24f36f64c2c786871e8f29ad8b5}{\index{Anuncio@{Anuncio}!Anuncio@{Anuncio}}
 \index{Anuncio@{Anuncio}!Anuncio@{Anuncio}}
 \subsubsection[{Anuncio}]{\setlength{\rightskip}{0pt plus 5cm}Anuncio\+::\+Anuncio (
 \begin{DoxyParamCaption}
 \item[{const string \&}]{titulo, }
 \item[{const string \&}]{descricao, }
-\item[{float}]{preco\+Total, }
-\item[{{\bf Viagem} $\ast$}]{viagem}
+\item[{const {\bf Coordenadas} \&}]{origem, }
+\item[{const {\bf Coordenadas} \&}]{destino, }
+\item[{const {\bf Data} \&}]{data\+Inicio, }
+\item[{const {\bf Data} \&}]{data\+Fim}
 \end{DoxyParamCaption}
-)}}\label{class_anuncio_a9234fed1e72396ea1c304919c0ed2a3a}
+)}}\label{class_anuncio_ad0adf24f36f64c2c786871e8f29ad8b5}
 
 
-Definition at line 3 of file Anuncio.\+cpp.
+Construtor sem parâmetros. 
 
 
 
-References descricao, preco\+Total, titulo, and viagem.
+Definition at line 8 of file Anuncio.\+cpp.
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_anuncio_a3b7642bf06c1aa75dada38c7d015cb8d}{\index{Anuncio@{Anuncio}!aceitar\+Candidato@{aceitar\+Candidato}}
-\index{aceitar\+Candidato@{aceitar\+Candidato}!Anuncio@{Anuncio}}
-\subsubsection[{aceitar\+Candidato}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::aceitar\+Candidato (
+\hypertarget{class_anuncio_ae923c9a29c91a103aecd705824f198aa}{\index{Anuncio@{Anuncio}!add\+Passageiro@{add\+Passageiro}}
+\index{add\+Passageiro@{add\+Passageiro}!Anuncio@{Anuncio}}
+\subsubsection[{add\+Passageiro}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::add\+Passageiro (
 \begin{DoxyParamCaption}
-\item[{{\bf Particular} $\ast$}]{candidato}
+\item[{{\bf Particular} $\ast$}]{membro}
 \end{DoxyParamCaption}
-)}}\label{class_anuncio_a3b7642bf06c1aa75dada38c7d015cb8d}
+)}}\label{class_anuncio_ae923c9a29c91a103aecd705824f198aa}
 
 
-Definition at line 57 of file Anuncio.\+cpp.
+Método para alterar o anunciante. 
 
 
 
-References candidatos, and Membro\+::get\+Utilizador().
+Definition at line 103 of file Anuncio.\+cpp.
+
+
+
+References passageiros.
+
+\hypertarget{class_anuncio_adbede34af2bb9824ec0811d4a85cc035}{\index{Anuncio@{Anuncio}!calcular\+Anuncio\+Points@{calcular\+Anuncio\+Points}}
+\index{calcular\+Anuncio\+Points@{calcular\+Anuncio\+Points}!Anuncio@{Anuncio}}
+\subsubsection[{calcular\+Anuncio\+Points}]{\setlength{\rightskip}{0pt plus 5cm}double Anuncio\+::calcular\+Anuncio\+Points (
+\begin{DoxyParamCaption}
+\item[{const {\bf Particular} $\ast$}]{utilizador\+Atual, }
+\item[{const {\bf Coordenadas} \&}]{origem, }
+\item[{const {\bf Coordenadas} \&}]{destino}
+\end{DoxyParamCaption}
+) const}}\label{class_anuncio_adbede34af2bb9824ec0811d4a85cc035}
+
+
+Função chave para organizar os anuncios por distância pois organiza os pontos atribuidos de acordo com a distancia a que esta do utilizador. 
+
+
+
+Definition at line 435 of file Anuncio.\+cpp.
+
+
+
+References calcular\+Distancia\+Points(), and calcular\+Friend\+Points().
 
 
 
 Here is the call graph for this function\+:
 
 
-\hypertarget{class_anuncio_a0c9937cd0d6f4748031e5aec7b61d496}{\index{Anuncio@{Anuncio}!adicionar\+Candidato@{adicionar\+Candidato}}
-\index{adicionar\+Candidato@{adicionar\+Candidato}!Anuncio@{Anuncio}}
-\subsubsection[{adicionar\+Candidato}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::adicionar\+Candidato (
+\hypertarget{class_anuncio_aa432828d0e8b6d84fc284d24fa920911}{\index{Anuncio@{Anuncio}!calcular\+Distancia\+Points@{calcular\+Distancia\+Points}}
+\index{calcular\+Distancia\+Points@{calcular\+Distancia\+Points}!Anuncio@{Anuncio}}
+\subsubsection[{calcular\+Distancia\+Points}]{\setlength{\rightskip}{0pt plus 5cm}double Anuncio\+::calcular\+Distancia\+Points (
 \begin{DoxyParamCaption}
-\item[{{\bf Particular} $\ast$}]{candidato}
+\item[{const {\bf Coordenadas} \&}]{origem, }
+\item[{const {\bf Coordenadas} \&}]{destino}
 \end{DoxyParamCaption}
-)}}\label{class_anuncio_a0c9937cd0d6f4748031e5aec7b61d496}
+) const}}\label{class_anuncio_aa432828d0e8b6d84fc284d24fa920911}
 
 
-Definition at line 41 of file Anuncio.\+cpp.
+Função que calcula os pontos obtidos por um membro de acordo com os conhecidos que posssui e com o numero de vezes que ja viajou com cada conhecido. 
 
 
 
-References candidatos.
+Definition at line 430 of file Anuncio.\+cpp.
+
+
+
+References Coordenadas\+::calc\+Distancia().
+
+
+
+Referenced by calcular\+Anuncio\+Points().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_anuncio_a3a56180c8250d42d8c4d5ae4d834634b}{\index{Anuncio@{Anuncio}!calcular\+Friend\+Points@{calcular\+Friend\+Points}}
+\index{calcular\+Friend\+Points@{calcular\+Friend\+Points}!Anuncio@{Anuncio}}
+\subsubsection[{calcular\+Friend\+Points}]{\setlength{\rightskip}{0pt plus 5cm}double Anuncio\+::calcular\+Friend\+Points (
+\begin{DoxyParamCaption}
+\item[{const {\bf Particular} $\ast$}]{utilizador\+Atual}
+\end{DoxyParamCaption}
+) const}}\label{class_anuncio_a3a56180c8250d42d8c4d5ae4d834634b}
+
+
+Função que da update aos conhecidos. 
+
+sqrt() to make sure the number doesn't grow too fast 
+
+Definition at line 402 of file Anuncio.\+cpp.
+
+
+
+References condutor, Particular\+::get\+Conhecidos(), and passageiros.
+
+
+
+Referenced by calcular\+Anuncio\+Points().
+
+
+
+Here is the call graph for this function\+:
+
 
 \hypertarget{class_anuncio_ac49d84d1a011803f9676f1e47c252125}{\index{Anuncio@{Anuncio}!calcular\+Preco\+Total@{calcular\+Preco\+Total}}
 \index{calcular\+Preco\+Total@{calcular\+Preco\+Total}!Anuncio@{Anuncio}}
@@ -126,6 +267,150 @@ References candidatos.
 {}
 \end{DoxyParamCaption}
 )}}\label{class_anuncio_ac49d84d1a011803f9676f1e47c252125}
+
+
+Função para adicionar um passageiro á viagem. 
+
+\hypertarget{class_anuncio_a00fb20c3afcd57ef4edc07a09526bde4}{\index{Anuncio@{Anuncio}!criar@{criar}}
+\index{criar@{criar}!Anuncio@{Anuncio}}
+\subsubsection[{criar}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::criar (
+\begin{DoxyParamCaption}
+\item[{{\bf Membro} $\ast$}]{utilizador\+Atual}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_a00fb20c3afcd57ef4edc07a09526bde4}
+
+
+Função virtual que grava a informação do anuncio no ficheiro de anuncios. 
+
+
+
+Reimplemented in \hyperlink{class_anuncio_procura_a73abd85989eee52b20c7ffca120ae5de}{Anuncio\+Procura}, and \hyperlink{class_anuncio_oferta_a796d66969f1f391fc62685ad8e6c81cb}{Anuncio\+Oferta}.
+
+
+
+Definition at line 257 of file Anuncio.\+cpp.
+
+
+
+References anunciante, Hora\+::criar(), Coordenadas\+::criar(), Data\+::criar(), data\+Fim, data\+Inicio, descricao, destino, hora, origem, and titulo.
+
+
+
+Referenced by Anuncio\+Oferta\+::criar(), Anuncio\+Procura\+::criar(), and Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_anuncio_a82600e3de68746059d60206df6ceee56}{\index{Anuncio@{Anuncio}!editar@{editar}}
+\index{editar@{editar}!Anuncio@{Anuncio}}
+\subsubsection[{editar}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::editar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_anuncio_a82600e3de68746059d60206df6ceee56}
+
+
+Função virtual responsavel por criar um anuncio. 
+
+
+
+Implemented in \hyperlink{class_anuncio_procura_ae7ef0a393b385df69d7ee4d22a10e4ec}{Anuncio\+Procura}, and \hyperlink{class_anuncio_oferta_a802538a48708716a4eef52823642c9d8}{Anuncio\+Oferta}.
+
+
+
+Definition at line 276 of file Anuncio.\+cpp.
+
+
+
+References data\+Fim, data\+Inicio, descricao, destino, Hora\+::editar(), Coordenadas\+::editar(), Data\+::editar(), hora, Invalid\+Input\+Exception$<$ T $>$\+::info, origem, Input\+Utils\+::read\+Line(), Input\+Utils\+::read\+Yes\+Or\+No(), and titulo.
+
+
+
+Referenced by Anuncio\+Oferta\+::editar(), and Anuncio\+Procura\+::editar().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_anuncio_a35c4c8b294b3bdda618a6a0708bf4647}{\index{Anuncio@{Anuncio}!get\+Anunciante@{get\+Anunciante}}
+\index{get\+Anunciante@{get\+Anunciante}!Anuncio@{Anuncio}}
+\subsubsection[{get\+Anunciante}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Membro} $\ast$ Anuncio\+::get\+Anunciante (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_anuncio_a35c4c8b294b3bdda618a6a0708bf4647}
+
+
+Método para obter a descrição do anuncio. 
+
+
+
+Definition at line 93 of file Anuncio.\+cpp.
+
+
+
+References anunciante.
+
+\hypertarget{class_anuncio_a6344f8ce7de909f6841429ac14b97b7a}{\index{Anuncio@{Anuncio}!get\+Condutor@{get\+Condutor}}
+\index{get\+Condutor@{get\+Condutor}!Anuncio@{Anuncio}}
+\subsubsection[{get\+Condutor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Membro} $\ast$ Anuncio\+::get\+Condutor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_anuncio_a6344f8ce7de909f6841429ac14b97b7a}
+
+
+Método para obter o veiculo do \hyperlink{class_anuncio}{Anuncio}. 
+
+
+
+Definition at line 38 of file Anuncio.\+cpp.
+
+
+
+References condutor.
+
+\hypertarget{class_anuncio_a2e5adcc932f13615ab7bfc1e69964d4e}{\index{Anuncio@{Anuncio}!get\+Data\+Fim@{get\+Data\+Fim}}
+\index{get\+Data\+Fim@{get\+Data\+Fim}!Anuncio@{Anuncio}}
+\subsubsection[{get\+Data\+Fim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} Anuncio\+::get\+Data\+Fim (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_anuncio_a2e5adcc932f13615ab7bfc1e69964d4e}
+
+
+Método para obter a data de inicio do anuncio. 
+
+
+
+Definition at line 83 of file Anuncio.\+cpp.
+
+
+
+References data\+Fim.
+
+\hypertarget{class_anuncio_a7d85e1cf72f81a767ca666cb17ef88ac}{\index{Anuncio@{Anuncio}!get\+Data\+Inicio@{get\+Data\+Inicio}}
+\index{get\+Data\+Inicio@{get\+Data\+Inicio}!Anuncio@{Anuncio}}
+\subsubsection[{get\+Data\+Inicio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} Anuncio\+::get\+Data\+Inicio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_anuncio_a7d85e1cf72f81a767ca666cb17ef88ac}
+
+
+Método para obter a hora de inicio da \hyperlink{class_boleia}{Boleia}. 
+
+
+
+Definition at line 78 of file Anuncio.\+cpp.
+
+
+
+References data\+Inicio.
+
 \hypertarget{class_anuncio_a693f59391a620851b4ac37063e8f4af4}{\index{Anuncio@{Anuncio}!get\+Descricao@{get\+Descricao}}
 \index{get\+Descricao@{get\+Descricao}!Anuncio@{Anuncio}}
 \subsubsection[{get\+Descricao}]{\setlength{\rightskip}{0pt plus 5cm}string Anuncio\+::get\+Descricao (
@@ -135,51 +420,122 @@ References candidatos.
 ) const}}\label{class_anuncio_a693f59391a620851b4ac37063e8f4af4}
 
 
-Definition at line 16 of file Anuncio.\+cpp.
+Método para obter o titulo do anuncio. 
+
+
+
+Definition at line 18 of file Anuncio.\+cpp.
 
 
 
 References descricao.
 
-\hypertarget{class_anuncio_a207905709390f67bb9546e4d94682bb5}{\index{Anuncio@{Anuncio}!get\+Destino@{get\+Destino}}
+\hypertarget{class_anuncio_a12f2d6fa24c7255bb608e4c653740bb8}{\index{Anuncio@{Anuncio}!get\+Destino@{get\+Destino}}
 \index{get\+Destino@{get\+Destino}!Anuncio@{Anuncio}}
 \subsubsection[{get\+Destino}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordenadas} Anuncio\+::get\+Destino (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}\label{class_anuncio_a207905709390f67bb9546e4d94682bb5}
+)}}\label{class_anuncio_a12f2d6fa24c7255bb608e4c653740bb8}
 
 
-Definition at line 26 of file Anuncio.\+cpp.
-
-
-
-References Viagem\+::get\+Fim(), and viagem.
+Método que retorna as coordenadas do local de inicio da \hyperlink{class_boleia}{Boleia}. 
 
 
 
-Here is the call graph for this function\+:
+Definition at line 63 of file Anuncio.\+cpp.
 
 
-\hypertarget{class_anuncio_a4a0c6be721a7fe4351cd5fa06b8bafcd}{\index{Anuncio@{Anuncio}!get\+Origem@{get\+Origem}}
+
+References destino.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
+
+\hypertarget{class_anuncio_a8850dd9d778dfe5ea92268f654d7b563}{\index{Anuncio@{Anuncio}!get\+Hora@{get\+Hora}}
+\index{get\+Hora@{get\+Hora}!Anuncio@{Anuncio}}
+\subsubsection[{get\+Hora}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hora} Anuncio\+::get\+Hora (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_anuncio_a8850dd9d778dfe5ea92268f654d7b563}
+
+
+Método para obter o preço discriminado do \hyperlink{class_anuncio}{Anuncio} de \hyperlink{class_boleia}{Boleia}. 
+
+
+
+Definition at line 73 of file Anuncio.\+cpp.
+
+
+
+References hora.
+
+\hypertarget{class_anuncio_ac0f21112a31b6812a3128d9cac198c42}{\index{Anuncio@{Anuncio}!get\+Origem@{get\+Origem}}
 \index{get\+Origem@{get\+Origem}!Anuncio@{Anuncio}}
 \subsubsection[{get\+Origem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordenadas} Anuncio\+::get\+Origem (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}\label{class_anuncio_a4a0c6be721a7fe4351cd5fa06b8bafcd}
+)}}\label{class_anuncio_ac0f21112a31b6812a3128d9cac198c42}
 
 
-Definition at line 21 of file Anuncio.\+cpp.
-
-
-
-References Viagem\+::get\+Inicio(), and viagem.
+Método para alterar o preço do anuncio. 
 
 
 
-Here is the call graph for this function\+:
+Definition at line 58 of file Anuncio.\+cpp.
 
+
+
+References origem.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
+
+\hypertarget{class_anuncio_a5dcd647bd001e6ccced77ffc213434f6}{\index{Anuncio@{Anuncio}!get\+Passageiros@{get\+Passageiros}}
+\index{get\+Passageiros@{get\+Passageiros}!Anuncio@{Anuncio}}
+\subsubsection[{get\+Passageiros}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Particular} $\ast$ $>$ Anuncio\+::get\+Passageiros (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_anuncio_a5dcd647bd001e6ccced77ffc213434f6}
+
+
+Método para obter a data de fim do anuncio. 
+
+
+
+Definition at line 68 of file Anuncio.\+cpp.
+
+
+
+References passageiros.
+
+\hypertarget{class_anuncio_a566dfb63e64851909367d5136963670d}{\index{Anuncio@{Anuncio}!get\+Preco@{get\+Preco}}
+\index{get\+Preco@{get\+Preco}!Anuncio@{Anuncio}}
+\subsubsection[{get\+Preco}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Preco} $\ast$ Anuncio\+::get\+Preco (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_anuncio_a566dfb63e64851909367d5136963670d}
+
+
+Método para obter o condutor do veiculo. 
+
+
+
+Definition at line 43 of file Anuncio.\+cpp.
+
+
+
+References preco.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
 
 \hypertarget{class_anuncio_af712423e3645f7127f987d88793127d4}{\index{Anuncio@{Anuncio}!get\+Titulo@{get\+Titulo}}
 \index{get\+Titulo@{get\+Titulo}!Anuncio@{Anuncio}}
@@ -190,31 +546,228 @@ Here is the call graph for this function\+:
 ) const}}\label{class_anuncio_af712423e3645f7127f987d88793127d4}
 
 
-Definition at line 11 of file Anuncio.\+cpp.
+Construtor com parâmetros. 
+
+
+
+Definition at line 13 of file Anuncio.\+cpp.
 
 
 
 References titulo.
 
-\hypertarget{class_anuncio_a755de86be5f1b66d66a6ddbe3f217246}{\index{Anuncio@{Anuncio}!remover\+Candidato@{remover\+Candidato}}
-\index{remover\+Candidato@{remover\+Candidato}!Anuncio@{Anuncio}}
-\subsubsection[{remover\+Candidato}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::remover\+Candidato (
+
+
+Referenced by operator$<$$<$().
+
+\hypertarget{class_anuncio_ae68f4b30d497dbccf1e3ab5f83b140da}{\index{Anuncio@{Anuncio}!get\+Veiculo@{get\+Veiculo}}
+\index{get\+Veiculo@{get\+Veiculo}!Anuncio@{Anuncio}}
+\subsubsection[{get\+Veiculo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Veiculo} $\ast$ Anuncio\+::get\+Veiculo (
 \begin{DoxyParamCaption}
-\item[{{\bf Particular} $\ast$}]{candidato}
+{}
 \end{DoxyParamCaption}
-)}}\label{class_anuncio_a755de86be5f1b66d66a6ddbe3f217246}
+)}}\label{class_anuncio_ae68f4b30d497dbccf1e3ab5f83b140da}
 
 
-Definition at line 46 of file Anuncio.\+cpp.
+Método para alteras as informações do veículo. 
 
 
 
-References candidatos, and Membro\+::get\+Utilizador().
+Definition at line 33 of file Anuncio.\+cpp.
+
+
+
+References veiculo.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
+
+\hypertarget{class_anuncio_a88bacb9aa1be4db0dfc8b8ce0c04b593}{\index{Anuncio@{Anuncio}!is\+Pronto@{is\+Pronto}}
+\index{is\+Pronto@{is\+Pronto}!Anuncio@{Anuncio}}
+\subsubsection[{is\+Pronto}]{\setlength{\rightskip}{0pt plus 5cm}bool Anuncio\+::is\+Pronto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_anuncio_a88bacb9aa1be4db0dfc8b8ce0c04b593}
+
+
+Função responsavel por editar as componentes de um anuncio. 
+
+
+
+Definition at line 340 of file Anuncio.\+cpp.
+
+
+
+References condutor, and veiculo.
+
+\hypertarget{class_anuncio_a58f1190bb4a2f1743ee76109be853e31}{\index{Anuncio@{Anuncio}!load@{load}}
+\index{load@{load}!Anuncio@{Anuncio}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::load (
+\begin{DoxyParamCaption}
+\item[{ifstream \&}]{file, }
+\item[{vector$<$ {\bf Membro} $\ast$ $>$ $\ast$}]{membros}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_a58f1190bb4a2f1743ee76109be853e31}
+
+
+Função que mostra no ecrã da consola toda a informação de um determinado anuncio. 
+
+
+
+Reimplemented in \hyperlink{class_anuncio_procura_a9983a05725bcdcee8aee8f778c79920b}{Anuncio\+Procura}.
+
+
+
+Definition at line 137 of file Anuncio.\+cpp.
+
+
+
+References anunciante, condutor, data\+Fim, data\+Inicio, descricao, destino, Membro\+::get\+Veiculos(), hora, Hora\+::load(), Data\+::load(), Coordenadas\+::load(), Preco\+::load(), origem, passageiros, preco, titulo, and veiculo.
+
+
+
+Referenced by Anuncio\+Procura\+::load(), and Boleias\+Inteligentes\+::load\+Anuncios().
 
 
 
 Here is the call graph for this function\+:
 
+
+\hypertarget{class_anuncio_ab2d7036cd0fbfd2c0eb8078006ca836e}{\index{Anuncio@{Anuncio}!pode\+Ser\+Condutor@{pode\+Ser\+Condutor}}
+\index{pode\+Ser\+Condutor@{pode\+Ser\+Condutor}!Anuncio@{Anuncio}}
+\subsubsection[{pode\+Ser\+Condutor}]{\setlength{\rightskip}{0pt plus 5cm}bool Anuncio\+::pode\+Ser\+Condutor (
+\begin{DoxyParamCaption}
+\item[{{\bf Membro} $\ast$}]{membro}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_ab2d7036cd0fbfd2c0eb8078006ca836e}
+
+
+Função responsavel por determinar se um determinado membro é passageiro.\+Se o for retorna true. 
+
+
+
+Reimplemented in \hyperlink{class_anuncio_procura_aa7689f1ae7175e99b144c48422231e17}{Anuncio\+Procura}.
+
+
+
+Definition at line 374 of file Anuncio.\+cpp.
+
+
+
+References condutor, and passageiros.
+
+
+
+Referenced by Anuncio\+Procura\+::pode\+Ser\+Condutor().
+
+\hypertarget{class_anuncio_a3267758a53d30c2a825ddf7e7cd3d8bd}{\index{Anuncio@{Anuncio}!pode\+Ser\+Passageiro@{pode\+Ser\+Passageiro}}
+\index{pode\+Ser\+Passageiro@{pode\+Ser\+Passageiro}!Anuncio@{Anuncio}}
+\subsubsection[{pode\+Ser\+Passageiro}]{\setlength{\rightskip}{0pt plus 5cm}bool Anuncio\+::pode\+Ser\+Passageiro (
+\begin{DoxyParamCaption}
+\item[{{\bf Membro} $\ast$}]{membro}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_a3267758a53d30c2a825ddf7e7cd3d8bd}
+
+
+Funçao que confirma se o anuncio já tem condutor e veiculo,ou seja, se já está pronto para começar a viagem. 
+
+
+
+Reimplemented in \hyperlink{class_anuncio_procura_aab615cb1457ec3784d55149d44cdc458}{Anuncio\+Procura}.
+
+
+
+Definition at line 349 of file Anuncio.\+cpp.
+
+
+
+References condutor, Veiculo\+::get\+Lotacao(), passageiros, and veiculo.
+
+
+
+Referenced by Anuncio\+Procura\+::pode\+Ser\+Passageiro().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_anuncio_a66e74841f18c8c0f95b4f3b66ce77797}{\index{Anuncio@{Anuncio}!save@{save}}
+\index{save@{save}!Anuncio@{Anuncio}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::save (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{file, }
+\item[{vector$<$ {\bf Membro} $\ast$ $>$ $\ast$}]{membros}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_a66e74841f18c8c0f95b4f3b66ce77797}
+
+
+Função virtual que carrega de um ficheiro para o vector toda a informação do anuncio. 
+
+
+
+Reimplemented in \hyperlink{class_anuncio_procura_a3e41646018004c3efb37c9dab3482c96}{Anuncio\+Procura}.
+
+
+
+Definition at line 185 of file Anuncio.\+cpp.
+
+
+
+References anunciante, condutor, data\+Fim, data\+Inicio, descricao, destino, Membro\+::get\+Veiculos(), hora, origem, passageiros, preco, Hora\+::save(), Data\+::save(), Coordenadas\+::save(), Preco\+::save(), titulo, and veiculo.
+
+
+
+Referenced by Anuncio\+Procura\+::save().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_anuncio_ae0b9bb731a6bf78af45ac2e77ad9e69b}{\index{Anuncio@{Anuncio}!set\+Anunciante@{set\+Anunciante}}
+\index{set\+Anunciante@{set\+Anunciante}!Anuncio@{Anuncio}}
+\subsubsection[{set\+Anunciante}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::set\+Anunciante (
+\begin{DoxyParamCaption}
+\item[{{\bf Membro} $\ast$}]{membro}
+\end{DoxyParamCaption}
+)}}\label{class_anuncio_ae0b9bb731a6bf78af45ac2e77ad9e69b}
+
+
+Método para alterar a descrição do anuncio. 
+
+
+
+Definition at line 98 of file Anuncio.\+cpp.
+
+
+
+References anunciante.
+
+\hypertarget{class_anuncio_aaede8d69a67be68cd3d8bfa0935f068b}{\index{Anuncio@{Anuncio}!set\+Condutor@{set\+Condutor}}
+\index{set\+Condutor@{set\+Condutor}!Anuncio@{Anuncio}}
+\subsubsection[{set\+Condutor}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::set\+Condutor (
+\begin{DoxyParamCaption}
+\item[{{\bf Membro} $\ast$}]{membro}
+\end{DoxyParamCaption}
+)}}\label{class_anuncio_aaede8d69a67be68cd3d8bfa0935f068b}
+
+
+Método para obter os passageiros ja instalados no veiculo. 
+
+
+
+Definition at line 48 of file Anuncio.\+cpp.
+
+
+
+References condutor.
+
+
+
+Referenced by Boleias\+Inteligentes\+::show\+Anuncios\+Menu().
 
 \hypertarget{class_anuncio_a8746d4708c5622947b17385414320e88}{\index{Anuncio@{Anuncio}!set\+Descricao@{set\+Descricao}}
 \index{set\+Descricao@{set\+Descricao}!Anuncio@{Anuncio}}
@@ -225,51 +778,34 @@ Here is the call graph for this function\+:
 )}}\label{class_anuncio_a8746d4708c5622947b17385414320e88}
 
 
-Definition at line 36 of file Anuncio.\+cpp.
+Método que retorna as coordenadas do local onde termina a \hyperlink{class_boleia}{Boleia}. 
+
+
+
+Definition at line 88 of file Anuncio.\+cpp.
 
 
 
 References descricao.
 
-\hypertarget{class_anuncio_add212eaa271e366dccaa82a8f2bee736}{\index{Anuncio@{Anuncio}!set\+Destino@{set\+Destino}}
-\index{set\+Destino@{set\+Destino}!Anuncio@{Anuncio}}
-\subsubsection[{set\+Destino}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::set\+Destino (
+\hypertarget{class_anuncio_a2d6b1de1396b3ac962931dea7f50af3a}{\index{Anuncio@{Anuncio}!set\+Preco@{set\+Preco}}
+\index{set\+Preco@{set\+Preco}!Anuncio@{Anuncio}}
+\subsubsection[{set\+Preco}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::set\+Preco (
 \begin{DoxyParamCaption}
-\item[{{\bf Coordenadas} \&}]{d}
+\item[{const {\bf Preco} \&}]{preco}
 \end{DoxyParamCaption}
-) const}}\label{class_anuncio_add212eaa271e366dccaa82a8f2bee736}
+)}}\label{class_anuncio_a2d6b1de1396b3ac962931dea7f50af3a}
 
 
-Definition at line 73 of file Anuncio.\+cpp.
-
-
-
-References Viagem\+::set\+Fim(), and viagem.
+Método para alterar o condutor. 
 
 
 
-Here is the call graph for this function\+:
-
-
-\hypertarget{class_anuncio_ac88555aa5c54bc552eb6a31787334e39}{\index{Anuncio@{Anuncio}!set\+Origem@{set\+Origem}}
-\index{set\+Origem@{set\+Origem}!Anuncio@{Anuncio}}
-\subsubsection[{set\+Origem}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::set\+Origem (
-\begin{DoxyParamCaption}
-\item[{{\bf Coordenadas} \&}]{o}
-\end{DoxyParamCaption}
-) const}}\label{class_anuncio_ac88555aa5c54bc552eb6a31787334e39}
-
-
-Definition at line 68 of file Anuncio.\+cpp.
+Definition at line 53 of file Anuncio.\+cpp.
 
 
 
-References Viagem\+::set\+Inicio(), and viagem.
-
-
-
-Here is the call graph for this function\+:
-
+References preco.
 
 \hypertarget{class_anuncio_af95db56a1347160ef1cf53ea1ec659a6}{\index{Anuncio@{Anuncio}!set\+Titulo@{set\+Titulo}}
 \index{set\+Titulo@{set\+Titulo}!Anuncio@{Anuncio}}
@@ -280,69 +816,247 @@ Here is the call graph for this function\+:
 )}}\label{class_anuncio_af95db56a1347160ef1cf53ea1ec659a6}
 
 
-Definition at line 31 of file Anuncio.\+cpp.
+Método para obter o membro responsavel pelo \hyperlink{class_anuncio}{Anuncio}. 
+
+
+
+Definition at line 23 of file Anuncio.\+cpp.
 
 
 
 References titulo.
 
+\hypertarget{class_anuncio_acf4d8a46abfa73a073f7df39b2601e17}{\index{Anuncio@{Anuncio}!set\+Veiculo@{set\+Veiculo}}
+\index{set\+Veiculo@{set\+Veiculo}!Anuncio@{Anuncio}}
+\subsubsection[{set\+Veiculo}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::set\+Veiculo (
+\begin{DoxyParamCaption}
+\item[{{\bf Veiculo} $\ast$}]{veiculo}
+\end{DoxyParamCaption}
+)}}\label{class_anuncio_acf4d8a46abfa73a073f7df39b2601e17}
+
+
+Método para alterar o titulo. 
+
+
+
+Definition at line 28 of file Anuncio.\+cpp.
+
+
+
+References veiculo.
+
+\hypertarget{class_anuncio_a71729dba796d57356afe20eff021c2d5}{\index{Anuncio@{Anuncio}!show@{show}}
+\index{show@{show}!Anuncio@{Anuncio}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_a71729dba796d57356afe20eff021c2d5}
+
+
+Função para calcular o preço final com todos os custos ja associados. 
+
+
+
+Reimplemented in \hyperlink{class_anuncio_procura_a7a9ac26488642a35643f5322acf40788}{Anuncio\+Procura}, and \hyperlink{class_anuncio_oferta_a046a87a9ba9b1fedb071a6c5ba09663c}{Anuncio\+Oferta}.
+
+
+
+Definition at line 108 of file Anuncio.\+cpp.
+
+
+
+References anunciante, condutor, data\+Fim, data\+Inicio, descricao, Membro\+::get\+Nome(), hora, preco, Preco\+::show(), Veiculo\+::show(), titulo, and veiculo.
+
+
+
+Referenced by Anuncio\+Oferta\+::show(), and Anuncio\+Procura\+::show().
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{class_anuncio_aedc37e812bc9aa7ca401716c1326cfb5}{\index{Anuncio@{Anuncio}!update\+Conhecidos@{update\+Conhecidos}}
+\index{update\+Conhecidos@{update\+Conhecidos}!Anuncio@{Anuncio}}
+\subsubsection[{update\+Conhecidos}]{\setlength{\rightskip}{0pt plus 5cm}void Anuncio\+::update\+Conhecidos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_anuncio_aedc37e812bc9aa7ca401716c1326cfb5}
+
+
+Funçao responsavel por determinar se um determinado membro é condutor.\+Se o for retorna true. 
+
+
+
+Definition at line 383 of file Anuncio.\+cpp.
+
+
+
+References condutor, and passageiros.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_anuncio_a210dcebbee42a02d8b82245fd2a579af}{\index{Anuncio@{Anuncio}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Anuncio@{Anuncio}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{{\bf Anuncio} $\ast$}]{anuncio}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_anuncio_a210dcebbee42a02d8b82245fd2a579af}
+
+
+Calcula o rsultado final entre os friend points e a distancia para ordenar os anuncios. 
+
+
+
+Definition at line 397 of file Anuncio.\+cpp.
+
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_anuncio_a387f6bd1b88720d5cf0b53462e5dc0aa}{\index{Anuncio@{Anuncio}!candidatos@{candidatos}}
-\index{candidatos@{candidatos}!Anuncio@{Anuncio}}
-\subsubsection[{candidatos}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Particular} $\ast$$>$ Anuncio\+::candidatos\hspace{0.3cm}{\ttfamily [private]}}}\label{class_anuncio_a387f6bd1b88720d5cf0b53462e5dc0aa}
+\hypertarget{class_anuncio_a58250bfc8ab82d4308839b1e26213a0f}{\index{Anuncio@{Anuncio}!anunciante@{anunciante}}
+\index{anunciante@{anunciante}!Anuncio@{Anuncio}}
+\subsubsection[{anunciante}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Membro}$\ast$ Anuncio\+::anunciante\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_a58250bfc8ab82d4308839b1e26213a0f}
 
 
-Definition at line 15 of file Anuncio.\+h.
+se for igual ao inicio é um evento 
 
 
 
-Referenced by aceitar\+Candidato(), adicionar\+Candidato(), and remover\+Candidato().
+Definition at line 28 of file Anuncio.\+h.
+
+
+
+Referenced by criar(), get\+Anunciante(), load(), save(), set\+Anunciante(), and show().
+
+\hypertarget{class_anuncio_a8771818ef0855c6b70e2aca6c89e3177}{\index{Anuncio@{Anuncio}!condutor@{condutor}}
+\index{condutor@{condutor}!Anuncio@{Anuncio}}
+\subsubsection[{condutor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Membro}$\ast$ Anuncio\+::condutor\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_a8771818ef0855c6b70e2aca6c89e3177}
+
+
+Definition at line 29 of file Anuncio.\+h.
+
+
+
+Referenced by calcular\+Friend\+Points(), get\+Condutor(), is\+Pronto(), load(), pode\+Ser\+Condutor(), pode\+Ser\+Passageiro(), save(), set\+Condutor(), show(), and update\+Conhecidos().
+
+\hypertarget{class_anuncio_ac3b9182cc541cb68215f8aa09fb0e11a}{\index{Anuncio@{Anuncio}!data\+Fim@{data\+Fim}}
+\index{data\+Fim@{data\+Fim}!Anuncio@{Anuncio}}
+\subsubsection[{data\+Fim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} Anuncio\+::data\+Fim\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_ac3b9182cc541cb68215f8aa09fb0e11a}
+
+
+Definition at line 27 of file Anuncio.\+h.
+
+
+
+Referenced by criar(), editar(), get\+Data\+Fim(), load(), save(), and show().
+
+\hypertarget{class_anuncio_abeb7d8c5fe5e7d127005044981a3cd3d}{\index{Anuncio@{Anuncio}!data\+Inicio@{data\+Inicio}}
+\index{data\+Inicio@{data\+Inicio}!Anuncio@{Anuncio}}
+\subsubsection[{data\+Inicio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} Anuncio\+::data\+Inicio\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_abeb7d8c5fe5e7d127005044981a3cd3d}
+
+
+Número total de pessoas no veículo = passageiros + 1 (condutor) 
+
+
+
+Definition at line 26 of file Anuncio.\+h.
+
+
+
+Referenced by criar(), editar(), get\+Data\+Inicio(), load(), save(), and show().
 
 \hypertarget{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}{\index{Anuncio@{Anuncio}!descricao@{descricao}}
 \index{descricao@{descricao}!Anuncio@{Anuncio}}
-\subsubsection[{descricao}]{\setlength{\rightskip}{0pt plus 5cm}string Anuncio\+::descricao\hspace{0.3cm}{\ttfamily [private]}}}\label{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}
+\subsubsection[{descricao}]{\setlength{\rightskip}{0pt plus 5cm}string Anuncio\+::descricao\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_aa6a9eb8d08cb06d16061b006eb2c8b97}
 
 
-Definition at line 14 of file Anuncio.\+h.
-
-
-
-Referenced by Anuncio(), get\+Descricao(), and set\+Descricao().
-
-\hypertarget{class_anuncio_a8ba7cc797b8b582c596038a17e9bce3b}{\index{Anuncio@{Anuncio}!preco\+Total@{preco\+Total}}
-\index{preco\+Total@{preco\+Total}!Anuncio@{Anuncio}}
-\subsubsection[{preco\+Total}]{\setlength{\rightskip}{0pt plus 5cm}float Anuncio\+::preco\+Total\hspace{0.3cm}{\ttfamily [private]}}}\label{class_anuncio_a8ba7cc797b8b582c596038a17e9bce3b}
-
-
-Definition at line 16 of file Anuncio.\+h.
+Definition at line 22 of file Anuncio.\+h.
 
 
 
-Referenced by Anuncio().
+Referenced by criar(), editar(), get\+Descricao(), load(), save(), set\+Descricao(), and show().
+
+\hypertarget{class_anuncio_acdac86595f84cfb8a2bf54c414857168}{\index{Anuncio@{Anuncio}!destino@{destino}}
+\index{destino@{destino}!Anuncio@{Anuncio}}
+\subsubsection[{destino}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordenadas} Anuncio\+::destino\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_acdac86595f84cfb8a2bf54c414857168}
+
+
+Definition at line 24 of file Anuncio.\+h.
+
+
+
+Referenced by Anuncio\+Oferta\+::criar(), criar(), editar(), get\+Destino(), load(), and save().
+
+\hypertarget{class_anuncio_aee851839cb45594b8ee550a032236cfe}{\index{Anuncio@{Anuncio}!hora@{hora}}
+\index{hora@{hora}!Anuncio@{Anuncio}}
+\subsubsection[{hora}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hora} Anuncio\+::hora\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_aee851839cb45594b8ee550a032236cfe}
+
+
+Definition at line 32 of file Anuncio.\+h.
+
+
+
+Referenced by criar(), editar(), get\+Hora(), load(), save(), and show().
+
+\hypertarget{class_anuncio_a9b3f8ac29ebf2a44e24ea2273064a7f5}{\index{Anuncio@{Anuncio}!origem@{origem}}
+\index{origem@{origem}!Anuncio@{Anuncio}}
+\subsubsection[{origem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordenadas} Anuncio\+::origem\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_a9b3f8ac29ebf2a44e24ea2273064a7f5}
+
+
+Definition at line 23 of file Anuncio.\+h.
+
+
+
+Referenced by Anuncio\+Oferta\+::criar(), criar(), editar(), get\+Origem(), load(), and save().
+
+\hypertarget{class_anuncio_a76cdb1291df7bd8736141304d759ef35}{\index{Anuncio@{Anuncio}!passageiros@{passageiros}}
+\index{passageiros@{passageiros}!Anuncio@{Anuncio}}
+\subsubsection[{passageiros}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Particular} $\ast$$>$ Anuncio\+::passageiros\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_a76cdb1291df7bd8736141304d759ef35}
+
+
+Definition at line 25 of file Anuncio.\+h.
+
+
+
+Referenced by add\+Passageiro(), calcular\+Friend\+Points(), get\+Passageiros(), load(), pode\+Ser\+Condutor(), pode\+Ser\+Passageiro(), save(), and update\+Conhecidos().
+
+\hypertarget{class_anuncio_aa780fd8e07586a3af117fd20593fb1b4}{\index{Anuncio@{Anuncio}!preco@{preco}}
+\index{preco@{preco}!Anuncio@{Anuncio}}
+\subsubsection[{preco}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Preco} Anuncio\+::preco\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_aa780fd8e07586a3af117fd20593fb1b4}
+
+
+Definition at line 31 of file Anuncio.\+h.
+
+
+
+Referenced by Anuncio\+Oferta\+::\+Anuncio\+Oferta(), Anuncio\+Oferta\+::criar(), get\+Preco(), Anuncio\+Procura\+::load(), load(), save(), set\+Preco(), and show().
 
 \hypertarget{class_anuncio_adb34bedd8220f42b9ee37662c21313e6}{\index{Anuncio@{Anuncio}!titulo@{titulo}}
 \index{titulo@{titulo}!Anuncio@{Anuncio}}
-\subsubsection[{titulo}]{\setlength{\rightskip}{0pt plus 5cm}string Anuncio\+::titulo\hspace{0.3cm}{\ttfamily [private]}}}\label{class_anuncio_adb34bedd8220f42b9ee37662c21313e6}
+\subsubsection[{titulo}]{\setlength{\rightskip}{0pt plus 5cm}string Anuncio\+::titulo\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_adb34bedd8220f42b9ee37662c21313e6}
 
 
-Definition at line 13 of file Anuncio.\+h.
-
-
-
-Referenced by Anuncio(), get\+Titulo(), and set\+Titulo().
-
-\hypertarget{class_anuncio_aa225374a19420f56f5abc258d96b691a}{\index{Anuncio@{Anuncio}!viagem@{viagem}}
-\index{viagem@{viagem}!Anuncio@{Anuncio}}
-\subsubsection[{viagem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Viagem}$\ast$ Anuncio\+::viagem\hspace{0.3cm}{\ttfamily [private]}}}\label{class_anuncio_aa225374a19420f56f5abc258d96b691a}
-
-
-Definition at line 17 of file Anuncio.\+h.
+Definition at line 21 of file Anuncio.\+h.
 
 
 
-Referenced by Anuncio(), get\+Destino(), get\+Origem(), set\+Destino(), and set\+Origem().
+Referenced by criar(), editar(), get\+Titulo(), load(), save(), set\+Titulo(), and show().
+
+\hypertarget{class_anuncio_a3cffe1ce2024500bddaf07bd0f7ecc81}{\index{Anuncio@{Anuncio}!veiculo@{veiculo}}
+\index{veiculo@{veiculo}!Anuncio@{Anuncio}}
+\subsubsection[{veiculo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Veiculo}$\ast$ Anuncio\+::veiculo\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_anuncio_a3cffe1ce2024500bddaf07bd0f7ecc81}
+
+
+Definition at line 30 of file Anuncio.\+h.
+
+
+
+Referenced by Anuncio\+Oferta\+::criar(), get\+Veiculo(), is\+Pronto(), load(), pode\+Ser\+Passageiro(), save(), set\+Veiculo(), and show().
 
 
 

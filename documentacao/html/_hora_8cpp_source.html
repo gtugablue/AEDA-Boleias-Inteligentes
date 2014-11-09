@@ -69,67 +69,141 @@ $(document).ready(function(){initNavTree('_hora_8cpp_source.html','');});
 <div class="contents">
 <a href="_hora_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../headers/Hora.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_hora.html#ac2b1f6c87010f4c8af8c3f1986c02b23">    3</a></span>&#160;<a class="code" href="class_hora.html#a90c18369977bbf1bf3a7370d8ea9e9ae">Hora::Hora</a>(<span class="keywordtype">unsigned</span> hora, <span class="keywordtype">unsigned</span> minuto)</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_hora.html#a90c18369977bbf1bf3a7370d8ea9e9ae">    3</a></span>&#160;<a class="code" href="class_hora.html#a90c18369977bbf1bf3a7370d8ea9e9ae">Hora::Hora</a>()</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    this-&gt;hora=<a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a>;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    this-&gt;minuto=<a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">    9</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">Hora::getHora</a>()<span class="keyword">const</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_hora.html#ac2b1f6c87010f4c8af8c3f1986c02b23">    8</a></span>&#160;<a class="code" href="class_hora.html#a90c18369977bbf1bf3a7370d8ea9e9ae">Hora::Hora</a>(<span class="keywordtype">unsigned</span> hora, <span class="keywordtype">unsigned</span> minuto)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    this-&gt;hora=<a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    this-&gt;minuto=<a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_hora.html#adccaf5d0c9e674462f77b31ae05bdb86">   14</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="class_hora.html#adccaf5d0c9e674462f77b31ae05bdb86">Hora::getMinuto</a>()<span class="keyword">const</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">   14</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">Hora::getHora</a>()<span class="keyword">const</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_hora.html#afc47b74f8d5673565ebe3de1bbfb92a6">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hora.html#afc47b74f8d5673565ebe3de1bbfb92a6">Hora::setHora</a>(<span class="keywordtype">unsigned</span> hora)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    this-&gt;hora=<a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_hora.html#adccaf5d0c9e674462f77b31ae05bdb86">   19</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="class_hora.html#adccaf5d0c9e674462f77b31ae05bdb86">Hora::getMinuto</a>()<span class="keyword">const</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_hora.html#abca266485eb34d8feaf1f9e84854a7f3">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hora.html#abca266485eb34d8feaf1f9e84854a7f3">Hora::setMinuto</a>(<span class="keywordtype">unsigned</span> minuto)</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_hora.html#afc47b74f8d5673565ebe3de1bbfb92a6">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hora.html#afc47b74f8d5673565ebe3de1bbfb92a6">Hora::setHora</a>(<span class="keywordtype">unsigned</span> hora)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    this-&gt;minuto=<a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    this-&gt;hora=<a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_hora.html#a24d925d0c6d35e813542346e5d63eef9">   29</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_hora.html#a24d925d0c6d35e813542346e5d63eef9">Hora::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_hora.html">Hora</a> &amp;horas)</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_hora.html#abca266485eb34d8feaf1f9e84854a7f3">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hora.html#abca266485eb34d8feaf1f9e84854a7f3">Hora::setMinuto</a>(<span class="keywordtype">unsigned</span> minuto)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span>(this-&gt;<a class="code" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">getHora</a>() &lt; horas.<a class="code" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">getHora</a>())</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;     <span class="keywordflow">if</span>(this-&gt;<a class="code" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">getHora</a>()==horas.<a class="code" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">getHora</a>())</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;     {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;         <span class="keywordflow">if</span>(this-&gt;<a class="code" href="class_hora.html#adccaf5d0c9e674462f77b31ae05bdb86">getMinuto</a>()==horas.<a class="code" href="class_hora.html#adccaf5d0c9e674462f77b31ae05bdb86">getMinuto</a>())</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;         {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;             <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;         }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;         <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;             <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;     }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;     <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="ttc" id="class_hora_html_a90c18369977bbf1bf3a7370d8ea9e9ae"><div class="ttname"><a href="class_hora.html#a90c18369977bbf1bf3a7370d8ea9e9ae">Hora::Hora</a></div><div class="ttdeci">Hora()</div></div>
-<div class="ttc" id="class_hora_html"><div class="ttname"><a href="class_hora.html">Hora</a></div><div class="ttdef"><b>Definition:</b> <a href="_hora_8h_source.html#l00006">Hora.h:6</a></div></div>
-<div class="ttc" id="class_hora_html_a9d33ce2d8a3f4b3d05b2a3c6df782fa4"><div class="ttname"><a href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">Hora::minuto</a></div><div class="ttdeci">unsigned minuto</div><div class="ttdef"><b>Definition:</b> <a href="_hora_8h_source.html#l00010">Hora.h:10</a></div></div>
-<div class="ttc" id="class_hora_html_abca266485eb34d8feaf1f9e84854a7f3"><div class="ttname"><a href="class_hora.html#abca266485eb34d8feaf1f9e84854a7f3">Hora::setMinuto</a></div><div class="ttdeci">void setMinuto(unsigned minuto)</div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00024">Hora.cpp:24</a></div></div>
-<div class="ttc" id="class_hora_html_adccaf5d0c9e674462f77b31ae05bdb86"><div class="ttname"><a href="class_hora.html#adccaf5d0c9e674462f77b31ae05bdb86">Hora::getMinuto</a></div><div class="ttdeci">unsigned getMinuto() const </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00014">Hora.cpp:14</a></div></div>
-<div class="ttc" id="class_hora_html_afc47b74f8d5673565ebe3de1bbfb92a6"><div class="ttname"><a href="class_hora.html#afc47b74f8d5673565ebe3de1bbfb92a6">Hora::setHora</a></div><div class="ttdeci">void setHora(unsigned hora)</div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00019">Hora.cpp:19</a></div></div>
-<div class="ttc" id="class_hora_html_ab901e62ae1158965687dc736a45ee8fe"><div class="ttname"><a href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">Hora::hora</a></div><div class="ttdeci">unsigned hora</div><div class="ttdef"><b>Definition:</b> <a href="_hora_8h_source.html#l00009">Hora.h:9</a></div></div>
-<div class="ttc" id="class_hora_html_a24d925d0c6d35e813542346e5d63eef9"><div class="ttname"><a href="class_hora.html#a24d925d0c6d35e813542346e5d63eef9">Hora::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Hora &amp;horas)</div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00029">Hora.cpp:29</a></div></div>
-<div class="ttc" id="class_hora_html_ae55080cc8706bcbf135036edcc4112a5"><div class="ttname"><a href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">Hora::getHora</a></div><div class="ttdeci">unsigned getHora() const </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00009">Hora.cpp:9</a></div></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    this-&gt;minuto=<a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_hora.html#a24d925d0c6d35e813542346e5d63eef9">   34</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_hora.html#a24d925d0c6d35e813542346e5d63eef9">Hora::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_hora.html">Hora</a> &amp;horas)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span>(this-&gt;<a class="code" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">getHora</a>() &lt; horas.<a class="code" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">getHora</a>())</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;     <span class="keywordflow">if</span>(this-&gt;<a class="code" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">getHora</a>()==horas.<a class="code" href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">getHora</a>())</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;     {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;         <span class="keywordflow">if</span>(this-&gt;<a class="code" href="class_hora.html#adccaf5d0c9e674462f77b31ae05bdb86">getMinuto</a>()==horas.<a class="code" href="class_hora.html#adccaf5d0c9e674462f77b31ae05bdb86">getMinuto</a>())</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;         {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;             <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;         <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;             <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;     }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;     <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;         <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_hora.html#a61d7bd0b06ffbb4c446be735199c61cb">   54</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hora.html#a61d7bd0b06ffbb4c446be735199c61cb">Hora::save</a>(ofstream &amp;file)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    file &lt;&lt; <a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    file &lt;&lt; <a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_hora.html#a622aa86821d01f80e4117f27529e6879">   60</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hora.html#a622aa86821d01f80e4117f27529e6879">Hora::load</a>(ifstream &amp;file)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    file &gt;&gt; <a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    file.ignore(1000, <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    file &gt;&gt; <a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    file.ignore(1000, <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_hora.html#a22a4cc9c0bd37db37040680d9e772221">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hora.html#a22a4cc9c0bd37db37040680d9e772221">Hora::show</a>()<span class="keyword">const</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Hora: &quot;</span> &lt;&lt; <a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a> &lt;&lt; <a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_hora.html#a7aa53826fa618dab6f6d1d5f2dc81451">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hora.html#a7aa53826fa618dab6f6d1d5f2dc81451">Hora::criar</a>()</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">while</span> (1)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Introduza uma hora: &quot;</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a> = <a class="code" href="class_input_utils.html#a0098108ad700be7666cf8c063a4d4416">InputUtils::readInt</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">catch</span> (<a class="code" href="class_invalid_input_exception.html">InvalidInputException&lt;string&gt;</a> e)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Erro: &quot;</span> &lt;&lt; e.<a class="code" href="class_invalid_input_exception.html#a93b9276f2f52d0dadf58119951b543af">info</a> &lt;&lt; endl &lt;&lt; endl;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">while</span> (1)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Introduza os minutos: &quot;</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a> = <a class="code" href="class_input_utils.html#a0098108ad700be7666cf8c063a4d4416">InputUtils::readInt</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">catch</span> (<a class="code" href="class_invalid_input_exception.html">InvalidInputException&lt;string&gt;</a> e)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Erro: &quot;</span> &lt;&lt; e.<a class="code" href="class_invalid_input_exception.html#a93b9276f2f52d0dadf58119951b543af">info</a> &lt;&lt; endl &lt;&lt; endl;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_hora.html#acedba833ccd61d7e60ec2c4d0ca95cda">  104</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hora.html#acedba833ccd61d7e60ec2c4d0ca95cda">Hora::editar</a>()</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_hora.html#a7aa53826fa618dab6f6d1d5f2dc81451">criar</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="_hora_8cpp.html#a5c50c8f5bda98e7f8a87a3d705da96a5">  109</a></span>&#160;ostream&amp; <a class="code" href="_hora_8cpp.html#a5c50c8f5bda98e7f8a87a3d705da96a5">operator&lt;&lt;</a>(ostream &amp;os, <span class="keyword">const</span> <a class="code" href="class_hora.html">Hora</a> &amp;hora)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> os &lt;&lt; hora.<a class="code" href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">hora</a> &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; hora.<a class="code" href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">minuto</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="ttc" id="class_hora_html_a90c18369977bbf1bf3a7370d8ea9e9ae"><div class="ttname"><a href="class_hora.html#a90c18369977bbf1bf3a7370d8ea9e9ae">Hora::Hora</a></div><div class="ttdeci">Hora()</div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00003">Hora.cpp:3</a></div></div>
+<div class="ttc" id="class_hora_html"><div class="ttname"><a href="class_hora.html">Hora</a></div><div class="ttdef"><b>Definition:</b> <a href="_hora_8h_source.html#l00009">Hora.h:9</a></div></div>
+<div class="ttc" id="class_hora_html_acedba833ccd61d7e60ec2c4d0ca95cda"><div class="ttname"><a href="class_hora.html#acedba833ccd61d7e60ec2c4d0ca95cda">Hora::editar</a></div><div class="ttdeci">void editar()</div><div class="ttdoc">Função para criar uma nova hora. </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00104">Hora.cpp:104</a></div></div>
+<div class="ttc" id="class_hora_html_a9d33ce2d8a3f4b3d05b2a3c6df782fa4"><div class="ttname"><a href="class_hora.html#a9d33ce2d8a3f4b3d05b2a3c6df782fa4">Hora::minuto</a></div><div class="ttdeci">unsigned minuto</div><div class="ttdef"><b>Definition:</b> <a href="_hora_8h_source.html#l00013">Hora.h:13</a></div></div>
+<div class="ttc" id="class_hora_html_a61d7bd0b06ffbb4c446be735199c61cb"><div class="ttname"><a href="class_hora.html#a61d7bd0b06ffbb4c446be735199c61cb">Hora::save</a></div><div class="ttdeci">void save(ofstream &amp;file)</div><div class="ttdoc">Overload do operadro < de forma a se puder comparar horas. </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00054">Hora.cpp:54</a></div></div>
+<div class="ttc" id="class_hora_html_abca266485eb34d8feaf1f9e84854a7f3"><div class="ttname"><a href="class_hora.html#abca266485eb34d8feaf1f9e84854a7f3">Hora::setMinuto</a></div><div class="ttdeci">void setMinuto(unsigned minuto)</div><div class="ttdoc">Método para alterar a hora. </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00029">Hora.cpp:29</a></div></div>
+<div class="ttc" id="class_input_utils_html_a0098108ad700be7666cf8c063a4d4416"><div class="ttname"><a href="class_input_utils.html#a0098108ad700be7666cf8c063a4d4416">InputUtils::readInt</a></div><div class="ttdeci">static int readInt()</div><div class="ttdoc">Função que lê uma linha. </div><div class="ttdef"><b>Definition:</b> <a href="_input_utils_8cpp_source.html#l00010">InputUtils.cpp:10</a></div></div>
+<div class="ttc" id="class_hora_html_adccaf5d0c9e674462f77b31ae05bdb86"><div class="ttname"><a href="class_hora.html#adccaf5d0c9e674462f77b31ae05bdb86">Hora::getMinuto</a></div><div class="ttdeci">unsigned getMinuto() const </div><div class="ttdoc">Método para retornar a hora. </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00019">Hora.cpp:19</a></div></div>
+<div class="ttc" id="class_invalid_input_exception_html"><div class="ttname"><a href="class_invalid_input_exception.html">InvalidInputException</a></div><div class="ttdoc">Tratamento da excepção quando é introduzido um input invalido. </div><div class="ttdef"><b>Definition:</b> <a href="_input_utils_8h_source.html#l00027">InputUtils.h:27</a></div></div>
+<div class="ttc" id="class_hora_html_afc47b74f8d5673565ebe3de1bbfb92a6"><div class="ttname"><a href="class_hora.html#afc47b74f8d5673565ebe3de1bbfb92a6">Hora::setHora</a></div><div class="ttdeci">void setHora(unsigned hora)</div><div class="ttdoc">Método para retornar os minutos. </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00024">Hora.cpp:24</a></div></div>
+<div class="ttc" id="class_hora_html_ab901e62ae1158965687dc736a45ee8fe"><div class="ttname"><a href="class_hora.html#ab901e62ae1158965687dc736a45ee8fe">Hora::hora</a></div><div class="ttdeci">unsigned hora</div><div class="ttdef"><b>Definition:</b> <a href="_hora_8h_source.html#l00012">Hora.h:12</a></div></div>
+<div class="ttc" id="_hora_8cpp_html_a5c50c8f5bda98e7f8a87a3d705da96a5"><div class="ttname"><a href="_hora_8cpp.html#a5c50c8f5bda98e7f8a87a3d705da96a5">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const Hora &amp;hora)</div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00109">Hora.cpp:109</a></div></div>
+<div class="ttc" id="class_hora_html_a24d925d0c6d35e813542346e5d63eef9"><div class="ttname"><a href="class_hora.html#a24d925d0c6d35e813542346e5d63eef9">Hora::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Hora &amp;horas)</div><div class="ttdoc">Método para alterar os minutos. </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00034">Hora.cpp:34</a></div></div>
+<div class="ttc" id="class_hora_html_a622aa86821d01f80e4117f27529e6879"><div class="ttname"><a href="class_hora.html#a622aa86821d01f80e4117f27529e6879">Hora::load</a></div><div class="ttdeci">void load(ifstream &amp;file)</div><div class="ttdoc">Função responsavel por gravar as informações relativas as hora no respectivo ficheiro. </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00060">Hora.cpp:60</a></div></div>
+<div class="ttc" id="class_hora_html_a7aa53826fa618dab6f6d1d5f2dc81451"><div class="ttname"><a href="class_hora.html#a7aa53826fa618dab6f6d1d5f2dc81451">Hora::criar</a></div><div class="ttdeci">void criar()</div><div class="ttdoc">Função responsavel por descarregar a informação de um ficheiro sobre as horas. </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00073">Hora.cpp:73</a></div></div>
+<div class="ttc" id="class_hora_html_ae55080cc8706bcbf135036edcc4112a5"><div class="ttname"><a href="class_hora.html#ae55080cc8706bcbf135036edcc4112a5">Hora::getHora</a></div><div class="ttdeci">unsigned getHora() const </div><div class="ttdoc">Construtor com parâmetros da classe. </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00014">Hora.cpp:14</a></div></div>
+<div class="ttc" id="class_invalid_input_exception_html_a93b9276f2f52d0dadf58119951b543af"><div class="ttname"><a href="class_invalid_input_exception.html#a93b9276f2f52d0dadf58119951b543af">InvalidInputException::info</a></div><div class="ttdeci">T info</div><div class="ttdef"><b>Definition:</b> <a href="_input_utils_8h_source.html#l00030">InputUtils.h:30</a></div></div>
+<div class="ttc" id="class_hora_html_a22a4cc9c0bd37db37040680d9e772221"><div class="ttname"><a href="class_hora.html#a22a4cc9c0bd37db37040680d9e772221">Hora::show</a></div><div class="ttdeci">void show() const </div><div class="ttdoc">Construtor por defeito da classe. </div><div class="ttdef"><b>Definition:</b> <a href="_hora_8cpp_source.html#l00068">Hora.cpp:68</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li><li class="navelem"><a class="el" href="dir_521c7a118aea468d74e765469b437393.html">Source</a></li><li class="navelem"><a class="el" href="_hora_8cpp.html">Hora.cpp</a></li>
-    <li class="footer">Generated on Fri Oct 31 2014 14:46:32 for AEDABoleiasInteligentes by
+    <li class="footer">Generated on Sun Nov 9 2014 16:47:58 for AEDABoleiasInteligentes by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
