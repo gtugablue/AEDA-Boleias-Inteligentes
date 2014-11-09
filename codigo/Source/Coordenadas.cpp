@@ -51,7 +51,7 @@ void Coordenadas::criar()
 		try
 		{
 			cout << "Insira a latitude (formato XX.XXXXX...): ";
-			InputUtils::readDouble();
+			latitude = InputUtils::readDouble();
 			break;
 		}
 		catch (InvalidInputException<string> e)
@@ -64,7 +64,7 @@ void Coordenadas::criar()
 		try
 		{
 			cout << "Insira a longitude (formato XX.XXXXX...): ";
-			InputUtils::readDouble();
+			longitude = InputUtils::readDouble();
 			break;
 		}
 		catch (InvalidInputException<string> e)
