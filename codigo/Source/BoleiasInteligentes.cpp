@@ -538,7 +538,10 @@ void BoleiasInteligentes::showAnunciosMenu()
 			origemPretendida.criar();
 			cout << "Indique as coordenadas do destino." << endl;
 			destinoPretendido.criar();
-			sortAnuncios(origemPretendida, destinoPretendido, 0, anuncios.size() - 1);
+			if (anuncios.size() > 0)
+			{
+				sortAnuncios(origemPretendida, destinoPretendido, 0, anuncios.size() - 1);
+			}
 		}
 
 		OutputUtils::clearScreen();

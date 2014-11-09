@@ -100,7 +100,7 @@ void Preco::criar()
 
 void Preco::save(ofstream &file)
 {
-	file << fixed << endl;
+	file << combustivel << endl;
 	file << desgaste << endl;
 	file << outrasDespesas.size() << endl;
 	for (size_t i = 0; i < outrasDespesas.size(); ++i)
