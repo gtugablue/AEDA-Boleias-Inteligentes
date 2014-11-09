@@ -28,13 +28,13 @@ vector<pair<string, float>> Preco::getOutrasDespesas() const
 
 void Preco::show() const
 {
-	cout << fixed << setprecision(2) <<  "Combustivel: " << combustivel << endl;
-	cout << fixed << setprecision(2) << "Desgaste: " << desgaste << endl;
+	cout << fixed << setprecision(2) << "Combustivel: " << combustivel << " euros" << endl;
+	cout << fixed << setprecision(2) << "Desgaste: " << desgaste << " euros" << endl;
 	for (size_t i = 0; i < outrasDespesas.size(); ++i)
 	{
 		cout << fixed << setprecision(2) << outrasDespesas[i].first << ": " << outrasDespesas[i].second << endl;
 	}
-	cout << "Preco total: " << calcularTotal() << endl;
+	cout << "Preco total: " << calcularTotal() << " euros" << endl;
 }
 
 float Preco::calcularTotal() const

@@ -113,6 +113,7 @@ void Anuncio::show() const
 	origem.show();
 	cout << endl << "Destino:" << endl;
 	destino.show();
+	cout << endl << "Distancia total: " << origem.calcDistancia(destino) << " m" << endl;
 	if (dataInicio == dataFim)
 	{
 		cout << "Data: " << dataInicio << endl;

@@ -485,6 +485,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 	{
 		bool oferta;
 		Anuncio* anuncio;
+		OutputUtils::clearScreen();
 		if (dynamic_cast<Particular*>(utilizadorAtual) == NULL)
 		{
 			// Empresa
@@ -505,7 +506,6 @@ void BoleiasInteligentes::showAnunciosMenu()
 				anuncio = new AnuncioProcura();
 			}
 		}
-		OutputUtils::clearScreen();
 		try
 		{
 			anuncio->criar(utilizadorAtual);

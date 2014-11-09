@@ -107,7 +107,9 @@ ostream& operator<<(ostream &os, const AnuncioProcura &anuncio)
 void AnuncioProcura::show()const
 {
 	Anuncio::show();
-	cout << endl << "Condutores candidatos: ";
+
+	// Não há necessidade de mostrar os condutores candidatos no show do Anuncio
+	/*cout << endl << "Condutores candidatos: ";
 	if (condutoresCandidatos.size() == 0)
 	{
 		cout << "Nenhum" << endl << endl;
@@ -117,7 +119,7 @@ void AnuncioProcura::show()const
 	for (size_t i = 0; i < condutoresCandidatos.size(); i++)
 	{
 		cout << condutoresCandidatos[i].first->getNome() << endl;
-	}
+	}*/
 }
 
 ostream& operator<<(ostream &os, pair < Membro *, Preco > condutorCandidato)
