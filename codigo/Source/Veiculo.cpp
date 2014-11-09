@@ -224,9 +224,120 @@ void Veiculo::criar(vector<Combustivel> *combustiveis)
 	combustivel = escolherCombustivel(combustiveis);
 }
 
-void Veiculo::editar()
+void Veiculo::editar(vector<Combustivel> *combustiveis)
 {
-	// TODO
+	cout << "Pretende editar a marca do veiculo (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Introduza a marca: ";
+		getline(cin, marca);
+	}
+	cout << "Pretende editar o modelo do veiculo (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Introduza o modelo: ";
+		getline(cin, modelo);
+	}
+	cout << "Pretende editar o ano do veiculo (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		while (1)
+		{
+			try
+			{
+				cout << "Introduza o ano: ";
+				ano = InputUtils::readInt();
+				break;
+			}
+			catch (InvalidInputException<string> e)
+			{
+				cout << "Erro: " << e.info << endl << endl;
+			}
+		}
+	}
+	cout << "Pretende editar o mes do veiculo (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		while (1)
+		{
+			try
+			{
+				cout << "Insira o mes: ";
+				mes = InputUtils::readInt();
+				if (mes < 0 || mes > 12)
+				{
+					throw DataInvalidaException<string>("Insira um valor igual ou inferior a 12");
+				}
+				break;
+			}
+			catch (InvalidInputException<string> e)
+			{
+				cout << "Erro: " << e.info << endl << endl;
+			}
+			catch (DataInvalidaException<string> e)
+			{
+				cout << "Erro: " << e.info << endl << endl;
+			}
+		}
+	}
+	cout << "Pretende editar a cilindrada do veiculo (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		while (1)
+		{
+			try
+			{
+				cout << "Introduza a cilindrada: ";
+				cilindrada = InputUtils::readInt();
+				break;
+			}
+			catch (InvalidInputException<string> e)
+			{
+				cout << "Erro: " << e.info << endl << endl;
+			}
+		}
+	}
+	cout << "Pretende editar a lotacao maxima do veiculo (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		while (1)
+		{
+			try
+			{
+				cout << "Introduza a lotacao maxima: ";
+				lotacao = InputUtils::readInt();
+				break;
+			}
+			catch (InvalidInputException<string> e)
+			{
+				cout << "Erro: " << e.info << endl << endl;
+			}
+		}
+	}
+	cout << "Pretende editar o consumo medio do veiculo (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		while (1)
+		{
+			try
+			{
+				cout << "Introduza o consumo medio do veiculo (l/100km): ";
+				consumo = InputUtils::readFloat();
+				break;
+			}
+			catch (InvalidInputException<string> e)
+			{
+				cout << "Erro: " << e.info << endl << endl;
+			}
+		}
+	}
+	cout << "Pretende editar o combustivel do veiculo (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Escolha um combustivel da lista que se segue..." << endl;
+		InputUtils::pause();
+		combustivel = escolherCombustivel(combustiveis);
+	}
 }
 
 ostream& operator<<(ostream &os, const Veiculo &veiculo)

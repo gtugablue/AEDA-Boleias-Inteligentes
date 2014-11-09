@@ -43,7 +43,7 @@ public:
 	Combustivel* escolherCombustivel(vector<Combustivel> *combustiveis);
 	void show() const;
 	void criar(vector<Combustivel> *combustiveis);
-	void editar();
+	void editar(vector<Combustivel> *combustiveis);
 	friend ostream& operator<<(ostream &os, const Veiculo &veiculo);
 	friend ostream& operator<<(ostream &os, Veiculo *veiculo);
 };

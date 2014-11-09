@@ -59,7 +59,14 @@ void Membro::addVeiculo(Veiculo veiculo)
 
 void Membro::removeVeiculo(Veiculo* veiculo)
 {
-	// TODO
+	for (size_t i = 0; i < veiculos.size(); ++i)
+	{
+		if (&veiculos[i] == veiculo)
+		{
+			veiculos.erase(veiculos.begin() + i);
+			return;
+		}
+	}
 }
 
 bool Membro::operator==(const Membro &membro1) const
@@ -111,7 +118,7 @@ void Membro::save(ofstream &file, vector<Combustivel> *combustiveis)
 	}
 }
 
-void Membro::show()
+void Membro::show() const
 {
 	cout << "Nome: " << nome << endl;
 	cout << "Utilizador: " << utilizador << endl;
@@ -120,16 +127,6 @@ void Membro::show()
 bool Membro::temVeiculo() const
 {
 	return veiculos.size() > 0;
-}
-
-void Membro::criarMembro()
-{
-	cout << "Introduza um nome: ";
-	getline(cin, nome);
-	cout << "Introduza um utilizador: ";
-	getline(cin, utilizador);
-	cout << "Introduza uma password: ";
-	getline(cin, password);
 }
 
 void Membro::updateConhecidos(vector<Membro *> passageiros)

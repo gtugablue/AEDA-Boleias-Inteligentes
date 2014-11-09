@@ -16,6 +16,7 @@ public:
 	void signup();
 	void edit();
 	void save(ofstream &file, vector<Combustivel> *combustiveis);
+	void show() const;
 };
 
 #endif

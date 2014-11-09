@@ -82,7 +82,7 @@ void Hora::criar()
 		}
 		catch (InvalidInputException<string> e)
 		{
-			cout << "Erro: " << e.info;
+			cout << "Erro: " << e.info << endl << endl;
 		}
 	}
 	while (1)
@@ -95,7 +95,7 @@ void Hora::criar()
 		}
 		catch (InvalidInputException<string> e)
 		{
-			cout << "Erro: " << e.info;
+			cout << "Erro: " << e.info << endl << endl;
 		}
 	}
 

@@ -35,8 +35,7 @@ public:
 	virtual void signup() = 0;
 	virtual void edit();
 	virtual void updateConhecidos(vector<Membro *> passageiros);
-	void show();
-	void criarMembro();
+	virtual void show() const;
 	bool temVeiculo() const;
 	bool operator==(const Membro &membro1) const;
 };

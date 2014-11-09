@@ -733,7 +733,7 @@ void BoleiasInteligentes::showVeiculosMenu()
 				cout << "Pretende editar este veiculo (y/n)?" << endl;
 				if (InputUtils::readYesOrNo('y', 'n'))
 				{
-					utilizadorAtual->getVeiculos()[input]->editar();
+					utilizadorAtual->getVeiculos()[input]->editar(&combustiveis);
 					OutputUtils::clearScreen();
 					cout << "Veiculo editado com sucesso." << endl;
 					InputUtils::pause();
