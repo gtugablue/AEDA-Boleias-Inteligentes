@@ -314,16 +314,6 @@ void Anuncio::editar()
 			}
 		}
 	}
-	cout << "Pretende editar a origem (y/n)?" << endl;
-	if (InputUtils::readYesOrNo('y', 'n'))
-	{
-		origem.editar();
-	}
-	cout << "Pretende editar o destino (y/n)?" << endl;
-	if (InputUtils::readYesOrNo('y', 'n'))
-	{
-		destino.editar();
-	}
 	cout << "Pretende editar a data de inicio (y/n)?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{

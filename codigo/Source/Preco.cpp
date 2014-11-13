@@ -49,7 +49,7 @@ float Preco::calcularTotal() const
 
 void Preco::updatePrecoCombustivel(float consumo, float precoCombustivel, double distancia)
 {
-	combustivel = (float)(100.0 * distancia * precoCombustivel / consumo);
+	combustivel = (float)((distancia / 1000) * precoCombustivel / consumo);
 }
 
 void Preco::criar()

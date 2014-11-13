@@ -94,7 +94,7 @@ void BoleiasInteligentes::loadAnuncios()
 	}
 	file >> numAnuncios;
 	file.ignore(1000, '\n');
-	bool oferta = true;
+	bool oferta;
 	Anuncio *anuncio;
 	for (size_t i = 0; i < numAnuncios; ++i)
 	{
@@ -489,6 +489,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 		if (dynamic_cast<Particular*>(utilizadorAtual) == NULL)
 		{
 			// Empresa
+			oferta = true;
 			anuncio = new AnuncioOferta();
 		}
 		else

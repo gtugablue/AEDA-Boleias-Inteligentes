@@ -87,6 +87,7 @@ double Coordenadas::toRad(double degrees) const
 
 double Coordenadas::calcDistancia(const Coordenadas &coordenadas) const
 {
+	// Haversine formula
 	double earthRadius = 3958.75;
 	double dLat = toRad(coordenadas.latitude - latitude);
 	double dLng = toRad(coordenadas.longitude - longitude);
