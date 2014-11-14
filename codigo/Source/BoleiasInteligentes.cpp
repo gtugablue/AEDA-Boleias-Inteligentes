@@ -598,7 +598,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 					Veiculo* veiculo = utilizadorAtual->getVeiculos()[input];
 					Preco preco;
 					preco.criar();
-					preco.updatePrecoCombustivel(utilizadorAtual->getVeiculos()[input]->getConsumo(), utilizadorAtual->getVeiculos()[input]->getCombustivel()->getPreco(), anuncios[input]->getOrigem().calcDistancia(anuncios[input]->getDestino()));
+					preco.updatePrecoCombustivel(veiculo->getConsumo(), veiculo->getCombustivel()->getPreco(), anuncios[input]->getOrigem().calcDistancia(anuncios[input]->getDestino()));
 					CondutorCandidato *condutorCandidato = new CondutorCandidato();
 					condutorCandidato->condutor = utilizadorAtual;
 					condutorCandidato->preco = preco;
@@ -663,7 +663,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 					Veiculo *veiculo = utilizadorAtual->getVeiculos()[input];
 					Preco preco;
 					preco.criar();
-					preco.updatePrecoCombustivel(anunciosDestino[input]->getVeiculo()->getConsumo(), anunciosDestino[input]->getVeiculo()->getCombustivel()->getPreco(), anunciosDestino[input]->getOrigem().calcDistancia(anunciosDestino[input]->getDestino()));
+					preco.updatePrecoCombustivel(veiculo->getConsumo(), veiculo->getCombustivel()->getPreco(), anunciosDestino[input]->getOrigem().calcDistancia(anunciosDestino[input]->getDestino()));
 					CondutorCandidato *condutorCandidato = new CondutorCandidato();
 					condutorCandidato->condutor = utilizadorAtual;
 					condutorCandidato->preco = preco;
@@ -753,7 +753,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 					Veiculo *veiculo = utilizadorAtual->getVeiculos()[input];
 					Preco preco;
 					preco.criar();
-					preco.updatePrecoCombustivel(anunciosAnunciante[input]->getVeiculo()->getConsumo(), anunciosAnunciante[input]->getVeiculo()->getCombustivel()->getPreco(), anunciosAnunciante[input]->getOrigem().calcDistancia(anunciosAnunciante[input]->getDestino()));
+					preco.updatePrecoCombustivel(veiculo->getConsumo(), veiculo->getCombustivel()->getPreco(), anunciosAnunciante[input]->getOrigem().calcDistancia(anunciosAnunciante[input]->getDestino()));
 					CondutorCandidato *condutorCandidato = new CondutorCandidato();
 					condutorCandidato->condutor = utilizadorAtual;
 					condutorCandidato->preco = preco;

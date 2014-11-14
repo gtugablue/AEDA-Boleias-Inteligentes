@@ -98,9 +98,7 @@ double Coordenadas::calcDistancia(const Coordenadas &coordenadas) const
 	double dLng = toRad(coordenadas.longitude - longitude);
 	double a = sin(dLat / 2) * sin(dLat / 2) +
 		cos(toRad(latitude)) * cos(toRad(coordenadas.latitude)) *
-		sin(dLng / 2) 
-		* 
-		sin(dLng / 2);
+		pow(sin(dLng / 2), 2);
 	double c = 2 * atan2(sqrt(a), sqrt(1 - a));
 	double dist = earthRadius * c;
 	double meterConversion = 1609.00;
