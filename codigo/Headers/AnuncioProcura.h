@@ -34,6 +34,6 @@ public:
 	void show() const;///Função que imprime no ecra da consola toda a informação de um anuncio.
 };
 
-ostream& operator<<(ostream &os, CondutorCandidato condutorCandidato);///Overload do operador de impressao que permite imprimir um condutor candidato no ecra
+ostream& operator<<(ostream &os, CondutorCandidato *condutorCandidato);///Overload do operador de impressao que permite imprimir um condutor candidato no ecra
 
 #endif

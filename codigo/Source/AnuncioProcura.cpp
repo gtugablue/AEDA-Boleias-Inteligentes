@@ -136,7 +136,7 @@ void AnuncioProcura::show()const
 	}*/
 }
 
-ostream& operator<<(ostream &os, CondutorCandidato condutorCandidato)
+ostream& operator<<(ostream &os, CondutorCandidato *condutorCandidato)
 {
-	return os << condutorCandidato.condutor->getNome() << " - " << condutorCandidato.preco;
+	return os << condutorCandidato->condutor->getNome() << " - " << condutorCandidato->preco;
 }
