@@ -753,9 +753,7 @@ void BoleiasInteligentes::showAnunciosMenu()
 					Veiculo *veiculo = utilizadorAtual->getVeiculos()[input];
 					Preco preco;
 					preco.criar();
-					preco.updatePrecoCombustivel(anunciosAnunciante[input]->getVeiculo()->getConsumo(), 
-						anunciosAnunciante[input]->getVeiculo()->getCombustivel()->getPreco(), 
-						anunciosAnunciante[input]->getOrigem().calcDistancia(anunciosAnunciante[input]->getDestino()));
+					preco.updatePrecoCombustivel(anunciosAnunciante[input]->getVeiculo()->getConsumo(), anunciosAnunciante[input]->getVeiculo()->getCombustivel()->getPreco(), anunciosAnunciante[input]->getOrigem().calcDistancia(anunciosAnunciante[input]->getDestino()));
 					CondutorCandidato condutorCandidato;
 					condutorCandidato.condutor = utilizadorAtual;
 					condutorCandidato.preco = preco;
