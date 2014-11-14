@@ -24,12 +24,7 @@ string Membro::getUtilizador()const
 
 vector<Veiculo *> Membro::getVeiculos()
 {
-	vector<Veiculo *> veiculosPtr;
-	for (size_t i = 0; i < veiculos.size(); ++i)
-	{
-		veiculosPtr.push_back(&veiculos[i]);
-	}
-	return veiculosPtr;
+	return veiculos;
 }
 
 string Membro::getPassword()const
@@ -52,7 +47,7 @@ void Membro::setUtilizador(string &utilizador)
 	this->utilizador = utilizador;
 }
 
-void Membro::addVeiculo(Veiculo veiculo)
+void Membro::addVeiculo(Veiculo *veiculo)
 {
 	veiculos.push_back(veiculo);
 }
@@ -61,7 +56,7 @@ void Membro::removeVeiculo(Veiculo* veiculo)
 {
 	for (size_t i = 0; i < veiculos.size(); ++i)
 	{
-		if (&veiculos[i] == veiculo)
+		if (veiculos[i] == veiculo)
 		{
 			veiculos.erase(veiculos.begin() + i);
 			return;
@@ -100,8 +95,8 @@ void Membro::load(ifstream &file, vector<Combustivel> *combustiveis)
 	file.ignore(1000, '\n');
 	for (size_t i = 0; i < numVeiculos; ++i)
 	{
-		Veiculo veiculo;
-		veiculo.load(file, combustiveis);
+		Veiculo *veiculo = new Veiculo();
+		veiculo->load(file, combustiveis);
 		veiculos.push_back(veiculo);
 	}
 }
@@ -114,7 +109,8 @@ void Membro::save(ofstream &file, vector<Combustivel> *combustiveis)
 	file << veiculos.size() << endl;
 	for (size_t i = 0; i < veiculos.size(); i++)
 	{
-		veiculos[i].save(file, combustiveis);
+		veiculos[i]->save(file, combustiveis);
+		delete veiculos[i];
 	}
 }
 

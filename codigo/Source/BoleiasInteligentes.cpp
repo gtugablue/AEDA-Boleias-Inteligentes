@@ -5,7 +5,7 @@ const string BoleiasInteligentes::ficheiroMembros = "membros.txt";
 const string BoleiasInteligentes::ficheiroAnuncios = "anuncios.txt";
 const string BoleiasInteligentes::ficheiroBoleias = "boleias.txt";
 
-#define	BOLEIASINTELIGENTES_DESTINO_DISTANCIA_ACEITAVEL		0.003
+#define	BOLEIASINTELIGENTES_DESTINO_DISTANCIA_ACEITAVEL		0.005
 
 BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder) :
 dataFolder(dataFolder), utilizadorAtual(NULL)
@@ -753,7 +753,9 @@ void BoleiasInteligentes::showAnunciosMenu()
 					Veiculo *veiculo = utilizadorAtual->getVeiculos()[input];
 					Preco preco;
 					preco.criar();
-					preco.updatePrecoCombustivel(anunciosAnunciante[input]->getVeiculo()->getConsumo(), anunciosAnunciante[input]->getVeiculo()->getCombustivel()->getPreco(), anunciosAnunciante[input]->getOrigem().calcDistancia(anunciosAnunciante[input]->getDestino()));
+					preco.updatePrecoCombustivel(anunciosAnunciante[input]->getVeiculo()->getConsumo(), 
+						anunciosAnunciante[input]->getVeiculo()->getCombustivel()->getPreco(), 
+						anunciosAnunciante[input]->getOrigem().calcDistancia(anunciosAnunciante[input]->getDestino()));
 					CondutorCandidato condutorCandidato;
 					condutorCandidato.condutor = utilizadorAtual;
 					condutorCandidato.preco = preco;
@@ -876,9 +878,9 @@ void BoleiasInteligentes::showVeiculosMenu()
 	{
 	case 0: // Criar veiculo
 	{
-		Veiculo veiculo;
 		OutputUtils::clearScreen();
-		veiculo.criar(&combustiveis);
+		Veiculo *veiculo = new Veiculo();
+		veiculo->criar(&combustiveis);
 		utilizadorAtual->addVeiculo(veiculo);
 		cout << "Veiculo criado com sucesso." << endl;
 		InputUtils::pause();

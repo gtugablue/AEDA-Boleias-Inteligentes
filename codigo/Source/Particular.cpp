@@ -22,7 +22,7 @@ void Particular::show()
 	cout << endl << "Veiculos: " << endl;
 	for (size_t i = 0; i < veiculos.size(); i++)
 	{
-		veiculos[i].show();
+		veiculos[i]->show();
 		cout << endl;
 	}
 }

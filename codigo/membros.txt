@@ -16,7 +16,7 @@ Ibiza
 Rita Carvalho
 ritinha45
 porto
-1
+3
 Mercedes
 CLK
 12
@@ -25,6 +25,22 @@ CLK
 0
 7
 10
+a
+a
+2
+2
+2
+0
+3
+4
+marca
+modelo
+2
+1
+3
+2
+4
+5
 0
 Pedro Silva
 verdocax

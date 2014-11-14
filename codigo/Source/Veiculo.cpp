@@ -136,7 +136,7 @@ void Veiculo::show() const
 	cout << "Ano: " << ano << endl;
 	cout << "Cilindrada: " << cilindrada << endl;
 	combustivel->show();
-	cout << "Consumo: " << consumo << " l/100km" << endl;
+	cout << "Consumo: " << setprecision(2) << consumo << " l/100km" << endl;
 }
 
 void Veiculo::criar(vector<Combustivel> *combustiveis)

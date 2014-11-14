@@ -16,7 +16,7 @@ protected:
 	string nome;
 	string utilizador;
 	string password;
-	vector<Veiculo> veiculos;
+	vector<Veiculo *> veiculos;
 public:
 	Membro();///Construtor por defeito da classe
 	Membro(string nome, string utilizador, string password);///Construtor com parametros da classe
@@ -28,7 +28,7 @@ public:
 	void setUtilizador(string &utilizador);///Método para alterar o utilizador de um membro
 	void setPassword(string &password);///Método para alterar a password e um membro
 	void setVeiculos(const vector<Veiculo> &veiculo);///Método para alterar os veiculos associados a um membro
-	void addVeiculo(Veiculo veiculo);///Função para adicionar um veiculo ao vector de veiculos
+	void addVeiculo(Veiculo *veiculo);///Função para adicionar um veiculo ao vector de veiculos
 	void removeVeiculo(Veiculo* veiculo);///Função para remover um veiculo
 	void load(ifstream &file, vector<Combustivel> *combustiveis);///Função para carregar a informação de um membro
 	virtual void save(ofstream &file, vector<Combustivel> *combustiveis);///Função para gravar a informação de um membro no ficheiro de membros

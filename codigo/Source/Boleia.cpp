@@ -114,7 +114,6 @@ void Boleia::load(ifstream &file, vector<Membro *> *membros)
 	}
 	else
 	{
-		cout << ID;
 		condutor = (*membros)[ID];
 	}
 
