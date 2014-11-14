@@ -5,7 +5,7 @@ AnuncioProcura::AnuncioProcura()
 
 }
 
-void AnuncioProcura::adicionarCondutorCandidato(CondutorCandidato &condutorCandidato)
+void AnuncioProcura::adicionarCondutorCandidato(CondutorCandidato *condutorCandidato)
 {
 	condutoresCandidatos.push_back(condutorCandidato);
 }
@@ -16,7 +16,7 @@ bool AnuncioProcura::podeSerPassageiro(Membro* membro) const
 	{
 		for (size_t i = 0; i < condutoresCandidatos.size(); ++i)
 		{
-			if (condutoresCandidatos[i].condutor == membro)
+			if (condutoresCandidatos[i]->condutor == membro)
 			{
 				return false;
 			}
@@ -32,7 +32,7 @@ bool AnuncioProcura::podeSerCondutor(Membro* membro) const
 	{
 		for (size_t i = 0; i < condutoresCandidatos.size(); ++i)
 		{
-			if (condutoresCandidatos[i].condutor == membro)
+			if (condutoresCandidatos[i]->condutor == membro)
 			{
 				return false;
 			}
@@ -53,7 +53,7 @@ void AnuncioProcura::editar()
 	Anuncio::editar();
 }
 
-vector<CondutorCandidato> AnuncioProcura::getCondutoresCandidatos()
+vector<CondutorCandidato *> AnuncioProcura::getCondutoresCandidatos()
 {
 	return condutoresCandidatos;
 }
@@ -72,13 +72,13 @@ void AnuncioProcura::save(ofstream &file, vector<Membro *> *membros)
 	{
 		for (size_t j = 0; j < membros->size(); ++j)
 		{
-			if (condutoresCandidatos[i].condutor == (*membros)[j])
+			if (condutoresCandidatos[i]->condutor == (*membros)[j])
 			{
 				file << j << endl;
-				condutoresCandidatos[i].preco.save(file);
-				for (size_t k = 0; k < condutoresCandidatos[i].condutor->getVeiculos().size(); ++k)
+				condutoresCandidatos[i]->preco.save(file);
+				for (size_t k = 0; k < condutoresCandidatos[i]->condutor->getVeiculos().size(); ++k)
 				{
-					if (condutoresCandidatos[i].condutor->getVeiculos()[i] == condutoresCandidatos[i].veiculo)
+					if (condutoresCandidatos[i]->condutor->getVeiculos()[i] == condutoresCandidatos[i]->veiculo)
 					{
 						file << k << endl;
 						break;
@@ -103,12 +103,12 @@ void AnuncioProcura::load(ifstream &file, vector<Membro *> *membros)
 		file.ignore(1000, '\n');
 		Preco preco;
 		preco.load(file);
-		CondutorCandidato condutorCandidato;
-		condutorCandidato.condutor = (*membros)[ID];
-		condutorCandidato.preco = preco;
+		CondutorCandidato *condutorCandidato = new CondutorCandidato();
+		condutorCandidato->condutor = (*membros)[ID];
+		condutorCandidato->preco = preco;
 		file >> ID2;
 		file.ignore(1000, '\n');
-		condutorCandidato.veiculo = (*membros)[ID]->getVeiculos()[ID2];
+		condutorCandidato->veiculo = (*membros)[ID]->getVeiculos()[ID2];
 		condutoresCandidatos.push_back(condutorCandidato);
 	}
 }
