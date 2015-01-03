@@ -34,6 +34,17 @@ void Particular::signup()
 {
 }
 
+void Particular::edit()
+{
+	Membro::edit();
+	cout << "Pretende alterar a morada (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Introduza a nova morada: ";
+		getline(cin, nome);
+	}
+}
+
 void Particular::save(ofstream &file, vector<Combustivel> *combustiveis)
 {
 	file << 0 << endl;
