@@ -119,6 +119,9 @@
     <ClInclude Include="Headers\BST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Motorista.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="combustiveis.txt">

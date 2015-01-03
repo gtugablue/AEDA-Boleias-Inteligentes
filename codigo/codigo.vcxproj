@@ -109,6 +109,7 @@
     <ClInclude Include="Headers\Hora.h" />
     <ClInclude Include="Headers\InputUtils.h" />
     <ClInclude Include="Headers\Membro.h" />
+    <ClInclude Include="Headers\Motorista.h" />
     <ClInclude Include="Headers\OutputUtils.h" />
     <ClInclude Include="Headers\Particular.h" />
     <ClInclude Include="Headers\Preco.h" />
