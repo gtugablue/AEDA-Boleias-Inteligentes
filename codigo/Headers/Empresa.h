@@ -42,7 +42,8 @@ public:
 	void load(ifstream &file, vector<Combustivel> *combustiveis);///Função para carregar a informação de uma empresa
 	void show() const;///Função que permite mostrar no ecra toda a informação relativa a uma empresa
 	void insertOld(ClientesAntigos &c1);
-	void removeOld(const ClientesAntigos &c1);
+	void removeOld(string nome);
+	void showOld();
 	
 
 	
