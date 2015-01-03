@@ -14,6 +14,7 @@ using namespace std;
 
 class Empresa : public Membro   ///Classe derivada da classe mãe Membro
 {
+private:
 	string website;
 	Coordenadas garagem;
 	unordered_set<ClientesAntigos>clientes;

@@ -6,8 +6,6 @@
 #include "math.h"
 #include <iomanip>
 
-using namespace std;
-
 class Coordenadas
 {
 private:

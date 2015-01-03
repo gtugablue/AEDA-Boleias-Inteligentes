@@ -4,17 +4,16 @@
 #include <string>
 #include "Coordenadas.h"
 
-using namespace std;
-
 class Motorista
 {
 private:
-	string nome;
+	std::string nome;
 	Coordenadas morada;
 public:
-	Motorista(const string &nome, const string &morada);
-	string getNome() const;
+	Motorista(const std::string &nome, const Coordenadas &morada);
+	std::string getNome() const;
 	Coordenadas getMorada() const;
+	bool operator<(const Motorista &motorista) const;
 };
 
 #endif

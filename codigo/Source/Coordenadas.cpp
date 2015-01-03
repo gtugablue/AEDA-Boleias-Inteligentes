@@ -1,5 +1,7 @@
 #include "../headers/Coordenadas.h"
 
+using namespace std;
+
 #define PI 3.14159265
 
 Coordenadas::Coordenadas()
