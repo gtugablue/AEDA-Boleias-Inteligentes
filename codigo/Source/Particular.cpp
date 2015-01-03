@@ -35,6 +35,12 @@ void Particular::save(ofstream &file, vector<Combustivel> *combustiveis)
 {
 	file << 0 << endl;
 	Membro::save(file, combustiveis);
+	morada.save(file);
+}
+
+void Particular::load(ofstream &file, vector<Combustivel> *combustiveis)
+{
+
 }
 
 void Particular::updateConhecidos(vector<Membro *> passageiros)

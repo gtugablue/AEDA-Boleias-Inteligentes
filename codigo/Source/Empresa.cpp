@@ -36,6 +36,12 @@ void Empresa::save(ofstream &file, vector<Combustivel> *combustiveis)
 	garagem.save(file);
 }
 
+void Empresa::load(ifstream &file, vector<Combustivel> *combustiveis)
+{
+	Membro::load(file, combustiveis);
+	morada.load(file);
+}
+
 void Empresa::show() const
 {
 	Membro::show();
