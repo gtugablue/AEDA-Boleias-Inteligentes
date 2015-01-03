@@ -415,52 +415,112 @@ void BoleiasInteligentes::showLoginMenu()
 void BoleiasInteligentes::showMainMenu()
 {
 	OutputUtils::clearScreen();
-	vector<string> items =
+	if (dynamic_cast<Particular*>(utilizadorAtual) != NULL)
 	{
-		"Editar conta",
-		"Anuncios",
-		"Veiculos",
-		"Boleias",
-		"Logout"
-	};
-	showMenu(items);
-	int n = InputUtils::readDigit(0, items.size() - 1);
-	switch (n)
-	{
-	case 0: // Editar conta
-	{
-		OutputUtils::clearScreen();
-		utilizadorAtual->edit();
-		cout << "Conta editada com sucesso." << endl;
-		InputUtils::pause();
-		return showMainMenu();
-	}
-	case 1: // Anuncios
-	{
-		return showAnunciosMenu();
-	}
-	case 2: // Veiculos
-	{
-		return showVeiculosMenu();
-	}
-	case 3: // Boleias
-	{
-		return showBoleiasMenu();
-	}
-	case 4: // Logout
-	{
-		OutputUtils::clearScreen();
-		cout << "Tem a certeza que pretende fazer logout (y/n)?";
-		if (InputUtils::readYesOrNo('y', 'n'))
+		// Particular
+		vector<string> items =
 		{
-			utilizadorAtual = NULL;
-		}
-		else
+			"Editar conta",
+			"Anuncios",
+			"Veiculos",
+			"Boleias",
+			"Logout"
+		};
+		showMenu(items);
+		int n = InputUtils::readDigit(0, items.size() - 1);
+		switch (n)
 		{
+		case 0: // Editar conta
+		{
+			OutputUtils::clearScreen();
+			utilizadorAtual->edit();
+			cout << "Conta editada com sucesso." << endl;
+			InputUtils::pause();
 			return showMainMenu();
 		}
-		return showLoginMenu();
+		case 1: // Anuncios
+		{
+			return showAnunciosMenu();
+		}
+		case 2: // Veiculos
+		{
+			return showVeiculosMenu();
+		}
+		case 3: // Boleias
+		{
+			return showBoleiasMenu();
+		}
+		case 4: // Logout
+		{
+			OutputUtils::clearScreen();
+			cout << "Tem a certeza que pretende fazer logout (y/n)?";
+			if (InputUtils::readYesOrNo('y', 'n'))
+			{
+				utilizadorAtual = NULL;
+			}
+			else
+			{
+				return showMainMenu();
+			}
+			return showLoginMenu();
+		}
+		}
 	}
+	else
+	{
+		// Empresa
+		vector<string> items =
+		{
+			"Editar conta",
+			"Anuncios",
+			"Veiculos",
+			"Boleias",
+			"Motoristas",
+			"Logout"
+		};
+		showMenu(items);
+		int n = InputUtils::readDigit(0, items.size() - 1);
+		switch (n)
+		{
+		case 0: // Editar conta
+		{
+			OutputUtils::clearScreen();
+			utilizadorAtual->edit();
+			cout << "Conta editada com sucesso." << endl;
+			InputUtils::pause();
+			return showMainMenu();
+		}
+		case 1: // Anuncios
+		{
+			return showAnunciosMenu();
+		}
+		case 2: // Veiculos
+		{
+			return showVeiculosMenu();
+		}
+		case 3: // Boleias
+		{
+			return showBoleiasMenu();
+		}
+		case 4: // Motoristas
+		{
+			return showMotoristasMenu();
+		}
+		case 5: // Logout
+		{
+			OutputUtils::clearScreen();
+			cout << "Tem a certeza que pretende fazer logout (y/n)?";
+			if (InputUtils::readYesOrNo('y', 'n'))
+			{
+				utilizadorAtual = NULL;
+			}
+			else
+			{
+				return showMainMenu();
+			}
+			return showLoginMenu();
+		}
+		}
 	}
 	return;
 }
@@ -1122,6 +1182,36 @@ void BoleiasInteligentes::showBoleiasMenu()
 		return showMainMenu();
 	}
 	}
+}
+
+void BoleiasInteligentes::showMotoristasMenu()
+{
+	OutputUtils::clearScreen();
+	vector<string> items =
+	{
+		"Adicionar motorista",
+		"Editar motorista",
+		"Remover motorista"
+	};
+	showMenu(items);
+	int n = InputUtils::readDigit(0, items.size() - 1);
+
+	switch (n)
+	{
+	case 0:	// Adicionar motorista
+	{
+
+	}
+	case 1:	// Editar motorista
+	{
+
+	}
+	case 2: // Remover motorista
+	{
+
+	}
+	}
+	return showMainMenu();
 }
 
 void BoleiasInteligentes::sortAnuncios(const Coordenadas &origem, const Coordenadas &destino, int left, int right)
