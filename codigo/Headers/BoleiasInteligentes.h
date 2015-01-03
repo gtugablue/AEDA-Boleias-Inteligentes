@@ -16,6 +16,7 @@
 #include "Membro.h"
 #include "Particular.h"
 #include "Empresa.h"
+#include "Motorista.h"
 #include <algorithm>
 #include "InputUtils.h"
 #include "OutputUtils.h"

@@ -1201,7 +1201,10 @@ void BoleiasInteligentes::showMotoristasMenu()
 	{
 	case 0:	// Adicionar motorista
 	{
+		OutputUtils::clearScreen();
 
+		InputUtils::pause();
+		return showMainMenu();
 	}
 	case 1:	// Editar motorista
 	{
