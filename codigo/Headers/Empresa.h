@@ -30,8 +30,8 @@ class Empresa : public Membro   ///Classe derivada da classe mãe Membro
 private:
 	string website;
 	Coordenadas garagem;
-	unordered_set<ClientesAntigos,hstr,eqstr>clientes;
-	BST<Motorista> motoristas;
+	unordered_set<ClientesAntigos, hstr, eqstr>clientes;
+	BST<Motorista>motoristas;
 public:
 	
 	Empresa();///Construtor por defeito da classe
@@ -42,6 +42,8 @@ public:
 	void load(ifstream &file, vector<Combustivel> *combustiveis);///Função para carregar a informação de uma empresa
 	void show() const;///Função que permite mostrar no ecra toda a informação relativa a uma empresa
 	void insertOld(ClientesAntigos &c1);
+	void removeOld(const ClientesAntigos &c1);
+	
 
 	
 	
