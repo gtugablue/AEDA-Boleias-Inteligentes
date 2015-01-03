@@ -33,10 +33,11 @@ private:
 	unordered_set<ClientesAntigos, hstr, eqstr>clientes;
 	BST<Motorista>motoristas;
 public:
-	
 	Empresa();///Construtor por defeito da classe
 	Empresa(const string &nome, const string &utilizador, const string &password, const string &website);///Construtor com parâmetros da classe.
 	Coordenadas getMorada() const;
+	const BST<Motorista> &getMotoristas() const;
+	void addMotorista(const Motorista &motorista);
 	void signup();///Função que cria um novo website
 	void edit();///Função que permite editar a informação de um website
 	void save(ofstream &file, vector<Combustivel> *combustiveis);///Função que grava a informação relativa a uma empresa.
@@ -44,12 +45,6 @@ public:
 	void show() const;///Função que permite mostrar no ecra toda a informação relativa a uma empresa
 	void insertOld(ClientesAntigos &c1);
 	void removeOld(const ClientesAntigos &c1);
-	
-
-	
-	
 };
-
-
 
 #endif

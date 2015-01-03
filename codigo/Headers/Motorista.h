@@ -2,6 +2,7 @@
 #define _MOTORISTA_H
 
 #include <string>
+#include <iostream>
 #include "Coordenadas.h"
 
 class Motorista
@@ -21,6 +22,9 @@ public:
 	void editar(const Coordenadas &garagem);
 	void updateDistancia(const Coordenadas &garagem);
 	bool operator<(const Motorista &motorista) const;
+	friend ostream &operator<<(ostream &os, const Motorista &motorista);
 };
+
+ostream &operator<<(ostream &os, const Motorista &motorista);
 
 #endif

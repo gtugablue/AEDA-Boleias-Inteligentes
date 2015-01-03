@@ -62,3 +62,8 @@ bool Motorista::operator<(const Motorista &motorista) const
 		return distancia > motorista.distancia;
 	}
 }
+
+ostream &operator<<(ostream &os, const Motorista &motorista)
+{
+	return os << motorista.nome << endl;
+}

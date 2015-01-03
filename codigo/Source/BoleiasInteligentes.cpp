@@ -1189,6 +1189,7 @@ void BoleiasInteligentes::showMotoristasMenu()
 	OutputUtils::clearScreen();
 	vector<string> items =
 	{
+		"Ver motoristas",
 		"Adicionar motorista",
 		"Editar motorista",
 		"Remover motorista",
@@ -1199,27 +1200,33 @@ void BoleiasInteligentes::showMotoristasMenu()
 
 	switch (n)
 	{
-	case 0:	// Adicionar motorista
+	case 0: // Ver motoristas
+	{
+		OutputUtils::clearScreen();
+		((Empresa *)utilizadorAtual)->getMotoristas().printTree();
+		return showMotoristasMenu();
+	}
+	case 1:	// Adicionar motorista
 	{
 		OutputUtils::clearScreen();
 
 		Motorista motorista;
 		motorista.criar(utilizadorAtual->getMorada());
-
+		((Empresa *)utilizadorAtual)->addMotorista(motorista);
 		cout << "Motorista adicionado com sucesso." << endl;
 
 		InputUtils::pause();
-		return showMainMenu();
+		return showMotoristasMenu();
 	}
-	case 1:	// Editar motorista
+	case 2:	// Editar motorista
 	{
 
 	}
-	case 2: // Remover motorista
+	case 3: // Remover motorista
 	{
 
 	}
-	case 3: // Voltar
+	case 4: // Voltar
 	{
 		return showMainMenu();
 	}

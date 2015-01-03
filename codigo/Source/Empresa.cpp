@@ -17,6 +17,16 @@ Coordenadas Empresa::getMorada() const
 	return garagem;
 }
 
+const BST<Motorista> &Empresa::getMotoristas() const
+{
+	return motoristas;
+}
+
+void Empresa::addMotorista(const Motorista &motorista)
+{
+	motoristas.insert(motorista);
+}
+
 void Empresa::signup()
 {
 	cout << "Website (deixe em branco se nao existir): ";
