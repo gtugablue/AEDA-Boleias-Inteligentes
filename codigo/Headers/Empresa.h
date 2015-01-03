@@ -31,6 +31,7 @@ private:
 	string website;
 	Coordenadas garagem;
 	unordered_set<ClientesAntigos,hstr,eqstr>clientes;
+	BST<Motorista> motoristas;
 public:
 	
 	Empresa();///Construtor por defeito da classe
