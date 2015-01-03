@@ -1203,7 +1203,20 @@ void BoleiasInteligentes::showMotoristasMenu()
 	case 0: // Ver motoristas
 	{
 		OutputUtils::clearScreen();
-		((Empresa *)utilizadorAtual)->getMotoristas().printTree();
+		try
+		{
+			const BST<Motorista> &motoristas = ((Empresa *)utilizadorAtual)->getMotoristas();
+			if (motoristas.isEmpty())
+			{
+				throw EmptyException<string>("Nenhum elemento a listar.");
+			}
+			motoristas.printTree();
+		}
+		catch (EmptyException<string> &e)
+		{
+			cout << "Erro: " << e.info << endl;
+		}
+		InputUtils::pause();
 		return showMotoristasMenu();
 	}
 	case 1:	// Adicionar motorista
