@@ -1191,7 +1191,8 @@ void BoleiasInteligentes::showMotoristasMenu()
 	{
 		"Adicionar motorista",
 		"Editar motorista",
-		"Remover motorista"
+		"Remover motorista",
+		"Voltar"
 	};
 	showMenu(items);
 	int n = InputUtils::readDigit(0, items.size() - 1);
@@ -1210,8 +1211,11 @@ void BoleiasInteligentes::showMotoristasMenu()
 	{
 
 	}
+	case 3: // Voltar
+	{
+		return showMainMenu();
 	}
-	return showMainMenu();
+	}
 }
 
 void BoleiasInteligentes::sortAnuncios(const Coordenadas &origem, const Coordenadas &destino, int left, int right)
