@@ -90,6 +90,7 @@
     <ClCompile Include="Source\InputUtils.cpp" />
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\Membro.cpp" />
+    <ClCompile Include="Source\Motorista.cpp" />
     <ClCompile Include="Source\OutputUtils.cpp" />
     <ClCompile Include="Source\Particular.cpp" />
     <ClCompile Include="Source\Preco.cpp" />
