@@ -60,3 +60,20 @@ void Empresa::insertOld(ClientesAntigos &c1)
 
 }
 
+
+void Empresa::removeOld(const ClientesAntigos &c1)
+{
+	const string x = c1.getutilizador();
+	unordered_set<ClientesAntigos,hstr,eqstr>::iterator it;
+
+	for (it = clientes.begin(); it != clientes.end(); it++)
+	{
+		if (it->getutilizador() == x)
+		{
+			clientes.erase(it);
+		}
+
+	}
+}
+
+
