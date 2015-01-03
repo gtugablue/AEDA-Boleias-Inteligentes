@@ -12,6 +12,7 @@ private:
 	string nome;
 	Coordenadas morada;
 public:
+	Motorista(const string &nome, const string &morada);
 	string getNome() const;
 	Coordenadas getMorada() const;
 };
