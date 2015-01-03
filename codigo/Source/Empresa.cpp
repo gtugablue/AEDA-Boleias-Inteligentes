@@ -61,18 +61,27 @@ void Empresa::insertOld(ClientesAntigos &c1)
 }
 
 
-void Empresa::removeOld(const ClientesAntigos &c1)
+void Empresa::removeOld(string nome)
 {
-	const string x = c1.getutilizador();
-	unordered_set<ClientesAntigos,hstr,eqstr>::iterator it;
+	ClientesAntigos x;
+	unordered_set<ClientesAntigos, hstr, eqstr>set=clientes;
+	unordered_set<ClientesAntigos, hstr, eqstr>::iterator it=set.find(x);
+	x.setutilizador(nome);
+	if (it == set.end())
+	{
+		cout << "Utilizador nao encontrado";
+	}
+	else clientes.erase(it);
+	
+}
+
+void Empresa::showOld()
+{
+	unordered_set<ClientesAntigos, hstr, eqstr>::iterator it;
 
 	for (it = clientes.begin(); it != clientes.end(); it++)
 	{
-		if (it->getutilizador() == x)
-		{
-			clientes.erase(it);
-		}
-
+		it->show();
 	}
 }
 
