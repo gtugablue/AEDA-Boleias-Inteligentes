@@ -1186,6 +1186,31 @@ void BoleiasInteligentes::showBoleiasMenu()
 
 void BoleiasInteligentes::showMotoristasMenu()
 {
+	OutputUtils::clearScreen();
+	vector<string> items =
+	{
+		"Adicionar motorista",
+		"Editar motorista",
+		"Remover motorista"
+	};
+	showMenu(items);
+	int n = InputUtils::readDigit(0, items.size() - 1);
+
+	switch (n)
+	{
+	case 0:	// Adicionar motorista
+	{
+
+	}
+	case 1:	// Editar motorista
+	{
+
+	}
+	case 2: // Remover motorista
+	{
+
+	}
+	}
 	return showMainMenu();
 }
 
