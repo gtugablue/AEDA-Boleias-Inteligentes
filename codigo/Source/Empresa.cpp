@@ -52,3 +52,10 @@ void Empresa::show() const
 	garagem.show();
 
 }
+
+void Empresa::insertOld(ClientesAntigos &c1)
+{
+	clientes.insert(c1);
+
+}
+

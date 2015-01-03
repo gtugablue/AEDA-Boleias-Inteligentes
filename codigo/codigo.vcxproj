@@ -82,6 +82,7 @@
     <ClCompile Include="Source\AnuncioOferta.cpp" />
     <ClCompile Include="Source\AnuncioProcura.cpp" />
     <ClCompile Include="Source\BoleiasInteligentes.cpp" />
+    <ClCompile Include="Source\ClientesAntigos.cpp" />
     <ClCompile Include="Source\Combustivel.cpp" />
     <ClCompile Include="Source\Coordenadas.cpp" />
     <ClCompile Include="Source\Data.cpp" />
@@ -102,6 +103,7 @@
     <ClInclude Include="Headers\AnuncioOferta.h" />
     <ClInclude Include="Headers\AnuncioProcura.h" />
     <ClInclude Include="Headers\BST.h" />
+    <ClInclude Include="Headers\ClientesAntigos.h" />
     <ClInclude Include="Headers\Combustivel.h" />
     <ClInclude Include="Headers\Coordenadas.h" />
     <ClInclude Include="Headers\Data.h" />
