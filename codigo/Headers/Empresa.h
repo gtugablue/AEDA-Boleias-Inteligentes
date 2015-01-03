@@ -4,7 +4,9 @@
 #include "Membro.h"
 #include "Boleia.h"
 #include "Coordenadas.h"
+#include "ClientesAntigos.h"
 #include <vector>
+#include <unordered_set>
 
 using namespace std;
 
@@ -12,6 +14,7 @@ class Empresa : public Membro   ///Classe derivada da classe mãe Membro
 {
 	string website;
 	Coordenadas garagem;
+	unordered_set<ClientesAntigos>clientes;
 public:
 	Empresa();///Construtor por defeito da classe
 	Empresa(const string &nome, const string &utilizador, const string &password, const string &website);///Construtor com parâmetros da classe.
