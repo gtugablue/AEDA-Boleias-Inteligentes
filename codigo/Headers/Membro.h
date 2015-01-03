@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include "InputUtils.h"
+#include "Coordenadas.h"
 
 using namespace std;
 
@@ -14,6 +15,7 @@ class Membro
 {
 protected:
 	string nome;
+	Coordenadas morada;
 	string utilizador;
 	string password;
 	vector<Veiculo *> veiculos;
