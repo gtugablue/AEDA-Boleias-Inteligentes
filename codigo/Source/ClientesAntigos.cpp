@@ -4,3 +4,13 @@
 {
 	return cliente->getUtilizador();
 }
+
+ void ClientesAntigos::show()const
+ {
+	 cliente->show();
+ }
+
+ void ClientesAntigos::setutilizador(string nome)
+ {
+	 cliente->setUtilizador(nome);
+ }
