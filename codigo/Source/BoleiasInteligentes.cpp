@@ -1204,7 +1204,9 @@ void BoleiasInteligentes::showMotoristasMenu()
 		OutputUtils::clearScreen();
 
 		Motorista motorista;
-		motorista.criar(utilizadorAtual)
+		motorista.criar(utilizadorAtual->getMorada());
+
+		cout << "Motorista adicionado com sucesso." << endl;
 
 		InputUtils::pause();
 		return showMainMenu();
