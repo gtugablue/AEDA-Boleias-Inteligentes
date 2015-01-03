@@ -5,6 +5,8 @@
 #include "Boleia.h"
 #include "Coordenadas.h"
 #include "ClientesAntigos.h"
+#include "Motorista.h"
+#include "BST.h"
 #include <vector>
 #include <unordered_set>
 
@@ -15,6 +17,7 @@ class Empresa : public Membro   ///Classe derivada da classe mãe Membro
 	string website;
 	Coordenadas garagem;
 	unordered_set<ClientesAntigos>clientes;
+	BST<Motorista> motoristas;
 public:
 	Empresa();///Construtor por defeito da classe
 	Empresa(const string &nome, const string &utilizador, const string &password, const string &website);///Construtor com parâmetros da classe.
