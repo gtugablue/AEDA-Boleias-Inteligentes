@@ -11,6 +11,8 @@ private:
 	Coordenadas morada;
 public:
 	Motorista(const std::string &nome, const Coordenadas &morada);
+	void setNome(const std::string &nome);
+	void setMorada(const Coordenadas &morada);
 	std::string getNome() const;
 	Coordenadas getMorada() const;
 	bool operator<(const Motorista &motorista) const;
