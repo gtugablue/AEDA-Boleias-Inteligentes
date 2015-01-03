@@ -15,6 +15,11 @@ vector<pair<Membro*, unsigned>> Particular::getConhecidos() const
 	return conhecidos;
 }
 
+Coordenadas Particular::getMorada() const
+{
+	return morada;
+}
+
 void Particular::show()
 {
 	Membro::show();

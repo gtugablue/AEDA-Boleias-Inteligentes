@@ -12,6 +12,11 @@ Membro(nome, utilizador, password), motoristas(Motorista("", Coordenadas(0, 0), 
 	this->website = website;
 }
 
+Coordenadas Empresa::getMorada() const
+{
+	return garagem;
+}
+
 void Empresa::signup()
 {
 	cout << "Website (deixe em branco se nao existir): ";

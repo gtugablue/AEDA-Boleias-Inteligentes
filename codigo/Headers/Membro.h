@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include "InputUtils.h"
+#include "Coordenadas.h"
 
 using namespace std;
 
@@ -23,6 +24,7 @@ public:
 	string getNome() const;///Método para retornar o nome do membro
 	string getUtilizador() const;///Método para retornar o utilizador do membro
 	string getPassword() const;///Método para retornar a password do membro
+	virtual Coordenadas getMorada() const = 0;///Método para retornar a morada do membro
 	vector<Veiculo *> getVeiculos();///Método para retornar os veiculos associados a um membro
 	void setNome(string &nome);///Método para alterar o nome de um membro
 	void setUtilizador(string &utilizador);///Método para alterar o utilizador de um membro

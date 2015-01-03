@@ -1203,6 +1203,9 @@ void BoleiasInteligentes::showMotoristasMenu()
 	{
 		OutputUtils::clearScreen();
 
+		Motorista motorista;
+		motorista.criar(utilizadorAtual)
+
 		InputUtils::pause();
 		return showMainMenu();
 	}

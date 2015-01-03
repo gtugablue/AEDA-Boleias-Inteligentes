@@ -36,6 +36,7 @@ public:
 	
 	Empresa();///Construtor por defeito da classe
 	Empresa(const string &nome, const string &utilizador, const string &password, const string &website);///Construtor com parâmetros da classe.
+	Coordenadas getMorada() const;
 	void signup();///Função que cria um novo website
 	void edit();///Função que permite editar a informação de um website
 	void save(ofstream &file, vector<Combustivel> *combustiveis);///Função que grava a informação relativa a uma empresa.
