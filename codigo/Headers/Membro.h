@@ -23,6 +23,7 @@ public:
 	Membro();///Construtor por defeito da classe
 	Membro(string nome, string utilizador, string password);///Construtor com parametros da classe
 	string getNome() const;///Método para retornar o nome do membro
+	string getMorada() const;///Método para retornar a morada do membro
 	string getUtilizador() const;///Método para retornar o utilizador do membro
 	string getPassword() const;///Método para retornar a password do membro
 	vector<Veiculo *> getVeiculos();///Método para retornar os veiculos associados a um membro

@@ -32,10 +32,14 @@ void Empresa::save(ofstream &file, vector<Combustivel> *combustiveis)
 {
 	file << 1 << endl;
 	Membro::save(file, combustiveis);
+	file << website << endl;
+	garagem.save(file);
 }
 
 void Empresa::show() const
 {
 	Membro::show();
 	cout << "Website: " << website << endl;
+	cout << "Garagem: " << endl;
+	garagem.show();
 }

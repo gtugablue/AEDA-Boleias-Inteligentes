@@ -97,10 +97,10 @@
     <ClCompile Include="Source\Boleia.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BST.h" />
     <ClInclude Include="Headers\Anuncio.h" />
     <ClInclude Include="Headers\AnuncioOferta.h" />
     <ClInclude Include="Headers\AnuncioProcura.h" />
+    <ClInclude Include="Headers\BST.h" />
     <ClInclude Include="Headers\Combustivel.h" />
     <ClInclude Include="Headers\Coordenadas.h" />
     <ClInclude Include="Headers\Data.h" />
