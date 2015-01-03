@@ -97,6 +97,7 @@
     <ClCompile Include="Source\Boleia.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BST.h" />
     <ClInclude Include="Headers\Anuncio.h" />
     <ClInclude Include="Headers\AnuncioOferta.h" />
     <ClInclude Include="Headers\AnuncioProcura.h" />

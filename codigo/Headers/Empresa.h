@@ -3,6 +3,7 @@
 
 #include "Membro.h"
 #include "Boleia.h"
+#include "Coordenadas.h"
 #include <vector>
 
 using namespace std;
@@ -10,6 +11,7 @@ using namespace std;
 class Empresa : public Membro   ///Classe derivada da classe mãe Membro
 {
 	string website;
+	Coordenadas garagem;
 public:
 	Empresa();///Construtor por defeito da classe
 	Empresa(const string &nome, const string &utilizador, const string &password, const string &website);///Construtor com parâmetros da classe.
