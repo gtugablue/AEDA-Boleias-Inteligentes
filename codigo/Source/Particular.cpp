@@ -17,8 +17,11 @@ vector<pair<Membro*, unsigned>> Particular::getConhecidos() const
 
 void Particular::show()
 {
-	cout << "Nome: " << nome << endl;
-	cout << "Utilizador: " << utilizador << endl;
+	Membro::show();
+
+	cout << "Morada: " << endl;
+	morada.show();
+
 	cout << endl << "Veiculos: " << endl;
 	for (size_t i = 0; i < veiculos.size(); i++)
 	{
@@ -38,9 +41,10 @@ void Particular::save(ofstream &file, vector<Combustivel> *combustiveis)
 	morada.save(file);
 }
 
-void Particular::load(ofstream &file, vector<Combustivel> *combustiveis)
+void Particular::load(ifstream &file, vector<Combustivel> *combustiveis)
 {
-
+	Membro::load(file, combustiveis);
+	morada.load(file);
 }
 
 void Particular::updateConhecidos(vector<Membro *> passageiros)
