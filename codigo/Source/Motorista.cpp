@@ -2,6 +2,8 @@
 
 using namespace std;
 
+#define	MOTORISTA_ORDENACAO_DIST_MIN		0.005
+
 Motorista::Motorista()
 {
 
@@ -53,13 +55,13 @@ void Motorista::updateDistancia(const Coordenadas &garagem)
 
 bool Motorista::operator<(const Motorista &motorista) const
 {
-	if (distancia == motorista.distancia)
+	if (fabs(distancia - motorista.distancia) < MOTORISTA_ORDENACAO_DIST_MIN)
 	{
-		return nome > motorista.nome;
+		return nome < motorista.nome;
 	}
 	else
 	{
-		return distancia > motorista.distancia;
+		return distancia < motorista.distancia;
 	}
 }
 
