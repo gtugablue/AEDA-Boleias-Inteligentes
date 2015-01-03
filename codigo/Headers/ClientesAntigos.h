@@ -12,6 +12,8 @@ class ClientesAntigos
 	Membro* cliente;
 public:
 	 string getutilizador() const;
+	 void show()const;
+	 void setutilizador(string nome);
 };
 
 #endif
