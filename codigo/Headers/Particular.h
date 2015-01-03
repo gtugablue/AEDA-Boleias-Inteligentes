@@ -4,6 +4,7 @@
 #include "Membro.h"
 #include "Data.h"
 #include "Veiculo.h"
+#include "Coordenadas.h"
 #include <vector>
 
 using namespace std;

@@ -1,6 +1,0 @@
-Gasolina 95
-1.61
-Gasolina 98
-1.72
-Gasoleo
-1.3
