@@ -1,12 +1,13 @@
 #include "../Headers/empresa.h"
 
-Empresa::Empresa()
+Empresa::Empresa():
+motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0)))
 {
 	
 }
 
 Empresa::Empresa(const string &nome, const string &utilizador, const string &password, const string &website):
-Membro(nome, utilizador, password)
+Membro(nome, utilizador, password), motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0)))
 {
 	this->website = website;
 }
