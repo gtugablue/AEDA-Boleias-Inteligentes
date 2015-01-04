@@ -17,6 +17,7 @@ private:
 public:
 	Particular();///Construtor por defeito da classe
 	Particular(string nome, string utilizador, string password);///Construtor com parâmetros da classe
+	void setMorada(const Coordenadas &morada);///Método para alterar a morada de um particular
 	vector<pair<Membro*, unsigned>> getConhecidos() const;
 	Coordenadas getMorada() const;
 	void show();///Função que imprime no ecrã a informação de um particular

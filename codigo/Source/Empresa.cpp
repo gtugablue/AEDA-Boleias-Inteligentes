@@ -1,4 +1,5 @@
 #include "../Headers/empresa.h"
+#include <queue>
 
 Empresa::Empresa() :
 motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0)))
@@ -10,6 +11,12 @@ Empresa::Empresa(const string &nome, const string &utilizador, const string &pas
 Membro(nome, utilizador, password), motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0)))
 {
 	this->website = website;
+}
+
+void Empresa::setMorada(const Coordenadas &morada)
+{
+	this->garagem = morada;
+
 }
 
 Coordenadas Empresa::getMorada() const

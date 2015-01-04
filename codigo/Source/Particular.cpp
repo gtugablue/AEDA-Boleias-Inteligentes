@@ -10,6 +10,11 @@ Particular::Particular(string nome, string utilizador, string password) :Membro(
 
 }
 
+void Particular::setMorada(const Coordenadas &morada)
+{
+	this->morada = morada;
+}
+
 vector<pair<Membro*, unsigned>> Particular::getConhecidos() const
 {
 	return conhecidos;

@@ -29,6 +29,7 @@ public:
 	void setNome(string &nome);///Método para alterar o nome de um membro
 	void setUtilizador(string &utilizador);///Método para alterar o utilizador de um membro
 	void setPassword(string &password);///Método para alterar a password e um membro
+	virtual void setMorada(const Coordenadas &morada) = 0;///Método para alterar a morada de um membro
 	void setVeiculos(const vector<Veiculo> &veiculo);///Método para alterar os veiculos associados a um membro
 	void addVeiculo(Veiculo *veiculo);///Função para adicionar um veiculo ao vector de veiculos
 	void removeVeiculo(Veiculo* veiculo);///Função para remover um veiculo

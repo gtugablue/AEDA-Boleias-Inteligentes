@@ -31,10 +31,11 @@ private:
 	string website;
 	Coordenadas garagem;
 	unordered_set<ClientesAntigos, hstr, eqstr>clientes;
-	BST<Motorista>motoristas;
+	BST<Motorista> motoristas;
 public:
 	Empresa();///Construtor por defeito da classe
 	Empresa(const string &nome, const string &utilizador, const string &password, const string &website);///Construtor com parâmetros da classe.
+	void setMorada(const Coordenadas &morada);
 	Coordenadas getMorada() const;
 	const BST<Motorista> &getMotoristas() const;
 	void addMotorista(const Motorista &motorista);
@@ -49,7 +50,5 @@ public:
 	void removeOld(string nome);
 	void showOld();
 };
-
-
 
 #endif
