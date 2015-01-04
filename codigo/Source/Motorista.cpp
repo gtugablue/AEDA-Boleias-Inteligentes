@@ -57,6 +57,8 @@ bool Motorista::operator<(const Motorista &motorista) const
 {
 	if (fabs(distancia - motorista.distancia) < MOTORISTA_ORDENACAO_DIST_MIN)
 	{
+		cout << nome << " < " << motorista.nome << endl;
+		InputUtils::pause();
 		return nome < motorista.nome;
 	}
 	else
