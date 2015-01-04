@@ -434,11 +434,11 @@ double Anuncio::calcularAnuncioPoints(const Particular* utilizadorAtual, const C
 
 void Anuncio::novoCandidato(Particular* candidato_novo){ 
 	//(*candidatos).push(candidato_novo);
-	organizarCandidatos();
+	//organizarCandidatos();
 }
 
 void Anuncio::organizarCandidatos(){
-	vector<int> v;
+	/*vector<int> v;
 	vector<Membro*> membros;
 	int i = 0;
 	while (!candidatos.empty()){
@@ -461,11 +461,11 @@ void Anuncio::organizarCandidatos(){
 	}
 	for (int j = v.size() - 1; j >= 0; j--){
 		//(*candidatos).push(membros[j]); 
-	}
+	}*/
 }
 
 void Anuncio::removerCandidato(Membro* candidato){
-	priority_queue<Particular> copia = candidatos;
+	/*priority_queue<Particular> copia = candidatos;
 	vector<Particular> v;
 	while (!copia.empty()){
 		if (copia.top() == *(candidato)){
@@ -477,9 +477,9 @@ void Anuncio::removerCandidato(Membro* candidato){
 	}
 	for (int i = v.size(); i >= 0; i++){
 		candidatos.push(v[i]);
-	}
+	}*/
 }
 
 void Anuncio::alterarMorada(Membro* candidato, const Coordenadas &morada){
-	(*candidato).setMorada(morada);
+	//(*candidato).setMorada(morada);
 }
