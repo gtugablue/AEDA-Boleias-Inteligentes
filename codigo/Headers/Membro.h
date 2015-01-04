@@ -33,7 +33,7 @@ public:
 	void setVeiculos(const vector<Veiculo> &veiculo);///Método para alterar os veiculos associados a um membro
 	void addVeiculo(Veiculo *veiculo);///Função para adicionar um veiculo ao vector de veiculos
 	void removeVeiculo(Veiculo* veiculo);///Função para remover um veiculo
-	void load(ifstream &file, vector<Combustivel> *combustiveis);///Função para carregar a informação de um membro
+	virtual void load(ifstream &file, vector<Combustivel> *combustiveis);///Função para carregar a informação de um membro
 	virtual void save(ofstream &file, vector<Combustivel> *combustiveis);///Função para gravar a informação de um membro no ficheiro de membros
 	virtual void signup() = 0;///Função abstrata para criar um novo utilizador da API
 	virtual void edit();///Função virtual para editar a informação relativa a um membro

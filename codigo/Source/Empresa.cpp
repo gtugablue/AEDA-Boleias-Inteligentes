@@ -143,13 +143,27 @@ void Empresa::save(ofstream &file, vector<Combustivel> *combustiveis)
 	file << website << endl;
 	garagem.save(file);
 
-
+	file << numMotoristas << endl;
+	for (BSTItrLevel<Motorista> it(motoristas); !it.isAtEnd(); it.advance())
+	{
+		it.retrieve().save(file);
+	}
 }
 
 void Empresa::load(ifstream &file, vector<Combustivel> *combustiveis)
 {
 	Membro::load(file, combustiveis);
 	garagem.load(file);
+
+	file >> numMotoristas;
+	file.ignore(1000, '\n');
+
+	for (size_t i = 0; i < numMotoristas; ++i)
+	{
+		Motorista motorista;
+		motorista.load(file, garagem);
+		motoristas.insert(motorista);
+	}
 }
 
 void Empresa::show() const

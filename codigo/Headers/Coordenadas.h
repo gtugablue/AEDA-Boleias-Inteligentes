@@ -25,7 +25,7 @@ public:
 	void criar();///Função para criar novas coordenadas.
 	void editar();///Função responsavel por editar informação referente a coordenadas ja existentes.
 	void load(ifstream &file);///Função responsavel por fazer load da informação das coordenadas presentes num txt.
-	void save(ofstream &file);///Função responsavel por gravar as informações das coordenadas num ficheiro txt no final da execução do programa.
+	void save(ofstream &file) const;///Função responsavel por gravar as informações das coordenadas num ficheiro txt no final da execução do programa.
 };
 
 #endif

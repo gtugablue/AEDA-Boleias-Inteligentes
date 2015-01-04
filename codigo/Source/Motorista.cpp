@@ -60,6 +60,20 @@ void Motorista::updateDistancia(const Coordenadas &garagem)
 	distancia = morada.calcDistancia(garagem);
 }
 
+void Motorista::save(ofstream &file) const
+{
+	file << nome << endl;
+	morada.save(file);
+}
+
+void Motorista::load(std::ifstream &file, const Coordenadas &garagem)
+{
+	file >> nome;
+	file.ignore(1000, '\n');
+	morada.load(file);
+	updateDistancia(garagem);
+}
+
 bool Motorista::operator<(const Motorista &motorista) const
 {
 	if (fabs(distancia - motorista.distancia) < MOTORISTA_ORDENACAO_DIST_MIN)

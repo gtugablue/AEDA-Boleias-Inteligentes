@@ -22,11 +22,13 @@ public:
 	void criar(const Coordenadas &garagem);
 	void editar(const Coordenadas &garagem);
 	void updateDistancia(const Coordenadas &garagem);
+	void save(std::ofstream &file) const;
+	void load(std::ifstream &file, const Coordenadas &garagem);
 	bool operator<(const Motorista &motorista) const;
 	bool operator==(const Motorista &motorista) const;
-	friend ostream &operator<<(ostream &os, const Motorista &motorista);
+	friend std::ostream &operator<<(std::ostream &os, const Motorista &motorista);
 };
 
-ostream &operator<<(ostream &os, const Motorista &motorista);
+std::ostream &operator<<(std::ostream &os, const Motorista &motorista);
 
 #endif
