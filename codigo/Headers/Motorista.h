@@ -15,13 +15,6 @@ private:
 	Coordenadas morada;
 	double distancia;
 public:
-	/** @brief operador que ordena motoristas pelo nome
-	* 
-	* @param motorista motorista a comparar com this
-	* @return retorna true caso this esteja primeiro por ordem alfabética, false caso contrário
-	*/
-	bool orderByNome(const Motorista &motorista);
-
 	Motorista(); /// Construtor sem argumentos
 	Motorista(const std::string &nome, const Coordenadas &morada, const Coordenadas &garagem); /// Construtor completo
 	void setNome(const std::string &nome); /// Altera o nome do motorista
