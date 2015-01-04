@@ -47,6 +47,7 @@ public:
 	void save(ofstream &file, vector<Combustivel> *combustiveis);///Função que grava a informação relativa a uma empresa.
 	void load(ifstream &file, vector<Combustivel> *combustiveis);///Função para carregar a informação de uma empresa
 	void show() const;///Função que permite mostrar no ecra toda a informação relativa a uma empresa
+	void showMotoristasByNome() const;
 	void insertOld(ClientesAntigos &c1);
 	void removeOld(string nome);
 	void showOld();
