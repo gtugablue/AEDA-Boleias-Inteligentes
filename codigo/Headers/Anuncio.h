@@ -74,8 +74,9 @@ public:
 	void organizarCandidatos();
 	void removerCandidato(Membro* candidato);
 	void alterarMorada(Membro* candidato, const Coordenadas &morada);
-	//bool operator <(int a, int b);
 };
+
+bool operator <(Particular a,Particular b);
 
 template<class T>///Tratamento da excepção para quando um anuncio esta incompleto.
 class AnuncioIncompletoException
