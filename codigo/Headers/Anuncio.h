@@ -70,7 +70,7 @@ public:
 	double calcularDistanciaPoints(const Coordenadas &origem, const Coordenadas &destino) const;///Função chave para organizar os anuncios por distância pois organiza os pontos atribuidos de acordo com a distancia a que esta do utilizador
 	double calcularAnuncioPoints(const Particular* utilizadorAtual, const Coordenadas &origem, const Coordenadas &destino) const;///Calcula o rsultado final entre os friend points e a distancia para ordenar os anuncios
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);///Overload do operador de impressão na classe Anuncio.
-	void novoCandidato(Membro* candidato_novo);
+	void novoCandidato(Particular* candidato_novo);
 	void organizarCandidatos();
 	void removerCandidato(Membro* candidato);
 	void alterarMorada(Membro* candidato, const Coordenadas &morada);

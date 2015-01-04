@@ -432,8 +432,8 @@ double Anuncio::calcularAnuncioPoints(const Particular* utilizadorAtual, const C
 	return calcularFriendPoints(utilizadorAtual) * calcularDistanciaPoints(origem, destino);
 }
 
-void Anuncio::novoCandidato(Membro* candidato_novo){ 
-	(*candidatos).push(candidato_novo);
+void Anuncio::novoCandidato(Particular* candidato_novo){ 
+	//(*candidatos).push(candidato_novo);
 	organizarCandidatos();
 }
 
@@ -452,15 +452,16 @@ void Anuncio::organizarCandidatos(){
 		iter_swap(it, min_element(it, v.end()));
 	for (int k = 0; k < v.size(); k++){
 		if (v[k] == v[k + 1]){
-			if (calcularDistanciaPoints(origem, membros[k].getMorada() > calcularDistanciaPoints(origem, membros[k + 1].getMorada())){
+			//if (calcularDistanciaPoints(origem, membros[k].getMorada() > calcularDistanciaPoints(origem, membros[k + 1].getMorada())){
 				int guardar = v[k];
 				v[k] = v[k + 1];
 				v[k + 1] = guardar;
 			}
-		}
+		//}
 	}
-	for (int j = v.size()-1; j >= 0; j--)
-		candidatos.push(membros[j]);
+	for (int j = v.size() - 1; j >= 0; j--){
+		//(*candidatos).push(membros[j]); 
+	}
 }
 
 void Anuncio::removerCandidato(Membro* candidato){

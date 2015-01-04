@@ -9,7 +9,6 @@ using namespace std;
 class AnuncioOferta: public Anuncio   ///Classe derivada da classe mãe anuncio.
 {
 private:
-	priority_queue<Particular> fila_conhecidos;
 public:
 	AnuncioOferta();///Construtor por defeito.
 	AnuncioOferta(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Data &dataInicio, const Data &dataFim, Preco preco);///Construtor da classe com parâmetros.
@@ -19,7 +18,6 @@ public:
 	friend ostream& operator<<(ostream &os, const AnuncioOferta &anuncio);///Overload do operador de impressão de anuncios.
 	void editar();///Função para alterar a informação de um anuncio.
 	void show()const;///Função para mostrar na consola a informação de um anuncio de oferta.
-	void conhecidos(Membro* anunciante); 
 };
 
 #endif
