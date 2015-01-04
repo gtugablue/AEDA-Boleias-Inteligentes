@@ -71,6 +71,31 @@ void Empresa::editMotorista(const string &nome)
 
 	// Motorista não encontrado
 	cout << "Erro: Nao existe nenhum motorista com esse nome." << endl;
+	InputUtils::pause();
+}
+
+void Empresa::removeMotorista(const string &nome)
+{
+	Motorista motoristaAEncontrar(nome, Coordenadas(), garagem);
+	for (BSTItrLevel<Motorista> it(motoristas); !it.isAtEnd(); it.advance())
+	{
+		if (it.retrieve() == motoristaAEncontrar)
+		{
+			// Motorista encontrado
+
+			// Retirar motorista da BST
+			motoristas.remove(it.retrieve());
+
+			OutputUtils::clearScreen();
+			cout << "Motorista removido com sucesso." << endl;
+			InputUtils::pause();
+
+			return;
+		}
+	}
+	// Motorista não encontrado
+	cout << "Erro: Nao existe nenhum motorista com esse nome." << endl;
+	InputUtils::pause();
 }
 
 void Empresa::signup()
