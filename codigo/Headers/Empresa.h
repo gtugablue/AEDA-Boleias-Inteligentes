@@ -51,6 +51,10 @@ public:
 	void insertOld(ClientesAntigos &c1);
 	void removeOld(string nome);
 	void showOld();
+	bool exists(string nome);
+	void editOld();
+	ClientesAntigos existsutil(string nome);
+	void showone();
 };
 
 #endif

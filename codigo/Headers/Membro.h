@@ -17,13 +17,16 @@ protected:
 	string nome;
 	string utilizador;
 	string password;
+	string contacto;
 	vector<Veiculo *> veiculos;
 public:
 	Membro();///Construtor por defeito da classe
-	Membro(string nome, string utilizador, string password);///Construtor com parametros da classe
+	Membro(string nome, string utilizador, string password,string contacto);///Construtor com parametros da classe
 	string getNome() const;///Método para retornar o nome do membro
 	string getUtilizador() const;///Método para retornar o utilizador do membro
-	string getPassword() const;///Método para retornar a password do membro
+	string getPassword() const;
+	string getContacto()const;
+	void setcontacto(string &contacto);///Método para retornar a password do membro
 	virtual Coordenadas getMorada() const = 0;///Método para retornar a morada do membro
 	vector<Veiculo *> getVeiculos();///Método para retornar os veiculos associados a um membro
 	void setNome(string &nome);///Método para alterar o nome de um membro
