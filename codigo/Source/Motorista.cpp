@@ -4,6 +4,11 @@ using namespace std;
 
 #define	MOTORISTA_ORDENACAO_DIST_MIN		0.005
 
+bool Motorista::orderByNome(const Motorista &motorista)
+{
+	return nome < motorista.nome;
+}
+
 Motorista::Motorista()
 {
 

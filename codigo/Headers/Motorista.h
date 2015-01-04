@@ -11,6 +11,7 @@ private:
 	std::string nome;
 	Coordenadas morada;
 	double distancia;
+	bool orderByNome(const Motorista &motorista);
 public:
 	Motorista();
 	Motorista(const std::string &nome, const Coordenadas &morada, const Coordenadas &garagem);

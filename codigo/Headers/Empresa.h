@@ -33,6 +33,7 @@ private:
 	unordered_set<ClientesAntigos, hstr, eqstr>clientes;
 	BST<Motorista> motoristas;
 	unsigned numMotoristas;
+	
 public:
 	Empresa();///Construtor por defeito da classe
 	Empresa(const string &nome, const string &utilizador, const string &password, const string &website);///Construtor com parâmetros da classe.
