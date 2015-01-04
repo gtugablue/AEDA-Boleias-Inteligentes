@@ -5,12 +5,11 @@ Membro::Membro()
 
 }
 
-Membro::Membro(string nome, string utilizador, string password, string contacto)
+Membro::Membro(string nome, string utilizador, string password)
 {
 	this->nome = nome;
 	this->utilizador = utilizador;
 	this->password = password;
-	this->contacto = contacto;
 }
 
 string Membro::getNome()const
@@ -21,10 +20,6 @@ string Membro::getNome()const
 string Membro::getUtilizador()const
 {
 	return utilizador;
-}
-string Membro::getContacto()const
-{
-	return contacto;
 }
 
 vector<Veiculo *> Membro::getVeiculos()
@@ -40,11 +35,6 @@ string Membro::getPassword()const
 void Membro::setNome(string &nome)
 {
 	this->nome = nome;
-}
-
-void Membro::setcontacto(string &contacto)
-{
-	this->contacto = contacto;
 }
 
 void Membro::setPassword(string &password)
@@ -93,6 +83,14 @@ void Membro::edit()
 		cout << "Introduza a nova password: ";
 		getline(cin, password);
 	}
+	cout << "Pretende alterar a morada (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Nova morada:" << endl;
+		Coordenadas morada;
+		morada.criar();
+		setMorada(morada);
+	}
 }
 
 void Membro::load(ifstream &file, vector<Combustivel> *combustiveis)
@@ -137,5 +135,5 @@ bool Membro::temVeiculo() const
 
 void Membro::updateConhecidos(vector<Membro *> passageiros)
 {
-
+	
 }

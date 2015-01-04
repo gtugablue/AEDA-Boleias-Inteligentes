@@ -46,14 +46,10 @@ public:
 	void edit();///Função que permite editar a informação de um website
 	void save(ofstream &file, vector<Combustivel> *combustiveis);///Função que grava a informação relativa a uma empresa.
 	void load(ifstream &file, vector<Combustivel> *combustiveis);///Função para carregar a informação de uma empresa
-	//void show() const;///Função que permite mostrar no ecra toda a informação relativa a uma empresa
+	void show() const;///Função que permite mostrar no ecra toda a informação relativa a uma empresa
 	void insertOld(ClientesAntigos &c1);
 	void removeOld(string nome);
 	void showOld();
-	ClientesAntigos existsutil(string nome);
-	bool exists(string nome);
-	void editOld();
-	void showone();
 };
 
 #endif

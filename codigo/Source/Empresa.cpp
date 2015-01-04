@@ -8,7 +8,7 @@ motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0))), numMotoristas(0
 }
 
 Empresa::Empresa(const string &nome, const string &utilizador, const string &password, const string &website) :
-Membro(nome, utilizador, password,contacto), motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0))), numMotoristas(0)
+Membro(nome, utilizador, password), motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0))), numMotoristas(0)
 {
 	this->website = website;
 }
@@ -166,10 +166,17 @@ void Empresa::load(ifstream &file, vector<Combustivel> *combustiveis)
 	}
 }
 
+void Empresa::show() const
+{
+	Membro::show();
+	cout << "Website: " << website << endl;
+	cout << "Garagem: " << endl;
+	garagem.show();
+}
+
 void Empresa::insertOld(ClientesAntigos &c1)
 {
 	clientes.insert(c1);
-
 }
 
 
@@ -181,10 +188,9 @@ void Empresa::removeOld(string nome)
 	x.setutilizador(nome);
 	if (it == set.end())
 	{
-		cout << "Utilizador nao encontrado";
+		cout << "Utilizador nao encontrado" << endl;
 	}
 	else clientes.erase(it);
-
 }
 
 void Empresa::showOld()
@@ -193,76 +199,8 @@ void Empresa::showOld()
 
 	for (it = clientes.begin(); it != clientes.end(); it++)
 	{
-		cout << it->getutilizador() << endl;
+		it->show();
 	}
 }
 
-ClientesAntigos Empresa::existsutil(string nome)
-{
-	ClientesAntigos x;
-	x.setutilizador(nome);
-	unordered_set<ClientesAntigos, hstr, eqstr>oi = clientes;
-	unordered_set<ClientesAntigos, hstr, eqstr>::iterator it = oi.find(x);
-	unordered_set<ClientesAntigos, hstr, eqstr>::iterator ita = clientes.begin();
-	if (it == clientes.end())
-		return *ita;
-	else
-		return *it;
-
-}
-
-bool Empresa::exists(string nome)
-{
-	ClientesAntigos x;
-	x.setutilizador(nome);
-	unordered_set<ClientesAntigos, hstr, eqstr>oi = clientes;
-	unordered_set<ClientesAntigos, hstr, eqstr>::iterator it = oi.find(x);
-	if (it == clientes.end())
-		return false;
-	else
-		return true;
-
-}
-
-void Empresa::editOld()
-{
-	string utilizador, contacto;
-	cout << "Introduza o nome de utilizador do cliente que pretende alterar" << endl;
-	getline(cin, utilizador);
-	ClientesAntigos x = existsutil(utilizador);
-	cout << "Pretende alterar o nome de utilizador (y/n) ?" << endl;
-	if (InputUtils::readYesOrNo('y', 'n'))
-	{
-		cout << "Introduza o novo nome de utilizador " << endl;
-		getline(cin, utilizador);
-		x.setutilizador(utilizador);
-	}
-	cout << "Pretende alterar o contacto do utilizador (y/n) ?" << endl;
-	if (InputUtils::readYesOrNo('y', 'n'))
-	{
-		cout << "Introduza o novo contacto " << endl;
-		getline(cin, contacto);
-		x.setcontacto(contacto);
-	}
-	cout << "Pretende alterar a morada do utilizador (y/n) ?" << endl;
-	if (InputUtils::readYesOrNo('y', 'n'))
-	{
-		x.getcliente()->edit();
-	}
-
-
-
-
-}
-
-void Empresa::showone()
-{
-	string utilizador, contacto;
-	cout << "Introduza o nome de utilizador do cliente que pretende alterar" << endl;
-	getline(cin, utilizador);
-	ClientesAntigos y;
-	y = existsutil(utilizador);
-	y.showOne();
-
-}
 
