@@ -95,3 +95,11 @@ void Particular::updateConhecidos(vector<Membro *> passageiros)
 		}
 	}
 }
+
+Coordenadas Particular::getMorada(){
+	return morada;
+}
+
+void alteraMorada(){
+
+}

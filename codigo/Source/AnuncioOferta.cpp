@@ -45,3 +45,10 @@ void AnuncioOferta::show()const
 {
 	Anuncio::show();
 }
+
+void conhecidos(Membro anunciante){
+	vector<Particular*> passageiros = anunciante.getPassageiros();
+	if (calcularFriendPoints()){
+
+	}
+}

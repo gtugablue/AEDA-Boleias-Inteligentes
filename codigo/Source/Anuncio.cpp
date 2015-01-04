@@ -431,3 +431,54 @@ double Anuncio::calcularAnuncioPoints(const Particular* utilizadorAtual, const C
 {
 	return calcularFriendPoints(utilizadorAtual) * calcularDistanciaPoints(origem, destino);
 }
+
+void Anuncio::novoCandidato(Particular candidato_novo){ 
+	candidatos.push(candidato_novo);
+	organizarCandidatos();
+}
+
+void Anuncio::organizarCandidatos(){
+	vector<int> v;
+	vector<Membro*> membros;
+	int i = 0;
+	while (!candidatos.empty()){
+		v.push_back(candidatos.top().getConhecidos()[i].second);
+		membros.push_back(candidatos.top().getConhecidos()[i].first);
+		candidatos.pop();
+		i++;
+	}
+	vector<int>::iterator it;
+	for (it = v.begin(); it != v.end()-1; ++it)  
+		iter_swap(it, min_element(it, v.end()));
+	for (int k = 0; k < v.size(); k++){
+		if (v[k] == v[k + 1]){
+			if (calcularDistanciaPoints(origem, membros[k].getMorada() > calcularDistanciaPoints(origem, membros[k + 1].getMorada())){
+				int guardar = v[k];
+				v[k] = v[k + 1];
+				v[k + 1] = guardar;
+			}
+		}
+	}
+	for (int j = v.size()-1; j >= 0; j--)
+		candidatos.push(membros[j]);
+}
+
+void Anuncio::removerCandidato(Membro* candidato){
+	priority_queue<Particular> copia = candidatos;
+	vector<Particular> v;
+	while (!copia.empty()){
+		if (copia.top() == *(candidato)){
+			copia.pop();
+			break;
+		}
+		v.push_back(copia.top());
+		copia.pop();
+	}
+	for (int i = v.size(); i >= 0; i++){
+		candidatos.push(v[i]);
+	}
+}
+
+void Anuncio::alterarMorada(Particular candidato){
+
+}
