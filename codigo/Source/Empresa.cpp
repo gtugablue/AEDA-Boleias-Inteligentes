@@ -2,13 +2,13 @@
 #include <queue>
 
 Empresa::Empresa() :
-motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0)))
+motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0))), numMotoristas(0)
 {
 
 }
 
 Empresa::Empresa(const string &nome, const string &utilizador, const string &password, const string &website) :
-Membro(nome, utilizador, password), motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0)))
+Membro(nome, utilizador, password), motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0))), numMotoristas(0)
 {
 	this->website = website;
 }
@@ -44,6 +44,7 @@ const BST<Motorista> &Empresa::getMotoristas() const
 void Empresa::addMotorista(const Motorista &motorista)
 {
 	motoristas.insert(motorista);
+	++numMotoristas;
 }
 
 void Empresa::editMotorista(const string &nome)
@@ -104,6 +105,7 @@ void Empresa::removeMotorista(const string &nome)
 
 			// Retirar motorista da BST
 			motoristas.remove(it.retrieve());
+			--numMotoristas;
 
 			OutputUtils::clearScreen();
 			cout << "Motorista removido com sucesso." << endl;
@@ -140,6 +142,8 @@ void Empresa::save(ofstream &file, vector<Combustivel> *combustiveis)
 	Membro::save(file, combustiveis);
 	file << website << endl;
 	garagem.save(file);
+
+
 }
 
 void Empresa::load(ifstream &file, vector<Combustivel> *combustiveis)
@@ -154,13 +158,11 @@ void Empresa::show() const
 	cout << "Website: " << website << endl;
 	cout << "Garagem: " << endl;
 	garagem.show();
-
 }
 
 void Empresa::insertOld(ClientesAntigos &c1)
 {
 	clientes.insert(c1);
-
 }
 
 
@@ -172,10 +174,9 @@ void Empresa::removeOld(string nome)
 	x.setutilizador(nome);
 	if (it == set.end())
 	{
-		cout << "Utilizador nao encontrado";
+		cout << "Utilizador nao encontrado" << endl;
 	}
 	else clientes.erase(it);
-
 }
 
 void Empresa::showOld()
