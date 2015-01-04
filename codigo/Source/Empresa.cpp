@@ -182,6 +182,10 @@ void Empresa::showMotoristasByNome() const
 		motoristasByNome.push_back(it.retrieve());
 	}
 	sort(motoristasByNome.begin(), motoristasByNome.end(), compareMotoristasByNome());
+	for (size_t i = 0; i < motoristasByNome.size(); ++i)
+	{
+		cout << motoristasByNome[i].getNome() << endl << endl;
+	}
 }
 
 void Empresa::insertOld(ClientesAntigos &c1)
