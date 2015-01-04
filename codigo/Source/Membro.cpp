@@ -5,12 +5,11 @@ Membro::Membro()
 
 }
 
-Membro::Membro(string nome, string utilizador, string password,string contacto)
+Membro::Membro(string nome, string utilizador, string password)
 {
 	this->nome = nome;
 	this->utilizador = utilizador;
 	this->password = password;
-	this->contacto = contacto;
 }
 
 string Membro::getNome()const
@@ -22,10 +21,7 @@ string Membro::getUtilizador()const
 {
 	return utilizador;
 }
-string Membro::getContacto()const
-{
-	return contacto;
-}
+
 
 vector<Veiculo *> Membro::getVeiculos()
 {
@@ -46,10 +42,7 @@ void Membro::setPassword(string &password)
 {
 	this->password = password;
 }
-void Membro::setcontacto(string &contacto)
-{
-	this->contacto = contacto;
-}
+
 
 void Membro::setUtilizador(string &utilizador)
 {

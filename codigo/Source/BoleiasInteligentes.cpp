@@ -5,6 +5,7 @@ const string BoleiasInteligentes::ficheiroMembros = "membros.txt";
 const string BoleiasInteligentes::ficheiroAnuncios = "anuncios.txt";
 const string BoleiasInteligentes::ficheiroBoleias = "boleias.txt";
 
+
 #define	BOLEIASINTELIGENTES_DESTINO_DISTANCIA_ACEITAVEL		0.005
 
 BoleiasInteligentes::BoleiasInteligentes(const string &dataFolder) :
@@ -132,6 +133,8 @@ void BoleiasInteligentes::loadBoleias()
 	}
 	file.close();
 }
+
+
 
 void BoleiasInteligentes::save()
 {
@@ -424,6 +427,7 @@ void BoleiasInteligentes::showMainMenu()
 			"Anuncios",
 			"Veiculos",
 			"Boleias",
+			"ClientesAntigos",
 			"Logout"
 		};
 		showMenu(items);
@@ -452,6 +456,10 @@ void BoleiasInteligentes::showMainMenu()
 		}
 		case 4: // Logout
 		{
+			return showOldMenu();
+		}
+		case 5:
+		{
 			OutputUtils::clearScreen();
 			cout << "Tem a certeza que pretende fazer logout (y/n)?";
 			if (InputUtils::readYesOrNo('y', 'n'))
@@ -463,6 +471,7 @@ void BoleiasInteligentes::showMainMenu()
 				return showMainMenu();
 			}
 			return showLoginMenu();
+
 		}
 		}
 	}
@@ -476,6 +485,7 @@ void BoleiasInteligentes::showMainMenu()
 			"Veiculos",
 			"Boleias",
 			"Motoristas",
+			"Clientes Antigos",
 			"Logout"
 		};
 		showMenu(items);
@@ -507,6 +517,10 @@ void BoleiasInteligentes::showMainMenu()
 			return showMotoristasMenu();
 		}
 		case 5: // Logout
+		{
+			return showOldMenu();
+		}
+		case 6:
 		{
 			OutputUtils::clearScreen();
 			cout << "Tem a certeza que pretende fazer logout (y/n)?";
@@ -1269,6 +1283,72 @@ void BoleiasInteligentes::showMotoristasMenu()
 		return showMainMenu();
 	}
 	}
+}
+
+void BoleiasInteligentes::showOldMenu()
+{
+	string nome;
+	OutputUtils::clearScreen();
+	vector<string> items =
+	{
+		"Remover Cliente Antigo",
+		"Listar Clientes Antigos",
+		"Ver Cliente",
+		"Editar Cliente",
+		"Criar Cliente",
+		"Voltar"
+	};
+	showMenu(items);
+	int n = InputUtils::readDigit(0, items.size() - 1);
+	switch (n)
+	{
+	case 0:///Remover Cliente antigo
+	{
+		OutputUtils::clearScreen();
+		cout << "Introduza o nome de utilizador do cliente que pretende remover" << endl;
+		InputUtils::readLine();
+		((Empresa *)utilizadorAtual)->removeOld(nome);
+		InputUtils::pause();
+		return showOldMenu();
+	}
+	case 1:
+	{
+		OutputUtils::clearScreen();
+		((Empresa *)utilizadorAtual)->showOld();
+		InputUtils::pause();
+		return showOldMenu();
+
+	}
+	case 2:
+	{
+		OutputUtils::clearScreen();
+		((Empresa *)utilizadorAtual)->showone();
+		InputUtils::pause();
+		return showOldMenu();
+
+	}
+	case 3:
+	{
+		OutputUtils::clearScreen();
+		((Empresa *)utilizadorAtual)->editOld();
+		InputUtils::pause();
+		return showOldMenu();
+
+	}
+	case 4:
+	{
+		OutputUtils::clearScreen();
+		((Empresa *)utilizadorAtual)->createOld();
+		InputUtils::pause();
+		return showOldMenu();
+	}
+	case 5:
+	{
+		showMainMenu();
+	}
+
+	}
+
 }
 
 void BoleiasInteligentes::sortAnuncios(const Coordenadas &origem, const Coordenadas &destino, int left, int right)
