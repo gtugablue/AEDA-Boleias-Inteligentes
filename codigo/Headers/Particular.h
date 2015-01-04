@@ -14,12 +14,12 @@ class Particular : public Membro  ///Classe derivada da classe mãe membro
 {
 private:
 	Coordenadas morada;
-	vector<pair<Membro *, unsigned>> conhecidos;	
+	vector<pair<Membro *, unsigned>> conhecidos;
 public:
 	Particular();///Construtor por defeito da classe
 	Particular(string nome, string utilizador, string password);///Construtor com parâmetros da classe
+	void setMorada(const Coordenadas &morada);///Método para alterar a morada de um particular
 	vector<pair<Membro*, unsigned>> getConhecidos() const;
-	Coordenadas getMorada(); // Função que retorna a morada
 	void show();///Função que imprime no ecrã a informação de um particular
 	void signup();///Função que permite a um particular criar conta na API
 	void edit();///Função que permite editar a informação de um particular

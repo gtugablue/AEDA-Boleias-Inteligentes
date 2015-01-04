@@ -115,7 +115,7 @@ void Coordenadas::load(ifstream &file)
 	file.ignore(1000, '\n');
 }
 
-void Coordenadas::save(ofstream &file)
+void Coordenadas::save(ofstream &file) const
 {
 	file << setprecision(10);
 	file << latitude << endl;

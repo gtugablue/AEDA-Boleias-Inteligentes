@@ -9,7 +9,11 @@
 class ClientesAntigos
 {
 	vector<Boleia*>registos;
-	Particular* cliente;
+	Membro* cliente;
+public:
+	 string getutilizador() const;
+	 void show()const;
+	 void setutilizador(string nome);
 };
 
 #endif

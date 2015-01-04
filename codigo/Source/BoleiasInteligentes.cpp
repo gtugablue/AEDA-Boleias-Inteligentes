@@ -415,52 +415,112 @@ void BoleiasInteligentes::showLoginMenu()
 void BoleiasInteligentes::showMainMenu()
 {
 	OutputUtils::clearScreen();
-	vector<string> items =
+	if (dynamic_cast<Particular*>(utilizadorAtual) != NULL)
 	{
-		"Editar conta",
-		"Anuncios",
-		"Veiculos",
-		"Boleias",
-		"Logout"
-	};
-	showMenu(items);
-	int n = InputUtils::readDigit(0, items.size() - 1);
-	switch (n)
-	{
-	case 0: // Editar conta
-	{
-		OutputUtils::clearScreen();
-		utilizadorAtual->edit();
-		cout << "Conta editada com sucesso." << endl;
-		InputUtils::pause();
-		return showMainMenu();
-	}
-	case 1: // Anuncios
-	{
-		return showAnunciosMenu();
-	}
-	case 2: // Veiculos
-	{
-		return showVeiculosMenu();
-	}
-	case 3: // Boleias
-	{
-		return showBoleiasMenu();
-	}
-	case 4: // Logout
-	{
-		OutputUtils::clearScreen();
-		cout << "Tem a certeza que pretende fazer logout (y/n)?";
-		if (InputUtils::readYesOrNo('y', 'n'))
+		// Particular
+		vector<string> items =
 		{
-			utilizadorAtual = NULL;
-		}
-		else
+			"Editar conta",
+			"Anuncios",
+			"Veiculos",
+			"Boleias",
+			"Logout"
+		};
+		showMenu(items);
+		int n = InputUtils::readDigit(0, items.size() - 1);
+		switch (n)
 		{
+		case 0: // Editar conta
+		{
+			OutputUtils::clearScreen();
+			utilizadorAtual->edit();
+			cout << "Conta editada com sucesso." << endl;
+			InputUtils::pause();
 			return showMainMenu();
 		}
-		return showLoginMenu();
+		case 1: // Anuncios
+		{
+			return showAnunciosMenu();
+		}
+		case 2: // Veiculos
+		{
+			return showVeiculosMenu();
+		}
+		case 3: // Boleias
+		{
+			return showBoleiasMenu();
+		}
+		case 4: // Logout
+		{
+			OutputUtils::clearScreen();
+			cout << "Tem a certeza que pretende fazer logout (y/n)?";
+			if (InputUtils::readYesOrNo('y', 'n'))
+			{
+				utilizadorAtual = NULL;
+			}
+			else
+			{
+				return showMainMenu();
+			}
+			return showLoginMenu();
+		}
+		}
 	}
+	else
+	{
+		// Empresa
+		vector<string> items =
+		{
+			"Editar conta",
+			"Anuncios",
+			"Veiculos",
+			"Boleias",
+			"Motoristas",
+			"Logout"
+		};
+		showMenu(items);
+		int n = InputUtils::readDigit(0, items.size() - 1);
+		switch (n)
+		{
+		case 0: // Editar conta
+		{
+			OutputUtils::clearScreen();
+			utilizadorAtual->edit();
+			cout << "Conta editada com sucesso." << endl;
+			InputUtils::pause();
+			return showMainMenu();
+		}
+		case 1: // Anuncios
+		{
+			return showAnunciosMenu();
+		}
+		case 2: // Veiculos
+		{
+			return showVeiculosMenu();
+		}
+		case 3: // Boleias
+		{
+			return showBoleiasMenu();
+		}
+		case 4: // Motoristas
+		{
+			return showMotoristasMenu();
+		}
+		case 5: // Logout
+		{
+			OutputUtils::clearScreen();
+			cout << "Tem a certeza que pretende fazer logout (y/n)?";
+			if (InputUtils::readYesOrNo('y', 'n'))
+			{
+				utilizadorAtual = NULL;
+			}
+			else
+			{
+				return showMainMenu();
+			}
+			return showLoginMenu();
+		}
+		}
 	}
 	return;
 }
@@ -1119,6 +1179,83 @@ void BoleiasInteligentes::showBoleiasMenu()
 	case 3: // Voltar
 	{
 		OutputUtils::clearScreen();
+		return showMainMenu();
+	}
+	}
+}
+
+void BoleiasInteligentes::showMotoristasMenu()
+{
+	OutputUtils::clearScreen();
+	vector<string> items =
+	{
+		"Ver motoristas por distância",
+		"Ver motoristas por nome",
+		"Adicionar motorista",
+		"Editar motorista",
+		"Remover motorista",
+		"Voltar"
+	};
+	showMenu(items);
+	int n = InputUtils::readDigit(0, items.size() - 1);
+
+	switch (n)
+	{
+	case 0: // Ver motoristas por distância
+	{
+		OutputUtils::clearScreen();
+		try
+		{
+			const BST<Motorista> &motoristas = ((Empresa *)utilizadorAtual)->getMotoristas();
+			if (motoristas.isEmpty())
+			{
+				throw EmptyException<string>("Nenhum elemento a listar.");
+			}
+			motoristas.printTree();
+		}
+		catch (EmptyException<string> &e)
+		{
+			cout << "Erro: " << e.info << endl;
+		}
+		InputUtils::pause();
+		return showMotoristasMenu();
+	}
+	case 1: // Ver motoristas por nome
+	{
+		// TODO
+	}
+	case 2:	// Adicionar motorista
+	{
+		OutputUtils::clearScreen();
+
+		Motorista motorista;
+		motorista.criar(utilizadorAtual->getMorada());
+		((Empresa *)utilizadorAtual)->addMotorista(motorista);
+		cout << "Motorista adicionado com sucesso." << endl;
+
+		InputUtils::pause();
+		return showMotoristasMenu();
+	}
+	case 3:	// Editar motorista
+	{
+		OutputUtils::clearScreen();
+
+		cout << "Introduza o nome do motorista a editar: ";
+		((Empresa *)utilizadorAtual)->editMotorista(InputUtils::readLine());
+
+		return showMotoristasMenu();
+	}
+	case 4: // Remover motorista
+	{
+		OutputUtils::clearScreen();
+		
+		cout << "Introduza o nome do motorista a remover: ";
+		((Empresa *)utilizadorAtual)->removeMotorista(InputUtils::readLine());
+
+		return showMotoristasMenu();
+	}
+	case 5: // Voltar
+	{
 		return showMainMenu();
 	}
 	}

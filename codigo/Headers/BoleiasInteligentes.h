@@ -16,6 +16,7 @@
 #include "Membro.h"
 #include "Particular.h"
 #include "Empresa.h"
+#include "Motorista.h"
 #include <algorithm>
 #include "InputUtils.h"
 #include "OutputUtils.h"
@@ -77,6 +78,7 @@ public:
 	void showAnunciosMenu();///Função que mostra o menu dedicado aos anuncios onde se pode fazer as CRUD Options relativas ao mesmo.
 	void showVeiculosMenu();///Função que mostra o menu dedicado aos veiculos onde se pode fazer as CRUD Options relativas ao mesmo.
 	void showBoleiasMenu();///Função que mostra o menu dedicado as boleias onde se pode fazer as CRUD Options relativas ao mesmo.
+	void showMotoristasMenu();///Função que mostra o menu dedicado aos motoristas onde se pode fazer as CRUD Options relativas ao mesmo.
 
 	void showAnuncios();///Função que mostra  todos os anuncio.
 	void showVehicles();///Função que mostra todos os veiculos
