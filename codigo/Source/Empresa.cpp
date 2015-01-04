@@ -1,12 +1,12 @@
 #include "../Headers/empresa.h"
 
-Empresa::Empresa():
+Empresa::Empresa() :
 motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0)))
 {
-	
+
 }
 
-Empresa::Empresa(const string &nome, const string &utilizador, const string &password, const string &website):
+Empresa::Empresa(const string &nome, const string &utilizador, const string &password, const string &website) :
 Membro(nome, utilizador, password), motoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0)))
 {
 	this->website = website;
@@ -29,39 +29,41 @@ void Empresa::addMotorista(const Motorista &motorista)
 
 void Empresa::editMotorista(const string &nome)
 {
-	Motorista motoristaEncontrado = motoristas.find(Motorista(nome, Coordenadas(), Coordenadas()));
-	cout << "Debug" << endl;
-	InputUtils::pause();
-	if (motoristaEncontrado == Motorista("", Coordenadas(), Coordenadas()))
+	Motorista motoristaAEncontrar(nome, Coordenadas(), garagem);
+	for (BSTItrLevel<Motorista> it(motoristas); !it.isAtEnd(); it.advance())
 	{
-		// Motorista não encontrado
-		cout << "Erro: Nao existe nenhum motorista com esse nome." << endl;
-	}
-	else
-	{
-		// Motorista encontrado
-
-		// Retirar motorista da BST
-		motoristas.remove(motoristaEncontrado);
-
-		cout << "Pretende alterar o nome (y/n)?" << endl;
-		if (InputUtils::readYesOrNo('y', 'n'))
+		if (it.retrieve() == motoristaAEncontrar)
 		{
-			cout << "Introduza o novo nome: ";
-			motoristaEncontrado.setNome(InputUtils::readLine());
-		}
-		cout << "Pretende alterar a morada (y/n)?" << endl;
-		if (InputUtils::readYesOrNo('y', 'n'))
-		{
-			cout << "Nova morada: " << endl;
-			Coordenadas morada;
-			morada.editar();
-		}
-		motoristaEncontrado.updateDistancia(garagem);
+			// Motorista encontrado
+			Motorista motoristaEncontrado = it.retrieve();
 
-		// Voltar a colocar motorista na BST
-		motoristas.insert(motoristaEncontrado);
+			// Retirar motorista da BST
+			motoristas.remove(motoristaEncontrado);
+
+			cout << "Pretende alterar o nome (y/n)?" << endl;
+			if (InputUtils::readYesOrNo('y', 'n'))
+			{
+				cout << "Introduza o novo nome: ";
+				motoristaEncontrado.setNome(InputUtils::readLine());
+			}
+			cout << "Pretende alterar a morada (y/n)?" << endl;
+			if (InputUtils::readYesOrNo('y', 'n'))
+			{
+				cout << "Nova morada: " << endl;
+				Coordenadas morada;
+				morada.editar();
+			}
+			motoristaEncontrado.updateDistancia(garagem);
+
+			// Voltar a colocar motorista na BST
+			motoristas.insert(motoristaEncontrado);
+
+			return;
+		}
 	}
+
+	// Motorista não encontrado
+	cout << "Erro: Nao existe nenhum motorista com esse nome." << endl;
 }
 
 void Empresa::signup()
@@ -116,15 +118,15 @@ void Empresa::insertOld(ClientesAntigos &c1)
 void Empresa::removeOld(string nome)
 {
 	ClientesAntigos x;
-	unordered_set<ClientesAntigos, hstr, eqstr>set=clientes;
-	unordered_set<ClientesAntigos, hstr, eqstr>::iterator it=set.find(x);
+	unordered_set<ClientesAntigos, hstr, eqstr>set = clientes;
+	unordered_set<ClientesAntigos, hstr, eqstr>::iterator it = set.find(x);
 	x.setutilizador(nome);
 	if (it == set.end())
 	{
 		cout << "Utilizador nao encontrado";
 	}
 	else clientes.erase(it);
-	
+
 }
 
 void Empresa::showOld()
