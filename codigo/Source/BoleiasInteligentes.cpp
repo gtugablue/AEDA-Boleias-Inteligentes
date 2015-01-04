@@ -1233,7 +1233,14 @@ void BoleiasInteligentes::showMotoristasMenu()
 	}
 	case 2:	// Editar motorista
 	{
+		OutputUtils::clearScreen();
 
+		cout << "Introduza o nome do motorista a editar: ";
+		string nome = InputUtils::readLine();
+		((Empresa *)utilizadorAtual)->editMotorista(nome);
+
+		InputUtils::pause();
+		return showMotoristasMenu();
 	}
 	case 3: // Remover motorista
 	{

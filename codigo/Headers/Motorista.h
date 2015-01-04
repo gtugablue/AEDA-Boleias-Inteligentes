@@ -22,6 +22,7 @@ public:
 	void editar(const Coordenadas &garagem);
 	void updateDistancia(const Coordenadas &garagem);
 	bool operator<(const Motorista &motorista) const;
+	bool operator==(const Motorista &motorista) const;
 	friend ostream &operator<<(ostream &os, const Motorista &motorista);
 };
 

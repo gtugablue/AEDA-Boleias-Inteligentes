@@ -38,6 +38,7 @@ public:
 	Coordenadas getMorada() const;
 	const BST<Motorista> &getMotoristas() const;
 	void addMotorista(const Motorista &motorista);
+	void editMotorista(const string &nome);
 	void signup();///Função que cria um novo website
 	void edit();///Função que permite editar a informação de um website
 	void save(ofstream &file, vector<Combustivel> *combustiveis);///Função que grava a informação relativa a uma empresa.

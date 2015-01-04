@@ -65,6 +65,13 @@ bool Motorista::operator<(const Motorista &motorista) const
 	}
 }
 
+bool Motorista::operator==(const Motorista &motorista) const
+{
+	cout << nome << " == " << motorista.nome << endl;
+	InputUtils::pause();
+	return nome == motorista.nome;
+}
+
 ostream &operator<<(ostream &os, const Motorista &motorista)
 {
 	return os << motorista.nome << endl;

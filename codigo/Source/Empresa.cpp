@@ -27,6 +27,43 @@ void Empresa::addMotorista(const Motorista &motorista)
 	motoristas.insert(motorista);
 }
 
+void Empresa::editMotorista(const string &nome)
+{
+	Motorista motoristaEncontrado = motoristas.find(Motorista(nome, Coordenadas(), Coordenadas()));
+	cout << "Debug" << endl;
+	InputUtils::pause();
+	if (motoristaEncontrado == Motorista("", Coordenadas(), Coordenadas()))
+	{
+		// Motorista não encontrado
+		cout << "Erro: Nao existe nenhum motorista com esse nome." << endl;
+	}
+	else
+	{
+		// Motorista encontrado
+
+		// Retirar motorista da BST
+		motoristas.remove(motoristaEncontrado);
+
+		cout << "Pretende alterar o nome (y/n)?" << endl;
+		if (InputUtils::readYesOrNo('y', 'n'))
+		{
+			cout << "Introduza o novo nome: ";
+			motoristaEncontrado.setNome(InputUtils::readLine());
+		}
+		cout << "Pretende alterar a morada (y/n)?" << endl;
+		if (InputUtils::readYesOrNo('y', 'n'))
+		{
+			cout << "Nova morada: " << endl;
+			Coordenadas morada;
+			morada.editar();
+		}
+		motoristaEncontrado.updateDistancia(garagem);
+
+		// Voltar a colocar motorista na BST
+		motoristas.insert(motoristaEncontrado);
+	}
+}
+
 void Empresa::signup()
 {
 	cout << "Website (deixe em branco se nao existir): ";
