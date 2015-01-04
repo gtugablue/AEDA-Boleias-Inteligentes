@@ -54,7 +54,7 @@ void Empresa::editMotorista(const string &nome)
 				morada.editar();
 			}
 			motoristaEncontrado.updateDistancia(garagem);
-
+			cout << "Debug: " << motoristaEncontrado.getDistancia() << endl;
 			// Voltar a colocar motorista na BST
 			motoristas.insert(motoristaEncontrado);
 

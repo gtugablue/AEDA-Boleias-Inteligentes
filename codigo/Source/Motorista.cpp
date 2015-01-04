@@ -35,6 +35,11 @@ Coordenadas Motorista::getMorada() const
 	return morada;
 }
 
+double Motorista::getDistancia() const
+{
+	return distancia;
+}
+
 void Motorista::criar(const Coordenadas &garagem)
 {
 	cout << "Introduza o nome: ";
