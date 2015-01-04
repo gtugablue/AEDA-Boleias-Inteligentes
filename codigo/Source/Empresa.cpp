@@ -17,6 +17,18 @@ void Empresa::setMorada(const Coordenadas &morada)
 {
 	this->garagem = morada;
 
+	queue<Motorista> aux;
+	for (BSTItrLevel<Motorista> it(motoristas); !it.isAtEnd(); it.advance())
+	{
+		aux.push(it.retrieve());
+	}
+	
+	BST<Motorista> novosMotoristas(Motorista("", Coordenadas(0, 0), Coordenadas(0, 0)));
+	while (!aux.empty())
+	{
+		novosMotoristas.insert(aux.front());
+		aux.pop();
+	}
 }
 
 Coordenadas Empresa::getMorada() const
@@ -139,9 +151,7 @@ void Empresa::load(ifstream &file, vector<Combustivel> *combustiveis)
 void Empresa::show() const
 {
 	Membro::show();
-
 	cout << "Website: " << website << endl;
-
 	cout << "Garagem: " << endl;
 	garagem.show();
 

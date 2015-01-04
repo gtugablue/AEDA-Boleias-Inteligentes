@@ -83,6 +83,14 @@ void Membro::edit()
 		cout << "Introduza a nova password: ";
 		getline(cin, password);
 	}
+	cout << "Pretende alterar a morada (y/n)?" << endl;
+	if (InputUtils::readYesOrNo('y', 'n'))
+	{
+		cout << "Nova morada:" << endl;
+		Coordenadas morada;
+		morada.criar();
+		setMorada(morada);
+	}
 }
 
 void Membro::load(ifstream &file, vector<Combustivel> *combustiveis)
