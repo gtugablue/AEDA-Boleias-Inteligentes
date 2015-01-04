@@ -1239,7 +1239,6 @@ void BoleiasInteligentes::showMotoristasMenu()
 		string nome = InputUtils::readLine();
 		((Empresa *)utilizadorAtual)->editMotorista(nome);
 
-		InputUtils::pause();
 		return showMotoristasMenu();
 	}
 	case 3: // Remover motorista

@@ -39,7 +39,8 @@ void Empresa::editMotorista(const string &nome)
 
 			// Retirar motorista da BST
 			motoristas.remove(motoristaEncontrado);
-
+			cout << "Morada: " << endl;
+			motoristaEncontrado.getMorada().show();
 			cout << "Pretende alterar o nome (y/n)?" << endl;
 			if (InputUtils::readYesOrNo('y', 'n'))
 			{
@@ -52,11 +53,17 @@ void Empresa::editMotorista(const string &nome)
 				cout << "Nova morada: " << endl;
 				Coordenadas morada;
 				morada.editar();
+				motoristaEncontrado.setMorada(morada, garagem);
 			}
-			motoristaEncontrado.updateDistancia(garagem);
-			cout << "Debug: " << motoristaEncontrado.getDistancia() << endl;
+			cout << "Morada: " << endl;
+			motoristaEncontrado.getMorada().show();
+
 			// Voltar a colocar motorista na BST
 			motoristas.insert(motoristaEncontrado);
+
+			OutputUtils::clearScreen();
+			cout << "Motorista editado com sucesso." << endl;
+			InputUtils::pause();
 
 			return;
 		}

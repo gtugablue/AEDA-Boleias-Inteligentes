@@ -20,9 +20,10 @@ void Motorista::setNome(const string &nome)
 	this->nome = nome;
 }
 
-void Motorista::setMorada(const Coordenadas &morada)
+void Motorista::setMorada(const Coordenadas &morada, const Coordenadas &garagem)
 {
 	this->morada = morada;
+	updateDistancia(garagem);
 }
 
 string Motorista::getNome() const
@@ -46,6 +47,7 @@ void Motorista::criar(const Coordenadas &garagem)
 	getline(cin, nome);
 	cout << "Morada: " << endl;
 	morada.criar();
+	updateDistancia(garagem);
 }
 
 void Motorista::editar(const Coordenadas &garagem)
@@ -72,8 +74,6 @@ bool Motorista::operator<(const Motorista &motorista) const
 
 bool Motorista::operator==(const Motorista &motorista) const
 {
-	cout << nome << " == " << motorista.nome << endl;
-	InputUtils::pause();
 	return nome == motorista.nome;
 }
 

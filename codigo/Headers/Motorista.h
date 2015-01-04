@@ -15,7 +15,7 @@ public:
 	Motorista();
 	Motorista(const std::string &nome, const Coordenadas &morada, const Coordenadas &garagem);
 	void setNome(const std::string &nome);
-	void setMorada(const Coordenadas &morada);
+	void setMorada(const Coordenadas &morada, const Coordenadas &garagem);
 	std::string getNome() const;
 	Coordenadas getMorada() const;
 	double getDistancia() const;
