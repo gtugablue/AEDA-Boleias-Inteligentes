@@ -176,6 +176,10 @@ void Empresa::show() const
 
 void Empresa::showMotoristasByNome() const
 {
+	if (motoristas.isEmpty())
+	{
+		throw EmptyException<string>("Nenhum elemento a listar.");
+	}
 	vector<Motorista> motoristasByNome;
 	for (BSTItrLevel<Motorista> it(motoristas); !it.isAtEnd(); it.advance())
 	{

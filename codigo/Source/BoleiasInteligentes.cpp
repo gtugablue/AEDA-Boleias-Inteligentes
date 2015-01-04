@@ -1222,7 +1222,17 @@ void BoleiasInteligentes::showMotoristasMenu()
 	}
 	case 1: // Ver motoristas por nome
 	{
-		// TODO
+		OutputUtils::clearScreen();
+		try
+		{
+			((Empresa *)utilizadorAtual)->showMotoristasByNome();
+		}
+		catch (EmptyException<string> &e)
+		{
+			cout << "Erro: " << e.info << endl;
+		}
+		InputUtils::pause();
+		return showMotoristasMenu();
 	}
 	case 2:	// Adicionar motorista
 	{

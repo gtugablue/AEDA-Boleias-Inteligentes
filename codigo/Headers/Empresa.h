@@ -9,6 +9,7 @@
 #include "BST.h"
 #include <vector>
 #include <unordered_set>
+#include "OutputUtils.h"
 
 using namespace std;
 struct hstr {
