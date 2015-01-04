@@ -53,8 +53,10 @@ public:
 	void showOld();
 	bool exists(string nome);
 	void editOld();
+	void createOld();
 	ClientesAntigos existsutil(string nome);
 	void showone();
+	void loadclients();
 };
 
 #endif

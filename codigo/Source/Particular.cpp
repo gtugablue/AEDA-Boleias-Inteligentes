@@ -5,7 +5,7 @@ Particular::Particular()
 
 }
 
-Particular::Particular(string nome, string utilizador, string password) :Membro(nome,utilizador,password,contacto)
+Particular::Particular(string nome, string utilizador, string password) :Membro(nome,utilizador,password)
 {
 
 }

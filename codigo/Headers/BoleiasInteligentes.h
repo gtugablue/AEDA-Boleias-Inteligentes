@@ -52,6 +52,7 @@ public:
 	void loadAnuncios();///Função que faz load da informação contida no ficheiro de anuncios para o vector de anuncios.
 	void loadBoleias();///Função que faz laod da informação contida no ficheiro de boleias para o vector de boleias
 
+
 	void save();///Função geral que engloba todas as funções responsaveis por gravar as alterações no fim do programa para o txt.
 	void saveCombustiveis();///Função que grava todas alterações feitas no vector de combustiveis para o ficheiro de combustiveis
 	void saveMembros();///Função que grava todas as alterações feitas no vector de membros para o ficheiro de membros.
@@ -78,7 +79,8 @@ public:
 	void showAnunciosMenu();///Função que mostra o menu dedicado aos anuncios onde se pode fazer as CRUD Options relativas ao mesmo.
 	void showVeiculosMenu();///Função que mostra o menu dedicado aos veiculos onde se pode fazer as CRUD Options relativas ao mesmo.
 	void showBoleiasMenu();///Função que mostra o menu dedicado as boleias onde se pode fazer as CRUD Options relativas ao mesmo.
-	void showMotoristasMenu();///Função que mostra o menu dedicado aos motoristas onde se pode fazer as CRUD Options relativas ao mesmo.
+	void showMotoristasMenu();
+	void showOldMenu();///Função que mostra o menu dedicado aos motoristas onde se pode fazer as CRUD Options relativas ao mesmo.
 
 	void showAnuncios();///Função que mostra  todos os anuncio.
 	void showVehicles();///Função que mostra todos os veiculos
