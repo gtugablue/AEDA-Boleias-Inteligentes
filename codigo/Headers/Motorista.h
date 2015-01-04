@@ -5,14 +5,17 @@
 #include <iostream>
 #include "Coordenadas.h"
 
+struct compareMotoristasByNome;
+
 class Motorista
 {
 private:
+	friend struct compareMotoristasByNome;
 	std::string nome;
 	Coordenadas morada;
 	double distancia;
-	bool orderByNome(const Motorista &motorista);
 public:
+	bool orderByNome(const Motorista &motorista);
 	Motorista();
 	Motorista(const std::string &nome, const Coordenadas &morada, const Coordenadas &garagem);
 	void setNome(const std::string &nome);
@@ -28,6 +31,14 @@ public:
 	bool operator<(const Motorista &motorista) const;
 	bool operator==(const Motorista &motorista) const;
 	friend std::ostream &operator<<(std::ostream &os, const Motorista &motorista);
+};
+
+struct compareMotoristasByNome
+{
+	bool operator()(const Motorista &motorista1, const Motorista &motorista2)
+	{
+		return motorista1.nome < motorista2.nome;
+	}
 };
 
 std::ostream &operator<<(std::ostream &os, const Motorista &motorista);

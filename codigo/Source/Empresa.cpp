@@ -181,7 +181,7 @@ void Empresa::showMotoristasByNome() const
 	{
 		motoristasByNome.push_back(it.retrieve());
 	}
-	//(motoristasByNome.begin(), motoristasByNome.end(), )
+	sort(motoristasByNome.begin(), motoristasByNome.end(), compareMotoristasByNome());
 }
 
 void Empresa::insertOld(ClientesAntigos &c1)
