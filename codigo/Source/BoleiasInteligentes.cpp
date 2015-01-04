@@ -1189,7 +1189,8 @@ void BoleiasInteligentes::showMotoristasMenu()
 	OutputUtils::clearScreen();
 	vector<string> items =
 	{
-		"Ver motoristas",
+		"Ver motoristas por distância",
+		"Ver motoristas por nome",
 		"Adicionar motorista",
 		"Editar motorista",
 		"Remover motorista",
@@ -1200,7 +1201,7 @@ void BoleiasInteligentes::showMotoristasMenu()
 
 	switch (n)
 	{
-	case 0: // Ver motoristas
+	case 0: // Ver motoristas por distância
 	{
 		OutputUtils::clearScreen();
 		try
@@ -1219,7 +1220,11 @@ void BoleiasInteligentes::showMotoristasMenu()
 		InputUtils::pause();
 		return showMotoristasMenu();
 	}
-	case 1:	// Adicionar motorista
+	case 1: // Ver motoristas por nome
+	{
+		// TODO
+	}
+	case 2:	// Adicionar motorista
 	{
 		OutputUtils::clearScreen();
 
@@ -1231,7 +1236,7 @@ void BoleiasInteligentes::showMotoristasMenu()
 		InputUtils::pause();
 		return showMotoristasMenu();
 	}
-	case 2:	// Editar motorista
+	case 3:	// Editar motorista
 	{
 		OutputUtils::clearScreen();
 
@@ -1240,7 +1245,7 @@ void BoleiasInteligentes::showMotoristasMenu()
 
 		return showMotoristasMenu();
 	}
-	case 3: // Remover motorista
+	case 4: // Remover motorista
 	{
 		OutputUtils::clearScreen();
 		
@@ -1249,7 +1254,7 @@ void BoleiasInteligentes::showMotoristasMenu()
 
 		return showMotoristasMenu();
 	}
-	case 4: // Voltar
+	case 5: // Voltar
 	{
 		return showMainMenu();
 	}

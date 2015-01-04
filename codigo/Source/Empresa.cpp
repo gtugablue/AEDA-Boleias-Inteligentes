@@ -174,6 +174,16 @@ void Empresa::show() const
 	garagem.show();
 }
 
+void Empresa::showMotoristasByNome() const
+{
+	vector<Motorista> motoristasByNome;
+	for (BSTItrLevel<Motorista> it(motoristas); !it.isAtEnd(); it.advance())
+	{
+		motoristasByNome.push_back(it.retrieve());
+	}
+	//(motoristasByNome.begin(), motoristasByNome.end(), )
+}
+
 void Empresa::insertOld(ClientesAntigos &c1)
 {
 	clientes.insert(c1);
