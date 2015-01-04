@@ -432,8 +432,8 @@ double Anuncio::calcularAnuncioPoints(const Particular* utilizadorAtual, const C
 	return calcularFriendPoints(utilizadorAtual) * calcularDistanciaPoints(origem, destino);
 }
 
-void Anuncio::novoCandidato(Particular candidato_novo){ 
-	candidatos.push(candidato_novo);
+void Anuncio::novoCandidato(Membro* candidato_novo){ 
+	(*candidatos).push(candidato_novo);
 	organizarCandidatos();
 }
 
@@ -479,6 +479,6 @@ void Anuncio::removerCandidato(Membro* candidato){
 	}
 }
 
-void Anuncio::alterarMorada(Particular candidato){
-
+void Anuncio::alterarMorada(Membro* candidato, const Coordenadas &morada){
+	(*candidato).setMorada(morada);
 }
