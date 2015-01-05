@@ -181,7 +181,12 @@ void Empresa::load(ifstream &file, vector<Combustivel> *combustiveis)
 		ClientesAntigos cliente;
 		cliente.loadClientes(file);
 		clientes.insert(cliente);
+		cout << clientes.size();
+		
+		cout << cliente.getutilizador() << endl;
+		
 	}
+	
 	
 }
 
@@ -271,31 +276,40 @@ bool Empresa::exists(string nome)
 
 void Empresa::editOld()
 {
-	string utilizador, contacto,morada;
+	
+	string utilizador, contacto,morada,nome;
 	cout << "Introduza o nome de utilizador do cliente que pretende alterar" << endl;
 	getline(cin, utilizador);
-	ClientesAntigos x = existsutil(utilizador);
+	ClientesAntigos x;
+	x.setutilizador(utilizador);
+	unordered_set<ClientesAntigos, hstr, eqstr>oi = clientes;
+	unordered_set<ClientesAntigos, hstr, eqstr>::iterator it = clientes.find(x);
+	ClientesAntigos y = *it;
+	clientes.erase(it);
 	cout << "Pretende alterar o nome de utilizador (y/n) ?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		cout << "Introduza o novo nome de utilizador " << endl;
-		getline(cin, utilizador);
-		x.setutilizador(utilizador);
+		getline(cin,nome);
+		y.setutilizador(nome);
+		
+		
 	}
 	cout << "Pretende alterar o contacto do utilizador (y/n) ?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		cout << "Introduza o novo contacto " << endl;
 		getline(cin, contacto);
-		x.setcontacto(contacto);
+		y.setcontacto(contacto);
 	}
 	cout << "Pretende alterar a morada do utilizador (y/n) ?" << endl;
 	if (InputUtils::readYesOrNo('y', 'n'))
 	{
 		cout << "Introduza a nova morada" << endl;
 		getline(cin, morada);
-		x.setmorada(morada);
+		y.setmorada(morada);
 	}
+	clientes.insert(y);
 
 
 

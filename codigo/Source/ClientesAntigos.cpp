@@ -48,11 +48,16 @@ string ClientesAntigos::getutilizador()const
 void ClientesAntigos::loadClientes(ifstream &file)
 {
 	unsigned numBoleias;
-	string utilizador, contacto, morada;
 	string nome, destino;
 	getline(file, utilizador);
 	getline(file, contacto);
 	getline(file, morada);
+	cout << utilizador;
+
+	cout << contacto;
+	
+	cout << morada;
+	
 	file >> numBoleias;
 	file.ignore(1000, '\n');
 	for (size_t i = 0; i < numBoleias; i++)
