@@ -49,15 +49,15 @@ public:
 	void load(ifstream &file, vector<Combustivel> *combustiveis);///Função para carregar a informação de uma empresa
 	void show() const;///Função que permite mostrar no ecra toda a informação relativa a uma empresa
 	void showMotoristasByNome() const;
-	void insertOld(ClientesAntigos &c1);
-	void removeOld(string nome);
-	void showOld();
-	bool exists(string nome);
-	void editOld();
-	void createOld();
-	ClientesAntigos existsutil(string nome);
-	void showone();
-	void loadclients();
+	void insertOld(ClientesAntigos &c1);///funcao que insere na hash table
+	void removeOld(string nome);///funcao que remove da hash table
+	void showOld();///funcao que mostra todos os clientes por nome
+	bool exists(string nome);///funcao que verifica se um cliente existe
+	void editOld();///funcao que edita a informacao de um cliente
+	void createOld();///funcao que cria um cliente
+	ClientesAntigos existsutil(string nome);///funcao que retorna um cliente
+	void showone();///funcao que mostra todas a informacao de um determinado cliente
+	void loadclients();///funcao que carrega a informacao de clientes
 };
 
 #endif
