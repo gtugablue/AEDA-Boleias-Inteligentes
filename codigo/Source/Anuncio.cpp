@@ -432,43 +432,34 @@ double Anuncio::calcularAnuncioPoints(const Particular* utilizadorAtual, const C
 	return calcularFriendPoints(utilizadorAtual) * calcularDistanciaPoints(origem, destino);
 }
 
-void Anuncio::novoCandidato(Particular* candidato_novo){ 
-	//(*candidatos).push(candidato_novo);
-	//organizarCandidatos();
+void Anuncio::novoCandidato(Particular candidato_novo){ 
+	candidatos.push(candidato_novo);
+	organizarCandidatos();
 }
 
 void Anuncio::organizarCandidatos(){
-	/*vector<int> v;
-	vector<Membro*> membros;
+	vector<int> v;
+	vector<Particular> membros;
 	int i = 0;
 	while (!candidatos.empty()){
 		v.push_back(candidatos.top().getConhecidos()[i].second);
-		membros.push_back(candidatos.top().getConhecidos()[i].first);
+		membros.push_back(*(candidatos.top().getConhecidos()[i].first));
 		candidatos.pop();
 		i++;
 	}
 	vector<int>::iterator it;
 	for (it = v.begin(); it != v.end()-1; ++it)  
 		iter_swap(it, min_element(it, v.end()));
-	for (int k = 0; k < v.size(); k++){
-		if (v[k] == v[k + 1]){
-			//if (calcularDistanciaPoints(origem, membros[k].getMorada() > calcularDistanciaPoints(origem, membros[k + 1].getMorada())){
-				int guardar = v[k];
-				v[k] = v[k + 1];
-				v[k + 1] = guardar;
-			}
-		//}
-	}
 	for (int j = v.size() - 1; j >= 0; j--){
-		//(*candidatos).push(membros[j]); 
-	}*/
+		candidatos.push(membros[j]); 
+	}
 }
 
-void Anuncio::removerCandidato(Membro* candidato){
-	/*priority_queue<Particular> copia = candidatos;
+void Anuncio::removerCandidato(Particular candidato){
+	priority_queue<Particular> copia = candidatos;
 	vector<Particular> v;
 	while (!copia.empty()){
-		if (copia.top() == *(candidato)){
+		if (copia.top() == candidato){
 			copia.pop();
 			break;
 		}
@@ -477,18 +468,21 @@ void Anuncio::removerCandidato(Membro* candidato){
 	}
 	for (int i = v.size(); i >= 0; i++){
 		candidatos.push(v[i]);
-	}*/
+	}
 }
 
 void Anuncio::alterarMorada(Membro* candidato, const Coordenadas &morada){
-	//(*candidato).setMorada(morada);
+	(*candidato).setMorada(morada);
 }
 
-bool operator <(Particular a, Particular b){
-	for (size_t i = 0; i < a.getConhecidos().size(); i++)
-	{
+bool operator<(const Particular &a, const Particular &b){
+	for (size_t i = 0; i < a.getConhecidos().size(); i++){
 		if (a.getConhecidos()[i].second < b.getConhecidos()[i].second)
 			return true;
+		//else if (a.getConhecidos()[i].second == b.getConhecidos()[i].second){
+			//if (a.getConhecidos()[i].first.getMorada() < b.getConhecidos()[i].first.getMorada())
+				//return true;
+		//}
 	}
 	return false;
 }
