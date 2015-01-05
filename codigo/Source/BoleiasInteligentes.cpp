@@ -427,7 +427,6 @@ void BoleiasInteligentes::showMainMenu()
 			"Anuncios",
 			"Veiculos",
 			"Boleias",
-			"ClientesAntigos",
 			"Logout"
 		};
 		showMenu(items);
