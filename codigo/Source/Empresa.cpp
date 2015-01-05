@@ -284,6 +284,11 @@ void Empresa::editOld()
 	x.setutilizador(utilizador);
 	unordered_set<ClientesAntigos, hstr, eqstr>oi = clientes;
 	unordered_set<ClientesAntigos, hstr, eqstr>::iterator it = clientes.find(x);
+	if (it == clientes.end())
+	{
+		cout << "Utilizador nao encontrado" << endl;
+		return editOld();
+	}
 	ClientesAntigos y = *it;
 	clientes.erase(it);
 	cout << "Pretende alterar o nome de utilizador (y/n) ?" << endl;
