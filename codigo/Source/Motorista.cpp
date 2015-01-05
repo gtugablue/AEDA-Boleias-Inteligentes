@@ -68,8 +68,7 @@ void Motorista::save(ofstream &file) const
 
 void Motorista::load(std::ifstream &file, const Coordenadas &garagem)
 {
-	file >> nome;
-	file.ignore(1000, '\n');
+	getline(file, nome);
 	morada.load(file);
 	updateDistancia(garagem);
 }
