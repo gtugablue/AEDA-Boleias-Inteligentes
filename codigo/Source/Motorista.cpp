@@ -4,11 +4,6 @@ using namespace std;
 
 #define	MOTORISTA_ORDENACAO_DIST_MIN		0.005
 
-bool Motorista::orderByNome(const Motorista &motorista)
-{
-	return nome < motorista.nome;
-}
-
 Motorista::Motorista()
 {
 
@@ -73,8 +68,7 @@ void Motorista::save(ofstream &file) const
 
 void Motorista::load(std::ifstream &file, const Coordenadas &garagem)
 {
-	file >> nome;
-	file.ignore(1000, '\n');
+	getline(file, nome);
 	morada.load(file);
 	updateDistancia(garagem);
 }

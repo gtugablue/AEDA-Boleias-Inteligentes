@@ -17,11 +17,10 @@ protected:
 	string nome;
 	string utilizador;
 	string password;
-	string contacto;
 	vector<Veiculo *> veiculos;
 public:
 	Membro();///Construtor por defeito da classe
-	Membro(string nome, string utilizador, string password,string contacto);///Construtor com parametros da classe
+	Membro(string nome, string utilizador, string password);///Construtor com parametros da classe
 	string getNome() const;///Método para retornar o nome do membro
 	string getUtilizador() const;///Método para retornar o utilizador do membro
 	string getPassword() const;
