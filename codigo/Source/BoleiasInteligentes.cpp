@@ -375,8 +375,20 @@ void BoleiasInteligentes::showLoginMenu()
 			{
 				throw UtilizadorRepetidoException<string>("Utilizador ja existente");
 			}
+			if (membro->getUtilizador() == "")
+			{
+				throw EmptyException<string>("Nome de utilizador vazio");
+			}
 		}
-		catch (UtilizadorRepetidoException<string> e)
+		catch (UtilizadorRepetidoException<string> &e)
+		{
+			OutputUtils::clearScreen();
+			cout << "Erro: " << e.info << endl;
+			InputUtils::pause();
+			delete membro;
+			return showLoginMenu();
+		}
+		catch (EmptyException<string> &e)
 		{
 			OutputUtils::clearScreen();
 			cout << "Erro: " << e.info << endl;
