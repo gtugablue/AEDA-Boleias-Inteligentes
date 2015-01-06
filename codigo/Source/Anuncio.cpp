@@ -432,18 +432,18 @@ double Anuncio::calcularAnuncioPoints(const Particular* utilizadorAtual, const C
 	return calcularFriendPoints(utilizadorAtual) * calcularDistanciaPoints(origem, destino);
 }
 
-void Anuncio::novoCandidato(Particular candidato_novo){ 
+void Anuncio::novoCandidato(Particular *candidato_novo){ 
 	candidatos.push(candidato_novo);
 	organizarCandidatos();
 }
 
 void Anuncio::organizarCandidatos(){
 	vector<int> v;
-	vector<Particular> membros;
+	vector<ParticularPtr> membros;
 	int i = 0;
 	while (!candidatos.empty()){
-		v.push_back(candidatos.top().getConhecidos()[i].second);
-		membros.push_back(*(candidatos.top().getConhecidos()[i].first));
+		v.push_back((*(candidatos.top())).getConhecidos()[i].second);
+		membros.push_back((Particular *)((*(candidatos.top())).getConhecidos()[i].first));
 		candidatos.pop();
 		i++;
 	}
@@ -455,11 +455,12 @@ void Anuncio::organizarCandidatos(){
 	}
 }
 
-void Anuncio::removerCandidato(Particular candidato){
-	priority_queue<Particular> copia = candidatos;
-	vector<Particular> v;
+void Anuncio::removerCandidato(Particular *candidato){
+	ParticularPtr candidatoPtr(candidato);
+	priority_queue<ParticularPtr> copia = candidatos;
+	vector<ParticularPtr> v;
 	while (!copia.empty()){
-		if (copia.top() == candidato){
+		if (*(copia.top()) == *candidatoPtr){
 			copia.pop();
 			break;
 		}

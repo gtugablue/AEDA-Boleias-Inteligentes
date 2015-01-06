@@ -95,3 +95,8 @@ void Particular::updateConhecidos(vector<Membro *> passageiros)
 		}
 	}
 }
+
+bool Particular::operator<(const Particular &particular) const
+{
+	return nome < particular.nome;
+}

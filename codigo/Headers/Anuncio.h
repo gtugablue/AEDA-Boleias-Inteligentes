@@ -32,8 +32,7 @@ protected:
 	Veiculo* veiculo;
 	Preco preco;
 	Hora hora;
-	priority_queue<Particular> candidatos; // Candidatos ao anúncio
-
+	priority_queue<ParticularPtr> candidatos; // Candidatos ao anúncio
 public:
 	Anuncio();///Construtor sem parâmetros
 	Anuncio(const string &titulo, const string &descricao, const Coordenadas &origem, const Coordenadas &destino, const Data &dataInicio, const Data &dataFim);///Construtor com parâmetros
@@ -70,9 +69,9 @@ public:
 	double calcularDistanciaPoints(const Coordenadas &origem, const Coordenadas &destino) const;///Função chave para organizar os anuncios por distância pois organiza os pontos atribuidos de acordo com a distancia a que esta do utilizador
 	double calcularAnuncioPoints(const Particular* utilizadorAtual, const Coordenadas &origem, const Coordenadas &destino) const;///Calcula o rsultado final entre os friend points e a distancia para ordenar os anuncios
 	friend ostream& operator<<(ostream &os, Anuncio* anuncio);///Overload do operador de impressão na classe Anuncio.
-	void novoCandidato(Particular candidato_novo);
+	void novoCandidato(Particular *candidato_novo);
 	void organizarCandidatos();
-	void removerCandidato(Particular candidato);
+	void removerCandidato(Particular *candidato);
 	void alterarMorada(Membro* candidato, const Coordenadas &morada);
 };
 

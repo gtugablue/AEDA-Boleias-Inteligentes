@@ -27,6 +27,17 @@ public:
 	void save(ofstream &file, vector<Combustivel> *combustiveis);///Função que grava a informação de um particular no ficheiro respectivo
 	void load(ifstream &file, vector<Combustivel> *combustiveis);///Função que carrega a informação de um particular do ficheiro para o programa
 	void updateConhecidos(vector<Membro *> passageiros);///Função que permite editar os cada conhecido desse mesmo particular
+	bool operator<(const Particular &particular) const;
+};
+
+class ParticularPtr
+{
+private:
+	Particular *particular;
+public:
+	ParticularPtr(Particular *particular) : particular(particular) { }
+	Particular operator*() { return *particular; }
+	bool operator<(const ParticularPtr &particularPtr) const { return *particular < *(particularPtr.particular); }
 };
 
 #endif
