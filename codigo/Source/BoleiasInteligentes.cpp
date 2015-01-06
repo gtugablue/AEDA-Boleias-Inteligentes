@@ -455,10 +455,6 @@ void BoleiasInteligentes::showMainMenu()
 		}
 		case 4: // Logout
 		{
-			return showOldMenu();
-		}
-		case 5:
-		{
 			OutputUtils::clearScreen();
 			cout << "Tem a certeza que pretende fazer logout (y/n)?";
 			if (InputUtils::readYesOrNo('y', 'n'))
@@ -515,11 +511,11 @@ void BoleiasInteligentes::showMainMenu()
 		{
 			return showMotoristasMenu();
 		}
-		case 5: // Logout
+		case 5: // Clientes Antigos
 		{
 			return showOldMenu();
 		}
-		case 6:
+		case 6: // Logout
 		{
 			OutputUtils::clearScreen();
 			cout << "Tem a certeza que pretende fazer logout (y/n)?";
