@@ -98,5 +98,13 @@ void Particular::updateConhecidos(vector<Membro *> passageiros)
 
 bool Particular::operator<(const Particular &particular) const
 {
-	return nome < particular.nome;
+	for (size_t i = 0; i < getConhecidos().size(); i++){
+		if (getConhecidos()[i].second < particular.getConhecidos()[i].second)
+			return true;
+		//else if (a.getConhecidos()[i].second == b.getConhecidos()[i].second){
+		//if (a.getConhecidos()[i].first.getMorada() < b.getConhecidos()[i].first.getMorada())
+		//return true;
+		//}
+	}
+	return false;
 }

@@ -475,15 +475,3 @@ void Anuncio::removerCandidato(Particular *candidato){
 void Anuncio::alterarMorada(Membro* candidato, const Coordenadas &morada){
 	(*candidato).setMorada(morada);
 }
-
-bool operator<(const Particular &a, const Particular &b){
-	for (size_t i = 0; i < a.getConhecidos().size(); i++){
-		if (a.getConhecidos()[i].second < b.getConhecidos()[i].second)
-			return true;
-		//else if (a.getConhecidos()[i].second == b.getConhecidos()[i].second){
-			//if (a.getConhecidos()[i].first.getMorada() < b.getConhecidos()[i].first.getMorada())
-				//return true;
-		//}
-	}
-	return false;
-}
